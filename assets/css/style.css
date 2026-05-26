@@ -96,3 +96,42 @@ a:focus-visible {
   margin: 0 0 1.5rem 0;
 }
 .section-eyebrow::before { content: "— "; opacity: 0.65; }
+
+/* === I. HERO === */
+.hero {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 4rem var(--gutter);
+}
+.hero__name {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  letter-spacing: 0.06em;
+  font-variant-caps: all-small-caps;
+}
+.hero__tagline {
+  margin: 1.25rem 0 0 0;
+  font-family: var(--mono);
+  font-size: clamp(0.78rem, 1.1vw, 0.95rem);
+  letter-spacing: 0.32em;
+  text-transform: lowercase;
+  color: var(--ink-soft);
+}
+.hero__chevron {
+  margin-top: 4rem;
+  display: inline-grid;
+  place-items: center;
+  width: 44px; height: 44px;
+  color: var(--ink-soft);
+  border: 1px solid var(--hairline);
+  border-radius: 50%;
+  animation: chevron-pulse 2.2s ease-in-out infinite;
+}
+@keyframes chevron-pulse {
+  0%, 100% { transform: translateY(0); opacity: 0.7; }
+  50%      { transform: translateY(4px); opacity: 1; }
+}
