@@ -342,3 +342,13 @@ section, .colophon {
   color: var(--oxblood);
   margin: 2rem 0 0 0;
 }
+
+/* === SCROLL REVEAL === */
+.reveal { opacity: 0; transform: translateY(12px); transition: opacity 700ms ease-out, transform 700ms ease-out; }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .hero__chevron { animation: none; }
+  .sadako__poster a:hover img { transform: none; }
+  .btn:hover { transform: none; }
+}
