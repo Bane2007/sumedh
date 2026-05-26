@@ -407,7 +407,7 @@ section, .colophon {
   font-style: italic;
   font-size: 1.4rem;
   color: var(--oxblood);
-  margin: 1.2rem 0 0 0;
+  margin: 0;
 }
 
 /* === SCROLL REVEAL === */
