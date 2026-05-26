@@ -138,20 +138,6 @@ a:focus-visible {
   text-transform: lowercase;
   color: var(--ink-soft);
 }
-.hero__chevron {
-  margin-top: 0.5rem;
-  display: inline-grid;
-  place-items: center;
-  width: 44px; height: 44px;
-  color: var(--ink-soft);
-  border: 1px solid var(--hairline);
-  border-radius: 50%;
-  animation: chevron-pulse 2.2s ease-in-out infinite;
-}
-@keyframes chevron-pulse {
-  0%, 100% { transform: translateY(0); opacity: 0.7; }
-  50%      { transform: translateY(4px); opacity: 1; }
-}
 
 /* === GENERIC SECTION SPACING === */
 section, .colophon {
@@ -415,7 +401,6 @@ section, .colophon {
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
-  .hero__chevron { animation: none; }
   .sadako__poster a:hover img { transform: none; }
   .btn:hover { transform: none; }
 }
