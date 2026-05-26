@@ -135,3 +135,21 @@ a:focus-visible {
   0%, 100% { transform: translateY(0); opacity: 0.7; }
   50%      { transform: translateY(4px); opacity: 1; }
 }
+
+/* === GENERIC SECTION SPACING === */
+section, .colophon {
+  padding: clamp(4rem, 8vw, 7rem) var(--gutter);
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+/* === II. ABOUT === */
+.about {
+  max-width: 48rem;
+}
+.about__body {
+  font-size: clamp(1.15rem, 0.6vw + 1.05rem, 1.4rem);
+  line-height: 1.62;
+  color: var(--ink);
+}
+.about__body em { color: var(--oxblood); font-style: italic; }
