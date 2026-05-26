@@ -96,6 +96,60 @@ body::before {
 @media (prefers-reduced-motion: reduce) {
   body::before { opacity: 0.04; animation: none; }
 }
+
+/* === DRIFTING BACKGROUND CRANES ===
+   Three cranes glide slowly across the viewport at different heights, speeds,
+   and sizes. They sit behind the main content (z-index 0) but above the body bg.
+   Pointer-events: none — they never intercept clicks.
+*/
+.bg-cranes {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.bg-cranes__crane {
+  position: absolute;
+  background: url('../svg/crane-bg.svg') center / contain no-repeat;
+  opacity: 0.18;
+  will-change: transform;
+}
+.bg-cranes__crane--a {
+  top: 14%;
+  width: 90px; height: 63px;
+  animation: crane-drift-r 55s linear infinite;
+  animation-delay: -10s;
+}
+.bg-cranes__crane--b {
+  top: 52%;
+  width: 70px; height: 49px;
+  opacity: 0.13;
+  animation: crane-drift-l 70s linear infinite;
+  animation-delay: -25s;
+}
+.bg-cranes__crane--c {
+  top: 80%;
+  width: 110px; height: 77px;
+  opacity: 0.10;
+  animation: crane-drift-r 88s linear infinite;
+  animation-delay: -50s;
+}
+@keyframes crane-drift-r {
+  0%   { transform: translate(-15vw, 0)   rotate(-4deg); }
+  50%  { transform: translate(50vw, -28px) rotate(3deg); }
+  100% { transform: translate(115vw, 0)   rotate(-2deg); }
+}
+@keyframes crane-drift-l {
+  0%   { transform: translate(115vw, 0)   rotate(3deg); }
+  50%  { transform: translate(50vw, 28px) rotate(-3deg); }
+  100% { transform: translate(-15vw, 0)   rotate(4deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bg-cranes__crane { animation: none; }
+}
+
+main { position: relative; z-index: 1; }
 body {
   text-rendering: optimizeLegibility;
   font-feature-settings: 'kern' 1, 'liga' 1, 'onum' 1;
