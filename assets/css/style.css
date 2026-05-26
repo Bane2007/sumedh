@@ -166,22 +166,24 @@ main { position: relative; z-index: 1; }
 }
 .bg-motes span {
   position: absolute;
-  bottom: -10px;
+  bottom: -20px;
   border-radius: 50%;
-  background: var(--ink);
+  background: #f7efde;
   opacity: 0;
   animation-name: mote-rise;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  filter: blur(0.4px);
-  box-shadow: 0 0 6px rgba(236, 228, 211, 0.35);
+  filter: blur(0.6px);
+  box-shadow:
+    0 0 8px 2px rgba(247, 239, 222, 0.6),
+    0 0 18px 4px rgba(247, 239, 222, 0.25);
 }
 @keyframes mote-rise {
-  0%   { transform: translate(0, 0)        scale(0.6); opacity: 0; }
-  10%  { opacity: 0.55; }
-  50%  { transform: translate(18px, -55vh) scale(1); }
-  90%  { opacity: 0.55; }
-  100% { transform: translate(-12px, -110vh) scale(1.1); opacity: 0; }
+  0%   { transform: translate(0, 0)         scale(0.7); opacity: 0; }
+  8%   { opacity: 0.95; }
+  50%  { transform: translate(24px, -55vh)  scale(1); }
+  92%  { opacity: 0.95; }
+  100% { transform: translate(-16px, -115vh) scale(1.15); opacity: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   .bg-motes span { animation: none; opacity: 0.25; }
