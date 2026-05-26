@@ -151,6 +151,41 @@ body::before {
 }
 
 main { position: relative; z-index: 1; }
+
+/* === FLOATING DUST MOTES ===
+   16 tiny dots drift slowly upward (with a soft lateral wobble) across the
+   viewport. Each one fades in, glows, fades out — like dust caught in a
+   projector beam. Pointer-events: none.
+*/
+.bg-motes {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.bg-motes span {
+  position: absolute;
+  bottom: -10px;
+  border-radius: 50%;
+  background: var(--ink);
+  opacity: 0;
+  animation-name: mote-rise;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  filter: blur(0.4px);
+  box-shadow: 0 0 6px rgba(236, 228, 211, 0.35);
+}
+@keyframes mote-rise {
+  0%   { transform: translate(0, 0)        scale(0.6); opacity: 0; }
+  10%  { opacity: 0.55; }
+  50%  { transform: translate(18px, -55vh) scale(1); }
+  90%  { opacity: 0.55; }
+  100% { transform: translate(-12px, -110vh) scale(1.1); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bg-motes span { animation: none; opacity: 0.25; }
+}
 body {
   text-rendering: optimizeLegibility;
   font-feature-settings: 'kern' 1, 'liga' 1, 'onum' 1;
