@@ -153,3 +153,102 @@ section, .colophon {
   color: var(--ink);
 }
 .about__body em { color: var(--oxblood); font-style: italic; }
+
+/* === III. SADAKO === */
+.sadako__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: start;
+}
+@media (max-width: 760px) {
+  .sadako__grid { grid-template-columns: 1fr; }
+}
+
+.sadako__poster img {
+  width: 100%;
+  border-radius: 2px;
+  box-shadow: 0 24px 60px -28px rgba(26, 20, 16, 0.5),
+              0 8px 18px -10px rgba(26, 20, 16, 0.25);
+  transition: transform 400ms ease-out, box-shadow 400ms ease-out;
+}
+.sadako__poster a:hover img {
+  transform: translateY(-3px);
+  box-shadow: 0 32px 70px -28px rgba(26, 20, 16, 0.55),
+              0 12px 22px -10px rgba(26, 20, 16, 0.3);
+}
+
+.sadako__title {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+  font-weight: 500;
+  margin: 0 0 0.85rem 0;
+  letter-spacing: 0.02em;
+}
+.sadako__title .smallcaps { letter-spacing: 0.12em; }
+.sadako__year { color: var(--ink-soft); font-family: var(--mono); font-size: 0.6em; vertical-align: 0.18em; margin-left: 0.4em; }
+
+.sadako__logline {
+  border-left: 2px solid var(--oxblood);
+  padding-left: 1.1rem;
+  margin: 0 0 1.4rem 0;
+  font-size: 1.08rem;
+  line-height: 1.6;
+  color: var(--ink);
+  font-style: italic;
+}
+
+.sadako__credit {
+  margin: 0 0 1.5rem 0;
+  color: var(--ink-soft);
+}
+.sadako__credit .mono { color: var(--oxblood); margin-right: 0.4em; }
+
+.sadako__awards {
+  background: var(--paper-deep);
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+  padding: 0.75rem 0.9rem;
+  margin: 0 0 1.6rem 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.65;
+}
+.sadako__awards .dim { letter-spacing: 0.18em; font-size: 0.7rem; }
+
+.sadako__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0 0 1.8rem 0;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.7rem 1.1rem;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: transform 180ms ease-out, background 180ms ease-out, color 180ms ease-out;
+}
+.btn--filled { background: var(--oxblood); color: var(--paper); }
+.btn--filled:hover { background: #5e1717; transform: translateY(-1px); }
+.btn--ghost { color: var(--ink); border: 1px solid var(--ink); }
+.btn--ghost:hover { background: var(--ink); color: var(--paper); transform: translateY(-1px); }
+
+.sadako__specs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem 1.4rem;
+  border-top: 1px solid var(--hairline);
+  padding-top: 1.4rem;
+  margin-top: 0.5rem;
+}
+.sadako__specs > div { display: flex; flex-direction: column; gap: 0.2rem; }
+.sadako__specs dt { font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-soft); }
+.sadako__specs dd { font-family: var(--serif); font-size: 1rem; color: var(--ink); margin: 0; }
