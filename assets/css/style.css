@@ -99,53 +99,23 @@ a:focus-visible {
 
 /* === I. HERO === */
 .hero {
-  position: relative;
-  min-height: 96vh;
-  min-height: 96svh;
+  min-height: 88vh;
+  min-height: 88svh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 4rem var(--gutter) 2rem;
-  gap: 1.4rem;
-}
-.hero__slate {
-  position: absolute;
-  top: 1.4rem;
-  left: var(--gutter);
-  font-size: 0.7rem;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-}
-.hero__slate::before {
-  content: "● ";
-  color: var(--oxblood);
-  font-size: 0.55em;
-  vertical-align: 0.25em;
-  margin-right: 0.4em;
-}
-.hero__portrait {
-  margin: 0;
-  width: clamp(300px, 62vw, 760px);
-}
-.hero__portrait img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 2px;
-  filter: saturate(0.92) contrast(1.02);
-  box-shadow: 0 30px 60px -28px rgba(0, 0, 0, 0.75),
-              0 12px 24px -12px rgba(0, 0, 0, 0.45);
+  padding: 2rem var(--gutter) 1.5rem;
+  gap: 1.1rem;
 }
 .hero__name {
   font-family: var(--serif);
   font-weight: 500;
-  font-size: clamp(2.6rem, 9vw, 6.4rem);
+  font-size: clamp(2.6rem, 8vw, 5.6rem);
   letter-spacing: 0.04em;
   line-height: 0.95;
-  margin: 0.25rem 0 0 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -160,23 +130,26 @@ a:focus-visible {
   font-style: italic;
   letter-spacing: 0.02em;
 }
+.hero__portrait {
+  margin: 0;
+  width: clamp(280px, 56vw, 640px);
+}
+.hero__portrait img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+  filter: saturate(0.92) contrast(1.02);
+  box-shadow: 0 22px 50px -24px rgba(0, 0, 0, 0.7),
+              0 8px 18px -10px rgba(0, 0, 0, 0.4);
+}
 .hero__tagline {
-  margin: 0.25rem 0 0 0;
+  margin: 0;
   font-family: var(--mono);
   font-size: clamp(0.78rem, 1.1vw, 0.95rem);
-  letter-spacing: 0.4em;
+  letter-spacing: 0.32em;
   text-transform: lowercase;
   color: var(--ink-soft);
-}
-.hero__tagline::before,
-.hero__tagline::after {
-  content: "";
-  display: inline-block;
-  width: 1.6rem;
-  height: 1px;
-  background: var(--hairline);
-  vertical-align: 0.32em;
-  margin: 0 0.9rem;
 }
 
 /* === GENERIC SECTION SPACING === */
