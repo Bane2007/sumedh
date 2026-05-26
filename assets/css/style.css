@@ -313,14 +313,8 @@ section, .colophon {
 .sadako__poster img {
   width: 100%;
   border-radius: 2px;
-  box-shadow: 0 24px 60px -28px rgba(26, 20, 16, 0.5),
-              0 8px 18px -10px rgba(26, 20, 16, 0.25);
-  transition: transform 400ms ease-out, box-shadow 400ms ease-out;
-}
-.sadako__poster a:hover img {
-  transform: translateY(-3px);
-  box-shadow: 0 32px 70px -28px rgba(26, 20, 16, 0.55),
-              0 12px 22px -10px rgba(26, 20, 16, 0.3);
+  box-shadow: 0 24px 60px -28px rgba(0, 0, 0, 0.6),
+              0 8px 18px -10px rgba(0, 0, 0, 0.35);
 }
 
 .sadako__title {
