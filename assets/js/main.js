@@ -30,10 +30,10 @@
       particles.push({
         x: Math.random() * w,
         y: Math.random() * h,
-        vx: (Math.random() - 0.5) * 0.35,
-        vy: -(Math.random() * 0.45 + 0.15),
-        r: Math.random() * 2.5 + 2.5,
-        op: Math.random() * 0.3 + 0.7,
+        vx: (Math.random() - 0.5) * 0.18,
+        vy: -(Math.random() * 0.22 + 0.06),
+        r: Math.random() * 1.6 + 1.4,
+        op: Math.random() * 0.35 + 0.45,
         phase: Math.random() * Math.PI * 2
       });
     }
@@ -43,22 +43,21 @@
       ctx.clearRect(0, 0, w, h);
       t += 0.012;
       for (const p of particles) {
-        p.x += p.vx + Math.sin(t + p.phase) * 0.28;
+        p.x += p.vx + Math.sin(t + p.phase) * 0.15;
         p.y += p.vy;
-        if (p.y < -20) { p.y = h + 20; p.x = Math.random() * w; }
-        if (p.x < -20) p.x = w + 20;
-        if (p.x > w + 20) p.x = -20;
+        if (p.y < -12) { p.y = h + 12; p.x = Math.random() * w; }
+        if (p.x < -12) p.x = w + 12;
+        if (p.x > w + 12) p.x = -12;
 
-        const halo = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 5);
-        halo.addColorStop(0, `rgba(247, 239, 222, ${p.op * 0.85})`);
-        halo.addColorStop(0.4, `rgba(247, 239, 222, ${p.op * 0.3})`);
+        const halo = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 6);
+        halo.addColorStop(0, `rgba(247, 239, 222, ${p.op * 0.55})`);
         halo.addColorStop(1, 'rgba(247, 239, 222, 0)');
         ctx.fillStyle = halo;
         ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r * 5, 0, Math.PI * 2);
+        ctx.arc(p.x, p.y, p.r * 6, 0, Math.PI * 2);
         ctx.fill();
 
-        ctx.fillStyle = `rgba(255, 248, 232, ${Math.min(p.op * 1.2, 1)})`;
+        ctx.fillStyle = `rgba(247, 239, 222, ${p.op})`;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
         ctx.fill();
