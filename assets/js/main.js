@@ -4,7 +4,7 @@
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const revealables = document.querySelectorAll(
-    '.about__body, .sadako__grid, .sadako__pullquote, .currently, .roles__grid, .contact__list, .colophon, .crane-divider'
+    '.about__grid, .sadako__grid, .sadako__pullquote, .currently, .roles__grid, .contact__list, .colophon, .crane-divider'
   );
 
   if (reduced || !('IntersectionObserver' in window)) {

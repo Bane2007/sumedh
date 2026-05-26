@@ -146,12 +146,44 @@ section, .colophon {
 
 /* === II. ABOUT === */
 .about {
-  max-width: 48rem;
+  max-width: 62rem;
+}
+.about__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 3.5vw, 3rem);
+  align-items: center;
+}
+@media (max-width: 720px) {
+  .about__grid { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+.about__portrait {
+  margin: 0;
+  position: relative;
+}
+.about__portrait img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 52% 64%;
+  border-radius: 2px;
+  filter: saturate(0.92) contrast(1.02);
+  box-shadow: 0 18px 44px -22px rgba(26, 20, 16, 0.55),
+              0 6px 14px -8px rgba(26, 20, 16, 0.22);
+}
+.about__caption {
+  margin: 0.7rem 0 0 0;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
 }
 .about__body {
-  font-size: clamp(1.15rem, 0.6vw + 1.05rem, 1.4rem);
+  font-size: clamp(1.1rem, 0.55vw + 1rem, 1.32rem);
   line-height: 1.62;
   color: var(--ink);
+  margin: 0;
 }
 .about__body em { color: var(--oxblood); font-style: italic; }
 
