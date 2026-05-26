@@ -93,21 +93,21 @@ a:focus-visible {
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--oxblood);
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1.1rem 0;
 }
 .section-eyebrow::before { content: "— "; opacity: 0.65; }
 
 /* === I. HERO === */
 .hero {
-  min-height: 100vh;
-  min-height: 100svh;
+  min-height: 88vh;
+  min-height: 88svh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 3rem var(--gutter) 2rem;
-  gap: 1.5rem;
+  padding: 2rem var(--gutter) 1.5rem;
+  gap: 1.1rem;
 }
 .hero__name {
   font-family: var(--serif);
@@ -139,7 +139,7 @@ a:focus-visible {
   color: var(--ink-soft);
 }
 .hero__chevron {
-  margin-top: 1.25rem;
+  margin-top: 0.5rem;
   display: inline-grid;
   place-items: center;
   width: 44px; height: 44px;
@@ -155,7 +155,7 @@ a:focus-visible {
 
 /* === GENERIC SECTION SPACING === */
 section, .colophon {
-  padding: clamp(2.5rem, 5vw, 4.5rem) var(--gutter);
+  padding: clamp(1.75rem, 3.6vw, 3.25rem) var(--gutter);
   max-width: 70rem;
   margin: 0 auto;
 }
@@ -201,7 +201,7 @@ section, .colophon {
   font-family: var(--serif);
   font-size: clamp(2rem, 3.4vw, 2.85rem);
   font-weight: 500;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.75rem 0;
   letter-spacing: 0.02em;
   line-height: 1.05;
 }
@@ -211,15 +211,15 @@ section, .colophon {
 .sadako__logline {
   border-left: 2px solid var(--oxblood);
   padding-left: 1.1rem;
-  margin: 0 0 1.4rem 0;
+  margin: 0 0 1.1rem 0;
   font-size: 1.08rem;
-  line-height: 1.6;
+  line-height: 1.55;
   color: var(--ink);
   font-style: italic;
 }
 
 .sadako__credit {
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1.1rem 0;
   color: var(--ink-soft);
 }
 .sadako__credit .mono { color: var(--oxblood); margin-right: 0.4em; }
@@ -228,13 +228,13 @@ section, .colophon {
   background: var(--paper-deep);
   border-top: 1px solid var(--hairline);
   border-bottom: 1px solid var(--hairline);
-  padding: 0.75rem 0.9rem;
-  margin: 0 0 1.6rem 0;
+  padding: 0.6rem 0.9rem;
+  margin: 0 0 1.2rem 0;
   font-size: 0.78rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   text-align: center;
-  line-height: 1.65;
+  line-height: 1.6;
 }
 .sadako__awards .dim { letter-spacing: 0.18em; font-size: 0.7rem; }
 
@@ -242,7 +242,7 @@ section, .colophon {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin: 0 0 1.8rem 0;
+  margin: 0 0 1.3rem 0;
 }
 .btn {
   display: inline-flex;
@@ -264,10 +264,10 @@ section, .colophon {
 .sadako__specs {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1rem 1.4rem;
+  gap: 0.75rem 1.4rem;
   border-top: 1px solid var(--hairline);
-  padding-top: 1.4rem;
-  margin-top: 0.5rem;
+  padding-top: 1.1rem;
+  margin-top: 0.4rem;
 }
 .sadako__specs > div { display: flex; flex-direction: column; gap: 0.2rem; }
 .sadako__specs dt { font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-soft); }
@@ -280,7 +280,7 @@ section, .colophon {
   line-height: 1.15;
   color: var(--oxblood);
   text-align: center;
-  margin: 2.5rem auto 0.5rem;
+  margin: 1.75rem auto 0;
   max-width: 28ch;
   letter-spacing: 0.005em;
 }
@@ -299,7 +299,7 @@ section, .colophon {
 /* === CURRENTLY BEAT === */
 .currently {
   text-align: center;
-  padding: 1rem var(--gutter) 1rem;
+  padding: 0.5rem var(--gutter);
   max-width: 50rem;
   margin: 0 auto;
 }
@@ -310,7 +310,7 @@ section, .colophon {
   text-transform: uppercase;
   color: var(--oxblood);
   display: block;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.4rem;
 }
 .currently__body {
   font-family: var(--serif);
@@ -323,12 +323,12 @@ section, .colophon {
 /* === CRANE DIVIDERS === */
 .crane-divider {
   text-align: center;
-  margin: 0.25rem 0;
+  margin: 0;
   color: var(--oxblood-soft);
 }
-.crane-divider img { display: inline-block; width: 64px; height: auto; opacity: 0.7; }
-.crane-divider--end { margin-top: 1.5rem; color: var(--ink-soft); }
-.crane-divider--end img { width: 50px; opacity: 0.55; }
+.crane-divider img { display: inline-block; width: 56px; height: auto; opacity: 0.6; }
+.crane-divider--end { margin-top: 0.75rem; color: var(--ink-soft); }
+.crane-divider--end img { width: 44px; opacity: 0.45; }
 
 /* === IV. ROLES & RECOGNITION === */
 .roles__grid {
@@ -345,15 +345,15 @@ section, .colophon {
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--ink-soft);
-  margin: 0 0 1.1rem 0;
-  padding-bottom: 0.5rem;
+  margin: 0 0 0.85rem 0;
+  padding-bottom: 0.45rem;
   border-bottom: 1px solid var(--hairline);
 }
 .roles__list li {
-  padding: 0.55rem 0;
+  padding: 0.45rem 0;
   border-bottom: 1px dashed var(--hairline);
   font-size: 1.02rem;
-  line-height: 1.5;
+  line-height: 1.45;
 }
 .roles__list li:last-child { border-bottom: none; }
 .roles__list .mono { color: var(--oxblood); margin-right: 0.6em; }
@@ -394,8 +394,8 @@ section, .colophon {
 /* === VI. COLOPHON === */
 .colophon {
   text-align: center;
-  padding-top: 1.25rem;
-  padding-bottom: 2.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
 }
 .colophon .mono {
   color: var(--ink-soft);
