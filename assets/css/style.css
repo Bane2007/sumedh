@@ -99,12 +99,12 @@ a:focus-visible {
 
 /* === I. HERO === */
 .hero {
-  min-height: 100vh;
-  min-height: 100svh;
+  min-height: 78vh;
+  min-height: 78svh;
   display: grid;
   place-items: center;
   text-align: center;
-  padding: 4rem var(--gutter);
+  padding: 2.5rem var(--gutter) 2rem;
 }
 .hero__name {
   font-family: var(--serif);
@@ -122,7 +122,7 @@ a:focus-visible {
   color: var(--ink-soft);
 }
 .hero__chevron {
-  margin-top: 4rem;
+  margin-top: 2.5rem;
   display: inline-grid;
   place-items: center;
   width: 44px; height: 44px;
@@ -138,10 +138,11 @@ a:focus-visible {
 
 /* === GENERIC SECTION SPACING === */
 section, .colophon {
-  padding: clamp(4rem, 8vw, 7rem) var(--gutter);
+  padding: clamp(2.5rem, 5vw, 4.5rem) var(--gutter);
   max-width: 70rem;
   margin: 0 auto;
 }
+.hero { max-width: none; }
 
 /* === II. ABOUT === */
 .about {
@@ -180,10 +181,11 @@ section, .colophon {
 
 .sadako__title {
   font-family: var(--serif);
-  font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+  font-size: clamp(2rem, 3.4vw, 2.85rem);
   font-weight: 500;
-  margin: 0 0 0.85rem 0;
+  margin: 0 0 1rem 0;
   letter-spacing: 0.02em;
+  line-height: 1.05;
 }
 .sadako__title .smallcaps { letter-spacing: 0.12em; }
 .sadako__year { color: var(--ink-soft); font-family: var(--mono); font-size: 0.6em; vertical-align: 0.18em; margin-left: 0.4em; }
@@ -253,14 +255,61 @@ section, .colophon {
 .sadako__specs dt { font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-soft); }
 .sadako__specs dd { font-family: var(--serif); font-size: 1rem; color: var(--ink); margin: 0; }
 
+.sadako__pullquote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  line-height: 1.15;
+  color: var(--oxblood);
+  text-align: center;
+  margin: 2.5rem auto 0.5rem;
+  max-width: 28ch;
+  letter-spacing: 0.005em;
+}
+.sadako__pullquote::before,
+.sadako__pullquote::after {
+  content: '';
+  display: inline-block;
+  width: 1.4rem;
+  height: 1px;
+  background: var(--oxblood);
+  vertical-align: 0.4em;
+  margin: 0 0.6rem;
+  opacity: 0.6;
+}
+
+/* === CURRENTLY BEAT === */
+.currently {
+  text-align: center;
+  padding: 1rem var(--gutter) 1rem;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+.currently__label {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--oxblood);
+  display: block;
+  margin-bottom: 0.6rem;
+}
+.currently__body {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  color: var(--ink);
+  margin: 0;
+}
+
 /* === CRANE DIVIDERS === */
 .crane-divider {
   text-align: center;
-  margin: 1.5rem 0;
+  margin: 0.25rem 0;
   color: var(--oxblood-soft);
 }
 .crane-divider img { display: inline-block; width: 64px; height: auto; opacity: 0.7; }
-.crane-divider--end { margin-top: 3rem; color: var(--ink-soft); }
+.crane-divider--end { margin-top: 1.5rem; color: var(--ink-soft); }
 .crane-divider--end img { width: 50px; opacity: 0.55; }
 
 /* === IV. ROLES & RECOGNITION === */
@@ -327,8 +376,8 @@ section, .colophon {
 /* === VI. COLOPHON === */
 .colophon {
   text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 4rem;
+  padding-top: 1.25rem;
+  padding-bottom: 2.5rem;
 }
 .colophon .mono {
   color: var(--ink-soft);
@@ -340,7 +389,7 @@ section, .colophon {
   font-style: italic;
   font-size: 1.4rem;
   color: var(--oxblood);
-  margin: 2rem 0 0 0;
+  margin: 1.2rem 0 0 0;
 }
 
 /* === SCROLL REVEAL === */
