@@ -152,19 +152,6 @@ body::before {
 
 main { position: relative; z-index: 1; }
 
-/* === PARTICLE CANVAS ===
-   JS-driven dust/firefly particles drift slowly upward across the viewport.
-   Canvas is fixed-positioned at z-index 0, behind all content.
-*/
-.bg-particles {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-}
-
 /* === REC LIGHT (top-right) ===
    Small oxblood dot + "REC" label, fixed in the corner. Slow pulse loop —
    the page's only persistent visible animation. Film-camera reference.
