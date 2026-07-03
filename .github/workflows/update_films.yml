@@ -1,15 +1,15 @@
-name: Update Letterboxd History
+name: Update Media History
 
 on:
   schedule:
     - cron: '0 0 * * *' # Runs daily at midnight UTC
-  workflow_dispatch: # Allows manual trigger from the GitHub Actions tab
+  workflow_dispatch: # Allows manual trigger from the Actions tab
 
 permissions:
   contents: write
 
 jobs:
-  update-films:
+  update-media:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -20,12 +20,12 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Run Letterboxd Scraper
-        run: python scripts/update_films.py
+      - name: Run Media Scraper
+        run: python scripts/update_media.py
 
       - name: Commit and push if changed
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/data/films.json assets/data/films.js
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-update Letterboxd watched history" && git push)
+          git add assets/data/media.js assets/data/films.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto-update films, anime, and manga history" && git push)

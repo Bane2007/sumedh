@@ -128,13 +128,27 @@
     </svg>`;
   };
 
-  // Tab View Swapping
+  // Convert 10-score to stars
+  const scoreToStars = (score) => {
+    if (!score) return 'Unrated';
+    const stars = Math.floor(score / 2);
+    const half = score % 2 ? '½' : '';
+    return '★'.repeat(stars) + half;
+  };
+
+  // Active Category State
+  let currentCategory = 'films'; // 'films' | 'anime' | 'manga'
+
+  // Tab View Navigation
   const btnShelfView = document.getElementById('btn-shelf-view');
-  const btnListView = document.getElementById('btn-list-view');
+  const btnFilmsView = document.getElementById('btn-films-view');
+  const btnAnimeView = document.getElementById('btn-anime-view');
+  const btnMangaView = document.getElementById('btn-manga-view');
+  
   const panelShelfView = document.getElementById('panel-shelf-view');
   const panelListView = document.getElementById('panel-list-view');
 
-  // Display Box Elements
+  // Display Cabinet Elements
   const displayBox = document.getElementById('closet-display');
   const placeholder = displayBox ? displayBox.querySelector('.display-placeholder') : null;
   const content = displayBox ? displayBox.querySelector('.display-content') : null;
@@ -153,14 +167,67 @@
     coverArt.innerHTML = generateGenericCover(film.title, film.year);
     titleEl.innerHTML = film.title;
     directorEl.innerHTML = 'Letterboxd Diary';
-    metaEl.innerHTML = `${film.year} &middot; Rated ${film.rating}`;
+    metaEl.innerHTML = `${film.year} &middot; Rated ${film.rating || 'No Rating'}`;
     
-    // Hide quote element for dynamic letterboxd entries
     quoteEl.style.display = 'none';
     
-    descEl.innerHTML = `This film is part of Sumedh's watched history on Letterboxd. He rated it <strong>${film.rating}</strong>.<br><br>
+    descEl.innerHTML = `This film is part of Sumedh's watched history on Letterboxd. He rated it <strong>${film.rating || 'Unrated'}</strong>.<br><br>
       <a class="btn btn--filled" href="https://letterboxd.com/film/${film.slug}/" target="_blank" rel="noopener" style="margin-top: 0.5rem; display: inline-flex;">
         View on Letterboxd
+      </a>`;
+
+    content.style.animation = 'none';
+    content.offsetHeight; 
+    content.style.animation = null;
+  };
+
+  const updateDisplayWithAnime = (anime) => {
+    if (!displayBox) return;
+    content.style.display = 'grid';
+    placeholder.style.display = 'none';
+
+    // Show actual cover art image
+    coverArt.innerHTML = `<img src="${anime.image}" alt="${anime.title}" class="img-cover" style="width: 100%; height: 100%; object-fit: cover; border-radius: 2px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);">`;
+    titleEl.innerHTML = anime.title;
+    directorEl.innerHTML = 'MyAnimeList Entry';
+    metaEl.innerHTML = `${anime.year} &middot; Completed &middot; Score: ${anime.score}/10 (${scoreToStars(anime.score)})`;
+    
+    quoteEl.style.display = 'none';
+    
+    const genreTags = anime.genres && anime.genres.length > 0 
+      ? `<p class="display-genres" style="font-family: var(--mono); font-size: 0.65rem; color: var(--oxblood-soft); text-transform: uppercase; margin-top: 0.25rem;">${anime.genres.join(' &bull; ')}</p>` 
+      : '';
+
+    descEl.innerHTML = `Completed: TV series &bull; <strong>${anime.episodes}</strong> episodes.<br>${genreTags}<br>
+      <a class="btn btn--filled" href="${anime.url}" target="_blank" rel="noopener" style="margin-top: 0.5rem; display: inline-flex;">
+        View on MyAnimeList
+      </a>`;
+
+    content.style.animation = 'none';
+    content.offsetHeight; 
+    content.style.animation = null;
+  };
+
+  const updateDisplayWithManga = (manga) => {
+    if (!displayBox) return;
+    content.style.display = 'grid';
+    placeholder.style.display = 'none';
+
+    // Show actual cover art image
+    coverArt.innerHTML = `<img src="${manga.image}" alt="${manga.title}" class="img-cover" style="width: 100%; height: 100%; object-fit: cover; border-radius: 2px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);">`;
+    titleEl.innerHTML = manga.title;
+    directorEl.innerHTML = 'MyAnimeList Entry';
+    metaEl.innerHTML = `${manga.year} &middot; Completed &middot; Score: ${manga.score}/10 (${scoreToStars(manga.score)})`;
+    
+    quoteEl.style.display = 'none';
+    
+    const genreTags = manga.genres && manga.genres.length > 0 
+      ? `<p class="display-genres" style="font-family: var(--mono); font-size: 0.65rem; color: var(--oxblood-soft); text-transform: uppercase; margin-top: 0.25rem;">${manga.genres.join(' &bull; ')}</p>` 
+      : '';
+
+    descEl.innerHTML = `Completed: <strong>${manga.chapters}</strong> chapters &bull; <strong>${manga.volumes}</strong> volumes.<br>${genreTags}<br>
+      <a class="btn btn--filled" href="${manga.url}" target="_blank" rel="noopener" style="margin-top: 0.5rem; display: inline-flex;">
+        View on MyAnimeList
       </a>`;
 
     content.style.animation = 'none';
@@ -181,10 +248,8 @@
     directorEl.innerHTML = data.director;
     metaEl.innerHTML = data.meta;
     
-    // Show quote element for custom curated films
     quoteEl.style.display = 'block';
     quoteEl.innerHTML = data.quote;
-    
     descEl.innerHTML = data.description;
     
     content.style.animation = 'none';
@@ -192,29 +257,45 @@
     content.style.animation = null;
   };
 
-  // Movie List Sorting & Filtering Logic
+  // Movie/Anime/Manga List Sorting & Filtering Logic
   const movieGrid = document.getElementById('movie-grid');
   const movieSearch = document.getElementById('movie-search');
   const movieSort = document.getElementById('movie-sort');
 
   const getFilteredAndSortedFilms = () => {
-    if (!window.letterboxdFilms) return [];
+    if (!window.mediaDatabase) return [];
+
+    let dataset = [];
+    if (currentCategory === 'films') {
+      dataset = window.mediaDatabase.films || [];
+    } else if (currentCategory === 'anime') {
+      dataset = window.mediaDatabase.anime || [];
+    } else if (currentCategory === 'manga') {
+      dataset = window.mediaDatabase.manga || [];
+    }
 
     const query = movieSearch ? movieSearch.value.toLowerCase() : '';
     const sortBy = movieSort ? movieSort.value : 'default';
 
     // 1. Filter
-    let result = window.letterboxdFilms.filter(film => {
-      return film.title.toLowerCase().includes(query) || film.year.includes(query);
+    let result = dataset.filter(item => {
+      const matchTitle = item.title && item.title.toLowerCase().includes(query);
+      const matchYear = item.year && item.year.includes(query);
+      const matchGenre = item.genres && item.genres.some(g => g.toLowerCase().includes(query));
+      return matchTitle || matchYear || matchGenre;
     });
 
-    // Rating value helper
-    const getRatingValue = (ratingStr) => {
-      const mappings = {
-        '★★★★★': 10, '★★★★½': 9, '★★★★': 8, '★★★½': 7, '★★★': 6,
-        '★★½': 5, '★★': 4, '★½': 3, '★': 2, '½': 1
-      };
-      return mappings[ratingStr] || 0;
+    // Rating score mapper helper
+    const getRatingValue = (item) => {
+      if (currentCategory === 'films') {
+        const mappings = {
+          '★★★★★': 10, '★★★★½': 9, '★★★★': 8, '★★★½': 7, '★★★': 6,
+          '★★½': 5, '★★': 4, '★½': 3, '★': 2, '½': 1
+        };
+        return mappings[item.rating] || 0;
+      } else {
+        return item.score || 0;
+      }
     };
 
     // 2. Sort
@@ -233,7 +314,7 @@
         return ya - yb;
       });
     } else if (sortBy === 'rating-desc') {
-      result.sort((a, b) => getRatingValue(b.rating) - getRatingValue(a.rating));
+      result.sort((a, b) => getRatingValue(b) - getRatingValue(a));
     }
 
     return result;
@@ -242,19 +323,25 @@
   const renderList = () => {
     if (!movieGrid) return;
     movieGrid.innerHTML = '';
-    const films = getFilteredAndSortedFilms();
+    const items = getFilteredAndSortedFilms();
 
-    films.forEach(film => {
+    items.forEach(item => {
       const card = document.createElement('div');
       card.className = 'grid-item-card';
-      card.setAttribute('data-slug', film.slug);
       card.setAttribute('tabindex', '0');
 
+      let displayRating = '';
+      if (currentCategory === 'films') {
+        displayRating = item.rating || 'No Rating';
+      } else {
+        displayRating = item.score ? `${item.score}/10` : 'Unrated';
+      }
+
       card.innerHTML = `
-        <span class="card-mini-title">${film.title}</span>
+        <span class="card-mini-title">${item.title}</span>
         <div class="card-mini-meta">
-          <span>${film.year}</span>
-          <span class="card-mini-rating">${film.rating || 'No Rating'}</span>
+          <span>${item.year}</span>
+          <span class="card-mini-rating">${displayRating}</span>
         </div>
       `;
 
@@ -262,7 +349,14 @@
         const allCards = movieGrid.querySelectorAll('.grid-item-card');
         allCards.forEach(c => c.classList.remove('selected'));
         card.classList.add('selected');
-        updateDisplayWithLetterboxd(film);
+        
+        if (currentCategory === 'films') {
+          updateDisplayWithLetterboxd(item);
+        } else if (currentCategory === 'anime') {
+          updateDisplayWithAnime(item);
+        } else if (currentCategory === 'manga') {
+          updateDisplayWithManga(item);
+        }
       });
 
       card.addEventListener('focus', () => {
@@ -273,17 +367,28 @@
     });
 
     // Auto-select first matching card if list view is active
-    if (btnListView && btnListView.classList.contains('active') && films.length > 0) {
+    const isListActive = btnFilmsView.classList.contains('active') || 
+                         btnAnimeView.classList.contains('active') || 
+                         btnMangaView.classList.contains('active');
+
+    if (isListActive && items.length > 0) {
       const firstCard = movieGrid.querySelector('.grid-item-card');
       if (firstCard) firstCard.click();
     }
   };
 
+  // Helper to switch active tab button
+  const activateTab = (activeBtn) => {
+    [btnShelfView, btnFilmsView, btnAnimeView, btnMangaView].forEach(btn => {
+      if (btn) btn.classList.remove('active');
+    });
+    activeBtn.classList.add('active');
+  };
+
   // Setup tab event listeners
-  if (btnShelfView && btnListView && panelShelfView && panelListView) {
+  if (btnShelfView) {
     btnShelfView.addEventListener('click', () => {
-      btnListView.classList.remove('active');
-      btnShelfView.classList.add('active');
+      activateTab(btnShelfView);
       panelListView.style.display = 'none';
       panelShelfView.style.display = 'flex';
       
@@ -292,14 +397,33 @@
         spines[0].click();
       }
     });
+  }
 
-    btnListView.addEventListener('click', () => {
-      btnShelfView.classList.remove('active');
-      btnListView.classList.add('active');
-      panelShelfView.style.display = 'none';
-      panelListView.style.display = 'flex';
+  const handleListTabClick = (category, placeholderText) => {
+    currentCategory = category;
+    activateTab(category === 'films' ? btnFilmsView : (category === 'anime' ? btnAnimeView : btnMangaView));
+    panelShelfView.style.display = 'none';
+    panelListView.style.display = 'flex';
+    if (movieSearch) {
+      movieSearch.value = '';
+      movieSearch.placeholder = placeholderText;
+    }
+    renderList();
+  };
 
-      renderList();
+  if (btnFilmsView) {
+    btnFilmsView.addEventListener('click', () => {
+      handleListTabClick('films', 'Search Letterboxd history...');
+    });
+  }
+  if (btnAnimeView) {
+    btnAnimeView.addEventListener('click', () => {
+      handleListTabClick('anime', 'Search completed anime (title or genre)...');
+    });
+  }
+  if (btnMangaView) {
+    btnMangaView.addEventListener('click', () => {
+      handleListTabClick('manga', 'Search completed manga (title or genre)...');
     });
   }
 
@@ -332,6 +456,6 @@
     updateDisplayWithFeatured('2001');
   }
 
-  // Render the initial Letterboxd list in the background panel
+  // Render the initial list in the background
   renderList();
 })();
