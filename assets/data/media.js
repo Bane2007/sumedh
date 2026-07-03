@@ -3237,7 +3237,7 @@ window.mediaDatabase = {
   ],
   "anime": [
     {
-      "title": "Re:ZERO -Starting Life in Another World- Season 2 Part 2",
+      "title": "Re:Zero kara Hajimeru Isekai Seikatsu 2nd Season Part 2",
       "id": 42203,
       "url": "https://myanimelist.net/anime/42203/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_2nd_Season_Part_2",
       "year": "2021",
@@ -3252,7 +3252,7 @@ window.mediaDatabase = {
       "updated_at": 1783021753
     },
     {
-      "title": "Re:ZERO -Starting Life in Another World- Season 2",
+      "title": "Re:Zero kara Hajimeru Isekai Seikatsu 2nd Season",
       "id": 39587,
       "url": "https://myanimelist.net/anime/39587/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_2nd_Season",
       "year": "2020",
@@ -3267,7 +3267,7 @@ window.mediaDatabase = {
       "updated_at": 1782423522
     },
     {
-      "title": "I Made Friends with the Second Prettiest Girl in My Class",
+      "title": "Class de 2-banme ni Kawaii Onnanoko to Tomodachi ni Natta",
       "id": 56734,
       "url": "https://myanimelist.net/anime/56734/Class_de_2-banme_ni_Kawaii_Onnanoko_to_Tomodachi_ni_Natta",
       "year": "2026",
@@ -3280,7 +3280,7 @@ window.mediaDatabase = {
       "updated_at": 1782305476
     },
     {
-      "title": "Re:ZERO -Starting Life in Another World- The Frozen Bond",
+      "title": "Re:Zero kara Hajimeru Isekai Seikatsu - Hyouketsu no Kizuna",
       "id": 38414,
       "url": "https://myanimelist.net/anime/38414/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_-_Hyouketsu_no_Kizuna",
       "year": "2019",
@@ -3295,7 +3295,7 @@ window.mediaDatabase = {
       "updated_at": 1782302210
     },
     {
-      "title": "Re:ZERO -Starting Life in Another World- Memory Snow",
+      "title": "Re:Zero kara Hajimeru Isekai Seikatsu - Memory Snow",
       "id": 36286,
       "url": "https://myanimelist.net/anime/36286/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_-_Memory_Snow",
       "year": "2018",
@@ -3308,7 +3308,7 @@ window.mediaDatabase = {
       "updated_at": 1782298317
     },
     {
-      "title": "Re:ZERO -Starting Life in Another World-",
+      "title": "Re:Zero kara Hajimeru Isekai Seikatsu",
       "id": 31240,
       "url": "https://myanimelist.net/anime/31240/Re_Zero_kara_Hajimeru_Isekai_Seikatsu",
       "year": "2016",
@@ -3323,7 +3323,7 @@ window.mediaDatabase = {
       "updated_at": 1782245071
     },
     {
-      "title": "My Teen Romantic Comedy SNAFU Climax!",
+      "title": "Yahari Ore no Seishun Love Comedy wa Machigatteiru. Kan",
       "id": 39547,
       "url": "https://myanimelist.net/anime/39547/Yahari_Ore_no_Seishun_Love_Comedy_wa_Machigatteiru_Kan",
       "year": "2020",
@@ -3337,7 +3337,7 @@ window.mediaDatabase = {
       "updated_at": 1781793275
     },
     {
-      "title": "More than a Married Couple, but Not Lovers.",
+      "title": "Fuufu Ijou, Koibito Miman.",
       "id": 50425,
       "url": "https://myanimelist.net/anime/50425/Fuufu_Ijou_Koibito_Miman",
       "year": "2022",
@@ -3350,7 +3350,7 @@ window.mediaDatabase = {
       "updated_at": 1781267451
     },
     {
-      "title": "My Dress-Up Darling Season 2",
+      "title": "Sono Bisque Doll wa Koi wo Suru Season 2",
       "id": 53065,
       "url": "https://myanimelist.net/anime/53065/Sono_Bisque_Doll_wa_Koi_wo_Suru_Season_2",
       "year": "2025",
@@ -3363,7 +3363,7 @@ window.mediaDatabase = {
       "updated_at": 1781013011
     },
     {
-      "title": "My Teen Romantic Comedy SNAFU TOO!",
+      "title": "Yahari Ore no Seishun Love Comedy wa Machigatteiru. Zoku",
       "id": 23847,
       "url": "https://myanimelist.net/anime/23847/Yahari_Ore_no_Seishun_Love_Comedy_wa_Machigatteiru_Zoku",
       "year": "2015",
@@ -3393,7 +3393,7 @@ window.mediaDatabase = {
       "updated_at": 1779988172
     },
     {
-      "title": "My Teen Romantic Comedy SNAFU",
+      "title": "Yahari Ore no Seishun Love Comedy wa Machigatteiru.",
       "id": 14813,
       "url": "https://myanimelist.net/anime/14813/Yahari_Ore_no_Seishun_Love_Comedy_wa_Machigatteiru",
       "year": "2013",
@@ -3407,7 +3407,7 @@ window.mediaDatabase = {
       "updated_at": 1775835666
     },
     {
-      "title": "Wotakoi: Love is Hard for Otaku",
+      "title": "Wotaku ni Koi wa Muzukashii",
       "id": 35968,
       "url": "https://myanimelist.net/anime/35968/Wotaku_ni_Koi_wa_Muzukashii",
       "year": "2018",
@@ -3421,7 +3421,7 @@ window.mediaDatabase = {
       "updated_at": 1775498759
     },
     {
-      "title": "Hell's Paradise Season 2",
+      "title": "Jigokuraku 2nd Season",
       "id": 55825,
       "url": "https://myanimelist.net/anime/55825/Jigokuraku_2nd_Season",
       "year": "2026",
@@ -3436,7 +3436,7 @@ window.mediaDatabase = {
       "updated_at": 1775199529
     },
     {
-      "title": "You and I Are Polar Opposites",
+      "title": "Seihantai na Kimi to Boku",
       "id": 60371,
       "url": "https://myanimelist.net/anime/60371/Seihantai_na_Kimi_to_Boku",
       "year": "2026",
@@ -3450,7 +3450,7 @@ window.mediaDatabase = {
       "updated_at": 1774986684
     },
     {
-      "title": "Frieren: Beyond Journey's End Season 2",
+      "title": "Sousou no Frieren 2nd Season",
       "id": 59978,
       "url": "https://myanimelist.net/anime/59978/Sousou_no_Frieren_2nd_Season",
       "year": "2026",
@@ -3465,7 +3465,7 @@ window.mediaDatabase = {
       "updated_at": 1774772164
     },
     {
-      "title": "Frieren: Beyond Journey's End",
+      "title": "Sousou no Frieren",
       "id": 52991,
       "url": "https://myanimelist.net/anime/52991/Sousou_no_Frieren",
       "year": "2023",
@@ -3481,7 +3481,7 @@ window.mediaDatabase = {
       "updated_at": 1774772144
     },
     {
-      "title": "Jujutsu Kaisen: The Culling Game Part 1",
+      "title": "Jujutsu Kaisen: Shimetsu Kaiyuu - Zenpen",
       "id": 57658,
       "url": "https://myanimelist.net/anime/57658/Jujutsu_Kaisen__Shimetsu_Kaiyuu_-_Zenpen",
       "year": "2026",
@@ -3495,7 +3495,7 @@ window.mediaDatabase = {
       "updated_at": 1774600606
     },
     {
-      "title": "[Oshi No Ko] Season 3",
+      "title": "[Oshi no Ko] 3rd Season",
       "id": 60058,
       "url": "https://myanimelist.net/anime/60058/Oshi_no_Ko_3rd_Season",
       "year": "2026",
@@ -3508,7 +3508,7 @@ window.mediaDatabase = {
       "updated_at": 1774523560
     },
     {
-      "title": "Kaguya-sama: Love Is War - Stairway to Adulthood",
+      "title": "Kaguya-sama wa Kokurasetai: Otona e no Kaidan",
       "id": 61903,
       "url": "https://myanimelist.net/anime/61903/Kaguya-sama_wa_Kokurasetai__Otona_e_no_Kaidan",
       "year": "2025",
@@ -3522,7 +3522,7 @@ window.mediaDatabase = {
       "updated_at": 1768558369
     },
     {
-      "title": "Chained Soldier",
+      "title": "Mato Seihei no Slave",
       "id": 50392,
       "url": "https://myanimelist.net/anime/50392/Mato_Seihei_no_Slave",
       "year": "2024",
@@ -3537,7 +3537,7 @@ window.mediaDatabase = {
       "updated_at": 1767946572
     },
     {
-      "title": "My Dress-Up Darling",
+      "title": "Sono Bisque Doll wa Koi wo Suru",
       "id": 48736,
       "url": "https://myanimelist.net/anime/48736/Sono_Bisque_Doll_wa_Koi_wo_Suru",
       "year": "2022",
@@ -3550,7 +3550,7 @@ window.mediaDatabase = {
       "updated_at": 1759429146
     },
     {
-      "title": "Demon Slayer: Kimetsu no Yaiba - The Movie: Infinity Castle - Part 1: Akaza Returns",
+      "title": "Kimetsu no Yaiba Movie 1: Mugenjou-hen - Akaza Sairai",
       "id": 59192,
       "url": "https://myanimelist.net/anime/59192/Kimetsu_no_Yaiba_Movie_1__Mugenjou-hen_-_Akaza_Sairai",
       "year": "2025",
@@ -3579,7 +3579,7 @@ window.mediaDatabase = {
       "updated_at": 1759427906
     },
     {
-      "title": "The Apothecary Diaries Season 2",
+      "title": "Kusuriya no Hitorigoto 2nd Season",
       "id": 58514,
       "url": "https://myanimelist.net/anime/58514/Kusuriya_no_Hitorigoto_2nd_Season",
       "year": "2025",
@@ -3593,7 +3593,7 @@ window.mediaDatabase = {
       "updated_at": 1752827262
     },
     {
-      "title": "Erased",
+      "title": "Boku dake ga Inai Machi",
       "id": 31043,
       "url": "https://myanimelist.net/anime/31043/Boku_dake_ga_Inai_Machi",
       "year": "2016",
@@ -3607,7 +3607,7 @@ window.mediaDatabase = {
       "updated_at": 1750106092
     },
     {
-      "title": "Heavenly Delusion",
+      "title": "Tengoku Daimakyou",
       "id": 53393,
       "url": "https://myanimelist.net/anime/53393/Tengoku_Daimakyou",
       "year": "2023",
@@ -3622,7 +3622,7 @@ window.mediaDatabase = {
       "updated_at": 1750002723
     },
     {
-      "title": "The 100 Girlfriends Who Really, Really, Really, Really, Really Love You Season 2",
+      "title": "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo 2nd Season",
       "id": 57616,
       "url": "https://myanimelist.net/anime/57616/Kimi_no_Koto_ga_Daidaidaidaidaisuki_na_100-nin_no_Kanojo_2nd_Season",
       "year": "2025",
@@ -3636,7 +3636,7 @@ window.mediaDatabase = {
       "updated_at": 1748966168
     },
     {
-      "title": "Student Council Staff Members",
+      "title": "Seitokai Yakuindomo",
       "id": 8675,
       "url": "https://myanimelist.net/anime/8675/Seitokai_Yakuindomo",
       "year": "2010",
@@ -3663,7 +3663,7 @@ window.mediaDatabase = {
       "updated_at": 1741206770
     },
     {
-      "title": "Ron Kamonohashi's Forbidden Deductions Season 2",
+      "title": "Kamonohashi Ron no Kindan Suiri 2nd Season",
       "id": 57635,
       "url": "https://myanimelist.net/anime/57635/Kamonohashi_Ron_no_Kindan_Suiri_2nd_Season",
       "year": "2024",
@@ -3677,7 +3677,7 @@ window.mediaDatabase = {
       "updated_at": 1735739797
     },
     {
-      "title": "Legend of the Galactic Heroes",
+      "title": "Ginga Eiyuu Densetsu",
       "id": 820,
       "url": "https://myanimelist.net/anime/820/Ginga_Eiyuu_Densetsu",
       "year": "1988",
@@ -3691,7 +3691,7 @@ window.mediaDatabase = {
       "updated_at": 1735243819
     },
     {
-      "title": "Dan Da Dan",
+      "title": "Dandadan",
       "id": 57334,
       "url": "https://myanimelist.net/anime/57334/Dandadan",
       "year": "2024",
@@ -3706,7 +3706,7 @@ window.mediaDatabase = {
       "updated_at": 1734902725
     },
     {
-      "title": "[Oshi No Ko] Season 2",
+      "title": "[Oshi no Ko] 2nd Season",
       "id": 55791,
       "url": "https://myanimelist.net/anime/55791/Oshi_no_Ko_2nd_Season",
       "year": "2024",
@@ -3719,7 +3719,7 @@ window.mediaDatabase = {
       "updated_at": 1730532213
     },
     {
-      "title": "Shy Season 2",
+      "title": "Shy 2nd Season",
       "id": 57567,
       "url": "https://myanimelist.net/anime/57567/Shy_2nd_Season",
       "year": "2024",
@@ -3733,7 +3733,7 @@ window.mediaDatabase = {
       "updated_at": 1727191491
     },
     {
-      "title": "Dead Dead Demons Dededede Destruction",
+      "title": "Dead Dead Demons Dededede Destruction (ONA)",
       "id": 58883,
       "url": "https://myanimelist.net/anime/58883/Dead_Dead_Demons_Dededede_Destruction_ONA",
       "year": "2024",
@@ -3747,7 +3747,7 @@ window.mediaDatabase = {
       "updated_at": 1726826907
     },
     {
-      "title": "My Deer Friend Nokotan",
+      "title": "Shikanoko Nokonoko Koshitantan",
       "id": 58426,
       "url": "https://myanimelist.net/anime/58426/Shikanoko_Nokonoko_Koshitantan",
       "year": "2024",
@@ -3760,7 +3760,7 @@ window.mediaDatabase = {
       "updated_at": 1726751092
     },
     {
-      "title": "Mushoku Tensei: Jobless Reincarnation Part 2",
+      "title": "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2",
       "id": 45576,
       "url": "https://myanimelist.net/anime/45576/Mushoku_Tensei__Isekai_Ittara_Honki_Dasu_Part_2",
       "year": "2021",
@@ -3776,7 +3776,7 @@ window.mediaDatabase = {
       "updated_at": 1719989883
     },
     {
-      "title": "Mushoku Tensei: Jobless Reincarnation",
+      "title": "Mushoku Tensei: Isekai Ittara Honki Dasu",
       "id": 39535,
       "url": "https://myanimelist.net/anime/39535/Mushoku_Tensei__Isekai_Ittara_Honki_Dasu",
       "year": "2021",
@@ -3792,7 +3792,7 @@ window.mediaDatabase = {
       "updated_at": 1719989878
     },
     {
-      "title": "Mushoku Tensei: Jobless Reincarnation Season 2",
+      "title": "Mushoku Tensei II: Isekai Ittara Honki Dasu",
       "id": 51179,
       "url": "https://myanimelist.net/anime/51179/Mushoku_Tensei_II__Isekai_Ittara_Honki_Dasu",
       "year": "2023",
@@ -3808,7 +3808,7 @@ window.mediaDatabase = {
       "updated_at": 1719989876
     },
     {
-      "title": "Mushoku Tensei: Jobless Reincarnation Season 2 Part 2",
+      "title": "Mushoku Tensei II: Isekai Ittara Honki Dasu Part 2",
       "id": 55888,
       "url": "https://myanimelist.net/anime/55888/Mushoku_Tensei_II__Isekai_Ittara_Honki_Dasu_Part_2",
       "year": "2024",
@@ -3824,7 +3824,7 @@ window.mediaDatabase = {
       "updated_at": 1719989871
     },
     {
-      "title": "Demon Slayer: Kimetsu no Yaiba Hashira Training Arc",
+      "title": "Kimetsu no Yaiba: Hashira Geiko-hen",
       "id": 55701,
       "url": "https://myanimelist.net/anime/55701/Kimetsu_no_Yaiba__Hashira_Geiko-hen",
       "year": "2024",
@@ -3838,7 +3838,7 @@ window.mediaDatabase = {
       "updated_at": 1719825214
     },
     {
-      "title": "Kaiju No. 8",
+      "title": "Kaijuu 8-gou",
       "id": 52588,
       "url": "https://myanimelist.net/anime/52588/Kaijuu_8-gou",
       "year": "2024",
@@ -3853,7 +3853,7 @@ window.mediaDatabase = {
       "updated_at": 1719754511
     },
     {
-      "title": "Mysterious Disappearances",
+      "title": "Kaii to Otome to Kamikakushi",
       "id": 54199,
       "url": "https://myanimelist.net/anime/54199/Kaii_to_Otome_to_Kamikakushi",
       "year": "2024",
@@ -3868,7 +3868,7 @@ window.mediaDatabase = {
       "updated_at": 1719511154
     },
     {
-      "title": "Grave of the Fireflies",
+      "title": "Hotaru no Haka",
       "id": 578,
       "url": "https://myanimelist.net/anime/578/Hotaru_no_Haka",
       "year": "1988",
@@ -3881,7 +3881,7 @@ window.mediaDatabase = {
       "updated_at": 1719331822
     },
     {
-      "title": "Train to the End of the World",
+      "title": "Shuumatsu Train Doko e Iku?",
       "id": 53356,
       "url": "https://myanimelist.net/anime/53356/Shuumatsu_Train_Doko_e_Iku",
       "year": "2024",
@@ -3894,7 +3894,7 @@ window.mediaDatabase = {
       "updated_at": 1719331805
     },
     {
-      "title": "KonoSuba: God's Blessing on This Wonderful World! 3",
+      "title": "Kono Subarashii Sekai ni Shukufuku wo! 3",
       "id": 49458,
       "url": "https://myanimelist.net/anime/49458/Kono_Subarashii_Sekai_ni_Shukufuku_wo_3",
       "year": "2024",
@@ -3909,7 +3909,7 @@ window.mediaDatabase = {
       "updated_at": 1718870761
     },
     {
-      "title": "Grandpa and Grandma Turn Young Again",
+      "title": "Jiisan Baasan Wakagaeru",
       "id": 56230,
       "url": "https://myanimelist.net/anime/56230/Jiisan_Baasan_Wakagaeru",
       "year": "2024",
@@ -3924,7 +3924,7 @@ window.mediaDatabase = {
       "updated_at": 1718618400
     },
     {
-      "title": "Delicious in Dungeon",
+      "title": "Dungeon Meshi",
       "id": 52701,
       "url": "https://myanimelist.net/anime/52701/Dungeon_Meshi",
       "year": "2024",
@@ -3940,7 +3940,7 @@ window.mediaDatabase = {
       "updated_at": 1718383025
     },
     {
-      "title": "I Want To Eat Your Pancreas",
+      "title": "Kimi no Suizou wo Tabetai",
       "id": 36098,
       "url": "https://myanimelist.net/anime/36098/Kimi_no_Suizou_wo_Tabetai",
       "year": "2018",
@@ -3954,7 +3954,7 @@ window.mediaDatabase = {
       "updated_at": 1718017845
     },
     {
-      "title": "Solo Leveling",
+      "title": "Ore dake Level Up na Ken",
       "id": 52299,
       "url": "https://myanimelist.net/anime/52299/Ore_dake_Level_Up_na_Ken",
       "year": "2024",
@@ -3969,7 +3969,7 @@ window.mediaDatabase = {
       "updated_at": 1711971995
     },
     {
-      "title": "The Apothecary Diaries",
+      "title": "Kusuriya no Hitorigoto",
       "id": 54492,
       "url": "https://myanimelist.net/anime/54492/Kusuriya_no_Hitorigoto",
       "year": "2023",
@@ -3997,7 +3997,7 @@ window.mediaDatabase = {
       "updated_at": 1711194489
     },
     {
-      "title": "Ron Kamonohashi's Forbidden Deductions",
+      "title": "Kamonohashi Ron no Kindan Suiri",
       "id": 53879,
       "url": "https://myanimelist.net/anime/53879/Kamonohashi_Ron_no_Kindan_Suiri",
       "year": "2023",
@@ -4011,7 +4011,7 @@ window.mediaDatabase = {
       "updated_at": 1710622450
     },
     {
-      "title": "Migi & Dali",
+      "title": "Migi to Dali",
       "id": 50586,
       "url": "https://myanimelist.net/anime/50586/Migi_to_Dali",
       "year": "2023",
@@ -4026,7 +4026,7 @@ window.mediaDatabase = {
       "updated_at": 1710622432
     },
     {
-      "title": "When Marnie Was There",
+      "title": "Omoide no Marnie",
       "id": 21557,
       "url": "https://myanimelist.net/anime/21557/Omoide_no_Marnie",
       "year": "2014",
@@ -4086,7 +4086,7 @@ window.mediaDatabase = {
       "updated_at": 1705012977
     },
     {
-      "title": "High-Rise Invasion",
+      "title": "Tenkuu Shinpan",
       "id": 43690,
       "url": "https://myanimelist.net/anime/43690/Tenkuu_Shinpan",
       "year": "2021",
@@ -4115,7 +4115,7 @@ window.mediaDatabase = {
       "updated_at": 1703790945
     },
     {
-      "title": "Jujutsu Kaisen Season 2",
+      "title": "Jujutsu Kaisen 2nd Season",
       "id": 51009,
       "url": "https://myanimelist.net/anime/51009/Jujutsu_Kaisen_2nd_Season",
       "year": "2023",
@@ -4129,7 +4129,7 @@ window.mediaDatabase = {
       "updated_at": 1703790907
     },
     {
-      "title": "Zom 100: Bucket List of the Dead",
+      "title": "Zom 100: Zombie ni Naru made ni Shitai 100 no Koto",
       "id": 54112,
       "url": "https://myanimelist.net/anime/54112/Zom_100__Zombie_ni_Naru_made_ni_Shitai_100_no_Koto",
       "year": "2023",
@@ -4143,7 +4143,7 @@ window.mediaDatabase = {
       "updated_at": 1703600765
     },
     {
-      "title": "The 100 Girlfriends Who Really, Really, Really, Really, Really Love You",
+      "title": "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo",
       "id": 54714,
       "url": "https://myanimelist.net/anime/54714/Kimi_no_Koto_ga_Daidaidaidaidaisuki_na_100-nin_no_Kanojo",
       "year": "2023",
@@ -4157,7 +4157,7 @@ window.mediaDatabase = {
       "updated_at": 1703488680
     },
     {
-      "title": "The Kingdoms of Ruin",
+      "title": "Hametsu no Oukoku",
       "id": 54362,
       "url": "https://myanimelist.net/anime/54362/Hametsu_no_Oukoku",
       "year": "2023",
@@ -4173,7 +4173,7 @@ window.mediaDatabase = {
       "updated_at": 1703340078
     },
     {
-      "title": "Code Geass: Lelouch of the Rebellion R2",
+      "title": "Code Geass: Hangyaku no Lelouch R2",
       "id": 2904,
       "url": "https://myanimelist.net/anime/2904/Code_Geass__Hangyaku_no_Lelouch_R2",
       "year": "2008",
@@ -4188,7 +4188,7 @@ window.mediaDatabase = {
       "updated_at": 1703279640
     },
     {
-      "title": "Code Geass: Lelouch of the Rebellion",
+      "title": "Code Geass: Hangyaku no Lelouch",
       "id": 1575,
       "url": "https://myanimelist.net/anime/1575/Code_Geass__Hangyaku_no_Lelouch",
       "year": "2006",
@@ -4217,7 +4217,7 @@ window.mediaDatabase = {
       "updated_at": 1702977337
     },
     {
-      "title": "Attack on Titan Season 3",
+      "title": "Shingeki no Kyojin Season 3",
       "id": 35760,
       "url": "https://myanimelist.net/anime/35760/Shingeki_no_Kyojin_Season_3",
       "year": "2018",
@@ -4232,7 +4232,7 @@ window.mediaDatabase = {
       "updated_at": 1701358202
     },
     {
-      "title": "Attack on Titan: Final Season - The Final Chapters",
+      "title": "Shingeki no Kyojin: The Final Season - Kanketsu-hen",
       "id": 51535,
       "url": "https://myanimelist.net/anime/51535/Shingeki_no_Kyojin__The_Final_Season_-_Kanketsu-hen",
       "year": "2023",
@@ -4247,7 +4247,7 @@ window.mediaDatabase = {
       "updated_at": 1699198136
     },
     {
-      "title": "Attack on Titan: Final Season Part 2",
+      "title": "Shingeki no Kyojin: The Final Season Part 2",
       "id": 48583,
       "url": "https://myanimelist.net/anime/48583/Shingeki_no_Kyojin__The_Final_Season_Part_2",
       "year": "2022",
@@ -4262,7 +4262,7 @@ window.mediaDatabase = {
       "updated_at": 1697809499
     },
     {
-      "title": "The Garden of Words",
+      "title": "Kotonoha no Niwa",
       "id": 16782,
       "url": "https://myanimelist.net/anime/16782/Kotonoha_no_Niwa",
       "year": "2013",
@@ -4277,7 +4277,7 @@ window.mediaDatabase = {
       "updated_at": 1697809459
     },
     {
-      "title": "Your Name.",
+      "title": "Kimi no Na wa.",
       "id": 32281,
       "url": "https://myanimelist.net/anime/32281/Kimi_no_Na_wa",
       "year": "2016",
@@ -4291,7 +4291,7 @@ window.mediaDatabase = {
       "updated_at": 1697809444
     },
     {
-      "title": "86 Eighty-Six Part 2",
+      "title": "86 Part 2",
       "id": 48569,
       "url": "https://myanimelist.net/anime/48569/86_Part_2",
       "year": "2021",
@@ -4305,7 +4305,7 @@ window.mediaDatabase = {
       "updated_at": 1697809399
     },
     {
-      "title": "Love Flops",
+      "title": "Renai Flops",
       "id": 51403,
       "url": "https://myanimelist.net/anime/51403/Renai_Flops",
       "year": "2022",
@@ -4335,7 +4335,7 @@ window.mediaDatabase = {
       "updated_at": 1696540576
     },
     {
-      "title": "The Masterful Cat Is Depressed Again Today",
+      "title": "Dekiru Neko wa Kyou mo Yuuutsu",
       "id": 51916,
       "url": "https://myanimelist.net/anime/51916/Dekiru_Neko_wa_Kyou_mo_Yuuutsu",
       "year": "2023",
@@ -4361,7 +4361,7 @@ window.mediaDatabase = {
       "updated_at": 1696007273
     },
     {
-      "title": "Demon Slayer: Kimetsu no Yaiba Entertainment District Arc",
+      "title": "Kimetsu no Yaiba: Yuukaku-hen",
       "id": 47778,
       "url": "https://myanimelist.net/anime/47778/Kimetsu_no_Yaiba__Yuukaku-hen",
       "year": "2021",
@@ -4375,7 +4375,7 @@ window.mediaDatabase = {
       "updated_at": 1695997064
     },
     {
-      "title": "Undead Murder Farce",
+      "title": "Undead Girl Murder Farce",
       "id": 54790,
       "url": "https://myanimelist.net/anime/54790/Undead_Girl_Murder_Farce",
       "year": "2023",
@@ -4419,7 +4419,7 @@ window.mediaDatabase = {
       "updated_at": 1695655691
     },
     {
-      "title": "Horimiya: The Missing Pieces",
+      "title": "Horimiya: Piece",
       "id": 54856,
       "url": "https://myanimelist.net/anime/54856/Horimiya__Piece",
       "year": "2023",
@@ -4432,7 +4432,7 @@ window.mediaDatabase = {
       "updated_at": 1695649798
     },
     {
-      "title": "Angels of Death",
+      "title": "Satsuriku no Tenshi",
       "id": 35994,
       "url": "https://myanimelist.net/anime/35994/Satsuriku_no_Tenshi",
       "year": "2018",
@@ -4447,7 +4447,7 @@ window.mediaDatabase = {
       "updated_at": 1694617083
     },
     {
-      "title": "Neon Genesis Evangelion",
+      "title": "Shinseiki Evangelion",
       "id": 30,
       "url": "https://myanimelist.net/anime/30/Shinseiki_Evangelion",
       "year": "1995",
@@ -4464,7 +4464,7 @@ window.mediaDatabase = {
       "updated_at": 1693323577
     },
     {
-      "title": "SHIMONETA: A Boring World Where the Concept of Dirty Jokes Doesn't Exist",
+      "title": "Shimoneta to Iu Gainen ga Sonzai Shinai Taikutsu na Sekai",
       "id": 29786,
       "url": "https://myanimelist.net/anime/29786/Shimoneta_to_Iu_Gainen_ga_Sonzai_Shinai_Taikutsu_na_Sekai",
       "year": "2015",
@@ -4478,7 +4478,7 @@ window.mediaDatabase = {
       "updated_at": 1693323516
     },
     {
-      "title": "Steins;Gate: Open the Missing Link - Divide By Zero",
+      "title": "Steins;Gate: Kyoukaimenjou no Missing Link - Divide By Zero",
       "id": 32188,
       "url": "https://myanimelist.net/anime/32188/Steins_Gate__Kyoukaimenjou_no_Missing_Link_-_Divide_By_Zero",
       "year": "2015",
@@ -4492,7 +4492,7 @@ window.mediaDatabase = {
       "updated_at": 1692363831
     },
     {
-      "title": "Demon Slayer: Kimetsu no Yaiba Swordsmith Village Arc",
+      "title": "Kimetsu no Yaiba: Katanakaji no Sato-hen",
       "id": 51019,
       "url": "https://myanimelist.net/anime/51019/Kimetsu_no_Yaiba__Katanakaji_no_Sato-hen",
       "year": "2023",
@@ -4506,7 +4506,7 @@ window.mediaDatabase = {
       "updated_at": 1691186115
     },
     {
-      "title": "Demon Slayer: Kimetsu no Yaiba - The Movie: Mugen Train",
+      "title": "Kimetsu no Yaiba Movie: Mugen Ressha-hen",
       "id": 40456,
       "url": "https://myanimelist.net/anime/40456/Kimetsu_no_Yaiba_Movie__Mugen_Ressha-hen",
       "year": "2020",
@@ -4520,7 +4520,7 @@ window.mediaDatabase = {
       "updated_at": 1691186099
     },
     {
-      "title": "86 Eighty-Six",
+      "title": 86,
       "id": 41457,
       "url": "https://myanimelist.net/anime/41457/86",
       "year": "2021",
@@ -4534,7 +4534,7 @@ window.mediaDatabase = {
       "updated_at": 1690995735
     },
     {
-      "title": "[Oshi No Ko]",
+      "title": "[Oshi no Ko]",
       "id": 52034,
       "url": "https://myanimelist.net/anime/52034/Oshi_no_Ko",
       "year": "2023",
@@ -4548,7 +4548,7 @@ window.mediaDatabase = {
       "updated_at": 1690799185
     },
     {
-      "title": "KonoSuba: An Explosion on This Wonderful World!",
+      "title": "Kono Subarashii Sekai ni Bakuen wo!",
       "id": 51958,
       "url": "https://myanimelist.net/anime/51958/Kono_Subarashii_Sekai_ni_Bakuen_wo",
       "year": "2023",
@@ -4562,7 +4562,7 @@ window.mediaDatabase = {
       "updated_at": 1690799168
     },
     {
-      "title": "JoJo's Bizarre Adventure (2012)",
+      "title": "JoJo no Kimyou na Bouken (TV)",
       "id": 14719,
       "url": "https://myanimelist.net/anime/14719/JoJo_no_Kimyou_na_Bouken_TV",
       "year": "2012",
@@ -4577,7 +4577,7 @@ window.mediaDatabase = {
       "updated_at": 1690798973
     },
     {
-      "title": "Made in Abyss: The Golden City of the Scorching Sun",
+      "title": "Made in Abyss: Retsujitsu no Ougonkyou",
       "id": 41084,
       "url": "https://myanimelist.net/anime/41084/Made_in_Abyss__Retsujitsu_no_Ougonkyou",
       "year": "2022",
@@ -4594,7 +4594,7 @@ window.mediaDatabase = {
       "updated_at": 1690798676
     },
     {
-      "title": "Suzume",
+      "title": "Suzume no Tojimari",
       "id": 50594,
       "url": "https://myanimelist.net/anime/50594/Suzume_no_Tojimari",
       "year": "2022",
@@ -4623,7 +4623,7 @@ window.mediaDatabase = {
       "updated_at": 1689800341
     },
     {
-      "title": "Hell's Paradise",
+      "title": "Jigokuraku",
       "id": 46569,
       "url": "https://myanimelist.net/anime/46569/Jigokuraku",
       "year": "2023",
@@ -4668,7 +4668,7 @@ window.mediaDatabase = {
       "updated_at": 1689076478
     },
     {
-      "title": "Made in Abyss: Dawn of the Deep Soul",
+      "title": "Made in Abyss Movie 3: Fukaki Tamashii no Reimei",
       "id": 36862,
       "url": "https://myanimelist.net/anime/36862/Made_in_Abyss_Movie_3__Fukaki_Tamashii_no_Reimei",
       "year": "2020",
@@ -4702,7 +4702,7 @@ window.mediaDatabase = {
       "updated_at": 1689009182
     },
     {
-      "title": "Spirited Away",
+      "title": "Sen to Chihiro no Kamikakushi",
       "id": 199,
       "url": "https://myanimelist.net/anime/199/Sen_to_Chihiro_no_Kamikakushi",
       "year": "2001",
@@ -4717,7 +4717,7 @@ window.mediaDatabase = {
       "updated_at": 1688454571
     },
     {
-      "title": "Your Lie in April",
+      "title": "Shigatsu wa Kimi no Uso",
       "id": 23273,
       "url": "https://myanimelist.net/anime/23273/Shigatsu_wa_Kimi_no_Uso",
       "year": "2014",
@@ -4731,7 +4731,7 @@ window.mediaDatabase = {
       "updated_at": 1688400183
     },
     {
-      "title": "Kaguya-sama: Love is War -The First Kiss That Never Ends-",
+      "title": "Kaguya-sama wa Kokurasetai: First Kiss wa Owaranai",
       "id": 52198,
       "url": "https://myanimelist.net/anime/52198/Kaguya-sama_wa_Kokurasetai__First_Kiss_wa_Owaranai",
       "year": "2022",
@@ -4761,7 +4761,7 @@ window.mediaDatabase = {
       "updated_at": 1687727069
     },
     {
-      "title": "A Whisker Away",
+      "title": "Nakitai Watashi wa Neko wo Kaburu",
       "id": 41168,
       "url": "https://myanimelist.net/anime/41168/Nakitai_Watashi_wa_Neko_wo_Kaburu",
       "year": "2020",
@@ -4777,7 +4777,7 @@ window.mediaDatabase = {
       "updated_at": 1687549486
     },
     {
-      "title": "KonoSuba: God's Blessing on This Wonderful World! 2",
+      "title": "Kono Subarashii Sekai ni Shukufuku wo! 2",
       "id": 32937,
       "url": "https://myanimelist.net/anime/32937/Kono_Subarashii_Sekai_ni_Shukufuku_wo_2",
       "year": "2017",
@@ -4792,7 +4792,7 @@ window.mediaDatabase = {
       "updated_at": 1687549281
     },
     {
-      "title": "KonoSuba: God's Blessing on This Wonderful World!",
+      "title": "Kono Subarashii Sekai ni Shukufuku wo!",
       "id": 30831,
       "url": "https://myanimelist.net/anime/30831/Kono_Subarashii_Sekai_ni_Shukufuku_wo",
       "year": "2016",
@@ -4807,7 +4807,7 @@ window.mediaDatabase = {
       "updated_at": 1687549257
     },
     {
-      "title": "Fireworks",
+      "title": "Uchiage Hanabi, Shita kara Miru ka? Yoko kara Miru ka?",
       "id": 34498,
       "url": "https://myanimelist.net/anime/34498/Uchiage_Hanabi_Shita_kara_Miru_ka_Yoko_kara_Miru_ka",
       "year": "2017",
@@ -4821,7 +4821,7 @@ window.mediaDatabase = {
       "updated_at": 1686375475
     },
     {
-      "title": "Ride Your Wave",
+      "title": "Kimi to, Nami ni Noretara",
       "id": 38594,
       "url": "https://myanimelist.net/anime/38594/Kimi_to_Nami_ni_Noretara",
       "year": "2019",
@@ -4836,7 +4836,7 @@ window.mediaDatabase = {
       "updated_at": 1686375433
     },
     {
-      "title": "Rascal Does Not Dream of a Dreaming Girl",
+      "title": "Seishun Buta Yarou wa Yumemiru Shoujo no Yume wo Minai",
       "id": 38329,
       "url": "https://myanimelist.net/anime/38329/Seishun_Buta_Yarou_wa_Yumemiru_Shoujo_no_Yume_wo_Minai",
       "year": "2019",
@@ -4851,7 +4851,7 @@ window.mediaDatabase = {
       "updated_at": 1685464910
     },
     {
-      "title": "One-Punch Man Season 2",
+      "title": "One Punch Man 2nd Season",
       "id": 34134,
       "url": "https://myanimelist.net/anime/34134/One_Punch_Man_2nd_Season",
       "year": "2019",
@@ -4879,7 +4879,7 @@ window.mediaDatabase = {
       "updated_at": 1685163780
     },
     {
-      "title": "Rascal Does Not Dream of Bunny Girl Senpai",
+      "title": "Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai",
       "id": 37450,
       "url": "https://myanimelist.net/anime/37450/Seishun_Buta_Yarou_wa_Bunny_Girl_Senpai_no_Yume_wo_Minai",
       "year": "2018",
@@ -4894,7 +4894,7 @@ window.mediaDatabase = {
       "updated_at": 1685104917
     },
     {
-      "title": "In This Corner of the World",
+      "title": "Kono Sekai no Katasumi ni",
       "id": 15227,
       "url": "https://myanimelist.net/anime/15227/Kono_Sekai_no_Katasumi_ni",
       "year": "2016",
@@ -4925,7 +4925,7 @@ window.mediaDatabase = {
       "updated_at": 1684593961
     },
     {
-      "title": "JoJo's Bizarre Adventure: Stardust Crusaders",
+      "title": "JoJo no Kimyou na Bouken Part 3: Stardust Crusaders",
       "id": 20899,
       "url": "https://myanimelist.net/anime/20899/JoJo_no_Kimyou_na_Bouken_Part_3__Stardust_Crusaders",
       "year": "2014",
@@ -4939,7 +4939,7 @@ window.mediaDatabase = {
       "updated_at": 1684593917
     },
     {
-      "title": "Kaguya-sama: Love is War",
+      "title": "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen",
       "id": 37999,
       "url": "https://myanimelist.net/anime/37999/Kaguya-sama_wa_Kokurasetai__Tensai-tachi_no_Renai_Zunousen",
       "year": "2019",
@@ -4972,7 +4972,7 @@ window.mediaDatabase = {
       "updated_at": 1684065006
     },
     {
-      "title": "Welcome to the N.H.K.",
+      "title": "NHK ni Youkoso!",
       "id": 1210,
       "url": "https://myanimelist.net/anime/1210/NHK_ni_Youkoso",
       "year": "2006",
@@ -5003,7 +5003,7 @@ window.mediaDatabase = {
       "updated_at": 1682692991
     },
     {
-      "title": "KonoSuba: God's Blessing on This Wonderful World! 2 - God's Blessing on This Wonderful Art!",
+      "title": "Kono Subarashii Sekai ni Shukufuku wo! 2: Kono Subarashii Geijutsu ni Shukufuku wo!",
       "id": 34626,
       "url": "https://myanimelist.net/anime/34626/Kono_Subarashii_Sekai_ni_Shukufuku_wo_2__Kono_Subarashii_Geijutsu_ni_Shukufuku_wo",
       "year": "2017",
@@ -5051,7 +5051,7 @@ window.mediaDatabase = {
       "updated_at": 1682692529
     },
     {
-      "title": "The Disastrous Life of Saiki K. Final Arc",
+      "title": "Saiki Kusuo no Ψ-nan: Kanketsu-hen",
       "id": 38249,
       "url": "https://myanimelist.net/anime/38249/Saiki_Kusuo_no_Ψ-nan__Kanketsu-hen",
       "year": "2018",
@@ -5064,7 +5064,7 @@ window.mediaDatabase = {
       "updated_at": 1682692132
     },
     {
-      "title": "The Tale of the Princess Kaguya",
+      "title": "Kaguya-hime no Monogatari",
       "id": 16664,
       "url": "https://myanimelist.net/anime/16664/Kaguya-hime_no_Monogatari",
       "year": "2013",
@@ -5093,7 +5093,7 @@ window.mediaDatabase = {
       "updated_at": 1682692078
     },
     {
-      "title": "Weathering with You",
+      "title": "Tenki no Ko",
       "id": 38826,
       "url": "https://myanimelist.net/anime/38826/Tenki_no_Ko",
       "year": "2019",
@@ -5109,7 +5109,7 @@ window.mediaDatabase = {
       "updated_at": 1682692028
     },
     {
-      "title": "Into the Forest of Fireflies' Light",
+      "title": "Hotarubi no Mori e",
       "id": 10408,
       "url": "https://myanimelist.net/anime/10408/Hotarubi_no_Mori_e",
       "year": "2011",
@@ -5125,7 +5125,7 @@ window.mediaDatabase = {
       "updated_at": 1682692018
     },
     {
-      "title": "Violet Evergarden: The Day You Understand \"I Love You\" Will Surely Come",
+      "title": "Violet Evergarden: Kitto \"Ai\" wo Shiru Hi ga Kuru no Darou",
       "id": 37095,
       "url": "https://myanimelist.net/anime/37095/Violet_Evergarden__Kitto_Ai_wo_Shiru_Hi_ga_Kuru_no_Darou",
       "year": "2018",
@@ -5138,7 +5138,7 @@ window.mediaDatabase = {
       "updated_at": 1682691980
     },
     {
-      "title": "Parasyte: The Maxim",
+      "title": "Kiseijuu: Sei no Kakuritsu",
       "id": 22535,
       "url": "https://myanimelist.net/anime/22535/Kiseijuu__Sei_no_Kakuritsu",
       "year": "2014",
@@ -5154,7 +5154,7 @@ window.mediaDatabase = {
       "updated_at": 1682691922
     },
     {
-      "title": "Violet Evergarden: Eternity and the Auto Memory Doll",
+      "title": "Violet Evergarden Gaiden: Eien to Jidou Shuki Ningyou",
       "id": 39741,
       "url": "https://myanimelist.net/anime/39741/Violet_Evergarden_Gaiden__Eien_to_Jidou_Shuki_Ningyou",
       "year": "2019",
@@ -5167,7 +5167,7 @@ window.mediaDatabase = {
       "updated_at": 1682691771
     },
     {
-      "title": "Josee, the Tiger and the Fish",
+      "title": "Josee to Tora to Sakana-tachi",
       "id": 40787,
       "url": "https://myanimelist.net/anime/40787/Josee_to_Tora_to_Sakana-tachi",
       "year": "2020",
@@ -5181,7 +5181,7 @@ window.mediaDatabase = {
       "updated_at": 1682691763
     },
     {
-      "title": "The Disastrous Life of Saiki K. 2",
+      "title": "Saiki Kusuo no Ψ-nan 2",
       "id": 34612,
       "url": "https://myanimelist.net/anime/34612/Saiki_Kusuo_no_Ψ-nan_2",
       "year": "2018",
@@ -5194,7 +5194,7 @@ window.mediaDatabase = {
       "updated_at": 1682691751
     },
     {
-      "title": "The Disastrous Life of Saiki K.",
+      "title": "Saiki Kusuo no Ψ-nan",
       "id": 33255,
       "url": "https://myanimelist.net/anime/33255/Saiki_Kusuo_no_Ψ-nan",
       "year": "2016",
@@ -5207,7 +5207,7 @@ window.mediaDatabase = {
       "updated_at": 1682691741
     },
     {
-      "title": "Grand Blue Dreaming",
+      "title": "Grand Blue",
       "id": 37105,
       "url": "https://myanimelist.net/anime/37105/Grand_Blue",
       "year": "2018",
@@ -5220,7 +5220,7 @@ window.mediaDatabase = {
       "updated_at": 1682691726
     },
     {
-      "title": "JoJo's Bizarre Adventure: Stardust Crusaders - Battle in Egypt",
+      "title": "JoJo no Kimyou na Bouken Part 3: Stardust Crusaders - Egypt-hen",
       "id": 26055,
       "url": "https://myanimelist.net/anime/26055/JoJo_no_Kimyou_na_Bouken_Part_3__Stardust_Crusaders_-_Egypt-hen",
       "year": "2015",
@@ -5234,7 +5234,7 @@ window.mediaDatabase = {
       "updated_at": 1682691711
     },
     {
-      "title": "Steins;Gate: The Movie - Load Region of Déjà Vu",
+      "title": "Steins;Gate Movie: Fuka Ryouiki no Déjà vu",
       "id": 11577,
       "url": "https://myanimelist.net/anime/11577/Steins_Gate_Movie__Fuka_Ryouiki_no_Déjà_vu",
       "year": "2013",
@@ -5248,7 +5248,7 @@ window.mediaDatabase = {
       "updated_at": 1682691692
     },
     {
-      "title": "KonoSuba: God's Blessing on This Wonderful World! - Legend of Crimson",
+      "title": "Kono Subarashii Sekai ni Shukufuku wo! Movie: Kurenai Densetsu",
       "id": 38040,
       "url": "https://myanimelist.net/anime/38040/Kono_Subarashii_Sekai_ni_Shukufuku_wo_Movie__Kurenai_Densetsu",
       "year": "2019",
@@ -5263,7 +5263,7 @@ window.mediaDatabase = {
       "updated_at": 1682691677
     },
     {
-      "title": "Jujutsu Kaisen 0",
+      "title": "Jujutsu Kaisen 0 Movie",
       "id": 48561,
       "url": "https://myanimelist.net/anime/48561/Jujutsu_Kaisen_0_Movie",
       "year": "2021",
@@ -5292,7 +5292,7 @@ window.mediaDatabase = {
       "updated_at": 1682691652
     },
     {
-      "title": "One-Punch Man",
+      "title": "One Punch Man",
       "id": 30276,
       "url": "https://myanimelist.net/anime/30276/One_Punch_Man",
       "year": "2015",
@@ -5306,7 +5306,7 @@ window.mediaDatabase = {
       "updated_at": 1682691639
     },
     {
-      "title": "Demon Slayer: Kimetsu no Yaiba",
+      "title": "Kimetsu no Yaiba",
       "id": 38000,
       "url": "https://myanimelist.net/anime/38000/Kimetsu_no_Yaiba",
       "year": "2019",
@@ -5336,7 +5336,7 @@ window.mediaDatabase = {
       "updated_at": 1682691611
     },
     {
-      "title": "Neon Genesis Evangelion: The End of Evangelion",
+      "title": "Shinseiki Evangelion Movie: Air/Magokoro wo, Kimi ni",
       "id": 32,
       "url": "https://myanimelist.net/anime/32/Shinseiki_Evangelion_Movie__Air_Magokoro_wo_Kimi_ni",
       "year": "1997",
@@ -5352,7 +5352,7 @@ window.mediaDatabase = {
       "updated_at": 1682691581
     },
     {
-      "title": "Wolf Children",
+      "title": "Ookami Kodomo no Ame to Yuki",
       "id": 12355,
       "url": "https://myanimelist.net/anime/12355/Ookami_Kodomo_no_Ame_to_Yuki",
       "year": "2012",
@@ -5381,7 +5381,7 @@ window.mediaDatabase = {
       "updated_at": 1682691527
     },
     {
-      "title": "Kaguya-sama: Love is War?",
+      "title": "Kaguya-sama wa Kokurasetai? Tensai-tachi no Renai Zunousen",
       "id": 40591,
       "url": "https://myanimelist.net/anime/40591/Kaguya-sama_wa_Kokurasetai_Tensai-tachi_no_Renai_Zunousen",
       "year": "2020",
@@ -5425,7 +5425,7 @@ window.mediaDatabase = {
       "updated_at": 1682691480
     },
     {
-      "title": "Howl's Moving Castle",
+      "title": "Howl no Ugoku Shiro",
       "id": 431,
       "url": "https://myanimelist.net/anime/431/Howl_no_Ugoku_Shiro",
       "year": "2004",
@@ -5514,7 +5514,7 @@ window.mediaDatabase = {
       "updated_at": 1682691316
     },
     {
-      "title": "Violet Evergarden: The Movie",
+      "title": "Violet Evergarden Movie",
       "id": 37987,
       "url": "https://myanimelist.net/anime/37987/Violet_Evergarden_Movie",
       "year": "2020",
@@ -5528,7 +5528,7 @@ window.mediaDatabase = {
       "updated_at": 1682691300
     },
     {
-      "title": "A Silent Voice",
+      "title": "Koe no Katachi",
       "id": 28851,
       "url": "https://myanimelist.net/anime/28851/Koe_no_Katachi",
       "year": "2016",
@@ -5542,7 +5542,7 @@ window.mediaDatabase = {
       "updated_at": 1682691259
     },
     {
-      "title": "Hunter x Hunter",
+      "title": "Hunter x Hunter (2011)",
       "id": 11061,
       "url": "https://myanimelist.net/anime/11061/Hunter_x_Hunter_2011",
       "year": "2011",
@@ -5557,7 +5557,7 @@ window.mediaDatabase = {
       "updated_at": 1682691247
     },
     {
-      "title": "Kaguya-sama: Love is War -Ultra Romantic-",
+      "title": "Kaguya-sama wa Kokurasetai: Ultra Romantic",
       "id": 43608,
       "url": "https://myanimelist.net/anime/43608/Kaguya-sama_wa_Kokurasetai__Ultra_Romantic",
       "year": "2022",
@@ -5571,7 +5571,7 @@ window.mediaDatabase = {
       "updated_at": 1682691235
     },
     {
-      "title": "Attack on Titan Season 3 Part 2",
+      "title": "Shingeki no Kyojin Season 3 Part 2",
       "id": 38524,
       "url": "https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2",
       "year": "2019",
@@ -5586,7 +5586,7 @@ window.mediaDatabase = {
       "updated_at": 1682691101
     },
     {
-      "title": "Attack on Titan: Final Season",
+      "title": "Shingeki no Kyojin: The Final Season",
       "id": 40028,
       "url": "https://myanimelist.net/anime/40028/Shingeki_no_Kyojin__The_Final_Season",
       "year": "2020",
@@ -5601,7 +5601,7 @@ window.mediaDatabase = {
       "updated_at": 1682691083
     },
     {
-      "title": "Attack on Titan Season 2",
+      "title": "Shingeki no Kyojin Season 2",
       "id": 25777,
       "url": "https://myanimelist.net/anime/25777/Shingeki_no_Kyojin_Season_2",
       "year": "2017",
@@ -5616,7 +5616,7 @@ window.mediaDatabase = {
       "updated_at": 1682691050
     },
     {
-      "title": "Attack on Titan",
+      "title": "Shingeki no Kyojin",
       "id": 16498,
       "url": "https://myanimelist.net/anime/16498/Shingeki_no_Kyojin",
       "year": "2013",
@@ -5647,7 +5647,7 @@ window.mediaDatabase = {
       "updated_at": 1682690843
     },
     {
-      "title": "JoJo's Bizarre Adventure: Stone Ocean Part 3",
+      "title": "JoJo no Kimyou na Bouken Part 6: Stone Ocean Part 3",
       "id": 53273,
       "url": "https://myanimelist.net/anime/53273/JoJo_no_Kimyou_na_Bouken_Part_6__Stone_Ocean_Part_3",
       "year": "2022",
@@ -5661,7 +5661,7 @@ window.mediaDatabase = {
       "updated_at": 1682690808
     },
     {
-      "title": "JoJo's Bizarre Adventure: Stone Ocean Part 2",
+      "title": "JoJo no Kimyou na Bouken Part 6: Stone Ocean Part 2",
       "id": 51367,
       "url": "https://myanimelist.net/anime/51367/JoJo_no_Kimyou_na_Bouken_Part_6__Stone_Ocean_Part_2",
       "year": "2022",
@@ -5675,7 +5675,7 @@ window.mediaDatabase = {
       "updated_at": 1682690741
     },
     {
-      "title": "JoJo's Bizarre Adventure: Stone Ocean",
+      "title": "JoJo no Kimyou na Bouken Part 6: Stone Ocean",
       "id": 48661,
       "url": "https://myanimelist.net/anime/48661/JoJo_no_Kimyou_na_Bouken_Part_6__Stone_Ocean",
       "year": "2021",
@@ -5689,7 +5689,7 @@ window.mediaDatabase = {
       "updated_at": 1682690730
     },
     {
-      "title": "JoJo's Bizarre Adventure: Golden Wind",
+      "title": "JoJo no Kimyou na Bouken Part 5: Ougon no Kaze",
       "id": 37991,
       "url": "https://myanimelist.net/anime/37991/JoJo_no_Kimyou_na_Bouken_Part_5__Ougon_no_Kaze",
       "year": "2018",
@@ -5703,7 +5703,7 @@ window.mediaDatabase = {
       "updated_at": 1682690698
     },
     {
-      "title": "JoJo's Bizarre Adventure: Diamond Is Unbreakable",
+      "title": "JoJo no Kimyou na Bouken Part 4: Diamond wa Kudakenai",
       "id": 31933,
       "url": "https://myanimelist.net/anime/31933/JoJo_no_Kimyou_na_Bouken_Part_4__Diamond_wa_Kudakenai",
       "year": "2016",
@@ -5719,41 +5719,99 @@ window.mediaDatabase = {
   ],
   "manga": [
     {
-      "title": "20th Century Boys",
-      "id": 3,
-      "url": "https://myanimelist.net/manga/3/20th_Century_Boys",
-      "year": "1999",
-      "score": 10,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/5/260006.webp?s=7cfce93b7214643ef45037b68f519b64",
+      "title": "Koori no Jouheki",
+      "id": 160303,
+      "url": "https://myanimelist.net/manga/160303/Koori_no_Jouheki",
+      "year": "2020",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/296537.webp?s=cd2ae430c909632118c1a03c8f434e13",
       "genres": [
-        "Award Winning",
         "Drama",
-        "Mystery",
-        "Sci-Fi"
+        "Romance"
       ],
-      "chapters": 249,
-      "volumes": 22,
-      "updated_at": 0
+      "chapters": 117,
+      "volumes": 14,
+      "updated_at": 1782414448
     },
     {
-      "title": "21st Century Boys",
-      "id": 743,
-      "url": "https://myanimelist.net/manga/743/21st_Century_Boys",
-      "year": "2006",
+      "title": "Jujutsu Kaisen Modulo",
+      "id": 186597,
+      "url": "https://myanimelist.net/manga/186597/Jujutsu_Kaisen_Modulo",
+      "year": "2025",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/339595.webp?s=e22e449a7c158fa1bb23c420d08bce92",
+      "genres": [
+        "Action",
+        "Sci-Fi",
+        "Supernatural"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1772777047
+    },
+    {
+      "title": "Kamisama ga Uso wo Tsuku.",
+      "id": 50217,
+      "url": "https://myanimelist.net/manga/50217/Kamisama_ga_Uso_wo_Tsuku",
+      "year": "2013",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/143365.webp?s=bc4f1d73830b3833e4e87c02b250f1be",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "chapters": 5,
+      "volumes": 1,
+      "updated_at": 1767795698
+    },
+    {
+      "title": "Houseki no Kuni",
+      "id": 44489,
+      "url": "https://myanimelist.net/manga/44489/Houseki_no_Kuni",
+      "year": "2012",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/115443.webp?s=4c56d9e5c24846805e6a3d6e2848c2ea",
+      "genres": [
+        "Action",
+        "Drama",
+        "Fantasy"
+      ],
+      "chapters": 108,
+      "volumes": 13,
+      "updated_at": 1767518482
+    },
+    {
+      "title": "Ano Ko no Kodomo",
+      "id": 140333,
+      "url": "https://myanimelist.net/manga/140333/Ano_Ko_no_Kodomo",
+      "year": "2021",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/250274.webp?s=42fda66c9433ae86d0321c5aed1c8205",
+      "genres": [
+        "Award Winning",
+        "Drama"
+      ],
+      "chapters": 41,
+      "volumes": 10,
+      "updated_at": 1767518127
+    },
+    {
+      "title": "Aku no Hana",
+      "id": 24705,
+      "url": "https://myanimelist.net/manga/24705/Aku_no_Hana",
+      "year": "2009",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/263856.webp?s=21d0ab559a7312c1c888c87193056f73",
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/188918.webp?s=d086c5e09193cf294d6ce4d202f7096a",
       "genres": [
-        "Award Winning",
         "Drama",
-        "Mystery",
-        "Sci-Fi"
+        "Romance"
       ],
-      "chapters": 16,
-      "volumes": 2,
-      "updated_at": 0
+      "chapters": 58,
+      "volumes": 11,
+      "updated_at": 1750534532
     },
     {
-      "title": "A Girl on the Shore",
+      "title": "Umibe no Onnanoko",
       "id": 17353,
       "url": "https://myanimelist.net/manga/17353/Umibe_no_Onnanoko",
       "year": "2009",
@@ -5765,24 +5823,64 @@ window.mediaDatabase = {
       ],
       "chapters": 20,
       "volumes": 2,
-      "updated_at": 0
+      "updated_at": 1750093450
     },
     {
-      "title": "Ajin: Demi-Human",
-      "id": 49865,
-      "url": "https://myanimelist.net/manga/49865/Ajin",
-      "year": "2012",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/307700.webp?s=135d2c34356fa664cf4ddaba60410d7e",
+      "title": "Shi ni Aruki",
+      "id": 103648,
+      "url": "https://myanimelist.net/manga/103648/Shi_ni_Aruki",
+      "year": "2016",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/198188.webp?s=edef7ffc69a8f02b1b609c5872d60e22",
       "genres": [
-        "Action",
         "Horror",
+        "Mystery"
+      ],
+      "chapters": 37,
+      "volumes": 4,
+      "updated_at": 1736344952
+    },
+    {
+      "title": "Okuru Kotoba",
+      "id": 105875,
+      "url": "https://myanimelist.net/manga/105875/Okuru_Kotoba",
+      "year": "2017",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/202996.webp?s=f7f269ad456f4da1149e6cede8466b62",
+      "genres": [
         "Mystery",
         "Supernatural"
       ],
-      "chapters": 84,
-      "volumes": 17,
-      "updated_at": 0
+      "chapters": 16,
+      "volumes": 3,
+      "updated_at": 1735388515
+    },
+    {
+      "title": "Saltiness",
+      "id": 56509,
+      "url": "https://myanimelist.net/manga/56509/Saltiness",
+      "year": "2012",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/98303.webp?s=43b37c7c573d41ba353256b9ffa1f1e2",
+      "genres": [],
+      "chapters": 44,
+      "volumes": 4,
+      "updated_at": 1735155353
+    },
+    {
+      "title": "Okaeri Alice",
+      "id": 125717,
+      "url": "https://myanimelist.net/manga/125717/Okaeri_Alice",
+      "year": "2020",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/235399.webp?s=c0e2bce40e2ad07f246524123062e7b5",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "chapters": 40,
+      "volumes": 7,
+      "updated_at": 1735124495
     },
     {
       "title": "Akari",
@@ -5796,38 +5894,300 @@ window.mediaDatabase = {
       ],
       "chapters": 5,
       "volumes": 1,
-      "updated_at": 0
+      "updated_at": 1726757608
     },
     {
-      "title": "Avant-garde Yumeko",
-      "id": 50857,
-      "url": "https://myanimelist.net/manga/50857/Avant-garde_Yumeko",
+      "title": "Kokou no Hito",
+      "id": 7375,
+      "url": "https://myanimelist.net/manga/7375/Kokou_no_Hito",
+      "year": "2007",
+      "score": 10,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/324690.webp?s=5b99261e5ae9b5f1b0a35e8db324bc31",
+      "genres": [
+        "Award Winning",
+        "Drama",
+        "Sports"
+      ],
+      "chapters": 170,
+      "volumes": 17,
+      "updated_at": 1723499496
+    },
+    {
+      "title": "Confession",
+      "id": 1541,
+      "url": "https://myanimelist.net/manga/1541/Confession",
+      "year": "1998",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/13085.webp?s=f47592b1ee9ea497cfe3bf2e0db71318",
+      "genres": [
+        "Drama",
+        "Suspense"
+      ],
+      "chapters": 11,
+      "volumes": 1,
+      "updated_at": 1720366701
+    },
+    {
+      "title": "Ressentiment",
+      "id": 1238,
+      "url": "https://myanimelist.net/manga/1238/Ressentiment",
       "year": "2003",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/4/90269.webp?s=824948a001b13db783ee1d0685c5f3cd",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/52573.webp?s=09cb4cd221f403ccc3007da8276b7a67",
       "genres": [
         "Comedy",
+        "Sci-Fi",
         "Ecchi"
       ],
-      "chapters": 7,
-      "volumes": 1,
-      "updated_at": 0
+      "chapters": 49,
+      "volumes": 4,
+      "updated_at": 1720287361
     },
     {
-      "title": "Billy Bat",
-      "id": 11054,
-      "url": "https://myanimelist.net/manga/11054/Billy_Bat",
-      "year": "2008",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/181197.webp?s=664050d5558f58652eac27ebc965d3fd",
+      "title": "Wanitokagegisu",
+      "id": 19790,
+      "url": "https://myanimelist.net/manga/19790/Wanitokagegisu",
+      "year": "2006",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/213017.webp?s=c528e25f120155e89a323f105dfda688",
       "genres": [
+        "Comedy",
+        "Slice of Life"
+      ],
+      "chapters": 44,
+      "volumes": 4,
+      "updated_at": 1719928501
+    },
+    {
+      "title": "Kushami: Urasawa Naoki Tanpenshuu",
+      "id": 128620,
+      "url": "https://myanimelist.net/manga/128620/Kushami__Urasawa_Naoki_Tanpenshuu",
+      "year": "1995",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/232632.webp?s=38a7bd46f78ee309b062565b6c72f94a",
+      "genres": [
+        "Action",
+        "Comedy",
         "Drama",
         "Mystery",
         "Supernatural"
       ],
-      "chapters": 165,
-      "volumes": 20,
-      "updated_at": 0
+      "chapters": 8,
+      "volumes": 1,
+      "updated_at": 1719852079
+    },
+    {
+      "title": "Shoujo Shuumatsu Ryokou",
+      "id": 72467,
+      "url": "https://myanimelist.net/manga/72467/Shoujo_Shuumatsu_Ryokou",
+      "year": "2014",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/185918.webp?s=685fe40ef476fa5432fdcdb56515a0b1",
+      "genres": [
+        "Adventure",
+        "Award Winning",
+        "Slice of Life"
+      ],
+      "chapters": 47,
+      "volumes": 6,
+      "updated_at": 1718305392
+    },
+    {
+      "title": "Look Back",
+      "id": 138673,
+      "url": "https://myanimelist.net/manga/138673/Look_Back",
+      "year": "2021",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/249833.webp?s=a71fdd8306d85202ea919106f964be04",
+      "genres": [
+        "Drama"
+      ],
+      "chapters": 0,
+      "volumes": 1,
+      "updated_at": 1717490532
+    },
+    {
+      "title": "My Broken Mariko",
+      "id": 123812,
+      "url": "https://myanimelist.net/manga/123812/My_Broken_Mariko",
+      "year": "2019",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/226196.webp?s=796c22ea457fbcdabd9e1d8b97c70845",
+      "genres": [
+        "Drama"
+      ],
+      "chapters": 5,
+      "volumes": 1,
+      "updated_at": 1717487989
+    },
+    {
+      "title": "Ajin",
+      "id": 49865,
+      "url": "https://myanimelist.net/manga/49865/Ajin",
+      "year": "2012",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/307700.webp?s=135d2c34356fa664cf4ddaba60410d7e",
+      "genres": [
+        "Action",
+        "Horror",
+        "Mystery",
+        "Supernatural"
+      ],
+      "chapters": 84,
+      "volumes": 17,
+      "updated_at": 1716931025
+    },
+    {
+      "title": "Yuu☆Yuu☆Hakusho",
+      "id": 53,
+      "url": "https://myanimelist.net/manga/53/Yuu☆Yuu☆Hakusho",
+      "year": "1990",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/250027.webp?s=2930af78e372d00d65c5eb2c90c44e63",
+      "genres": [
+        "Action",
+        "Award Winning",
+        "Comedy",
+        "Drama",
+        "Supernatural"
+      ],
+      "chapters": 176,
+      "volumes": 19,
+      "updated_at": 1712400613
+    },
+    {
+      "title": "Renai Daikou",
+      "id": 157874,
+      "url": "https://myanimelist.net/manga/157874/Renai_Daikou",
+      "year": "2023",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/292236.webp?s=0366b39686168088d04d4dc3ee0b6ff8",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "chapters": 39,
+      "volumes": 4,
+      "updated_at": 1712308868
+    },
+    {
+      "title": "Watashi ga 15-sai dewa Nakunattemo.",
+      "id": 142423,
+      "url": "https://myanimelist.net/manga/142423/Watashi_ga_15-sai_dewa_Nakunattemo",
+      "year": "2021",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/253221.webp?s=48a4fe7de36d147681f0f9e4ba4ed11e",
+      "genres": [
+        "Drama"
+      ],
+      "chapters": 18,
+      "volumes": 2,
+      "updated_at": 1711985397
+    },
+    {
+      "title": "Ningen Shikkaku",
+      "id": 106609,
+      "url": "https://myanimelist.net/manga/106609/Ningen_Shikkaku",
+      "year": "2017",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/260361.webp?s=484f6db8ffe52247f4fef91138d3fa4a",
+      "genres": [
+        "Drama"
+      ],
+      "chapters": 24,
+      "volumes": 3,
+      "updated_at": 1711641723
+    },
+    {
+      "title": "Kaijuu 8-gou",
+      "id": 127907,
+      "url": "https://myanimelist.net/manga/127907/Kaijuu_8-gou",
+      "year": "2020",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/252929.webp?s=a4ca59aef1a8d4fe5fbe57170af39a8f",
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Sci-Fi"
+      ],
+      "chapters": 129,
+      "volumes": 16,
+      "updated_at": 1710771515
+    },
+    {
+      "title": "Blue Heaven",
+      "id": 1479,
+      "url": "https://myanimelist.net/manga/1479/Blue_Heaven",
+      "year": "2002",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/264112.webp?s=c41c9eed8f5123a71f93ed94a80eeb3d",
+      "genres": [
+        "Action"
+      ],
+      "chapters": 27,
+      "volumes": 3,
+      "updated_at": 1710343174
+    },
+    {
+      "title": "Hyouryuu Net Cafe",
+      "id": 28303,
+      "url": "https://myanimelist.net/manga/28303/Hyouryuu_Net_Cafe",
+      "year": "2009",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/45421.webp?s=6345753db144a6e4a947b6659f26b0c2",
+      "genres": [
+        "Action",
+        "Mystery",
+        "Romance",
+        "Sci-Fi"
+      ],
+      "chapters": 63,
+      "volumes": 7,
+      "updated_at": 1710109348
+    },
+    {
+      "title": "Otona ni Narenai Bokura wa",
+      "id": 166632,
+      "url": "https://myanimelist.net/manga/166632/Otona_ni_Narenai_Bokura_wa",
+      "year": "2024",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/305561.webp?s=96cb88911bc6dbeca267f8ddde65ea05",
+      "genres": [
+        "Romance"
+      ],
+      "chapters": 28,
+      "volumes": 3,
+      "updated_at": 1707922930
+    },
+    {
+      "title": "Undead Unluck",
+      "id": 123956,
+      "url": "https://myanimelist.net/manga/123956/Undead_Unluck",
+      "year": "2020",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/289700.webp?s=96b6bd82dafa201459ac13a0180e65b2",
+      "genres": [
+        "Action",
+        "Supernatural"
+      ],
+      "chapters": 240,
+      "volumes": 27,
+      "updated_at": 1706627309
+    },
+    {
+      "title": "Futari Ashita mo Sorenari ni",
+      "id": 120367,
+      "url": "https://myanimelist.net/manga/120367/Futari_Ashita_mo_Sorenari_ni",
+      "year": "2019",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/228699.webp?s=e4039840c6b3c4bcc28150b94a9d9ea7",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "chapters": 92,
+      "volumes": 5,
+      "updated_at": 1704040141
     },
     {
       "title": "Blame!",
@@ -5844,66 +6204,37 @@ window.mediaDatabase = {
       ],
       "chapters": 66,
       "volumes": 10,
-      "updated_at": 0
+      "updated_at": 1703863717
     },
     {
-      "title": "Blue Heaven",
-      "id": 1479,
-      "url": "https://myanimelist.net/manga/1479/Blue_Heaven",
-      "year": "2002",
+      "title": "Onanie Master Kurosawa",
+      "id": 8967,
+      "url": "https://myanimelist.net/manga/8967/Onanie_Master_Kurosawa",
+      "year": "2007",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/264112.webp?s=c41c9eed8f5123a71f93ed94a80eeb3d",
-      "genres": [
-        "Action"
-      ],
-      "chapters": 27,
-      "volumes": 3,
-      "updated_at": 0
-    },
-    {
-      "title": "Boy's Abyss",
-      "id": 126699,
-      "url": "https://myanimelist.net/manga/126699/Shounen_no_Abyss",
-      "year": "2020",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/232167.webp?s=685f3e8ddeba601c0b779562727402f5",
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/212092.webp?s=d89d11024526b10861ae3d08c2b7383b",
       "genres": [
         "Drama"
       ],
-      "chapters": 0,
-      "volumes": 18,
-      "updated_at": 0
+      "chapters": 31,
+      "volumes": 4,
+      "updated_at": 1703777824
     },
     {
-      "title": "Chainsaw Man",
-      "id": 116778,
-      "url": "https://myanimelist.net/manga/116778/Chainsaw_Man",
-      "year": "2018",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/216464.webp?s=694ed97ce0b0990d498fd1c397de554a",
-      "genres": [
-        "Action",
-        "Award Winning",
-        "Fantasy"
-      ],
-      "chapters": 232,
-      "volumes": 24,
-      "updated_at": 0
-    },
-    {
-      "title": "Confession",
-      "id": 1541,
-      "url": "https://myanimelist.net/manga/1541/Confession",
-      "year": "1998",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/13085.webp?s=f47592b1ee9ea497cfe3bf2e0db71318",
+      "title": "Nee Nee, Nene-san.",
+      "id": 140604,
+      "url": "https://myanimelist.net/manga/140604/Nee_Nee_Nene-san",
+      "year": "2021",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/250547.webp?s=58fa4fc1f33246f3e6609cb3e7b6cbfe",
       "genres": [
         "Drama",
-        "Suspense"
+        "Gourmet",
+        "Romance"
       ],
-      "chapters": 11,
-      "volumes": 1,
-      "updated_at": 0
+      "chapters": 1,
+      "volumes": 0,
+      "updated_at": 1703284580
     },
     {
       "title": "Dead Dead Demons Dededede Destruction",
@@ -5919,7 +6250,215 @@ window.mediaDatabase = {
       ],
       "chapters": 101,
       "volumes": 12,
-      "updated_at": 0
+      "updated_at": 1702998597
+    },
+    {
+      "title": "Fire Punch",
+      "id": 98270,
+      "url": "https://myanimelist.net/manga/98270/Fire_Punch",
+      "year": "2016",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/180430.webp?s=e9f76dd96aa10b44aef07b4c0696200b",
+      "genres": [
+        "Action",
+        "Mystery",
+        "Supernatural"
+      ],
+      "chapters": 83,
+      "volumes": 8,
+      "updated_at": 1701097146
+    },
+    {
+      "title": "Kaitai Zanuff",
+      "id": 108948,
+      "url": "https://myanimelist.net/manga/108948/Kaitai_Zanuff",
+      "year": "2012",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/220444.webp?s=c263f4e9be9dcc4cec7f8749134657bd",
+      "genres": [
+        "Horror"
+      ],
+      "chapters": 1,
+      "volumes": 0,
+      "updated_at": 1700483382
+    },
+    {
+      "title": "Kowareta Bokura no Senryaku Renai",
+      "id": 150374,
+      "url": "https://myanimelist.net/manga/150374/Kowareta_Bokura_no_Senryaku_Renai",
+      "year": "2022",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/266603.webp?s=d2cfecd736c67d291c8062db092f999f",
+      "genres": [
+        "Romance"
+      ],
+      "chapters": 1,
+      "volumes": 0,
+      "updated_at": 1700142476
+    },
+    {
+      "title": "Soshite Watashi wa, Kou Itta.",
+      "id": 162295,
+      "url": "https://myanimelist.net/manga/162295/Soshite_Watashi_wa_Kou_Itta",
+      "year": "2023",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/287949.webp?s=4418af24bdf91c58868b03518589e81c",
+      "genres": [
+        "Drama",
+        "Suspense"
+      ],
+      "chapters": 1,
+      "volumes": 0,
+      "updated_at": 1700141727
+    },
+    {
+      "title": "Usotsuki Mii-kun to Kowareta Maa-chan: Totteoki no Uso",
+      "id": 22518,
+      "url": "https://myanimelist.net/manga/22518/Usotsuki_Mii-kun_to_Kowareta_Maa-chan__Totteoki_no_Uso",
+      "year": "2010",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/165163.webp?s=2e275e5d0f56ec564101337b6ac2fb85",
+      "genres": [
+        "Mystery",
+        "Romance"
+      ],
+      "chapters": 5,
+      "volumes": 1,
+      "updated_at": 1699716022
+    },
+    {
+      "title": "Isshou Suki tte Yutta jan",
+      "id": 132614,
+      "url": "https://myanimelist.net/manga/132614/Isshou_Suki_tte_Yutta_jan",
+      "year": "2018",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/239489.webp?s=dc5d8f141c894bbf071d45b82a7b2f1a",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "chapters": 7,
+      "volumes": 1,
+      "updated_at": 1699714263
+    },
+    {
+      "title": "The Girl from Class",
+      "id": 94416,
+      "url": "https://myanimelist.net/manga/94416/The_Girl_from_Class",
+      "year": "2013",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/213482.webp?s=128bdd00fbe21bc937148a00f9197728",
+      "genres": [
+        "Romance",
+        "Slice of Life"
+      ],
+      "chapters": 28,
+      "volumes": 1,
+      "updated_at": 1699566495
+    },
+    {
+      "title": "Genkai Dokushin Joshi (26) Gohan",
+      "id": 158553,
+      "url": "https://myanimelist.net/manga/158553/Genkai_Dokushin_Joshi_26_Gohan",
+      "year": "2023",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/290965.webp?s=d6dac349dd5bc0fe2b3c17a88521af76",
+      "genres": [
+        "Slice of Life"
+      ],
+      "chapters": 28,
+      "volumes": 4,
+      "updated_at": 1699297690
+    },
+    {
+      "title": "Sensei de ○○ Shicha Ikemasen!",
+      "id": 127180,
+      "url": "https://myanimelist.net/manga/127180/Sensei_de_○○_Shicha_Ikemasen",
+      "year": "2019",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/235094.webp?s=38ec6ec363a9a73ed2c785cae83dde1c",
+      "genres": [
+        "Comedy",
+        "Ecchi"
+      ],
+      "chapters": 38,
+      "volumes": 7,
+      "updated_at": 1699275903
+    },
+    {
+      "title": "Tomodachi Game",
+      "id": 62795,
+      "url": "https://myanimelist.net/manga/62795/Tomodachi_Game",
+      "year": "2013",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/302138.webp?s=5f8db25676b48d0b5bccd75469152b34",
+      "genres": [
+        "Suspense"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1697731970
+    },
+    {
+      "title": "Uchuujin no Kakushigoto",
+      "id": 162905,
+      "url": "https://myanimelist.net/manga/162905/Uchuujin_no_Kakushigoto",
+      "year": "2023",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/293666.webp?s=7ee1873ff7e39d20e608bc8e18861092",
+      "genres": [
+        "Romance",
+        "Supernatural",
+        "Suspense"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1697039369
+    },
+    {
+      "title": "Avant-garde Yumeko",
+      "id": 50857,
+      "url": "https://myanimelist.net/manga/50857/Avant-garde_Yumeko",
+      "year": "2003",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/4/90269.webp?s=824948a001b13db783ee1d0685c5f3cd",
+      "genres": [
+        "Comedy",
+        "Ecchi"
+      ],
+      "chapters": 7,
+      "volumes": 1,
+      "updated_at": 1696260095
+    },
+    {
+      "title": "Reiraku",
+      "id": 104272,
+      "url": "https://myanimelist.net/manga/104272/Reiraku",
+      "year": "2017",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/202532.webp?s=8796491777056f97c93f5df722b451d8",
+      "genres": [
+        "Drama"
+      ],
+      "chapters": 8,
+      "volumes": 1,
+      "updated_at": 1695744341
+    },
+    {
+      "title": "Master Keaton Remaster",
+      "id": 37289,
+      "url": "https://myanimelist.net/manga/37289/Master_Keaton_Remaster",
+      "year": "2012",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/148191.webp?s=a852f411db5c0d04fee79a13b4b82af6",
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Mystery"
+      ],
+      "chapters": 8,
+      "volumes": 1,
+      "updated_at": 1695660833
     },
     {
       "title": "Dokuzakura",
@@ -5936,39 +6475,52 @@ window.mediaDatabase = {
       ],
       "chapters": 33,
       "volumes": 5,
-      "updated_at": 0
+      "updated_at": 1694451161
     },
     {
-      "title": "Don't XXX with Teachers!",
-      "id": 127180,
-      "url": "https://myanimelist.net/manga/127180/Sensei_de_○○_Shicha_Ikemasen",
+      "title": "Hirasaka Hinako ga Erokawaii Koto wo Ore dake ga Shitteiru.",
+      "id": 119792,
+      "url": "https://myanimelist.net/manga/119792/Hirasaka_Hinako_ga_Erokawaii_Koto_wo_Ore_dake_ga_Shitteiru",
       "year": "2019",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/235094.webp?s=38ec6ec363a9a73ed2c785cae83dde1c",
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/232192.webp?s=0a903a4c692ccf420e47206d637f6bff",
       "genres": [
-        "Comedy",
-        "Ecchi"
+        "Erotica"
       ],
-      "chapters": 38,
+      "chapters": 50,
       "volumes": 7,
-      "updated_at": 0
+      "updated_at": 1694190655
     },
     {
-      "title": "Dorohedoro",
-      "id": 1133,
-      "url": "https://myanimelist.net/manga/1133/Dorohedoro",
-      "year": "2000",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/258246.webp?s=16fc9d90fbd5ca2cddc006a6f6e21e3c",
+      "title": "Gyo: Ugomeku Bukimi",
+      "id": 909,
+      "url": "https://myanimelist.net/manga/909/Gyo__Ugomeku_Bukimi",
+      "year": "2001",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/88711.webp?s=80fa6addf4c8a4a09301b4eb83f34f15",
       "genres": [
-        "Action",
-        "Comedy",
-        "Fantasy",
-        "Horror"
+        "Drama",
+        "Horror",
+        "Mystery",
+        "Sci-Fi"
       ],
-      "chapters": 190,
-      "volumes": 23,
-      "updated_at": 0
+      "chapters": 21,
+      "volumes": 2,
+      "updated_at": 1693518160
+    },
+    {
+      "title": "Shounen no Abyss",
+      "id": 126699,
+      "url": "https://myanimelist.net/manga/126699/Shounen_no_Abyss",
+      "year": "2020",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/232167.webp?s=685f3e8ddeba601c0b779562727402f5",
+      "genres": [
+        "Drama"
+      ],
+      "chapters": 0,
+      "volumes": 18,
+      "updated_at": 1693237337
     },
     {
       "title": "Doutei Zetsumetsu Rettou",
@@ -5982,68 +6534,67 @@ window.mediaDatabase = {
       ],
       "chapters": 0,
       "volumes": 0,
-      "updated_at": 0
+      "updated_at": 1693059252
     },
     {
-      "title": "Downfall",
-      "id": 104272,
-      "url": "https://myanimelist.net/manga/104272/Reiraku",
-      "year": "2017",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/202532.webp?s=8796491777056f97c93f5df722b451d8",
+      "title": "Saihate ni Madou",
+      "id": 159771,
+      "url": "https://myanimelist.net/manga/159771/Saihate_ni_Madou",
+      "year": "2023",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/283566.webp?s=7202ee54b09ff3fec95cba6e34cdffc3",
       "genres": [
         "Drama"
       ],
-      "chapters": 8,
-      "volumes": 1,
-      "updated_at": 0
+      "chapters": 16,
+      "volumes": 3,
+      "updated_at": 1692365205
     },
     {
-      "title": "Drifting Net Café",
-      "id": 28303,
-      "url": "https://myanimelist.net/manga/28303/Hyouryuu_Net_Cafe",
-      "year": "2009",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/45421.webp?s=6345753db144a6e4a947b6659f26b0c2",
+      "title": "Sun-Ken Rock",
+      "id": 8848,
+      "url": "https://myanimelist.net/manga/8848/Sun-Ken_Rock",
+      "year": "2006",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/166298.webp?s=db9b64a580d8b0f38b79c07941f892fb",
       "genres": [
         "Action",
-        "Mystery",
-        "Romance",
-        "Sci-Fi"
+        "Comedy",
+        "Drama",
+        "Ecchi"
       ],
-      "chapters": 63,
-      "volumes": 7,
-      "updated_at": 0
+      "chapters": 181,
+      "volumes": 25,
+      "updated_at": 1691424652
     },
     {
-      "title": "Even If I'm Not Fifteen",
-      "id": 142423,
-      "url": "https://myanimelist.net/manga/142423/Watashi_ga_15-sai_dewa_Nakunattemo",
-      "year": "2021",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/253221.webp?s=48a4fe7de36d147681f0f9e4ba4ed11e",
+      "title": "Itou Junji Jisen Kessakushuu",
+      "id": 136793,
+      "url": "https://myanimelist.net/manga/136793/Itou_Junji_Jisen_Kessakushuu",
+      "year": "1990",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/265606.webp?s=fd6b8ef5a667af243a1971b0045a339a",
       "genres": [
-        "Drama"
+        "Horror"
       ],
-      "chapters": 18,
-      "volumes": 2,
-      "updated_at": 0
+      "chapters": 10,
+      "volumes": 1,
+      "updated_at": 1690577761
     },
     {
-      "title": "Fire Punch",
-      "id": 98270,
-      "url": "https://myanimelist.net/manga/98270/Fire_Punch",
+      "title": "The Horizon",
+      "id": 125036,
+      "url": "https://myanimelist.net/manga/125036/The_Horizon",
       "year": "2016",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/180430.webp?s=e9f76dd96aa10b44aef07b4c0696200b",
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/229331.webp?s=4caba1672d3530b1b4adeb799d744cf2",
       "genres": [
-        "Action",
-        "Mystery",
-        "Supernatural"
+        "Adventure",
+        "Drama"
       ],
-      "chapters": 83,
-      "volumes": 8,
-      "updated_at": 0
+      "chapters": 21,
+      "volumes": 3,
+      "updated_at": 1688400221
     },
     {
       "title": "Gantz",
@@ -6061,21 +6612,7 @@ window.mediaDatabase = {
       ],
       "chapters": 383,
       "volumes": 37,
-      "updated_at": 0
-    },
-    {
-      "title": "Genkai Dokushin Joshi (26) Gohan",
-      "id": 158553,
-      "url": "https://myanimelist.net/manga/158553/Genkai_Dokushin_Joshi_26_Gohan",
-      "year": "2023",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/290965.webp?s=d6dac349dd5bc0fe2b3c17a88521af76",
-      "genres": [
-        "Slice of Life"
-      ],
-      "chapters": 28,
-      "volumes": 4,
-      "updated_at": 0
+      "updated_at": 1686307617
     },
     {
       "title": "Gigant",
@@ -6091,70 +6628,21 @@ window.mediaDatabase = {
       ],
       "chapters": 89,
       "volumes": 10,
-      "updated_at": 0
+      "updated_at": 1685465320
     },
     {
-      "title": "Girls' Last Tour",
-      "id": 72467,
-      "url": "https://myanimelist.net/manga/72467/Shoujo_Shuumatsu_Ryokou",
-      "year": "2014",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/185918.webp?s=685fe40ef476fa5432fdcdb56515a0b1",
+      "title": "[Oshi no Ko]",
+      "id": 126146,
+      "url": "https://myanimelist.net/manga/126146/Oshi_no_Ko",
+      "year": "2020",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/233991.webp?s=76939e4f69e9b44d4e8fe89ce93d46c5",
       "genres": [
-        "Adventure",
-        "Award Winning",
-        "Slice of Life"
+        "Drama"
       ],
-      "chapters": 47,
-      "volumes": 6,
-      "updated_at": 0
-    },
-    {
-      "title": "Goodnight Punpun",
-      "id": 4632,
-      "url": "https://myanimelist.net/manga/4632/Oyasumi_Punpun",
-      "year": "2007",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/266834.webp?s=408399d2b3d9e73672ecaa2b71dc93c1",
-      "genres": [
-        "Drama",
-        "Slice of Life"
-      ],
-      "chapters": 147,
-      "volumes": 13,
-      "updated_at": 0
-    },
-    {
-      "title": "Gyo: The Death-Stench Creeps",
-      "id": 909,
-      "url": "https://myanimelist.net/manga/909/Gyo__Ugomeku_Bukimi",
-      "year": "2001",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/88711.webp?s=80fa6addf4c8a4a09301b4eb83f34f15",
-      "genres": [
-        "Drama",
-        "Horror",
-        "Mystery",
-        "Sci-Fi"
-      ],
-      "chapters": 21,
-      "volumes": 2,
-      "updated_at": 0
-    },
-    {
-      "title": "Hell's Paradise: Jigokuraku",
-      "id": 112318,
-      "url": "https://myanimelist.net/manga/112318/Jigokuraku",
-      "year": "2018",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/208522.webp?s=f9dd3c28ac0093f1355d47e07658cc64",
-      "genres": [
-        "Action",
-        "Fantasy"
-      ],
-      "chapters": 128,
-      "volumes": 13,
-      "updated_at": 0
+      "chapters": 0,
+      "volumes": 16,
+      "updated_at": 1684593796
     },
     {
       "title": "Hideout",
@@ -6168,37 +6656,233 @@ window.mediaDatabase = {
       ],
       "chapters": 9,
       "volumes": 0,
-      "updated_at": 0
+      "updated_at": 1684593729
     },
     {
-      "title": "Isshou Suki tte Yutta jan",
-      "id": 132614,
-      "url": "https://myanimelist.net/manga/132614/Isshou_Suki_tte_Yutta_jan",
-      "year": "2018",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/239489.webp?s=dc5d8f141c894bbf071d45b82a7b2f1a",
+      "title": "Uzumaki",
+      "id": 436,
+      "url": "https://myanimelist.net/manga/436/Uzumaki",
+      "year": "1998",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/185972.webp?s=09c57cdfd8e9b9a90a15ba1d605d122b",
       "genres": [
         "Drama",
-        "Romance"
+        "Horror",
+        "Supernatural"
       ],
-      "chapters": 7,
-      "volumes": 1,
-      "updated_at": 0
+      "chapters": 19,
+      "volumes": 3,
+      "updated_at": 1683963662
     },
     {
-      "title": "It Takes Two Tomorrow, Too",
-      "id": 120367,
-      "url": "https://myanimelist.net/manga/120367/Futari_Ashita_mo_Sorenari_ni",
-      "year": "2019",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/228699.webp?s=e4039840c6b3c4bcc28150b94a9d9ea7",
+      "title": "Jigokuraku",
+      "id": 112318,
+      "url": "https://myanimelist.net/manga/112318/Jigokuraku",
+      "year": "2018",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/208522.webp?s=f9dd3c28ac0093f1355d47e07658cc64",
       "genres": [
-        "Comedy",
-        "Romance"
+        "Action",
+        "Fantasy"
       ],
-      "chapters": 92,
-      "volumes": 5,
-      "updated_at": 0
+      "chapters": 128,
+      "volumes": 13,
+      "updated_at": 1683963569
+    },
+    {
+      "title": "Billy Bat",
+      "id": 11054,
+      "url": "https://myanimelist.net/manga/11054/Billy_Bat",
+      "year": "2008",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/181197.webp?s=664050d5558f58652eac27ebc965d3fd",
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Supernatural"
+      ],
+      "chapters": 165,
+      "volumes": 20,
+      "updated_at": 1683963473
+    },
+    {
+      "title": "Jujutsu Kaisen",
+      "id": 113138,
+      "url": "https://myanimelist.net/manga/113138/Jujutsu_Kaisen",
+      "year": "2018",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/210341.webp?s=e9150cacc2ddd7af8669bcbaa095e2cc",
+      "genres": [
+        "Action",
+        "Supernatural"
+      ],
+      "chapters": 271,
+      "volumes": 25,
+      "updated_at": 1683963431
+    },
+    {
+      "title": "Pluto",
+      "id": 745,
+      "url": "https://myanimelist.net/manga/745/Pluto",
+      "year": "2003",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/264496.webp?s=67e1b05ac21e29794473258e65bcd653",
+      "genres": [
+        "Action",
+        "Award Winning",
+        "Mystery",
+        "Sci-Fi",
+        "Suspense"
+      ],
+      "chapters": 65,
+      "volumes": 8,
+      "updated_at": 1683963291
+    },
+    {
+      "title": "Dorohedoro",
+      "id": 1133,
+      "url": "https://myanimelist.net/manga/1133/Dorohedoro",
+      "year": "2000",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/258246.webp?s=16fc9d90fbd5ca2cddc006a6f6e21e3c",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Fantasy",
+        "Horror"
+      ],
+      "chapters": 190,
+      "volumes": 23,
+      "updated_at": 1683963264
+    },
+    {
+      "title": "Chainsaw Man",
+      "id": 116778,
+      "url": "https://myanimelist.net/manga/116778/Chainsaw_Man",
+      "year": "2018",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/216464.webp?s=694ed97ce0b0990d498fd1c397de554a",
+      "genres": [
+        "Action",
+        "Award Winning",
+        "Fantasy"
+      ],
+      "chapters": 232,
+      "volumes": 24,
+      "updated_at": 1683963225
+    },
+    {
+      "title": "Oyasumi Punpun",
+      "id": 4632,
+      "url": "https://myanimelist.net/manga/4632/Oyasumi_Punpun",
+      "year": "2007",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/266834.webp?s=408399d2b3d9e73672ecaa2b71dc93c1",
+      "genres": [
+        "Drama",
+        "Slice of Life"
+      ],
+      "chapters": 147,
+      "volumes": 13,
+      "updated_at": 1683963188
+    },
+    {
+      "title": "Slam Dunk",
+      "id": 51,
+      "url": "https://myanimelist.net/manga/51/Slam_Dunk",
+      "year": "1990",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/258749.webp?s=4832953adcda07fb9b3d97cab1694e72",
+      "genres": [
+        "Award Winning",
+        "Sports"
+      ],
+      "chapters": 276,
+      "volumes": 31,
+      "updated_at": 1683963175
+    },
+    {
+      "title": "Takopii no Genzai",
+      "id": 142600,
+      "url": "https://myanimelist.net/manga/142600/Takopii_no_Genzai",
+      "year": "2021",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/256655.webp?s=f10f77cfed9832fdbe48c31322780b72",
+      "genres": [
+        "Drama",
+        "Sci-Fi"
+      ],
+      "chapters": 16,
+      "volumes": 2,
+      "updated_at": 1683963153
+    },
+    {
+      "title": "Vinland Saga",
+      "id": 642,
+      "url": "https://myanimelist.net/manga/642/Vinland_Saga",
+      "year": "2005",
+      "score": 10,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/188925.webp?s=29928862506e267dad97772026c39ae6",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Award Winning",
+        "Drama"
+      ],
+      "chapters": 224,
+      "volumes": 29,
+      "updated_at": 1682693411
+    },
+    {
+      "title": "21st Century Boys",
+      "id": 743,
+      "url": "https://myanimelist.net/manga/743/21st_Century_Boys",
+      "year": "2006",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/263856.webp?s=21d0ab559a7312c1c888c87193056f73",
+      "genres": [
+        "Award Winning",
+        "Drama",
+        "Mystery",
+        "Sci-Fi"
+      ],
+      "chapters": 16,
+      "volumes": 2,
+      "updated_at": 1682693374
+    },
+    {
+      "title": "20th Century Boys",
+      "id": 3,
+      "url": "https://myanimelist.net/manga/3/20th_Century_Boys",
+      "year": "1999",
+      "score": 10,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/5/260006.webp?s=7cfce93b7214643ef45037b68f519b64",
+      "genres": [
+        "Award Winning",
+        "Drama",
+        "Mystery",
+        "Sci-Fi"
+      ],
+      "chapters": 249,
+      "volumes": 22,
+      "updated_at": 1682693342
+    },
+    {
+      "title": "JoJo no Kimyou na Bouken Part 7: Steel Ball Run",
+      "id": 1706,
+      "url": "https://myanimelist.net/manga/1706/JoJo_no_Kimyou_na_Bouken_Part_7__Steel_Ball_Run",
+      "year": "2004",
+      "score": 10,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/179882.webp?s=d04ef00c39100c6d5576091b71865056",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Mystery",
+        "Supernatural"
+      ],
+      "chapters": 96,
+      "volumes": 24,
+      "updated_at": 1682690995
     },
     {
       "title": "JoJo no Kimyou na Bouken Part 8: JoJolion",
@@ -6216,10 +6900,10 @@ window.mediaDatabase = {
       ],
       "chapters": 110,
       "volumes": 27,
-      "updated_at": 0
+      "updated_at": 1682690981
     },
     {
-      "title": "JoJo's Bizarre Adventure Part 6: Stone Ocean",
+      "title": "JoJo no Kimyou na Bouken Part 6: Stone Ocean",
       "id": 3009,
       "url": "https://myanimelist.net/manga/3009/JoJo_no_Kimyou_na_Bouken_Part_6__Stone_Ocean",
       "year": "1999",
@@ -6231,722 +6915,38 @@ window.mediaDatabase = {
       ],
       "chapters": 158,
       "volumes": 17,
-      "updated_at": 0
-    },
-    {
-      "title": "JoJo's Bizarre Adventure Part 7: Steel Ball Run",
-      "id": 1706,
-      "url": "https://myanimelist.net/manga/1706/JoJo_no_Kimyou_na_Bouken_Part_7__Steel_Ball_Run",
-      "year": "2004",
-      "score": 10,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/179882.webp?s=d04ef00c39100c6d5576091b71865056",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Mystery",
-        "Supernatural"
-      ],
-      "chapters": 96,
-      "volumes": 24,
-      "updated_at": 0
-    },
-    {
-      "title": "Jujutsu Kaisen",
-      "id": 113138,
-      "url": "https://myanimelist.net/manga/113138/Jujutsu_Kaisen",
-      "year": "2018",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/210341.webp?s=e9150cacc2ddd7af8669bcbaa095e2cc",
-      "genres": [
-        "Action",
-        "Supernatural"
-      ],
-      "chapters": 271,
-      "volumes": 25,
-      "updated_at": 0
-    },
-    {
-      "title": "Jujutsu Kaisen Modulo",
-      "id": 186597,
-      "url": "https://myanimelist.net/manga/186597/Jujutsu_Kaisen_Modulo",
-      "year": "2025",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/339595.webp?s=e22e449a7c158fa1bb23c420d08bce92",
-      "genres": [
-        "Action",
-        "Sci-Fi",
-        "Supernatural"
-      ],
-      "chapters": 0,
-      "volumes": 0,
-      "updated_at": 0
-    },
-    {
-      "title": "Kaiju No. 8",
-      "id": 127907,
-      "url": "https://myanimelist.net/manga/127907/Kaijuu_8-gou",
-      "year": "2020",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/252929.webp?s=a4ca59aef1a8d4fe5fbe57170af39a8f",
-      "genres": [
-        "Action",
-        "Fantasy",
-        "Sci-Fi"
-      ],
-      "chapters": 129,
-      "volumes": 16,
-      "updated_at": 0
-    },
-    {
-      "title": "Kaitai Zanuff",
-      "id": 108948,
-      "url": "https://myanimelist.net/manga/108948/Kaitai_Zanuff",
-      "year": "2012",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/220444.webp?s=c263f4e9be9dcc4cec7f8749134657bd",
-      "genres": [
-        "Horror"
-      ],
-      "chapters": 1,
-      "volumes": 0,
-      "updated_at": 0
-    },
-    {
-      "title": "Kowareta Bokura no Senryaku Renai",
-      "id": 150374,
-      "url": "https://myanimelist.net/manga/150374/Kowareta_Bokura_no_Senryaku_Renai",
-      "year": "2022",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/266603.webp?s=d2cfecd736c67d291c8062db092f999f",
-      "genres": [
-        "Romance"
-      ],
-      "chapters": 1,
-      "volumes": 0,
-      "updated_at": 0
-    },
-    {
-      "title": "Land of the Lustrous",
-      "id": 44489,
-      "url": "https://myanimelist.net/manga/44489/Houseki_no_Kuni",
-      "year": "2012",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/115443.webp?s=4c56d9e5c24846805e6a3d6e2848c2ea",
-      "genres": [
-        "Action",
-        "Drama",
-        "Fantasy"
-      ],
-      "chapters": 108,
-      "volumes": 13,
-      "updated_at": 0
-    },
-    {
-      "title": "Look Back",
-      "id": 138673,
-      "url": "https://myanimelist.net/manga/138673/Look_Back",
-      "year": "2021",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/249833.webp?s=a71fdd8306d85202ea919106f964be04",
-      "genres": [
-        "Drama"
-      ],
-      "chapters": 0,
-      "volumes": 1,
-      "updated_at": 0
-    },
-    {
-      "title": "Love Agency",
-      "id": 157874,
-      "url": "https://myanimelist.net/manga/157874/Renai_Daikou",
-      "year": "2023",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/292236.webp?s=0366b39686168088d04d4dc3ee0b6ff8",
-      "genres": [
-        "Comedy",
-        "Romance"
-      ],
-      "chapters": 39,
-      "volumes": 4,
-      "updated_at": 0
-    },
-    {
-      "title": "Master Keaton Remaster",
-      "id": 37289,
-      "url": "https://myanimelist.net/manga/37289/Master_Keaton_Remaster",
-      "year": "2012",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/148191.webp?s=a852f411db5c0d04fee79a13b4b82af6",
-      "genres": [
-        "Adventure",
-        "Drama",
-        "Mystery"
-      ],
-      "chapters": 8,
-      "volumes": 1,
-      "updated_at": 0
-    },
-    {
-      "title": "My Broken Mariko",
-      "id": 123812,
-      "url": "https://myanimelist.net/manga/123812/My_Broken_Mariko",
-      "year": "2019",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/226196.webp?s=796c22ea457fbcdabd9e1d8b97c70845",
-      "genres": [
-        "Drama"
-      ],
-      "chapters": 5,
-      "volumes": 1,
-      "updated_at": 0
-    },
-    {
-      "title": "My Girlfriend's Child",
-      "id": 140333,
-      "url": "https://myanimelist.net/manga/140333/Ano_Ko_no_Kodomo",
-      "year": "2021",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/250274.webp?s=42fda66c9433ae86d0321c5aed1c8205",
-      "genres": [
-        "Award Winning",
-        "Drama"
-      ],
-      "chapters": 41,
-      "volumes": 10,
-      "updated_at": 0
-    },
-    {
-      "title": "Nee Nee, Nene-san.",
-      "id": 140604,
-      "url": "https://myanimelist.net/manga/140604/Nee_Nee_Nene-san",
-      "year": "2021",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/250547.webp?s=58fa4fc1f33246f3e6609cb3e7b6cbfe",
-      "genres": [
-        "Drama",
-        "Gourmet",
-        "Romance"
-      ],
-      "chapters": 1,
-      "volumes": 0,
-      "updated_at": 0
-    },
-    {
-      "title": "No Longer Human",
-      "id": 106609,
-      "url": "https://myanimelist.net/manga/106609/Ningen_Shikkaku",
-      "year": "2017",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/260361.webp?s=484f6db8ffe52247f4fef91138d3fa4a",
-      "genres": [
-        "Drama"
-      ],
-      "chapters": 24,
-      "volumes": 3,
-      "updated_at": 0
-    },
-    {
-      "title": "Okuru Kotoba",
-      "id": 105875,
-      "url": "https://myanimelist.net/manga/105875/Okuru_Kotoba",
-      "year": "2017",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/202996.webp?s=f7f269ad456f4da1149e6cede8466b62",
-      "genres": [
-        "Mystery",
-        "Supernatural"
-      ],
-      "chapters": 16,
-      "volumes": 3,
-      "updated_at": 0
-    },
-    {
-      "title": "Onani Master Kurosawa",
-      "id": 8967,
-      "url": "https://myanimelist.net/manga/8967/Onanie_Master_Kurosawa",
-      "year": "2007",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/212092.webp?s=d89d11024526b10861ae3d08c2b7383b",
-      "genres": [
-        "Drama"
-      ],
-      "chapters": 31,
-      "volumes": 4,
-      "updated_at": 0
-    },
-    {
-      "title": "Only I Know That Hinako Hirasaka Is Erotically Kawaii.",
-      "id": 119792,
-      "url": "https://myanimelist.net/manga/119792/Hirasaka_Hinako_ga_Erokawaii_Koto_wo_Ore_dake_ga_Shitteiru",
-      "year": "2019",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/232192.webp?s=0a903a4c692ccf420e47206d637f6bff",
-      "genres": [
-        "Erotica"
-      ],
-      "chapters": 50,
-      "volumes": 7,
-      "updated_at": 0
-    },
-    {
-      "title": "Otona ni Narenai Bokura wa",
-      "id": 166632,
-      "url": "https://myanimelist.net/manga/166632/Otona_ni_Narenai_Bokura_wa",
-      "year": "2024",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/305561.webp?s=96cb88911bc6dbeca267f8ddde65ea05",
-      "genres": [
-        "Romance"
-      ],
-      "chapters": 28,
-      "volumes": 3,
-      "updated_at": 0
-    },
-    {
-      "title": "Pluto: Urasawa x Tezuka",
-      "id": 745,
-      "url": "https://myanimelist.net/manga/745/Pluto",
-      "year": "2003",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/264496.webp?s=67e1b05ac21e29794473258e65bcd653",
-      "genres": [
-        "Action",
-        "Award Winning",
-        "Mystery",
-        "Sci-Fi",
-        "Suspense"
-      ],
-      "chapters": 65,
-      "volumes": 8,
-      "updated_at": 0
-    },
-    {
-      "title": "Ressentiment",
-      "id": 1238,
-      "url": "https://myanimelist.net/manga/1238/Ressentiment",
-      "year": "2003",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/52573.webp?s=09cb4cd221f403ccc3007da8276b7a67",
-      "genres": [
-        "Comedy",
-        "Sci-Fi",
-        "Ecchi"
-      ],
-      "chapters": 49,
-      "volumes": 4,
-      "updated_at": 0
-    },
-    {
-      "title": "Saihate ni Madou",
-      "id": 159771,
-      "url": "https://myanimelist.net/manga/159771/Saihate_ni_Madou",
-      "year": "2023",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/283566.webp?s=7202ee54b09ff3fec95cba6e34cdffc3",
-      "genres": [
-        "Drama"
-      ],
-      "chapters": 16,
-      "volumes": 3,
-      "updated_at": 0
-    },
-    {
-      "title": "Saltiness",
-      "id": 56509,
-      "url": "https://myanimelist.net/manga/56509/Saltiness",
-      "year": "2012",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/98303.webp?s=43b37c7c573d41ba353256b9ffa1f1e2",
-      "genres": [],
-      "chapters": 44,
-      "volumes": 4,
-      "updated_at": 0
-    },
-    {
-      "title": "Secret of the Alien",
-      "id": 162905,
-      "url": "https://myanimelist.net/manga/162905/Uchuujin_no_Kakushigoto",
-      "year": "2023",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/293666.webp?s=7ee1873ff7e39d20e608bc8e18861092",
-      "genres": [
-        "Romance",
-        "Supernatural",
-        "Suspense"
-      ],
-      "chapters": 0,
-      "volumes": 0,
-      "updated_at": 0
-    },
-    {
-      "title": "Shi ni Aruki",
-      "id": 103648,
-      "url": "https://myanimelist.net/manga/103648/Shi_ni_Aruki",
-      "year": "2016",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/198188.webp?s=edef7ffc69a8f02b1b609c5872d60e22",
-      "genres": [
-        "Horror",
-        "Mystery"
-      ],
-      "chapters": 37,
-      "volumes": 4,
-      "updated_at": 0
-    },
-    {
-      "title": "Shiver: Junji Ito Selected Stories",
-      "id": 136793,
-      "url": "https://myanimelist.net/manga/136793/Itou_Junji_Jisen_Kessakushuu",
-      "year": "1990",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/265606.webp?s=fd6b8ef5a667af243a1971b0045a339a",
-      "genres": [
-        "Horror"
-      ],
-      "chapters": 10,
-      "volumes": 1,
-      "updated_at": 0
-    },
-    {
-      "title": "Slam Dunk",
-      "id": 51,
-      "url": "https://myanimelist.net/manga/51/Slam_Dunk",
-      "year": "1990",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/258749.webp?s=4832953adcda07fb9b3d97cab1694e72",
-      "genres": [
-        "Award Winning",
-        "Sports"
-      ],
-      "chapters": 276,
-      "volumes": 31,
-      "updated_at": 0
-    },
-    {
-      "title": "Sneeze: Naoki Urasawa Story Collection",
-      "id": 128620,
-      "url": "https://myanimelist.net/manga/128620/Kushami__Urasawa_Naoki_Tanpenshuu",
-      "year": "1995",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/232632.webp?s=38a7bd46f78ee309b062565b6c72f94a",
-      "genres": [
-        "Action",
-        "Comedy",
-        "Drama",
-        "Mystery",
-        "Supernatural"
-      ],
-      "chapters": 8,
-      "volumes": 1,
-      "updated_at": 0
-    },
-    {
-      "title": "Soshite Watashi wa, Kou Itta.",
-      "id": 162295,
-      "url": "https://myanimelist.net/manga/162295/Soshite_Watashi_wa_Kou_Itta",
-      "year": "2023",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/287949.webp?s=4418af24bdf91c58868b03518589e81c",
-      "genres": [
-        "Drama",
-        "Suspense"
-      ],
-      "chapters": 1,
-      "volumes": 0,
-      "updated_at": 0
-    },
-    {
-      "title": "Sun-Ken Rock",
-      "id": 8848,
-      "url": "https://myanimelist.net/manga/8848/Sun-Ken_Rock",
-      "year": "2006",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/166298.webp?s=db9b64a580d8b0f38b79c07941f892fb",
-      "genres": [
-        "Action",
-        "Comedy",
-        "Drama",
-        "Ecchi"
-      ],
-      "chapters": 181,
-      "volumes": 25,
-      "updated_at": 0
-    },
-    {
-      "title": "Takopi's Original Sin",
-      "id": 142600,
-      "url": "https://myanimelist.net/manga/142600/Takopii_no_Genzai",
-      "year": "2021",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/256655.webp?s=f10f77cfed9832fdbe48c31322780b72",
-      "genres": [
-        "Drama",
-        "Sci-Fi"
-      ],
-      "chapters": 16,
-      "volumes": 2,
-      "updated_at": 0
-    },
-    {
-      "title": "The Climber",
-      "id": 7375,
-      "url": "https://myanimelist.net/manga/7375/Kokou_no_Hito",
-      "year": "2007",
-      "score": 10,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/324690.webp?s=5b99261e5ae9b5f1b0a35e8db324bc31",
-      "genres": [
-        "Award Winning",
-        "Drama",
-        "Sports"
-      ],
-      "chapters": 170,
-      "volumes": 17,
-      "updated_at": 0
-    },
-    {
-      "title": "The Flowers of Evil",
-      "id": 24705,
-      "url": "https://myanimelist.net/manga/24705/Aku_no_Hana",
-      "year": "2009",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/188918.webp?s=d086c5e09193cf294d6ce4d202f7096a",
-      "genres": [
-        "Drama",
-        "Romance"
-      ],
-      "chapters": 58,
-      "volumes": 11,
-      "updated_at": 0
-    },
-    {
-      "title": "The Girl from Class",
-      "id": 94416,
-      "url": "https://myanimelist.net/manga/94416/The_Girl_from_Class",
-      "year": "2013",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/213482.webp?s=128bdd00fbe21bc937148a00f9197728",
-      "genres": [
-        "Romance",
-        "Slice of Life"
-      ],
-      "chapters": 28,
-      "volumes": 1,
-      "updated_at": 0
-    },
-    {
-      "title": "The Gods Lie.",
-      "id": 50217,
-      "url": "https://myanimelist.net/manga/50217/Kamisama_ga_Uso_wo_Tsuku",
-      "year": "2013",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/143365.webp?s=bc4f1d73830b3833e4e87c02b250f1be",
-      "genres": [
-        "Drama",
-        "Romance"
-      ],
-      "chapters": 5,
-      "volumes": 1,
-      "updated_at": 0
-    },
-    {
-      "title": "The Horizon",
-      "id": 125036,
-      "url": "https://myanimelist.net/manga/125036/The_Horizon",
-      "year": "2016",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/229331.webp?s=4caba1672d3530b1b4adeb799d744cf2",
-      "genres": [
-        "Adventure",
-        "Drama"
-      ],
-      "chapters": 21,
-      "volumes": 3,
-      "updated_at": 0
-    },
-    {
-      "title": "The Ramparts of Ice",
-      "id": 160303,
-      "url": "https://myanimelist.net/manga/160303/Koori_no_Jouheki",
-      "year": "2020",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/296537.webp?s=cd2ae430c909632118c1a03c8f434e13",
-      "genres": [
-        "Drama",
-        "Romance"
-      ],
-      "chapters": 117,
-      "volumes": 14,
-      "updated_at": 0
-    },
-    {
-      "title": "Tomodachi Game",
-      "id": 62795,
-      "url": "https://myanimelist.net/manga/62795/Tomodachi_Game",
-      "year": "2013",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/302138.webp?s=5f8db25676b48d0b5bccd75469152b34",
-      "genres": [
-        "Suspense"
-      ],
-      "chapters": 0,
-      "volumes": 0,
-      "updated_at": 0
-    },
-    {
-      "title": "Undead Unluck",
-      "id": 123956,
-      "url": "https://myanimelist.net/manga/123956/Undead_Unluck",
-      "year": "2020",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/289700.webp?s=96b6bd82dafa201459ac13a0180e65b2",
-      "genres": [
-        "Action",
-        "Supernatural"
-      ],
-      "chapters": 240,
-      "volumes": 27,
-      "updated_at": 0
-    },
-    {
-      "title": "Usotsuki Mii-kun to Kowareta Maa-chan: Totteoki no Uso",
-      "id": 22518,
-      "url": "https://myanimelist.net/manga/22518/Usotsuki_Mii-kun_to_Kowareta_Maa-chan__Totteoki_no_Uso",
-      "year": "2010",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/165163.webp?s=2e275e5d0f56ec564101337b6ac2fb85",
-      "genres": [
-        "Mystery",
-        "Romance"
-      ],
-      "chapters": 5,
-      "volumes": 1,
-      "updated_at": 0
-    },
-    {
-      "title": "Uzumaki: Spiral into Horror",
-      "id": 436,
-      "url": "https://myanimelist.net/manga/436/Uzumaki",
-      "year": "1998",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/185972.webp?s=09c57cdfd8e9b9a90a15ba1d605d122b",
-      "genres": [
-        "Drama",
-        "Horror",
-        "Supernatural"
-      ],
-      "chapters": 19,
-      "volumes": 3,
-      "updated_at": 0
-    },
-    {
-      "title": "Vinland Saga",
-      "id": 642,
-      "url": "https://myanimelist.net/manga/642/Vinland_Saga",
-      "year": "2005",
-      "score": 10,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/188925.webp?s=29928862506e267dad97772026c39ae6",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Award Winning",
-        "Drama"
-      ],
-      "chapters": 224,
-      "volumes": 29,
-      "updated_at": 0
-    },
-    {
-      "title": "Wanitokagegisu",
-      "id": 19790,
-      "url": "https://myanimelist.net/manga/19790/Wanitokagegisu",
-      "year": "2006",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/213017.webp?s=c528e25f120155e89a323f105dfda688",
-      "genres": [
-        "Comedy",
-        "Slice of Life"
-      ],
-      "chapters": 44,
-      "volumes": 4,
-      "updated_at": 0
-    },
-    {
-      "title": "Welcome Back, Alice",
-      "id": 125717,
-      "url": "https://myanimelist.net/manga/125717/Okaeri_Alice",
-      "year": "2020",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/235399.webp?s=c0e2bce40e2ad07f246524123062e7b5",
-      "genres": [
-        "Drama",
-        "Romance"
-      ],
-      "chapters": 40,
-      "volumes": 7,
-      "updated_at": 0
-    },
-    {
-      "title": "Yu Yu Hakusho",
-      "id": 53,
-      "url": "https://myanimelist.net/manga/53/Yuu☆Yuu☆Hakusho",
-      "year": "1990",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/250027.webp?s=2930af78e372d00d65c5eb2c90c44e63",
-      "genres": [
-        "Action",
-        "Award Winning",
-        "Comedy",
-        "Drama",
-        "Supernatural"
-      ],
-      "chapters": 176,
-      "volumes": 19,
-      "updated_at": 0
-    },
-    {
-      "title": "[Oshi no Ko]",
-      "id": 126146,
-      "url": "https://myanimelist.net/manga/126146/Oshi_no_Ko",
-      "year": "2020",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/233991.webp?s=76939e4f69e9b44d4e8fe89ce93d46c5",
-      "genres": [
-        "Drama"
-      ],
-      "chapters": 0,
-      "volumes": 16,
-      "updated_at": 0
+      "updated_at": 1682690951
     }
   ],
   "currently": {
     "watching": [
-      "The Ramparts of Ice",
-      "Steel Ball Run: JoJo's Bizarre Adventure",
+      "Koori no Jouheki",
+      "Steel Ball Run: JoJo no Kimyou na Bouken",
       "One Piece"
     ],
     "reading": [
-      "Berserk",
-      "Centuria",
-      "Chained Soldier",
-      "Dandadan",
-      "Grand Blue Dreaming",
-      "Haimiya Is Scary Cute",
-      "Haunted Peak",
-      "JoJo's Bizarre Adventure Part 9: The JoJoLands",
-      "Kagurabachi",
-      "One Piece",
-      "One-Punch Man",
-      "Real",
-      "RuriDragon",
-      "ST✰R: Strike It Rich",
-      "The 100 Girlfriends Who Really, Really, Really, Really, Really Love You",
-      "The Summer Hikaru Died",
+      "Sangeki",
+      "Haimiya-senpai wa Kowakute Kawaii",
+      "Moriagaranai Date",
       "Tsumi to Batsu no Spica",
-      "Unexciting Date...",
-      "Uzaki-chan Wants to Hang Out!",
+      "Isshou Senkin",
+      "Yotsuba to!",
+      "Centuria",
+      "Ruri Dragon",
+      "Grand Blue",
+      "Uzaki-chan wa Asobitai!",
+      "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo",
+      "Mato Seihei no Slave",
+      "Dandadan",
+      "Zom 100: Zombie ni Naru made ni Shitai 100 no Koto",
+      "Kagurabachi",
+      "Hikaru ga Shinda Natsu",
+      "Real",
+      "One Punch-Man",
+      "Berserk",
       "Vagabond",
-      "Yotsuba&!",
-      "Zom 100: Bucket List of the Dead"
+      "JoJo no Kimyou na Bouken Part 9: The JoJoLands",
+      "One Piece"
     ]
   }
 }

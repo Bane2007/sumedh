@@ -138,7 +138,7 @@ def fetch_mal_anime():
         with urllib.request.urlopen(req_completed) as response:
             data = json.loads(response.read().decode('utf-8'))
             for item in data:
-                title = item.get('anime_title_eng') or item.get('anime_title')
+                title = item.get('anime_title') or item.get('anime_title_eng')
                 date_str = item.get('anime_start_date_string') or item.get('start_date_string')
                 year = extract_year_from_mal_date(date_str)
                 anime_list.append({
@@ -150,7 +150,7 @@ def fetch_mal_anime():
                     'image': item.get('anime_image_path', ''),
                     'genres': [g['name'] for g in item.get('genres', [])],
                     'episodes': item.get('num_watched_episodes', 0),
-                    'updated_at': item.get('updated_at', 0)
+                    'updated_at': item.get('updated_at') or item.get('created_at') or 0
                 })
         # Sort by updated_at descending (Most recently completed first)
         anime_list.sort(key=lambda x: x.get('updated_at', 0), reverse=True)
@@ -166,10 +166,9 @@ def fetch_mal_anime():
     try:
         with urllib.request.urlopen(req_watching) as response:
             data = json.loads(response.read().decode('utf-8'))
-            # Sort by updated_at to get the most active watching title first
-            data.sort(key=lambda x: x.get('updated_at', 0), reverse=True)
+            data.sort(key=lambda x: x.get('updated_at') or x.get('created_at') or 0, reverse=True)
             for item in data:
-                title = item.get('anime_title_eng') or item.get('anime_title')
+                title = item.get('anime_title') or item.get('anime_title_eng')
                 watching.append(title)
         print(f"Found {len(watching)} currently watching titles.")
     except Exception as e:
@@ -188,7 +187,7 @@ def fetch_mal_manga():
         with urllib.request.urlopen(req_completed) as response:
             data = json.loads(response.read().decode('utf-8'))
             for item in data:
-                title = item.get('manga_english') or item.get('manga_title')
+                title = item.get('manga_title') or item.get('manga_english')
                 date_str = item.get('manga_start_date_string') or item.get('start_date_string')
                 year = extract_year_from_mal_date(date_str)
                 manga_list.append({
@@ -201,7 +200,7 @@ def fetch_mal_manga():
                     'genres': [g['name'] for g in item.get('genres', [])],
                     'chapters': item.get('num_read_chapters', 0),
                     'volumes': item.get('num_read_volumes', 0),
-                    'updated_at': item.get('updated_at', 0)
+                    'updated_at': item.get('updated_at') or item.get('created_at') or 0
                 })
         # Sort by updated_at descending (Most recently completed first)
         manga_list.sort(key=lambda x: x.get('updated_at', 0), reverse=True)
@@ -217,10 +216,9 @@ def fetch_mal_manga():
     try:
         with urllib.request.urlopen(req_reading) as response:
             data = json.loads(response.read().decode('utf-8'))
-            # Sort by updated_at to get the most active reading title first
-            data.sort(key=lambda x: x.get('updated_at', 0), reverse=True)
+            data.sort(key=lambda x: x.get('updated_at') or x.get('created_at') or 0, reverse=True)
             for item in data:
-                title = item.get('manga_english') or item.get('manga_title')
+                title = item.get('manga_title') or item.get('manga_english')
                 reading.append(title)
         print(f"Found {len(reading)} currently reading titles.")
     except Exception as e:
