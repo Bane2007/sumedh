@@ -349,67 +349,39 @@ section, .colophon {
 }
 .about__body em { color: var(--oxblood); font-style: italic; }
 
-/* === CABINET OF CURIOSITIES === */
-.cabinet-curiosities {
-  margin-top: 2rem;
-  padding: 1.25rem;
-  background: var(--paper-deep);
-  border: 1px solid var(--hairline);
-  border-radius: 3px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
-  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.4);
+/* === THE SHINING PORTRAIT OVERLAY === */
+.hero__portrait {
+  position: relative;
+  overflow: hidden;
 }
-.curio-list {
-  display: flex;
-  justify-content: center;
-  gap: 1.25rem;
-  flex-wrap: wrap;
+.hero__portrait::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='70' viewBox='0 0 40 70'><path d='M20 0 L40 11.5 L40 34.5 L20 46 L0 34.5 L0 11.5 Z' fill='none' stroke='%23c8615a' stroke-width='1.5'/><path d='M20 6 L35 15 L35 31 L20 40 L5 31 L5 15 Z' fill='none' stroke='%23e08a82' stroke-width='1'/><path d='M20 35 L40 46.5 L40 69.5 L20 81 L0 69.5 L0 46.5 Z' fill='none' stroke='%23c8615a' stroke-width='1.5'/></svg>");
+  background-size: 40px 70px;
+  opacity: 0;
+  mix-blend-mode: color-burn;
+  transition: opacity 400ms ease;
+  pointer-events: none;
 }
-.curio-btn {
-  background: none;
-  border: none;
-  padding: 0.5rem;
-  color: var(--ink-soft);
-  cursor: pointer;
-  transition: transform 250ms cubic-bezier(0.16, 1, 0.3, 1), color 200ms ease;
-  outline: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.hero__portrait:hover::after {
+  opacity: 0.8;
 }
-.curio-btn:hover,
-.curio-btn:focus-visible {
+
+/* === WHIPLASH TEMPO TRIGGER === */
+.tempo-trigger {
+  transition: color 200ms ease;
+}
+.tempo-trigger:hover {
+  font-size: 0;
   color: var(--oxblood-soft);
-  transform: translateY(-3px) scale(1.08);
 }
-.curio-svg {
-  width: 28px;
-  height: 28px;
-  display: block;
-}
-.curio-display {
-  min-height: 2.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  max-width: 32rem;
-  width: 100%;
-}
-.curio-display__text {
-  margin: 0;
-  font-size: 0.82rem;
-  color: var(--ink-soft);
-  transition: opacity 180ms ease;
-  opacity: 0.85;
-  line-height: 1.45;
-}
-.curio-display__text em {
-  color: var(--ink);
-  font-style: italic;
+.tempo-trigger:hover::before {
+  content: "RUSHING OR DRAGGING?";
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  font-family: var(--mono);
 }
 
 /* === III. SADAKO === */
@@ -618,8 +590,9 @@ section, .colophon {
   content: "";
   position: absolute;
   left: 0; right: 100%; bottom: 0.25rem;
-  height: 1px;
-  background: var(--oxblood);
+  height: 6px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M0 5 L5 1 L10 5' fill='none' stroke='%23c8615a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: repeat-x;
   transition: right 280ms ease-out;
 }
 .contact__list a:hover::after { right: 0; }
@@ -628,7 +601,7 @@ section, .colophon {
 .colophon {
   text-align: center;
   padding-top: 0.5rem;
-  padding-bottom: 2rem;
+  padding-bottom: 2.5rem;
 }
 .colophon .mono {
   color: var(--ink-soft);
@@ -641,6 +614,29 @@ section, .colophon {
   font-size: 1.4rem;
   color: var(--oxblood);
   margin: 0;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+.colophon__fin::after {
+  content: "Get busy living, or get busy dying.";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 250ms ease, transform 250ms ease;
+  pointer-events: none;
+  font-style: normal;
+  letter-spacing: 0.05em;
+}
+.colophon__fin:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 /* === SCROLL REVEAL === */
