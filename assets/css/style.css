@@ -335,6 +335,60 @@ section, .colophon {
 }
 .about__body em { color: var(--oxblood); font-style: italic; }
 
+/* === INLINE TOOLTIP (CINEMA REFERENCES) === */
+.inline-tooltip {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  color: var(--oxblood-soft);
+  border-bottom: 1px dashed var(--oxblood);
+  cursor: help;
+  transition: color 200ms ease, border-color 200ms ease;
+}
+.inline-tooltip:hover,
+.inline-tooltip:focus {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+  outline: none;
+}
+.inline-tooltip__content {
+  position: absolute;
+  bottom: 135%;
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  background: var(--paper-deep);
+  border: 1px solid var(--hairline);
+  color: var(--ink-soft);
+  padding: 0.45rem 0.8rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  line-height: 1.4;
+  white-space: nowrap;
+  border-radius: 2px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.16, 1, 0.3, 1), transform 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.75);
+  z-index: 100;
+}
+/* Tooltip arrow */
+.inline-tooltip__content::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--paper-deep) transparent transparent transparent;
+}
+.inline-tooltip:hover .inline-tooltip__content,
+.inline-tooltip:focus .inline-tooltip__content {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
 /* === III. SADAKO === */
 .sadako__grid {
   display: grid;
