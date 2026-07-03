@@ -97,15 +97,18 @@
     </section>
 
     <!-- II.75 THE FILM CLOSET -->
+    <!-- II.75 THE FILM CLOSET -->
     <section class="closet-section" id="closet-section" aria-labelledby="closet-h">
       <h2 id="closet-h" class="section-eyebrow">the shelf</h2>
-      <p class="closet-intro">
-        A virtual closet of physical inspirations. Click or hover on a spine to pull the film from the shelf.
-      </p>
       
+      <div class="closet-nav">
+        <button class="closet-toggle-btn active" id="btn-shelf-view">Featured Shelf</button>
+        <button class="closet-toggle-btn" id="btn-list-view">Letterboxd History</button>
+      </div>
+
       <div class="closet-container">
-        <!-- Interactive Shelf -->
-        <div class="closet-shelf">
+        <!-- Interactive Shelf (Featured View) -->
+        <div class="closet-shelf" id="panel-shelf-view">
           <!-- Spine 1: 2001 -->
           <div class="spine-item" data-film="2001" tabindex="0">
             <div class="spine-edge border-2001"></div>
@@ -154,6 +157,16 @@
               <span class="spine-title">The Shawshank Redemption</span>
               <span class="spine-director mono">Darabont</span>
             </div>
+          </div>
+        </div>
+
+        <!-- List View Panel (Letterboxd History) -->
+        <div class="panel-list-view" id="panel-list-view" style="display: none;">
+          <div class="list-view-controls">
+            <input class="movie-search-input" id="movie-search" type="search" placeholder="Search Letterboxd history...">
+          </div>
+          <div class="movie-grid" id="movie-grid">
+            <!-- Dynamic movie cards injected here -->
           </div>
         </div>
         
@@ -237,6 +250,7 @@
 
   </main>
 
+  <script src="assets/data/films.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>

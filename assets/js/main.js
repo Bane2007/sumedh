@@ -108,10 +108,65 @@
     }
   };
 
-  const spines = document.querySelectorAll('.spine-item');
+  const generateGenericCover = (title, year) => {
+    let hash = 0;
+    for (let i = 0; i < title.length; i++) {
+      hash = title.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    const hues = [15, 45, 200, 220, 342]; 
+    const hue = hues[Math.abs(hash) % hues.length];
+    
+    return `<svg viewBox="0 0 140 200" class="svg-cover">
+      <rect width="140" height="200" fill="hsl(${hue}, 20%, 8%)"/>
+      <rect x="5" y="5" width="130" height="190" fill="none" stroke="hsl(${hue}, 22%, 18%)" stroke-width="1"/>
+      <foreignObject x="10" y="45" width="120" height="110">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="color: #ece4d3; font-family: var(--serif); font-size: 9px; text-align: center; line-height: 1.35; font-weight: 500; font-style: italic; display: flex; align-items: center; justify-content: center; height: 100%;">
+          ${title}
+        </div>
+      </foreignObject>
+      <text x="70" y="180" text-anchor="middle" fill="hsl(${hue}, 25%, 40%)" font-family="var(--mono)" font-size="6" letter-spacing="0.1em">${year}</text>
+    </svg>`;
+  };
+
+  // Tab View Swapping
+  const btnShelfView = document.getElementById('btn-shelf-view');
+  const btnListView = document.getElementById('btn-list-view');
+  const panelShelfView = document.getElementById('panel-shelf-view');
+  const panelListView = document.getElementById('panel-list-view');
+
+  if (btnShelfView && btnListView && panelShelfView && panelListView) {
+    btnShelfView.addEventListener('click', () => {
+      btnListView.classList.remove('active');
+      btnShelfView.classList.add('active');
+      panelListView.style.display = 'none';
+      panelShelfView.style.display = 'flex';
+      
+      // Auto-select first spine on shelf
+      const spines = panelShelfView.querySelectorAll('.spine-item');
+      if (spines.length > 0) {
+        spines[0].click();
+      }
+    });
+
+    btnListView.addEventListener('click', () => {
+      btnShelfView.classList.remove('active');
+      btnListView.classList.add('active');
+      panelShelfView.style.display = 'none';
+      panelListView.style.display = 'flex';
+
+      // Auto-select first card in list
+      const cards = panelListView.querySelectorAll('.grid-item-card');
+      if (cards.length > 0) {
+        cards[0].click();
+      }
+    });
+  }
+
+  // Render Letterboxd History Cards
+  const movieGrid = document.getElementById('movie-grid');
   const displayBox = document.getElementById('closet-display');
-  
-  if (spines && displayBox) {
+
+  if (movieGrid && displayBox && window.letterboxdFilms) {
     const placeholder = displayBox.querySelector('.display-placeholder');
     const content = displayBox.querySelector('.display-content');
     const coverArt = displayBox.querySelector('#display-cover-art');
@@ -121,7 +176,28 @@
     const quoteEl = displayBox.querySelector('#display-quote');
     const descEl = displayBox.querySelector('#display-description');
 
-    const updateDisplay = (filmKey) => {
+    const updateDisplayWithLetterboxd = (film) => {
+      content.style.display = 'grid';
+      placeholder.style.display = 'none';
+
+      coverArt.innerHTML = generateGenericCover(film.title, film.year);
+      titleEl.innerHTML = film.title;
+      directorEl.innerHTML = 'Letterboxd Diary';
+      metaEl.innerHTML = `${film.year} &middot; Rated ${film.rating}`;
+      quoteEl.innerHTML = `&ldquo;Hope is a good thing, maybe the best of things, and no good thing ever dies.&rdquo;`; // Fallback quote
+      
+      descEl.innerHTML = `This film is part of Sumedh's watched history on Letterboxd. He rated it <strong>${film.rating}</strong>.<br><br>
+        <a class="btn btn--filled" href="https://letterboxd.com/film/${film.slug}/" target="_blank" rel="noopener" style="margin-top: 0.5rem; display: inline-flex;">
+          View on Letterboxd
+        </a>`;
+
+      // Force repaint to re-trigger reveal animation
+      content.style.animation = 'none';
+      content.offsetHeight; // trigger reflow
+      content.style.animation = null;
+    };
+
+    const updateDisplayWithFeatured = (filmKey) => {
       const data = filmData[filmKey];
       if (!data) return;
 
@@ -135,18 +211,48 @@
       quoteEl.innerHTML = data.quote;
       descEl.innerHTML = data.description;
       
-      // Force repaint to re-trigger reveal animation
       content.style.animation = 'none';
-      content.offsetHeight; // trigger reflow
+      content.offsetHeight; 
       content.style.animation = null;
     };
 
+    // Render cards
+    window.letterboxdFilms.forEach(film => {
+      const card = document.createElement('div');
+      card.className = 'grid-item-card';
+      card.setAttribute('data-slug', film.slug);
+      card.setAttribute('tabindex', '0');
+
+      card.innerHTML = `
+        <span class="card-mini-title">${film.title}</span>
+        <div class="card-mini-meta">
+          <span>${film.year}</span>
+          <span class="card-mini-rating">${film.rating}</span>
+        </div>
+      `;
+
+      card.addEventListener('click', () => {
+        const allCards = movieGrid.querySelectorAll('.grid-item-card');
+        allCards.forEach(c => c.classList.remove('selected'));
+        card.classList.add('selected');
+        updateDisplayWithLetterboxd(film);
+      });
+
+      card.addEventListener('focus', () => {
+        card.click();
+      });
+
+      movieGrid.appendChild(card);
+    });
+
+    // Interactivity for shelf spines
+    const spines = document.querySelectorAll('.spine-item');
     spines.forEach(spine => {
       const selectSpine = () => {
         spines.forEach(s => s.classList.remove('selected'));
         spine.classList.add('selected');
         const filmKey = spine.getAttribute('data-film');
-        updateDisplay(filmKey);
+        updateDisplayWithFeatured(filmKey);
       };
 
       spine.addEventListener('click', selectSpine);
@@ -154,10 +260,25 @@
       spine.addEventListener('focus', selectSpine);
     });
 
-    // Auto-select first spine on load (2001)
+    // Auto-select first shelf spine on load
     if (spines.length > 0) {
       spines[0].classList.add('selected');
-      updateDisplay('2001');
+      updateDisplayWithFeatured('2001');
+    }
+
+    // Real-time search
+    const movieSearch = document.getElementById('movie-search');
+    if (movieSearch) {
+      movieSearch.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        const cards = movieGrid.querySelectorAll('.grid-item-card');
+        
+        cards.forEach((card, index) => {
+          const filmObj = window.letterboxdFilms[index];
+          const matches = filmObj.title.toLowerCase().includes(query) || filmObj.year.includes(query);
+          card.style.display = matches ? 'flex' : 'none';
+        });
+      });
     }
   }
 })();
