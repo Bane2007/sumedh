@@ -116,7 +116,7 @@
     const hues = [15, 45, 200, 220, 342]; 
     const hue = hues[Math.abs(hash) % hues.length];
     
-    return `<svg viewBox="0 0 140 200" class="svg-cover">
+    return `<svg viewBox="0 0 140 200" class="svg-cover" style="width:100%; height:100%; display:block;">
       <rect width="140" height="200" fill="hsl(${hue}, 20%, 8%)"/>
       <rect x="5" y="5" width="130" height="190" fill="none" stroke="hsl(${hue}, 22%, 18%)" stroke-width="1"/>
       <foreignObject x="10" y="45" width="120" height="110">
@@ -137,7 +137,7 @@
   };
 
   // Active Category State
-  let currentCategory = 'films'; // 'films' | 'anime' | 'manga'
+  let currentCategory = 'films'; 
 
   // Tab View Navigation
   const btnShelfView = document.getElementById('btn-shelf-view');
@@ -164,7 +164,13 @@
     content.style.display = 'grid';
     placeholder.style.display = 'none';
 
-    coverArt.innerHTML = generateGenericCover(film.title, film.year);
+    // Show actual cover art if available, otherwise show styled fallback SVG
+    if (film.image) {
+      coverArt.innerHTML = `<img src="${film.image}" alt="${film.title}" class="img-cover" style="width: 100%; height: 100%; object-fit: cover; border-radius: 2px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);" onerror="this.outerHTML='${generateGenericCover(film.title, film.year).replace(/'/g, "\\'")}';">`;
+    } else {
+      coverArt.innerHTML = generateGenericCover(film.title, film.year);
+    }
+    
     titleEl.innerHTML = film.title;
     directorEl.innerHTML = 'Letterboxd Diary';
     metaEl.innerHTML = `${film.year} &middot; Rated ${film.rating || 'No Rating'}`;
@@ -186,8 +192,7 @@
     content.style.display = 'grid';
     placeholder.style.display = 'none';
 
-    // Show actual cover art image
-    coverArt.innerHTML = `<img src="${anime.image}" alt="${anime.title}" class="img-cover" style="width: 100%; height: 100%; object-fit: cover; border-radius: 2px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);">`;
+    coverArt.innerHTML = `<img src="${anime.image}" alt="${anime.title}" class="img-cover" style="width: 100%; height: 100%; object-fit: cover; border-radius: 2px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);" onerror="this.outerHTML='${generateGenericCover(anime.title, anime.year).replace(/'/g, "\\'")}';">`;
     titleEl.innerHTML = anime.title;
     directorEl.innerHTML = 'MyAnimeList Entry';
     metaEl.innerHTML = `${anime.year} &middot; Completed &middot; Score: ${anime.score}/10 (${scoreToStars(anime.score)})`;
@@ -213,8 +218,7 @@
     content.style.display = 'grid';
     placeholder.style.display = 'none';
 
-    // Show actual cover art image
-    coverArt.innerHTML = `<img src="${manga.image}" alt="${manga.title}" class="img-cover" style="width: 100%; height: 100%; object-fit: cover; border-radius: 2px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);">`;
+    coverArt.innerHTML = `<img src="${manga.image}" alt="${manga.title}" class="img-cover" style="width: 100%; height: 100%; object-fit: cover; border-radius: 2px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);" onerror="this.outerHTML='${generateGenericCover(manga.title, manga.year).replace(/'/g, "\\'")}';">`;
     titleEl.innerHTML = manga.title;
     directorEl.innerHTML = 'MyAnimeList Entry';
     metaEl.innerHTML = `${manga.year} &middot; Completed &middot; Score: ${manga.score}/10 (${scoreToStars(manga.score)})`;
@@ -330,20 +334,33 @@
       card.className = 'grid-item-card';
       card.setAttribute('tabindex', '0');
 
-      let displayRating = '';
-      if (currentCategory === 'films') {
-        displayRating = item.rating || 'No Rating';
-      } else {
-        displayRating = item.score ? `${item.score}/10` : 'Unrated';
-      }
+      // Create image poster element
+      const img = document.createElement('img');
+      img.className = 'card-poster-img';
+      img.loading = 'lazy';
+      img.alt = item.title;
+      img.src = item.image || '';
+      
+      // Dynamic fallback replacement if CDN image fails
+      img.onerror = () => {
+        const fallback = document.createElement('div');
+        fallback.className = 'card-fallback-svg-container';
+        fallback.style.width = '100%';
+        fallback.style.height = '100%';
+        fallback.innerHTML = generateGenericCover(item.title, item.year);
+        img.replaceWith(fallback);
+      };
 
-      card.innerHTML = `
-        <span class="card-mini-title">${item.title}</span>
-        <div class="card-mini-meta">
-          <span>${item.year}</span>
-          <span class="card-mini-rating">${displayRating}</span>
-        </div>
+      // Create overlay showing title/year on hover
+      const overlay = document.createElement('div');
+      overlay.className = 'card-hover-overlay';
+      overlay.innerHTML = `
+        <span class="card-hover-title">${item.title}</span>
+        <span class="card-hover-year">${item.year}</span>
       `;
+
+      card.appendChild(img);
+      card.appendChild(overlay);
 
       card.addEventListener('click', () => {
         const allCards = movieGrid.querySelectorAll('.grid-item-card');

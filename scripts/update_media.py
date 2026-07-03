@@ -33,7 +33,7 @@ def fetch_letterboxd_films():
                 print(f"Fetching Letterboxd page {page}...")
                 with urllib.request.urlopen(req) as response:
                     content = response.read().decode('utf-8')
-                break # Success, exit retry loop
+                break # Success
             except urllib.error.HTTPError as e:
                 if e.code == 404:
                     print(f"Finished crawling Letterboxd (Page {page} returned 404).")
@@ -74,12 +74,23 @@ def fetch_letterboxd_films():
             rating_match = re.search(rating_pattern, content, re.DOTALL)
             rating = rating_match.group(2).strip() if rating_match else ""
             
+            # Find uid for image URL construction
+            uid_pattern = rf'data-item-slug="{re.escape(slug)}".*?uid&quot;:&quot;film:(\d+)&quot;'
+            uid_match = re.search(uid_pattern, content, re.DOTALL)
+            
+            image_url = ""
+            if uid_match:
+                film_id = uid_match.group(1)
+                path_digits = "/".join(list(film_id))
+                image_url = f"https://a.ltrbxd.com/resized/film-poster/{path_digits}/{film_id}-{slug}-0-150-0-225-crop.jpg"
+            
             if not any(f['slug'] == slug for f in films):
                 films.append({
                     'title': name,
                     'slug': slug,
                     'year': year,
-                    'rating': rating
+                    'rating': rating,
+                    'image': image_url
                 })
                 page_films_count += 1
                 
@@ -183,7 +194,12 @@ if __name__ == "__main__":
     anime = fetch_mal_anime()
     manga = fetch_mal_manga()
     
-    # Save output
+    # Save output JSON as fallback cache
+    films_json_path = os.path.join("assets", "data", "films.json")
+    with open(films_json_path, "w", encoding="utf-8") as f_out:
+        json.dump(films, f_out, indent=2, ensure_ascii=False)
+    
+    # Save output JS
     output_js_path = os.path.join("assets", "data", "media.js")
     os.makedirs(os.path.dirname(output_js_path), exist_ok=True)
     
