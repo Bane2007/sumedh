@@ -16,6 +16,18 @@ headers = {
     'Upgrade-Insecure-Requests': '1'
 }
 
+# --- Helper to clean MAL image URLs ---
+def clean_mal_image_url(url):
+    if not url:
+        return ""
+    # Remove resizing path segment (e.g., /r/192x272)
+    cleaned = re.sub(r'/r/\d+x\d+', '', url)
+    # Remove query string parameters (e.g., ?s=...)
+    cleaned = cleaned.split('?')[0]
+    # Fallback webp to standard jpg format for maximum compatibility
+    cleaned = cleaned.replace('.webp', '.jpg')
+    return cleaned
+
 # --- 1. FETCH LETTERBOXD FILMS ---
 def fetch_letterboxd_films():
     films = []
@@ -148,7 +160,7 @@ def fetch_mal_anime():
                     'url': 'https://myanimelist.net' + item.get('anime_url', ''),
                     'year': year,
                     'score': item.get('score', 0),
-                    'image': item.get('anime_image_path', ''),
+                    'image': clean_mal_image_url(item.get('anime_image_path', '')),
                     'genres': [g['name'] for g in item.get('genres', [])],
                     'episodes': item.get('num_watched_episodes', 0),
                     'updated_at': item.get('updated_at') or item.get('created_at') or 0,
@@ -175,7 +187,7 @@ def fetch_mal_anime():
                     'url': 'https://myanimelist.net' + item.get('anime_url', ''),
                     'year': year,
                     'score': item.get('score', 0),
-                    'image': item.get('anime_image_path', ''),
+                    'image': clean_mal_image_url(item.get('anime_image_path', '')),
                     'genres': [g['name'] for g in item.get('genres', [])],
                     'episodes': item.get('num_watched_episodes', 0),
                     'updated_at': item.get('updated_at') or item.get('created_at') or 0,
@@ -210,7 +222,7 @@ def fetch_mal_manga():
                     'url': 'https://myanimelist.net' + item.get('manga_url', ''),
                     'year': year,
                     'score': item.get('score', 0),
-                    'image': item.get('manga_image_path', ''),
+                    'image': clean_mal_image_url(item.get('manga_image_path', '')),
                     'genres': [g['name'] for g in item.get('genres', [])],
                     'chapters': item.get('num_read_chapters', 0),
                     'volumes': item.get('num_read_volumes', 0),
@@ -238,7 +250,7 @@ def fetch_mal_manga():
                     'url': 'https://myanimelist.net' + item.get('manga_url', ''),
                     'year': year,
                     'score': item.get('score', 0),
-                    'image': item.get('manga_image_path', ''),
+                    'image': clean_mal_image_url(item.get('manga_image_path', '')),
                     'genres': [g['name'] for g in item.get('genres', [])],
                     'chapters': item.get('num_read_chapters', 0),
                     'volumes': item.get('num_read_volumes', 0),

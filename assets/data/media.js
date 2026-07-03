@@ -3237,12 +3237,27 @@ window.mediaDatabase = {
   ],
   "anime": [
     {
+      "title": "Koori no Jouheki",
+      "id": 60852,
+      "url": "https://myanimelist.net/anime/60852/Koori_no_Jouheki",
+      "year": "2026",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/anime/1565/154933.jpg",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "episodes": 14,
+      "updated_at": 1783088681,
+      "status": "completed"
+    },
+    {
       "title": "Re:Zero kara Hajimeru Isekai Seikatsu 2nd Season Part 2",
       "id": 42203,
       "url": "https://myanimelist.net/anime/42203/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_2nd_Season_Part_2",
       "year": "2021",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1724/117421.webp?s=38eacc2d882c1d1484be9c8e98ac7f4f",
+      "image": "https://cdn.myanimelist.net/images/anime/1724/117421.jpg",
       "genres": [
         "Drama",
         "Fantasy",
@@ -3258,7 +3273,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/39587/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_2nd_Season",
       "year": "2020",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1444/108005.webp?s=810b34a1296c605fd18090ad21692df2",
+      "image": "https://cdn.myanimelist.net/images/anime/1444/108005.jpg",
       "genres": [
         "Drama",
         "Fantasy",
@@ -3274,7 +3289,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/56734/Class_de_2-banme_ni_Kawaii_Onnanoko_to_Tomodachi_ni_Natta",
       "year": "2026",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1423/155713.webp?s=531ad2128c8c59adb34bd1343f185300",
+      "image": "https://cdn.myanimelist.net/images/anime/1423/155713.jpg",
       "genres": [
         "Romance"
       ],
@@ -3288,7 +3303,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/38414/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_-_Hyouketsu_no_Kizuna",
       "year": "2019",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1238/104023.webp?s=f3f8341b3366b3cfecc61074644f1584",
+      "image": "https://cdn.myanimelist.net/images/anime/1238/104023.jpg",
       "genres": [
         "Drama",
         "Fantasy",
@@ -3304,7 +3319,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/36286/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_-_Memory_Snow",
       "year": "2018",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1081/95707.webp?s=a44ccc268826f80b1a13ba931b444203",
+      "image": "https://cdn.myanimelist.net/images/anime/1081/95707.jpg",
       "genres": [
         "Fantasy"
       ],
@@ -3318,7 +3333,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/31240/Re_Zero_kara_Hajimeru_Isekai_Seikatsu",
       "year": "2016",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1522/128039.webp?s=e10afb77e19f035c7a7fffd08cbf8fdb",
+      "image": "https://cdn.myanimelist.net/images/anime/1522/128039.jpg",
       "genres": [
         "Drama",
         "Fantasy",
@@ -3334,7 +3349,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/39547/Yahari_Ore_no_Seishun_Love_Comedy_wa_Machigatteiru_Kan",
       "year": "2020",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1958/107912.webp?s=70f3bfdbd1997554fd959fd626a77399",
+      "image": "https://cdn.myanimelist.net/images/anime/1958/107912.jpg",
       "genres": [
         "Comedy",
         "Romance"
@@ -3349,7 +3364,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/50425/Fuufu_Ijou_Koibito_Miman",
       "year": "2022",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1713/126442.webp?s=c262651f71c238eddd700130db00707e",
+      "image": "https://cdn.myanimelist.net/images/anime/1713/126442.jpg",
       "genres": [
         "Romance"
       ],
@@ -3363,7 +3378,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/53065/Sono_Bisque_Doll_wa_Koi_wo_Suru_Season_2",
       "year": "2025",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1024/150787.webp?s=79d92e6de99480e6c8c50b9b54dc636d",
+      "image": "https://cdn.myanimelist.net/images/anime/1024/150787.jpg",
       "genres": [
         "Romance"
       ],
@@ -3377,7 +3392,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/23847/Yahari_Ore_no_Seishun_Love_Comedy_wa_Machigatteiru_Zoku",
       "year": "2015",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/11/75376.webp?s=1c10176fa62ede966bc41b2a7bf03619",
+      "image": "https://cdn.myanimelist.net/images/anime/11/75376.jpg",
       "genres": [
         "Comedy",
         "Romance"
@@ -3392,7 +3407,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/57779/Dorohedoro_Season_2",
       "year": "2026",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1603/155354.webp?s=bda550cb838e3484a3c8c5715e1a91a9",
+      "image": "https://cdn.myanimelist.net/images/anime/1603/155354.jpg",
       "genres": [
         "Action",
         "Comedy",
@@ -3409,7 +3424,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/14813/Yahari_Ore_no_Seishun_Love_Comedy_wa_Machigatteiru",
       "year": "2013",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1786/120117.webp?s=c522bd9ed71bacf81d1ec071911c3e34",
+      "image": "https://cdn.myanimelist.net/images/anime/1786/120117.jpg",
       "genres": [
         "Comedy",
         "Romance"
@@ -3424,7 +3439,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/35968/Wotaku_ni_Koi_wa_Muzukashii",
       "year": "2018",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1864/93518.webp?s=296e1c766042374ca0d3f8c1e491178b",
+      "image": "https://cdn.myanimelist.net/images/anime/1864/93518.jpg",
       "genres": [
         "Comedy",
         "Romance"
@@ -3434,27 +3449,12 @@ window.mediaDatabase = {
       "status": "completed"
     },
     {
-      "title": "Koori no Jouheki",
-      "id": 60852,
-      "url": "https://myanimelist.net/anime/60852/Koori_no_Jouheki",
-      "year": "2026",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1565/154933.webp?s=4cad74232f73414d36a506755a75876b",
-      "genres": [
-        "Drama",
-        "Romance"
-      ],
-      "episodes": 0,
-      "updated_at": 1775204386,
-      "status": "watching"
-    },
-    {
       "title": "Jigokuraku 2nd Season",
       "id": 55825,
       "url": "https://myanimelist.net/anime/55825/Jigokuraku_2nd_Season",
       "year": "2026",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1772/154456.webp?s=01686f2ff85ef0a704efb445706ccd20",
+      "image": "https://cdn.myanimelist.net/images/anime/1772/154456.jpg",
       "genres": [
         "Action",
         "Adventure",
@@ -3470,7 +3470,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/60371/Seihantai_na_Kimi_to_Boku",
       "year": "2026",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1140/154457.webp?s=64201ad2a766eedcb4d601aed7509cfe",
+      "image": "https://cdn.myanimelist.net/images/anime/1140/154457.jpg",
       "genres": [
         "Comedy",
         "Romance"
@@ -3485,7 +3485,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/59978/Sousou_no_Frieren_2nd_Season",
       "year": "2026",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1921/154528.webp?s=0e2a18c619aa459f2486350fe5d4549e",
+      "image": "https://cdn.myanimelist.net/images/anime/1921/154528.jpg",
       "genres": [
         "Adventure",
         "Drama",
@@ -3501,7 +3501,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/52991/Sousou_no_Frieren",
       "year": "2023",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1015/138006.webp?s=5da2fe67c30f0a8d254954ca4a145a5d",
+      "image": "https://cdn.myanimelist.net/images/anime/1015/138006.jpg",
       "genres": [
         "Adventure",
         "Award Winning",
@@ -3518,7 +3518,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/57658/Jujutsu_Kaisen__Shimetsu_Kaiyuu_-_Zenpen",
       "year": "2026",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1659/154920.webp?s=986417ab1e78ba6adec4042beaeaec07",
+      "image": "https://cdn.myanimelist.net/images/anime/1659/154920.jpg",
       "genres": [
         "Action",
         "Supernatural"
@@ -3533,7 +3533,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/60058/Oshi_no_Ko_3rd_Season",
       "year": "2026",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1979/153329.webp?s=f9d0a15689043ab01327149c837b7111",
+      "image": "https://cdn.myanimelist.net/images/anime/1979/153329.jpg",
       "genres": [
         "Drama"
       ],
@@ -3547,7 +3547,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/61469/Steel_Ball_Run__JoJo_no_Kimyou_na_Bouken",
       "year": "2026",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1448/154111.webp?s=a5d873b37bba64b748df76af90e05524",
+      "image": "https://cdn.myanimelist.net/images/anime/1448/154111.jpg",
       "genres": [
         "Action",
         "Adventure",
@@ -3564,7 +3564,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/61903/Kaguya-sama_wa_Kokurasetai__Otona_e_no_Kaidan",
       "year": "2025",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1112/150697.webp?s=00f625f14760ba0ee36c7db4769d5325",
+      "image": "https://cdn.myanimelist.net/images/anime/1112/150697.jpg",
       "genres": [
         "Comedy",
         "Romance"
@@ -3579,7 +3579,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/50392/Mato_Seihei_no_Slave",
       "year": "2024",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1114/140805.webp?s=fc02fb9e29c2620beb5fce6380f56cd4",
+      "image": "https://cdn.myanimelist.net/images/anime/1114/140805.jpg",
       "genres": [
         "Action",
         "Fantasy",
@@ -3595,7 +3595,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/21/One_Piece",
       "year": "1999",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1244/138851.webp?s=f9b2530cb118566baae61a4051ba8067",
+      "image": "https://cdn.myanimelist.net/images/anime/1244/138851.jpg",
       "genres": [
         "Action",
         "Adventure",
@@ -3611,7 +3611,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/48736/Sono_Bisque_Doll_wa_Koi_wo_Suru",
       "year": "2022",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1179/119897.webp?s=e7371a6118a2ff6fab439f0227fc26c7",
+      "image": "https://cdn.myanimelist.net/images/anime/1179/119897.jpg",
       "genres": [
         "Romance"
       ],
@@ -3625,7 +3625,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/59192/Kimetsu_no_Yaiba_Movie_1__Mugenjou-hen_-_Akaza_Sairai",
       "year": "2025",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1681/148216.webp?s=fcb56e6eb4b6fbae0b77b445e1c09ef8",
+      "image": "https://cdn.myanimelist.net/images/anime/1681/148216.jpg",
       "genres": [
         "Action",
         "Award Winning",
@@ -3641,7 +3641,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/42310/Cyberpunk__Edgerunners",
       "year": "2022",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1818/126435.webp?s=36e148447c769b48bbee2a19e3060f32",
+      "image": "https://cdn.myanimelist.net/images/anime/1818/126435.jpg",
       "genres": [
         "Action",
         "Sci-Fi"
@@ -3656,7 +3656,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/58514/Kusuriya_no_Hitorigoto_2nd_Season",
       "year": "2025",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1025/147458.webp?s=f0ebe6e8e545959330138c57b727fa4a",
+      "image": "https://cdn.myanimelist.net/images/anime/1025/147458.jpg",
       "genres": [
         "Drama",
         "Mystery"
@@ -3671,7 +3671,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/31043/Boku_dake_ga_Inai_Machi",
       "year": "2016",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/10/77957.webp?s=73b31bbd0867ef7ec4792f93d47578ad",
+      "image": "https://cdn.myanimelist.net/images/anime/10/77957.jpg",
       "genres": [
         "Mystery",
         "Suspense"
@@ -3686,7 +3686,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/53393/Tengoku_Daimakyou",
       "year": "2023",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1121/133132.webp?s=0c6065952408d44b882a5195034c1185",
+      "image": "https://cdn.myanimelist.net/images/anime/1121/133132.jpg",
       "genres": [
         "Adventure",
         "Mystery",
@@ -3702,7 +3702,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/57616/Kimi_no_Koto_ga_Daidaidaidaidaisuki_na_100-nin_no_Kanojo_2nd_Season",
       "year": "2025",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1093/145470.webp?s=1df0220339234d202f1429ed812268fd",
+      "image": "https://cdn.myanimelist.net/images/anime/1093/145470.jpg",
       "genres": [
         "Comedy",
         "Romance"
@@ -3717,7 +3717,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/8675/Seitokai_Yakuindomo",
       "year": "2010",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/4/75550.webp?s=5d79d797a0b2dccb13eda01906febf42",
+      "image": "https://cdn.myanimelist.net/images/anime/4/75550.jpg",
       "genres": [
         "Comedy"
       ],
@@ -3731,7 +3731,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/58125/Look_Back",
       "year": "2024",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1716/142633.webp?s=30d0fcaac367ea5ada00365fc99a7eb7",
+      "image": "https://cdn.myanimelist.net/images/anime/1716/142633.jpg",
       "genres": [
         "Award Winning",
         "Drama"
@@ -3746,7 +3746,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/57635/Kamonohashi_Ron_no_Kindan_Suiri_2nd_Season",
       "year": "2024",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1917/144334.webp?s=3c981d0c565e53d96de95978f4922e57",
+      "image": "https://cdn.myanimelist.net/images/anime/1917/144334.jpg",
       "genres": [
         "Comedy",
         "Mystery"
@@ -3761,7 +3761,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/820/Ginga_Eiyuu_Densetsu",
       "year": "1988",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1976/142016.webp?s=ae2849dc2d1a24f5cb5b300b160a60c0",
+      "image": "https://cdn.myanimelist.net/images/anime/1976/142016.jpg",
       "genres": [
         "Drama",
         "Sci-Fi"
@@ -3776,7 +3776,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/57334/Dandadan",
       "year": "2024",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1584/143719.webp?s=c244e15123db18b7c10cb83720df89c8",
+      "image": "https://cdn.myanimelist.net/images/anime/1584/143719.jpg",
       "genres": [
         "Action",
         "Comedy",
@@ -3792,7 +3792,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/55791/Oshi_no_Ko_2nd_Season",
       "year": "2024",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1006/143302.webp?s=4e843b05492237b030755009fcdaf006",
+      "image": "https://cdn.myanimelist.net/images/anime/1006/143302.jpg",
       "genres": [
         "Drama"
       ],
@@ -3806,7 +3806,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/57567/Shy_2nd_Season",
       "year": "2024",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1518/143558.webp?s=8f7a45ae46c6b3adef4958e85d024b92",
+      "image": "https://cdn.myanimelist.net/images/anime/1518/143558.jpg",
       "genres": [
         "Action",
         "Drama"
@@ -3821,7 +3821,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/58883/Dead_Dead_Demons_Dededede_Destruction_ONA",
       "year": "2024",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1528/143212.webp?s=16b5f85a96c7c92e4e40f3178ffac2b7",
+      "image": "https://cdn.myanimelist.net/images/anime/1528/143212.jpg",
       "genres": [
         "Drama",
         "Sci-Fi"
@@ -3836,7 +3836,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/58426/Shikanoko_Nokonoko_Koshitantan",
       "year": "2024",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1094/143324.webp?s=c986b241d5bd6f3b56990739941203a8",
+      "image": "https://cdn.myanimelist.net/images/anime/1094/143324.jpg",
       "genres": [
         "Comedy"
       ],
@@ -3850,7 +3850,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/45576/Mushoku_Tensei__Isekai_Ittara_Honki_Dasu_Part_2",
       "year": "2021",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1028/117777.webp?s=d0e17c4db20e1084e21cebfcb9efe15a",
+      "image": "https://cdn.myanimelist.net/images/anime/1028/117777.jpg",
       "genres": [
         "Adventure",
         "Drama",
@@ -3867,7 +3867,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/39535/Mushoku_Tensei__Isekai_Ittara_Honki_Dasu",
       "year": "2021",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1530/117776.webp?s=6403254d57128f460abacbbccb8cf176",
+      "image": "https://cdn.myanimelist.net/images/anime/1530/117776.jpg",
       "genres": [
         "Adventure",
         "Drama",
@@ -3884,7 +3884,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/51179/Mushoku_Tensei_II__Isekai_Ittara_Honki_Dasu",
       "year": "2023",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1898/138005.webp?s=498ae275f08999ba15d38c323de65921",
+      "image": "https://cdn.myanimelist.net/images/anime/1898/138005.jpg",
       "genres": [
         "Adventure",
         "Drama",
@@ -3901,7 +3901,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/55888/Mushoku_Tensei_II__Isekai_Ittara_Honki_Dasu_Part_2",
       "year": "2024",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1876/141251.webp?s=a614c6d0f52d3379fca31d5a44f8a2db",
+      "image": "https://cdn.myanimelist.net/images/anime/1876/141251.jpg",
       "genres": [
         "Adventure",
         "Drama",
@@ -3918,7 +3918,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/55701/Kimetsu_no_Yaiba__Hashira_Geiko-hen",
       "year": "2024",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1565/142711.webp?s=57beb82f7e25fca68b6241b0b8bb778d",
+      "image": "https://cdn.myanimelist.net/images/anime/1565/142711.jpg",
       "genres": [
         "Action",
         "Supernatural"
@@ -3933,7 +3933,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/52588/Kaijuu_8-gou",
       "year": "2024",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1370/140362.webp?s=dd589f260b013a0f965e404644b3f8d1",
+      "image": "https://cdn.myanimelist.net/images/anime/1370/140362.jpg",
       "genres": [
         "Action",
         "Fantasy",
@@ -3949,7 +3949,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/54199/Kaii_to_Otome_to_Kamikakushi",
       "year": "2024",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1670/141688.webp?s=c47f16b8cbcb5055bdabdd4ddd178f73",
+      "image": "https://cdn.myanimelist.net/images/anime/1670/141688.jpg",
       "genres": [
         "Mystery",
         "Supernatural",
@@ -3965,7 +3965,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/578/Hotaru_no_Haka",
       "year": "1988",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1485/141208.webp?s=80ffe3ccc666101f061fe39fb60b9c11",
+      "image": "https://cdn.myanimelist.net/images/anime/1485/141208.jpg",
       "genres": [
         "Drama"
       ],
@@ -3979,7 +3979,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/53356/Shuumatsu_Train_Doko_e_Iku",
       "year": "2024",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1224/137451.webp?s=066a45fbbbb55cdacdc88dc4761fe6cf",
+      "image": "https://cdn.myanimelist.net/images/anime/1224/137451.jpg",
       "genres": [
         "Adventure"
       ],
@@ -3993,7 +3993,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/49458/Kono_Subarashii_Sekai_ni_Shukufuku_wo_3",
       "year": "2024",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1758/141268.webp?s=9759e9a641acd0dc51cbea03252a188c",
+      "image": "https://cdn.myanimelist.net/images/anime/1758/141268.jpg",
       "genres": [
         "Adventure",
         "Comedy",
@@ -4009,7 +4009,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/56230/Jiisan_Baasan_Wakagaeru",
       "year": "2024",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1676/141714.webp?s=24f71d5275dc8d76c45cde3b1de47614",
+      "image": "https://cdn.myanimelist.net/images/anime/1676/141714.jpg",
       "genres": [
         "Comedy",
         "Romance",
@@ -4025,7 +4025,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/52701/Dungeon_Meshi",
       "year": "2024",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1711/142478.webp?s=2d561ea1ea12442b115c8b9ab0de1e3d",
+      "image": "https://cdn.myanimelist.net/images/anime/1711/142478.jpg",
       "genres": [
         "Adventure",
         "Comedy",
@@ -4042,7 +4042,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/36098/Kimi_no_Suizou_wo_Tabetai",
       "year": "2018",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1768/93291.webp?s=ff72134258ec6a6f97f79c8976b4f668",
+      "image": "https://cdn.myanimelist.net/images/anime/1768/93291.jpg",
       "genres": [
         "Drama",
         "Romance"
@@ -4057,7 +4057,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/52299/Ore_dake_Level_Up_na_Ken",
       "year": "2024",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1801/142390.webp?s=c5ddb4ac2be1ec515c668147eb8f5338",
+      "image": "https://cdn.myanimelist.net/images/anime/1801/142390.jpg",
       "genres": [
         "Action",
         "Adventure",
@@ -4073,7 +4073,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/54492/Kusuriya_no_Hitorigoto",
       "year": "2023",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1708/138033.webp?s=5a70975a3879460b279fd702ccdacd3e",
+      "image": "https://cdn.myanimelist.net/images/anime/1708/138033.jpg",
       "genres": [
         "Drama",
         "Mystery"
@@ -4088,7 +4088,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/52741/Undead_Unluck",
       "year": "2023",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1136/138410.webp?s=c36a74c197c52c439e4d5e5e8a9d31cc",
+      "image": "https://cdn.myanimelist.net/images/anime/1136/138410.jpg",
       "genres": [
         "Action",
         "Comedy"
@@ -4103,7 +4103,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/53879/Kamonohashi_Ron_no_Kindan_Suiri",
       "year": "2023",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1799/137123.webp?s=a53b860905ecab494d0ebc55d370f827",
+      "image": "https://cdn.myanimelist.net/images/anime/1799/137123.jpg",
       "genres": [
         "Comedy",
         "Mystery"
@@ -4118,7 +4118,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/50586/Migi_to_Dali",
       "year": "2023",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1845/134817.webp?s=62296e4803a5fc0a9af308ca3e18788d",
+      "image": "https://cdn.myanimelist.net/images/anime/1845/134817.jpg",
       "genres": [
         "Comedy",
         "Mystery",
@@ -4134,7 +4134,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/21557/Omoide_no_Marnie",
       "year": "2014",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/7/64293.webp?s=3a819a1953357ec5701121f467293fe1",
+      "image": "https://cdn.myanimelist.net/images/anime/7/64293.jpg",
       "genres": [
         "Drama",
         "Mystery",
@@ -4150,7 +4150,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/19365/Samurai_Flamenco",
       "year": "2013",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/11/54319.webp?s=46760e267ab1eea5e92f08a0cdc4a47f",
+      "image": "https://cdn.myanimelist.net/images/anime/11/54319.jpg",
       "genres": [
         "Action",
         "Comedy"
@@ -4165,7 +4165,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/18679/Kill_la_Kill",
       "year": "2013",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1464/111943.webp?s=c37691ed84caaed9320724387cfce2f5",
+      "image": "https://cdn.myanimelist.net/images/anime/1464/111943.jpg",
       "genres": [
         "Action",
         "Comedy",
@@ -4182,7 +4182,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/40056/Deca-Dence",
       "year": "2020",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1787/132772.webp?s=ae98717bd80ef3de2106236f2987ee23",
+      "image": "https://cdn.myanimelist.net/images/anime/1787/132772.jpg",
       "genres": [
         "Action",
         "Adventure",
@@ -4198,7 +4198,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/43690/Tenkuu_Shinpan",
       "year": "2021",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1547/117947.webp?s=f4ddede4837d891b94e733955b46239b",
+      "image": "https://cdn.myanimelist.net/images/anime/1547/117947.jpg",
       "genres": [
         "Action",
         "Horror",
@@ -4215,7 +4215,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/50709/Lycoris_Recoil",
       "year": "2022",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1261/127311.webp?s=8e5c5ea4b7ee3535f2683d905c95f3e0",
+      "image": "https://cdn.myanimelist.net/images/anime/1261/127311.jpg",
       "genres": [
         "Action"
       ],
@@ -4229,7 +4229,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/51009/Jujutsu_Kaisen_2nd_Season",
       "year": "2023",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1792/138022.webp?s=ce02954e1b1cfbdb6cef29192e0ef4bf",
+      "image": "https://cdn.myanimelist.net/images/anime/1792/138022.jpg",
       "genres": [
         "Action",
         "Supernatural"
@@ -4244,7 +4244,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/54112/Zom_100__Zombie_ni_Naru_made_ni_Shitai_100_no_Koto",
       "year": "2023",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1384/136408.webp?s=dcb52b5cff44b95e5fdef63a6e79c9d5",
+      "image": "https://cdn.myanimelist.net/images/anime/1384/136408.jpg",
       "genres": [
         "Comedy",
         "Suspense"
@@ -4259,7 +4259,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/54714/Kimi_no_Koto_ga_Daidaidaidaidaisuki_na_100-nin_no_Kanojo",
       "year": "2023",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1812/136764.webp?s=d8c0d4f7d7ba368077d01b696b02ee9b",
+      "image": "https://cdn.myanimelist.net/images/anime/1812/136764.jpg",
       "genres": [
         "Comedy",
         "Romance"
@@ -4274,7 +4274,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/54362/Hametsu_no_Oukoku",
       "year": "2023",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1610/138189.webp?s=4528e4d8821508bec7c289046a8abae7",
+      "image": "https://cdn.myanimelist.net/images/anime/1610/138189.jpg",
       "genres": [
         "Action",
         "Drama",
@@ -4291,7 +4291,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/2904/Code_Geass__Hangyaku_no_Lelouch_R2",
       "year": "2008",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1088/135089.webp?s=65e4aeaf2c05d8c0f54f2d9094d506a3",
+      "image": "https://cdn.myanimelist.net/images/anime/1088/135089.jpg",
       "genres": [
         "Award Winning",
         "Drama",
@@ -4307,7 +4307,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/1575/Code_Geass__Hangyaku_no_Lelouch",
       "year": "2006",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1032/135088.webp?s=5fae385753f4653a2856cb5161adbfb3",
+      "image": "https://cdn.myanimelist.net/images/anime/1032/135088.jpg",
       "genres": [
         "Award Winning",
         "Drama",
@@ -4323,7 +4323,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/53237/Shy",
       "year": "2023",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1114/136742.webp?s=71885a6a5f8f4bb1e37ad7d2749a75b4",
+      "image": "https://cdn.myanimelist.net/images/anime/1114/136742.jpg",
       "genres": [
         "Action",
         "Drama"
@@ -4338,7 +4338,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/35760/Shingeki_no_Kyojin_Season_3",
       "year": "2018",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1173/92110.webp?s=8d285d9265f62ba755c9368e036e7324",
+      "image": "https://cdn.myanimelist.net/images/anime/1173/92110.jpg",
       "genres": [
         "Action",
         "Drama",
@@ -4354,7 +4354,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/51535/Shingeki_no_Kyojin__The_Final_Season_-_Kanketsu-hen",
       "year": "2023",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1279/131078.webp?s=02ee7d67319256c936a2ad09f4b29a95",
+      "image": "https://cdn.myanimelist.net/images/anime/1279/131078.jpg",
       "genres": [
         "Action",
         "Drama",
@@ -4370,7 +4370,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/48583/Shingeki_no_Kyojin__The_Final_Season_Part_2",
       "year": "2022",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1948/120625.webp?s=d92df3de301c6e30532acbc9194b1a13",
+      "image": "https://cdn.myanimelist.net/images/anime/1948/120625.jpg",
       "genres": [
         "Action",
         "Drama",
@@ -4386,7 +4386,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/16782/Kotonoha_no_Niwa",
       "year": "2013",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1597/112995.webp?s=00598b3a1c2584ef3172598112ab05a0",
+      "image": "https://cdn.myanimelist.net/images/anime/1597/112995.jpg",
       "genres": [
         "Award Winning",
         "Drama",
@@ -4402,7 +4402,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/32281/Kimi_no_Na_wa",
       "year": "2016",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/5/87048.webp?s=9b98886f1f5ac1d02f63b0b81a6287e1",
+      "image": "https://cdn.myanimelist.net/images/anime/5/87048.jpg",
       "genres": [
         "Award Winning",
         "Drama"
@@ -4417,7 +4417,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/48569/86_Part_2",
       "year": "2021",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1321/117508.webp?s=bc3a1228d58464d0de85c641c4c96a07",
+      "image": "https://cdn.myanimelist.net/images/anime/1321/117508.jpg",
       "genres": [
         "Drama",
         "Sci-Fi"
@@ -4432,7 +4432,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/51403/Renai_Flops",
       "year": "2022",
       "score": 5,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1620/130589.webp?s=a33069efd27c261bdc65855e7215c9bd",
+      "image": "https://cdn.myanimelist.net/images/anime/1620/130589.jpg",
       "genres": [
         "Comedy",
         "Romance",
@@ -4449,7 +4449,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/22199/Akame_ga_Kill",
       "year": "2014",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1429/95946.webp?s=f0093ccd3de2559ad8595f1f062fa777",
+      "image": "https://cdn.myanimelist.net/images/anime/1429/95946.jpg",
       "genres": [
         "Action",
         "Fantasy"
@@ -4464,7 +4464,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/51916/Dekiru_Neko_wa_Kyou_mo_Yuuutsu",
       "year": "2023",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1074/136720.webp?s=a4d58dab3db0a48079e3c73b946a1b43",
+      "image": "https://cdn.myanimelist.net/images/anime/1074/136720.jpg",
       "genres": [
         "Comedy"
       ],
@@ -4478,7 +4478,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/42897/Horimiya",
       "year": "2021",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1695/111486.webp?s=c4df99e863d929103bf02c6819f8b1a7",
+      "image": "https://cdn.myanimelist.net/images/anime/1695/111486.jpg",
       "genres": [
         "Romance"
       ],
@@ -4492,7 +4492,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/47778/Kimetsu_no_Yaiba__Yuukaku-hen",
       "year": "2021",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1908/120036.webp?s=42f3479f06ab0db293d0210398030472",
+      "image": "https://cdn.myanimelist.net/images/anime/1908/120036.jpg",
       "genres": [
         "Action",
         "Supernatural"
@@ -4507,7 +4507,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/54790/Undead_Girl_Murder_Farce",
       "year": "2023",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1946/136661.webp?s=0a3db8c602c98fe42377659b5670962f",
+      "image": "https://cdn.myanimelist.net/images/anime/1946/136661.jpg",
       "genres": [
         "Fantasy",
         "Mystery"
@@ -4522,7 +4522,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/9253/Steins_Gate",
       "year": "2011",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1935/127974.webp?s=a9b464be9ead06d9ca31c6b73ca2edcd",
+      "image": "https://cdn.myanimelist.net/images/anime/1935/127974.jpg",
       "genres": [
         "Drama",
         "Sci-Fi",
@@ -4538,7 +4538,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/50172/Mob_Psycho_100_III",
       "year": "2022",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1228/125011.webp?s=9819cb8b3fad90121823fa3815a8e8f3",
+      "image": "https://cdn.myanimelist.net/images/anime/1228/125011.jpg",
       "genres": [
         "Action",
         "Comedy",
@@ -4554,7 +4554,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/54856/Horimiya__Piece",
       "year": "2023",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1007/136277.webp?s=c807fe5adff37782f0688049253379ad",
+      "image": "https://cdn.myanimelist.net/images/anime/1007/136277.jpg",
       "genres": [
         "Romance"
       ],
@@ -4568,7 +4568,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/35994/Satsuriku_no_Tenshi",
       "year": "2018",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1862/95624.webp?s=dcdacf70c63a4a3f5307556b5d7b2efb",
+      "image": "https://cdn.myanimelist.net/images/anime/1862/95624.jpg",
       "genres": [
         "Adventure",
         "Horror",
@@ -4584,7 +4584,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/30/Shinseiki_Evangelion",
       "year": "1995",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1314/108941.webp?s=b06b523bb0a9b04ba2e4255733faa7a1",
+      "image": "https://cdn.myanimelist.net/images/anime/1314/108941.jpg",
       "genres": [
         "Avant Garde",
         "Award Winning",
@@ -4602,7 +4602,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/29786/Shimoneta_to_Iu_Gainen_ga_Sonzai_Shinai_Taikutsu_na_Sekai",
       "year": "2015",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/6/75106.webp?s=0d233fda059d1958a454761b7446a671",
+      "image": "https://cdn.myanimelist.net/images/anime/6/75106.jpg",
       "genres": [
         "Comedy",
         "Ecchi"
@@ -4617,7 +4617,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/32188/Steins_Gate__Kyoukaimenjou_no_Missing_Link_-_Divide_By_Zero",
       "year": "2015",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/7/77324.webp?s=11f9fcb1048817082e6bd9b6a0e1e41c",
+      "image": "https://cdn.myanimelist.net/images/anime/7/77324.jpg",
       "genres": [
         "Sci-Fi",
         "Suspense"
@@ -4632,7 +4632,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/51019/Kimetsu_no_Yaiba__Katanakaji_no_Sato-hen",
       "year": "2023",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1765/135099.webp?s=56693a6f1995bc28fcdd734e32f2b19b",
+      "image": "https://cdn.myanimelist.net/images/anime/1765/135099.jpg",
       "genres": [
         "Action",
         "Supernatural"
@@ -4647,7 +4647,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/40456/Kimetsu_no_Yaiba_Movie__Mugen_Ressha-hen",
       "year": "2020",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1704/106947.webp?s=91d04e2788f6149205c86e7424158431",
+      "image": "https://cdn.myanimelist.net/images/anime/1704/106947.jpg",
       "genres": [
         "Action",
         "Supernatural"
@@ -4662,7 +4662,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/41457/86",
       "year": "2021",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1987/117507.webp?s=d836fc149fc0663724ae4e3566bf36c1",
+      "image": "https://cdn.myanimelist.net/images/anime/1987/117507.jpg",
       "genres": [
         "Drama",
         "Sci-Fi"
@@ -4677,7 +4677,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/52034/Oshi_no_Ko",
       "year": "2023",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1812/134736.webp?s=71031dbc9e1a72a5b8b51d16797f3c11",
+      "image": "https://cdn.myanimelist.net/images/anime/1812/134736.jpg",
       "genres": [
         "Award Winning",
         "Drama"
@@ -4692,7 +4692,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/51958/Kono_Subarashii_Sekai_ni_Bakuen_wo",
       "year": "2023",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1626/135844.webp?s=60a4d12afd0ab238c0b707b168ec0267",
+      "image": "https://cdn.myanimelist.net/images/anime/1626/135844.jpg",
       "genres": [
         "Comedy",
         "Fantasy"
@@ -4707,7 +4707,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/14719/JoJo_no_Kimyou_na_Bouken_TV",
       "year": "2012",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/3/40409.webp?s=976f5eb08882e675f5182492471f9643",
+      "image": "https://cdn.myanimelist.net/images/anime/3/40409.jpg",
       "genres": [
         "Action",
         "Adventure",
@@ -4723,7 +4723,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/41084/Made_in_Abyss__Retsujitsu_no_Ougonkyou",
       "year": "2022",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1864/122519.webp?s=ee9e582c644ffe9f5438a70a25a2f45c",
+      "image": "https://cdn.myanimelist.net/images/anime/1864/122519.jpg",
       "genres": [
         "Adventure",
         "Drama",
@@ -4741,7 +4741,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/50594/Suzume_no_Tojimari",
       "year": "2022",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1598/128450.webp?s=3dce29ecbbefda57f7a4109ef8a0dd47",
+      "image": "https://cdn.myanimelist.net/images/anime/1598/128450.jpg",
       "genres": [
         "Adventure",
         "Supernatural"
@@ -4756,7 +4756,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/28223/Death_Parade",
       "year": "2015",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/5/71553.webp?s=9ff22a629b680f6051e9aceb312e88d6",
+      "image": "https://cdn.myanimelist.net/images/anime/5/71553.jpg",
       "genres": [
         "Drama",
         "Fantasy",
@@ -4772,7 +4772,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/46569/Jigokuraku",
       "year": "2023",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1075/131925.webp?s=342717058379f1b42309e27530747b33",
+      "image": "https://cdn.myanimelist.net/images/anime/1075/131925.jpg",
       "genres": [
         "Action",
         "Adventure",
@@ -4788,7 +4788,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/49387/Vinland_Saga_Season_2",
       "year": "2023",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1170/124312.webp?s=5e460661daec0bc181734fc1c27cda84",
+      "image": "https://cdn.myanimelist.net/images/anime/1170/124312.jpg",
       "genres": [
         "Action",
         "Adventure",
@@ -4804,7 +4804,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/1/Cowboy_Bebop",
       "year": "1998",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/4/19644.webp?s=831d007067a43b7877108a4f52f8293d",
+      "image": "https://cdn.myanimelist.net/images/anime/4/19644.jpg",
       "genres": [
         "Action",
         "Award Winning",
@@ -4820,7 +4820,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/36862/Made_in_Abyss_Movie_3__Fukaki_Tamashii_no_Reimei",
       "year": "2020",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1803/117183.webp?s=33c55a2e3ffedd3b848f0ff9112cff93",
+      "image": "https://cdn.myanimelist.net/images/anime/1803/117183.jpg",
       "genres": [
         "Adventure",
         "Drama",
@@ -4838,7 +4838,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/34599/Made_in_Abyss",
       "year": "2017",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/6/86733.webp?s=27b20b0a541ac540280bd51adaf240a0",
+      "image": "https://cdn.myanimelist.net/images/anime/6/86733.jpg",
       "genres": [
         "Adventure",
         "Drama",
@@ -4856,7 +4856,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/199/Sen_to_Chihiro_no_Kamikakushi",
       "year": "2001",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/6/79597.webp?s=c4c202aabe122887a67494f47979ac92",
+      "image": "https://cdn.myanimelist.net/images/anime/6/79597.jpg",
       "genres": [
         "Adventure",
         "Award Winning",
@@ -4872,7 +4872,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/23273/Shigatsu_wa_Kimi_no_Uso",
       "year": "2014",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1405/143284.webp?s=5d646964d0552edb9e8e83bff8e5ba51",
+      "image": "https://cdn.myanimelist.net/images/anime/1405/143284.jpg",
       "genres": [
         "Drama",
         "Romance"
@@ -4887,7 +4887,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/52198/Kaguya-sama_wa_Kokurasetai__First_Kiss_wa_Owaranai",
       "year": "2022",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1670/130060.webp?s=a24c9776a432b28c4ae117989d8487d7",
+      "image": "https://cdn.myanimelist.net/images/anime/1670/130060.jpg",
       "genres": [
         "Comedy",
         "Drama",
@@ -4903,7 +4903,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/268/Golden_Boy",
       "year": "1995",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/3/62867.webp?s=1c316f3a2f15b960556b2b9136dfecd2",
+      "image": "https://cdn.myanimelist.net/images/anime/3/62867.jpg",
       "genres": [
         "Adventure",
         "Comedy",
@@ -4919,7 +4919,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/41168/Nakitai_Watashi_wa_Neko_wo_Kaburu",
       "year": "2020",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1045/106389.webp?s=7c8140813aa9cb41c2d9463190d3d7b8",
+      "image": "https://cdn.myanimelist.net/images/anime/1045/106389.jpg",
       "genres": [
         "Award Winning",
         "Drama",
@@ -4936,7 +4936,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/32937/Kono_Subarashii_Sekai_ni_Shukufuku_wo_2",
       "year": "2017",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/2/83188.webp?s=06117f4cae3021d7636365f28feec754",
+      "image": "https://cdn.myanimelist.net/images/anime/2/83188.jpg",
       "genres": [
         "Adventure",
         "Comedy",
@@ -4952,7 +4952,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/30831/Kono_Subarashii_Sekai_ni_Shukufuku_wo",
       "year": "2016",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1895/142748.webp?s=38979fd7579613f9005dd87a2b0de3f2",
+      "image": "https://cdn.myanimelist.net/images/anime/1895/142748.jpg",
       "genres": [
         "Adventure",
         "Comedy",
@@ -4968,7 +4968,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/34498/Uchiage_Hanabi_Shita_kara_Miru_ka_Yoko_kara_Miru_ka",
       "year": "2017",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/10/86521.webp?s=6a2b1326982be8aa987f504758273a7c",
+      "image": "https://cdn.myanimelist.net/images/anime/10/86521.jpg",
       "genres": [
         "Romance",
         "Sci-Fi"
@@ -4983,7 +4983,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/38594/Kimi_to_Nami_ni_Noretara",
       "year": "2019",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1893/99701.webp?s=208c27b76c98a094a0ca02f084b156e6",
+      "image": "https://cdn.myanimelist.net/images/anime/1893/99701.jpg",
       "genres": [
         "Drama",
         "Romance",
@@ -4999,7 +4999,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/38329/Seishun_Buta_Yarou_wa_Yumemiru_Shoujo_no_Yume_wo_Minai",
       "year": "2019",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1613/102179.webp?s=144ac52e4594e5bc0fa698d27dd8c860",
+      "image": "https://cdn.myanimelist.net/images/anime/1613/102179.jpg",
       "genres": [
         "Drama",
         "Romance",
@@ -5015,7 +5015,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/34134/One_Punch_Man_2nd_Season",
       "year": "2019",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1247/122044.webp?s=ac7d8cbaa351d65b1888bb24da5a1e45",
+      "image": "https://cdn.myanimelist.net/images/anime/1247/122044.jpg",
       "genres": [
         "Action",
         "Comedy"
@@ -5030,7 +5030,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/1535/Death_Note",
       "year": "2006",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1079/138100.webp?s=559f9e8ecc6c224a4aa8042be6127400",
+      "image": "https://cdn.myanimelist.net/images/anime/1079/138100.jpg",
       "genres": [
         "Supernatural",
         "Suspense"
@@ -5045,7 +5045,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/37450/Seishun_Buta_Yarou_wa_Bunny_Girl_Senpai_no_Yume_wo_Minai",
       "year": "2018",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1301/93586.webp?s=547ab090c3303e8216945234df3cd0cd",
+      "image": "https://cdn.myanimelist.net/images/anime/1301/93586.jpg",
       "genres": [
         "Drama",
         "Romance",
@@ -5061,7 +5061,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/15227/Kono_Sekai_no_Katasumi_ni",
       "year": "2016",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/2/87704.webp?s=a2d1b001ce10d62e516f4db63349f0b4",
+      "image": "https://cdn.myanimelist.net/images/anime/2/87704.jpg",
       "genres": [
         "Award Winning",
         "Drama"
@@ -5076,7 +5076,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/437/Perfect_Blue",
       "year": "1998",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1254/134212.webp?s=8f559b7a157bca9923a4b79c1d7ae7e3",
+      "image": "https://cdn.myanimelist.net/images/anime/1254/134212.jpg",
       "genres": [
         "Avant Garde",
         "Award Winning",
@@ -5094,7 +5094,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/20899/JoJo_no_Kimyou_na_Bouken_Part_3__Stardust_Crusaders",
       "year": "2014",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/11/55267.webp?s=0fe3601b8a61f6126748844cb0046491",
+      "image": "https://cdn.myanimelist.net/images/anime/11/55267.jpg",
       "genres": [
         "Action",
         "Adventure"
@@ -5109,7 +5109,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/37999/Kaguya-sama_wa_Kokurasetai__Tensai-tachi_no_Renai_Zunousen",
       "year": "2019",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1295/106551.webp?s=dd18da27b33f817632a6d57282c3ba16",
+      "image": "https://cdn.myanimelist.net/images/anime/1295/106551.jpg",
       "genres": [
         "Comedy",
         "Romance"
@@ -5124,7 +5124,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/339/Serial_Experiments_Lain",
       "year": "1998",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1718/91550.webp?s=cd69b6ec499b18305135678fa8c20237",
+      "image": "https://cdn.myanimelist.net/images/anime/1718/91550.jpg",
       "genres": [
         "Avant Garde",
         "Award Winning",
@@ -5144,7 +5144,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/1210/NHK_ni_Youkoso",
       "year": "2006",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/3/52675.webp?s=b31a1cfa3bb005194f3b7df8f64d4914",
+      "image": "https://cdn.myanimelist.net/images/anime/3/52675.jpg",
       "genres": [
         "Comedy",
         "Drama",
@@ -5160,7 +5160,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/35120/Devilman__Crybaby",
       "year": "2018",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/2/89973.webp?s=45cbdcc3e2230f815afde5600f2b2d48",
+      "image": "https://cdn.myanimelist.net/images/anime/2/89973.jpg",
       "genres": [
         "Action",
         "Avant Garde",
@@ -5177,7 +5177,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/34626/Kono_Subarashii_Sekai_ni_Shukufuku_wo_2__Kono_Subarashii_Geijutsu_ni_Shukufuku_wo",
       "year": "2017",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1115/98517.webp?s=8b3382de69cfd8205138dce3eb3bd8c2",
+      "image": "https://cdn.myanimelist.net/images/anime/1115/98517.jpg",
       "genres": [
         "Adventure",
         "Comedy",
@@ -5193,7 +5193,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/1943/Paprika",
       "year": "2006",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1929/93629.webp?s=8daef662059455fa845443af5a481585",
+      "image": "https://cdn.myanimelist.net/images/anime/1929/93629.jpg",
       "genres": [
         "Avant Garde",
         "Award Winning",
@@ -5211,7 +5211,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/38668/Dorohedoro",
       "year": "2020",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1230/119278.webp?s=8288f2a921c5555b8b06699b5681bd71",
+      "image": "https://cdn.myanimelist.net/images/anime/1230/119278.jpg",
       "genres": [
         "Action",
         "Comedy",
@@ -5228,7 +5228,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/38249/Saiki_Kusuo_no_Ψ-nan__Kanketsu-hen",
       "year": "2018",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1159/95661.webp?s=7ebf5385791c834a1bdf5fbe2d4bf0bb",
+      "image": "https://cdn.myanimelist.net/images/anime/1159/95661.jpg",
       "genres": [
         "Comedy"
       ],
@@ -5242,7 +5242,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/16664/Kaguya-hime_no_Monogatari",
       "year": "2013",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1935/93606.webp?s=0be5fb03cd2a707aa58dac29c4c31b41",
+      "image": "https://cdn.myanimelist.net/images/anime/1935/93606.jpg",
       "genres": [
         "Award Winning",
         "Fantasy"
@@ -5257,7 +5257,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/37520/Dororo",
       "year": "2019",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1879/100467.webp?s=8b7d98ec2c9e1af5fc9b0bd54b772648",
+      "image": "https://cdn.myanimelist.net/images/anime/1879/100467.jpg",
       "genres": [
         "Action",
         "Adventure",
@@ -5273,7 +5273,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/38826/Tenki_no_Ko",
       "year": "2019",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1880/101146.webp?s=6bc78ac466daac10bbb199ca3d180fc2",
+      "image": "https://cdn.myanimelist.net/images/anime/1880/101146.jpg",
       "genres": [
         "Award Winning",
         "Drama",
@@ -5290,7 +5290,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/10408/Hotarubi_no_Mori_e",
       "year": "2011",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1599/112267.webp?s=907f15944056708ed00e9edb069a12e2",
+      "image": "https://cdn.myanimelist.net/images/anime/1599/112267.jpg",
       "genres": [
         "Award Winning",
         "Drama",
@@ -5307,7 +5307,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/37095/Violet_Evergarden__Kitto_Ai_wo_Shiru_Hi_ga_Kuru_no_Darou",
       "year": "2018",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/9/89993.webp?s=1cc3cf6178131c4c2f6a7ba7e6b025c8",
+      "image": "https://cdn.myanimelist.net/images/anime/9/89993.jpg",
       "genres": [
         "Drama"
       ],
@@ -5321,7 +5321,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/22535/Kiseijuu__Sei_no_Kakuritsu",
       "year": "2014",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/3/73178.webp?s=4b4a74169cc95d79ae263d63da87dec7",
+      "image": "https://cdn.myanimelist.net/images/anime/3/73178.jpg",
       "genres": [
         "Action",
         "Horror",
@@ -5338,7 +5338,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/39741/Violet_Evergarden_Gaiden__Eien_to_Jidou_Shuki_Ningyou",
       "year": "2019",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1667/112943.webp?s=4e5b03e1478c1971ba3194c36a5c22f9",
+      "image": "https://cdn.myanimelist.net/images/anime/1667/112943.jpg",
       "genres": [
         "Drama"
       ],
@@ -5352,7 +5352,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/40787/Josee_to_Tora_to_Sakana-tachi",
       "year": "2020",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1714/108892.webp?s=7a5e3c80cf5d9e1205d986974c514d3f",
+      "image": "https://cdn.myanimelist.net/images/anime/1714/108892.jpg",
       "genres": [
         "Drama",
         "Romance"
@@ -5367,7 +5367,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/34612/Saiki_Kusuo_no_Ψ-nan_2",
       "year": "2018",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1961/91383.webp?s=68d84d5048f076c97f205b2b515bf2c7",
+      "image": "https://cdn.myanimelist.net/images/anime/1961/91383.jpg",
       "genres": [
         "Comedy"
       ],
@@ -5381,7 +5381,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/33255/Saiki_Kusuo_no_Ψ-nan",
       "year": "2016",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1973/142750.webp?s=a2448c6550e658b02ed401faa94f9821",
+      "image": "https://cdn.myanimelist.net/images/anime/1973/142750.jpg",
       "genres": [
         "Comedy"
       ],
@@ -5395,7 +5395,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/37105/Grand_Blue",
       "year": "2018",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1302/94882.webp?s=49dac9ecb74077ccedbbc1b2d9b1ba1e",
+      "image": "https://cdn.myanimelist.net/images/anime/1302/94882.jpg",
       "genres": [
         "Comedy"
       ],
@@ -5409,7 +5409,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/26055/JoJo_no_Kimyou_na_Bouken_Part_3__Stardust_Crusaders_-_Egypt-hen",
       "year": "2015",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/11/75045.webp?s=d990f57df579e0cc7178f4a6c539a219",
+      "image": "https://cdn.myanimelist.net/images/anime/11/75045.jpg",
       "genres": [
         "Action",
         "Adventure"
@@ -5424,7 +5424,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/11577/Steins_Gate_Movie__Fuka_Ryouiki_no_Déjà_vu",
       "year": "2013",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1611/112806.webp?s=c59a6dd1a6682de12cbfa6072646e140",
+      "image": "https://cdn.myanimelist.net/images/anime/1611/112806.jpg",
       "genres": [
         "Drama",
         "Sci-Fi"
@@ -5439,7 +5439,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/38040/Kono_Subarashii_Sekai_ni_Shukufuku_wo_Movie__Kurenai_Densetsu",
       "year": "2019",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1638/119321.webp?s=1ce10045df4adb2e579ea4fbb6de3df2",
+      "image": "https://cdn.myanimelist.net/images/anime/1638/119321.jpg",
       "genres": [
         "Adventure",
         "Comedy",
@@ -5455,7 +5455,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/48561/Jujutsu_Kaisen_0_Movie",
       "year": "2021",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1121/119044.webp?s=b244d8ea0a1bbb493fb08063379421a8",
+      "image": "https://cdn.myanimelist.net/images/anime/1121/119044.jpg",
       "genres": [
         "Action",
         "Supernatural"
@@ -5470,7 +5470,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/32182/Mob_Psycho_100",
       "year": "2016",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/8/80356.webp?s=5853f0bb731c4e7ceb19d52be7ac480c",
+      "image": "https://cdn.myanimelist.net/images/anime/8/80356.jpg",
       "genres": [
         "Action",
         "Comedy",
@@ -5486,7 +5486,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/30276/One_Punch_Man",
       "year": "2015",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/12/76049.webp?s=3a6c696f2db8bbd8862c9d5928608e2d",
+      "image": "https://cdn.myanimelist.net/images/anime/12/76049.jpg",
       "genres": [
         "Action",
         "Comedy"
@@ -5501,7 +5501,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/38000/Kimetsu_no_Yaiba",
       "year": "2019",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1286/99889.webp?s=ebf7111941928e3b31b60bd6bb2e591a",
+      "image": "https://cdn.myanimelist.net/images/anime/1286/99889.jpg",
       "genres": [
         "Action",
         "Award Winning",
@@ -5517,7 +5517,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/30484/Steins_Gate_0",
       "year": "2018",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1375/93521.webp?s=b4bff517eade29ef1be74d3e2884e68d",
+      "image": "https://cdn.myanimelist.net/images/anime/1375/93521.jpg",
       "genres": [
         "Drama",
         "Sci-Fi",
@@ -5533,7 +5533,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/32/Shinseiki_Evangelion_Movie__Air_Magokoro_wo_Kimi_ni",
       "year": "1997",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1404/98182.webp?s=27694b3d47cb31d52971445774f4d75c",
+      "image": "https://cdn.myanimelist.net/images/anime/1404/98182.jpg",
       "genres": [
         "Avant Garde",
         "Drama",
@@ -5550,7 +5550,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/12355/Ookami_Kodomo_no_Ame_to_Yuki",
       "year": "2012",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/9/35721.webp?s=423f202d091f5146e3c0f06bf4ff5f4d",
+      "image": "https://cdn.myanimelist.net/images/anime/9/35721.jpg",
       "genres": [
         "Award Winning",
         "Slice of Life",
@@ -5566,7 +5566,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/44511/Chainsaw_Man",
       "year": "2022",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1806/126216.webp?s=3a636c2578f49cc009d4e4a805a762a3",
+      "image": "https://cdn.myanimelist.net/images/anime/1806/126216.jpg",
       "genres": [
         "Action",
         "Fantasy"
@@ -5581,7 +5581,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/40591/Kaguya-sama_wa_Kokurasetai_Tensai-tachi_no_Renai_Zunousen",
       "year": "2020",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1764/106659.webp?s=87d7854cae12f2d1d7f026143056d3bb",
+      "image": "https://cdn.myanimelist.net/images/anime/1764/106659.jpg",
       "genres": [
         "Comedy",
         "Romance"
@@ -5596,7 +5596,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/40748/Jujutsu_Kaisen",
       "year": "2020",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1171/109222.webp?s=a3db6f34717cdab65676c6c7c4b9f4ed",
+      "image": "https://cdn.myanimelist.net/images/anime/1171/109222.jpg",
       "genres": [
         "Action",
         "Award Winning",
@@ -5612,7 +5612,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/50265/Spy_x_Family",
       "year": "2022",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1441/122795.webp?s=98c5633d975f0492750c26eb940488b8",
+      "image": "https://cdn.myanimelist.net/images/anime/1441/122795.jpg",
       "genres": [
         "Action",
         "Award Winning",
@@ -5628,7 +5628,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/431/Howl_no_Ugoku_Shiro",
       "year": "2004",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1470/138723.webp?s=83c3ccef480ba149a6e578327343c4d2",
+      "image": "https://cdn.myanimelist.net/images/anime/1470/138723.jpg",
       "genres": [
         "Adventure",
         "Award Winning",
@@ -5646,7 +5646,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/33352/Violet_Evergarden",
       "year": "2018",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1795/95088.webp?s=ef6a8f39e9c495159e8e1906088000f9",
+      "image": "https://cdn.myanimelist.net/images/anime/1795/95088.jpg",
       "genres": [
         "Drama"
       ],
@@ -5660,7 +5660,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/46102/Odd_Taxi",
       "year": "2021",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1981/113348.webp?s=321aaa0f3b4010bf68bdf39a7896c47b",
+      "image": "https://cdn.myanimelist.net/images/anime/1981/113348.jpg",
       "genres": [
         "Award Winning",
         "Drama",
@@ -5677,7 +5677,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/37521/Vinland_Saga",
       "year": "2019",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1500/103005.webp?s=57aadd25396eda2d407e95add880ba37",
+      "image": "https://cdn.myanimelist.net/images/anime/1500/103005.jpg",
       "genres": [
         "Action",
         "Adventure",
@@ -5693,7 +5693,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/37510/Mob_Psycho_100_II",
       "year": "2019",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1918/96303.webp?s=f7fb405dbcab27d8af3bb9ee9fa400e1",
+      "image": "https://cdn.myanimelist.net/images/anime/1918/96303.jpg",
       "genres": [
         "Action",
         "Comedy",
@@ -5709,7 +5709,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/47917/Bocchi_the_Rock",
       "year": "2022",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1448/127956.webp?s=6232ebd3e1611b1d7f8f8e0e6f627a49",
+      "image": "https://cdn.myanimelist.net/images/anime/1448/127956.jpg",
       "genres": [
         "Comedy"
       ],
@@ -5723,7 +5723,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/37987/Violet_Evergarden_Movie",
       "year": "2020",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1825/110716.webp?s=35443db41ef0f435f8894cce354bcac5",
+      "image": "https://cdn.myanimelist.net/images/anime/1825/110716.jpg",
       "genres": [
         "Award Winning",
         "Drama"
@@ -5738,7 +5738,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/28851/Koe_no_Katachi",
       "year": "2016",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1122/96435.webp?s=f8162c1735ac8075df9ba9974c934b24",
+      "image": "https://cdn.myanimelist.net/images/anime/1122/96435.jpg",
       "genres": [
         "Award Winning",
         "Drama"
@@ -5753,7 +5753,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/11061/Hunter_x_Hunter_2011",
       "year": "2011",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1337/99013.webp?s=5f45f5d929858059b9239068ea8f818c",
+      "image": "https://cdn.myanimelist.net/images/anime/1337/99013.jpg",
       "genres": [
         "Action",
         "Adventure",
@@ -5769,7 +5769,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/43608/Kaguya-sama_wa_Kokurasetai__Ultra_Romantic",
       "year": "2022",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1160/122627.webp?s=7a46339343cb0837bda229693a2e80d8",
+      "image": "https://cdn.myanimelist.net/images/anime/1160/122627.jpg",
       "genres": [
         "Comedy",
         "Romance"
@@ -5784,7 +5784,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2",
       "year": "2019",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1517/100633.webp?s=c86bc6403a5a7dfb64b1c659978f392c",
+      "image": "https://cdn.myanimelist.net/images/anime/1517/100633.jpg",
       "genres": [
         "Action",
         "Drama",
@@ -5800,7 +5800,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/40028/Shingeki_no_Kyojin__The_Final_Season",
       "year": "2020",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1000/110531.webp?s=2e910b2f12ba643a513abbf504ee8b72",
+      "image": "https://cdn.myanimelist.net/images/anime/1000/110531.jpg",
       "genres": [
         "Action",
         "Drama",
@@ -5816,7 +5816,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/25777/Shingeki_no_Kyojin_Season_2",
       "year": "2017",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/4/84177.webp?s=ff0cbb05e8044332e6f21e8345637856",
+      "image": "https://cdn.myanimelist.net/images/anime/4/84177.jpg",
       "genres": [
         "Action",
         "Drama",
@@ -5832,7 +5832,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/16498/Shingeki_no_Kyojin",
       "year": "2013",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/10/47347.webp?s=a4e6359cbd72eaa5b8bf1149cdbee051",
+      "image": "https://cdn.myanimelist.net/images/anime/10/47347.jpg",
       "genres": [
         "Action",
         "Award Winning",
@@ -5849,7 +5849,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/19/Monster",
       "year": "2004",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/10/18793.webp?s=03808bdb7a318054d54bac1ffcbc507b",
+      "image": "https://cdn.myanimelist.net/images/anime/10/18793.jpg",
       "genres": [
         "Drama",
         "Mystery",
@@ -5865,7 +5865,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/53273/JoJo_no_Kimyou_na_Bouken_Part_6__Stone_Ocean_Part_3",
       "year": "2022",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1233/128920.webp?s=ebaa4861bfec28407db19d7296e9b2ba",
+      "image": "https://cdn.myanimelist.net/images/anime/1233/128920.jpg",
       "genres": [
         "Action",
         "Adventure"
@@ -5880,7 +5880,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/51367/JoJo_no_Kimyou_na_Bouken_Part_6__Stone_Ocean_Part_2",
       "year": "2022",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1051/121959.webp?s=3130807e36cb72b3858a47df098a2f4c",
+      "image": "https://cdn.myanimelist.net/images/anime/1051/121959.jpg",
       "genres": [
         "Action",
         "Adventure"
@@ -5895,7 +5895,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/48661/JoJo_no_Kimyou_na_Bouken_Part_6__Stone_Ocean",
       "year": "2021",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1896/119844.webp?s=4199f0fd0cbd68e9cb2b287da79460ea",
+      "image": "https://cdn.myanimelist.net/images/anime/1896/119844.jpg",
       "genres": [
         "Action",
         "Adventure"
@@ -5910,7 +5910,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/37991/JoJo_no_Kimyou_na_Bouken_Part_5__Ougon_no_Kaze",
       "year": "2018",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1882/94989.webp?s=52e0a4ed8312fec5841d9df1b2283331",
+      "image": "https://cdn.myanimelist.net/images/anime/1882/94989.jpg",
       "genres": [
         "Action",
         "Adventure"
@@ -5925,7 +5925,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/31933/JoJo_no_Kimyou_na_Bouken_Part_4__Diamond_wa_Kudakenai",
       "year": "2016",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/3/79156.webp?s=5e3c7105527113060bb3e5f233e4c12c",
+      "image": "https://cdn.myanimelist.net/images/anime/3/79156.jpg",
       "genres": [
         "Action",
         "Adventure"
@@ -5942,7 +5942,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/160303/Koori_no_Jouheki",
       "year": "2020",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/296537.webp?s=cd2ae430c909632118c1a03c8f434e13",
+      "image": "https://cdn.myanimelist.net/images/manga/3/296537.jpg",
       "genres": [
         "Drama",
         "Romance"
@@ -5958,7 +5958,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/192247/Sangeki",
       "year": "2026",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/342987.webp?s=b91122639ac638dcf2750b3a67dcb469",
+      "image": "https://cdn.myanimelist.net/images/manga/1/342987.jpg",
       "genres": [
         "Drama",
         "Mystery"
@@ -5974,7 +5974,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/188409/Haimiya-senpai_wa_Kowakute_Kawaii",
       "year": "2025",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/341234.webp?s=52c335ee5bec81f0615180548bd3cf66",
+      "image": "https://cdn.myanimelist.net/images/manga/3/341234.jpg",
       "genres": [
         "Comedy",
         "Romance"
@@ -5990,7 +5990,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/186597/Jujutsu_Kaisen_Modulo",
       "year": "2025",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/339595.webp?s=e22e449a7c158fa1bb23c420d08bce92",
+      "image": "https://cdn.myanimelist.net/images/manga/2/339595.jpg",
       "genres": [
         "Action",
         "Sci-Fi",
@@ -6007,7 +6007,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/50217/Kamisama_ga_Uso_wo_Tsuku",
       "year": "2013",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/143365.webp?s=bc4f1d73830b3833e4e87c02b250f1be",
+      "image": "https://cdn.myanimelist.net/images/manga/1/143365.jpg",
       "genres": [
         "Drama",
         "Romance"
@@ -6023,7 +6023,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/44489/Houseki_no_Kuni",
       "year": "2012",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/115443.webp?s=4c56d9e5c24846805e6a3d6e2848c2ea",
+      "image": "https://cdn.myanimelist.net/images/manga/1/115443.jpg",
       "genres": [
         "Action",
         "Drama",
@@ -6040,7 +6040,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/140333/Ano_Ko_no_Kodomo",
       "year": "2021",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/250274.webp?s=42fda66c9433ae86d0321c5aed1c8205",
+      "image": "https://cdn.myanimelist.net/images/manga/1/250274.jpg",
       "genres": [
         "Award Winning",
         "Drama"
@@ -6056,7 +6056,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/189516/Moriagaranai_Date",
       "year": "2024",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/338790.webp?s=0c07696d5b86498b48fa865cb054f510",
+      "image": "https://cdn.myanimelist.net/images/manga/1/338790.jpg",
       "genres": [
         "Comedy",
         "Romance"
@@ -6072,7 +6072,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/24705/Aku_no_Hana",
       "year": "2009",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/188918.webp?s=d086c5e09193cf294d6ce4d202f7096a",
+      "image": "https://cdn.myanimelist.net/images/manga/2/188918.jpg",
       "genres": [
         "Drama",
         "Romance"
@@ -6088,7 +6088,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/17353/Umibe_no_Onnanoko",
       "year": "2009",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/87179.webp?s=9d47fde5184fb87451ebe7d3765b3abc",
+      "image": "https://cdn.myanimelist.net/images/manga/3/87179.jpg",
       "genres": [
         "Drama",
         "Erotica"
@@ -6104,7 +6104,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/103648/Shi_ni_Aruki",
       "year": "2016",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/198188.webp?s=edef7ffc69a8f02b1b609c5872d60e22",
+      "image": "https://cdn.myanimelist.net/images/manga/3/198188.jpg",
       "genres": [
         "Horror",
         "Mystery"
@@ -6120,7 +6120,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/105875/Okuru_Kotoba",
       "year": "2017",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/202996.webp?s=f7f269ad456f4da1149e6cede8466b62",
+      "image": "https://cdn.myanimelist.net/images/manga/1/202996.jpg",
       "genres": [
         "Mystery",
         "Supernatural"
@@ -6136,7 +6136,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/56509/Saltiness",
       "year": "2012",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/98303.webp?s=43b37c7c573d41ba353256b9ffa1f1e2",
+      "image": "https://cdn.myanimelist.net/images/manga/1/98303.jpg",
       "genres": [],
       "chapters": 44,
       "volumes": 4,
@@ -6149,7 +6149,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/125717/Okaeri_Alice",
       "year": "2020",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/235399.webp?s=c0e2bce40e2ad07f246524123062e7b5",
+      "image": "https://cdn.myanimelist.net/images/manga/2/235399.jpg",
       "genres": [
         "Drama",
         "Romance"
@@ -6165,7 +6165,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/171826/Akari",
       "year": "2022",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/305712.webp?s=9306d11951af4aeba4a2f37349fb6968",
+      "image": "https://cdn.myanimelist.net/images/manga/3/305712.jpg",
       "genres": [
         "Drama"
       ],
@@ -6180,7 +6180,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/173120/Tsumi_to_Batsu_no_Spica",
       "year": "2024",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/314702.webp?s=c426b33132c3fec9d4efdc10c6888a59",
+      "image": "https://cdn.myanimelist.net/images/manga/2/314702.jpg",
       "genres": [
         "Drama",
         "Suspense"
@@ -6196,7 +6196,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/7375/Kokou_no_Hito",
       "year": "2007",
       "score": 10,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/324690.webp?s=5b99261e5ae9b5f1b0a35e8db324bc31",
+      "image": "https://cdn.myanimelist.net/images/manga/1/324690.jpg",
       "genres": [
         "Award Winning",
         "Drama",
@@ -6213,7 +6213,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/1541/Confession",
       "year": "1998",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/13085.webp?s=f47592b1ee9ea497cfe3bf2e0db71318",
+      "image": "https://cdn.myanimelist.net/images/manga/3/13085.jpg",
       "genres": [
         "Drama",
         "Suspense"
@@ -6229,7 +6229,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/1238/Ressentiment",
       "year": "2003",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/52573.webp?s=09cb4cd221f403ccc3007da8276b7a67",
+      "image": "https://cdn.myanimelist.net/images/manga/2/52573.jpg",
       "genres": [
         "Comedy",
         "Sci-Fi",
@@ -6246,7 +6246,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/19790/Wanitokagegisu",
       "year": "2006",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/213017.webp?s=c528e25f120155e89a323f105dfda688",
+      "image": "https://cdn.myanimelist.net/images/manga/1/213017.jpg",
       "genres": [
         "Comedy",
         "Slice of Life"
@@ -6262,7 +6262,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/128620/Kushami__Urasawa_Naoki_Tanpenshuu",
       "year": "1995",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/232632.webp?s=38a7bd46f78ee309b062565b6c72f94a",
+      "image": "https://cdn.myanimelist.net/images/manga/2/232632.jpg",
       "genres": [
         "Action",
         "Comedy",
@@ -6281,7 +6281,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/158356/Isshou_Senkin",
       "year": "2023",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/289698.webp?s=a614c4a6c8347331f35bd76bae111fe2",
+      "image": "https://cdn.myanimelist.net/images/manga/1/289698.jpg",
       "genres": [
         "Action"
       ],
@@ -6296,7 +6296,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/72467/Shoujo_Shuumatsu_Ryokou",
       "year": "2014",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/185918.webp?s=685fe40ef476fa5432fdcdb56515a0b1",
+      "image": "https://cdn.myanimelist.net/images/manga/1/185918.jpg",
       "genres": [
         "Adventure",
         "Award Winning",
@@ -6313,7 +6313,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/138673/Look_Back",
       "year": "2021",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/249833.webp?s=a71fdd8306d85202ea919106f964be04",
+      "image": "https://cdn.myanimelist.net/images/manga/3/249833.jpg",
       "genres": [
         "Drama"
       ],
@@ -6328,7 +6328,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/123812/My_Broken_Mariko",
       "year": "2019",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/226196.webp?s=796c22ea457fbcdabd9e1d8b97c70845",
+      "image": "https://cdn.myanimelist.net/images/manga/3/226196.jpg",
       "genres": [
         "Drama"
       ],
@@ -6343,7 +6343,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/49865/Ajin",
       "year": "2012",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/307700.webp?s=135d2c34356fa664cf4ddaba60410d7e",
+      "image": "https://cdn.myanimelist.net/images/manga/3/307700.jpg",
       "genres": [
         "Action",
         "Horror",
@@ -6361,7 +6361,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/104/Yotsuba_to",
       "year": "2003",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/5/259524.webp?s=cfa2a650801e7bd667c4dfe3b76f7441",
+      "image": "https://cdn.myanimelist.net/images/manga/5/259524.jpg",
       "genres": [
         "Award Winning",
         "Comedy",
@@ -6378,7 +6378,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/169067/Centuria",
       "year": "2024",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/305548.webp?s=a4e19fca9fccf057e140280f181b212f",
+      "image": "https://cdn.myanimelist.net/images/manga/1/305548.jpg",
       "genres": [
         "Action",
         "Adventure",
@@ -6396,7 +6396,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/53/Yuu☆Yuu☆Hakusho",
       "year": "1990",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/250027.webp?s=2930af78e372d00d65c5eb2c90c44e63",
+      "image": "https://cdn.myanimelist.net/images/manga/3/250027.jpg",
       "genres": [
         "Action",
         "Award Winning",
@@ -6415,7 +6415,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/157874/Renai_Daikou",
       "year": "2023",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/292236.webp?s=0366b39686168088d04d4dc3ee0b6ff8",
+      "image": "https://cdn.myanimelist.net/images/manga/3/292236.jpg",
       "genres": [
         "Comedy",
         "Romance"
@@ -6431,7 +6431,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/142423/Watashi_ga_15-sai_dewa_Nakunattemo",
       "year": "2021",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/253221.webp?s=48a4fe7de36d147681f0f9e4ba4ed11e",
+      "image": "https://cdn.myanimelist.net/images/manga/1/253221.jpg",
       "genres": [
         "Drama"
       ],
@@ -6446,7 +6446,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/106609/Ningen_Shikkaku",
       "year": "2017",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/260361.webp?s=484f6db8ffe52247f4fef91138d3fa4a",
+      "image": "https://cdn.myanimelist.net/images/manga/2/260361.jpg",
       "genres": [
         "Drama"
       ],
@@ -6461,7 +6461,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/127907/Kaijuu_8-gou",
       "year": "2020",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/252929.webp?s=a4ca59aef1a8d4fe5fbe57170af39a8f",
+      "image": "https://cdn.myanimelist.net/images/manga/3/252929.jpg",
       "genres": [
         "Action",
         "Fantasy",
@@ -6478,7 +6478,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/1479/Blue_Heaven",
       "year": "2002",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/264112.webp?s=c41c9eed8f5123a71f93ed94a80eeb3d",
+      "image": "https://cdn.myanimelist.net/images/manga/2/264112.jpg",
       "genres": [
         "Action"
       ],
@@ -6493,7 +6493,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/148054/Ruri_Dragon",
       "year": "2022",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/269401.webp?s=1519bc103623a8ef6eb92afee8599cd4",
+      "image": "https://cdn.myanimelist.net/images/manga/2/269401.jpg",
       "genres": [
         "Slice of Life",
         "Supernatural"
@@ -6509,7 +6509,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/28303/Hyouryuu_Net_Cafe",
       "year": "2009",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/45421.webp?s=6345753db144a6e4a947b6659f26b0c2",
+      "image": "https://cdn.myanimelist.net/images/manga/2/45421.jpg",
       "genres": [
         "Action",
         "Mystery",
@@ -6527,7 +6527,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/70345/Grand_Blue",
       "year": "2014",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/166124.webp?s=86d5bfc63c84f7971b5930fc6ca811e2",
+      "image": "https://cdn.myanimelist.net/images/manga/2/166124.jpg",
       "genres": [
         "Comedy"
       ],
@@ -6542,7 +6542,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/166632/Otona_ni_Narenai_Bokura_wa",
       "year": "2024",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/305561.webp?s=96cb88911bc6dbeca267f8ddde65ea05",
+      "image": "https://cdn.myanimelist.net/images/manga/1/305561.jpg",
       "genres": [
         "Romance"
       ],
@@ -6557,7 +6557,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/114417/Uzaki-chan_wa_Asobitai",
       "year": "2017",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/271526.webp?s=2381c488af729a2dcdf00802d0b29865",
+      "image": "https://cdn.myanimelist.net/images/manga/1/271526.jpg",
       "genres": [
         "Comedy",
         "Ecchi"
@@ -6573,7 +6573,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/123956/Undead_Unluck",
       "year": "2020",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/289700.webp?s=96b6bd82dafa201459ac13a0180e65b2",
+      "image": "https://cdn.myanimelist.net/images/manga/2/289700.jpg",
       "genres": [
         "Action",
         "Supernatural"
@@ -6589,7 +6589,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/123681/Kimi_no_Koto_ga_Daidaidaidaidaisuki_na_100-nin_no_Kanojo",
       "year": "2019",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/293055.webp?s=e333ef9fb897320186ac6912b73837ad",
+      "image": "https://cdn.myanimelist.net/images/manga/1/293055.jpg",
       "genres": [
         "Comedy",
         "Romance"
@@ -6605,7 +6605,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/120367/Futari_Ashita_mo_Sorenari_ni",
       "year": "2019",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/228699.webp?s=e4039840c6b3c4bcc28150b94a9d9ea7",
+      "image": "https://cdn.myanimelist.net/images/manga/2/228699.jpg",
       "genres": [
         "Comedy",
         "Romance"
@@ -6621,7 +6621,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/149/Blame",
       "year": "1997",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/174389.webp?s=a888e13d0462f9214c3e5edc2d1a8c4c",
+      "image": "https://cdn.myanimelist.net/images/manga/1/174389.jpg",
       "genres": [
         "Action",
         "Drama",
@@ -6639,7 +6639,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/8967/Onanie_Master_Kurosawa",
       "year": "2007",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/212092.webp?s=d89d11024526b10861ae3d08c2b7383b",
+      "image": "https://cdn.myanimelist.net/images/manga/3/212092.jpg",
       "genres": [
         "Drama"
       ],
@@ -6654,7 +6654,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/140604/Nee_Nee_Nene-san",
       "year": "2021",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/250547.webp?s=58fa4fc1f33246f3e6609cb3e7b6cbfe",
+      "image": "https://cdn.myanimelist.net/images/manga/1/250547.jpg",
       "genres": [
         "Drama",
         "Gourmet",
@@ -6671,7 +6671,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/70801/Dead_Dead_Demons_Dededede_Destruction",
       "year": "2014",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/142079.webp?s=f2d02388730af20c0e37e84548ce69f1",
+      "image": "https://cdn.myanimelist.net/images/manga/3/142079.jpg",
       "genres": [
         "Award Winning",
         "Drama",
@@ -6688,7 +6688,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/116880/Mato_Seihei_no_Slave",
       "year": "2019",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/260475.webp?s=058082beadb0b6fdac12e21aa1a052b7",
+      "image": "https://cdn.myanimelist.net/images/manga/3/260475.jpg",
       "genres": [
         "Action",
         "Fantasy",
@@ -6705,7 +6705,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/135496/Dandadan",
       "year": "2021",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/248746.webp?s=c05d731cd5678b89712715da412a5438",
+      "image": "https://cdn.myanimelist.net/images/manga/2/248746.jpg",
       "genres": [
         "Action",
         "Comedy",
@@ -6722,7 +6722,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/98270/Fire_Punch",
       "year": "2016",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/180430.webp?s=e9f76dd96aa10b44aef07b4c0696200b",
+      "image": "https://cdn.myanimelist.net/images/manga/2/180430.jpg",
       "genres": [
         "Action",
         "Mystery",
@@ -6739,7 +6739,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/108948/Kaitai_Zanuff",
       "year": "2012",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/220444.webp?s=c263f4e9be9dcc4cec7f8749134657bd",
+      "image": "https://cdn.myanimelist.net/images/manga/3/220444.jpg",
       "genres": [
         "Horror"
       ],
@@ -6754,7 +6754,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/150374/Kowareta_Bokura_no_Senryaku_Renai",
       "year": "2022",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/266603.webp?s=d2cfecd736c67d291c8062db092f999f",
+      "image": "https://cdn.myanimelist.net/images/manga/3/266603.jpg",
       "genres": [
         "Romance"
       ],
@@ -6769,7 +6769,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/162295/Soshite_Watashi_wa_Kou_Itta",
       "year": "2023",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/287949.webp?s=4418af24bdf91c58868b03518589e81c",
+      "image": "https://cdn.myanimelist.net/images/manga/3/287949.jpg",
       "genres": [
         "Drama",
         "Suspense"
@@ -6785,7 +6785,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/22518/Usotsuki_Mii-kun_to_Kowareta_Maa-chan__Totteoki_no_Uso",
       "year": "2010",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/165163.webp?s=2e275e5d0f56ec564101337b6ac2fb85",
+      "image": "https://cdn.myanimelist.net/images/manga/2/165163.jpg",
       "genres": [
         "Mystery",
         "Romance"
@@ -6801,7 +6801,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/132614/Isshou_Suki_tte_Yutta_jan",
       "year": "2018",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/239489.webp?s=dc5d8f141c894bbf071d45b82a7b2f1a",
+      "image": "https://cdn.myanimelist.net/images/manga/3/239489.jpg",
       "genres": [
         "Drama",
         "Romance"
@@ -6817,7 +6817,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/94416/The_Girl_from_Class",
       "year": "2013",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/213482.webp?s=128bdd00fbe21bc937148a00f9197728",
+      "image": "https://cdn.myanimelist.net/images/manga/1/213482.jpg",
       "genres": [
         "Romance",
         "Slice of Life"
@@ -6833,7 +6833,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/158553/Genkai_Dokushin_Joshi_26_Gohan",
       "year": "2023",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/290965.webp?s=d6dac349dd5bc0fe2b3c17a88521af76",
+      "image": "https://cdn.myanimelist.net/images/manga/2/290965.jpg",
       "genres": [
         "Slice of Life"
       ],
@@ -6848,7 +6848,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/127180/Sensei_de_○○_Shicha_Ikemasen",
       "year": "2019",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/235094.webp?s=38ec6ec363a9a73ed2c785cae83dde1c",
+      "image": "https://cdn.myanimelist.net/images/manga/3/235094.jpg",
       "genres": [
         "Comedy",
         "Ecchi"
@@ -6864,7 +6864,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/62795/Tomodachi_Game",
       "year": "2013",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/302138.webp?s=5f8db25676b48d0b5bccd75469152b34",
+      "image": "https://cdn.myanimelist.net/images/manga/1/302138.jpg",
       "genres": [
         "Suspense"
       ],
@@ -6879,7 +6879,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/162905/Uchuujin_no_Kakushigoto",
       "year": "2023",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/293666.webp?s=7ee1873ff7e39d20e608bc8e18861092",
+      "image": "https://cdn.myanimelist.net/images/manga/3/293666.jpg",
       "genres": [
         "Romance",
         "Supernatural",
@@ -6896,7 +6896,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/122392/Zom_100__Zombie_ni_Naru_made_ni_Shitai_100_no_Koto",
       "year": "2018",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/223116.webp?s=a4feec8cbef7e49b12d7da98b1325e59",
+      "image": "https://cdn.myanimelist.net/images/manga/3/223116.jpg",
       "genres": [
         "Comedy",
         "Suspense"
@@ -6912,7 +6912,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/50857/Avant-garde_Yumeko",
       "year": "2003",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/4/90269.webp?s=824948a001b13db783ee1d0685c5f3cd",
+      "image": "https://cdn.myanimelist.net/images/manga/4/90269.jpg",
       "genres": [
         "Comedy",
         "Ecchi"
@@ -6928,7 +6928,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/104272/Reiraku",
       "year": "2017",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/202532.webp?s=8796491777056f97c93f5df722b451d8",
+      "image": "https://cdn.myanimelist.net/images/manga/1/202532.jpg",
       "genres": [
         "Drama"
       ],
@@ -6943,7 +6943,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/37289/Master_Keaton_Remaster",
       "year": "2012",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/148191.webp?s=a852f411db5c0d04fee79a13b4b82af6",
+      "image": "https://cdn.myanimelist.net/images/manga/1/148191.jpg",
       "genres": [
         "Adventure",
         "Drama",
@@ -6960,7 +6960,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/162479/Kagurabachi",
       "year": "2023",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/296327.webp?s=020b3a537f03caf15080f422525b16b4",
+      "image": "https://cdn.myanimelist.net/images/manga/3/296327.jpg",
       "genres": [
         "Action",
         "Fantasy"
@@ -6976,7 +6976,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/122355/Dokuzakura",
       "year": "2019",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/222995.webp?s=a7b381b4a8cf9ae442ac5f1dc82da020",
+      "image": "https://cdn.myanimelist.net/images/manga/1/222995.jpg",
       "genres": [
         "Drama",
         "Supernatural",
@@ -6994,7 +6994,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/119792/Hirasaka_Hinako_ga_Erokawaii_Koto_wo_Ore_dake_ga_Shitteiru",
       "year": "2019",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/232192.webp?s=0a903a4c692ccf420e47206d637f6bff",
+      "image": "https://cdn.myanimelist.net/images/manga/2/232192.jpg",
       "genres": [
         "Erotica"
       ],
@@ -7009,7 +7009,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/909/Gyo__Ugomeku_Bukimi",
       "year": "2001",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/88711.webp?s=80fa6addf4c8a4a09301b4eb83f34f15",
+      "image": "https://cdn.myanimelist.net/images/manga/2/88711.jpg",
       "genres": [
         "Drama",
         "Horror",
@@ -7027,7 +7027,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/126699/Shounen_no_Abyss",
       "year": "2020",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/232167.webp?s=685f3e8ddeba601c0b779562727402f5",
+      "image": "https://cdn.myanimelist.net/images/manga/2/232167.jpg",
       "genres": [
         "Drama"
       ],
@@ -7042,7 +7042,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/124083/Doutei_Zetsumetsu_Rettou",
       "year": "2019",
       "score": 5,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/226281.webp?s=7d46d739c330fd340a6091160f452208",
+      "image": "https://cdn.myanimelist.net/images/manga/2/226281.jpg",
       "genres": [
         "Ecchi"
       ],
@@ -7057,7 +7057,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/141833/Hikaru_ga_Shinda_Natsu",
       "year": "2021",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/256448.webp?s=d00c1e197f28668010466c96c5af1059",
+      "image": "https://cdn.myanimelist.net/images/manga/2/256448.jpg",
       "genres": [
         "Horror",
         "Mystery",
@@ -7074,7 +7074,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/159771/Saihate_ni_Madou",
       "year": "2023",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/283566.webp?s=7202ee54b09ff3fec95cba6e34cdffc3",
+      "image": "https://cdn.myanimelist.net/images/manga/1/283566.jpg",
       "genres": [
         "Drama"
       ],
@@ -7089,7 +7089,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/8848/Sun-Ken_Rock",
       "year": "2006",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/166298.webp?s=db9b64a580d8b0f38b79c07941f892fb",
+      "image": "https://cdn.myanimelist.net/images/manga/3/166298.jpg",
       "genres": [
         "Action",
         "Comedy",
@@ -7107,7 +7107,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/136793/Itou_Junji_Jisen_Kessakushuu",
       "year": "1990",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/265606.webp?s=fd6b8ef5a667af243a1971b0045a339a",
+      "image": "https://cdn.myanimelist.net/images/manga/3/265606.jpg",
       "genres": [
         "Horror"
       ],
@@ -7122,7 +7122,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/125036/The_Horizon",
       "year": "2016",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/229331.webp?s=4caba1672d3530b1b4adeb799d744cf2",
+      "image": "https://cdn.myanimelist.net/images/manga/1/229331.jpg",
       "genres": [
         "Adventure",
         "Drama"
@@ -7138,7 +7138,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/564/Gantz",
       "year": "2000",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/278020.webp?s=1031a26b5480284c465b836cc75cafbb",
+      "image": "https://cdn.myanimelist.net/images/manga/1/278020.jpg",
       "genres": [
         "Action",
         "Drama",
@@ -7157,7 +7157,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/110727/Gigant",
       "year": "2017",
       "score": 5,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/210342.webp?s=8ca4fab8572a981e0778a375e794d71c",
+      "image": "https://cdn.myanimelist.net/images/manga/1/210342.jpg",
       "genres": [
         "Drama",
         "Romance",
@@ -7174,7 +7174,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/126146/Oshi_no_Ko",
       "year": "2020",
       "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/233991.webp?s=76939e4f69e9b44d4e8fe89ce93d46c5",
+      "image": "https://cdn.myanimelist.net/images/manga/3/233991.jpg",
       "genres": [
         "Drama"
       ],
@@ -7189,7 +7189,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/28361/Hideout",
       "year": "2010",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/65719.webp?s=8895b94d9628c03ab05f980a86d62563",
+      "image": "https://cdn.myanimelist.net/images/manga/2/65719.jpg",
       "genres": [
         "Horror"
       ],
@@ -7204,7 +7204,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/657/Real",
       "year": "1999",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/115969.webp?s=682ffdc395cb4559bdaa67e34342c034",
+      "image": "https://cdn.myanimelist.net/images/manga/2/115969.jpg",
       "genres": [
         "Award Winning",
         "Drama",
@@ -7221,7 +7221,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/436/Uzumaki",
       "year": "1998",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/185972.webp?s=09c57cdfd8e9b9a90a15ba1d605d122b",
+      "image": "https://cdn.myanimelist.net/images/manga/3/185972.jpg",
       "genres": [
         "Drama",
         "Horror",
@@ -7238,7 +7238,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/112318/Jigokuraku",
       "year": "2018",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/208522.webp?s=f9dd3c28ac0093f1355d47e07658cc64",
+      "image": "https://cdn.myanimelist.net/images/manga/2/208522.jpg",
       "genres": [
         "Action",
         "Fantasy"
@@ -7254,7 +7254,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/11054/Billy_Bat",
       "year": "2008",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/181197.webp?s=664050d5558f58652eac27ebc965d3fd",
+      "image": "https://cdn.myanimelist.net/images/manga/3/181197.jpg",
       "genres": [
         "Drama",
         "Mystery",
@@ -7271,7 +7271,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/113138/Jujutsu_Kaisen",
       "year": "2018",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/210341.webp?s=e9150cacc2ddd7af8669bcbaa095e2cc",
+      "image": "https://cdn.myanimelist.net/images/manga/3/210341.jpg",
       "genres": [
         "Action",
         "Supernatural"
@@ -7287,7 +7287,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/745/Pluto",
       "year": "2003",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/264496.webp?s=67e1b05ac21e29794473258e65bcd653",
+      "image": "https://cdn.myanimelist.net/images/manga/1/264496.jpg",
       "genres": [
         "Action",
         "Award Winning",
@@ -7306,7 +7306,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/1133/Dorohedoro",
       "year": "2000",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/258246.webp?s=16fc9d90fbd5ca2cddc006a6f6e21e3c",
+      "image": "https://cdn.myanimelist.net/images/manga/3/258246.jpg",
       "genres": [
         "Action",
         "Comedy",
@@ -7324,7 +7324,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/44347/One_Punch-Man",
       "year": "2012",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/80661.webp?s=a50068fdafd5922360c511136e164a17",
+      "image": "https://cdn.myanimelist.net/images/manga/3/80661.jpg",
       "genres": [
         "Action",
         "Comedy"
@@ -7340,7 +7340,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/116778/Chainsaw_Man",
       "year": "2018",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/216464.webp?s=694ed97ce0b0990d498fd1c397de554a",
+      "image": "https://cdn.myanimelist.net/images/manga/3/216464.jpg",
       "genres": [
         "Action",
         "Award Winning",
@@ -7357,7 +7357,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/4632/Oyasumi_Punpun",
       "year": "2007",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/266834.webp?s=408399d2b3d9e73672ecaa2b71dc93c1",
+      "image": "https://cdn.myanimelist.net/images/manga/3/266834.jpg",
       "genres": [
         "Drama",
         "Slice of Life"
@@ -7373,7 +7373,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/51/Slam_Dunk",
       "year": "1990",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/258749.webp?s=4832953adcda07fb9b3d97cab1694e72",
+      "image": "https://cdn.myanimelist.net/images/manga/2/258749.jpg",
       "genres": [
         "Award Winning",
         "Sports"
@@ -7389,7 +7389,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/142600/Takopii_no_Genzai",
       "year": "2021",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/256655.webp?s=f10f77cfed9832fdbe48c31322780b72",
+      "image": "https://cdn.myanimelist.net/images/manga/1/256655.jpg",
       "genres": [
         "Drama",
         "Sci-Fi"
@@ -7405,7 +7405,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/642/Vinland_Saga",
       "year": "2005",
       "score": 10,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/188925.webp?s=29928862506e267dad97772026c39ae6",
+      "image": "https://cdn.myanimelist.net/images/manga/2/188925.jpg",
       "genres": [
         "Action",
         "Adventure",
@@ -7423,7 +7423,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/2/Berserk",
       "year": "1989",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/157897.webp?s=7f9d3c323292ce93a4870a21de9cad71",
+      "image": "https://cdn.myanimelist.net/images/manga/1/157897.jpg",
       "genres": [
         "Action",
         "Adventure",
@@ -7443,7 +7443,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/743/21st_Century_Boys",
       "year": "2006",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/263856.webp?s=21d0ab559a7312c1c888c87193056f73",
+      "image": "https://cdn.myanimelist.net/images/manga/2/263856.jpg",
       "genres": [
         "Award Winning",
         "Drama",
@@ -7461,7 +7461,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/3/20th_Century_Boys",
       "year": "1999",
       "score": 10,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/5/260006.webp?s=7cfce93b7214643ef45037b68f519b64",
+      "image": "https://cdn.myanimelist.net/images/manga/5/260006.jpg",
       "genres": [
         "Award Winning",
         "Drama",
@@ -7479,7 +7479,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/656/Vagabond",
       "year": "1998",
       "score": 10,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/259070.webp?s=260cda752b81a4be730dff16c5cda8e1",
+      "image": "https://cdn.myanimelist.net/images/manga/1/259070.jpg",
       "genres": [
         "Action",
         "Adventure",
@@ -7496,7 +7496,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/1706/JoJo_no_Kimyou_na_Bouken_Part_7__Steel_Ball_Run",
       "year": "2004",
       "score": 10,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/179882.webp?s=d04ef00c39100c6d5576091b71865056",
+      "image": "https://cdn.myanimelist.net/images/manga/3/179882.jpg",
       "genres": [
         "Action",
         "Adventure",
@@ -7514,7 +7514,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/25515/JoJo_no_Kimyou_na_Bouken_Part_8__JoJolion",
       "year": "2011",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/179885.webp?s=a43ab0d87b271805b348f195fe8f8fd3",
+      "image": "https://cdn.myanimelist.net/images/manga/1/179885.jpg",
       "genres": [
         "Action",
         "Adventure",
@@ -7533,7 +7533,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/139629/JoJo_no_Kimyou_na_Bouken_Part_9__The_JoJoLands",
       "year": "2023",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/286969.webp?s=3f3e79489c3700b02355c414d7ae22a5",
+      "image": "https://cdn.myanimelist.net/images/manga/1/286969.jpg",
       "genres": [
         "Action",
         "Adventure",
@@ -7550,7 +7550,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/3009/JoJo_no_Kimyou_na_Bouken_Part_6__Stone_Ocean",
       "year": "1999",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/255379.webp?s=4493ecacdcbd45e4bc7d865a5e54dd36",
+      "image": "https://cdn.myanimelist.net/images/manga/2/255379.jpg",
       "genres": [
         "Action",
         "Adventure"
@@ -7566,7 +7566,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/manga/13/One_Piece",
       "year": "1997",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/253146.webp?s=086e89a82dfb78553baaf6e2a849520a",
+      "image": "https://cdn.myanimelist.net/images/manga/2/253146.jpg",
       "genres": [
         "Action",
         "Adventure",

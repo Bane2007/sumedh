@@ -130,7 +130,7 @@
 
   // --- SAFE IMAGE DISPLAY FUNCTION ---
   // Renders the fallback cover first, then asynchronously replaces it on load
-  const displayCabinetImage = (imageUrl, title, year) => {
+  const displayCabinetImage = (imageUrl, title, year, category) => {
     if (!coverArt) return;
     coverArt.innerHTML = '';
     
@@ -151,7 +151,13 @@
       img.onload = () => {
         fallback.replaceWith(img);
       };
-      img.src = imageUrl;
+      
+      // Use proxy ONLY for Letterboxd/Featured movies. Load MAL images directly.
+      if (category === 'films' || category === 'featured') {
+        img.src = 'https://images.weserv.nl/?url=' + encodeURIComponent(imageUrl);
+      } else {
+        img.src = imageUrl;
+      }
     }
   };
 
@@ -161,7 +167,7 @@
     content.style.display = 'grid';
     placeholder.style.display = 'none';
 
-    displayCabinetImage(film.image, film.title, film.year);
+    displayCabinetImage(film.image, film.title, film.year, 'films');
     titleEl.innerHTML = film.title;
     directorEl.innerHTML = 'Letterboxd Record';
     metaEl.innerHTML = film.year;
@@ -188,7 +194,7 @@
     content.style.display = 'grid';
     placeholder.style.display = 'none';
 
-    displayCabinetImage(anime.image, anime.title, anime.year);
+    displayCabinetImage(anime.image, anime.title, anime.year, 'anime');
     titleEl.innerHTML = anime.title;
     
     const animeStatusStr = anime.status === 'watching' ? 'Watching' : 'Completed';
@@ -222,7 +228,7 @@
     content.style.display = 'grid';
     placeholder.style.display = 'none';
 
-    displayCabinetImage(manga.image, manga.title, manga.year);
+    displayCabinetImage(manga.image, manga.title, manga.year, 'manga');
     titleEl.innerHTML = manga.title;
     
     const mangaStatusStr = manga.status === 'reading' ? 'Reading' : 'Completed';
@@ -259,7 +265,7 @@
     content.style.display = 'grid';
     placeholder.style.display = 'none';
 
-    displayCabinetImage(data.cover, data.title, 'N/A');
+    displayCabinetImage(data.cover, data.title, 'N/A', 'featured');
     titleEl.innerHTML = data.title;
     directorEl.innerHTML = data.director;
     metaEl.innerHTML = data.meta;
@@ -349,7 +355,7 @@
       fallback.innerHTML = generateGenericCover(item.title, item.year);
       card.appendChild(fallback);
 
-      // Asynchronously load the actual direct CDN image
+      // Asynchronously load image
       if (item.image) {
         const img = document.createElement('img');
         img.className = 'card-poster-img';
@@ -358,7 +364,13 @@
         img.onload = () => {
           fallback.replaceWith(img);
         };
-        img.src = item.image;
+        
+        // Use proxy ONLY for Letterboxd films. Load MAL images directly.
+        if (currentCategory === 'films') {
+          img.src = 'https://images.weserv.nl/?url=' + encodeURIComponent(item.image);
+        } else {
+          img.src = item.image;
+        }
       }
 
       const overlay = document.createElement('div');
