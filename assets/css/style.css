@@ -153,8 +153,8 @@ body::before {
 main { position: relative; z-index: 1; }
 
 /* === REC LIGHT (top-right) ===
-   Small oxblood dot + "REC" label, fixed in the corner. Slow pulse loop —
-   the page's only persistent visible animation. Film-camera reference.
+   Small camera dot + "REC" label, fixed in the corner. Slow pulse loop —
+   the page's only persistent visible animation. Under hover, it reveals HAL 9000.
 */
 .rec-light {
   position: fixed;
@@ -164,14 +164,16 @@ main { position: relative; z-index: 1; }
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  pointer-events: none;
+  pointer-events: auto;
+  cursor: pointer;
 }
 .rec-light__dot {
-  width: 10px; height: 10px;
+  width: 12px; height: 12px;
   border-radius: 50%;
-  background: #d6483a;
-  box-shadow: 0 0 14px 2px rgba(214, 72, 58, 0.65);
-  animation: rec-pulse 1.6s ease-in-out infinite;
+  background: radial-gradient(circle, #ffeb3b 0%, #ff5722 35%, #d84315 65%, #111111 100%);
+  box-shadow: 0 0 16px 3px rgba(255, 87, 34, 0.85);
+  animation: rec-pulse 2s ease-in-out infinite;
+  border: 1px solid rgba(255,255,255,0.15);
 }
 .rec-light__label {
   font-family: var(--mono);
@@ -179,10 +181,22 @@ main { position: relative; z-index: 1; }
   letter-spacing: 0.3em;
   color: var(--ink-soft);
   text-transform: uppercase;
+  transition: color 250ms ease;
+}
+.rec-light:hover .rec-light__label {
+  font-size: 0;
+  letter-spacing: 0;
+}
+.rec-light:hover .rec-light__label::before {
+  content: "I'm sorry, Dave.";
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--oxblood-soft);
+  text-transform: none;
 }
 @keyframes rec-pulse {
-  0%, 100% { opacity: 1;    transform: scale(1);   box-shadow: 0 0 14px 2px rgba(214, 72, 58, 0.7); }
-  50%      { opacity: 0.45; transform: scale(0.78); box-shadow: 0 0 6px 1px  rgba(214, 72, 58, 0.4); }
+  0%, 100% { opacity: 1;    transform: scale(1);   box-shadow: 0 0 16px 3px rgba(255, 87, 34, 0.85); }
+  50%      { opacity: 0.45; transform: scale(0.8);  box-shadow: 0 0 8px 1px  rgba(255, 87, 34, 0.4); }
 }
 @media (prefers-reduced-motion: reduce) {
   .rec-light__dot { animation: none; }
@@ -335,58 +349,67 @@ section, .colophon {
 }
 .about__body em { color: var(--oxblood); font-style: italic; }
 
-/* === INLINE TOOLTIP (CINEMA REFERENCES) === */
-.inline-tooltip {
-  position: relative;
-  display: inline-block;
-  white-space: nowrap;
-  color: var(--oxblood-soft);
-  border-bottom: 1px dashed var(--oxblood);
-  cursor: help;
-  transition: color 200ms ease, border-color 200ms ease;
-}
-.inline-tooltip:hover,
-.inline-tooltip:focus {
-  color: var(--ink);
-  border-bottom-color: var(--ink);
-  outline: none;
-}
-.inline-tooltip__content {
-  position: absolute;
-  bottom: 135%;
-  left: 50%;
-  transform: translateX(-50%) translateY(6px);
+/* === CABINET OF CURIOSITIES === */
+.cabinet-curiosities {
+  margin-top: 2rem;
+  padding: 1.25rem;
   background: var(--paper-deep);
   border: 1px solid var(--hairline);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+.curio-list {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+.curio-btn {
+  background: none;
+  border: none;
+  padding: 0.5rem;
   color: var(--ink-soft);
-  padding: 0.45rem 0.8rem;
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  line-height: 1.4;
-  white-space: nowrap;
-  border-radius: 2px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.16, 1, 0.3, 1), transform 250ms cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.75);
-  z-index: 100;
+  cursor: pointer;
+  transition: transform 250ms cubic-bezier(0.16, 1, 0.3, 1), color 200ms ease;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-/* Tooltip arrow */
-.inline-tooltip__content::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 5px;
-  border-style: solid;
-  border-color: var(--paper-deep) transparent transparent transparent;
+.curio-btn:hover,
+.curio-btn:focus-visible {
+  color: var(--oxblood-soft);
+  transform: translateY(-3px) scale(1.08);
 }
-.inline-tooltip:hover .inline-tooltip__content,
-.inline-tooltip:focus .inline-tooltip__content {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-  pointer-events: auto;
+.curio-svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+.curio-display {
+  min-height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 32rem;
+  width: 100%;
+}
+.curio-display__text {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  transition: opacity 180ms ease;
+  opacity: 0.85;
+  line-height: 1.45;
+}
+.curio-display__text em {
+  color: var(--ink);
+  font-style: italic;
 }
 
 /* === III. SADAKO === */
