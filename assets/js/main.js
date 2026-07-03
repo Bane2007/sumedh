@@ -1,8 +1,8 @@
 (() => {
   'use strict';
 
+  // --- INTERSECTION OBSERVER FOR REVEALS ---
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
   const revealables = document.querySelectorAll(
     '.about__body, .closet-section, .sadako__grid, .sadako__pullquote, .currently, .roles__grid, .contact__list, .colophon, .crane-divider'
   );
@@ -11,7 +11,6 @@
     revealables.forEach(el => el.classList.add('reveal', 'is-visible'));
   } else {
     revealables.forEach(el => el.classList.add('reveal'));
-
     const io = new IntersectionObserver((entries) => {
       for (const entry of entries) {
         if (entry.isIntersecting) {
@@ -20,11 +19,20 @@
         }
       }
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-
     revealables.forEach(el => io.observe(el));
   }
 
-  // === CINEMA CLOSET SHELF DATA ===
+  // --- DEFENSIVE DATABASE CHECK ---
+  if (!window.mediaDatabase) {
+    window.mediaDatabase = {
+      films: [],
+      anime: [],
+      manga: [],
+      currently: { watching: [], reading: [] }
+    };
+  }
+
+  // === CURATED FEATURED FILMS DATABASE ===
   const filmData = {
     '2001': {
       title: '2001: A Space Odyssey',
@@ -68,6 +76,7 @@
     }
   };
 
+  // --- DYNAMIC fallback SVG generator ---
   const generateGenericCover = (title, year) => {
     let hash = 0;
     for (let i = 0; i < title.length; i++) {
@@ -88,7 +97,6 @@
     </svg>`;
   };
 
-  // Convert 10-score to stars
   const scoreToStars = (score) => {
     if (!score) return 'Unrated';
     const stars = Math.floor(score / 2);
@@ -96,10 +104,10 @@
     return '★'.repeat(stars) + half;
   };
 
-  // Active Category State
+  // --- STATE VARIABLES ---
   let currentCategory = 'films'; 
 
-  // Tab View Navigation
+  // --- DOM ELEMENTS ---
   const btnShelfView = document.getElementById('btn-shelf-view');
   const btnFilmsView = document.getElementById('btn-films-view');
   const btnAnimeView = document.getElementById('btn-anime-view');
@@ -108,7 +116,6 @@
   const panelShelfView = document.getElementById('panel-shelf-view');
   const panelListView = document.getElementById('panel-list-view');
 
-  // Display Cabinet Elements
   const displayBox = document.getElementById('closet-display');
   const placeholder = displayBox ? displayBox.querySelector('.display-placeholder') : null;
   const content = displayBox ? displayBox.querySelector('.display-content') : null;
@@ -119,21 +126,53 @@
   const quoteEl = displayBox ? displayBox.querySelector('#display-quote') : null;
   const descEl = displayBox ? displayBox.querySelector('#display-description') : null;
 
+  const movieGrid = document.getElementById('movie-grid');
+  const movieSearch = document.getElementById('movie-search');
+  const movieSort = document.getElementById('movie-sort');
+
+  // --- SAFE IMAGE DISPLAY FUNCTION ---
+  // Avoids inline onerror strings to prevent html/newline parsing crashes
+  const displayCabinetImage = (imageUrl, title, year) => {
+    if (!coverArt) return;
+    coverArt.innerHTML = '';
+    
+    if (imageUrl) {
+      const img = document.createElement('img');
+      img.className = 'img-cover';
+      img.style.width = '100%';
+      img.style.height = '100%';
+      img.style.objectFit = 'cover';
+      img.style.borderRadius = '2px';
+      img.style.boxShadow = '0 4px 10px rgba(0,0,0,0.5)';
+      img.alt = title;
+      
+      img.onerror = () => {
+        const fallback = document.createElement('div');
+        fallback.className = 'card-fallback-svg-container';
+        fallback.innerHTML = generateGenericCover(title, year);
+        img.replaceWith(fallback);
+      };
+      
+      img.src = imageUrl;
+      coverArt.appendChild(img);
+    } else {
+      const fallback = document.createElement('div');
+      fallback.className = 'card-fallback-svg-container';
+      fallback.innerHTML = generateGenericCover(title, year);
+      coverArt.appendChild(fallback);
+    }
+  };
+
+  // --- DISPLAY CASE SYNC UPDATERS ---
   const updateDisplayWithLetterboxd = (film) => {
     if (!displayBox) return;
     content.style.display = 'grid';
     placeholder.style.display = 'none';
 
-    if (film.image) {
-      coverArt.innerHTML = `<img src="${film.image}" alt="${film.title}" class="img-cover" style="width: 100%; height: 100%; object-fit: cover; border-radius: 2px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);" onerror="this.outerHTML='${generateGenericCover(film.title, film.year).replace(/'/g, "\\'")}';">`;
-    } else {
-      coverArt.innerHTML = generateGenericCover(film.title, film.year);
-    }
-    
+    displayCabinetImage(film.image, film.title, film.year);
     titleEl.innerHTML = film.title;
     directorEl.innerHTML = 'Letterboxd Diary';
     metaEl.innerHTML = `${film.year} &middot; Rated ${film.rating || 'No Rating'}`;
-    
     quoteEl.style.display = 'none';
     
     descEl.innerHTML = `This film is part of Sumedh's watched history on Letterboxd. He rated it <strong>${film.rating || 'Unrated'}</strong>.<br><br>
@@ -151,11 +190,10 @@
     content.style.display = 'grid';
     placeholder.style.display = 'none';
 
-    coverArt.innerHTML = `<img src="${anime.image}" alt="${anime.title}" class="img-cover" style="width: 100%; height: 100%; object-fit: cover; border-radius: 2px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);" onerror="this.outerHTML='${generateGenericCover(anime.title, anime.year).replace(/'/g, "\\'")}';">`;
+    displayCabinetImage(anime.image, anime.title, anime.year);
     titleEl.innerHTML = anime.title;
     directorEl.innerHTML = 'MyAnimeList Entry';
     metaEl.innerHTML = `${anime.year} &middot; Completed &middot; Score: ${anime.score}/10 (${scoreToStars(anime.score)})`;
-    
     quoteEl.style.display = 'none';
     
     const genreTags = anime.genres && anime.genres.length > 0 
@@ -177,11 +215,10 @@
     content.style.display = 'grid';
     placeholder.style.display = 'none';
 
-    coverArt.innerHTML = `<img src="${manga.image}" alt="${manga.title}" class="img-cover" style="width: 100%; height: 100%; object-fit: cover; border-radius: 2px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);" onerror="this.outerHTML='${generateGenericCover(manga.title, manga.year).replace(/'/g, "\\'")}';">`;
+    displayCabinetImage(manga.image, manga.title, manga.year);
     titleEl.innerHTML = manga.title;
     directorEl.innerHTML = 'MyAnimeList Entry';
     metaEl.innerHTML = `${manga.year} &middot; Completed &middot; Score: ${manga.score}/10 (${scoreToStars(manga.score)})`;
-    
     quoteEl.style.display = 'none';
     
     const genreTags = manga.genres && manga.genres.length > 0 
@@ -206,12 +243,7 @@
     content.style.display = 'grid';
     placeholder.style.display = 'none';
 
-    if (data.cover.startsWith('http')) {
-      coverArt.innerHTML = `<img src="${data.cover}" alt="${data.title}" class="img-cover" style="width: 100%; height: 100%; object-fit: cover; border-radius: 2px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);" onerror="this.outerHTML='${generateGenericCover(data.title, 'N/A').replace(/'/g, "\\'")}';">`;
-    } else {
-      coverArt.innerHTML = data.cover;
-    }
-    
+    displayCabinetImage(data.cover, data.title, 'N/A');
     titleEl.innerHTML = data.title;
     directorEl.innerHTML = data.director;
     metaEl.innerHTML = data.meta;
@@ -225,11 +257,7 @@
     content.style.animation = null;
   };
 
-  // Movie/Anime/Manga List Sorting & Filtering Logic
-  const movieGrid = document.getElementById('movie-grid');
-  const movieSearch = document.getElementById('movie-search');
-  const movieSort = document.getElementById('movie-sort');
-
+  // --- FILTERING & SORTING COMPILATION ---
   const getFilteredAndSortedFilms = () => {
     if (!window.mediaDatabase) return [];
 
@@ -253,7 +281,7 @@
       return matchTitle || matchYear || matchGenre;
     });
 
-    // Rating score mapper helper
+    // Rating value parser
     const getRatingValue = (item) => {
       if (currentCategory === 'films') {
         const mappings = {
@@ -288,6 +316,7 @@
     return result;
   };
 
+  // --- GRID LIST RENDERER ---
   const renderList = () => {
     if (!movieGrid) return;
     movieGrid.innerHTML = '';
@@ -305,13 +334,11 @@
         displayRating = item.score ? `${item.score}/10` : 'Unrated';
       }
 
-      // Check if image exists
       if (item.image) {
         const img = document.createElement('img');
         img.className = 'card-poster-img';
         img.loading = 'lazy';
         img.alt = item.title;
-        img.src = item.image;
         
         img.onerror = () => {
           const fallback = document.createElement('div');
@@ -319,9 +346,10 @@
           fallback.innerHTML = generateGenericCover(item.title, item.year);
           img.replaceWith(fallback);
         };
+        
+        img.src = item.image;
         card.appendChild(img);
       } else {
-        // Render fallback SVG immediately
         const fallback = document.createElement('div');
         fallback.className = 'card-fallback-svg-container';
         fallback.innerHTML = generateGenericCover(item.title, item.year);
@@ -367,7 +395,7 @@
     }
   };
 
-  // Helper to switch active tab button
+  // --- TAB TOGGLE CONTROLLER ---
   const activateTab = (activeBtn) => {
     [btnShelfView, btnFilmsView, btnAnimeView, btnMangaView].forEach(btn => {
       if (btn) btn.classList.remove('active');
@@ -375,7 +403,6 @@
     activeBtn.classList.add('active');
   };
 
-  // Setup tab event listeners
   if (btnShelfView) {
     btnShelfView.addEventListener('click', () => {
       activateTab(btnShelfView);
@@ -417,7 +444,7 @@
     });
   }
 
-  // Interactivity for shelf spines
+  // --- SHELF SPINES HANDLER ---
   const spines = document.querySelectorAll('.spine-item');
   spines.forEach(spine => {
     const selectSpine = () => {
@@ -432,7 +459,7 @@
     spine.addEventListener('focus', selectSpine);
   });
 
-  // Attach search and sort listeners
+  // --- EVENT LISTENERS FOR SEARCH & SORT ---
   if (movieSearch) {
     movieSearch.addEventListener('input', renderList);
   }
@@ -440,16 +467,14 @@
     movieSort.addEventListener('change', renderList);
   }
 
-  // Initialize: Auto-select first shelf spine on load
+  // --- INITIALIZATION ---
   if (spines.length > 0) {
     spines[0].classList.add('selected');
     updateDisplayWithFeatured('2001');
   }
-
-  // Render the initial list in the background
   renderList();
 
-  // === DYNAMIC "CURRENTLY" STATUS SYSTEM ===
+  // --- DYNAMIC "CURRENTLY" STATUS SYSTEM ---
   const currentlyBody = document.querySelector('.currently__body');
   if (currentlyBody && window.mediaDatabase && window.mediaDatabase.currently) {
     const currently = window.mediaDatabase.currently;
