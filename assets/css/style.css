@@ -309,7 +309,8 @@ a:focus-visible {
 }
 .hero__portrait {
   margin: 0;
-  width: clamp(280px, 56vw, 640px);
+  width: 100%;
+  max-width: 640px;
 }
 .hero__portrait img {
   width: 100%;
@@ -348,26 +349,6 @@ section, .colophon {
   margin: 0;
 }
 .about__body em { color: var(--oxblood); font-style: italic; }
-
-/* === THE SHINING PORTRAIT OVERLAY === */
-.hero__portrait {
-  position: relative;
-  overflow: hidden;
-}
-.hero__portrait::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='70' viewBox='0 0 40 70'><path d='M20 0 L40 11.5 L40 34.5 L20 46 L0 34.5 L0 11.5 Z' fill='none' stroke='%23c8615a' stroke-width='1.5'/><path d='M20 6 L35 15 L35 31 L20 40 L5 31 L5 15 Z' fill='none' stroke='%23e08a82' stroke-width='1'/><path d='M20 35 L40 46.5 L40 69.5 L20 81 L0 69.5 L0 46.5 Z' fill='none' stroke='%23c8615a' stroke-width='1.5'/></svg>");
-  background-size: 40px 70px;
-  opacity: 0;
-  mix-blend-mode: color-burn;
-  transition: opacity 400ms ease;
-  pointer-events: none;
-}
-.hero__portrait:hover::after {
-  opacity: 0.8;
-}
 
 /* === WHIPLASH TEMPO TRIGGER === */
 .tempo-trigger {
