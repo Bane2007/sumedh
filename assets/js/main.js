@@ -26,8 +26,7 @@
     window.mediaDatabase = {
       films: [],
       anime: [],
-      manga: [],
-      currently: { watching: [], reading: [] }
+      manga: []
     };
   }
 
@@ -130,10 +129,15 @@
   const movieSort = document.getElementById('movie-sort');
 
   // --- SAFE IMAGE DISPLAY FUNCTION ---
-  // Uses images.weserv.nl proxy to bypass CDN hotlinking and referrer blocks
+  // Renders the fallback cover first, then asynchronously replaces it on load
   const displayCabinetImage = (imageUrl, title, year) => {
     if (!coverArt) return;
     coverArt.innerHTML = '';
+    
+    const fallback = document.createElement('div');
+    fallback.className = 'card-fallback-svg-container';
+    fallback.innerHTML = generateGenericCover(title, year);
+    coverArt.appendChild(fallback);
     
     if (imageUrl) {
       const img = document.createElement('img');
@@ -144,21 +148,10 @@
       img.style.borderRadius = '2px';
       img.style.boxShadow = '0 4px 10px rgba(0,0,0,0.5)';
       img.alt = title;
-      
-      img.onerror = () => {
-        const fallback = document.createElement('div');
-        fallback.className = 'card-fallback-svg-container';
-        fallback.innerHTML = generateGenericCover(title, year);
-        img.replaceWith(fallback);
+      img.onload = () => {
+        fallback.replaceWith(img);
       };
-      
-      img.src = 'https://images.weserv.nl/?url=' + encodeURIComponent(imageUrl);
-      coverArt.appendChild(img);
-    } else {
-      const fallback = document.createElement('div');
-      fallback.className = 'card-fallback-svg-container';
-      fallback.innerHTML = generateGenericCover(title, year);
-      coverArt.appendChild(fallback);
+      img.src = imageUrl;
     }
   };
 
@@ -350,33 +343,22 @@
       card.className = 'grid-item-card';
       card.setAttribute('tabindex', '0');
 
-      let displayRating = '';
-      if (currentCategory === 'films') {
-        displayRating = item.rating || 'No Rating';
-      } else {
-        displayRating = item.score ? `${item.score}/10` : 'Unrated';
-      }
+      // Create fallback immediately inside the DOM
+      const fallback = document.createElement('div');
+      fallback.className = 'card-fallback-svg-container';
+      fallback.innerHTML = generateGenericCover(item.title, item.year);
+      card.appendChild(fallback);
 
+      // Asynchronously load the actual direct CDN image
       if (item.image) {
         const img = document.createElement('img');
         img.className = 'card-poster-img';
         img.loading = 'lazy';
         img.alt = item.title;
-        
-        img.onerror = () => {
-          const fallback = document.createElement('div');
-          fallback.className = 'card-fallback-svg-container';
-          fallback.innerHTML = generateGenericCover(item.title, item.year);
-          img.replaceWith(fallback);
+        img.onload = () => {
+          fallback.replaceWith(img);
         };
-        
-        img.src = 'https://images.weserv.nl/?url=' + encodeURIComponent(item.image);
-        card.appendChild(img);
-      } else {
-        const fallback = document.createElement('div');
-        fallback.className = 'card-fallback-svg-container';
-        fallback.innerHTML = generateGenericCover(item.title, item.year);
-        card.appendChild(fallback);
+        img.src = item.image;
       }
 
       const overlay = document.createElement('div');
