@@ -164,6 +164,13 @@
         <div class="panel-list-view" id="panel-list-view" style="display: none;">
           <div class="list-view-controls">
             <input class="movie-search-input" id="movie-search" type="search" placeholder="Search Letterboxd history...">
+            <select class="movie-sort-select" id="movie-sort" aria-label="Sort movies">
+              <option value="default">Recent Logged</option>
+              <option value="alpha">Alphabetical (A-Z)</option>
+              <option value="year-desc">Year (Newest)</option>
+              <option value="year-asc">Year (Oldest)</option>
+              <option value="rating-desc">Rating (Highest)</option>
+            </select>
           </div>
           <div class="movie-grid" id="movie-grid">
             <!-- Dynamic movie cards injected here -->

@@ -668,9 +668,10 @@ section, .colophon {
 .list-view-controls {
   display: flex;
   width: 100%;
+  gap: 0.75rem;
 }
 .movie-search-input {
-  width: 100%;
+  flex: 1;
   background: var(--paper-deep);
   border: 1px solid var(--hairline);
   color: var(--ink);
@@ -684,6 +685,30 @@ section, .colophon {
 .movie-search-input:focus {
   border-color: var(--oxblood-soft);
   box-shadow: 0 0 8px rgba(224, 138, 130, 0.2);
+}
+.movie-sort-select {
+  background: var(--paper-deep);
+  border: 1px solid var(--hairline);
+  color: var(--ink-soft);
+  padding: 0.45rem 1.75rem 0.45rem 0.75rem;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1.5 L5 4.5 L9 1.5' fill='none' stroke='%239c9182' stroke-width='1.2'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.6rem center;
+  background-size: 8px 5px;
+  transition: border-color 200ms ease, color 200ms ease;
+}
+.movie-sort-select:focus,
+.movie-sort-select:hover {
+  border-color: var(--oxblood-soft);
+  color: var(--ink);
 }
 .movie-grid {
   display: flex;

@@ -134,90 +134,111 @@
   const panelShelfView = document.getElementById('panel-shelf-view');
   const panelListView = document.getElementById('panel-list-view');
 
-  if (btnShelfView && btnListView && panelShelfView && panelListView) {
-    btnShelfView.addEventListener('click', () => {
-      btnListView.classList.remove('active');
-      btnShelfView.classList.add('active');
-      panelListView.style.display = 'none';
-      panelShelfView.style.display = 'flex';
-      
-      // Auto-select first spine on shelf
-      const spines = panelShelfView.querySelectorAll('.spine-item');
-      if (spines.length > 0) {
-        spines[0].click();
-      }
-    });
-
-    btnListView.addEventListener('click', () => {
-      btnShelfView.classList.remove('active');
-      btnListView.classList.add('active');
-      panelShelfView.style.display = 'none';
-      panelListView.style.display = 'flex';
-
-      // Auto-select first card in list
-      const cards = panelListView.querySelectorAll('.grid-item-card');
-      if (cards.length > 0) {
-        cards[0].click();
-      }
-    });
-  }
-
-  // Render Letterboxd History Cards
-  const movieGrid = document.getElementById('movie-grid');
+  // Display Box Elements
   const displayBox = document.getElementById('closet-display');
+  const placeholder = displayBox ? displayBox.querySelector('.display-placeholder') : null;
+  const content = displayBox ? displayBox.querySelector('.display-content') : null;
+  const coverArt = displayBox ? displayBox.querySelector('#display-cover-art') : null;
+  const titleEl = displayBox ? displayBox.querySelector('#display-title') : null;
+  const directorEl = displayBox ? displayBox.querySelector('#display-director') : null;
+  const metaEl = displayBox ? displayBox.querySelector('#display-meta') : null;
+  const quoteEl = displayBox ? displayBox.querySelector('#display-quote') : null;
+  const descEl = displayBox ? displayBox.querySelector('#display-description') : null;
 
-  if (movieGrid && displayBox && window.letterboxdFilms) {
-    const placeholder = displayBox.querySelector('.display-placeholder');
-    const content = displayBox.querySelector('.display-content');
-    const coverArt = displayBox.querySelector('#display-cover-art');
-    const titleEl = displayBox.querySelector('#display-title');
-    const directorEl = displayBox.querySelector('#display-director');
-    const metaEl = displayBox.querySelector('#display-meta');
-    const quoteEl = displayBox.querySelector('#display-quote');
-    const descEl = displayBox.querySelector('#display-description');
+  const updateDisplayWithLetterboxd = (film) => {
+    if (!displayBox) return;
+    content.style.display = 'grid';
+    placeholder.style.display = 'none';
 
-    const updateDisplayWithLetterboxd = (film) => {
-      content.style.display = 'grid';
-      placeholder.style.display = 'none';
+    coverArt.innerHTML = generateGenericCover(film.title, film.year);
+    titleEl.innerHTML = film.title;
+    directorEl.innerHTML = 'Letterboxd Diary';
+    metaEl.innerHTML = `${film.year} &middot; Rated ${film.rating}`;
+    quoteEl.innerHTML = `&ldquo;Hope is a good thing, maybe the best of things, and no good thing ever dies.&rdquo;`; 
+    
+    descEl.innerHTML = `This film is part of Sumedh's watched history on Letterboxd. He rated it <strong>${film.rating}</strong>.<br><br>
+      <a class="btn btn--filled" href="https://letterboxd.com/film/${film.slug}/" target="_blank" rel="noopener" style="margin-top: 0.5rem; display: inline-flex;">
+        View on Letterboxd
+      </a>`;
 
-      coverArt.innerHTML = generateGenericCover(film.title, film.year);
-      titleEl.innerHTML = film.title;
-      directorEl.innerHTML = 'Letterboxd Diary';
-      metaEl.innerHTML = `${film.year} &middot; Rated ${film.rating}`;
-      quoteEl.innerHTML = `&ldquo;Hope is a good thing, maybe the best of things, and no good thing ever dies.&rdquo;`; // Fallback quote
-      
-      descEl.innerHTML = `This film is part of Sumedh's watched history on Letterboxd. He rated it <strong>${film.rating}</strong>.<br><br>
-        <a class="btn btn--filled" href="https://letterboxd.com/film/${film.slug}/" target="_blank" rel="noopener" style="margin-top: 0.5rem; display: inline-flex;">
-          View on Letterboxd
-        </a>`;
+    content.style.animation = 'none';
+    content.offsetHeight; 
+    content.style.animation = null;
+  };
 
-      // Force repaint to re-trigger reveal animation
-      content.style.animation = 'none';
-      content.offsetHeight; // trigger reflow
-      content.style.animation = null;
+  const updateDisplayWithFeatured = (filmKey) => {
+    if (!displayBox) return;
+    const data = filmData[filmKey];
+    if (!data) return;
+
+    content.style.display = 'grid';
+    placeholder.style.display = 'none';
+
+    coverArt.innerHTML = data.cover;
+    titleEl.innerHTML = data.title;
+    directorEl.innerHTML = data.director;
+    metaEl.innerHTML = data.meta;
+    quoteEl.innerHTML = data.quote;
+    descEl.innerHTML = data.description;
+    
+    content.style.animation = 'none';
+    content.offsetHeight; 
+    content.style.animation = null;
+  };
+
+  // Movie List Sorting & Filtering Logic
+  const movieGrid = document.getElementById('movie-grid');
+  const movieSearch = document.getElementById('movie-search');
+  const movieSort = document.getElementById('movie-sort');
+
+  const getFilteredAndSortedFilms = () => {
+    if (!window.letterboxdFilms) return [];
+
+    const query = movieSearch ? movieSearch.value.toLowerCase() : '';
+    const sortBy = movieSort ? movieSort.value : 'default';
+
+    // 1. Filter
+    let result = window.letterboxdFilms.filter(film => {
+      return film.title.toLowerCase().includes(query) || film.year.includes(query);
+    });
+
+    // Rating value helper
+    const getRatingValue = (ratingStr) => {
+      const mappings = {
+        '★★★★★': 10, '★★★★½': 9, '★★★★': 8, '★★★½': 7, '★★★': 6,
+        '★★½': 5, '★★': 4, '★½': 3, '★': 2, '½': 1
+      };
+      return mappings[ratingStr] || 0;
     };
 
-    const updateDisplayWithFeatured = (filmKey) => {
-      const data = filmData[filmKey];
-      if (!data) return;
+    // 2. Sort
+    if (sortBy === 'alpha') {
+      result.sort((a, b) => a.title.localeCompare(b.title));
+    } else if (sortBy === 'year-desc') {
+      result.sort((a, b) => {
+        const ya = parseInt(a.year) || 0;
+        const yb = parseInt(b.year) || 0;
+        return yb - ya;
+      });
+    } else if (sortBy === 'year-asc') {
+      result.sort((a, b) => {
+        const ya = parseInt(a.year) || 0;
+        const yb = parseInt(b.year) || 0;
+        return ya - yb;
+      });
+    } else if (sortBy === 'rating-desc') {
+      result.sort((a, b) => getRatingValue(b.rating) - getRatingValue(a.rating));
+    }
 
-      content.style.display = 'grid';
-      placeholder.style.display = 'none';
+    return result;
+  };
 
-      coverArt.innerHTML = data.cover;
-      titleEl.innerHTML = data.title;
-      directorEl.innerHTML = data.director;
-      metaEl.innerHTML = data.meta;
-      quoteEl.innerHTML = data.quote;
-      descEl.innerHTML = data.description;
-      
-      content.style.animation = 'none';
-      content.offsetHeight; 
-      content.style.animation = null;
-    };
+  const renderList = () => {
+    if (!movieGrid) return;
+    movieGrid.innerHTML = '';
+    const films = getFilteredAndSortedFilms();
 
-    // Render cards
-    window.letterboxdFilms.forEach(film => {
+    films.forEach(film => {
       const card = document.createElement('div');
       card.className = 'grid-item-card';
       card.setAttribute('data-slug', film.slug);
@@ -227,7 +248,7 @@
         <span class="card-mini-title">${film.title}</span>
         <div class="card-mini-meta">
           <span>${film.year}</span>
-          <span class="card-mini-rating">${film.rating}</span>
+          <span class="card-mini-rating">${film.rating || 'No Rating'}</span>
         </div>
       `;
 
@@ -245,40 +266,66 @@
       movieGrid.appendChild(card);
     });
 
-    // Interactivity for shelf spines
-    const spines = document.querySelectorAll('.spine-item');
-    spines.forEach(spine => {
-      const selectSpine = () => {
-        spines.forEach(s => s.classList.remove('selected'));
-        spine.classList.add('selected');
-        const filmKey = spine.getAttribute('data-film');
-        updateDisplayWithFeatured(filmKey);
-      };
+    // Auto-select first matching card if list view is active
+    if (btnListView && btnListView.classList.contains('active') && films.length > 0) {
+      const firstCard = movieGrid.querySelector('.grid-item-card');
+      if (firstCard) firstCard.click();
+    }
+  };
 
-      spine.addEventListener('click', selectSpine);
-      spine.addEventListener('mouseenter', selectSpine);
-      spine.addEventListener('focus', selectSpine);
+  // Setup tab event listeners
+  if (btnShelfView && btnListView && panelShelfView && panelListView) {
+    btnShelfView.addEventListener('click', () => {
+      btnListView.classList.remove('active');
+      btnShelfView.classList.add('active');
+      panelListView.style.display = 'none';
+      panelShelfView.style.display = 'flex';
+      
+      const spines = panelShelfView.querySelectorAll('.spine-item');
+      if (spines.length > 0) {
+        spines[0].click();
+      }
     });
 
-    // Auto-select first shelf spine on load
-    if (spines.length > 0) {
-      spines[0].classList.add('selected');
-      updateDisplayWithFeatured('2001');
-    }
+    btnListView.addEventListener('click', () => {
+      btnShelfView.classList.remove('active');
+      btnListView.classList.add('active');
+      panelShelfView.style.display = 'none';
+      panelListView.style.display = 'flex';
 
-    // Real-time search
-    const movieSearch = document.getElementById('movie-search');
-    if (movieSearch) {
-      movieSearch.addEventListener('input', (e) => {
-        const query = e.target.value.toLowerCase();
-        const cards = movieGrid.querySelectorAll('.grid-item-card');
-        
-        cards.forEach((card, index) => {
-          const filmObj = window.letterboxdFilms[index];
-          const matches = filmObj.title.toLowerCase().includes(query) || filmObj.year.includes(query);
-          card.style.display = matches ? 'flex' : 'none';
-        });
-      });
-    }
+      renderList();
+    });
   }
+
+  // Interactivity for shelf spines
+  const spines = document.querySelectorAll('.spine-item');
+  spines.forEach(spine => {
+    const selectSpine = () => {
+      spines.forEach(s => s.classList.remove('selected'));
+      spine.classList.add('selected');
+      const filmKey = spine.getAttribute('data-film');
+      updateDisplayWithFeatured(filmKey);
+    };
+
+    spine.addEventListener('click', selectSpine);
+    spine.addEventListener('mouseenter', selectSpine);
+    spine.addEventListener('focus', selectSpine);
+  });
+
+  // Attach search and sort listeners
+  if (movieSearch) {
+    movieSearch.addEventListener('input', renderList);
+  }
+  if (movieSort) {
+    movieSort.addEventListener('change', renderList);
+  }
+
+  // Initialize: Auto-select first shelf spine on load
+  if (spines.length > 0) {
+    spines[0].classList.add('selected');
+    updateDisplayWithFeatured('2001');
+  }
+
+  // Render the initial Letterboxd list in the background panel
+  renderList();
 })();
