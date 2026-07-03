@@ -384,6 +384,247 @@ section, .colophon {
   font-family: var(--mono);
 }
 
+/* === THE FILM CLOSET === */
+.closet-section {
+  max-width: 54rem;
+  margin: 0 auto;
+}
+.closet-intro {
+  margin: 0 0 1.5rem 0;
+  font-size: clamp(1.05rem, 0.4vw + 1rem, 1.2rem);
+  color: var(--ink-soft);
+}
+.closet-container {
+  display: flex;
+  flex-direction: column;
+  background: var(--paper-deep);
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.85);
+}
+.closet-shelf {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 270px;
+  background: #120e0b; /* Wood backdrop dark */
+  border-bottom: 8px solid #0f0a08; /* Shelf board */
+  padding: 0 2rem;
+  overflow: hidden;
+  position: relative;
+}
+/* Subtle shelf shadow */
+.closet-shelf::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 6px;
+  background: rgba(0,0,0,0.85);
+  pointer-events: none;
+}
+.spine-item {
+  width: 44px;
+  height: 220px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+  border-right: 1.5px solid #000;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  padding: 1.1rem 0;
+  transition: transform 350ms cubic-bezier(0.16, 1, 0.3, 1), background 200ms ease, box-shadow 300ms ease;
+  user-select: none;
+  outline: none;
+  position: relative;
+}
+.spine-edge {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 3.5px;
+  opacity: 0.85;
+}
+.spine-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+  width: 100%;
+}
+.spine-num {
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  opacity: 0.85;
+}
+.spine-title {
+  font-family: var(--serif);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+.spine-director {
+  font-size: 0.58rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+/* Individual Spines Identity */
+.spine-item[data-film="2001"] {
+  background: #080808;
+  color: #fff;
+}
+.spine-item[data-film="2001"] .spine-title {
+  letter-spacing: 0.08em;
+}
+.spine-item[data-film="shining"] {
+  background: #872820;
+  color: #ece4d3;
+}
+.spine-item[data-film="shining"] .spine-title {
+  font-family: var(--serif);
+  font-style: italic;
+}
+.spine-item[data-film="mulholland"] {
+  background: #091225;
+  color: #ece4d3;
+}
+.spine-item[data-film="mulholland"] .spine-title {
+  font-style: italic;
+}
+.spine-item[data-film="whiplash"] {
+  background: #e65100;
+  color: #0c0806;
+}
+.spine-item[data-film="whiplash"] .spine-title {
+  font-family: var(--mono);
+  font-weight: bold;
+}
+.spine-item[data-film="shawshank"] {
+  background: #252d3a;
+  color: #ece4d3;
+}
+
+/* Spine Edges */
+.border-2001 { background: #333; }
+.border-shining { background: #e08a82; }
+.border-lynch { background: #3f51b5; }
+.border-whiplash { background: #2e1a14; }
+.border-shawshank { background: #607d8b; }
+
+/* Interactive States */
+.spine-item:hover,
+.spine-item:focus-visible,
+.spine-item.selected {
+  transform: translateY(-28px) rotate(-1deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.75), 5px 15px 15px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+.spine-item.selected::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(236, 228, 211, 0.15);
+  pointer-events: none;
+}
+
+/* Display Box */
+.closet-display {
+  background: var(--paper-deep);
+  border-top: 1px solid var(--hairline);
+  padding: 2rem var(--gutter);
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.display-placeholder {
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.display-content {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 2rem;
+  width: 100%;
+  animation: curio-reveal 380ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+@keyframes curio-reveal {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 680px) {
+  .display-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .display-cover {
+    display: flex;
+    justify-content: center;
+  }
+}
+.cover-art {
+  width: 140px;
+  height: 200px;
+  background: #000;
+  border-radius: 2px;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.65), 0 4px 12px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+.svg-cover {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.display-title {
+  margin: 0 0 0.4rem 0;
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  line-height: 1.15;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+.display-director {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.8rem;
+  color: var(--oxblood-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.display-meta {
+  margin: 0 0 1.2rem 0;
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.05em;
+}
+.display-quote {
+  border-left: 2px solid var(--oxblood);
+  padding-left: 1.2rem;
+  margin: 0 0 1.2rem 0;
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-style: italic;
+  text-align: left;
+}
+.display-description {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
 /* === III. SADAKO === */
 .sadako__grid {
   display: grid;

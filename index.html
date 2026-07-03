@@ -96,6 +96,88 @@
       <p class="sadako__pullquote">wishes made on paper.</p>
     </section>
 
+    <!-- II.75 THE FILM CLOSET -->
+    <section class="closet-section" id="closet-section" aria-labelledby="closet-h">
+      <h2 id="closet-h" class="section-eyebrow">the shelf</h2>
+      <p class="closet-intro">
+        A virtual closet of physical inspirations. Click or hover on a spine to pull the film from the shelf.
+      </p>
+      
+      <div class="closet-container">
+        <!-- Interactive Shelf -->
+        <div class="closet-shelf">
+          <!-- Spine 1: 2001 -->
+          <div class="spine-item" data-film="2001" tabindex="0">
+            <div class="spine-edge border-2001"></div>
+            <div class="spine-content">
+              <span class="spine-num mono">2001</span>
+              <span class="spine-title">2001: A Space Odyssey</span>
+              <span class="spine-director mono">Kubrick</span>
+            </div>
+          </div>
+          
+          <!-- Spine 2: The Shining -->
+          <div class="spine-item" data-film="shining" tabindex="0">
+            <div class="spine-edge border-shining"></div>
+            <div class="spine-content">
+              <span class="spine-num mono">237</span>
+              <span class="spine-title">The Shining</span>
+              <span class="spine-director mono">Kubrick</span>
+            </div>
+          </div>
+          
+          <!-- Spine 3: Mulholland Dr -->
+          <div class="spine-item" data-film="mulholland" tabindex="0">
+            <div class="spine-edge border-lynch"></div>
+            <div class="spine-content">
+              <span class="spine-num mono">119</span>
+              <span class="spine-title">Mulholland Dr.</span>
+              <span class="spine-director mono">Lynch</span>
+            </div>
+          </div>
+
+          <!-- Spine 4: Whiplash -->
+          <div class="spine-item" data-film="whiplash" tabindex="0">
+            <div class="spine-edge border-whiplash"></div>
+            <div class="spine-content">
+              <span class="spine-num mono">2014</span>
+              <span class="spine-title">Whiplash</span>
+              <span class="spine-director mono">Chazelle</span>
+            </div>
+          </div>
+
+          <!-- Spine 5: Shawshank -->
+          <div class="spine-item" data-film="shawshank" tabindex="0">
+            <div class="spine-edge border-shawshank"></div>
+            <div class="spine-content">
+              <span class="spine-num mono">1994</span>
+              <span class="spine-title">The Shawshank Redemption</span>
+              <span class="spine-director mono">Darabont</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Display Case for the Active Film -->
+        <div class="closet-display" id="closet-display">
+          <div class="display-placeholder mono">
+            [ Select a spine to inspect ]
+          </div>
+          <div class="display-content" style="display: none;">
+            <div class="display-cover">
+              <div class="cover-art" id="display-cover-art"></div>
+            </div>
+            <div class="display-details">
+              <h3 class="display-title smallcaps" id="display-title">Title</h3>
+              <p class="display-director mono" id="display-director">Director</p>
+              <p class="display-meta mono" id="display-meta">Year &middot; Runtime</p>
+              <blockquote class="display-quote" id="display-quote">&ldquo;Quote&rdquo;</blockquote>
+              <p class="display-description" id="display-description">Description</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- III.5 CURRENTLY -->
     <aside class="currently" aria-label="Currently">
       <span class="currently__label">currently</span>
