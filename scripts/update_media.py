@@ -127,13 +127,14 @@ def extract_year_from_mal_date(date_str):
             return yr
     return date_str
 
-# --- 2. FETCH MYANIMELIST ANIME (COMPLETED & CURRENTLY WATCHING) ---
+# --- 2. FETCH MYANIMELIST ANIME ---
 def fetch_mal_anime():
+    anime_list = []
+    
+    # Completed Anime
     print(f"Fetching completed Anime for MAL user: {mal_user}")
     url_completed = f"https://myanimelist.net/animelist/{mal_user}/load.json?status=2"
     req_completed = urllib.request.Request(url_completed, headers=headers)
-    anime_list = []
-    
     try:
         with urllib.request.urlopen(req_completed) as response:
             data = json.loads(response.read().decode('utf-8'))
@@ -150,39 +151,52 @@ def fetch_mal_anime():
                     'image': item.get('anime_image_path', ''),
                     'genres': [g['name'] for g in item.get('genres', [])],
                     'episodes': item.get('num_watched_episodes', 0),
-                    'updated_at': item.get('updated_at') or item.get('created_at') or 0
+                    'updated_at': item.get('updated_at') or item.get('created_at') or 0,
+                    'status': 'completed'
                 })
-        # Sort by updated_at descending (Most recently completed first)
-        anime_list.sort(key=lambda x: x.get('updated_at', 0), reverse=True)
-        print(f"Successfully fetched and sorted {len(anime_list)} Anime entries.")
+        print(f"Fetched {len(data)} completed Anime entries.")
     except Exception as e:
-        print(f"Failed to fetch MAL Anime list: {e}")
+        print(f"Failed to fetch MAL completed Anime list: {e}")
         
-    # Fetch Currently Watching
-    watching = []
+    # Currently Watching Anime
     print(f"Fetching currently watching Anime for MAL user: {mal_user}")
     url_watching = f"https://myanimelist.net/animelist/{mal_user}/load.json?status=1"
     req_watching = urllib.request.Request(url_watching, headers=headers)
     try:
         with urllib.request.urlopen(req_watching) as response:
             data = json.loads(response.read().decode('utf-8'))
-            data.sort(key=lambda x: x.get('updated_at') or x.get('created_at') or 0, reverse=True)
             for item in data:
                 title = item.get('anime_title') or item.get('anime_title_eng')
-                watching.append(title)
-        print(f"Found {len(watching)} currently watching titles.")
+                date_str = item.get('anime_start_date_string') or item.get('start_date_string')
+                year = extract_year_from_mal_date(date_str)
+                anime_list.append({
+                    'title': title,
+                    'id': item.get('anime_id'),
+                    'url': 'https://myanimelist.net' + item.get('anime_url', ''),
+                    'year': year,
+                    'score': item.get('score', 0),
+                    'image': item.get('anime_image_path', ''),
+                    'genres': [g['name'] for g in item.get('genres', [])],
+                    'episodes': item.get('num_watched_episodes', 0),
+                    'updated_at': item.get('updated_at') or item.get('created_at') or 0,
+                    'status': 'watching'
+                })
+        print(f"Fetched {len(data)} watching Anime entries.")
     except Exception as e:
         print(f"Failed to fetch MAL watching list: {e}")
 
-    return anime_list, watching
+    # Sort merged list by updated_at descending
+    anime_list.sort(key=lambda x: x.get('updated_at', 0), reverse=True)
+    return anime_list
 
-# --- 3. FETCH MYANIMELIST MANGA (COMPLETED & CURRENTLY READING) ---
+# --- 3. FETCH MYANIMELIST MANGA ---
 def fetch_mal_manga():
+    manga_list = []
+    
+    # Completed Manga
     print(f"Fetching completed Manga for MAL user: {mal_user}")
     url_completed = f"https://myanimelist.net/mangalist/{mal_user}/load.json?status=2"
     req_completed = urllib.request.Request(url_completed, headers=headers)
-    manga_list = []
-    
     try:
         with urllib.request.urlopen(req_completed) as response:
             data = json.loads(response.read().decode('utf-8'))
@@ -200,37 +214,50 @@ def fetch_mal_manga():
                     'genres': [g['name'] for g in item.get('genres', [])],
                     'chapters': item.get('num_read_chapters', 0),
                     'volumes': item.get('num_read_volumes', 0),
-                    'updated_at': item.get('updated_at') or item.get('created_at') or 0
+                    'updated_at': item.get('updated_at') or item.get('created_at') or 0,
+                    'status': 'completed'
                 })
-        # Sort by updated_at descending (Most recently completed first)
-        manga_list.sort(key=lambda x: x.get('updated_at', 0), reverse=True)
-        print(f"Successfully fetched and sorted {len(manga_list)} Manga entries.")
+        print(f"Fetched {len(data)} completed Manga entries.")
     except Exception as e:
-        print(f"Failed to fetch MAL Manga list: {e}")
+        print(f"Failed to fetch MAL completed Manga list: {e}")
         
-    # Fetch Currently Reading
-    reading = []
+    # Currently Reading Manga
     print(f"Fetching currently reading Manga for MAL user: {mal_user}")
     url_reading = f"https://myanimelist.net/mangalist/{mal_user}/load.json?status=1"
     req_reading = urllib.request.Request(url_reading, headers=headers)
     try:
         with urllib.request.urlopen(req_reading) as response:
             data = json.loads(response.read().decode('utf-8'))
-            data.sort(key=lambda x: x.get('updated_at') or x.get('created_at') or 0, reverse=True)
             for item in data:
                 title = item.get('manga_title') or item.get('manga_english')
-                reading.append(title)
-        print(f"Found {len(reading)} currently reading titles.")
+                date_str = item.get('manga_start_date_string') or item.get('start_date_string')
+                year = extract_year_from_mal_date(date_str)
+                manga_list.append({
+                    'title': title,
+                    'id': item.get('manga_id'),
+                    'url': 'https://myanimelist.net' + item.get('manga_url', ''),
+                    'year': year,
+                    'score': item.get('score', 0),
+                    'image': item.get('manga_image_path', ''),
+                    'genres': [g['name'] for g in item.get('genres', [])],
+                    'chapters': item.get('num_read_chapters', 0),
+                    'volumes': item.get('num_read_volumes', 0),
+                    'updated_at': item.get('updated_at') or item.get('created_at') or 0,
+                    'status': 'reading'
+                })
+        print(f"Fetched {len(data)} reading Manga entries.")
     except Exception as e:
         print(f"Failed to fetch MAL reading list: {e}")
 
-    return manga_list, reading
+    # Sort merged list by updated_at descending
+    manga_list.sort(key=lambda x: x.get('updated_at', 0), reverse=True)
+    return manga_list
 
 # --- MAIN RUN ---
 if __name__ == "__main__":
     films = fetch_letterboxd_films()
-    anime, watching = fetch_mal_anime()
-    manga, reading = fetch_mal_manga()
+    anime = fetch_mal_anime()
+    manga = fetch_mal_manga()
     
     # Save output JSON as fallback cache
     films_json_path = os.path.join("assets", "data", "films.json")
@@ -244,11 +271,7 @@ if __name__ == "__main__":
     payload = {
         "films": films,
         "anime": anime,
-        "manga": manga,
-        "currently": {
-            "watching": watching,
-            "reading": reading
-        }
+        "manga": manga
     }
     
     with open(output_js_path, "w", encoding="utf-8") as out:

@@ -3249,7 +3249,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 10,
-      "updated_at": 1783021753
+      "updated_at": 1783021753,
+      "status": "completed"
     },
     {
       "title": "Re:Zero kara Hajimeru Isekai Seikatsu 2nd Season",
@@ -3264,7 +3265,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 13,
-      "updated_at": 1782423522
+      "updated_at": 1782423522,
+      "status": "completed"
     },
     {
       "title": "Class de 2-banme ni Kawaii Onnanoko to Tomodachi ni Natta",
@@ -3277,7 +3279,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "episodes": 12,
-      "updated_at": 1782305476
+      "updated_at": 1782305476,
+      "status": "completed"
     },
     {
       "title": "Re:Zero kara Hajimeru Isekai Seikatsu - Hyouketsu no Kizuna",
@@ -3292,7 +3295,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 1,
-      "updated_at": 1782302210
+      "updated_at": 1782302210,
+      "status": "completed"
     },
     {
       "title": "Re:Zero kara Hajimeru Isekai Seikatsu - Memory Snow",
@@ -3305,7 +3309,8 @@ window.mediaDatabase = {
         "Fantasy"
       ],
       "episodes": 1,
-      "updated_at": 1782298317
+      "updated_at": 1782298317,
+      "status": "completed"
     },
     {
       "title": "Re:Zero kara Hajimeru Isekai Seikatsu",
@@ -3320,7 +3325,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 25,
-      "updated_at": 1782245071
+      "updated_at": 1782245071,
+      "status": "completed"
     },
     {
       "title": "Yahari Ore no Seishun Love Comedy wa Machigatteiru. Kan",
@@ -3334,7 +3340,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "episodes": 12,
-      "updated_at": 1781793275
+      "updated_at": 1781793275,
+      "status": "completed"
     },
     {
       "title": "Fuufu Ijou, Koibito Miman.",
@@ -3347,7 +3354,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "episodes": 12,
-      "updated_at": 1781267451
+      "updated_at": 1781267451,
+      "status": "completed"
     },
     {
       "title": "Sono Bisque Doll wa Koi wo Suru Season 2",
@@ -3360,7 +3368,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "episodes": 12,
-      "updated_at": 1781013011
+      "updated_at": 1781013011,
+      "status": "completed"
     },
     {
       "title": "Yahari Ore no Seishun Love Comedy wa Machigatteiru. Zoku",
@@ -3374,7 +3383,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "episodes": 13,
-      "updated_at": 1779988185
+      "updated_at": 1779988185,
+      "status": "completed"
     },
     {
       "title": "Dorohedoro Season 2",
@@ -3390,7 +3400,8 @@ window.mediaDatabase = {
         "Horror"
       ],
       "episodes": 11,
-      "updated_at": 1779988172
+      "updated_at": 1779988172,
+      "status": "completed"
     },
     {
       "title": "Yahari Ore no Seishun Love Comedy wa Machigatteiru.",
@@ -3404,7 +3415,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "episodes": 13,
-      "updated_at": 1775835666
+      "updated_at": 1775835666,
+      "status": "completed"
     },
     {
       "title": "Wotaku ni Koi wa Muzukashii",
@@ -3418,7 +3430,23 @@ window.mediaDatabase = {
         "Romance"
       ],
       "episodes": 11,
-      "updated_at": 1775498759
+      "updated_at": 1775498759,
+      "status": "completed"
+    },
+    {
+      "title": "Koori no Jouheki",
+      "id": 60852,
+      "url": "https://myanimelist.net/anime/60852/Koori_no_Jouheki",
+      "year": "2026",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1565/154933.webp?s=4cad74232f73414d36a506755a75876b",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "episodes": 0,
+      "updated_at": 1775204386,
+      "status": "watching"
     },
     {
       "title": "Jigokuraku 2nd Season",
@@ -3433,7 +3461,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 12,
-      "updated_at": 1775199529
+      "updated_at": 1775199529,
+      "status": "completed"
     },
     {
       "title": "Seihantai na Kimi to Boku",
@@ -3447,7 +3476,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "episodes": 12,
-      "updated_at": 1774986684
+      "updated_at": 1774986684,
+      "status": "completed"
     },
     {
       "title": "Sousou no Frieren 2nd Season",
@@ -3462,7 +3492,8 @@ window.mediaDatabase = {
         "Fantasy"
       ],
       "episodes": 10,
-      "updated_at": 1774772164
+      "updated_at": 1774772164,
+      "status": "completed"
     },
     {
       "title": "Sousou no Frieren",
@@ -3478,7 +3509,8 @@ window.mediaDatabase = {
         "Fantasy"
       ],
       "episodes": 28,
-      "updated_at": 1774772144
+      "updated_at": 1774772144,
+      "status": "completed"
     },
     {
       "title": "Jujutsu Kaisen: Shimetsu Kaiyuu - Zenpen",
@@ -3492,7 +3524,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 12,
-      "updated_at": 1774600606
+      "updated_at": 1774600606,
+      "status": "completed"
     },
     {
       "title": "[Oshi no Ko] 3rd Season",
@@ -3505,7 +3538,25 @@ window.mediaDatabase = {
         "Drama"
       ],
       "episodes": 11,
-      "updated_at": 1774523560
+      "updated_at": 1774523560,
+      "status": "completed"
+    },
+    {
+      "title": "Steel Ball Run: JoJo no Kimyou na Bouken",
+      "id": 61469,
+      "url": "https://myanimelist.net/anime/61469/Steel_Ball_Run__JoJo_no_Kimyou_na_Bouken",
+      "year": "2026",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1448/154111.webp?s=a5d873b37bba64b748df76af90e05524",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Mystery",
+        "Supernatural"
+      ],
+      "episodes": 0,
+      "updated_at": 1773938594,
+      "status": "watching"
     },
     {
       "title": "Kaguya-sama wa Kokurasetai: Otona e no Kaidan",
@@ -3519,7 +3570,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "episodes": 1,
-      "updated_at": 1768558369
+      "updated_at": 1768558369,
+      "status": "completed"
     },
     {
       "title": "Mato Seihei no Slave",
@@ -3534,7 +3586,24 @@ window.mediaDatabase = {
         "Ecchi"
       ],
       "episodes": 12,
-      "updated_at": 1767946572
+      "updated_at": 1767946572,
+      "status": "completed"
+    },
+    {
+      "title": "One Piece",
+      "id": 21,
+      "url": "https://myanimelist.net/anime/21/One_Piece",
+      "year": "1999",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1244/138851.webp?s=f9b2530cb118566baae61a4051ba8067",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "episodes": 1045,
+      "updated_at": 1767945059,
+      "status": "watching"
     },
     {
       "title": "Sono Bisque Doll wa Koi wo Suru",
@@ -3547,7 +3616,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "episodes": 12,
-      "updated_at": 1759429146
+      "updated_at": 1759429146,
+      "status": "completed"
     },
     {
       "title": "Kimetsu no Yaiba Movie 1: Mugenjou-hen - Akaza Sairai",
@@ -3562,7 +3632,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 1,
-      "updated_at": 1759428604
+      "updated_at": 1759428604,
+      "status": "completed"
     },
     {
       "title": "Cyberpunk: Edgerunners",
@@ -3576,7 +3647,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "episodes": 10,
-      "updated_at": 1759427906
+      "updated_at": 1759427906,
+      "status": "completed"
     },
     {
       "title": "Kusuriya no Hitorigoto 2nd Season",
@@ -3590,7 +3662,8 @@ window.mediaDatabase = {
         "Mystery"
       ],
       "episodes": 24,
-      "updated_at": 1752827262
+      "updated_at": 1752827262,
+      "status": "completed"
     },
     {
       "title": "Boku dake ga Inai Machi",
@@ -3604,7 +3677,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 12,
-      "updated_at": 1750106092
+      "updated_at": 1750106092,
+      "status": "completed"
     },
     {
       "title": "Tengoku Daimakyou",
@@ -3619,7 +3693,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "episodes": 13,
-      "updated_at": 1750002723
+      "updated_at": 1750002723,
+      "status": "completed"
     },
     {
       "title": "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo 2nd Season",
@@ -3633,7 +3708,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "episodes": 12,
-      "updated_at": 1748966168
+      "updated_at": 1748966168,
+      "status": "completed"
     },
     {
       "title": "Seitokai Yakuindomo",
@@ -3646,7 +3722,8 @@ window.mediaDatabase = {
         "Comedy"
       ],
       "episodes": 13,
-      "updated_at": 1743021482
+      "updated_at": 1743021482,
+      "status": "completed"
     },
     {
       "title": "Look Back",
@@ -3660,7 +3737,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "episodes": 1,
-      "updated_at": 1741206770
+      "updated_at": 1741206770,
+      "status": "completed"
     },
     {
       "title": "Kamonohashi Ron no Kindan Suiri 2nd Season",
@@ -3674,7 +3752,8 @@ window.mediaDatabase = {
         "Mystery"
       ],
       "episodes": 13,
-      "updated_at": 1735739797
+      "updated_at": 1735739797,
+      "status": "completed"
     },
     {
       "title": "Ginga Eiyuu Densetsu",
@@ -3688,7 +3767,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "episodes": 110,
-      "updated_at": 1735243819
+      "updated_at": 1735243819,
+      "status": "completed"
     },
     {
       "title": "Dandadan",
@@ -3703,7 +3783,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 12,
-      "updated_at": 1734902725
+      "updated_at": 1734902725,
+      "status": "completed"
     },
     {
       "title": "[Oshi no Ko] 2nd Season",
@@ -3716,7 +3797,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "episodes": 13,
-      "updated_at": 1730532213
+      "updated_at": 1730532213,
+      "status": "completed"
     },
     {
       "title": "Shy 2nd Season",
@@ -3730,7 +3812,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "episodes": 12,
-      "updated_at": 1727191491
+      "updated_at": 1727191491,
+      "status": "completed"
     },
     {
       "title": "Dead Dead Demons Dededede Destruction (ONA)",
@@ -3744,7 +3827,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "episodes": 17,
-      "updated_at": 1726826907
+      "updated_at": 1726826907,
+      "status": "completed"
     },
     {
       "title": "Shikanoko Nokonoko Koshitantan",
@@ -3757,7 +3841,8 @@ window.mediaDatabase = {
         "Comedy"
       ],
       "episodes": 12,
-      "updated_at": 1726751092
+      "updated_at": 1726751092,
+      "status": "completed"
     },
     {
       "title": "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2",
@@ -3773,7 +3858,8 @@ window.mediaDatabase = {
         "Ecchi"
       ],
       "episodes": 12,
-      "updated_at": 1719989883
+      "updated_at": 1719989883,
+      "status": "completed"
     },
     {
       "title": "Mushoku Tensei: Isekai Ittara Honki Dasu",
@@ -3789,7 +3875,8 @@ window.mediaDatabase = {
         "Ecchi"
       ],
       "episodes": 11,
-      "updated_at": 1719989878
+      "updated_at": 1719989878,
+      "status": "completed"
     },
     {
       "title": "Mushoku Tensei II: Isekai Ittara Honki Dasu",
@@ -3805,7 +3892,8 @@ window.mediaDatabase = {
         "Ecchi"
       ],
       "episodes": 12,
-      "updated_at": 1719989876
+      "updated_at": 1719989876,
+      "status": "completed"
     },
     {
       "title": "Mushoku Tensei II: Isekai Ittara Honki Dasu Part 2",
@@ -3821,7 +3909,8 @@ window.mediaDatabase = {
         "Ecchi"
       ],
       "episodes": 12,
-      "updated_at": 1719989871
+      "updated_at": 1719989871,
+      "status": "completed"
     },
     {
       "title": "Kimetsu no Yaiba: Hashira Geiko-hen",
@@ -3835,7 +3924,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 8,
-      "updated_at": 1719825214
+      "updated_at": 1719825214,
+      "status": "completed"
     },
     {
       "title": "Kaijuu 8-gou",
@@ -3850,7 +3940,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "episodes": 12,
-      "updated_at": 1719754511
+      "updated_at": 1719754511,
+      "status": "completed"
     },
     {
       "title": "Kaii to Otome to Kamikakushi",
@@ -3865,7 +3956,8 @@ window.mediaDatabase = {
         "Ecchi"
       ],
       "episodes": 12,
-      "updated_at": 1719511154
+      "updated_at": 1719511154,
+      "status": "completed"
     },
     {
       "title": "Hotaru no Haka",
@@ -3878,7 +3970,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "episodes": 1,
-      "updated_at": 1719331822
+      "updated_at": 1719331822,
+      "status": "completed"
     },
     {
       "title": "Shuumatsu Train Doko e Iku?",
@@ -3891,7 +3984,8 @@ window.mediaDatabase = {
         "Adventure"
       ],
       "episodes": 12,
-      "updated_at": 1719331805
+      "updated_at": 1719331805,
+      "status": "completed"
     },
     {
       "title": "Kono Subarashii Sekai ni Shukufuku wo! 3",
@@ -3906,7 +4000,8 @@ window.mediaDatabase = {
         "Fantasy"
       ],
       "episodes": 11,
-      "updated_at": 1718870761
+      "updated_at": 1718870761,
+      "status": "completed"
     },
     {
       "title": "Jiisan Baasan Wakagaeru",
@@ -3921,7 +4016,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 11,
-      "updated_at": 1718618400
+      "updated_at": 1718618400,
+      "status": "completed"
     },
     {
       "title": "Dungeon Meshi",
@@ -3937,7 +4033,8 @@ window.mediaDatabase = {
         "Gourmet"
       ],
       "episodes": 24,
-      "updated_at": 1718383025
+      "updated_at": 1718383025,
+      "status": "completed"
     },
     {
       "title": "Kimi no Suizou wo Tabetai",
@@ -3951,7 +4048,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "episodes": 1,
-      "updated_at": 1718017845
+      "updated_at": 1718017845,
+      "status": "completed"
     },
     {
       "title": "Ore dake Level Up na Ken",
@@ -3966,7 +4064,8 @@ window.mediaDatabase = {
         "Fantasy"
       ],
       "episodes": 12,
-      "updated_at": 1711971995
+      "updated_at": 1711971995,
+      "status": "completed"
     },
     {
       "title": "Kusuriya no Hitorigoto",
@@ -3980,7 +4079,8 @@ window.mediaDatabase = {
         "Mystery"
       ],
       "episodes": 24,
-      "updated_at": 1711232313
+      "updated_at": 1711232313,
+      "status": "completed"
     },
     {
       "title": "Undead Unluck",
@@ -3994,7 +4094,8 @@ window.mediaDatabase = {
         "Comedy"
       ],
       "episodes": 24,
-      "updated_at": 1711194489
+      "updated_at": 1711194489,
+      "status": "completed"
     },
     {
       "title": "Kamonohashi Ron no Kindan Suiri",
@@ -4008,7 +4109,8 @@ window.mediaDatabase = {
         "Mystery"
       ],
       "episodes": 13,
-      "updated_at": 1710622450
+      "updated_at": 1710622450,
+      "status": "completed"
     },
     {
       "title": "Migi to Dali",
@@ -4023,7 +4125,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 13,
-      "updated_at": 1710622432
+      "updated_at": 1710622432,
+      "status": "completed"
     },
     {
       "title": "Omoide no Marnie",
@@ -4038,7 +4141,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 1,
-      "updated_at": 1710622408
+      "updated_at": 1710622408,
+      "status": "completed"
     },
     {
       "title": "Samurai Flamenco",
@@ -4052,7 +4156,8 @@ window.mediaDatabase = {
         "Comedy"
       ],
       "episodes": 22,
-      "updated_at": 1710622403
+      "updated_at": 1710622403,
+      "status": "completed"
     },
     {
       "title": "Kill la Kill",
@@ -4068,7 +4173,8 @@ window.mediaDatabase = {
         "Ecchi"
       ],
       "episodes": 24,
-      "updated_at": 1710622401
+      "updated_at": 1710622401,
+      "status": "completed"
     },
     {
       "title": "Deca-Dence",
@@ -4083,7 +4189,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "episodes": 12,
-      "updated_at": 1705012977
+      "updated_at": 1705012977,
+      "status": "completed"
     },
     {
       "title": "Tenkuu Shinpan",
@@ -4099,7 +4206,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 12,
-      "updated_at": 1704483524
+      "updated_at": 1704483524,
+      "status": "completed"
     },
     {
       "title": "Lycoris Recoil",
@@ -4112,7 +4220,8 @@ window.mediaDatabase = {
         "Action"
       ],
       "episodes": 13,
-      "updated_at": 1703790945
+      "updated_at": 1703790945,
+      "status": "completed"
     },
     {
       "title": "Jujutsu Kaisen 2nd Season",
@@ -4126,7 +4235,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 23,
-      "updated_at": 1703790907
+      "updated_at": 1703790907,
+      "status": "completed"
     },
     {
       "title": "Zom 100: Zombie ni Naru made ni Shitai 100 no Koto",
@@ -4140,7 +4250,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 12,
-      "updated_at": 1703600765
+      "updated_at": 1703600765,
+      "status": "completed"
     },
     {
       "title": "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo",
@@ -4154,7 +4265,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "episodes": 12,
-      "updated_at": 1703488680
+      "updated_at": 1703488680,
+      "status": "completed"
     },
     {
       "title": "Hametsu no Oukoku",
@@ -4170,7 +4282,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "episodes": 12,
-      "updated_at": 1703340078
+      "updated_at": 1703340078,
+      "status": "completed"
     },
     {
       "title": "Code Geass: Hangyaku no Lelouch R2",
@@ -4185,7 +4298,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "episodes": 25,
-      "updated_at": 1703279640
+      "updated_at": 1703279640,
+      "status": "completed"
     },
     {
       "title": "Code Geass: Hangyaku no Lelouch",
@@ -4200,7 +4314,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "episodes": 25,
-      "updated_at": 1702977437
+      "updated_at": 1702977437,
+      "status": "completed"
     },
     {
       "title": "Shy",
@@ -4214,7 +4329,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "episodes": 12,
-      "updated_at": 1702977337
+      "updated_at": 1702977337,
+      "status": "completed"
     },
     {
       "title": "Shingeki no Kyojin Season 3",
@@ -4229,7 +4345,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 12,
-      "updated_at": 1701358202
+      "updated_at": 1701358202,
+      "status": "completed"
     },
     {
       "title": "Shingeki no Kyojin: The Final Season - Kanketsu-hen",
@@ -4244,7 +4361,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 2,
-      "updated_at": 1699198136
+      "updated_at": 1699198136,
+      "status": "completed"
     },
     {
       "title": "Shingeki no Kyojin: The Final Season Part 2",
@@ -4259,7 +4377,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 12,
-      "updated_at": 1697809499
+      "updated_at": 1697809499,
+      "status": "completed"
     },
     {
       "title": "Kotonoha no Niwa",
@@ -4274,7 +4393,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "episodes": 1,
-      "updated_at": 1697809459
+      "updated_at": 1697809459,
+      "status": "completed"
     },
     {
       "title": "Kimi no Na wa.",
@@ -4288,7 +4408,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "episodes": 1,
-      "updated_at": 1697809444
+      "updated_at": 1697809444,
+      "status": "completed"
     },
     {
       "title": "86 Part 2",
@@ -4302,7 +4423,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "episodes": 12,
-      "updated_at": 1697809399
+      "updated_at": 1697809399,
+      "status": "completed"
     },
     {
       "title": "Renai Flops",
@@ -4318,7 +4440,8 @@ window.mediaDatabase = {
         "Ecchi"
       ],
       "episodes": 12,
-      "updated_at": 1696760743
+      "updated_at": 1696760743,
+      "status": "completed"
     },
     {
       "title": "Akame ga Kill!",
@@ -4332,7 +4455,8 @@ window.mediaDatabase = {
         "Fantasy"
       ],
       "episodes": 24,
-      "updated_at": 1696540576
+      "updated_at": 1696540576,
+      "status": "completed"
     },
     {
       "title": "Dekiru Neko wa Kyou mo Yuuutsu",
@@ -4345,7 +4469,8 @@ window.mediaDatabase = {
         "Comedy"
       ],
       "episodes": 13,
-      "updated_at": 1696093726
+      "updated_at": 1696093726,
+      "status": "completed"
     },
     {
       "title": "Horimiya",
@@ -4358,7 +4483,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "episodes": 13,
-      "updated_at": 1696007273
+      "updated_at": 1696007273,
+      "status": "completed"
     },
     {
       "title": "Kimetsu no Yaiba: Yuukaku-hen",
@@ -4372,7 +4498,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 11,
-      "updated_at": 1695997064
+      "updated_at": 1695997064,
+      "status": "completed"
     },
     {
       "title": "Undead Girl Murder Farce",
@@ -4386,7 +4513,8 @@ window.mediaDatabase = {
         "Mystery"
       ],
       "episodes": 13,
-      "updated_at": 1695922209
+      "updated_at": 1695922209,
+      "status": "completed"
     },
     {
       "title": "Steins;Gate",
@@ -4401,7 +4529,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 24,
-      "updated_at": 1695655772
+      "updated_at": 1695655772,
+      "status": "completed"
     },
     {
       "title": "Mob Psycho 100 III",
@@ -4416,7 +4545,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 12,
-      "updated_at": 1695655691
+      "updated_at": 1695655691,
+      "status": "completed"
     },
     {
       "title": "Horimiya: Piece",
@@ -4429,7 +4559,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "episodes": 13,
-      "updated_at": 1695649798
+      "updated_at": 1695649798,
+      "status": "completed"
     },
     {
       "title": "Satsuriku no Tenshi",
@@ -4444,7 +4575,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 16,
-      "updated_at": 1694617083
+      "updated_at": 1694617083,
+      "status": "completed"
     },
     {
       "title": "Shinseiki Evangelion",
@@ -4461,7 +4593,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 26,
-      "updated_at": 1693323577
+      "updated_at": 1693323577,
+      "status": "completed"
     },
     {
       "title": "Shimoneta to Iu Gainen ga Sonzai Shinai Taikutsu na Sekai",
@@ -4475,7 +4608,8 @@ window.mediaDatabase = {
         "Ecchi"
       ],
       "episodes": 12,
-      "updated_at": 1693323516
+      "updated_at": 1693323516,
+      "status": "completed"
     },
     {
       "title": "Steins;Gate: Kyoukaimenjou no Missing Link - Divide By Zero",
@@ -4489,7 +4623,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 1,
-      "updated_at": 1692363831
+      "updated_at": 1692363831,
+      "status": "completed"
     },
     {
       "title": "Kimetsu no Yaiba: Katanakaji no Sato-hen",
@@ -4503,7 +4638,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 11,
-      "updated_at": 1691186115
+      "updated_at": 1691186115,
+      "status": "completed"
     },
     {
       "title": "Kimetsu no Yaiba Movie: Mugen Ressha-hen",
@@ -4517,7 +4653,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 1,
-      "updated_at": 1691186099
+      "updated_at": 1691186099,
+      "status": "completed"
     },
     {
       "title": 86,
@@ -4531,7 +4668,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "episodes": 11,
-      "updated_at": 1690995735
+      "updated_at": 1690995735,
+      "status": "completed"
     },
     {
       "title": "[Oshi no Ko]",
@@ -4545,7 +4683,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "episodes": 11,
-      "updated_at": 1690799185
+      "updated_at": 1690799185,
+      "status": "completed"
     },
     {
       "title": "Kono Subarashii Sekai ni Bakuen wo!",
@@ -4559,7 +4698,8 @@ window.mediaDatabase = {
         "Fantasy"
       ],
       "episodes": 12,
-      "updated_at": 1690799168
+      "updated_at": 1690799168,
+      "status": "completed"
     },
     {
       "title": "JoJo no Kimyou na Bouken (TV)",
@@ -4574,7 +4714,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 26,
-      "updated_at": 1690798973
+      "updated_at": 1690798973,
+      "status": "completed"
     },
     {
       "title": "Made in Abyss: Retsujitsu no Ougonkyou",
@@ -4591,7 +4732,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "episodes": 12,
-      "updated_at": 1690798676
+      "updated_at": 1690798676,
+      "status": "completed"
     },
     {
       "title": "Suzume no Tojimari",
@@ -4605,7 +4747,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 1,
-      "updated_at": 1690315592
+      "updated_at": 1690315592,
+      "status": "completed"
     },
     {
       "title": "Death Parade",
@@ -4620,7 +4763,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 12,
-      "updated_at": 1689800341
+      "updated_at": 1689800341,
+      "status": "completed"
     },
     {
       "title": "Jigokuraku",
@@ -4635,7 +4779,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 13,
-      "updated_at": 1689090170
+      "updated_at": 1689090170,
+      "status": "completed"
     },
     {
       "title": "Vinland Saga Season 2",
@@ -4650,7 +4795,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "episodes": 24,
-      "updated_at": 1689090054
+      "updated_at": 1689090054,
+      "status": "completed"
     },
     {
       "title": "Cowboy Bebop",
@@ -4665,7 +4811,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "episodes": 26,
-      "updated_at": 1689076478
+      "updated_at": 1689076478,
+      "status": "completed"
     },
     {
       "title": "Made in Abyss Movie 3: Fukaki Tamashii no Reimei",
@@ -4682,7 +4829,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "episodes": 1,
-      "updated_at": 1689009194
+      "updated_at": 1689009194,
+      "status": "completed"
     },
     {
       "title": "Made in Abyss",
@@ -4699,7 +4847,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "episodes": 13,
-      "updated_at": 1689009182
+      "updated_at": 1689009182,
+      "status": "completed"
     },
     {
       "title": "Sen to Chihiro no Kamikakushi",
@@ -4714,7 +4863,8 @@ window.mediaDatabase = {
         "Fantasy"
       ],
       "episodes": 1,
-      "updated_at": 1688454571
+      "updated_at": 1688454571,
+      "status": "completed"
     },
     {
       "title": "Shigatsu wa Kimi no Uso",
@@ -4728,7 +4878,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "episodes": 22,
-      "updated_at": 1688400183
+      "updated_at": 1688400183,
+      "status": "completed"
     },
     {
       "title": "Kaguya-sama wa Kokurasetai: First Kiss wa Owaranai",
@@ -4743,7 +4894,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "episodes": 1,
-      "updated_at": 1687727246
+      "updated_at": 1687727246,
+      "status": "completed"
     },
     {
       "title": "Golden Boy",
@@ -4758,7 +4910,8 @@ window.mediaDatabase = {
         "Ecchi"
       ],
       "episodes": 6,
-      "updated_at": 1687727069
+      "updated_at": 1687727069,
+      "status": "completed"
     },
     {
       "title": "Nakitai Watashi wa Neko wo Kaburu",
@@ -4774,7 +4927,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 1,
-      "updated_at": 1687549486
+      "updated_at": 1687549486,
+      "status": "completed"
     },
     {
       "title": "Kono Subarashii Sekai ni Shukufuku wo! 2",
@@ -4789,7 +4943,8 @@ window.mediaDatabase = {
         "Fantasy"
       ],
       "episodes": 10,
-      "updated_at": 1687549281
+      "updated_at": 1687549281,
+      "status": "completed"
     },
     {
       "title": "Kono Subarashii Sekai ni Shukufuku wo!",
@@ -4804,7 +4959,8 @@ window.mediaDatabase = {
         "Fantasy"
       ],
       "episodes": 10,
-      "updated_at": 1687549257
+      "updated_at": 1687549257,
+      "status": "completed"
     },
     {
       "title": "Uchiage Hanabi, Shita kara Miru ka? Yoko kara Miru ka?",
@@ -4818,7 +4974,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "episodes": 1,
-      "updated_at": 1686375475
+      "updated_at": 1686375475,
+      "status": "completed"
     },
     {
       "title": "Kimi to, Nami ni Noretara",
@@ -4833,7 +4990,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 1,
-      "updated_at": 1686375433
+      "updated_at": 1686375433,
+      "status": "completed"
     },
     {
       "title": "Seishun Buta Yarou wa Yumemiru Shoujo no Yume wo Minai",
@@ -4848,7 +5006,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 1,
-      "updated_at": 1685464910
+      "updated_at": 1685464910,
+      "status": "completed"
     },
     {
       "title": "One Punch Man 2nd Season",
@@ -4862,7 +5021,8 @@ window.mediaDatabase = {
         "Comedy"
       ],
       "episodes": 12,
-      "updated_at": 1685224236
+      "updated_at": 1685224236,
+      "status": "completed"
     },
     {
       "title": "Death Note",
@@ -4876,7 +5036,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 37,
-      "updated_at": 1685163780
+      "updated_at": 1685163780,
+      "status": "completed"
     },
     {
       "title": "Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai",
@@ -4891,7 +5052,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 13,
-      "updated_at": 1685104917
+      "updated_at": 1685104917,
+      "status": "completed"
     },
     {
       "title": "Kono Sekai no Katasumi ni",
@@ -4905,7 +5067,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "episodes": 1,
-      "updated_at": 1685104840
+      "updated_at": 1685104840,
+      "status": "completed"
     },
     {
       "title": "Perfect Blue",
@@ -4922,7 +5085,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 1,
-      "updated_at": 1684593961
+      "updated_at": 1684593961,
+      "status": "completed"
     },
     {
       "title": "JoJo no Kimyou na Bouken Part 3: Stardust Crusaders",
@@ -4936,7 +5100,8 @@ window.mediaDatabase = {
         "Adventure"
       ],
       "episodes": 24,
-      "updated_at": 1684593917
+      "updated_at": 1684593917,
+      "status": "completed"
     },
     {
       "title": "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen",
@@ -4950,7 +5115,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "episodes": 12,
-      "updated_at": 1684065132
+      "updated_at": 1684065132,
+      "status": "completed"
     },
     {
       "title": "Serial Experiments Lain",
@@ -4969,7 +5135,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 13,
-      "updated_at": 1684065006
+      "updated_at": 1684065006,
+      "status": "completed"
     },
     {
       "title": "NHK ni Youkoso!",
@@ -4984,7 +5151,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "episodes": 24,
-      "updated_at": 1683962900
+      "updated_at": 1683962900,
+      "status": "completed"
     },
     {
       "title": "Devilman: Crybaby",
@@ -5000,7 +5168,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 10,
-      "updated_at": 1682692991
+      "updated_at": 1682692991,
+      "status": "completed"
     },
     {
       "title": "Kono Subarashii Sekai ni Shukufuku wo! 2: Kono Subarashii Geijutsu ni Shukufuku wo!",
@@ -5015,7 +5184,8 @@ window.mediaDatabase = {
         "Fantasy"
       ],
       "episodes": 1,
-      "updated_at": 1682692575
+      "updated_at": 1682692575,
+      "status": "completed"
     },
     {
       "title": "Paprika",
@@ -5032,7 +5202,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 1,
-      "updated_at": 1682692547
+      "updated_at": 1682692547,
+      "status": "completed"
     },
     {
       "title": "Dorohedoro",
@@ -5048,7 +5219,8 @@ window.mediaDatabase = {
         "Horror"
       ],
       "episodes": 12,
-      "updated_at": 1682692529
+      "updated_at": 1682692529,
+      "status": "completed"
     },
     {
       "title": "Saiki Kusuo no Ψ-nan: Kanketsu-hen",
@@ -5061,7 +5233,8 @@ window.mediaDatabase = {
         "Comedy"
       ],
       "episodes": 1,
-      "updated_at": 1682692132
+      "updated_at": 1682692132,
+      "status": "completed"
     },
     {
       "title": "Kaguya-hime no Monogatari",
@@ -5075,7 +5248,8 @@ window.mediaDatabase = {
         "Fantasy"
       ],
       "episodes": 1,
-      "updated_at": 1682692099
+      "updated_at": 1682692099,
+      "status": "completed"
     },
     {
       "title": "Dororo",
@@ -5090,7 +5264,8 @@ window.mediaDatabase = {
         "Fantasy"
       ],
       "episodes": 24,
-      "updated_at": 1682692078
+      "updated_at": 1682692078,
+      "status": "completed"
     },
     {
       "title": "Tenki no Ko",
@@ -5106,7 +5281,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 1,
-      "updated_at": 1682692028
+      "updated_at": 1682692028,
+      "status": "completed"
     },
     {
       "title": "Hotarubi no Mori e",
@@ -5122,7 +5298,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 1,
-      "updated_at": 1682692018
+      "updated_at": 1682692018,
+      "status": "completed"
     },
     {
       "title": "Violet Evergarden: Kitto \"Ai\" wo Shiru Hi ga Kuru no Darou",
@@ -5135,7 +5312,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "episodes": 1,
-      "updated_at": 1682691980
+      "updated_at": 1682691980,
+      "status": "completed"
     },
     {
       "title": "Kiseijuu: Sei no Kakuritsu",
@@ -5151,7 +5329,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 24,
-      "updated_at": 1682691922
+      "updated_at": 1682691922,
+      "status": "completed"
     },
     {
       "title": "Violet Evergarden Gaiden: Eien to Jidou Shuki Ningyou",
@@ -5164,7 +5343,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "episodes": 1,
-      "updated_at": 1682691771
+      "updated_at": 1682691771,
+      "status": "completed"
     },
     {
       "title": "Josee to Tora to Sakana-tachi",
@@ -5178,7 +5358,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "episodes": 1,
-      "updated_at": 1682691763
+      "updated_at": 1682691763,
+      "status": "completed"
     },
     {
       "title": "Saiki Kusuo no Ψ-nan 2",
@@ -5191,7 +5372,8 @@ window.mediaDatabase = {
         "Comedy"
       ],
       "episodes": 24,
-      "updated_at": 1682691751
+      "updated_at": 1682691751,
+      "status": "completed"
     },
     {
       "title": "Saiki Kusuo no Ψ-nan",
@@ -5204,7 +5386,8 @@ window.mediaDatabase = {
         "Comedy"
       ],
       "episodes": 120,
-      "updated_at": 1682691741
+      "updated_at": 1682691741,
+      "status": "completed"
     },
     {
       "title": "Grand Blue",
@@ -5217,7 +5400,8 @@ window.mediaDatabase = {
         "Comedy"
       ],
       "episodes": 12,
-      "updated_at": 1682691726
+      "updated_at": 1682691726,
+      "status": "completed"
     },
     {
       "title": "JoJo no Kimyou na Bouken Part 3: Stardust Crusaders - Egypt-hen",
@@ -5231,7 +5415,8 @@ window.mediaDatabase = {
         "Adventure"
       ],
       "episodes": 24,
-      "updated_at": 1682691711
+      "updated_at": 1682691711,
+      "status": "completed"
     },
     {
       "title": "Steins;Gate Movie: Fuka Ryouiki no Déjà vu",
@@ -5245,7 +5430,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "episodes": 1,
-      "updated_at": 1682691692
+      "updated_at": 1682691692,
+      "status": "completed"
     },
     {
       "title": "Kono Subarashii Sekai ni Shukufuku wo! Movie: Kurenai Densetsu",
@@ -5260,7 +5446,8 @@ window.mediaDatabase = {
         "Fantasy"
       ],
       "episodes": 1,
-      "updated_at": 1682691677
+      "updated_at": 1682691677,
+      "status": "completed"
     },
     {
       "title": "Jujutsu Kaisen 0 Movie",
@@ -5274,7 +5461,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 1,
-      "updated_at": 1682691663
+      "updated_at": 1682691663,
+      "status": "completed"
     },
     {
       "title": "Mob Psycho 100",
@@ -5289,7 +5477,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 12,
-      "updated_at": 1682691652
+      "updated_at": 1682691652,
+      "status": "completed"
     },
     {
       "title": "One Punch Man",
@@ -5303,7 +5492,8 @@ window.mediaDatabase = {
         "Comedy"
       ],
       "episodes": 12,
-      "updated_at": 1682691639
+      "updated_at": 1682691639,
+      "status": "completed"
     },
     {
       "title": "Kimetsu no Yaiba",
@@ -5318,7 +5508,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 26,
-      "updated_at": 1682691625
+      "updated_at": 1682691625,
+      "status": "completed"
     },
     {
       "title": "Steins;Gate 0",
@@ -5333,7 +5524,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 23,
-      "updated_at": 1682691611
+      "updated_at": 1682691611,
+      "status": "completed"
     },
     {
       "title": "Shinseiki Evangelion Movie: Air/Magokoro wo, Kimi ni",
@@ -5349,7 +5541,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 1,
-      "updated_at": 1682691581
+      "updated_at": 1682691581,
+      "status": "completed"
     },
     {
       "title": "Ookami Kodomo no Ame to Yuki",
@@ -5364,7 +5557,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 1,
-      "updated_at": 1682691561
+      "updated_at": 1682691561,
+      "status": "completed"
     },
     {
       "title": "Chainsaw Man",
@@ -5378,7 +5572,8 @@ window.mediaDatabase = {
         "Fantasy"
       ],
       "episodes": 12,
-      "updated_at": 1682691527
+      "updated_at": 1682691527,
+      "status": "completed"
     },
     {
       "title": "Kaguya-sama wa Kokurasetai? Tensai-tachi no Renai Zunousen",
@@ -5392,7 +5587,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "episodes": 12,
-      "updated_at": 1682691503
+      "updated_at": 1682691503,
+      "status": "completed"
     },
     {
       "title": "Jujutsu Kaisen",
@@ -5407,7 +5603,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 24,
-      "updated_at": 1682691493
+      "updated_at": 1682691493,
+      "status": "completed"
     },
     {
       "title": "Spy x Family",
@@ -5422,7 +5619,8 @@ window.mediaDatabase = {
         "Comedy"
       ],
       "episodes": 12,
-      "updated_at": 1682691480
+      "updated_at": 1682691480,
+      "status": "completed"
     },
     {
       "title": "Howl no Ugoku Shiro",
@@ -5439,7 +5637,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "episodes": 1,
-      "updated_at": 1682691466
+      "updated_at": 1682691466,
+      "status": "completed"
     },
     {
       "title": "Violet Evergarden",
@@ -5452,7 +5651,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "episodes": 13,
-      "updated_at": 1682691452
+      "updated_at": 1682691452,
+      "status": "completed"
     },
     {
       "title": "Odd Taxi",
@@ -5468,7 +5668,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 13,
-      "updated_at": 1682691440
+      "updated_at": 1682691440,
+      "status": "completed"
     },
     {
       "title": "Vinland Saga",
@@ -5483,7 +5684,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "episodes": 24,
-      "updated_at": 1682691400
+      "updated_at": 1682691400,
+      "status": "completed"
     },
     {
       "title": "Mob Psycho 100 II",
@@ -5498,7 +5700,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "episodes": 13,
-      "updated_at": 1682691349
+      "updated_at": 1682691349,
+      "status": "completed"
     },
     {
       "title": "Bocchi the Rock!",
@@ -5511,7 +5714,8 @@ window.mediaDatabase = {
         "Comedy"
       ],
       "episodes": 12,
-      "updated_at": 1682691316
+      "updated_at": 1682691316,
+      "status": "completed"
     },
     {
       "title": "Violet Evergarden Movie",
@@ -5525,7 +5729,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "episodes": 1,
-      "updated_at": 1682691300
+      "updated_at": 1682691300,
+      "status": "completed"
     },
     {
       "title": "Koe no Katachi",
@@ -5539,7 +5744,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "episodes": 1,
-      "updated_at": 1682691259
+      "updated_at": 1682691259,
+      "status": "completed"
     },
     {
       "title": "Hunter x Hunter (2011)",
@@ -5554,7 +5760,8 @@ window.mediaDatabase = {
         "Fantasy"
       ],
       "episodes": 148,
-      "updated_at": 1682691247
+      "updated_at": 1682691247,
+      "status": "completed"
     },
     {
       "title": "Kaguya-sama wa Kokurasetai: Ultra Romantic",
@@ -5568,7 +5775,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "episodes": 13,
-      "updated_at": 1682691235
+      "updated_at": 1682691235,
+      "status": "completed"
     },
     {
       "title": "Shingeki no Kyojin Season 3 Part 2",
@@ -5583,7 +5791,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 10,
-      "updated_at": 1682691101
+      "updated_at": 1682691101,
+      "status": "completed"
     },
     {
       "title": "Shingeki no Kyojin: The Final Season",
@@ -5598,7 +5807,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 16,
-      "updated_at": 1682691083
+      "updated_at": 1682691083,
+      "status": "completed"
     },
     {
       "title": "Shingeki no Kyojin Season 2",
@@ -5613,7 +5823,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 12,
-      "updated_at": 1682691050
+      "updated_at": 1682691050,
+      "status": "completed"
     },
     {
       "title": "Shingeki no Kyojin",
@@ -5629,7 +5840,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 25,
-      "updated_at": 1682691038
+      "updated_at": 1682691038,
+      "status": "completed"
     },
     {
       "title": "Monster",
@@ -5644,7 +5856,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "episodes": 74,
-      "updated_at": 1682690843
+      "updated_at": 1682690843,
+      "status": "completed"
     },
     {
       "title": "JoJo no Kimyou na Bouken Part 6: Stone Ocean Part 3",
@@ -5658,7 +5871,8 @@ window.mediaDatabase = {
         "Adventure"
       ],
       "episodes": 14,
-      "updated_at": 1682690808
+      "updated_at": 1682690808,
+      "status": "completed"
     },
     {
       "title": "JoJo no Kimyou na Bouken Part 6: Stone Ocean Part 2",
@@ -5672,7 +5886,8 @@ window.mediaDatabase = {
         "Adventure"
       ],
       "episodes": 12,
-      "updated_at": 1682690741
+      "updated_at": 1682690741,
+      "status": "completed"
     },
     {
       "title": "JoJo no Kimyou na Bouken Part 6: Stone Ocean",
@@ -5686,7 +5901,8 @@ window.mediaDatabase = {
         "Adventure"
       ],
       "episodes": 12,
-      "updated_at": 1682690730
+      "updated_at": 1682690730,
+      "status": "completed"
     },
     {
       "title": "JoJo no Kimyou na Bouken Part 5: Ougon no Kaze",
@@ -5700,7 +5916,8 @@ window.mediaDatabase = {
         "Adventure"
       ],
       "episodes": 39,
-      "updated_at": 1682690698
+      "updated_at": 1682690698,
+      "status": "completed"
     },
     {
       "title": "JoJo no Kimyou na Bouken Part 4: Diamond wa Kudakenai",
@@ -5714,7 +5931,8 @@ window.mediaDatabase = {
         "Adventure"
       ],
       "episodes": 39,
-      "updated_at": 1682690656
+      "updated_at": 1682690656,
+      "status": "completed"
     }
   ],
   "manga": [
@@ -5731,7 +5949,40 @@ window.mediaDatabase = {
       ],
       "chapters": 117,
       "volumes": 14,
-      "updated_at": 1782414448
+      "updated_at": 1782414448,
+      "status": "completed"
+    },
+    {
+      "title": "Sangeki",
+      "id": 192247,
+      "url": "https://myanimelist.net/manga/192247/Sangeki",
+      "year": "2026",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/342987.webp?s=b91122639ac638dcf2750b3a67dcb469",
+      "genres": [
+        "Drama",
+        "Mystery"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1781627378,
+      "status": "reading"
+    },
+    {
+      "title": "Haimiya-senpai wa Kowakute Kawaii",
+      "id": 188409,
+      "url": "https://myanimelist.net/manga/188409/Haimiya-senpai_wa_Kowakute_Kawaii",
+      "year": "2025",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/341234.webp?s=52c335ee5bec81f0615180548bd3cf66",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1780744080,
+      "status": "reading"
     },
     {
       "title": "Jujutsu Kaisen Modulo",
@@ -5747,7 +5998,8 @@ window.mediaDatabase = {
       ],
       "chapters": 0,
       "volumes": 0,
-      "updated_at": 1772777047
+      "updated_at": 1772777047,
+      "status": "completed"
     },
     {
       "title": "Kamisama ga Uso wo Tsuku.",
@@ -5762,7 +6014,8 @@ window.mediaDatabase = {
       ],
       "chapters": 5,
       "volumes": 1,
-      "updated_at": 1767795698
+      "updated_at": 1767795698,
+      "status": "completed"
     },
     {
       "title": "Houseki no Kuni",
@@ -5778,7 +6031,8 @@ window.mediaDatabase = {
       ],
       "chapters": 108,
       "volumes": 13,
-      "updated_at": 1767518482
+      "updated_at": 1767518482,
+      "status": "completed"
     },
     {
       "title": "Ano Ko no Kodomo",
@@ -5793,7 +6047,24 @@ window.mediaDatabase = {
       ],
       "chapters": 41,
       "volumes": 10,
-      "updated_at": 1767518127
+      "updated_at": 1767518127,
+      "status": "completed"
+    },
+    {
+      "title": "Moriagaranai Date",
+      "id": 189516,
+      "url": "https://myanimelist.net/manga/189516/Moriagaranai_Date",
+      "year": "2024",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/338790.webp?s=0c07696d5b86498b48fa865cb054f510",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1767511961,
+      "status": "reading"
     },
     {
       "title": "Aku no Hana",
@@ -5808,7 +6079,8 @@ window.mediaDatabase = {
       ],
       "chapters": 58,
       "volumes": 11,
-      "updated_at": 1750534532
+      "updated_at": 1750534532,
+      "status": "completed"
     },
     {
       "title": "Umibe no Onnanoko",
@@ -5823,7 +6095,8 @@ window.mediaDatabase = {
       ],
       "chapters": 20,
       "volumes": 2,
-      "updated_at": 1750093450
+      "updated_at": 1750093450,
+      "status": "completed"
     },
     {
       "title": "Shi ni Aruki",
@@ -5838,7 +6111,8 @@ window.mediaDatabase = {
       ],
       "chapters": 37,
       "volumes": 4,
-      "updated_at": 1736344952
+      "updated_at": 1736344952,
+      "status": "completed"
     },
     {
       "title": "Okuru Kotoba",
@@ -5853,7 +6127,8 @@ window.mediaDatabase = {
       ],
       "chapters": 16,
       "volumes": 3,
-      "updated_at": 1735388515
+      "updated_at": 1735388515,
+      "status": "completed"
     },
     {
       "title": "Saltiness",
@@ -5865,7 +6140,8 @@ window.mediaDatabase = {
       "genres": [],
       "chapters": 44,
       "volumes": 4,
-      "updated_at": 1735155353
+      "updated_at": 1735155353,
+      "status": "completed"
     },
     {
       "title": "Okaeri Alice",
@@ -5880,7 +6156,8 @@ window.mediaDatabase = {
       ],
       "chapters": 40,
       "volumes": 7,
-      "updated_at": 1735124495
+      "updated_at": 1735124495,
+      "status": "completed"
     },
     {
       "title": "Akari",
@@ -5894,7 +6171,24 @@ window.mediaDatabase = {
       ],
       "chapters": 5,
       "volumes": 1,
-      "updated_at": 1726757608
+      "updated_at": 1726757608,
+      "status": "completed"
+    },
+    {
+      "title": "Tsumi to Batsu no Spica",
+      "id": 173120,
+      "url": "https://myanimelist.net/manga/173120/Tsumi_to_Batsu_no_Spica",
+      "year": "2024",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/314702.webp?s=c426b33132c3fec9d4efdc10c6888a59",
+      "genres": [
+        "Drama",
+        "Suspense"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1725047129,
+      "status": "reading"
     },
     {
       "title": "Kokou no Hito",
@@ -5910,7 +6204,8 @@ window.mediaDatabase = {
       ],
       "chapters": 170,
       "volumes": 17,
-      "updated_at": 1723499496
+      "updated_at": 1723499496,
+      "status": "completed"
     },
     {
       "title": "Confession",
@@ -5925,7 +6220,8 @@ window.mediaDatabase = {
       ],
       "chapters": 11,
       "volumes": 1,
-      "updated_at": 1720366701
+      "updated_at": 1720366701,
+      "status": "completed"
     },
     {
       "title": "Ressentiment",
@@ -5941,7 +6237,8 @@ window.mediaDatabase = {
       ],
       "chapters": 49,
       "volumes": 4,
-      "updated_at": 1720287361
+      "updated_at": 1720287361,
+      "status": "completed"
     },
     {
       "title": "Wanitokagegisu",
@@ -5956,7 +6253,8 @@ window.mediaDatabase = {
       ],
       "chapters": 44,
       "volumes": 4,
-      "updated_at": 1719928501
+      "updated_at": 1719928501,
+      "status": "completed"
     },
     {
       "title": "Kushami: Urasawa Naoki Tanpenshuu",
@@ -5974,7 +6272,23 @@ window.mediaDatabase = {
       ],
       "chapters": 8,
       "volumes": 1,
-      "updated_at": 1719852079
+      "updated_at": 1719852079,
+      "status": "completed"
+    },
+    {
+      "title": "Isshou Senkin",
+      "id": 158356,
+      "url": "https://myanimelist.net/manga/158356/Isshou_Senkin",
+      "year": "2023",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/289698.webp?s=a614c4a6c8347331f35bd76bae111fe2",
+      "genres": [
+        "Action"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1719426895,
+      "status": "reading"
     },
     {
       "title": "Shoujo Shuumatsu Ryokou",
@@ -5990,7 +6304,8 @@ window.mediaDatabase = {
       ],
       "chapters": 47,
       "volumes": 6,
-      "updated_at": 1718305392
+      "updated_at": 1718305392,
+      "status": "completed"
     },
     {
       "title": "Look Back",
@@ -6004,7 +6319,8 @@ window.mediaDatabase = {
       ],
       "chapters": 0,
       "volumes": 1,
-      "updated_at": 1717490532
+      "updated_at": 1717490532,
+      "status": "completed"
     },
     {
       "title": "My Broken Mariko",
@@ -6018,7 +6334,8 @@ window.mediaDatabase = {
       ],
       "chapters": 5,
       "volumes": 1,
-      "updated_at": 1717487989
+      "updated_at": 1717487989,
+      "status": "completed"
     },
     {
       "title": "Ajin",
@@ -6035,7 +6352,43 @@ window.mediaDatabase = {
       ],
       "chapters": 84,
       "volumes": 17,
-      "updated_at": 1716931025
+      "updated_at": 1716931025,
+      "status": "completed"
+    },
+    {
+      "title": "Yotsuba to!",
+      "id": 104,
+      "url": "https://myanimelist.net/manga/104/Yotsuba_to",
+      "year": "2003",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/5/259524.webp?s=cfa2a650801e7bd667c4dfe3b76f7441",
+      "genres": [
+        "Award Winning",
+        "Comedy",
+        "Slice of Life"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1713887630,
+      "status": "reading"
+    },
+    {
+      "title": "Centuria",
+      "id": 169067,
+      "url": "https://myanimelist.net/manga/169067/Centuria",
+      "year": "2024",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/305548.webp?s=a4e19fca9fccf057e140280f181b212f",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama",
+        "Fantasy"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1712567420,
+      "status": "reading"
     },
     {
       "title": "Yuu☆Yuu☆Hakusho",
@@ -6053,7 +6406,8 @@ window.mediaDatabase = {
       ],
       "chapters": 176,
       "volumes": 19,
-      "updated_at": 1712400613
+      "updated_at": 1712400613,
+      "status": "completed"
     },
     {
       "title": "Renai Daikou",
@@ -6068,7 +6422,8 @@ window.mediaDatabase = {
       ],
       "chapters": 39,
       "volumes": 4,
-      "updated_at": 1712308868
+      "updated_at": 1712308868,
+      "status": "completed"
     },
     {
       "title": "Watashi ga 15-sai dewa Nakunattemo.",
@@ -6082,7 +6437,8 @@ window.mediaDatabase = {
       ],
       "chapters": 18,
       "volumes": 2,
-      "updated_at": 1711985397
+      "updated_at": 1711985397,
+      "status": "completed"
     },
     {
       "title": "Ningen Shikkaku",
@@ -6096,7 +6452,8 @@ window.mediaDatabase = {
       ],
       "chapters": 24,
       "volumes": 3,
-      "updated_at": 1711641723
+      "updated_at": 1711641723,
+      "status": "completed"
     },
     {
       "title": "Kaijuu 8-gou",
@@ -6112,7 +6469,8 @@ window.mediaDatabase = {
       ],
       "chapters": 129,
       "volumes": 16,
-      "updated_at": 1710771515
+      "updated_at": 1710771515,
+      "status": "completed"
     },
     {
       "title": "Blue Heaven",
@@ -6126,7 +6484,24 @@ window.mediaDatabase = {
       ],
       "chapters": 27,
       "volumes": 3,
-      "updated_at": 1710343174
+      "updated_at": 1710343174,
+      "status": "completed"
+    },
+    {
+      "title": "Ruri Dragon",
+      "id": 148054,
+      "url": "https://myanimelist.net/manga/148054/Ruri_Dragon",
+      "year": "2022",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/269401.webp?s=1519bc103623a8ef6eb92afee8599cd4",
+      "genres": [
+        "Slice of Life",
+        "Supernatural"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1710340455,
+      "status": "reading"
     },
     {
       "title": "Hyouryuu Net Cafe",
@@ -6143,7 +6518,23 @@ window.mediaDatabase = {
       ],
       "chapters": 63,
       "volumes": 7,
-      "updated_at": 1710109348
+      "updated_at": 1710109348,
+      "status": "completed"
+    },
+    {
+      "title": "Grand Blue",
+      "id": 70345,
+      "url": "https://myanimelist.net/manga/70345/Grand_Blue",
+      "year": "2014",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/166124.webp?s=86d5bfc63c84f7971b5930fc6ca811e2",
+      "genres": [
+        "Comedy"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1709050710,
+      "status": "reading"
     },
     {
       "title": "Otona ni Narenai Bokura wa",
@@ -6157,7 +6548,24 @@ window.mediaDatabase = {
       ],
       "chapters": 28,
       "volumes": 3,
-      "updated_at": 1707922930
+      "updated_at": 1707922930,
+      "status": "completed"
+    },
+    {
+      "title": "Uzaki-chan wa Asobitai!",
+      "id": 114417,
+      "url": "https://myanimelist.net/manga/114417/Uzaki-chan_wa_Asobitai",
+      "year": "2017",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/271526.webp?s=2381c488af729a2dcdf00802d0b29865",
+      "genres": [
+        "Comedy",
+        "Ecchi"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1707633791,
+      "status": "reading"
     },
     {
       "title": "Undead Unluck",
@@ -6172,7 +6580,24 @@ window.mediaDatabase = {
       ],
       "chapters": 240,
       "volumes": 27,
-      "updated_at": 1706627309
+      "updated_at": 1706627309,
+      "status": "completed"
+    },
+    {
+      "title": "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo",
+      "id": 123681,
+      "url": "https://myanimelist.net/manga/123681/Kimi_no_Koto_ga_Daidaidaidaidaisuki_na_100-nin_no_Kanojo",
+      "year": "2019",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/293055.webp?s=e333ef9fb897320186ac6912b73837ad",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1704986967,
+      "status": "reading"
     },
     {
       "title": "Futari Ashita mo Sorenari ni",
@@ -6187,7 +6612,8 @@ window.mediaDatabase = {
       ],
       "chapters": 92,
       "volumes": 5,
-      "updated_at": 1704040141
+      "updated_at": 1704040141,
+      "status": "completed"
     },
     {
       "title": "Blame!",
@@ -6204,7 +6630,8 @@ window.mediaDatabase = {
       ],
       "chapters": 66,
       "volumes": 10,
-      "updated_at": 1703863717
+      "updated_at": 1703863717,
+      "status": "completed"
     },
     {
       "title": "Onanie Master Kurosawa",
@@ -6218,7 +6645,8 @@ window.mediaDatabase = {
       ],
       "chapters": 31,
       "volumes": 4,
-      "updated_at": 1703777824
+      "updated_at": 1703777824,
+      "status": "completed"
     },
     {
       "title": "Nee Nee, Nene-san.",
@@ -6234,7 +6662,8 @@ window.mediaDatabase = {
       ],
       "chapters": 1,
       "volumes": 0,
-      "updated_at": 1703284580
+      "updated_at": 1703284580,
+      "status": "completed"
     },
     {
       "title": "Dead Dead Demons Dededede Destruction",
@@ -6250,7 +6679,42 @@ window.mediaDatabase = {
       ],
       "chapters": 101,
       "volumes": 12,
-      "updated_at": 1702998597
+      "updated_at": 1702998597,
+      "status": "completed"
+    },
+    {
+      "title": "Mato Seihei no Slave",
+      "id": 116880,
+      "url": "https://myanimelist.net/manga/116880/Mato_Seihei_no_Slave",
+      "year": "2019",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/260475.webp?s=058082beadb0b6fdac12e21aa1a052b7",
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Ecchi"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1702736067,
+      "status": "reading"
+    },
+    {
+      "title": "Dandadan",
+      "id": 135496,
+      "url": "https://myanimelist.net/manga/135496/Dandadan",
+      "year": "2021",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/248746.webp?s=c05d731cd5678b89712715da412a5438",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Supernatural"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1701358062,
+      "status": "reading"
     },
     {
       "title": "Fire Punch",
@@ -6266,7 +6730,8 @@ window.mediaDatabase = {
       ],
       "chapters": 83,
       "volumes": 8,
-      "updated_at": 1701097146
+      "updated_at": 1701097146,
+      "status": "completed"
     },
     {
       "title": "Kaitai Zanuff",
@@ -6280,7 +6745,8 @@ window.mediaDatabase = {
       ],
       "chapters": 1,
       "volumes": 0,
-      "updated_at": 1700483382
+      "updated_at": 1700483382,
+      "status": "completed"
     },
     {
       "title": "Kowareta Bokura no Senryaku Renai",
@@ -6294,7 +6760,8 @@ window.mediaDatabase = {
       ],
       "chapters": 1,
       "volumes": 0,
-      "updated_at": 1700142476
+      "updated_at": 1700142476,
+      "status": "completed"
     },
     {
       "title": "Soshite Watashi wa, Kou Itta.",
@@ -6309,7 +6776,8 @@ window.mediaDatabase = {
       ],
       "chapters": 1,
       "volumes": 0,
-      "updated_at": 1700141727
+      "updated_at": 1700141727,
+      "status": "completed"
     },
     {
       "title": "Usotsuki Mii-kun to Kowareta Maa-chan: Totteoki no Uso",
@@ -6324,7 +6792,8 @@ window.mediaDatabase = {
       ],
       "chapters": 5,
       "volumes": 1,
-      "updated_at": 1699716022
+      "updated_at": 1699716022,
+      "status": "completed"
     },
     {
       "title": "Isshou Suki tte Yutta jan",
@@ -6339,7 +6808,8 @@ window.mediaDatabase = {
       ],
       "chapters": 7,
       "volumes": 1,
-      "updated_at": 1699714263
+      "updated_at": 1699714263,
+      "status": "completed"
     },
     {
       "title": "The Girl from Class",
@@ -6354,7 +6824,8 @@ window.mediaDatabase = {
       ],
       "chapters": 28,
       "volumes": 1,
-      "updated_at": 1699566495
+      "updated_at": 1699566495,
+      "status": "completed"
     },
     {
       "title": "Genkai Dokushin Joshi (26) Gohan",
@@ -6368,7 +6839,8 @@ window.mediaDatabase = {
       ],
       "chapters": 28,
       "volumes": 4,
-      "updated_at": 1699297690
+      "updated_at": 1699297690,
+      "status": "completed"
     },
     {
       "title": "Sensei de ○○ Shicha Ikemasen!",
@@ -6383,7 +6855,8 @@ window.mediaDatabase = {
       ],
       "chapters": 38,
       "volumes": 7,
-      "updated_at": 1699275903
+      "updated_at": 1699275903,
+      "status": "completed"
     },
     {
       "title": "Tomodachi Game",
@@ -6397,7 +6870,8 @@ window.mediaDatabase = {
       ],
       "chapters": 0,
       "volumes": 0,
-      "updated_at": 1697731970
+      "updated_at": 1697731970,
+      "status": "completed"
     },
     {
       "title": "Uchuujin no Kakushigoto",
@@ -6413,7 +6887,24 @@ window.mediaDatabase = {
       ],
       "chapters": 0,
       "volumes": 0,
-      "updated_at": 1697039369
+      "updated_at": 1697039369,
+      "status": "completed"
+    },
+    {
+      "title": "Zom 100: Zombie ni Naru made ni Shitai 100 no Koto",
+      "id": 122392,
+      "url": "https://myanimelist.net/manga/122392/Zom_100__Zombie_ni_Naru_made_ni_Shitai_100_no_Koto",
+      "year": "2018",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/223116.webp?s=a4feec8cbef7e49b12d7da98b1325e59",
+      "genres": [
+        "Comedy",
+        "Suspense"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1696694089,
+      "status": "reading"
     },
     {
       "title": "Avant-garde Yumeko",
@@ -6428,7 +6919,8 @@ window.mediaDatabase = {
       ],
       "chapters": 7,
       "volumes": 1,
-      "updated_at": 1696260095
+      "updated_at": 1696260095,
+      "status": "completed"
     },
     {
       "title": "Reiraku",
@@ -6442,7 +6934,8 @@ window.mediaDatabase = {
       ],
       "chapters": 8,
       "volumes": 1,
-      "updated_at": 1695744341
+      "updated_at": 1695744341,
+      "status": "completed"
     },
     {
       "title": "Master Keaton Remaster",
@@ -6458,7 +6951,24 @@ window.mediaDatabase = {
       ],
       "chapters": 8,
       "volumes": 1,
-      "updated_at": 1695660833
+      "updated_at": 1695660833,
+      "status": "completed"
+    },
+    {
+      "title": "Kagurabachi",
+      "id": 162479,
+      "url": "https://myanimelist.net/manga/162479/Kagurabachi",
+      "year": "2023",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/296327.webp?s=020b3a537f03caf15080f422525b16b4",
+      "genres": [
+        "Action",
+        "Fantasy"
+      ],
+      "chapters": 1,
+      "volumes": 0,
+      "updated_at": 1695050071,
+      "status": "reading"
     },
     {
       "title": "Dokuzakura",
@@ -6475,7 +6985,8 @@ window.mediaDatabase = {
       ],
       "chapters": 33,
       "volumes": 5,
-      "updated_at": 1694451161
+      "updated_at": 1694451161,
+      "status": "completed"
     },
     {
       "title": "Hirasaka Hinako ga Erokawaii Koto wo Ore dake ga Shitteiru.",
@@ -6489,7 +7000,8 @@ window.mediaDatabase = {
       ],
       "chapters": 50,
       "volumes": 7,
-      "updated_at": 1694190655
+      "updated_at": 1694190655,
+      "status": "completed"
     },
     {
       "title": "Gyo: Ugomeku Bukimi",
@@ -6506,7 +7018,8 @@ window.mediaDatabase = {
       ],
       "chapters": 21,
       "volumes": 2,
-      "updated_at": 1693518160
+      "updated_at": 1693518160,
+      "status": "completed"
     },
     {
       "title": "Shounen no Abyss",
@@ -6520,7 +7033,8 @@ window.mediaDatabase = {
       ],
       "chapters": 0,
       "volumes": 18,
-      "updated_at": 1693237337
+      "updated_at": 1693237337,
+      "status": "completed"
     },
     {
       "title": "Doutei Zetsumetsu Rettou",
@@ -6534,7 +7048,25 @@ window.mediaDatabase = {
       ],
       "chapters": 0,
       "volumes": 0,
-      "updated_at": 1693059252
+      "updated_at": 1693059252,
+      "status": "completed"
+    },
+    {
+      "title": "Hikaru ga Shinda Natsu",
+      "id": 141833,
+      "url": "https://myanimelist.net/manga/141833/Hikaru_ga_Shinda_Natsu",
+      "year": "2021",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/256448.webp?s=d00c1e197f28668010466c96c5af1059",
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Supernatural"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1692808101,
+      "status": "reading"
     },
     {
       "title": "Saihate ni Madou",
@@ -6548,7 +7080,8 @@ window.mediaDatabase = {
       ],
       "chapters": 16,
       "volumes": 3,
-      "updated_at": 1692365205
+      "updated_at": 1692365205,
+      "status": "completed"
     },
     {
       "title": "Sun-Ken Rock",
@@ -6565,7 +7098,8 @@ window.mediaDatabase = {
       ],
       "chapters": 181,
       "volumes": 25,
-      "updated_at": 1691424652
+      "updated_at": 1691424652,
+      "status": "completed"
     },
     {
       "title": "Itou Junji Jisen Kessakushuu",
@@ -6579,7 +7113,8 @@ window.mediaDatabase = {
       ],
       "chapters": 10,
       "volumes": 1,
-      "updated_at": 1690577761
+      "updated_at": 1690577761,
+      "status": "completed"
     },
     {
       "title": "The Horizon",
@@ -6594,7 +7129,8 @@ window.mediaDatabase = {
       ],
       "chapters": 21,
       "volumes": 3,
-      "updated_at": 1688400221
+      "updated_at": 1688400221,
+      "status": "completed"
     },
     {
       "title": "Gantz",
@@ -6612,7 +7148,8 @@ window.mediaDatabase = {
       ],
       "chapters": 383,
       "volumes": 37,
-      "updated_at": 1686307617
+      "updated_at": 1686307617,
+      "status": "completed"
     },
     {
       "title": "Gigant",
@@ -6628,7 +7165,8 @@ window.mediaDatabase = {
       ],
       "chapters": 89,
       "volumes": 10,
-      "updated_at": 1685465320
+      "updated_at": 1685465320,
+      "status": "completed"
     },
     {
       "title": "[Oshi no Ko]",
@@ -6642,7 +7180,8 @@ window.mediaDatabase = {
       ],
       "chapters": 0,
       "volumes": 16,
-      "updated_at": 1684593796
+      "updated_at": 1684593796,
+      "status": "completed"
     },
     {
       "title": "Hideout",
@@ -6656,7 +7195,25 @@ window.mediaDatabase = {
       ],
       "chapters": 9,
       "volumes": 0,
-      "updated_at": 1684593729
+      "updated_at": 1684593729,
+      "status": "completed"
+    },
+    {
+      "title": "Real",
+      "id": 657,
+      "url": "https://myanimelist.net/manga/657/Real",
+      "year": "1999",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/115969.webp?s=682ffdc395cb4559bdaa67e34342c034",
+      "genres": [
+        "Award Winning",
+        "Drama",
+        "Sports"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1684582943,
+      "status": "reading"
     },
     {
       "title": "Uzumaki",
@@ -6672,7 +7229,8 @@ window.mediaDatabase = {
       ],
       "chapters": 19,
       "volumes": 3,
-      "updated_at": 1683963662
+      "updated_at": 1683963662,
+      "status": "completed"
     },
     {
       "title": "Jigokuraku",
@@ -6687,7 +7245,8 @@ window.mediaDatabase = {
       ],
       "chapters": 128,
       "volumes": 13,
-      "updated_at": 1683963569
+      "updated_at": 1683963569,
+      "status": "completed"
     },
     {
       "title": "Billy Bat",
@@ -6703,7 +7262,8 @@ window.mediaDatabase = {
       ],
       "chapters": 165,
       "volumes": 20,
-      "updated_at": 1683963473
+      "updated_at": 1683963473,
+      "status": "completed"
     },
     {
       "title": "Jujutsu Kaisen",
@@ -6718,7 +7278,8 @@ window.mediaDatabase = {
       ],
       "chapters": 271,
       "volumes": 25,
-      "updated_at": 1683963431
+      "updated_at": 1683963431,
+      "status": "completed"
     },
     {
       "title": "Pluto",
@@ -6736,7 +7297,8 @@ window.mediaDatabase = {
       ],
       "chapters": 65,
       "volumes": 8,
-      "updated_at": 1683963291
+      "updated_at": 1683963291,
+      "status": "completed"
     },
     {
       "title": "Dorohedoro",
@@ -6753,7 +7315,24 @@ window.mediaDatabase = {
       ],
       "chapters": 190,
       "volumes": 23,
-      "updated_at": 1683963264
+      "updated_at": 1683963264,
+      "status": "completed"
+    },
+    {
+      "title": "One Punch-Man",
+      "id": 44347,
+      "url": "https://myanimelist.net/manga/44347/One_Punch-Man",
+      "year": "2012",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/3/80661.webp?s=a50068fdafd5922360c511136e164a17",
+      "genres": [
+        "Action",
+        "Comedy"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1683963241,
+      "status": "reading"
     },
     {
       "title": "Chainsaw Man",
@@ -6769,7 +7348,8 @@ window.mediaDatabase = {
       ],
       "chapters": 232,
       "volumes": 24,
-      "updated_at": 1683963225
+      "updated_at": 1683963225,
+      "status": "completed"
     },
     {
       "title": "Oyasumi Punpun",
@@ -6784,7 +7364,8 @@ window.mediaDatabase = {
       ],
       "chapters": 147,
       "volumes": 13,
-      "updated_at": 1683963188
+      "updated_at": 1683963188,
+      "status": "completed"
     },
     {
       "title": "Slam Dunk",
@@ -6799,7 +7380,8 @@ window.mediaDatabase = {
       ],
       "chapters": 276,
       "volumes": 31,
-      "updated_at": 1683963175
+      "updated_at": 1683963175,
+      "status": "completed"
     },
     {
       "title": "Takopii no Genzai",
@@ -6814,7 +7396,8 @@ window.mediaDatabase = {
       ],
       "chapters": 16,
       "volumes": 2,
-      "updated_at": 1683963153
+      "updated_at": 1683963153,
+      "status": "completed"
     },
     {
       "title": "Vinland Saga",
@@ -6831,7 +7414,28 @@ window.mediaDatabase = {
       ],
       "chapters": 224,
       "volumes": 29,
-      "updated_at": 1682693411
+      "updated_at": 1682693411,
+      "status": "completed"
+    },
+    {
+      "title": "Berserk",
+      "id": 2,
+      "url": "https://myanimelist.net/manga/2/Berserk",
+      "year": "1989",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/157897.webp?s=7f9d3c323292ce93a4870a21de9cad71",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Award Winning",
+        "Drama",
+        "Fantasy",
+        "Horror"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1682693397,
+      "status": "reading"
     },
     {
       "title": "21st Century Boys",
@@ -6848,7 +7452,8 @@ window.mediaDatabase = {
       ],
       "chapters": 16,
       "volumes": 2,
-      "updated_at": 1682693374
+      "updated_at": 1682693374,
+      "status": "completed"
     },
     {
       "title": "20th Century Boys",
@@ -6865,7 +7470,25 @@ window.mediaDatabase = {
       ],
       "chapters": 249,
       "volumes": 22,
-      "updated_at": 1682693342
+      "updated_at": 1682693342,
+      "status": "completed"
+    },
+    {
+      "title": "Vagabond",
+      "id": 656,
+      "url": "https://myanimelist.net/manga/656/Vagabond",
+      "year": "1998",
+      "score": 10,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/259070.webp?s=260cda752b81a4be730dff16c5cda8e1",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Award Winning"
+      ],
+      "chapters": 327,
+      "volumes": 37,
+      "updated_at": 1682691146,
+      "status": "reading"
     },
     {
       "title": "JoJo no Kimyou na Bouken Part 7: Steel Ball Run",
@@ -6882,7 +7505,8 @@ window.mediaDatabase = {
       ],
       "chapters": 96,
       "volumes": 24,
-      "updated_at": 1682690995
+      "updated_at": 1682690995,
+      "status": "completed"
     },
     {
       "title": "JoJo no Kimyou na Bouken Part 8: JoJolion",
@@ -6900,7 +7524,25 @@ window.mediaDatabase = {
       ],
       "chapters": 110,
       "volumes": 27,
-      "updated_at": 1682690981
+      "updated_at": 1682690981,
+      "status": "completed"
+    },
+    {
+      "title": "JoJo no Kimyou na Bouken Part 9: The JoJoLands",
+      "id": 139629,
+      "url": "https://myanimelist.net/manga/139629/JoJo_no_Kimyou_na_Bouken_Part_9__The_JoJoLands",
+      "year": "2023",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/286969.webp?s=3f3e79489c3700b02355c414d7ae22a5",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Supernatural"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1682690969,
+      "status": "reading"
     },
     {
       "title": "JoJo no Kimyou na Bouken Part 6: Stone Ocean",
@@ -6915,38 +7557,25 @@ window.mediaDatabase = {
       ],
       "chapters": 158,
       "volumes": 17,
-      "updated_at": 1682690951
+      "updated_at": 1682690951,
+      "status": "completed"
+    },
+    {
+      "title": "One Piece",
+      "id": 13,
+      "url": "https://myanimelist.net/manga/13/One_Piece",
+      "year": "1997",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/manga/2/253146.webp?s=086e89a82dfb78553baaf6e2a849520a",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1682690929,
+      "status": "reading"
     }
-  ],
-  "currently": {
-    "watching": [
-      "Koori no Jouheki",
-      "Steel Ball Run: JoJo no Kimyou na Bouken",
-      "One Piece"
-    ],
-    "reading": [
-      "Sangeki",
-      "Haimiya-senpai wa Kowakute Kawaii",
-      "Moriagaranai Date",
-      "Tsumi to Batsu no Spica",
-      "Isshou Senkin",
-      "Yotsuba to!",
-      "Centuria",
-      "Ruri Dragon",
-      "Grand Blue",
-      "Uzaki-chan wa Asobitai!",
-      "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo",
-      "Mato Seihei no Slave",
-      "Dandadan",
-      "Zom 100: Zombie ni Naru made ni Shitai 100 no Koto",
-      "Kagurabachi",
-      "Hikaru ga Shinda Natsu",
-      "Real",
-      "One Punch-Man",
-      "Berserk",
-      "Vagabond",
-      "JoJo no Kimyou na Bouken Part 9: The JoJoLands",
-      "One Piece"
-    ]
-  }
+  ]
 }

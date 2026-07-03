@@ -1,7 +1,6 @@
 (() => {
   'use strict';
 
-  // --- INTERSECTION OBSERVER FOR REVEALS ---
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const revealables = document.querySelectorAll(
     '.about__body, .closet-section, .sadako__grid, .sadako__pullquote, .currently, .roles__grid, .contact__list, .colophon, .crane-divider'
@@ -131,7 +130,7 @@
   const movieSort = document.getElementById('movie-sort');
 
   // --- SAFE IMAGE DISPLAY FUNCTION ---
-  // Avoids inline onerror strings to prevent html/newline parsing crashes
+  // Uses images.weserv.nl proxy to bypass CDN hotlinking and referrer blocks
   const displayCabinetImage = (imageUrl, title, year) => {
     if (!coverArt) return;
     coverArt.innerHTML = '';
@@ -153,7 +152,7 @@
         img.replaceWith(fallback);
       };
       
-      img.src = imageUrl;
+      img.src = 'https://images.weserv.nl/?url=' + encodeURIComponent(imageUrl);
       coverArt.appendChild(img);
     } else {
       const fallback = document.createElement('div');
@@ -193,14 +192,16 @@
     displayCabinetImage(anime.image, anime.title, anime.year);
     titleEl.innerHTML = anime.title;
     directorEl.innerHTML = 'MyAnimeList Entry';
-    metaEl.innerHTML = `${anime.year} &middot; Completed &middot; Score: ${anime.score}/10 (${scoreToStars(anime.score)})`;
+    
+    const animeStatusStr = anime.status === 'watching' ? 'Currently Watching' : 'Completed';
+    metaEl.innerHTML = `${anime.year} &middot; ${animeStatusStr} &middot; Score: ${anime.score}/10 (${scoreToStars(anime.score)})`;
     quoteEl.style.display = 'none';
     
     const genreTags = anime.genres && anime.genres.length > 0 
       ? `<p class="display-genres" style="font-family: var(--mono); font-size: 0.65rem; color: var(--oxblood-soft); text-transform: uppercase; margin-top: 0.25rem;">${anime.genres.join(' &bull; ')}</p>` 
       : '';
 
-    descEl.innerHTML = `Completed: TV series &bull; <strong>${anime.episodes}</strong> episodes.<br>${genreTags}<br>
+    descEl.innerHTML = `${animeStatusStr}: TV series &bull; <strong>${anime.episodes}</strong> episodes.<br>${genreTags}<br>
       <a class="btn btn--filled" href="${anime.url}" target="_blank" rel="noopener" style="margin-top: 0.5rem; display: inline-flex;">
         View on MyAnimeList
       </a>`;
@@ -218,14 +219,16 @@
     displayCabinetImage(manga.image, manga.title, manga.year);
     titleEl.innerHTML = manga.title;
     directorEl.innerHTML = 'MyAnimeList Entry';
-    metaEl.innerHTML = `${manga.year} &middot; Completed &middot; Score: ${manga.score}/10 (${scoreToStars(manga.score)})`;
+    
+    const mangaStatusStr = manga.status === 'reading' ? 'Currently Reading' : 'Completed';
+    metaEl.innerHTML = `${manga.year} &middot; ${mangaStatusStr} &middot; Score: ${manga.score}/10 (${scoreToStars(manga.score)})`;
     quoteEl.style.display = 'none';
     
     const genreTags = manga.genres && manga.genres.length > 0 
       ? `<p class="display-genres" style="font-family: var(--mono); font-size: 0.65rem; color: var(--oxblood-soft); text-transform: uppercase; margin-top: 0.25rem;">${manga.genres.join(' &bull; ')}</p>` 
       : '';
 
-    descEl.innerHTML = `Completed: <strong>${manga.chapters}</strong> chapters &bull; <strong>${manga.volumes}</strong> volumes.<br>${genreTags}<br>
+    descEl.innerHTML = `${mangaStatusStr}: <strong>${manga.chapters}</strong> chapters &bull; <strong>${manga.volumes}</strong> volumes.<br>${genreTags}<br>
       <a class="btn btn--filled" href="${manga.url}" target="_blank" rel="noopener" style="margin-top: 0.5rem; display: inline-flex;">
         View on MyAnimeList
       </a>`;
@@ -347,7 +350,7 @@
           img.replaceWith(fallback);
         };
         
-        img.src = item.image;
+        img.src = 'https://images.weserv.nl/?url=' + encodeURIComponent(item.image);
         card.appendChild(img);
       } else {
         const fallback = document.createElement('div');
@@ -435,12 +438,12 @@
   }
   if (btnAnimeView) {
     btnAnimeView.addEventListener('click', () => {
-      handleListTabClick('anime', 'Search completed anime (title or genre)...');
+      handleListTabClick('anime', 'Search completed & watching anime...');
     });
   }
   if (btnMangaView) {
     btnMangaView.addEventListener('click', () => {
-      handleListTabClick('manga', 'Search completed manga (title or genre)...');
+      handleListTabClick('manga', 'Search completed & reading manga...');
     });
   }
 
@@ -473,23 +476,4 @@
     updateDisplayWithFeatured('2001');
   }
   renderList();
-
-  // --- DYNAMIC "CURRENTLY" STATUS SYSTEM ---
-  const currentlyBody = document.querySelector('.currently__body');
-  if (currentlyBody && window.mediaDatabase && window.mediaDatabase.currently) {
-    const currently = window.mediaDatabase.currently;
-    const parts = [];
-    
-    parts.push('writing the next thing');
-    
-    if (currently.reading && currently.reading.length > 0) {
-      parts.push(`reading <em style="color: var(--ink); font-family: var(--serif); font-weight: 500;">${currently.reading[0]}</em>`);
-    }
-    if (currently.watching && currently.watching.length > 0) {
-      parts.push(`watching <em style="color: var(--ink); font-family: var(--serif); font-weight: 500;">${currently.watching[0]}</em>`);
-    }
-    
-    parts.push('second year, Energy Engineering, IIT Delhi Abu Dhabi');
-    currentlyBody.innerHTML = parts.join(' &middot; ');
-  }
 })();
