@@ -154,7 +154,9 @@
     titleEl.innerHTML = film.title;
     directorEl.innerHTML = 'Letterboxd Diary';
     metaEl.innerHTML = `${film.year} &middot; Rated ${film.rating}`;
-    quoteEl.innerHTML = `&ldquo;Hope is a good thing, maybe the best of things, and no good thing ever dies.&rdquo;`; 
+    
+    // Hide quote element for dynamic letterboxd entries
+    quoteEl.style.display = 'none';
     
     descEl.innerHTML = `This film is part of Sumedh's watched history on Letterboxd. He rated it <strong>${film.rating}</strong>.<br><br>
       <a class="btn btn--filled" href="https://letterboxd.com/film/${film.slug}/" target="_blank" rel="noopener" style="margin-top: 0.5rem; display: inline-flex;">
@@ -178,7 +180,11 @@
     titleEl.innerHTML = data.title;
     directorEl.innerHTML = data.director;
     metaEl.innerHTML = data.meta;
+    
+    // Show quote element for custom curated films
+    quoteEl.style.display = 'block';
     quoteEl.innerHTML = data.quote;
+    
     descEl.innerHTML = data.description;
     
     content.style.animation = 'none';
