@@ -3237,471 +3237,144 @@ window.mediaDatabase = {
   ],
   "anime": [
     {
-      "title": "86 Eighty-Six",
-      "id": 41457,
-      "url": "https://myanimelist.net/anime/41457/86",
+      "title": "Re:ZERO -Starting Life in Another World- Season 2 Part 2",
+      "id": 42203,
+      "url": "https://myanimelist.net/anime/42203/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_2nd_Season_Part_2",
       "year": "2021",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1987/117507.webp?s=d836fc149fc0663724ae4e3566bf36c1",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1724/117421.webp?s=38eacc2d882c1d1484be9c8e98ac7f4f",
       "genres": [
         "Drama",
-        "Sci-Fi"
+        "Fantasy",
+        "Suspense"
       ],
-      "episodes": 11
+      "episodes": 10,
+      "updated_at": 1783021753
     },
     {
-      "title": "86 Eighty-Six Part 2",
-      "id": 48569,
-      "url": "https://myanimelist.net/anime/48569/86_Part_2",
-      "year": "2021",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1321/117508.webp?s=bc3a1228d58464d0de85c641c4c96a07",
+      "title": "Re:ZERO -Starting Life in Another World- Season 2",
+      "id": 39587,
+      "url": "https://myanimelist.net/anime/39587/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_2nd_Season",
+      "year": "2020",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1444/108005.webp?s=810b34a1296c605fd18090ad21692df2",
       "genres": [
         "Drama",
-        "Sci-Fi"
+        "Fantasy",
+        "Suspense"
       ],
-      "episodes": 12
+      "episodes": 13,
+      "updated_at": 1782423522
     },
     {
-      "title": "A Silent Voice",
-      "id": 28851,
-      "url": "https://myanimelist.net/anime/28851/Koe_no_Katachi",
+      "title": "I Made Friends with the Second Prettiest Girl in My Class",
+      "id": 56734,
+      "url": "https://myanimelist.net/anime/56734/Class_de_2-banme_ni_Kawaii_Onnanoko_to_Tomodachi_ni_Natta",
+      "year": "2026",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1423/155713.webp?s=531ad2128c8c59adb34bd1343f185300",
+      "genres": [
+        "Romance"
+      ],
+      "episodes": 12,
+      "updated_at": 1782305476
+    },
+    {
+      "title": "Re:ZERO -Starting Life in Another World- The Frozen Bond",
+      "id": 38414,
+      "url": "https://myanimelist.net/anime/38414/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_-_Hyouketsu_no_Kizuna",
+      "year": "2019",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1238/104023.webp?s=f3f8341b3366b3cfecc61074644f1584",
+      "genres": [
+        "Drama",
+        "Fantasy",
+        "Suspense"
+      ],
+      "episodes": 1,
+      "updated_at": 1782302210
+    },
+    {
+      "title": "Re:ZERO -Starting Life in Another World- Memory Snow",
+      "id": 36286,
+      "url": "https://myanimelist.net/anime/36286/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_-_Memory_Snow",
+      "year": "2018",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1081/95707.webp?s=a44ccc268826f80b1a13ba931b444203",
+      "genres": [
+        "Fantasy"
+      ],
+      "episodes": 1,
+      "updated_at": 1782298317
+    },
+    {
+      "title": "Re:ZERO -Starting Life in Another World-",
+      "id": 31240,
+      "url": "https://myanimelist.net/anime/31240/Re_Zero_kara_Hajimeru_Isekai_Seikatsu",
       "year": "2016",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1122/96435.webp?s=f8162c1735ac8075df9ba9974c934b24",
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1522/128039.webp?s=e10afb77e19f035c7a7fffd08cbf8fdb",
       "genres": [
-        "Award Winning",
-        "Drama"
-      ],
-      "episodes": 1
-    },
-    {
-      "title": "A Whisker Away",
-      "id": 41168,
-      "url": "https://myanimelist.net/anime/41168/Nakitai_Watashi_wa_Neko_wo_Kaburu",
-      "year": "2020",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1045/106389.webp?s=7c8140813aa9cb41c2d9463190d3d7b8",
-      "genres": [
-        "Award Winning",
         "Drama",
-        "Romance",
-        "Supernatural"
-      ],
-      "episodes": 1
-    },
-    {
-      "title": "Akame ga Kill!",
-      "id": 22199,
-      "url": "https://myanimelist.net/anime/22199/Akame_ga_Kill",
-      "year": "2014",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1429/95946.webp?s=f0093ccd3de2559ad8595f1f062fa777",
-      "genres": [
-        "Action",
-        "Fantasy"
-      ],
-      "episodes": 24
-    },
-    {
-      "title": "Angels of Death",
-      "id": 35994,
-      "url": "https://myanimelist.net/anime/35994/Satsuriku_no_Tenshi",
-      "year": "2018",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1862/95624.webp?s=dcdacf70c63a4a3f5307556b5d7b2efb",
-      "genres": [
-        "Adventure",
-        "Horror",
-        "Suspense"
-      ],
-      "episodes": 16
-    },
-    {
-      "title": "Attack on Titan",
-      "id": 16498,
-      "url": "https://myanimelist.net/anime/16498/Shingeki_no_Kyojin",
-      "year": "2013",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/10/47347.webp?s=a4e6359cbd72eaa5b8bf1149cdbee051",
-      "genres": [
-        "Action",
-        "Award Winning",
-        "Drama",
-        "Suspense"
-      ],
-      "episodes": 25
-    },
-    {
-      "title": "Attack on Titan Season 2",
-      "id": 25777,
-      "url": "https://myanimelist.net/anime/25777/Shingeki_no_Kyojin_Season_2",
-      "year": "2017",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/4/84177.webp?s=ff0cbb05e8044332e6f21e8345637856",
-      "genres": [
-        "Action",
-        "Drama",
-        "Suspense"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Attack on Titan Season 3",
-      "id": 35760,
-      "url": "https://myanimelist.net/anime/35760/Shingeki_no_Kyojin_Season_3",
-      "year": "2018",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1173/92110.webp?s=8d285d9265f62ba755c9368e036e7324",
-      "genres": [
-        "Action",
-        "Drama",
-        "Suspense"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Attack on Titan Season 3 Part 2",
-      "id": 38524,
-      "url": "https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2",
-      "year": "2019",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1517/100633.webp?s=c86bc6403a5a7dfb64b1c659978f392c",
-      "genres": [
-        "Action",
-        "Drama",
-        "Suspense"
-      ],
-      "episodes": 10
-    },
-    {
-      "title": "Attack on Titan: Final Season",
-      "id": 40028,
-      "url": "https://myanimelist.net/anime/40028/Shingeki_no_Kyojin__The_Final_Season",
-      "year": "2020",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1000/110531.webp?s=2e910b2f12ba643a513abbf504ee8b72",
-      "genres": [
-        "Action",
-        "Drama",
-        "Suspense"
-      ],
-      "episodes": 16
-    },
-    {
-      "title": "Attack on Titan: Final Season - The Final Chapters",
-      "id": 51535,
-      "url": "https://myanimelist.net/anime/51535/Shingeki_no_Kyojin__The_Final_Season_-_Kanketsu-hen",
-      "year": "2023",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1279/131078.webp?s=02ee7d67319256c936a2ad09f4b29a95",
-      "genres": [
-        "Action",
-        "Drama",
-        "Suspense"
-      ],
-      "episodes": 2
-    },
-    {
-      "title": "Attack on Titan: Final Season Part 2",
-      "id": 48583,
-      "url": "https://myanimelist.net/anime/48583/Shingeki_no_Kyojin__The_Final_Season_Part_2",
-      "year": "2022",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1948/120625.webp?s=d92df3de301c6e30532acbc9194b1a13",
-      "genres": [
-        "Action",
-        "Drama",
-        "Suspense"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Bocchi the Rock!",
-      "id": 47917,
-      "url": "https://myanimelist.net/anime/47917/Bocchi_the_Rock",
-      "year": "2022",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1448/127956.webp?s=6232ebd3e1611b1d7f8f8e0e6f627a49",
-      "genres": [
-        "Comedy"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Chained Soldier",
-      "id": 50392,
-      "url": "https://myanimelist.net/anime/50392/Mato_Seihei_no_Slave",
-      "year": "2024",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1114/140805.webp?s=fc02fb9e29c2620beb5fce6380f56cd4",
-      "genres": [
-        "Action",
         "Fantasy",
-        "Ecchi"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Chainsaw Man",
-      "id": 44511,
-      "url": "https://myanimelist.net/anime/44511/Chainsaw_Man",
-      "year": "2022",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1806/126216.webp?s=3a636c2578f49cc009d4e4a805a762a3",
-      "genres": [
-        "Action",
-        "Fantasy"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Code Geass: Lelouch of the Rebellion",
-      "id": 1575,
-      "url": "https://myanimelist.net/anime/1575/Code_Geass__Hangyaku_no_Lelouch",
-      "year": "2006",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1032/135088.webp?s=5fae385753f4653a2856cb5161adbfb3",
-      "genres": [
-        "Award Winning",
-        "Drama",
-        "Sci-Fi"
-      ],
-      "episodes": 25
-    },
-    {
-      "title": "Code Geass: Lelouch of the Rebellion R2",
-      "id": 2904,
-      "url": "https://myanimelist.net/anime/2904/Code_Geass__Hangyaku_no_Lelouch_R2",
-      "year": "2008",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1088/135089.webp?s=65e4aeaf2c05d8c0f54f2d9094d506a3",
-      "genres": [
-        "Award Winning",
-        "Drama",
-        "Sci-Fi"
-      ],
-      "episodes": 25
-    },
-    {
-      "title": "Cowboy Bebop",
-      "id": 1,
-      "url": "https://myanimelist.net/anime/1/Cowboy_Bebop",
-      "year": "1998",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/4/19644.webp?s=831d007067a43b7877108a4f52f8293d",
-      "genres": [
-        "Action",
-        "Award Winning",
-        "Sci-Fi"
-      ],
-      "episodes": 26
-    },
-    {
-      "title": "Cyberpunk: Edgerunners",
-      "id": 42310,
-      "url": "https://myanimelist.net/anime/42310/Cyberpunk__Edgerunners",
-      "year": "2022",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1818/126435.webp?s=36e148447c769b48bbee2a19e3060f32",
-      "genres": [
-        "Action",
-        "Sci-Fi"
-      ],
-      "episodes": 10
-    },
-    {
-      "title": "Dan Da Dan",
-      "id": 57334,
-      "url": "https://myanimelist.net/anime/57334/Dandadan",
-      "year": "2024",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1584/143719.webp?s=c244e15123db18b7c10cb83720df89c8",
-      "genres": [
-        "Action",
-        "Comedy",
-        "Supernatural"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Dead Dead Demons Dededede Destruction",
-      "id": 58883,
-      "url": "https://myanimelist.net/anime/58883/Dead_Dead_Demons_Dededede_Destruction_ONA",
-      "year": "2024",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1528/143212.webp?s=16b5f85a96c7c92e4e40f3178ffac2b7",
-      "genres": [
-        "Drama",
-        "Sci-Fi"
-      ],
-      "episodes": 17
-    },
-    {
-      "title": "Death Note",
-      "id": 1535,
-      "url": "https://myanimelist.net/anime/1535/Death_Note",
-      "year": "2006",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1079/138100.webp?s=559f9e8ecc6c224a4aa8042be6127400",
-      "genres": [
-        "Supernatural",
         "Suspense"
       ],
-      "episodes": 37
+      "episodes": 25,
+      "updated_at": 1782245071
     },
     {
-      "title": "Death Parade",
-      "id": 28223,
-      "url": "https://myanimelist.net/anime/28223/Death_Parade",
+      "title": "My Teen Romantic Comedy SNAFU Climax!",
+      "id": 39547,
+      "url": "https://myanimelist.net/anime/39547/Yahari_Ore_no_Seishun_Love_Comedy_wa_Machigatteiru_Kan",
+      "year": "2020",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1958/107912.webp?s=70f3bfdbd1997554fd959fd626a77399",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "episodes": 12,
+      "updated_at": 1781793275
+    },
+    {
+      "title": "More than a Married Couple, but Not Lovers.",
+      "id": 50425,
+      "url": "https://myanimelist.net/anime/50425/Fuufu_Ijou_Koibito_Miman",
+      "year": "2022",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1713/126442.webp?s=c262651f71c238eddd700130db00707e",
+      "genres": [
+        "Romance"
+      ],
+      "episodes": 12,
+      "updated_at": 1781267451
+    },
+    {
+      "title": "My Dress-Up Darling Season 2",
+      "id": 53065,
+      "url": "https://myanimelist.net/anime/53065/Sono_Bisque_Doll_wa_Koi_wo_Suru_Season_2",
+      "year": "2025",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1024/150787.webp?s=79d92e6de99480e6c8c50b9b54dc636d",
+      "genres": [
+        "Romance"
+      ],
+      "episodes": 12,
+      "updated_at": 1781013011
+    },
+    {
+      "title": "My Teen Romantic Comedy SNAFU TOO!",
+      "id": 23847,
+      "url": "https://myanimelist.net/anime/23847/Yahari_Ore_no_Seishun_Love_Comedy_wa_Machigatteiru_Zoku",
       "year": "2015",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/5/71553.webp?s=9ff22a629b680f6051e9aceb312e88d6",
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/11/75376.webp?s=1c10176fa62ede966bc41b2a7bf03619",
       "genres": [
-        "Drama",
-        "Fantasy",
-        "Suspense"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Deca-Dence",
-      "id": 40056,
-      "url": "https://myanimelist.net/anime/40056/Deca-Dence",
-      "year": "2020",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1787/132772.webp?s=ae98717bd80ef3de2106236f2987ee23",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Sci-Fi"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Delicious in Dungeon",
-      "id": 52701,
-      "url": "https://myanimelist.net/anime/52701/Dungeon_Meshi",
-      "year": "2024",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1711/142478.webp?s=2d561ea1ea12442b115c8b9ab0de1e3d",
-      "genres": [
-        "Adventure",
         "Comedy",
-        "Fantasy",
-        "Gourmet"
+        "Romance"
       ],
-      "episodes": 24
-    },
-    {
-      "title": "Demon Slayer: Kimetsu no Yaiba",
-      "id": 38000,
-      "url": "https://myanimelist.net/anime/38000/Kimetsu_no_Yaiba",
-      "year": "2019",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1286/99889.webp?s=ebf7111941928e3b31b60bd6bb2e591a",
-      "genres": [
-        "Action",
-        "Award Winning",
-        "Supernatural"
-      ],
-      "episodes": 26
-    },
-    {
-      "title": "Demon Slayer: Kimetsu no Yaiba - The Movie: Infinity Castle - Part 1: Akaza Returns",
-      "id": 59192,
-      "url": "https://myanimelist.net/anime/59192/Kimetsu_no_Yaiba_Movie_1__Mugenjou-hen_-_Akaza_Sairai",
-      "year": "2025",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1681/148216.webp?s=fcb56e6eb4b6fbae0b77b445e1c09ef8",
-      "genres": [
-        "Action",
-        "Award Winning",
-        "Supernatural"
-      ],
-      "episodes": 1
-    },
-    {
-      "title": "Demon Slayer: Kimetsu no Yaiba - The Movie: Mugen Train",
-      "id": 40456,
-      "url": "https://myanimelist.net/anime/40456/Kimetsu_no_Yaiba_Movie__Mugen_Ressha-hen",
-      "year": "2020",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1704/106947.webp?s=91d04e2788f6149205c86e7424158431",
-      "genres": [
-        "Action",
-        "Supernatural"
-      ],
-      "episodes": 1
-    },
-    {
-      "title": "Demon Slayer: Kimetsu no Yaiba Entertainment District Arc",
-      "id": 47778,
-      "url": "https://myanimelist.net/anime/47778/Kimetsu_no_Yaiba__Yuukaku-hen",
-      "year": "2021",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1908/120036.webp?s=42f3479f06ab0db293d0210398030472",
-      "genres": [
-        "Action",
-        "Supernatural"
-      ],
-      "episodes": 11
-    },
-    {
-      "title": "Demon Slayer: Kimetsu no Yaiba Hashira Training Arc",
-      "id": 55701,
-      "url": "https://myanimelist.net/anime/55701/Kimetsu_no_Yaiba__Hashira_Geiko-hen",
-      "year": "2024",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1565/142711.webp?s=57beb82f7e25fca68b6241b0b8bb778d",
-      "genres": [
-        "Action",
-        "Supernatural"
-      ],
-      "episodes": 8
-    },
-    {
-      "title": "Demon Slayer: Kimetsu no Yaiba Swordsmith Village Arc",
-      "id": 51019,
-      "url": "https://myanimelist.net/anime/51019/Kimetsu_no_Yaiba__Katanakaji_no_Sato-hen",
-      "year": "2023",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1765/135099.webp?s=56693a6f1995bc28fcdd734e32f2b19b",
-      "genres": [
-        "Action",
-        "Supernatural"
-      ],
-      "episodes": 11
-    },
-    {
-      "title": "Devilman: Crybaby",
-      "id": 35120,
-      "url": "https://myanimelist.net/anime/35120/Devilman__Crybaby",
-      "year": "2018",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/2/89973.webp?s=45cbdcc3e2230f815afde5600f2b2d48",
-      "genres": [
-        "Action",
-        "Avant Garde",
-        "Horror",
-        "Supernatural"
-      ],
-      "episodes": 10
-    },
-    {
-      "title": "Dorohedoro",
-      "id": 38668,
-      "url": "https://myanimelist.net/anime/38668/Dorohedoro",
-      "year": "2020",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1230/119278.webp?s=8288f2a921c5555b8b06699b5681bd71",
-      "genres": [
-        "Action",
-        "Comedy",
-        "Fantasy",
-        "Horror"
-      ],
-      "episodes": 12
+      "episodes": 13,
+      "updated_at": 1779988185
     },
     {
       "title": "Dorohedoro Season 2",
@@ -3716,47 +3389,80 @@ window.mediaDatabase = {
         "Fantasy",
         "Horror"
       ],
-      "episodes": 11
+      "episodes": 11,
+      "updated_at": 1779988172
     },
     {
-      "title": "Dororo",
-      "id": 37520,
-      "url": "https://myanimelist.net/anime/37520/Dororo",
-      "year": "2019",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1879/100467.webp?s=8b7d98ec2c9e1af5fc9b0bd54b772648",
+      "title": "My Teen Romantic Comedy SNAFU",
+      "id": 14813,
+      "url": "https://myanimelist.net/anime/14813/Yahari_Ore_no_Seishun_Love_Comedy_wa_Machigatteiru",
+      "year": "2013",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1786/120117.webp?s=c522bd9ed71bacf81d1ec071911c3e34",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "episodes": 13,
+      "updated_at": 1775835666
+    },
+    {
+      "title": "Wotakoi: Love is Hard for Otaku",
+      "id": 35968,
+      "url": "https://myanimelist.net/anime/35968/Wotaku_ni_Koi_wa_Muzukashii",
+      "year": "2018",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1864/93518.webp?s=296e1c766042374ca0d3f8c1e491178b",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "episodes": 11,
+      "updated_at": 1775498759
+    },
+    {
+      "title": "Hell's Paradise Season 2",
+      "id": 55825,
+      "url": "https://myanimelist.net/anime/55825/Jigokuraku_2nd_Season",
+      "year": "2026",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1772/154456.webp?s=01686f2ff85ef0a704efb445706ccd20",
       "genres": [
         "Action",
         "Adventure",
+        "Supernatural"
+      ],
+      "episodes": 12,
+      "updated_at": 1775199529
+    },
+    {
+      "title": "You and I Are Polar Opposites",
+      "id": 60371,
+      "url": "https://myanimelist.net/anime/60371/Seihantai_na_Kimi_to_Boku",
+      "year": "2026",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1140/154457.webp?s=64201ad2a766eedcb4d601aed7509cfe",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "episodes": 12,
+      "updated_at": 1774986684
+    },
+    {
+      "title": "Frieren: Beyond Journey's End Season 2",
+      "id": 59978,
+      "url": "https://myanimelist.net/anime/59978/Sousou_no_Frieren_2nd_Season",
+      "year": "2026",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1921/154528.webp?s=0e2a18c619aa459f2486350fe5d4549e",
+      "genres": [
+        "Adventure",
+        "Drama",
         "Fantasy"
       ],
-      "episodes": 24
-    },
-    {
-      "title": "Erased",
-      "id": 31043,
-      "url": "https://myanimelist.net/anime/31043/Boku_dake_ga_Inai_Machi",
-      "year": "2016",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/10/77957.webp?s=73b31bbd0867ef7ec4792f93d47578ad",
-      "genres": [
-        "Mystery",
-        "Suspense"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Fireworks",
-      "id": 34498,
-      "url": "https://myanimelist.net/anime/34498/Uchiage_Hanabi_Shita_kara_Miru_ka_Yoko_kara_Miru_ka",
-      "year": "2017",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/10/86521.webp?s=6a2b1326982be8aa987f504758273a7c",
-      "genres": [
-        "Romance",
-        "Sci-Fi"
-      ],
-      "episodes": 1
+      "episodes": 10,
+      "updated_at": 1774772164
     },
     {
       "title": "Frieren: Beyond Journey's End",
@@ -3771,73 +3477,134 @@ window.mediaDatabase = {
         "Drama",
         "Fantasy"
       ],
-      "episodes": 28
+      "episodes": 28,
+      "updated_at": 1774772144
     },
     {
-      "title": "Frieren: Beyond Journey's End Season 2",
-      "id": 59978,
-      "url": "https://myanimelist.net/anime/59978/Sousou_no_Frieren_2nd_Season",
+      "title": "Jujutsu Kaisen: The Culling Game Part 1",
+      "id": 57658,
+      "url": "https://myanimelist.net/anime/57658/Jujutsu_Kaisen__Shimetsu_Kaiyuu_-_Zenpen",
       "year": "2026",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1921/154528.webp?s=0e2a18c619aa459f2486350fe5d4549e",
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1659/154920.webp?s=986417ab1e78ba6adec4042beaeaec07",
       "genres": [
-        "Adventure",
-        "Drama",
-        "Fantasy"
-      ],
-      "episodes": 10
-    },
-    {
-      "title": "Golden Boy",
-      "id": 268,
-      "url": "https://myanimelist.net/anime/268/Golden_Boy",
-      "year": "1995",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/3/62867.webp?s=1c316f3a2f15b960556b2b9136dfecd2",
-      "genres": [
-        "Adventure",
-        "Comedy",
-        "Ecchi"
-      ],
-      "episodes": 6
-    },
-    {
-      "title": "Grand Blue Dreaming",
-      "id": 37105,
-      "url": "https://myanimelist.net/anime/37105/Grand_Blue",
-      "year": "2018",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1302/94882.webp?s=49dac9ecb74077ccedbbc1b2d9b1ba1e",
-      "genres": [
-        "Comedy"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Grandpa and Grandma Turn Young Again",
-      "id": 56230,
-      "url": "https://myanimelist.net/anime/56230/Jiisan_Baasan_Wakagaeru",
-      "year": "2024",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1676/141714.webp?s=24f71d5275dc8d76c45cde3b1de47614",
-      "genres": [
-        "Comedy",
-        "Romance",
+        "Action",
         "Supernatural"
       ],
-      "episodes": 11
+      "episodes": 12,
+      "updated_at": 1774600606
     },
     {
-      "title": "Grave of the Fireflies",
-      "id": 578,
-      "url": "https://myanimelist.net/anime/578/Hotaru_no_Haka",
-      "year": "1988",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1485/141208.webp?s=80ffe3ccc666101f061fe39fb60b9c11",
+      "title": "[Oshi No Ko] Season 3",
+      "id": 60058,
+      "url": "https://myanimelist.net/anime/60058/Oshi_no_Ko_3rd_Season",
+      "year": "2026",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1979/153329.webp?s=f9d0a15689043ab01327149c837b7111",
       "genres": [
         "Drama"
       ],
-      "episodes": 1
+      "episodes": 11,
+      "updated_at": 1774523560
+    },
+    {
+      "title": "Kaguya-sama: Love Is War - Stairway to Adulthood",
+      "id": 61903,
+      "url": "https://myanimelist.net/anime/61903/Kaguya-sama_wa_Kokurasetai__Otona_e_no_Kaidan",
+      "year": "2025",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1112/150697.webp?s=00f625f14760ba0ee36c7db4769d5325",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "episodes": 1,
+      "updated_at": 1768558369
+    },
+    {
+      "title": "Chained Soldier",
+      "id": 50392,
+      "url": "https://myanimelist.net/anime/50392/Mato_Seihei_no_Slave",
+      "year": "2024",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1114/140805.webp?s=fc02fb9e29c2620beb5fce6380f56cd4",
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Ecchi"
+      ],
+      "episodes": 12,
+      "updated_at": 1767946572
+    },
+    {
+      "title": "My Dress-Up Darling",
+      "id": 48736,
+      "url": "https://myanimelist.net/anime/48736/Sono_Bisque_Doll_wa_Koi_wo_Suru",
+      "year": "2022",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1179/119897.webp?s=e7371a6118a2ff6fab439f0227fc26c7",
+      "genres": [
+        "Romance"
+      ],
+      "episodes": 12,
+      "updated_at": 1759429146
+    },
+    {
+      "title": "Demon Slayer: Kimetsu no Yaiba - The Movie: Infinity Castle - Part 1: Akaza Returns",
+      "id": 59192,
+      "url": "https://myanimelist.net/anime/59192/Kimetsu_no_Yaiba_Movie_1__Mugenjou-hen_-_Akaza_Sairai",
+      "year": "2025",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1681/148216.webp?s=fcb56e6eb4b6fbae0b77b445e1c09ef8",
+      "genres": [
+        "Action",
+        "Award Winning",
+        "Supernatural"
+      ],
+      "episodes": 1,
+      "updated_at": 1759428604
+    },
+    {
+      "title": "Cyberpunk: Edgerunners",
+      "id": 42310,
+      "url": "https://myanimelist.net/anime/42310/Cyberpunk__Edgerunners",
+      "year": "2022",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1818/126435.webp?s=36e148447c769b48bbee2a19e3060f32",
+      "genres": [
+        "Action",
+        "Sci-Fi"
+      ],
+      "episodes": 10,
+      "updated_at": 1759427906
+    },
+    {
+      "title": "The Apothecary Diaries Season 2",
+      "id": 58514,
+      "url": "https://myanimelist.net/anime/58514/Kusuriya_no_Hitorigoto_2nd_Season",
+      "year": "2025",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1025/147458.webp?s=f0ebe6e8e545959330138c57b727fa4a",
+      "genres": [
+        "Drama",
+        "Mystery"
+      ],
+      "episodes": 24,
+      "updated_at": 1752827262
+    },
+    {
+      "title": "Erased",
+      "id": 31043,
+      "url": "https://myanimelist.net/anime/31043/Boku_dake_ga_Inai_Machi",
+      "year": "2016",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/10/77957.webp?s=73b31bbd0867ef7ec4792f93d47578ad",
+      "genres": [
+        "Mystery",
+        "Suspense"
+      ],
+      "episodes": 12,
+      "updated_at": 1750106092
     },
     {
       "title": "Heavenly Delusion",
@@ -3851,519 +3618,35 @@ window.mediaDatabase = {
         "Mystery",
         "Sci-Fi"
       ],
-      "episodes": 13
+      "episodes": 13,
+      "updated_at": 1750002723
     },
     {
-      "title": "Hell's Paradise",
-      "id": 46569,
-      "url": "https://myanimelist.net/anime/46569/Jigokuraku",
-      "year": "2023",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1075/131925.webp?s=342717058379f1b42309e27530747b33",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Supernatural"
-      ],
-      "episodes": 13
-    },
-    {
-      "title": "Hell's Paradise Season 2",
-      "id": 55825,
-      "url": "https://myanimelist.net/anime/55825/Jigokuraku_2nd_Season",
-      "year": "2026",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1772/154456.webp?s=01686f2ff85ef0a704efb445706ccd20",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Supernatural"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "High-Rise Invasion",
-      "id": 43690,
-      "url": "https://myanimelist.net/anime/43690/Tenkuu_Shinpan",
-      "year": "2021",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1547/117947.webp?s=f4ddede4837d891b94e733955b46239b",
-      "genres": [
-        "Action",
-        "Horror",
-        "Mystery",
-        "Suspense"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Horimiya",
-      "id": 42897,
-      "url": "https://myanimelist.net/anime/42897/Horimiya",
-      "year": "2021",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1695/111486.webp?s=c4df99e863d929103bf02c6819f8b1a7",
-      "genres": [
-        "Romance"
-      ],
-      "episodes": 13
-    },
-    {
-      "title": "Horimiya: The Missing Pieces",
-      "id": 54856,
-      "url": "https://myanimelist.net/anime/54856/Horimiya__Piece",
-      "year": "2023",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1007/136277.webp?s=c807fe5adff37782f0688049253379ad",
-      "genres": [
-        "Romance"
-      ],
-      "episodes": 13
-    },
-    {
-      "title": "Howl's Moving Castle",
-      "id": 431,
-      "url": "https://myanimelist.net/anime/431/Howl_no_Ugoku_Shiro",
-      "year": "2004",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1470/138723.webp?s=83c3ccef480ba149a6e578327343c4d2",
-      "genres": [
-        "Adventure",
-        "Award Winning",
-        "Drama",
-        "Fantasy",
-        "Romance"
-      ],
-      "episodes": 1
-    },
-    {
-      "title": "Hunter x Hunter",
-      "id": 11061,
-      "url": "https://myanimelist.net/anime/11061/Hunter_x_Hunter_2011",
-      "year": "2011",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1337/99013.webp?s=5f45f5d929858059b9239068ea8f818c",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Fantasy"
-      ],
-      "episodes": 148
-    },
-    {
-      "title": "I Made Friends with the Second Prettiest Girl in My Class",
-      "id": 56734,
-      "url": "https://myanimelist.net/anime/56734/Class_de_2-banme_ni_Kawaii_Onnanoko_to_Tomodachi_ni_Natta",
-      "year": "2026",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1423/155713.webp?s=531ad2128c8c59adb34bd1343f185300",
-      "genres": [
-        "Romance"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "I Want To Eat Your Pancreas",
-      "id": 36098,
-      "url": "https://myanimelist.net/anime/36098/Kimi_no_Suizou_wo_Tabetai",
-      "year": "2018",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1768/93291.webp?s=ff72134258ec6a6f97f79c8976b4f668",
-      "genres": [
-        "Drama",
-        "Romance"
-      ],
-      "episodes": 1
-    },
-    {
-      "title": "In This Corner of the World",
-      "id": 15227,
-      "url": "https://myanimelist.net/anime/15227/Kono_Sekai_no_Katasumi_ni",
-      "year": "2016",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/2/87704.webp?s=a2d1b001ce10d62e516f4db63349f0b4",
-      "genres": [
-        "Award Winning",
-        "Drama"
-      ],
-      "episodes": 1
-    },
-    {
-      "title": "Into the Forest of Fireflies' Light",
-      "id": 10408,
-      "url": "https://myanimelist.net/anime/10408/Hotarubi_no_Mori_e",
-      "year": "2011",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1599/112267.webp?s=907f15944056708ed00e9edb069a12e2",
-      "genres": [
-        "Award Winning",
-        "Drama",
-        "Romance",
-        "Supernatural"
-      ],
-      "episodes": 1
-    },
-    {
-      "title": "JoJo's Bizarre Adventure (2012)",
-      "id": 14719,
-      "url": "https://myanimelist.net/anime/14719/JoJo_no_Kimyou_na_Bouken_TV",
-      "year": "2012",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/3/40409.webp?s=976f5eb08882e675f5182492471f9643",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Supernatural"
-      ],
-      "episodes": 26
-    },
-    {
-      "title": "JoJo's Bizarre Adventure: Diamond Is Unbreakable",
-      "id": 31933,
-      "url": "https://myanimelist.net/anime/31933/JoJo_no_Kimyou_na_Bouken_Part_4__Diamond_wa_Kudakenai",
-      "year": "2016",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/3/79156.webp?s=5e3c7105527113060bb3e5f233e4c12c",
-      "genres": [
-        "Action",
-        "Adventure"
-      ],
-      "episodes": 39
-    },
-    {
-      "title": "JoJo's Bizarre Adventure: Golden Wind",
-      "id": 37991,
-      "url": "https://myanimelist.net/anime/37991/JoJo_no_Kimyou_na_Bouken_Part_5__Ougon_no_Kaze",
-      "year": "2018",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1882/94989.webp?s=52e0a4ed8312fec5841d9df1b2283331",
-      "genres": [
-        "Action",
-        "Adventure"
-      ],
-      "episodes": 39
-    },
-    {
-      "title": "JoJo's Bizarre Adventure: Stardust Crusaders",
-      "id": 20899,
-      "url": "https://myanimelist.net/anime/20899/JoJo_no_Kimyou_na_Bouken_Part_3__Stardust_Crusaders",
-      "year": "2014",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/11/55267.webp?s=0fe3601b8a61f6126748844cb0046491",
-      "genres": [
-        "Action",
-        "Adventure"
-      ],
-      "episodes": 24
-    },
-    {
-      "title": "JoJo's Bizarre Adventure: Stardust Crusaders - Battle in Egypt",
-      "id": 26055,
-      "url": "https://myanimelist.net/anime/26055/JoJo_no_Kimyou_na_Bouken_Part_3__Stardust_Crusaders_-_Egypt-hen",
-      "year": "2015",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/11/75045.webp?s=d990f57df579e0cc7178f4a6c539a219",
-      "genres": [
-        "Action",
-        "Adventure"
-      ],
-      "episodes": 24
-    },
-    {
-      "title": "JoJo's Bizarre Adventure: Stone Ocean",
-      "id": 48661,
-      "url": "https://myanimelist.net/anime/48661/JoJo_no_Kimyou_na_Bouken_Part_6__Stone_Ocean",
-      "year": "2021",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1896/119844.webp?s=4199f0fd0cbd68e9cb2b287da79460ea",
-      "genres": [
-        "Action",
-        "Adventure"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "JoJo's Bizarre Adventure: Stone Ocean Part 2",
-      "id": 51367,
-      "url": "https://myanimelist.net/anime/51367/JoJo_no_Kimyou_na_Bouken_Part_6__Stone_Ocean_Part_2",
-      "year": "2022",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1051/121959.webp?s=3130807e36cb72b3858a47df098a2f4c",
-      "genres": [
-        "Action",
-        "Adventure"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "JoJo's Bizarre Adventure: Stone Ocean Part 3",
-      "id": 53273,
-      "url": "https://myanimelist.net/anime/53273/JoJo_no_Kimyou_na_Bouken_Part_6__Stone_Ocean_Part_3",
-      "year": "2022",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1233/128920.webp?s=ebaa4861bfec28407db19d7296e9b2ba",
-      "genres": [
-        "Action",
-        "Adventure"
-      ],
-      "episodes": 14
-    },
-    {
-      "title": "Josee, the Tiger and the Fish",
-      "id": 40787,
-      "url": "https://myanimelist.net/anime/40787/Josee_to_Tora_to_Sakana-tachi",
-      "year": "2020",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1714/108892.webp?s=7a5e3c80cf5d9e1205d986974c514d3f",
-      "genres": [
-        "Drama",
-        "Romance"
-      ],
-      "episodes": 1
-    },
-    {
-      "title": "Jujutsu Kaisen",
-      "id": 40748,
-      "url": "https://myanimelist.net/anime/40748/Jujutsu_Kaisen",
-      "year": "2020",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1171/109222.webp?s=a3db6f34717cdab65676c6c7c4b9f4ed",
-      "genres": [
-        "Action",
-        "Award Winning",
-        "Supernatural"
-      ],
-      "episodes": 24
-    },
-    {
-      "title": "Jujutsu Kaisen 0",
-      "id": 48561,
-      "url": "https://myanimelist.net/anime/48561/Jujutsu_Kaisen_0_Movie",
-      "year": "2021",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1121/119044.webp?s=b244d8ea0a1bbb493fb08063379421a8",
-      "genres": [
-        "Action",
-        "Supernatural"
-      ],
-      "episodes": 1
-    },
-    {
-      "title": "Jujutsu Kaisen Season 2",
-      "id": 51009,
-      "url": "https://myanimelist.net/anime/51009/Jujutsu_Kaisen_2nd_Season",
-      "year": "2023",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1792/138022.webp?s=ce02954e1b1cfbdb6cef29192e0ef4bf",
-      "genres": [
-        "Action",
-        "Supernatural"
-      ],
-      "episodes": 23
-    },
-    {
-      "title": "Jujutsu Kaisen: The Culling Game Part 1",
-      "id": 57658,
-      "url": "https://myanimelist.net/anime/57658/Jujutsu_Kaisen__Shimetsu_Kaiyuu_-_Zenpen",
-      "year": "2026",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1659/154920.webp?s=986417ab1e78ba6adec4042beaeaec07",
-      "genres": [
-        "Action",
-        "Supernatural"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Kaguya-sama: Love is War",
-      "id": 37999,
-      "url": "https://myanimelist.net/anime/37999/Kaguya-sama_wa_Kokurasetai__Tensai-tachi_no_Renai_Zunousen",
-      "year": "2019",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1295/106551.webp?s=dd18da27b33f817632a6d57282c3ba16",
-      "genres": [
-        "Comedy",
-        "Romance"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Kaguya-sama: Love Is War - Stairway to Adulthood",
-      "id": 61903,
-      "url": "https://myanimelist.net/anime/61903/Kaguya-sama_wa_Kokurasetai__Otona_e_no_Kaidan",
+      "title": "The 100 Girlfriends Who Really, Really, Really, Really, Really Love You Season 2",
+      "id": 57616,
+      "url": "https://myanimelist.net/anime/57616/Kimi_no_Koto_ga_Daidaidaidaidaisuki_na_100-nin_no_Kanojo_2nd_Season",
       "year": "2025",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1112/150697.webp?s=00f625f14760ba0ee36c7db4769d5325",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1093/145470.webp?s=1df0220339234d202f1429ed812268fd",
       "genres": [
         "Comedy",
         "Romance"
       ],
-      "episodes": 1
+      "episodes": 12,
+      "updated_at": 1748966168
     },
     {
-      "title": "Kaguya-sama: Love is War -The First Kiss That Never Ends-",
-      "id": 52198,
-      "url": "https://myanimelist.net/anime/52198/Kaguya-sama_wa_Kokurasetai__First_Kiss_wa_Owaranai",
-      "year": "2022",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1670/130060.webp?s=a24c9776a432b28c4ae117989d8487d7",
-      "genres": [
-        "Comedy",
-        "Drama",
-        "Romance"
-      ],
-      "episodes": 1
-    },
-    {
-      "title": "Kaguya-sama: Love is War -Ultra Romantic-",
-      "id": 43608,
-      "url": "https://myanimelist.net/anime/43608/Kaguya-sama_wa_Kokurasetai__Ultra_Romantic",
-      "year": "2022",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1160/122627.webp?s=7a46339343cb0837bda229693a2e80d8",
-      "genres": [
-        "Comedy",
-        "Romance"
-      ],
-      "episodes": 13
-    },
-    {
-      "title": "Kaguya-sama: Love is War?",
-      "id": 40591,
-      "url": "https://myanimelist.net/anime/40591/Kaguya-sama_wa_Kokurasetai_Tensai-tachi_no_Renai_Zunousen",
-      "year": "2020",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1764/106659.webp?s=87d7854cae12f2d1d7f026143056d3bb",
-      "genres": [
-        "Comedy",
-        "Romance"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Kaiju No. 8",
-      "id": 52588,
-      "url": "https://myanimelist.net/anime/52588/Kaijuu_8-gou",
-      "year": "2024",
+      "title": "Student Council Staff Members",
+      "id": 8675,
+      "url": "https://myanimelist.net/anime/8675/Seitokai_Yakuindomo",
+      "year": "2010",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1370/140362.webp?s=dd589f260b013a0f965e404644b3f8d1",
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/4/75550.webp?s=5d79d797a0b2dccb13eda01906febf42",
       "genres": [
-        "Action",
-        "Fantasy",
-        "Sci-Fi"
+        "Comedy"
       ],
-      "episodes": 12
-    },
-    {
-      "title": "Kill la Kill",
-      "id": 18679,
-      "url": "https://myanimelist.net/anime/18679/Kill_la_Kill",
-      "year": "2013",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1464/111943.webp?s=c37691ed84caaed9320724387cfce2f5",
-      "genres": [
-        "Action",
-        "Comedy",
-        "Fantasy",
-        "Ecchi"
-      ],
-      "episodes": 24
-    },
-    {
-      "title": "KonoSuba: An Explosion on This Wonderful World!",
-      "id": 51958,
-      "url": "https://myanimelist.net/anime/51958/Kono_Subarashii_Sekai_ni_Bakuen_wo",
-      "year": "2023",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1626/135844.webp?s=60a4d12afd0ab238c0b707b168ec0267",
-      "genres": [
-        "Comedy",
-        "Fantasy"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "KonoSuba: God's Blessing on This Wonderful World!",
-      "id": 30831,
-      "url": "https://myanimelist.net/anime/30831/Kono_Subarashii_Sekai_ni_Shukufuku_wo",
-      "year": "2016",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1895/142748.webp?s=38979fd7579613f9005dd87a2b0de3f2",
-      "genres": [
-        "Adventure",
-        "Comedy",
-        "Fantasy"
-      ],
-      "episodes": 10
-    },
-    {
-      "title": "KonoSuba: God's Blessing on This Wonderful World! - Legend of Crimson",
-      "id": 38040,
-      "url": "https://myanimelist.net/anime/38040/Kono_Subarashii_Sekai_ni_Shukufuku_wo_Movie__Kurenai_Densetsu",
-      "year": "2019",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1638/119321.webp?s=1ce10045df4adb2e579ea4fbb6de3df2",
-      "genres": [
-        "Adventure",
-        "Comedy",
-        "Fantasy"
-      ],
-      "episodes": 1
-    },
-    {
-      "title": "KonoSuba: God's Blessing on This Wonderful World! 2",
-      "id": 32937,
-      "url": "https://myanimelist.net/anime/32937/Kono_Subarashii_Sekai_ni_Shukufuku_wo_2",
-      "year": "2017",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/2/83188.webp?s=06117f4cae3021d7636365f28feec754",
-      "genres": [
-        "Adventure",
-        "Comedy",
-        "Fantasy"
-      ],
-      "episodes": 10
-    },
-    {
-      "title": "KonoSuba: God's Blessing on This Wonderful World! 2 - God's Blessing on This Wonderful Art!",
-      "id": 34626,
-      "url": "https://myanimelist.net/anime/34626/Kono_Subarashii_Sekai_ni_Shukufuku_wo_2__Kono_Subarashii_Geijutsu_ni_Shukufuku_wo",
-      "year": "2017",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1115/98517.webp?s=8b3382de69cfd8205138dce3eb3bd8c2",
-      "genres": [
-        "Adventure",
-        "Comedy",
-        "Fantasy"
-      ],
-      "episodes": 1
-    },
-    {
-      "title": "KonoSuba: God's Blessing on This Wonderful World! 3",
-      "id": 49458,
-      "url": "https://myanimelist.net/anime/49458/Kono_Subarashii_Sekai_ni_Shukufuku_wo_3",
-      "year": "2024",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1758/141268.webp?s=9759e9a641acd0dc51cbea03252a188c",
-      "genres": [
-        "Adventure",
-        "Comedy",
-        "Fantasy"
-      ],
-      "episodes": 11
-    },
-    {
-      "title": "Legend of the Galactic Heroes",
-      "id": 820,
-      "url": "https://myanimelist.net/anime/820/Ginga_Eiyuu_Densetsu",
-      "year": "1988",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1976/142016.webp?s=ae2849dc2d1a24f5cb5b300b160a60c0",
-      "genres": [
-        "Drama",
-        "Sci-Fi"
-      ],
-      "episodes": 110
+      "episodes": 13,
+      "updated_at": 1743021482
     },
     {
       "title": "Look Back",
@@ -4376,179 +3659,105 @@ window.mediaDatabase = {
         "Award Winning",
         "Drama"
       ],
-      "episodes": 1
+      "episodes": 1,
+      "updated_at": 1741206770
     },
     {
-      "title": "Love Flops",
-      "id": 51403,
-      "url": "https://myanimelist.net/anime/51403/Renai_Flops",
-      "year": "2022",
-      "score": 5,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1620/130589.webp?s=a33069efd27c261bdc65855e7215c9bd",
-      "genres": [
-        "Comedy",
-        "Romance",
-        "Sci-Fi",
-        "Ecchi"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Lycoris Recoil",
-      "id": 50709,
-      "url": "https://myanimelist.net/anime/50709/Lycoris_Recoil",
-      "year": "2022",
+      "title": "Ron Kamonohashi's Forbidden Deductions Season 2",
+      "id": 57635,
+      "url": "https://myanimelist.net/anime/57635/Kamonohashi_Ron_no_Kindan_Suiri_2nd_Season",
+      "year": "2024",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1261/127311.webp?s=8e5c5ea4b7ee3535f2683d905c95f3e0",
-      "genres": [
-        "Action"
-      ],
-      "episodes": 13
-    },
-    {
-      "title": "Made in Abyss",
-      "id": 34599,
-      "url": "https://myanimelist.net/anime/34599/Made_in_Abyss",
-      "year": "2017",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/6/86733.webp?s=27b20b0a541ac540280bd51adaf240a0",
-      "genres": [
-        "Adventure",
-        "Drama",
-        "Fantasy",
-        "Mystery",
-        "Sci-Fi"
-      ],
-      "episodes": 13
-    },
-    {
-      "title": "Made in Abyss: Dawn of the Deep Soul",
-      "id": 36862,
-      "url": "https://myanimelist.net/anime/36862/Made_in_Abyss_Movie_3__Fukaki_Tamashii_no_Reimei",
-      "year": "2020",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1803/117183.webp?s=33c55a2e3ffedd3b848f0ff9112cff93",
-      "genres": [
-        "Adventure",
-        "Drama",
-        "Fantasy",
-        "Mystery",
-        "Sci-Fi"
-      ],
-      "episodes": 1
-    },
-    {
-      "title": "Made in Abyss: The Golden City of the Scorching Sun",
-      "id": 41084,
-      "url": "https://myanimelist.net/anime/41084/Made_in_Abyss__Retsujitsu_no_Ougonkyou",
-      "year": "2022",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1864/122519.webp?s=ee9e582c644ffe9f5438a70a25a2f45c",
-      "genres": [
-        "Adventure",
-        "Drama",
-        "Fantasy",
-        "Mystery",
-        "Sci-Fi"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Migi & Dali",
-      "id": 50586,
-      "url": "https://myanimelist.net/anime/50586/Migi_to_Dali",
-      "year": "2023",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1845/134817.webp?s=62296e4803a5fc0a9af308ca3e18788d",
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1917/144334.webp?s=3c981d0c565e53d96de95978f4922e57",
       "genres": [
         "Comedy",
-        "Mystery",
-        "Suspense"
+        "Mystery"
       ],
-      "episodes": 13
+      "episodes": 13,
+      "updated_at": 1735739797
     },
     {
-      "title": "Mob Psycho 100",
-      "id": 32182,
-      "url": "https://myanimelist.net/anime/32182/Mob_Psycho_100",
-      "year": "2016",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/8/80356.webp?s=5853f0bb731c4e7ceb19d52be7ac480c",
-      "genres": [
-        "Action",
-        "Comedy",
-        "Supernatural"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Mob Psycho 100 II",
-      "id": 37510,
-      "url": "https://myanimelist.net/anime/37510/Mob_Psycho_100_II",
-      "year": "2019",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1918/96303.webp?s=f7fb405dbcab27d8af3bb9ee9fa400e1",
-      "genres": [
-        "Action",
-        "Comedy",
-        "Supernatural"
-      ],
-      "episodes": 13
-    },
-    {
-      "title": "Mob Psycho 100 III",
-      "id": 50172,
-      "url": "https://myanimelist.net/anime/50172/Mob_Psycho_100_III",
-      "year": "2022",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1228/125011.webp?s=9819cb8b3fad90121823fa3815a8e8f3",
-      "genres": [
-        "Action",
-        "Comedy",
-        "Supernatural"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Monster",
-      "id": 19,
-      "url": "https://myanimelist.net/anime/19/Monster",
-      "year": "2004",
+      "title": "Legend of the Galactic Heroes",
+      "id": 820,
+      "url": "https://myanimelist.net/anime/820/Ginga_Eiyuu_Densetsu",
+      "year": "1988",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/10/18793.webp?s=03808bdb7a318054d54bac1ffcbc507b",
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1976/142016.webp?s=ae2849dc2d1a24f5cb5b300b160a60c0",
       "genres": [
         "Drama",
-        "Mystery",
-        "Suspense"
+        "Sci-Fi"
       ],
-      "episodes": 74
+      "episodes": 110,
+      "updated_at": 1735243819
     },
     {
-      "title": "More than a Married Couple, but Not Lovers.",
-      "id": 50425,
-      "url": "https://myanimelist.net/anime/50425/Fuufu_Ijou_Koibito_Miman",
-      "year": "2022",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1713/126442.webp?s=c262651f71c238eddd700130db00707e",
-      "genres": [
-        "Romance"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Mushoku Tensei: Jobless Reincarnation",
-      "id": 39535,
-      "url": "https://myanimelist.net/anime/39535/Mushoku_Tensei__Isekai_Ittara_Honki_Dasu",
-      "year": "2021",
+      "title": "Dan Da Dan",
+      "id": 57334,
+      "url": "https://myanimelist.net/anime/57334/Dandadan",
+      "year": "2024",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1530/117776.webp?s=6403254d57128f460abacbbccb8cf176",
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1584/143719.webp?s=c244e15123db18b7c10cb83720df89c8",
       "genres": [
-        "Adventure",
-        "Drama",
-        "Fantasy",
-        "Ecchi"
+        "Action",
+        "Comedy",
+        "Supernatural"
       ],
-      "episodes": 11
+      "episodes": 12,
+      "updated_at": 1734902725
+    },
+    {
+      "title": "[Oshi No Ko] Season 2",
+      "id": 55791,
+      "url": "https://myanimelist.net/anime/55791/Oshi_no_Ko_2nd_Season",
+      "year": "2024",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1006/143302.webp?s=4e843b05492237b030755009fcdaf006",
+      "genres": [
+        "Drama"
+      ],
+      "episodes": 13,
+      "updated_at": 1730532213
+    },
+    {
+      "title": "Shy Season 2",
+      "id": 57567,
+      "url": "https://myanimelist.net/anime/57567/Shy_2nd_Season",
+      "year": "2024",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1518/143558.webp?s=8f7a45ae46c6b3adef4958e85d024b92",
+      "genres": [
+        "Action",
+        "Drama"
+      ],
+      "episodes": 12,
+      "updated_at": 1727191491
+    },
+    {
+      "title": "Dead Dead Demons Dededede Destruction",
+      "id": 58883,
+      "url": "https://myanimelist.net/anime/58883/Dead_Dead_Demons_Dededede_Destruction_ONA",
+      "year": "2024",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1528/143212.webp?s=16b5f85a96c7c92e4e40f3178ffac2b7",
+      "genres": [
+        "Drama",
+        "Sci-Fi"
+      ],
+      "episodes": 17,
+      "updated_at": 1726826907
+    },
+    {
+      "title": "My Deer Friend Nokotan",
+      "id": 58426,
+      "url": "https://myanimelist.net/anime/58426/Shikanoko_Nokonoko_Koshitantan",
+      "year": "2024",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1094/143324.webp?s=c986b241d5bd6f3b56990739941203a8",
+      "genres": [
+        "Comedy"
+      ],
+      "episodes": 12,
+      "updated_at": 1726751092
     },
     {
       "title": "Mushoku Tensei: Jobless Reincarnation Part 2",
@@ -4563,7 +3772,24 @@ window.mediaDatabase = {
         "Fantasy",
         "Ecchi"
       ],
-      "episodes": 12
+      "episodes": 12,
+      "updated_at": 1719989883
+    },
+    {
+      "title": "Mushoku Tensei: Jobless Reincarnation",
+      "id": 39535,
+      "url": "https://myanimelist.net/anime/39535/Mushoku_Tensei__Isekai_Ittara_Honki_Dasu",
+      "year": "2021",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1530/117776.webp?s=6403254d57128f460abacbbccb8cf176",
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Fantasy",
+        "Ecchi"
+      ],
+      "episodes": 11,
+      "updated_at": 1719989878
     },
     {
       "title": "Mushoku Tensei: Jobless Reincarnation Season 2",
@@ -4578,7 +3804,8 @@ window.mediaDatabase = {
         "Fantasy",
         "Ecchi"
       ],
-      "episodes": 12
+      "episodes": 12,
+      "updated_at": 1719989876
     },
     {
       "title": "Mushoku Tensei: Jobless Reincarnation Season 2 Part 2",
@@ -4593,82 +3820,37 @@ window.mediaDatabase = {
         "Fantasy",
         "Ecchi"
       ],
-      "episodes": 12
+      "episodes": 12,
+      "updated_at": 1719989871
     },
     {
-      "title": "My Deer Friend Nokotan",
-      "id": 58426,
-      "url": "https://myanimelist.net/anime/58426/Shikanoko_Nokonoko_Koshitantan",
+      "title": "Demon Slayer: Kimetsu no Yaiba Hashira Training Arc",
+      "id": 55701,
+      "url": "https://myanimelist.net/anime/55701/Kimetsu_no_Yaiba__Hashira_Geiko-hen",
       "year": "2024",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1094/143324.webp?s=c986b241d5bd6f3b56990739941203a8",
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1565/142711.webp?s=57beb82f7e25fca68b6241b0b8bb778d",
       "genres": [
-        "Comedy"
+        "Action",
+        "Supernatural"
       ],
-      "episodes": 12
+      "episodes": 8,
+      "updated_at": 1719825214
     },
     {
-      "title": "My Dress-Up Darling",
-      "id": 48736,
-      "url": "https://myanimelist.net/anime/48736/Sono_Bisque_Doll_wa_Koi_wo_Suru",
-      "year": "2022",
+      "title": "Kaiju No. 8",
+      "id": 52588,
+      "url": "https://myanimelist.net/anime/52588/Kaijuu_8-gou",
+      "year": "2024",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1179/119897.webp?s=e7371a6118a2ff6fab439f0227fc26c7",
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1370/140362.webp?s=dd589f260b013a0f965e404644b3f8d1",
       "genres": [
-        "Romance"
+        "Action",
+        "Fantasy",
+        "Sci-Fi"
       ],
-      "episodes": 12
-    },
-    {
-      "title": "My Dress-Up Darling Season 2",
-      "id": 53065,
-      "url": "https://myanimelist.net/anime/53065/Sono_Bisque_Doll_wa_Koi_wo_Suru_Season_2",
-      "year": "2025",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1024/150787.webp?s=79d92e6de99480e6c8c50b9b54dc636d",
-      "genres": [
-        "Romance"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "My Teen Romantic Comedy SNAFU",
-      "id": 14813,
-      "url": "https://myanimelist.net/anime/14813/Yahari_Ore_no_Seishun_Love_Comedy_wa_Machigatteiru",
-      "year": "2013",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1786/120117.webp?s=c522bd9ed71bacf81d1ec071911c3e34",
-      "genres": [
-        "Comedy",
-        "Romance"
-      ],
-      "episodes": 13
-    },
-    {
-      "title": "My Teen Romantic Comedy SNAFU Climax!",
-      "id": 39547,
-      "url": "https://myanimelist.net/anime/39547/Yahari_Ore_no_Seishun_Love_Comedy_wa_Machigatteiru_Kan",
-      "year": "2020",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1958/107912.webp?s=70f3bfdbd1997554fd959fd626a77399",
-      "genres": [
-        "Comedy",
-        "Romance"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "My Teen Romantic Comedy SNAFU TOO!",
-      "id": 23847,
-      "url": "https://myanimelist.net/anime/23847/Yahari_Ore_no_Seishun_Love_Comedy_wa_Machigatteiru_Zoku",
-      "year": "2015",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/11/75376.webp?s=1c10176fa62ede966bc41b2a7bf03619",
-      "genres": [
-        "Comedy",
-        "Romance"
-      ],
-      "episodes": 13
+      "episodes": 12,
+      "updated_at": 1719754511
     },
     {
       "title": "Mysterious Disappearances",
@@ -4682,7 +3864,587 @@ window.mediaDatabase = {
         "Supernatural",
         "Ecchi"
       ],
-      "episodes": 12
+      "episodes": 12,
+      "updated_at": 1719511154
+    },
+    {
+      "title": "Grave of the Fireflies",
+      "id": 578,
+      "url": "https://myanimelist.net/anime/578/Hotaru_no_Haka",
+      "year": "1988",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1485/141208.webp?s=80ffe3ccc666101f061fe39fb60b9c11",
+      "genres": [
+        "Drama"
+      ],
+      "episodes": 1,
+      "updated_at": 1719331822
+    },
+    {
+      "title": "Train to the End of the World",
+      "id": 53356,
+      "url": "https://myanimelist.net/anime/53356/Shuumatsu_Train_Doko_e_Iku",
+      "year": "2024",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1224/137451.webp?s=066a45fbbbb55cdacdc88dc4761fe6cf",
+      "genres": [
+        "Adventure"
+      ],
+      "episodes": 12,
+      "updated_at": 1719331805
+    },
+    {
+      "title": "KonoSuba: God's Blessing on This Wonderful World! 3",
+      "id": 49458,
+      "url": "https://myanimelist.net/anime/49458/Kono_Subarashii_Sekai_ni_Shukufuku_wo_3",
+      "year": "2024",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1758/141268.webp?s=9759e9a641acd0dc51cbea03252a188c",
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Fantasy"
+      ],
+      "episodes": 11,
+      "updated_at": 1718870761
+    },
+    {
+      "title": "Grandpa and Grandma Turn Young Again",
+      "id": 56230,
+      "url": "https://myanimelist.net/anime/56230/Jiisan_Baasan_Wakagaeru",
+      "year": "2024",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1676/141714.webp?s=24f71d5275dc8d76c45cde3b1de47614",
+      "genres": [
+        "Comedy",
+        "Romance",
+        "Supernatural"
+      ],
+      "episodes": 11,
+      "updated_at": 1718618400
+    },
+    {
+      "title": "Delicious in Dungeon",
+      "id": 52701,
+      "url": "https://myanimelist.net/anime/52701/Dungeon_Meshi",
+      "year": "2024",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1711/142478.webp?s=2d561ea1ea12442b115c8b9ab0de1e3d",
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Fantasy",
+        "Gourmet"
+      ],
+      "episodes": 24,
+      "updated_at": 1718383025
+    },
+    {
+      "title": "I Want To Eat Your Pancreas",
+      "id": 36098,
+      "url": "https://myanimelist.net/anime/36098/Kimi_no_Suizou_wo_Tabetai",
+      "year": "2018",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1768/93291.webp?s=ff72134258ec6a6f97f79c8976b4f668",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "episodes": 1,
+      "updated_at": 1718017845
+    },
+    {
+      "title": "Solo Leveling",
+      "id": 52299,
+      "url": "https://myanimelist.net/anime/52299/Ore_dake_Level_Up_na_Ken",
+      "year": "2024",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1801/142390.webp?s=c5ddb4ac2be1ec515c668147eb8f5338",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "episodes": 12,
+      "updated_at": 1711971995
+    },
+    {
+      "title": "The Apothecary Diaries",
+      "id": 54492,
+      "url": "https://myanimelist.net/anime/54492/Kusuriya_no_Hitorigoto",
+      "year": "2023",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1708/138033.webp?s=5a70975a3879460b279fd702ccdacd3e",
+      "genres": [
+        "Drama",
+        "Mystery"
+      ],
+      "episodes": 24,
+      "updated_at": 1711232313
+    },
+    {
+      "title": "Undead Unluck",
+      "id": 52741,
+      "url": "https://myanimelist.net/anime/52741/Undead_Unluck",
+      "year": "2023",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1136/138410.webp?s=c36a74c197c52c439e4d5e5e8a9d31cc",
+      "genres": [
+        "Action",
+        "Comedy"
+      ],
+      "episodes": 24,
+      "updated_at": 1711194489
+    },
+    {
+      "title": "Ron Kamonohashi's Forbidden Deductions",
+      "id": 53879,
+      "url": "https://myanimelist.net/anime/53879/Kamonohashi_Ron_no_Kindan_Suiri",
+      "year": "2023",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1799/137123.webp?s=a53b860905ecab494d0ebc55d370f827",
+      "genres": [
+        "Comedy",
+        "Mystery"
+      ],
+      "episodes": 13,
+      "updated_at": 1710622450
+    },
+    {
+      "title": "Migi & Dali",
+      "id": 50586,
+      "url": "https://myanimelist.net/anime/50586/Migi_to_Dali",
+      "year": "2023",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1845/134817.webp?s=62296e4803a5fc0a9af308ca3e18788d",
+      "genres": [
+        "Comedy",
+        "Mystery",
+        "Suspense"
+      ],
+      "episodes": 13,
+      "updated_at": 1710622432
+    },
+    {
+      "title": "When Marnie Was There",
+      "id": 21557,
+      "url": "https://myanimelist.net/anime/21557/Omoide_no_Marnie",
+      "year": "2014",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/7/64293.webp?s=3a819a1953357ec5701121f467293fe1",
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Suspense"
+      ],
+      "episodes": 1,
+      "updated_at": 1710622408
+    },
+    {
+      "title": "Samurai Flamenco",
+      "id": 19365,
+      "url": "https://myanimelist.net/anime/19365/Samurai_Flamenco",
+      "year": "2013",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/11/54319.webp?s=46760e267ab1eea5e92f08a0cdc4a47f",
+      "genres": [
+        "Action",
+        "Comedy"
+      ],
+      "episodes": 22,
+      "updated_at": 1710622403
+    },
+    {
+      "title": "Kill la Kill",
+      "id": 18679,
+      "url": "https://myanimelist.net/anime/18679/Kill_la_Kill",
+      "year": "2013",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1464/111943.webp?s=c37691ed84caaed9320724387cfce2f5",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Fantasy",
+        "Ecchi"
+      ],
+      "episodes": 24,
+      "updated_at": 1710622401
+    },
+    {
+      "title": "Deca-Dence",
+      "id": 40056,
+      "url": "https://myanimelist.net/anime/40056/Deca-Dence",
+      "year": "2020",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1787/132772.webp?s=ae98717bd80ef3de2106236f2987ee23",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Sci-Fi"
+      ],
+      "episodes": 12,
+      "updated_at": 1705012977
+    },
+    {
+      "title": "High-Rise Invasion",
+      "id": 43690,
+      "url": "https://myanimelist.net/anime/43690/Tenkuu_Shinpan",
+      "year": "2021",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1547/117947.webp?s=f4ddede4837d891b94e733955b46239b",
+      "genres": [
+        "Action",
+        "Horror",
+        "Mystery",
+        "Suspense"
+      ],
+      "episodes": 12,
+      "updated_at": 1704483524
+    },
+    {
+      "title": "Lycoris Recoil",
+      "id": 50709,
+      "url": "https://myanimelist.net/anime/50709/Lycoris_Recoil",
+      "year": "2022",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1261/127311.webp?s=8e5c5ea4b7ee3535f2683d905c95f3e0",
+      "genres": [
+        "Action"
+      ],
+      "episodes": 13,
+      "updated_at": 1703790945
+    },
+    {
+      "title": "Jujutsu Kaisen Season 2",
+      "id": 51009,
+      "url": "https://myanimelist.net/anime/51009/Jujutsu_Kaisen_2nd_Season",
+      "year": "2023",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1792/138022.webp?s=ce02954e1b1cfbdb6cef29192e0ef4bf",
+      "genres": [
+        "Action",
+        "Supernatural"
+      ],
+      "episodes": 23,
+      "updated_at": 1703790907
+    },
+    {
+      "title": "Zom 100: Bucket List of the Dead",
+      "id": 54112,
+      "url": "https://myanimelist.net/anime/54112/Zom_100__Zombie_ni_Naru_made_ni_Shitai_100_no_Koto",
+      "year": "2023",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1384/136408.webp?s=dcb52b5cff44b95e5fdef63a6e79c9d5",
+      "genres": [
+        "Comedy",
+        "Suspense"
+      ],
+      "episodes": 12,
+      "updated_at": 1703600765
+    },
+    {
+      "title": "The 100 Girlfriends Who Really, Really, Really, Really, Really Love You",
+      "id": 54714,
+      "url": "https://myanimelist.net/anime/54714/Kimi_no_Koto_ga_Daidaidaidaidaisuki_na_100-nin_no_Kanojo",
+      "year": "2023",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1812/136764.webp?s=d8c0d4f7d7ba368077d01b696b02ee9b",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "episodes": 12,
+      "updated_at": 1703488680
+    },
+    {
+      "title": "The Kingdoms of Ruin",
+      "id": 54362,
+      "url": "https://myanimelist.net/anime/54362/Hametsu_no_Oukoku",
+      "year": "2023",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1610/138189.webp?s=4528e4d8821508bec7c289046a8abae7",
+      "genres": [
+        "Action",
+        "Drama",
+        "Fantasy",
+        "Sci-Fi"
+      ],
+      "episodes": 12,
+      "updated_at": 1703340078
+    },
+    {
+      "title": "Code Geass: Lelouch of the Rebellion R2",
+      "id": 2904,
+      "url": "https://myanimelist.net/anime/2904/Code_Geass__Hangyaku_no_Lelouch_R2",
+      "year": "2008",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1088/135089.webp?s=65e4aeaf2c05d8c0f54f2d9094d506a3",
+      "genres": [
+        "Award Winning",
+        "Drama",
+        "Sci-Fi"
+      ],
+      "episodes": 25,
+      "updated_at": 1703279640
+    },
+    {
+      "title": "Code Geass: Lelouch of the Rebellion",
+      "id": 1575,
+      "url": "https://myanimelist.net/anime/1575/Code_Geass__Hangyaku_no_Lelouch",
+      "year": "2006",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1032/135088.webp?s=5fae385753f4653a2856cb5161adbfb3",
+      "genres": [
+        "Award Winning",
+        "Drama",
+        "Sci-Fi"
+      ],
+      "episodes": 25,
+      "updated_at": 1702977437
+    },
+    {
+      "title": "Shy",
+      "id": 53237,
+      "url": "https://myanimelist.net/anime/53237/Shy",
+      "year": "2023",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1114/136742.webp?s=71885a6a5f8f4bb1e37ad7d2749a75b4",
+      "genres": [
+        "Action",
+        "Drama"
+      ],
+      "episodes": 12,
+      "updated_at": 1702977337
+    },
+    {
+      "title": "Attack on Titan Season 3",
+      "id": 35760,
+      "url": "https://myanimelist.net/anime/35760/Shingeki_no_Kyojin_Season_3",
+      "year": "2018",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1173/92110.webp?s=8d285d9265f62ba755c9368e036e7324",
+      "genres": [
+        "Action",
+        "Drama",
+        "Suspense"
+      ],
+      "episodes": 12,
+      "updated_at": 1701358202
+    },
+    {
+      "title": "Attack on Titan: Final Season - The Final Chapters",
+      "id": 51535,
+      "url": "https://myanimelist.net/anime/51535/Shingeki_no_Kyojin__The_Final_Season_-_Kanketsu-hen",
+      "year": "2023",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1279/131078.webp?s=02ee7d67319256c936a2ad09f4b29a95",
+      "genres": [
+        "Action",
+        "Drama",
+        "Suspense"
+      ],
+      "episodes": 2,
+      "updated_at": 1699198136
+    },
+    {
+      "title": "Attack on Titan: Final Season Part 2",
+      "id": 48583,
+      "url": "https://myanimelist.net/anime/48583/Shingeki_no_Kyojin__The_Final_Season_Part_2",
+      "year": "2022",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1948/120625.webp?s=d92df3de301c6e30532acbc9194b1a13",
+      "genres": [
+        "Action",
+        "Drama",
+        "Suspense"
+      ],
+      "episodes": 12,
+      "updated_at": 1697809499
+    },
+    {
+      "title": "The Garden of Words",
+      "id": 16782,
+      "url": "https://myanimelist.net/anime/16782/Kotonoha_no_Niwa",
+      "year": "2013",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1597/112995.webp?s=00598b3a1c2584ef3172598112ab05a0",
+      "genres": [
+        "Award Winning",
+        "Drama",
+        "Romance"
+      ],
+      "episodes": 1,
+      "updated_at": 1697809459
+    },
+    {
+      "title": "Your Name.",
+      "id": 32281,
+      "url": "https://myanimelist.net/anime/32281/Kimi_no_Na_wa",
+      "year": "2016",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/5/87048.webp?s=9b98886f1f5ac1d02f63b0b81a6287e1",
+      "genres": [
+        "Award Winning",
+        "Drama"
+      ],
+      "episodes": 1,
+      "updated_at": 1697809444
+    },
+    {
+      "title": "86 Eighty-Six Part 2",
+      "id": 48569,
+      "url": "https://myanimelist.net/anime/48569/86_Part_2",
+      "year": "2021",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1321/117508.webp?s=bc3a1228d58464d0de85c641c4c96a07",
+      "genres": [
+        "Drama",
+        "Sci-Fi"
+      ],
+      "episodes": 12,
+      "updated_at": 1697809399
+    },
+    {
+      "title": "Love Flops",
+      "id": 51403,
+      "url": "https://myanimelist.net/anime/51403/Renai_Flops",
+      "year": "2022",
+      "score": 5,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1620/130589.webp?s=a33069efd27c261bdc65855e7215c9bd",
+      "genres": [
+        "Comedy",
+        "Romance",
+        "Sci-Fi",
+        "Ecchi"
+      ],
+      "episodes": 12,
+      "updated_at": 1696760743
+    },
+    {
+      "title": "Akame ga Kill!",
+      "id": 22199,
+      "url": "https://myanimelist.net/anime/22199/Akame_ga_Kill",
+      "year": "2014",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1429/95946.webp?s=f0093ccd3de2559ad8595f1f062fa777",
+      "genres": [
+        "Action",
+        "Fantasy"
+      ],
+      "episodes": 24,
+      "updated_at": 1696540576
+    },
+    {
+      "title": "The Masterful Cat Is Depressed Again Today",
+      "id": 51916,
+      "url": "https://myanimelist.net/anime/51916/Dekiru_Neko_wa_Kyou_mo_Yuuutsu",
+      "year": "2023",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1074/136720.webp?s=a4d58dab3db0a48079e3c73b946a1b43",
+      "genres": [
+        "Comedy"
+      ],
+      "episodes": 13,
+      "updated_at": 1696093726
+    },
+    {
+      "title": "Horimiya",
+      "id": 42897,
+      "url": "https://myanimelist.net/anime/42897/Horimiya",
+      "year": "2021",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1695/111486.webp?s=c4df99e863d929103bf02c6819f8b1a7",
+      "genres": [
+        "Romance"
+      ],
+      "episodes": 13,
+      "updated_at": 1696007273
+    },
+    {
+      "title": "Demon Slayer: Kimetsu no Yaiba Entertainment District Arc",
+      "id": 47778,
+      "url": "https://myanimelist.net/anime/47778/Kimetsu_no_Yaiba__Yuukaku-hen",
+      "year": "2021",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1908/120036.webp?s=42f3479f06ab0db293d0210398030472",
+      "genres": [
+        "Action",
+        "Supernatural"
+      ],
+      "episodes": 11,
+      "updated_at": 1695997064
+    },
+    {
+      "title": "Undead Murder Farce",
+      "id": 54790,
+      "url": "https://myanimelist.net/anime/54790/Undead_Girl_Murder_Farce",
+      "year": "2023",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1946/136661.webp?s=0a3db8c602c98fe42377659b5670962f",
+      "genres": [
+        "Fantasy",
+        "Mystery"
+      ],
+      "episodes": 13,
+      "updated_at": 1695922209
+    },
+    {
+      "title": "Steins;Gate",
+      "id": 9253,
+      "url": "https://myanimelist.net/anime/9253/Steins_Gate",
+      "year": "2011",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1935/127974.webp?s=a9b464be9ead06d9ca31c6b73ca2edcd",
+      "genres": [
+        "Drama",
+        "Sci-Fi",
+        "Suspense"
+      ],
+      "episodes": 24,
+      "updated_at": 1695655772
+    },
+    {
+      "title": "Mob Psycho 100 III",
+      "id": 50172,
+      "url": "https://myanimelist.net/anime/50172/Mob_Psycho_100_III",
+      "year": "2022",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1228/125011.webp?s=9819cb8b3fad90121823fa3815a8e8f3",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Supernatural"
+      ],
+      "episodes": 12,
+      "updated_at": 1695655691
+    },
+    {
+      "title": "Horimiya: The Missing Pieces",
+      "id": 54856,
+      "url": "https://myanimelist.net/anime/54856/Horimiya__Piece",
+      "year": "2023",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1007/136277.webp?s=c807fe5adff37782f0688049253379ad",
+      "genres": [
+        "Romance"
+      ],
+      "episodes": 13,
+      "updated_at": 1695649798
+    },
+    {
+      "title": "Angels of Death",
+      "id": 35994,
+      "url": "https://myanimelist.net/anime/35994/Satsuriku_no_Tenshi",
+      "year": "2018",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1862/95624.webp?s=dcdacf70c63a4a3f5307556b5d7b2efb",
+      "genres": [
+        "Adventure",
+        "Horror",
+        "Suspense"
+      ],
+      "episodes": 16,
+      "updated_at": 1694617083
     },
     {
       "title": "Neon Genesis Evangelion",
@@ -4698,50 +4460,395 @@ window.mediaDatabase = {
         "Sci-Fi",
         "Suspense"
       ],
-      "episodes": 26
+      "episodes": 26,
+      "updated_at": 1693323577
     },
     {
-      "title": "Neon Genesis Evangelion: The End of Evangelion",
-      "id": 32,
-      "url": "https://myanimelist.net/anime/32/Shinseiki_Evangelion_Movie__Air_Magokoro_wo_Kimi_ni",
-      "year": "1997",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1404/98182.webp?s=27694b3d47cb31d52971445774f4d75c",
+      "title": "SHIMONETA: A Boring World Where the Concept of Dirty Jokes Doesn't Exist",
+      "id": 29786,
+      "url": "https://myanimelist.net/anime/29786/Shimoneta_to_Iu_Gainen_ga_Sonzai_Shinai_Taikutsu_na_Sekai",
+      "year": "2015",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/6/75106.webp?s=0d233fda059d1958a454761b7446a671",
       "genres": [
-        "Avant Garde",
-        "Drama",
+        "Comedy",
+        "Ecchi"
+      ],
+      "episodes": 12,
+      "updated_at": 1693323516
+    },
+    {
+      "title": "Steins;Gate: Open the Missing Link - Divide By Zero",
+      "id": 32188,
+      "url": "https://myanimelist.net/anime/32188/Steins_Gate__Kyoukaimenjou_no_Missing_Link_-_Divide_By_Zero",
+      "year": "2015",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/7/77324.webp?s=11f9fcb1048817082e6bd9b6a0e1e41c",
+      "genres": [
         "Sci-Fi",
         "Suspense"
       ],
-      "episodes": 1
+      "episodes": 1,
+      "updated_at": 1692363831
     },
     {
-      "title": "Odd Taxi",
-      "id": 46102,
-      "url": "https://myanimelist.net/anime/46102/Odd_Taxi",
+      "title": "Demon Slayer: Kimetsu no Yaiba Swordsmith Village Arc",
+      "id": 51019,
+      "url": "https://myanimelist.net/anime/51019/Kimetsu_no_Yaiba__Katanakaji_no_Sato-hen",
+      "year": "2023",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1765/135099.webp?s=56693a6f1995bc28fcdd734e32f2b19b",
+      "genres": [
+        "Action",
+        "Supernatural"
+      ],
+      "episodes": 11,
+      "updated_at": 1691186115
+    },
+    {
+      "title": "Demon Slayer: Kimetsu no Yaiba - The Movie: Mugen Train",
+      "id": 40456,
+      "url": "https://myanimelist.net/anime/40456/Kimetsu_no_Yaiba_Movie__Mugen_Ressha-hen",
+      "year": "2020",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1704/106947.webp?s=91d04e2788f6149205c86e7424158431",
+      "genres": [
+        "Action",
+        "Supernatural"
+      ],
+      "episodes": 1,
+      "updated_at": 1691186099
+    },
+    {
+      "title": "86 Eighty-Six",
+      "id": 41457,
+      "url": "https://myanimelist.net/anime/41457/86",
       "year": "2021",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1987/117507.webp?s=d836fc149fc0663724ae4e3566bf36c1",
+      "genres": [
+        "Drama",
+        "Sci-Fi"
+      ],
+      "episodes": 11,
+      "updated_at": 1690995735
+    },
+    {
+      "title": "[Oshi No Ko]",
+      "id": 52034,
+      "url": "https://myanimelist.net/anime/52034/Oshi_no_Ko",
+      "year": "2023",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1812/134736.webp?s=71031dbc9e1a72a5b8b51d16797f3c11",
+      "genres": [
+        "Award Winning",
+        "Drama"
+      ],
+      "episodes": 11,
+      "updated_at": 1690799185
+    },
+    {
+      "title": "KonoSuba: An Explosion on This Wonderful World!",
+      "id": 51958,
+      "url": "https://myanimelist.net/anime/51958/Kono_Subarashii_Sekai_ni_Bakuen_wo",
+      "year": "2023",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1626/135844.webp?s=60a4d12afd0ab238c0b707b168ec0267",
+      "genres": [
+        "Comedy",
+        "Fantasy"
+      ],
+      "episodes": 12,
+      "updated_at": 1690799168
+    },
+    {
+      "title": "JoJo's Bizarre Adventure (2012)",
+      "id": 14719,
+      "url": "https://myanimelist.net/anime/14719/JoJo_no_Kimyou_na_Bouken_TV",
+      "year": "2012",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1981/113348.webp?s=321aaa0f3b4010bf68bdf39a7896c47b",
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/3/40409.webp?s=976f5eb08882e675f5182492471f9643",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Supernatural"
+      ],
+      "episodes": 26,
+      "updated_at": 1690798973
+    },
+    {
+      "title": "Made in Abyss: The Golden City of the Scorching Sun",
+      "id": 41084,
+      "url": "https://myanimelist.net/anime/41084/Made_in_Abyss__Retsujitsu_no_Ougonkyou",
+      "year": "2022",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1864/122519.webp?s=ee9e582c644ffe9f5438a70a25a2f45c",
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Fantasy",
+        "Mystery",
+        "Sci-Fi"
+      ],
+      "episodes": 12,
+      "updated_at": 1690798676
+    },
+    {
+      "title": "Suzume",
+      "id": 50594,
+      "url": "https://myanimelist.net/anime/50594/Suzume_no_Tojimari",
+      "year": "2022",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1598/128450.webp?s=3dce29ecbbefda57f7a4109ef8a0dd47",
+      "genres": [
+        "Adventure",
+        "Supernatural"
+      ],
+      "episodes": 1,
+      "updated_at": 1690315592
+    },
+    {
+      "title": "Death Parade",
+      "id": 28223,
+      "url": "https://myanimelist.net/anime/28223/Death_Parade",
+      "year": "2015",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/5/71553.webp?s=9ff22a629b680f6051e9aceb312e88d6",
+      "genres": [
+        "Drama",
+        "Fantasy",
+        "Suspense"
+      ],
+      "episodes": 12,
+      "updated_at": 1689800341
+    },
+    {
+      "title": "Hell's Paradise",
+      "id": 46569,
+      "url": "https://myanimelist.net/anime/46569/Jigokuraku",
+      "year": "2023",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1075/131925.webp?s=342717058379f1b42309e27530747b33",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Supernatural"
+      ],
+      "episodes": 13,
+      "updated_at": 1689090170
+    },
+    {
+      "title": "Vinland Saga Season 2",
+      "id": 49387,
+      "url": "https://myanimelist.net/anime/49387/Vinland_Saga_Season_2",
+      "year": "2023",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1170/124312.webp?s=5e460661daec0bc181734fc1c27cda84",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama"
+      ],
+      "episodes": 24,
+      "updated_at": 1689090054
+    },
+    {
+      "title": "Cowboy Bebop",
+      "id": 1,
+      "url": "https://myanimelist.net/anime/1/Cowboy_Bebop",
+      "year": "1998",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/4/19644.webp?s=831d007067a43b7877108a4f52f8293d",
+      "genres": [
+        "Action",
+        "Award Winning",
+        "Sci-Fi"
+      ],
+      "episodes": 26,
+      "updated_at": 1689076478
+    },
+    {
+      "title": "Made in Abyss: Dawn of the Deep Soul",
+      "id": 36862,
+      "url": "https://myanimelist.net/anime/36862/Made_in_Abyss_Movie_3__Fukaki_Tamashii_no_Reimei",
+      "year": "2020",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1803/117183.webp?s=33c55a2e3ffedd3b848f0ff9112cff93",
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Fantasy",
+        "Mystery",
+        "Sci-Fi"
+      ],
+      "episodes": 1,
+      "updated_at": 1689009194
+    },
+    {
+      "title": "Made in Abyss",
+      "id": 34599,
+      "url": "https://myanimelist.net/anime/34599/Made_in_Abyss",
+      "year": "2017",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/6/86733.webp?s=27b20b0a541ac540280bd51adaf240a0",
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Fantasy",
+        "Mystery",
+        "Sci-Fi"
+      ],
+      "episodes": 13,
+      "updated_at": 1689009182
+    },
+    {
+      "title": "Spirited Away",
+      "id": 199,
+      "url": "https://myanimelist.net/anime/199/Sen_to_Chihiro_no_Kamikakushi",
+      "year": "2001",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/6/79597.webp?s=c4c202aabe122887a67494f47979ac92",
+      "genres": [
+        "Adventure",
+        "Award Winning",
+        "Fantasy"
+      ],
+      "episodes": 1,
+      "updated_at": 1688454571
+    },
+    {
+      "title": "Your Lie in April",
+      "id": 23273,
+      "url": "https://myanimelist.net/anime/23273/Shigatsu_wa_Kimi_no_Uso",
+      "year": "2014",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1405/143284.webp?s=5d646964d0552edb9e8e83bff8e5ba51",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "episodes": 22,
+      "updated_at": 1688400183
+    },
+    {
+      "title": "Kaguya-sama: Love is War -The First Kiss That Never Ends-",
+      "id": 52198,
+      "url": "https://myanimelist.net/anime/52198/Kaguya-sama_wa_Kokurasetai__First_Kiss_wa_Owaranai",
+      "year": "2022",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1670/130060.webp?s=a24c9776a432b28c4ae117989d8487d7",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "episodes": 1,
+      "updated_at": 1687727246
+    },
+    {
+      "title": "Golden Boy",
+      "id": 268,
+      "url": "https://myanimelist.net/anime/268/Golden_Boy",
+      "year": "1995",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/3/62867.webp?s=1c316f3a2f15b960556b2b9136dfecd2",
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Ecchi"
+      ],
+      "episodes": 6,
+      "updated_at": 1687727069
+    },
+    {
+      "title": "A Whisker Away",
+      "id": 41168,
+      "url": "https://myanimelist.net/anime/41168/Nakitai_Watashi_wa_Neko_wo_Kaburu",
+      "year": "2020",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1045/106389.webp?s=7c8140813aa9cb41c2d9463190d3d7b8",
       "genres": [
         "Award Winning",
         "Drama",
-        "Mystery",
-        "Suspense"
+        "Romance",
+        "Supernatural"
       ],
-      "episodes": 13
+      "episodes": 1,
+      "updated_at": 1687549486
     },
     {
-      "title": "One-Punch Man",
-      "id": 30276,
-      "url": "https://myanimelist.net/anime/30276/One_Punch_Man",
-      "year": "2015",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/12/76049.webp?s=3a6c696f2db8bbd8862c9d5928608e2d",
+      "title": "KonoSuba: God's Blessing on This Wonderful World! 2",
+      "id": 32937,
+      "url": "https://myanimelist.net/anime/32937/Kono_Subarashii_Sekai_ni_Shukufuku_wo_2",
+      "year": "2017",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/2/83188.webp?s=06117f4cae3021d7636365f28feec754",
       "genres": [
-        "Action",
-        "Comedy"
+        "Adventure",
+        "Comedy",
+        "Fantasy"
       ],
-      "episodes": 12
+      "episodes": 10,
+      "updated_at": 1687549281
+    },
+    {
+      "title": "KonoSuba: God's Blessing on This Wonderful World!",
+      "id": 30831,
+      "url": "https://myanimelist.net/anime/30831/Kono_Subarashii_Sekai_ni_Shukufuku_wo",
+      "year": "2016",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1895/142748.webp?s=38979fd7579613f9005dd87a2b0de3f2",
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Fantasy"
+      ],
+      "episodes": 10,
+      "updated_at": 1687549257
+    },
+    {
+      "title": "Fireworks",
+      "id": 34498,
+      "url": "https://myanimelist.net/anime/34498/Uchiage_Hanabi_Shita_kara_Miru_ka_Yoko_kara_Miru_ka",
+      "year": "2017",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/10/86521.webp?s=6a2b1326982be8aa987f504758273a7c",
+      "genres": [
+        "Romance",
+        "Sci-Fi"
+      ],
+      "episodes": 1,
+      "updated_at": 1686375475
+    },
+    {
+      "title": "Ride Your Wave",
+      "id": 38594,
+      "url": "https://myanimelist.net/anime/38594/Kimi_to_Nami_ni_Noretara",
+      "year": "2019",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1893/99701.webp?s=208c27b76c98a094a0ca02f084b156e6",
+      "genres": [
+        "Drama",
+        "Romance",
+        "Supernatural"
+      ],
+      "episodes": 1,
+      "updated_at": 1686375433
+    },
+    {
+      "title": "Rascal Does Not Dream of a Dreaming Girl",
+      "id": 38329,
+      "url": "https://myanimelist.net/anime/38329/Seishun_Buta_Yarou_wa_Yumemiru_Shoujo_no_Yume_wo_Minai",
+      "year": "2019",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1613/102179.webp?s=144ac52e4594e5bc0fa698d27dd8c860",
+      "genres": [
+        "Drama",
+        "Romance",
+        "Supernatural"
+      ],
+      "episodes": 1,
+      "updated_at": 1685464910
     },
     {
       "title": "One-Punch Man Season 2",
@@ -4754,38 +4861,51 @@ window.mediaDatabase = {
         "Action",
         "Comedy"
       ],
-      "episodes": 12
+      "episodes": 12,
+      "updated_at": 1685224236
     },
     {
-      "title": "Paprika",
-      "id": 1943,
-      "url": "https://myanimelist.net/anime/1943/Paprika",
+      "title": "Death Note",
+      "id": 1535,
+      "url": "https://myanimelist.net/anime/1535/Death_Note",
       "year": "2006",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1929/93629.webp?s=8daef662059455fa845443af5a481585",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1079/138100.webp?s=559f9e8ecc6c224a4aa8042be6127400",
       "genres": [
-        "Avant Garde",
-        "Award Winning",
-        "Mystery",
-        "Sci-Fi",
+        "Supernatural",
         "Suspense"
       ],
-      "episodes": 1
+      "episodes": 37,
+      "updated_at": 1685163780
     },
     {
-      "title": "Parasyte: The Maxim",
-      "id": 22535,
-      "url": "https://myanimelist.net/anime/22535/Kiseijuu__Sei_no_Kakuritsu",
-      "year": "2014",
+      "title": "Rascal Does Not Dream of Bunny Girl Senpai",
+      "id": 37450,
+      "url": "https://myanimelist.net/anime/37450/Seishun_Buta_Yarou_wa_Bunny_Girl_Senpai_no_Yume_wo_Minai",
+      "year": "2018",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/3/73178.webp?s=4b4a74169cc95d79ae263d63da87dec7",
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1301/93586.webp?s=547ab090c3303e8216945234df3cd0cd",
       "genres": [
-        "Action",
-        "Horror",
-        "Sci-Fi",
-        "Suspense"
+        "Drama",
+        "Romance",
+        "Supernatural"
       ],
-      "episodes": 24
+      "episodes": 13,
+      "updated_at": 1685104917
+    },
+    {
+      "title": "In This Corner of the World",
+      "id": 15227,
+      "url": "https://myanimelist.net/anime/15227/Kono_Sekai_no_Katasumi_ni",
+      "year": "2016",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/2/87704.webp?s=a2d1b001ce10d62e516f4db63349f0b4",
+      "genres": [
+        "Award Winning",
+        "Drama"
+      ],
+      "episodes": 1,
+      "updated_at": 1685104840
     },
     {
       "title": "Perfect Blue",
@@ -4801,156 +4921,36 @@ window.mediaDatabase = {
         "Horror",
         "Suspense"
       ],
-      "episodes": 1
+      "episodes": 1,
+      "updated_at": 1684593961
     },
     {
-      "title": "Rascal Does Not Dream of a Dreaming Girl",
-      "id": 38329,
-      "url": "https://myanimelist.net/anime/38329/Seishun_Buta_Yarou_wa_Yumemiru_Shoujo_no_Yume_wo_Minai",
-      "year": "2019",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1613/102179.webp?s=144ac52e4594e5bc0fa698d27dd8c860",
-      "genres": [
-        "Drama",
-        "Romance",
-        "Supernatural"
-      ],
-      "episodes": 1
-    },
-    {
-      "title": "Rascal Does Not Dream of Bunny Girl Senpai",
-      "id": 37450,
-      "url": "https://myanimelist.net/anime/37450/Seishun_Buta_Yarou_wa_Bunny_Girl_Senpai_no_Yume_wo_Minai",
-      "year": "2018",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1301/93586.webp?s=547ab090c3303e8216945234df3cd0cd",
-      "genres": [
-        "Drama",
-        "Romance",
-        "Supernatural"
-      ],
-      "episodes": 13
-    },
-    {
-      "title": "Re:ZERO -Starting Life in Another World-",
-      "id": 31240,
-      "url": "https://myanimelist.net/anime/31240/Re_Zero_kara_Hajimeru_Isekai_Seikatsu",
-      "year": "2016",
+      "title": "JoJo's Bizarre Adventure: Stardust Crusaders",
+      "id": 20899,
+      "url": "https://myanimelist.net/anime/20899/JoJo_no_Kimyou_na_Bouken_Part_3__Stardust_Crusaders",
+      "year": "2014",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1522/128039.webp?s=e10afb77e19f035c7a7fffd08cbf8fdb",
-      "genres": [
-        "Drama",
-        "Fantasy",
-        "Suspense"
-      ],
-      "episodes": 25
-    },
-    {
-      "title": "Re:ZERO -Starting Life in Another World- Memory Snow",
-      "id": 36286,
-      "url": "https://myanimelist.net/anime/36286/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_-_Memory_Snow",
-      "year": "2018",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1081/95707.webp?s=a44ccc268826f80b1a13ba931b444203",
-      "genres": [
-        "Fantasy"
-      ],
-      "episodes": 1
-    },
-    {
-      "title": "Re:ZERO -Starting Life in Another World- Season 2",
-      "id": 39587,
-      "url": "https://myanimelist.net/anime/39587/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_2nd_Season",
-      "year": "2020",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1444/108005.webp?s=810b34a1296c605fd18090ad21692df2",
-      "genres": [
-        "Drama",
-        "Fantasy",
-        "Suspense"
-      ],
-      "episodes": 13
-    },
-    {
-      "title": "Re:ZERO -Starting Life in Another World- Season 2 Part 2",
-      "id": 42203,
-      "url": "https://myanimelist.net/anime/42203/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_2nd_Season_Part_2",
-      "year": "2021",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1724/117421.webp?s=38eacc2d882c1d1484be9c8e98ac7f4f",
-      "genres": [
-        "Drama",
-        "Fantasy",
-        "Suspense"
-      ],
-      "episodes": 10
-    },
-    {
-      "title": "Re:ZERO -Starting Life in Another World- The Frozen Bond",
-      "id": 38414,
-      "url": "https://myanimelist.net/anime/38414/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_-_Hyouketsu_no_Kizuna",
-      "year": "2019",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1238/104023.webp?s=f3f8341b3366b3cfecc61074644f1584",
-      "genres": [
-        "Drama",
-        "Fantasy",
-        "Suspense"
-      ],
-      "episodes": 1
-    },
-    {
-      "title": "Ride Your Wave",
-      "id": 38594,
-      "url": "https://myanimelist.net/anime/38594/Kimi_to_Nami_ni_Noretara",
-      "year": "2019",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1893/99701.webp?s=208c27b76c98a094a0ca02f084b156e6",
-      "genres": [
-        "Drama",
-        "Romance",
-        "Supernatural"
-      ],
-      "episodes": 1
-    },
-    {
-      "title": "Ron Kamonohashi's Forbidden Deductions",
-      "id": 53879,
-      "url": "https://myanimelist.net/anime/53879/Kamonohashi_Ron_no_Kindan_Suiri",
-      "year": "2023",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1799/137123.webp?s=a53b860905ecab494d0ebc55d370f827",
-      "genres": [
-        "Comedy",
-        "Mystery"
-      ],
-      "episodes": 13
-    },
-    {
-      "title": "Ron Kamonohashi's Forbidden Deductions Season 2",
-      "id": 57635,
-      "url": "https://myanimelist.net/anime/57635/Kamonohashi_Ron_no_Kindan_Suiri_2nd_Season",
-      "year": "2024",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1917/144334.webp?s=3c981d0c565e53d96de95978f4922e57",
-      "genres": [
-        "Comedy",
-        "Mystery"
-      ],
-      "episodes": 13
-    },
-    {
-      "title": "Samurai Flamenco",
-      "id": 19365,
-      "url": "https://myanimelist.net/anime/19365/Samurai_Flamenco",
-      "year": "2013",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/11/54319.webp?s=46760e267ab1eea5e92f08a0cdc4a47f",
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/11/55267.webp?s=0fe3601b8a61f6126748844cb0046491",
       "genres": [
         "Action",
-        "Comedy"
+        "Adventure"
       ],
-      "episodes": 22
+      "episodes": 24,
+      "updated_at": 1684593917
+    },
+    {
+      "title": "Kaguya-sama: Love is War",
+      "id": 37999,
+      "url": "https://myanimelist.net/anime/37999/Kaguya-sama_wa_Kokurasetai__Tensai-tachi_no_Renai_Zunousen",
+      "year": "2019",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1295/106551.webp?s=dd18da27b33f817632a6d57282c3ba16",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "episodes": 12,
+      "updated_at": 1684065132
     },
     {
       "title": "Serial Experiments Lain",
@@ -4968,243 +4968,87 @@ window.mediaDatabase = {
         "Supernatural",
         "Suspense"
       ],
-      "episodes": 13
+      "episodes": 13,
+      "updated_at": 1684065006
     },
     {
-      "title": "SHIMONETA: A Boring World Where the Concept of Dirty Jokes Doesn't Exist",
-      "id": 29786,
-      "url": "https://myanimelist.net/anime/29786/Shimoneta_to_Iu_Gainen_ga_Sonzai_Shinai_Taikutsu_na_Sekai",
-      "year": "2015",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/6/75106.webp?s=0d233fda059d1958a454761b7446a671",
+      "title": "Welcome to the N.H.K.",
+      "id": 1210,
+      "url": "https://myanimelist.net/anime/1210/NHK_ni_Youkoso",
+      "year": "2006",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/3/52675.webp?s=b31a1cfa3bb005194f3b7df8f64d4914",
       "genres": [
         "Comedy",
-        "Ecchi"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Shy",
-      "id": 53237,
-      "url": "https://myanimelist.net/anime/53237/Shy",
-      "year": "2023",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1114/136742.webp?s=71885a6a5f8f4bb1e37ad7d2749a75b4",
-      "genres": [
-        "Action",
-        "Drama"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Shy Season 2",
-      "id": 57567,
-      "url": "https://myanimelist.net/anime/57567/Shy_2nd_Season",
-      "year": "2024",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1518/143558.webp?s=8f7a45ae46c6b3adef4958e85d024b92",
-      "genres": [
-        "Action",
-        "Drama"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Solo Leveling",
-      "id": 52299,
-      "url": "https://myanimelist.net/anime/52299/Ore_dake_Level_Up_na_Ken",
-      "year": "2024",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1801/142390.webp?s=c5ddb4ac2be1ec515c668147eb8f5338",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Fantasy"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Spirited Away",
-      "id": 199,
-      "url": "https://myanimelist.net/anime/199/Sen_to_Chihiro_no_Kamikakushi",
-      "year": "2001",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/6/79597.webp?s=c4c202aabe122887a67494f47979ac92",
-      "genres": [
-        "Adventure",
-        "Award Winning",
-        "Fantasy"
-      ],
-      "episodes": 1
-    },
-    {
-      "title": "Spy x Family",
-      "id": 50265,
-      "url": "https://myanimelist.net/anime/50265/Spy_x_Family",
-      "year": "2022",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1441/122795.webp?s=98c5633d975f0492750c26eb940488b8",
-      "genres": [
-        "Action",
-        "Award Winning",
-        "Comedy"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Steins;Gate",
-      "id": 9253,
-      "url": "https://myanimelist.net/anime/9253/Steins_Gate",
-      "year": "2011",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1935/127974.webp?s=a9b464be9ead06d9ca31c6b73ca2edcd",
-      "genres": [
         "Drama",
-        "Sci-Fi",
-        "Suspense"
+        "Romance"
       ],
-      "episodes": 24
+      "episodes": 24,
+      "updated_at": 1683962900
     },
     {
-      "title": "Steins;Gate 0",
-      "id": 30484,
-      "url": "https://myanimelist.net/anime/30484/Steins_Gate_0",
+      "title": "Devilman: Crybaby",
+      "id": 35120,
+      "url": "https://myanimelist.net/anime/35120/Devilman__Crybaby",
       "year": "2018",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1375/93521.webp?s=b4bff517eade29ef1be74d3e2884e68d",
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/2/89973.webp?s=45cbdcc3e2230f815afde5600f2b2d48",
       "genres": [
-        "Drama",
-        "Sci-Fi",
-        "Suspense"
-      ],
-      "episodes": 23
-    },
-    {
-      "title": "Steins;Gate: Open the Missing Link - Divide By Zero",
-      "id": 32188,
-      "url": "https://myanimelist.net/anime/32188/Steins_Gate__Kyoukaimenjou_no_Missing_Link_-_Divide_By_Zero",
-      "year": "2015",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/7/77324.webp?s=11f9fcb1048817082e6bd9b6a0e1e41c",
-      "genres": [
-        "Sci-Fi",
-        "Suspense"
-      ],
-      "episodes": 1
-    },
-    {
-      "title": "Steins;Gate: The Movie - Load Region of Déjà Vu",
-      "id": 11577,
-      "url": "https://myanimelist.net/anime/11577/Steins_Gate_Movie__Fuka_Ryouiki_no_Déjà_vu",
-      "year": "2013",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1611/112806.webp?s=c59a6dd1a6682de12cbfa6072646e140",
-      "genres": [
-        "Drama",
-        "Sci-Fi"
-      ],
-      "episodes": 1
-    },
-    {
-      "title": "Student Council Staff Members",
-      "id": 8675,
-      "url": "https://myanimelist.net/anime/8675/Seitokai_Yakuindomo",
-      "year": "2010",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/4/75550.webp?s=5d79d797a0b2dccb13eda01906febf42",
-      "genres": [
-        "Comedy"
-      ],
-      "episodes": 13
-    },
-    {
-      "title": "Suzume",
-      "id": 50594,
-      "url": "https://myanimelist.net/anime/50594/Suzume_no_Tojimari",
-      "year": "2022",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1598/128450.webp?s=3dce29ecbbefda57f7a4109ef8a0dd47",
-      "genres": [
-        "Adventure",
+        "Action",
+        "Avant Garde",
+        "Horror",
         "Supernatural"
       ],
-      "episodes": 1
+      "episodes": 10,
+      "updated_at": 1682692991
     },
     {
-      "title": "The 100 Girlfriends Who Really, Really, Really, Really, Really Love You",
-      "id": 54714,
-      "url": "https://myanimelist.net/anime/54714/Kimi_no_Koto_ga_Daidaidaidaidaisuki_na_100-nin_no_Kanojo",
-      "year": "2023",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1812/136764.webp?s=d8c0d4f7d7ba368077d01b696b02ee9b",
+      "title": "KonoSuba: God's Blessing on This Wonderful World! 2 - God's Blessing on This Wonderful Art!",
+      "id": 34626,
+      "url": "https://myanimelist.net/anime/34626/Kono_Subarashii_Sekai_ni_Shukufuku_wo_2__Kono_Subarashii_Geijutsu_ni_Shukufuku_wo",
+      "year": "2017",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1115/98517.webp?s=8b3382de69cfd8205138dce3eb3bd8c2",
       "genres": [
+        "Adventure",
         "Comedy",
-        "Romance"
+        "Fantasy"
       ],
-      "episodes": 12
+      "episodes": 1,
+      "updated_at": 1682692575
     },
     {
-      "title": "The 100 Girlfriends Who Really, Really, Really, Really, Really Love You Season 2",
-      "id": 57616,
-      "url": "https://myanimelist.net/anime/57616/Kimi_no_Koto_ga_Daidaidaidaidaisuki_na_100-nin_no_Kanojo_2nd_Season",
-      "year": "2025",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1093/145470.webp?s=1df0220339234d202f1429ed812268fd",
+      "title": "Paprika",
+      "id": 1943,
+      "url": "https://myanimelist.net/anime/1943/Paprika",
+      "year": "2006",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1929/93629.webp?s=8daef662059455fa845443af5a481585",
       "genres": [
-        "Comedy",
-        "Romance"
+        "Avant Garde",
+        "Award Winning",
+        "Mystery",
+        "Sci-Fi",
+        "Suspense"
       ],
-      "episodes": 12
+      "episodes": 1,
+      "updated_at": 1682692547
     },
     {
-      "title": "The Apothecary Diaries",
-      "id": 54492,
-      "url": "https://myanimelist.net/anime/54492/Kusuriya_no_Hitorigoto",
-      "year": "2023",
+      "title": "Dorohedoro",
+      "id": 38668,
+      "url": "https://myanimelist.net/anime/38668/Dorohedoro",
+      "year": "2020",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1708/138033.webp?s=5a70975a3879460b279fd702ccdacd3e",
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1230/119278.webp?s=8288f2a921c5555b8b06699b5681bd71",
       "genres": [
-        "Drama",
-        "Mystery"
+        "Action",
+        "Comedy",
+        "Fantasy",
+        "Horror"
       ],
-      "episodes": 24
-    },
-    {
-      "title": "The Apothecary Diaries Season 2",
-      "id": 58514,
-      "url": "https://myanimelist.net/anime/58514/Kusuriya_no_Hitorigoto_2nd_Season",
-      "year": "2025",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1025/147458.webp?s=f0ebe6e8e545959330138c57b727fa4a",
-      "genres": [
-        "Drama",
-        "Mystery"
-      ],
-      "episodes": 24
-    },
-    {
-      "title": "The Disastrous Life of Saiki K.",
-      "id": 33255,
-      "url": "https://myanimelist.net/anime/33255/Saiki_Kusuo_no_Ψ-nan",
-      "year": "2016",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1973/142750.webp?s=a2448c6550e658b02ed401faa94f9821",
-      "genres": [
-        "Comedy"
-      ],
-      "episodes": 120
-    },
-    {
-      "title": "The Disastrous Life of Saiki K. 2",
-      "id": 34612,
-      "url": "https://myanimelist.net/anime/34612/Saiki_Kusuo_no_Ψ-nan_2",
-      "year": "2018",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1961/91383.webp?s=68d84d5048f076c97f205b2b515bf2c7",
-      "genres": [
-        "Comedy"
-      ],
-      "episodes": 24
+      "episodes": 12,
+      "updated_at": 1682692529
     },
     {
       "title": "The Disastrous Life of Saiki K. Final Arc",
@@ -5216,48 +5060,8 @@ window.mediaDatabase = {
       "genres": [
         "Comedy"
       ],
-      "episodes": 1
-    },
-    {
-      "title": "The Garden of Words",
-      "id": 16782,
-      "url": "https://myanimelist.net/anime/16782/Kotonoha_no_Niwa",
-      "year": "2013",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1597/112995.webp?s=00598b3a1c2584ef3172598112ab05a0",
-      "genres": [
-        "Award Winning",
-        "Drama",
-        "Romance"
-      ],
-      "episodes": 1
-    },
-    {
-      "title": "The Kingdoms of Ruin",
-      "id": 54362,
-      "url": "https://myanimelist.net/anime/54362/Hametsu_no_Oukoku",
-      "year": "2023",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1610/138189.webp?s=4528e4d8821508bec7c289046a8abae7",
-      "genres": [
-        "Action",
-        "Drama",
-        "Fantasy",
-        "Sci-Fi"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "The Masterful Cat Is Depressed Again Today",
-      "id": 51916,
-      "url": "https://myanimelist.net/anime/51916/Dekiru_Neko_wa_Kyou_mo_Yuuutsu",
-      "year": "2023",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1074/136720.webp?s=a4d58dab3db0a48079e3c73b946a1b43",
-      "genres": [
-        "Comedy"
-      ],
-      "episodes": 13
+      "episodes": 1,
+      "updated_at": 1682692132
     },
     {
       "title": "The Tale of the Princess Kaguya",
@@ -5270,122 +5074,23 @@ window.mediaDatabase = {
         "Award Winning",
         "Fantasy"
       ],
-      "episodes": 1
+      "episodes": 1,
+      "updated_at": 1682692099
     },
     {
-      "title": "Train to the End of the World",
-      "id": 53356,
-      "url": "https://myanimelist.net/anime/53356/Shuumatsu_Train_Doko_e_Iku",
-      "year": "2024",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1224/137451.webp?s=066a45fbbbb55cdacdc88dc4761fe6cf",
-      "genres": [
-        "Adventure"
-      ],
-      "episodes": 12
-    },
-    {
-      "title": "Undead Murder Farce",
-      "id": 54790,
-      "url": "https://myanimelist.net/anime/54790/Undead_Girl_Murder_Farce",
-      "year": "2023",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1946/136661.webp?s=0a3db8c602c98fe42377659b5670962f",
-      "genres": [
-        "Fantasy",
-        "Mystery"
-      ],
-      "episodes": 13
-    },
-    {
-      "title": "Undead Unluck",
-      "id": 52741,
-      "url": "https://myanimelist.net/anime/52741/Undead_Unluck",
-      "year": "2023",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1136/138410.webp?s=c36a74c197c52c439e4d5e5e8a9d31cc",
-      "genres": [
-        "Action",
-        "Comedy"
-      ],
-      "episodes": 24
-    },
-    {
-      "title": "Vinland Saga",
-      "id": 37521,
-      "url": "https://myanimelist.net/anime/37521/Vinland_Saga",
+      "title": "Dororo",
+      "id": 37520,
+      "url": "https://myanimelist.net/anime/37520/Dororo",
       "year": "2019",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1500/103005.webp?s=57aadd25396eda2d407e95add880ba37",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1879/100467.webp?s=8b7d98ec2c9e1af5fc9b0bd54b772648",
       "genres": [
         "Action",
         "Adventure",
-        "Drama"
+        "Fantasy"
       ],
-      "episodes": 24
-    },
-    {
-      "title": "Vinland Saga Season 2",
-      "id": 49387,
-      "url": "https://myanimelist.net/anime/49387/Vinland_Saga_Season_2",
-      "year": "2023",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1170/124312.webp?s=5e460661daec0bc181734fc1c27cda84",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Drama"
-      ],
-      "episodes": 24
-    },
-    {
-      "title": "Violet Evergarden",
-      "id": 33352,
-      "url": "https://myanimelist.net/anime/33352/Violet_Evergarden",
-      "year": "2018",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1795/95088.webp?s=ef6a8f39e9c495159e8e1906088000f9",
-      "genres": [
-        "Drama"
-      ],
-      "episodes": 13
-    },
-    {
-      "title": "Violet Evergarden: Eternity and the Auto Memory Doll",
-      "id": 39741,
-      "url": "https://myanimelist.net/anime/39741/Violet_Evergarden_Gaiden__Eien_to_Jidou_Shuki_Ningyou",
-      "year": "2019",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1667/112943.webp?s=4e5b03e1478c1971ba3194c36a5c22f9",
-      "genres": [
-        "Drama"
-      ],
-      "episodes": 1
-    },
-    {
-      "title": "Violet Evergarden: The Day You Understand \"I Love You\" Will Surely Come",
-      "id": 37095,
-      "url": "https://myanimelist.net/anime/37095/Violet_Evergarden__Kitto_Ai_wo_Shiru_Hi_ga_Kuru_no_Darou",
-      "year": "2018",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/9/89993.webp?s=1cc3cf6178131c4c2f6a7ba7e6b025c8",
-      "genres": [
-        "Drama"
-      ],
-      "episodes": 1
-    },
-    {
-      "title": "Violet Evergarden: The Movie",
-      "id": 37987,
-      "url": "https://myanimelist.net/anime/37987/Violet_Evergarden_Movie",
-      "year": "2020",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1825/110716.webp?s=35443db41ef0f435f8894cce354bcac5",
-      "genres": [
-        "Award Winning",
-        "Drama"
-      ],
-      "episodes": 1
+      "episodes": 24,
+      "updated_at": 1682692078
     },
     {
       "title": "Weathering with You",
@@ -5400,35 +5105,251 @@ window.mediaDatabase = {
         "Romance",
         "Supernatural"
       ],
-      "episodes": 1
+      "episodes": 1,
+      "updated_at": 1682692028
     },
     {
-      "title": "Welcome to the N.H.K.",
-      "id": 1210,
-      "url": "https://myanimelist.net/anime/1210/NHK_ni_Youkoso",
-      "year": "2006",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/3/52675.webp?s=b31a1cfa3bb005194f3b7df8f64d4914",
+      "title": "Into the Forest of Fireflies' Light",
+      "id": 10408,
+      "url": "https://myanimelist.net/anime/10408/Hotarubi_no_Mori_e",
+      "year": "2011",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1599/112267.webp?s=907f15944056708ed00e9edb069a12e2",
       "genres": [
-        "Comedy",
+        "Award Winning",
+        "Drama",
+        "Romance",
+        "Supernatural"
+      ],
+      "episodes": 1,
+      "updated_at": 1682692018
+    },
+    {
+      "title": "Violet Evergarden: The Day You Understand \"I Love You\" Will Surely Come",
+      "id": 37095,
+      "url": "https://myanimelist.net/anime/37095/Violet_Evergarden__Kitto_Ai_wo_Shiru_Hi_ga_Kuru_no_Darou",
+      "year": "2018",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/9/89993.webp?s=1cc3cf6178131c4c2f6a7ba7e6b025c8",
+      "genres": [
+        "Drama"
+      ],
+      "episodes": 1,
+      "updated_at": 1682691980
+    },
+    {
+      "title": "Parasyte: The Maxim",
+      "id": 22535,
+      "url": "https://myanimelist.net/anime/22535/Kiseijuu__Sei_no_Kakuritsu",
+      "year": "2014",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/3/73178.webp?s=4b4a74169cc95d79ae263d63da87dec7",
+      "genres": [
+        "Action",
+        "Horror",
+        "Sci-Fi",
+        "Suspense"
+      ],
+      "episodes": 24,
+      "updated_at": 1682691922
+    },
+    {
+      "title": "Violet Evergarden: Eternity and the Auto Memory Doll",
+      "id": 39741,
+      "url": "https://myanimelist.net/anime/39741/Violet_Evergarden_Gaiden__Eien_to_Jidou_Shuki_Ningyou",
+      "year": "2019",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1667/112943.webp?s=4e5b03e1478c1971ba3194c36a5c22f9",
+      "genres": [
+        "Drama"
+      ],
+      "episodes": 1,
+      "updated_at": 1682691771
+    },
+    {
+      "title": "Josee, the Tiger and the Fish",
+      "id": 40787,
+      "url": "https://myanimelist.net/anime/40787/Josee_to_Tora_to_Sakana-tachi",
+      "year": "2020",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1714/108892.webp?s=7a5e3c80cf5d9e1205d986974c514d3f",
+      "genres": [
         "Drama",
         "Romance"
       ],
-      "episodes": 24
+      "episodes": 1,
+      "updated_at": 1682691763
     },
     {
-      "title": "When Marnie Was There",
-      "id": 21557,
-      "url": "https://myanimelist.net/anime/21557/Omoide_no_Marnie",
-      "year": "2014",
+      "title": "The Disastrous Life of Saiki K. 2",
+      "id": 34612,
+      "url": "https://myanimelist.net/anime/34612/Saiki_Kusuo_no_Ψ-nan_2",
+      "year": "2018",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/7/64293.webp?s=3a819a1953357ec5701121f467293fe1",
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1961/91383.webp?s=68d84d5048f076c97f205b2b515bf2c7",
+      "genres": [
+        "Comedy"
+      ],
+      "episodes": 24,
+      "updated_at": 1682691751
+    },
+    {
+      "title": "The Disastrous Life of Saiki K.",
+      "id": 33255,
+      "url": "https://myanimelist.net/anime/33255/Saiki_Kusuo_no_Ψ-nan",
+      "year": "2016",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1973/142750.webp?s=a2448c6550e658b02ed401faa94f9821",
+      "genres": [
+        "Comedy"
+      ],
+      "episodes": 120,
+      "updated_at": 1682691741
+    },
+    {
+      "title": "Grand Blue Dreaming",
+      "id": 37105,
+      "url": "https://myanimelist.net/anime/37105/Grand_Blue",
+      "year": "2018",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1302/94882.webp?s=49dac9ecb74077ccedbbc1b2d9b1ba1e",
+      "genres": [
+        "Comedy"
+      ],
+      "episodes": 12,
+      "updated_at": 1682691726
+    },
+    {
+      "title": "JoJo's Bizarre Adventure: Stardust Crusaders - Battle in Egypt",
+      "id": 26055,
+      "url": "https://myanimelist.net/anime/26055/JoJo_no_Kimyou_na_Bouken_Part_3__Stardust_Crusaders_-_Egypt-hen",
+      "year": "2015",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/11/75045.webp?s=d990f57df579e0cc7178f4a6c539a219",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "episodes": 24,
+      "updated_at": 1682691711
+    },
+    {
+      "title": "Steins;Gate: The Movie - Load Region of Déjà Vu",
+      "id": 11577,
+      "url": "https://myanimelist.net/anime/11577/Steins_Gate_Movie__Fuka_Ryouiki_no_Déjà_vu",
+      "year": "2013",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1611/112806.webp?s=c59a6dd1a6682de12cbfa6072646e140",
       "genres": [
         "Drama",
-        "Mystery",
+        "Sci-Fi"
+      ],
+      "episodes": 1,
+      "updated_at": 1682691692
+    },
+    {
+      "title": "KonoSuba: God's Blessing on This Wonderful World! - Legend of Crimson",
+      "id": 38040,
+      "url": "https://myanimelist.net/anime/38040/Kono_Subarashii_Sekai_ni_Shukufuku_wo_Movie__Kurenai_Densetsu",
+      "year": "2019",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1638/119321.webp?s=1ce10045df4adb2e579ea4fbb6de3df2",
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Fantasy"
+      ],
+      "episodes": 1,
+      "updated_at": 1682691677
+    },
+    {
+      "title": "Jujutsu Kaisen 0",
+      "id": 48561,
+      "url": "https://myanimelist.net/anime/48561/Jujutsu_Kaisen_0_Movie",
+      "year": "2021",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1121/119044.webp?s=b244d8ea0a1bbb493fb08063379421a8",
+      "genres": [
+        "Action",
+        "Supernatural"
+      ],
+      "episodes": 1,
+      "updated_at": 1682691663
+    },
+    {
+      "title": "Mob Psycho 100",
+      "id": 32182,
+      "url": "https://myanimelist.net/anime/32182/Mob_Psycho_100",
+      "year": "2016",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/8/80356.webp?s=5853f0bb731c4e7ceb19d52be7ac480c",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Supernatural"
+      ],
+      "episodes": 12,
+      "updated_at": 1682691652
+    },
+    {
+      "title": "One-Punch Man",
+      "id": 30276,
+      "url": "https://myanimelist.net/anime/30276/One_Punch_Man",
+      "year": "2015",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/12/76049.webp?s=3a6c696f2db8bbd8862c9d5928608e2d",
+      "genres": [
+        "Action",
+        "Comedy"
+      ],
+      "episodes": 12,
+      "updated_at": 1682691639
+    },
+    {
+      "title": "Demon Slayer: Kimetsu no Yaiba",
+      "id": 38000,
+      "url": "https://myanimelist.net/anime/38000/Kimetsu_no_Yaiba",
+      "year": "2019",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1286/99889.webp?s=ebf7111941928e3b31b60bd6bb2e591a",
+      "genres": [
+        "Action",
+        "Award Winning",
+        "Supernatural"
+      ],
+      "episodes": 26,
+      "updated_at": 1682691625
+    },
+    {
+      "title": "Steins;Gate 0",
+      "id": 30484,
+      "url": "https://myanimelist.net/anime/30484/Steins_Gate_0",
+      "year": "2018",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1375/93521.webp?s=b4bff517eade29ef1be74d3e2884e68d",
+      "genres": [
+        "Drama",
+        "Sci-Fi",
         "Suspense"
       ],
-      "episodes": 1
+      "episodes": 23,
+      "updated_at": 1682691611
+    },
+    {
+      "title": "Neon Genesis Evangelion: The End of Evangelion",
+      "id": 32,
+      "url": "https://myanimelist.net/anime/32/Shinseiki_Evangelion_Movie__Air_Magokoro_wo_Kimi_ni",
+      "year": "1997",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1404/98182.webp?s=27694b3d47cb31d52971445774f4d75c",
+      "genres": [
+        "Avant Garde",
+        "Drama",
+        "Sci-Fi",
+        "Suspense"
+      ],
+      "episodes": 1,
+      "updated_at": 1682691581
     },
     {
       "title": "Wolf Children",
@@ -5442,109 +5363,358 @@ window.mediaDatabase = {
         "Slice of Life",
         "Supernatural"
       ],
-      "episodes": 1
+      "episodes": 1,
+      "updated_at": 1682691561
     },
     {
-      "title": "Wotakoi: Love is Hard for Otaku",
-      "id": 35968,
-      "url": "https://myanimelist.net/anime/35968/Wotaku_ni_Koi_wa_Muzukashii",
-      "year": "2018",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1864/93518.webp?s=296e1c766042374ca0d3f8c1e491178b",
-      "genres": [
-        "Comedy",
-        "Romance"
-      ],
-      "episodes": 11
-    },
-    {
-      "title": "You and I Are Polar Opposites",
-      "id": 60371,
-      "url": "https://myanimelist.net/anime/60371/Seihantai_na_Kimi_to_Boku",
-      "year": "2026",
+      "title": "Chainsaw Man",
+      "id": 44511,
+      "url": "https://myanimelist.net/anime/44511/Chainsaw_Man",
+      "year": "2022",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1140/154457.webp?s=64201ad2a766eedcb4d601aed7509cfe",
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1806/126216.webp?s=3a636c2578f49cc009d4e4a805a762a3",
+      "genres": [
+        "Action",
+        "Fantasy"
+      ],
+      "episodes": 12,
+      "updated_at": 1682691527
+    },
+    {
+      "title": "Kaguya-sama: Love is War?",
+      "id": 40591,
+      "url": "https://myanimelist.net/anime/40591/Kaguya-sama_wa_Kokurasetai_Tensai-tachi_no_Renai_Zunousen",
+      "year": "2020",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1764/106659.webp?s=87d7854cae12f2d1d7f026143056d3bb",
       "genres": [
         "Comedy",
         "Romance"
       ],
-      "episodes": 12
+      "episodes": 12,
+      "updated_at": 1682691503
     },
     {
-      "title": "Your Lie in April",
-      "id": 23273,
-      "url": "https://myanimelist.net/anime/23273/Shigatsu_wa_Kimi_no_Uso",
-      "year": "2014",
+      "title": "Jujutsu Kaisen",
+      "id": 40748,
+      "url": "https://myanimelist.net/anime/40748/Jujutsu_Kaisen",
+      "year": "2020",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1405/143284.webp?s=5d646964d0552edb9e8e83bff8e5ba51",
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1171/109222.webp?s=a3db6f34717cdab65676c6c7c4b9f4ed",
       "genres": [
+        "Action",
+        "Award Winning",
+        "Supernatural"
+      ],
+      "episodes": 24,
+      "updated_at": 1682691493
+    },
+    {
+      "title": "Spy x Family",
+      "id": 50265,
+      "url": "https://myanimelist.net/anime/50265/Spy_x_Family",
+      "year": "2022",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1441/122795.webp?s=98c5633d975f0492750c26eb940488b8",
+      "genres": [
+        "Action",
+        "Award Winning",
+        "Comedy"
+      ],
+      "episodes": 12,
+      "updated_at": 1682691480
+    },
+    {
+      "title": "Howl's Moving Castle",
+      "id": 431,
+      "url": "https://myanimelist.net/anime/431/Howl_no_Ugoku_Shiro",
+      "year": "2004",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1470/138723.webp?s=83c3ccef480ba149a6e578327343c4d2",
+      "genres": [
+        "Adventure",
+        "Award Winning",
         "Drama",
+        "Fantasy",
         "Romance"
       ],
-      "episodes": 22
+      "episodes": 1,
+      "updated_at": 1682691466
     },
     {
-      "title": "Your Name.",
-      "id": 32281,
-      "url": "https://myanimelist.net/anime/32281/Kimi_no_Na_wa",
-      "year": "2016",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/5/87048.webp?s=9b98886f1f5ac1d02f63b0b81a6287e1",
+      "title": "Violet Evergarden",
+      "id": 33352,
+      "url": "https://myanimelist.net/anime/33352/Violet_Evergarden",
+      "year": "2018",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1795/95088.webp?s=ef6a8f39e9c495159e8e1906088000f9",
       "genres": [
-        "Award Winning",
         "Drama"
       ],
-      "episodes": 1
+      "episodes": 13,
+      "updated_at": 1682691452
     },
     {
-      "title": "Zom 100: Bucket List of the Dead",
-      "id": 54112,
-      "url": "https://myanimelist.net/anime/54112/Zom_100__Zombie_ni_Naru_made_ni_Shitai_100_no_Koto",
-      "year": "2023",
+      "title": "Odd Taxi",
+      "id": 46102,
+      "url": "https://myanimelist.net/anime/46102/Odd_Taxi",
+      "year": "2021",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1384/136408.webp?s=dcb52b5cff44b95e5fdef63a6e79c9d5",
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1981/113348.webp?s=321aaa0f3b4010bf68bdf39a7896c47b",
       "genres": [
-        "Comedy",
+        "Award Winning",
+        "Drama",
+        "Mystery",
         "Suspense"
       ],
-      "episodes": 12
+      "episodes": 13,
+      "updated_at": 1682691440
     },
     {
-      "title": "[Oshi No Ko]",
-      "id": 52034,
-      "url": "https://myanimelist.net/anime/52034/Oshi_no_Ko",
-      "year": "2023",
+      "title": "Vinland Saga",
+      "id": 37521,
+      "url": "https://myanimelist.net/anime/37521/Vinland_Saga",
+      "year": "2019",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1500/103005.webp?s=57aadd25396eda2d407e95add880ba37",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama"
+      ],
+      "episodes": 24,
+      "updated_at": 1682691400
+    },
+    {
+      "title": "Mob Psycho 100 II",
+      "id": 37510,
+      "url": "https://myanimelist.net/anime/37510/Mob_Psycho_100_II",
+      "year": "2019",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1918/96303.webp?s=f7fb405dbcab27d8af3bb9ee9fa400e1",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Supernatural"
+      ],
+      "episodes": 13,
+      "updated_at": 1682691349
+    },
+    {
+      "title": "Bocchi the Rock!",
+      "id": 47917,
+      "url": "https://myanimelist.net/anime/47917/Bocchi_the_Rock",
+      "year": "2022",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1448/127956.webp?s=6232ebd3e1611b1d7f8f8e0e6f627a49",
+      "genres": [
+        "Comedy"
+      ],
+      "episodes": 12,
+      "updated_at": 1682691316
+    },
+    {
+      "title": "Violet Evergarden: The Movie",
+      "id": 37987,
+      "url": "https://myanimelist.net/anime/37987/Violet_Evergarden_Movie",
+      "year": "2020",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1812/134736.webp?s=71031dbc9e1a72a5b8b51d16797f3c11",
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1825/110716.webp?s=35443db41ef0f435f8894cce354bcac5",
       "genres": [
         "Award Winning",
         "Drama"
       ],
-      "episodes": 11
+      "episodes": 1,
+      "updated_at": 1682691300
     },
     {
-      "title": "[Oshi No Ko] Season 2",
-      "id": 55791,
-      "url": "https://myanimelist.net/anime/55791/Oshi_no_Ko_2nd_Season",
-      "year": "2024",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1006/143302.webp?s=4e843b05492237b030755009fcdaf006",
+      "title": "A Silent Voice",
+      "id": 28851,
+      "url": "https://myanimelist.net/anime/28851/Koe_no_Katachi",
+      "year": "2016",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1122/96435.webp?s=f8162c1735ac8075df9ba9974c934b24",
       "genres": [
+        "Award Winning",
         "Drama"
       ],
-      "episodes": 13
+      "episodes": 1,
+      "updated_at": 1682691259
     },
     {
-      "title": "[Oshi No Ko] Season 3",
-      "id": 60058,
-      "url": "https://myanimelist.net/anime/60058/Oshi_no_Ko_3rd_Season",
-      "year": "2026",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1979/153329.webp?s=f9d0a15689043ab01327149c837b7111",
+      "title": "Hunter x Hunter",
+      "id": 11061,
+      "url": "https://myanimelist.net/anime/11061/Hunter_x_Hunter_2011",
+      "year": "2011",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1337/99013.webp?s=5f45f5d929858059b9239068ea8f818c",
       "genres": [
-        "Drama"
+        "Action",
+        "Adventure",
+        "Fantasy"
       ],
-      "episodes": 11
+      "episodes": 148,
+      "updated_at": 1682691247
+    },
+    {
+      "title": "Kaguya-sama: Love is War -Ultra Romantic-",
+      "id": 43608,
+      "url": "https://myanimelist.net/anime/43608/Kaguya-sama_wa_Kokurasetai__Ultra_Romantic",
+      "year": "2022",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1160/122627.webp?s=7a46339343cb0837bda229693a2e80d8",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "episodes": 13,
+      "updated_at": 1682691235
+    },
+    {
+      "title": "Attack on Titan Season 3 Part 2",
+      "id": 38524,
+      "url": "https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2",
+      "year": "2019",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1517/100633.webp?s=c86bc6403a5a7dfb64b1c659978f392c",
+      "genres": [
+        "Action",
+        "Drama",
+        "Suspense"
+      ],
+      "episodes": 10,
+      "updated_at": 1682691101
+    },
+    {
+      "title": "Attack on Titan: Final Season",
+      "id": 40028,
+      "url": "https://myanimelist.net/anime/40028/Shingeki_no_Kyojin__The_Final_Season",
+      "year": "2020",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1000/110531.webp?s=2e910b2f12ba643a513abbf504ee8b72",
+      "genres": [
+        "Action",
+        "Drama",
+        "Suspense"
+      ],
+      "episodes": 16,
+      "updated_at": 1682691083
+    },
+    {
+      "title": "Attack on Titan Season 2",
+      "id": 25777,
+      "url": "https://myanimelist.net/anime/25777/Shingeki_no_Kyojin_Season_2",
+      "year": "2017",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/4/84177.webp?s=ff0cbb05e8044332e6f21e8345637856",
+      "genres": [
+        "Action",
+        "Drama",
+        "Suspense"
+      ],
+      "episodes": 12,
+      "updated_at": 1682691050
+    },
+    {
+      "title": "Attack on Titan",
+      "id": 16498,
+      "url": "https://myanimelist.net/anime/16498/Shingeki_no_Kyojin",
+      "year": "2013",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/10/47347.webp?s=a4e6359cbd72eaa5b8bf1149cdbee051",
+      "genres": [
+        "Action",
+        "Award Winning",
+        "Drama",
+        "Suspense"
+      ],
+      "episodes": 25,
+      "updated_at": 1682691038
+    },
+    {
+      "title": "Monster",
+      "id": 19,
+      "url": "https://myanimelist.net/anime/19/Monster",
+      "year": "2004",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/10/18793.webp?s=03808bdb7a318054d54bac1ffcbc507b",
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Suspense"
+      ],
+      "episodes": 74,
+      "updated_at": 1682690843
+    },
+    {
+      "title": "JoJo's Bizarre Adventure: Stone Ocean Part 3",
+      "id": 53273,
+      "url": "https://myanimelist.net/anime/53273/JoJo_no_Kimyou_na_Bouken_Part_6__Stone_Ocean_Part_3",
+      "year": "2022",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1233/128920.webp?s=ebaa4861bfec28407db19d7296e9b2ba",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "episodes": 14,
+      "updated_at": 1682690808
+    },
+    {
+      "title": "JoJo's Bizarre Adventure: Stone Ocean Part 2",
+      "id": 51367,
+      "url": "https://myanimelist.net/anime/51367/JoJo_no_Kimyou_na_Bouken_Part_6__Stone_Ocean_Part_2",
+      "year": "2022",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1051/121959.webp?s=3130807e36cb72b3858a47df098a2f4c",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "episodes": 12,
+      "updated_at": 1682690741
+    },
+    {
+      "title": "JoJo's Bizarre Adventure: Stone Ocean",
+      "id": 48661,
+      "url": "https://myanimelist.net/anime/48661/JoJo_no_Kimyou_na_Bouken_Part_6__Stone_Ocean",
+      "year": "2021",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1896/119844.webp?s=4199f0fd0cbd68e9cb2b287da79460ea",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "episodes": 12,
+      "updated_at": 1682690730
+    },
+    {
+      "title": "JoJo's Bizarre Adventure: Golden Wind",
+      "id": 37991,
+      "url": "https://myanimelist.net/anime/37991/JoJo_no_Kimyou_na_Bouken_Part_5__Ougon_no_Kaze",
+      "year": "2018",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/1882/94989.webp?s=52e0a4ed8312fec5841d9df1b2283331",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "episodes": 39,
+      "updated_at": 1682690698
+    },
+    {
+      "title": "JoJo's Bizarre Adventure: Diamond Is Unbreakable",
+      "id": 31933,
+      "url": "https://myanimelist.net/anime/31933/JoJo_no_Kimyou_na_Bouken_Part_4__Diamond_wa_Kudakenai",
+      "year": "2016",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/r/192x272/images/anime/3/79156.webp?s=5e3c7105527113060bb3e5f233e4c12c",
+      "genres": [
+        "Action",
+        "Adventure"
+      ],
+      "episodes": 39,
+      "updated_at": 1682690656
     }
   ],
   "manga": [
@@ -5562,7 +5732,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "chapters": 249,
-      "volumes": 22
+      "volumes": 22,
+      "updated_at": 0
     },
     {
       "title": "21st Century Boys",
@@ -5578,7 +5749,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "chapters": 16,
-      "volumes": 2
+      "volumes": 2,
+      "updated_at": 0
     },
     {
       "title": "A Girl on the Shore",
@@ -5592,7 +5764,8 @@ window.mediaDatabase = {
         "Erotica"
       ],
       "chapters": 20,
-      "volumes": 2
+      "volumes": 2,
+      "updated_at": 0
     },
     {
       "title": "Ajin: Demi-Human",
@@ -5608,7 +5781,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "chapters": 84,
-      "volumes": 17
+      "volumes": 17,
+      "updated_at": 0
     },
     {
       "title": "Akari",
@@ -5621,7 +5795,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "chapters": 5,
-      "volumes": 1
+      "volumes": 1,
+      "updated_at": 0
     },
     {
       "title": "Avant-garde Yumeko",
@@ -5635,7 +5810,8 @@ window.mediaDatabase = {
         "Ecchi"
       ],
       "chapters": 7,
-      "volumes": 1
+      "volumes": 1,
+      "updated_at": 0
     },
     {
       "title": "Billy Bat",
@@ -5650,7 +5826,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "chapters": 165,
-      "volumes": 20
+      "volumes": 20,
+      "updated_at": 0
     },
     {
       "title": "Blame!",
@@ -5666,7 +5843,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "chapters": 66,
-      "volumes": 10
+      "volumes": 10,
+      "updated_at": 0
     },
     {
       "title": "Blue Heaven",
@@ -5679,7 +5857,8 @@ window.mediaDatabase = {
         "Action"
       ],
       "chapters": 27,
-      "volumes": 3
+      "volumes": 3,
+      "updated_at": 0
     },
     {
       "title": "Boy's Abyss",
@@ -5692,7 +5871,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "chapters": 0,
-      "volumes": 18
+      "volumes": 18,
+      "updated_at": 0
     },
     {
       "title": "Chainsaw Man",
@@ -5707,7 +5887,8 @@ window.mediaDatabase = {
         "Fantasy"
       ],
       "chapters": 232,
-      "volumes": 24
+      "volumes": 24,
+      "updated_at": 0
     },
     {
       "title": "Confession",
@@ -5721,7 +5902,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "chapters": 11,
-      "volumes": 1
+      "volumes": 1,
+      "updated_at": 0
     },
     {
       "title": "Dead Dead Demons Dededede Destruction",
@@ -5736,7 +5918,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "chapters": 101,
-      "volumes": 12
+      "volumes": 12,
+      "updated_at": 0
     },
     {
       "title": "Dokuzakura",
@@ -5752,7 +5935,8 @@ window.mediaDatabase = {
         "Ecchi"
       ],
       "chapters": 33,
-      "volumes": 5
+      "volumes": 5,
+      "updated_at": 0
     },
     {
       "title": "Don't XXX with Teachers!",
@@ -5766,7 +5950,8 @@ window.mediaDatabase = {
         "Ecchi"
       ],
       "chapters": 38,
-      "volumes": 7
+      "volumes": 7,
+      "updated_at": 0
     },
     {
       "title": "Dorohedoro",
@@ -5782,7 +5967,8 @@ window.mediaDatabase = {
         "Horror"
       ],
       "chapters": 190,
-      "volumes": 23
+      "volumes": 23,
+      "updated_at": 0
     },
     {
       "title": "Doutei Zetsumetsu Rettou",
@@ -5795,7 +5981,8 @@ window.mediaDatabase = {
         "Ecchi"
       ],
       "chapters": 0,
-      "volumes": 0
+      "volumes": 0,
+      "updated_at": 0
     },
     {
       "title": "Downfall",
@@ -5808,7 +5995,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "chapters": 8,
-      "volumes": 1
+      "volumes": 1,
+      "updated_at": 0
     },
     {
       "title": "Drifting Net Café",
@@ -5824,7 +6012,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "chapters": 63,
-      "volumes": 7
+      "volumes": 7,
+      "updated_at": 0
     },
     {
       "title": "Even If I'm Not Fifteen",
@@ -5837,7 +6026,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "chapters": 18,
-      "volumes": 2
+      "volumes": 2,
+      "updated_at": 0
     },
     {
       "title": "Fire Punch",
@@ -5852,7 +6042,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "chapters": 83,
-      "volumes": 8
+      "volumes": 8,
+      "updated_at": 0
     },
     {
       "title": "Gantz",
@@ -5869,7 +6060,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "chapters": 383,
-      "volumes": 37
+      "volumes": 37,
+      "updated_at": 0
     },
     {
       "title": "Genkai Dokushin Joshi (26) Gohan",
@@ -5882,7 +6074,8 @@ window.mediaDatabase = {
         "Slice of Life"
       ],
       "chapters": 28,
-      "volumes": 4
+      "volumes": 4,
+      "updated_at": 0
     },
     {
       "title": "Gigant",
@@ -5897,7 +6090,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "chapters": 89,
-      "volumes": 10
+      "volumes": 10,
+      "updated_at": 0
     },
     {
       "title": "Girls' Last Tour",
@@ -5912,7 +6106,8 @@ window.mediaDatabase = {
         "Slice of Life"
       ],
       "chapters": 47,
-      "volumes": 6
+      "volumes": 6,
+      "updated_at": 0
     },
     {
       "title": "Goodnight Punpun",
@@ -5926,7 +6121,8 @@ window.mediaDatabase = {
         "Slice of Life"
       ],
       "chapters": 147,
-      "volumes": 13
+      "volumes": 13,
+      "updated_at": 0
     },
     {
       "title": "Gyo: The Death-Stench Creeps",
@@ -5942,7 +6138,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "chapters": 21,
-      "volumes": 2
+      "volumes": 2,
+      "updated_at": 0
     },
     {
       "title": "Hell's Paradise: Jigokuraku",
@@ -5956,7 +6153,8 @@ window.mediaDatabase = {
         "Fantasy"
       ],
       "chapters": 128,
-      "volumes": 13
+      "volumes": 13,
+      "updated_at": 0
     },
     {
       "title": "Hideout",
@@ -5969,7 +6167,8 @@ window.mediaDatabase = {
         "Horror"
       ],
       "chapters": 9,
-      "volumes": 0
+      "volumes": 0,
+      "updated_at": 0
     },
     {
       "title": "Isshou Suki tte Yutta jan",
@@ -5983,7 +6182,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "chapters": 7,
-      "volumes": 1
+      "volumes": 1,
+      "updated_at": 0
     },
     {
       "title": "It Takes Two Tomorrow, Too",
@@ -5997,7 +6197,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "chapters": 92,
-      "volumes": 5
+      "volumes": 5,
+      "updated_at": 0
     },
     {
       "title": "JoJo no Kimyou na Bouken Part 8: JoJolion",
@@ -6014,7 +6215,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "chapters": 110,
-      "volumes": 27
+      "volumes": 27,
+      "updated_at": 0
     },
     {
       "title": "JoJo's Bizarre Adventure Part 6: Stone Ocean",
@@ -6028,7 +6230,8 @@ window.mediaDatabase = {
         "Adventure"
       ],
       "chapters": 158,
-      "volumes": 17
+      "volumes": 17,
+      "updated_at": 0
     },
     {
       "title": "JoJo's Bizarre Adventure Part 7: Steel Ball Run",
@@ -6044,7 +6247,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "chapters": 96,
-      "volumes": 24
+      "volumes": 24,
+      "updated_at": 0
     },
     {
       "title": "Jujutsu Kaisen",
@@ -6058,7 +6262,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "chapters": 271,
-      "volumes": 25
+      "volumes": 25,
+      "updated_at": 0
     },
     {
       "title": "Jujutsu Kaisen Modulo",
@@ -6073,7 +6278,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "chapters": 0,
-      "volumes": 0
+      "volumes": 0,
+      "updated_at": 0
     },
     {
       "title": "Kaiju No. 8",
@@ -6088,7 +6294,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "chapters": 129,
-      "volumes": 16
+      "volumes": 16,
+      "updated_at": 0
     },
     {
       "title": "Kaitai Zanuff",
@@ -6101,7 +6308,8 @@ window.mediaDatabase = {
         "Horror"
       ],
       "chapters": 1,
-      "volumes": 0
+      "volumes": 0,
+      "updated_at": 0
     },
     {
       "title": "Kowareta Bokura no Senryaku Renai",
@@ -6114,7 +6322,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "chapters": 1,
-      "volumes": 0
+      "volumes": 0,
+      "updated_at": 0
     },
     {
       "title": "Land of the Lustrous",
@@ -6129,7 +6338,8 @@ window.mediaDatabase = {
         "Fantasy"
       ],
       "chapters": 108,
-      "volumes": 13
+      "volumes": 13,
+      "updated_at": 0
     },
     {
       "title": "Look Back",
@@ -6142,7 +6352,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "chapters": 0,
-      "volumes": 1
+      "volumes": 1,
+      "updated_at": 0
     },
     {
       "title": "Love Agency",
@@ -6156,7 +6367,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "chapters": 39,
-      "volumes": 4
+      "volumes": 4,
+      "updated_at": 0
     },
     {
       "title": "Master Keaton Remaster",
@@ -6171,7 +6383,8 @@ window.mediaDatabase = {
         "Mystery"
       ],
       "chapters": 8,
-      "volumes": 1
+      "volumes": 1,
+      "updated_at": 0
     },
     {
       "title": "My Broken Mariko",
@@ -6184,7 +6397,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "chapters": 5,
-      "volumes": 1
+      "volumes": 1,
+      "updated_at": 0
     },
     {
       "title": "My Girlfriend's Child",
@@ -6198,7 +6412,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "chapters": 41,
-      "volumes": 10
+      "volumes": 10,
+      "updated_at": 0
     },
     {
       "title": "Nee Nee, Nene-san.",
@@ -6213,7 +6428,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "chapters": 1,
-      "volumes": 0
+      "volumes": 0,
+      "updated_at": 0
     },
     {
       "title": "No Longer Human",
@@ -6226,7 +6442,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "chapters": 24,
-      "volumes": 3
+      "volumes": 3,
+      "updated_at": 0
     },
     {
       "title": "Okuru Kotoba",
@@ -6240,7 +6457,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "chapters": 16,
-      "volumes": 3
+      "volumes": 3,
+      "updated_at": 0
     },
     {
       "title": "Onani Master Kurosawa",
@@ -6253,7 +6471,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "chapters": 31,
-      "volumes": 4
+      "volumes": 4,
+      "updated_at": 0
     },
     {
       "title": "Only I Know That Hinako Hirasaka Is Erotically Kawaii.",
@@ -6266,7 +6485,8 @@ window.mediaDatabase = {
         "Erotica"
       ],
       "chapters": 50,
-      "volumes": 7
+      "volumes": 7,
+      "updated_at": 0
     },
     {
       "title": "Otona ni Narenai Bokura wa",
@@ -6279,7 +6499,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "chapters": 28,
-      "volumes": 3
+      "volumes": 3,
+      "updated_at": 0
     },
     {
       "title": "Pluto: Urasawa x Tezuka",
@@ -6296,7 +6517,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "chapters": 65,
-      "volumes": 8
+      "volumes": 8,
+      "updated_at": 0
     },
     {
       "title": "Ressentiment",
@@ -6311,7 +6533,8 @@ window.mediaDatabase = {
         "Ecchi"
       ],
       "chapters": 49,
-      "volumes": 4
+      "volumes": 4,
+      "updated_at": 0
     },
     {
       "title": "Saihate ni Madou",
@@ -6324,7 +6547,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "chapters": 16,
-      "volumes": 3
+      "volumes": 3,
+      "updated_at": 0
     },
     {
       "title": "Saltiness",
@@ -6335,7 +6559,8 @@ window.mediaDatabase = {
       "image": "https://cdn.myanimelist.net/r/192x272/images/manga/1/98303.webp?s=43b37c7c573d41ba353256b9ffa1f1e2",
       "genres": [],
       "chapters": 44,
-      "volumes": 4
+      "volumes": 4,
+      "updated_at": 0
     },
     {
       "title": "Secret of the Alien",
@@ -6350,7 +6575,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "chapters": 0,
-      "volumes": 0
+      "volumes": 0,
+      "updated_at": 0
     },
     {
       "title": "Shi ni Aruki",
@@ -6364,7 +6590,8 @@ window.mediaDatabase = {
         "Mystery"
       ],
       "chapters": 37,
-      "volumes": 4
+      "volumes": 4,
+      "updated_at": 0
     },
     {
       "title": "Shiver: Junji Ito Selected Stories",
@@ -6377,7 +6604,8 @@ window.mediaDatabase = {
         "Horror"
       ],
       "chapters": 10,
-      "volumes": 1
+      "volumes": 1,
+      "updated_at": 0
     },
     {
       "title": "Slam Dunk",
@@ -6391,7 +6619,8 @@ window.mediaDatabase = {
         "Sports"
       ],
       "chapters": 276,
-      "volumes": 31
+      "volumes": 31,
+      "updated_at": 0
     },
     {
       "title": "Sneeze: Naoki Urasawa Story Collection",
@@ -6408,7 +6637,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "chapters": 8,
-      "volumes": 1
+      "volumes": 1,
+      "updated_at": 0
     },
     {
       "title": "Soshite Watashi wa, Kou Itta.",
@@ -6422,7 +6652,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "chapters": 1,
-      "volumes": 0
+      "volumes": 0,
+      "updated_at": 0
     },
     {
       "title": "Sun-Ken Rock",
@@ -6438,7 +6669,8 @@ window.mediaDatabase = {
         "Ecchi"
       ],
       "chapters": 181,
-      "volumes": 25
+      "volumes": 25,
+      "updated_at": 0
     },
     {
       "title": "Takopi's Original Sin",
@@ -6452,7 +6684,8 @@ window.mediaDatabase = {
         "Sci-Fi"
       ],
       "chapters": 16,
-      "volumes": 2
+      "volumes": 2,
+      "updated_at": 0
     },
     {
       "title": "The Climber",
@@ -6467,7 +6700,8 @@ window.mediaDatabase = {
         "Sports"
       ],
       "chapters": 170,
-      "volumes": 17
+      "volumes": 17,
+      "updated_at": 0
     },
     {
       "title": "The Flowers of Evil",
@@ -6481,7 +6715,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "chapters": 58,
-      "volumes": 11
+      "volumes": 11,
+      "updated_at": 0
     },
     {
       "title": "The Girl from Class",
@@ -6495,7 +6730,8 @@ window.mediaDatabase = {
         "Slice of Life"
       ],
       "chapters": 28,
-      "volumes": 1
+      "volumes": 1,
+      "updated_at": 0
     },
     {
       "title": "The Gods Lie.",
@@ -6509,7 +6745,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "chapters": 5,
-      "volumes": 1
+      "volumes": 1,
+      "updated_at": 0
     },
     {
       "title": "The Horizon",
@@ -6523,7 +6760,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "chapters": 21,
-      "volumes": 3
+      "volumes": 3,
+      "updated_at": 0
     },
     {
       "title": "The Ramparts of Ice",
@@ -6537,7 +6775,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "chapters": 117,
-      "volumes": 14
+      "volumes": 14,
+      "updated_at": 0
     },
     {
       "title": "Tomodachi Game",
@@ -6550,7 +6789,8 @@ window.mediaDatabase = {
         "Suspense"
       ],
       "chapters": 0,
-      "volumes": 0
+      "volumes": 0,
+      "updated_at": 0
     },
     {
       "title": "Undead Unluck",
@@ -6564,7 +6804,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "chapters": 240,
-      "volumes": 27
+      "volumes": 27,
+      "updated_at": 0
     },
     {
       "title": "Usotsuki Mii-kun to Kowareta Maa-chan: Totteoki no Uso",
@@ -6578,7 +6819,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "chapters": 5,
-      "volumes": 1
+      "volumes": 1,
+      "updated_at": 0
     },
     {
       "title": "Uzumaki: Spiral into Horror",
@@ -6593,7 +6835,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "chapters": 19,
-      "volumes": 3
+      "volumes": 3,
+      "updated_at": 0
     },
     {
       "title": "Vinland Saga",
@@ -6609,7 +6852,8 @@ window.mediaDatabase = {
         "Drama"
       ],
       "chapters": 224,
-      "volumes": 29
+      "volumes": 29,
+      "updated_at": 0
     },
     {
       "title": "Wanitokagegisu",
@@ -6623,7 +6867,8 @@ window.mediaDatabase = {
         "Slice of Life"
       ],
       "chapters": 44,
-      "volumes": 4
+      "volumes": 4,
+      "updated_at": 0
     },
     {
       "title": "Welcome Back, Alice",
@@ -6637,7 +6882,8 @@ window.mediaDatabase = {
         "Romance"
       ],
       "chapters": 40,
-      "volumes": 7
+      "volumes": 7,
+      "updated_at": 0
     },
     {
       "title": "Yu Yu Hakusho",
@@ -6654,7 +6900,8 @@ window.mediaDatabase = {
         "Supernatural"
       ],
       "chapters": 176,
-      "volumes": 19
+      "volumes": 19,
+      "updated_at": 0
     },
     {
       "title": "[Oshi no Ko]",
@@ -6667,7 +6914,39 @@ window.mediaDatabase = {
         "Drama"
       ],
       "chapters": 0,
-      "volumes": 16
+      "volumes": 16,
+      "updated_at": 0
     }
-  ]
+  ],
+  "currently": {
+    "watching": [
+      "The Ramparts of Ice",
+      "Steel Ball Run: JoJo's Bizarre Adventure",
+      "One Piece"
+    ],
+    "reading": [
+      "Berserk",
+      "Centuria",
+      "Chained Soldier",
+      "Dandadan",
+      "Grand Blue Dreaming",
+      "Haimiya Is Scary Cute",
+      "Haunted Peak",
+      "JoJo's Bizarre Adventure Part 9: The JoJoLands",
+      "Kagurabachi",
+      "One Piece",
+      "One-Punch Man",
+      "Real",
+      "RuriDragon",
+      "ST✰R: Strike It Rich",
+      "The 100 Girlfriends Who Really, Really, Really, Really, Really Love You",
+      "The Summer Hikaru Died",
+      "Tsumi to Batsu no Spica",
+      "Unexciting Date...",
+      "Uzaki-chan Wants to Hang Out!",
+      "Vagabond",
+      "Yotsuba&!",
+      "Zom 100: Bucket List of the Dead"
+    ]
+  }
 }

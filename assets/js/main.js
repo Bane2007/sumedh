@@ -164,7 +164,6 @@
     content.style.display = 'grid';
     placeholder.style.display = 'none';
 
-    // Show actual cover art if available, otherwise show styled fallback SVG
     if (film.image) {
       coverArt.innerHTML = `<img src="${film.image}" alt="${film.title}" class="img-cover" style="width: 100%; height: 100%; object-fit: cover; border-radius: 2px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);" onerror="this.outerHTML='${generateGenericCover(film.title, film.year).replace(/'/g, "\\'")}';">`;
     } else {
@@ -334,14 +333,12 @@
       card.className = 'grid-item-card';
       card.setAttribute('tabindex', '0');
 
-      // Create image poster element
       const img = document.createElement('img');
       img.className = 'card-poster-img';
       img.loading = 'lazy';
       img.alt = item.title;
       img.src = item.image || '';
       
-      // Dynamic fallback replacement if CDN image fails
       img.onerror = () => {
         const fallback = document.createElement('div');
         fallback.className = 'card-fallback-svg-container';
@@ -351,7 +348,6 @@
         img.replaceWith(fallback);
       };
 
-      // Create overlay showing title/year on hover
       const overlay = document.createElement('div');
       overlay.className = 'card-hover-overlay';
       overlay.innerHTML = `
@@ -383,7 +379,6 @@
       movieGrid.appendChild(card);
     });
 
-    // Auto-select first matching card if list view is active
     const isListActive = btnFilmsView.classList.contains('active') || 
                          btnAnimeView.classList.contains('active') || 
                          btnMangaView.classList.contains('active');
@@ -475,4 +470,23 @@
 
   // Render the initial list in the background
   renderList();
+
+  // === DYNAMIC "CURRENTLY" STATUS SYSTEM ===
+  const currentlyBody = document.querySelector('.currently__body');
+  if (currentlyBody && window.mediaDatabase && window.mediaDatabase.currently) {
+    const currently = window.mediaDatabase.currently;
+    const parts = [];
+    
+    parts.push('writing the next thing');
+    
+    if (currently.reading && currently.reading.length > 0) {
+      parts.push(`reading <em style="color: var(--ink); font-family: var(--serif); font-weight: 500;">${currently.reading[0]}</em>`);
+    }
+    if (currently.watching && currently.watching.length > 0) {
+      parts.push(`watching <em style="color: var(--ink); font-family: var(--serif); font-weight: 500;">${currently.watching[0]}</em>`);
+    }
+    
+    parts.push('second year, Energy Engineering, IIT Delhi Abu Dhabi');
+    currentlyBody.innerHTML = parts.join(' &middot; ');
+  }
 })();
