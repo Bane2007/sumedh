@@ -170,14 +170,20 @@
 
     displayCabinetImage(film.image, film.title, film.year);
     titleEl.innerHTML = film.title;
-    directorEl.innerHTML = 'Letterboxd Diary';
-    metaEl.innerHTML = `${film.year} &middot; Rated ${film.rating || 'No Rating'}`;
+    directorEl.innerHTML = 'Letterboxd Record';
+    metaEl.innerHTML = film.year;
     quoteEl.style.display = 'none';
     
-    descEl.innerHTML = `This film is part of Sumedh's watched history on Letterboxd. He rated it <strong>${film.rating || 'Unrated'}</strong>.<br><br>
-      <a class="btn btn--filled" href="https://letterboxd.com/film/${film.slug}/" target="_blank" rel="noopener" style="margin-top: 0.5rem; display: inline-flex;">
+    descEl.innerHTML = `
+      <dl class="display-specs mono">
+        <div><dt>Released</dt><dd>${film.year}</dd></div>
+        <div><dt>Rating</dt><dd>${film.rating || 'Unrated'}</dd></div>
+        <div><dt>Database</dt><dd>Letterboxd</dd></div>
+      </dl>
+      <a class="btn btn--filled" href="https://letterboxd.com/film/${film.slug}/" target="_blank" rel="noopener" style="margin-top: 1.5rem; display: inline-flex; width: 100%; justify-content: center;">
         View on Letterboxd
-      </a>`;
+      </a>
+    `;
 
     content.style.animation = 'none';
     content.offsetHeight; 
@@ -191,20 +197,27 @@
 
     displayCabinetImage(anime.image, anime.title, anime.year);
     titleEl.innerHTML = anime.title;
-    directorEl.innerHTML = 'MyAnimeList Entry';
     
-    const animeStatusStr = anime.status === 'watching' ? 'Currently Watching' : 'Completed';
-    metaEl.innerHTML = `${anime.year} &middot; ${animeStatusStr} &middot; Score: ${anime.score}/10 (${scoreToStars(anime.score)})`;
+    const animeStatusStr = anime.status === 'watching' ? 'Watching' : 'Completed';
+    directorEl.innerHTML = 'MyAnimeList Record';
+    metaEl.innerHTML = `${anime.year} &middot; ${animeStatusStr}`;
     quoteEl.style.display = 'none';
     
     const genreTags = anime.genres && anime.genres.length > 0 
-      ? `<p class="display-genres" style="font-family: var(--mono); font-size: 0.65rem; color: var(--oxblood-soft); text-transform: uppercase; margin-top: 0.25rem;">${anime.genres.join(' &bull; ')}</p>` 
-      : '';
+      ? anime.genres.join(', ') 
+      : 'N/A';
 
-    descEl.innerHTML = `${animeStatusStr}: TV series &bull; <strong>${anime.episodes}</strong> episodes.<br>${genreTags}<br>
-      <a class="btn btn--filled" href="${anime.url}" target="_blank" rel="noopener" style="margin-top: 0.5rem; display: inline-flex;">
+    descEl.innerHTML = `
+      <dl class="display-specs mono">
+        <div><dt>Released</dt><dd>${anime.year}</dd></div>
+        <div><dt>Episodes</dt><dd>${anime.episodes || 'N/A'}</dd></div>
+        <div><dt>Score</dt><dd>${anime.score ? anime.score + '/10' : 'Unrated'}</dd></div>
+        <div><dt>Genres</dt><dd style="max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${genreTags}</dd></div>
+      </dl>
+      <a class="btn btn--filled" href="${anime.url}" target="_blank" rel="noopener" style="margin-top: 1.5rem; display: inline-flex; width: 100%; justify-content: center;">
         View on MyAnimeList
-      </a>`;
+      </a>
+    `;
 
     content.style.animation = 'none';
     content.offsetHeight; 
@@ -218,20 +231,27 @@
 
     displayCabinetImage(manga.image, manga.title, manga.year);
     titleEl.innerHTML = manga.title;
-    directorEl.innerHTML = 'MyAnimeList Entry';
     
-    const mangaStatusStr = manga.status === 'reading' ? 'Currently Reading' : 'Completed';
-    metaEl.innerHTML = `${manga.year} &middot; ${mangaStatusStr} &middot; Score: ${manga.score}/10 (${scoreToStars(manga.score)})`;
+    const mangaStatusStr = manga.status === 'reading' ? 'Reading' : 'Completed';
+    directorEl.innerHTML = 'MyAnimeList Record';
+    metaEl.innerHTML = `${manga.year} &middot; ${mangaStatusStr}`;
     quoteEl.style.display = 'none';
     
     const genreTags = manga.genres && manga.genres.length > 0 
-      ? `<p class="display-genres" style="font-family: var(--mono); font-size: 0.65rem; color: var(--oxblood-soft); text-transform: uppercase; margin-top: 0.25rem;">${manga.genres.join(' &bull; ')}</p>` 
-      : '';
+      ? manga.genres.join(', ') 
+      : 'N/A';
 
-    descEl.innerHTML = `${mangaStatusStr}: <strong>${manga.chapters}</strong> chapters &bull; <strong>${manga.volumes}</strong> volumes.<br>${genreTags}<br>
-      <a class="btn btn--filled" href="${manga.url}" target="_blank" rel="noopener" style="margin-top: 0.5rem; display: inline-flex;">
+    descEl.innerHTML = `
+      <dl class="display-specs mono">
+        <div><dt>Released</dt><dd>${manga.year}</dd></div>
+        <div><dt>Chapters</dt><dd>${manga.chapters || 'N/A'}</dd></div>
+        <div><dt>Score</dt><dd>${manga.score ? manga.score + '/10' : 'Unrated'}</dd></div>
+        <div><dt>Genres</dt><dd style="max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${genreTags}</dd></div>
+      </dl>
+      <a class="btn btn--filled" href="${manga.url}" target="_blank" rel="noopener" style="margin-top: 1.5rem; display: inline-flex; width: 100%; justify-content: center;">
         View on MyAnimeList
-      </a>`;
+      </a>
+    `;
 
     content.style.animation = 'none';
     content.offsetHeight; 
