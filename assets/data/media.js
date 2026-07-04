@@ -3237,6 +3237,22 @@ window.mediaDatabase = {
   ],
   "anime": [
     {
+      "title": "Re:Zero kara Hajimeru Isekai Seikatsu 3rd Season",
+      "id": 54857,
+      "url": "https://myanimelist.net/anime/54857/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_3rd_Season",
+      "year": "2024",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/images/anime/1706/144725.jpg",
+      "genres": [
+        "Drama",
+        "Fantasy",
+        "Suspense"
+      ],
+      "episodes": 1,
+      "updated_at": 1783103122,
+      "status": "watching"
+    },
+    {
       "title": "Koori no Jouheki",
       "id": 60852,
       "url": "https://myanimelist.net/anime/60852/Koori_no_Jouheki",
