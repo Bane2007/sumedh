@@ -3237,6 +3237,23 @@ window.mediaDatabase = {
   ],
   "anime": [
     {
+      "title": "Mushoku Tensei III: Isekai Ittara Honki Dasu",
+      "id": 59193,
+      "url": "https://myanimelist.net/anime/59193/Mushoku_Tensei_III__Isekai_Ittara_Honki_Dasu",
+      "year": "2026",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/images/anime/1527/158340.jpg",
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Fantasy",
+        "Ecchi"
+      ],
+      "episodes": 2,
+      "updated_at": 1783196449,
+      "status": "watching"
+    },
+    {
       "title": "Re:Zero kara Hajimeru Isekai Seikatsu 3rd Season",
       "id": 54857,
       "url": "https://myanimelist.net/anime/54857/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_3rd_Season",
@@ -3248,8 +3265,8 @@ window.mediaDatabase = {
         "Fantasy",
         "Suspense"
       ],
-      "episodes": 1,
-      "updated_at": 1783103122,
+      "episodes": 7,
+      "updated_at": 1783192852,
       "status": "watching"
     },
     {
