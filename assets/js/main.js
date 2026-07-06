@@ -75,6 +75,7 @@
   const displayBox = document.getElementById('closet-display');
   const placeholder = displayBox ? displayBox.querySelector('.display-placeholder') : null;
   const content = displayBox ? displayBox.querySelector('.display-content') : null;
+  const displayBg = displayBox ? displayBox.querySelector('#closet-display-bg') : null;
   const coverArt = displayBox ? displayBox.querySelector('#display-cover-art') : null;
   const titleEl = displayBox ? displayBox.querySelector('#display-title') : null;
   const directorEl = displayBox ? displayBox.querySelector('#display-director') : null;
@@ -120,6 +121,16 @@
     content.style.display = '';
     placeholder.style.display = 'none';
 
+    if (displayBg) {
+      if (film.image) {
+        displayBg.style.backgroundImage = `url(${film.image})`;
+        displayBg.style.opacity = '0.35';
+      } else {
+        displayBg.style.backgroundImage = 'none';
+        displayBg.style.opacity = '0';
+      }
+    }
+
     displayCabinetImage(film.image, film.title, film.year, 'films');
     titleEl.innerHTML = `<a href="https://letterboxd.com/film/${film.slug}/" target="_blank" rel="noopener">${film.title}</a>`;
     directorEl.innerHTML = 'Letterboxd Record';
@@ -147,6 +158,16 @@
     if (!displayBox) return;
     content.style.display = '';
     placeholder.style.display = 'none';
+
+    if (displayBg) {
+      if (anime.image) {
+        displayBg.style.backgroundImage = `url(${anime.image})`;
+        displayBg.style.opacity = '0.35';
+      } else {
+        displayBg.style.backgroundImage = 'none';
+        displayBg.style.opacity = '0';
+      }
+    }
 
     displayCabinetImage(anime.image, anime.title, anime.year, 'anime');
     titleEl.innerHTML = `<a href="${anime.url}" target="_blank" rel="noopener">${anime.title}</a>`;
@@ -183,6 +204,16 @@
     if (!displayBox) return;
     content.style.display = '';
     placeholder.style.display = 'none';
+
+    if (displayBg) {
+      if (manga.image) {
+        displayBg.style.backgroundImage = `url(${manga.image})`;
+        displayBg.style.opacity = '0.35';
+      } else {
+        displayBg.style.backgroundImage = 'none';
+        displayBg.style.opacity = '0';
+      }
+    }
 
     displayCabinetImage(manga.image, manga.title, manga.year, 'manga');
     titleEl.innerHTML = `<a href="${manga.url}" target="_blank" rel="noopener">${manga.title}</a>`;
