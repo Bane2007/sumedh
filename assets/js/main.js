@@ -333,7 +333,7 @@
 
       card.appendChild(inner);
 
-      card.addEventListener('click', () => {
+      card.addEventListener('click', (e) => {
         const allCards = movieGrid.querySelectorAll('.grid-item-card');
         allCards.forEach(c => c.classList.remove('selected'));
         card.classList.add('selected');
@@ -344,6 +344,10 @@
           updateDisplayWithAnime(item);
         } else if (currentCategory === 'manga') {
           updateDisplayWithManga(item);
+        }
+
+        if (e && e.isTrusted && window.innerWidth <= 768 && displayBox) {
+          displayBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
       });
 
