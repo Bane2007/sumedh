@@ -292,9 +292,9 @@
 
     // 1. Filter
     let result = dataset.filter(item => {
-      const matchTitle = item.title && item.title.toLowerCase().includes(query);
-      const matchYear = item.year && item.year.includes(query);
-      const matchGenre = item.genres && item.genres.some(g => g.toLowerCase().includes(query));
+      const matchTitle = item.title && String(item.title).toLowerCase().includes(query);
+      const matchYear = item.year && String(item.year).toLowerCase().includes(query);
+      const matchGenre = item.genres && item.genres.some(g => g && String(g).toLowerCase().includes(query));
       return matchTitle || matchYear || matchGenre;
     });
 
@@ -467,7 +467,6 @@
     };
 
     spine.addEventListener('click', selectSpine);
-    spine.addEventListener('mouseenter', selectSpine);
     spine.addEventListener('focus', selectSpine);
   });
 
