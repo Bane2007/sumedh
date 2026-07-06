@@ -284,11 +284,12 @@ def fetch_mal_anime():
                 
                 start_str = item.get('start_date_string')
                 finish_str = item.get('finish_date_string')
+                created_val = item.get('created_at') or item.get('updated_at') or 0
                 updated_val = item.get('updated_at') or item.get('created_at') or 0
                 
                 start_date = parse_mal_date_to_iso(start_str)
                 finish_date = parse_mal_date_to_iso(finish_str)
-                sort_date = finish_date if finish_date != "N/A" else (start_date if start_date != "N/A" else parse_mal_date_to_iso(None, updated_val))
+                sort_date = finish_date if finish_date != "N/A" else (start_date if start_date != "N/A" else parse_mal_date_to_iso(None, created_val))
                 
                 anime_list.append({
                     'title': title,
@@ -370,11 +371,12 @@ def fetch_mal_manga():
                 
                 start_str = item.get('start_date_string')
                 finish_str = item.get('finish_date_string')
+                created_val = item.get('created_at') or item.get('updated_at') or 0
                 updated_val = item.get('updated_at') or item.get('created_at') or 0
                 
                 start_date = parse_mal_date_to_iso(start_str)
                 finish_date = parse_mal_date_to_iso(finish_str)
-                sort_date = finish_date if finish_date != "N/A" else (start_date if start_date != "N/A" else parse_mal_date_to_iso(None, updated_val))
+                sort_date = finish_date if finish_date != "N/A" else (start_date if start_date != "N/A" else parse_mal_date_to_iso(None, created_val))
                 
                 manga_list.append({
                     'title': title,
