@@ -1,32 +1,119 @@
-import { useEffect, useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
-const NEXUS_DATA = [
-  { label: "Instagram", url: "https://www.instagram.com/sumed_nj/", meta: "Visuals", x: 25, y: 30 },
-  { label: "GitHub", url: "https://github.com/Bane2007", meta: "Code", x: 75, y: 20 },
-  { label: "Letterboxd", url: "https://letterboxd.com/Bane_snj/", meta: "Cinema", x: 80, y: 60 },
-  { label: "IMDb", url: "https://www.imdb.com/name/nm18199394/", meta: "Film", x: 20, y: 70 },
-  { label: "Portfolio", url: "#", meta: "Creative", x: 50, y: 15 },
-  { label: "StoryGraph", url: "https://app.thestorygraph.com/profile/sumed_nj", meta: "Reading", x: 15, y: 45 },
-  { label: "Sadako (2025)", url: "https://www.youtube.com/watch?v=bSUdWw-3dmE", meta: "Short Film", x: 85, y: 40 },
-  { label: "The Abyss", url: "#", meta: "Game Project", x: 40, y: 80 },
-];
+const OS_DATA = {
+  folders: [
+    { 
+      id: 'social', 
+      name: 'Socials', 
+      color: '#c8615a', 
+      files: [
+        { label: "Instagram", url: "https://www.instagram.com/sumed_nj/", meta: "visuals.img" },
+        { label: "GitHub", url: "https://github.com/Bane2007", meta: "source.code" },
+        { label: "Letterboxd", url: "https://letterboxd.com/Bane_snj/", meta: "cinema.log" },
+        { label: "IMDb", url: "https://www.imdb.com/name/nm18199394/", meta: "bio.pdf" },
+      ] 
+    },
+    { 
+      id: 'work', 
+      name: 'Projects', 
+      color: '#e08a82', 
+      files: [
+        { label: "Portfolio", url: "#", meta: "index.html" },
+        { label: "StoryGraph", url: "https://app.thestorygraph.com/profile/sumed_nj", meta: "reading.txt" },
+      ] 
+    },
+    { 
+      id: 'archive', 
+      name: 'Archive', 
+      color: '#9c9182', 
+      files: [
+        { label: "Sadako (2025)", url: "https://www.youtube.com/watch?v=bSUdWw-3dmE", meta: "film.mp4" },
+        { label: "The Abyss", url: "#", meta: "game.exe" },
+      ] 
+    },
+  ]
+};
 
-function App() {
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+function Window({ folder, onClose, zIndex, onFocus }) {
+  const [currentView, setCurrentView] = useState('folder'); // 'folder' or 'files'
+  const windowRef = useRef(null);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      const x = (e.clientX / window.innerWidth - 0.5) * 20;
-      const y = (e.clientY / window.innerHeight - 0.5) * 20;
-      setMousePos({ x, y });
-    };
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
+    const handleMouseDown = () => onFocus();
+    windowRef.current.addEventListener('mousedown', handleMouseDown);
+    return () => windowRef.current.removeEventListener('mousedown', handleMouseDown);
+  }, [onFocus]);
+
+  return (
+    <div className="window" ref={windowRef} style={{ zIndex }}>
+      <div className="window-header">
+        <span className="window-title">{folder.name}</span>
+        <div className="window-close" onClick={onClose}></div>
+      </div>
+      <div className="window-content">
+        {currentView === 'folder' ? (
+          <div className="folder-grid">
+            <div className="folder-item" onClick={() => setCurrentView('files')}>
+              <div className="folder-icon" style={{ backgroundColor: folder.color }}></div>
+              <span className="folder-name">{folder.name}</span>
+            </div>
+          </div>
+        ) : (
+          <div className="file-list">
+            {folder.files.map((file, i) => (
+              <a key={i} href={file.url} className="file-item" target="_blank" rel="noopener noreferrer">
+                <div className="file-icon"></div>
+                <div className="file-info">
+                  <span className="file-label">{file.label}</span>
+                  <span className="file-meta">{file.meta}</span>
+                </div>
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  const [openWindows, setOpenWindows] = useState([]);
+  const [maxZ, setMaxZ] = useState(10);
+
+  const openFolder = (folder) => {
+    if (openWindows.find(w => w.id === folder.id)) {
+      focusWindow(folder.id);
+      return;
+    }
+    setOpenWindows([...openWindows, folder]);
+    setMaxZ(prev => prev + 1);
+  };
+
+  const closeWindow = (id) => {
+    setOpenWindows(openWindows.filter(w => w.id !== id));
+  };
+
+  const focusWindow = (id) => {
+    setMaxZ(prev => prev + 1);
+    setOpenWindows(prev => prev.map(w => 
+      w.id === id ? { ...w, zIndex: maxZ + 1 } : w
+    ));
+  };
 
   return (
     <>
-      <div className="rec-light" aria-hidden="true">
+      <div className="status-bar">
+        <div className="status-left">
+          <span>SumedhOS v1.0</span>
+          <span>{new Date().toLocaleTimeString()}</span>
+        </div>
+        <div className="status-right">
+          <span>System: Stable</span>
+          <span>CPU: 2%</span>
+        </div>
+      </div>
+
+      <div className="rec-light">
         <span className="rec-light__dot"></span>
         <span className="rec-light__label">REC</span>
       </div>
@@ -37,47 +124,32 @@ function App() {
         <div className="bg-cranes__crane bg-cranes__crane--c"></div>
       </div>
 
-      <div className="bg-motes">
-        {[...Array(16)].map((_, i) => (
-          <span 
-            key={i} 
-            style={{ 
-              left: `${Math.random() * 100}%`, 
-              animationDelay: `${Math.random() * 10}s`, 
-              animationDuration: `${10 + Math.random() * 10}s` 
-            }}
-          ></span>
+      <div className="desktop">
+        {/* Draggable Windows */}
+        {openWindows.map((folder, i) => (
+          <Window 
+            key={folder.id} 
+            folder={folder} 
+            onClose={() => closeWindow(folder.id)} 
+            zIndex={folder.zIndex || 10 + i}
+            onFocus={() => focusWindow(folder.id)}
+          />
         ))}
-      </div>
 
-      <div className="nexus-viewport">
-        <div 
-          className="nexus-world" 
-          style={{ 
-            transform: `rotateX(${-mousePos.y}deg) rotateY(${mousePos.x}deg)` 
-          }}
-        >
-          <div className="nexus-core">
-            <h1 className="nexus-core-title">Index</h1>
-            <p className="nexus-core-subtitle">spatial nexus &middot; archives</p>
-          </div>
-
-          {NEXUS_DATA.map((node, i) => (
-            <a 
+        {/* The Dock */}
+        <div className="dock-container">
+          {OS_DATA.folders.map((folder, i) => (
+            <div 
               key={i} 
-              href={node.url} 
-              className="nexus-node" 
-              style={{ 
-                left: `${node.x}%`, 
-                top: `${node.y}%`, 
-                transform: `translate(-50%, -50%) translateZ(${20 + Math.random() * 50}px)` 
-              }}
-              target="_blank" 
-              rel="noopener noreferrer"
+              className="dock-item" 
+              data-label={folder.name} 
+              onClick={() => openFolder(folder)}
+              style={{ backgroundColor: folder.color }}
             >
-              <span className="nexus-node-label">{node.label}</span>
-              <span className="nexus-node-meta">{node.meta}</span>
-            </a>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                <path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
+              </svg>
+            </div>
           ))}
         </div>
       </div>
