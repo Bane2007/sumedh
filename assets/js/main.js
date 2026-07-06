@@ -259,7 +259,25 @@
     };
 
     // 2. Sort
-    if (sortBy === 'alpha') {
+    if (sortBy === 'default') {
+      if (currentCategory === 'films') {
+        const originalIndices = new Map(result.map((item, index) => [item, index]));
+        result.sort((a, b) => {
+          const dateA = a.watched_date && a.watched_date !== 'N/A' ? a.watched_date : '';
+          const dateB = b.watched_date && b.watched_date !== 'N/A' ? b.watched_date : '';
+          
+          if (dateA && dateB) {
+            return dateB.localeCompare(dateA);
+          } else if (dateA) {
+            return -1;
+          } else if (dateB) {
+            return 1;
+          } else {
+            return originalIndices.get(a) - originalIndices.get(b);
+          }
+        });
+      }
+    } else if (sortBy === 'alpha') {
       result.sort((a, b) => a.title.localeCompare(b.title));
     } else if (sortBy === 'year-desc') {
       result.sort((a, b) => {

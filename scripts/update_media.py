@@ -349,7 +349,7 @@ def fetch_mal_anime():
                 # Check cached completed date to avoid score updates altering timeline
                 sort_date = cached_anime_dates.get(item.get('anime_id'))
                 if not sort_date:
-                    sort_date = finish_date if finish_date != "N/A" else (start_date if start_date != "N/A" else parse_mal_date_to_iso(None, updated_val))
+                    sort_date = finish_date if finish_date != "N/A" else (start_date if start_date != "N/A" else parse_mal_date_to_iso(None, created_val))
                 
                 anime_list.append({
                     'title': title,
@@ -453,7 +453,7 @@ def fetch_mal_manga():
                 # Check cached completed date to avoid score updates altering timeline
                 sort_date = cached_manga_dates.get(item.get('manga_id'))
                 if not sort_date:
-                    sort_date = finish_date if finish_date != "N/A" else (start_date if start_date != "N/A" else parse_mal_date_to_iso(None, updated_val))
+                    sort_date = finish_date if finish_date != "N/A" else (start_date if start_date != "N/A" else parse_mal_date_to_iso(None, created_val))
                 
                 manga_list.append({
                     'title': title,
