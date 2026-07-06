@@ -1206,3 +1206,21 @@ section, .colophon {
   .sadako__poster a:hover img { transform: none; }
   .btn:hover { transform: none; }
 }
+
+/* === CARD STATUS BADGE === */
+.card-status-badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background: rgba(12, 8, 6, 0.85);
+  border: 1px solid var(--oxblood-soft);
+  color: var(--oxblood-soft);
+  font-size: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  padding: 0.15rem 0.35rem;
+  border-radius: 2px;
+  z-index: 5;
+  pointer-events: none;
+  text-transform: uppercase;
+}

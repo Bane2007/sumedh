@@ -349,6 +349,13 @@
       `;
       inner.appendChild(overlay);
 
+      if (item.status === 'watching' || item.status === 'reading') {
+        const badge = document.createElement('div');
+        badge.className = 'card-status-badge mono';
+        badge.textContent = item.status === 'watching' ? 'watching' : 'reading';
+        inner.appendChild(badge);
+      }
+
       card.appendChild(inner);
 
       card.addEventListener('click', (e) => {
