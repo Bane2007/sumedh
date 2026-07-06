@@ -1004,19 +1004,23 @@ section, .colophon {
 /* === III. SADAKO === */
 .sadako__grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
-  gap: clamp(2rem, 4vw, 3.5rem);
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4rem);
   align-items: start;
 }
 @media (max-width: 760px) {
   .sadako__grid { grid-template-columns: 1fr; }
+  .sadako__poster { position: static !important; }
 }
 
 .sadako__poster {
+  position: sticky;
+  top: clamp(3rem, 15vh, 8rem);
   overflow: hidden;
   border-radius: 2px;
   box-shadow: 0 24px 60px -28px rgba(0, 0, 0, 0.6),
               0 8px 18px -10px rgba(0, 0, 0, 0.35);
+  z-index: 10;
 }
 .sadako__poster img {
   width: 100%;
@@ -1342,4 +1346,24 @@ section, .colophon {
   z-index: 5;
   pointer-events: none;
   text-transform: uppercase;
+}
+
+/* === APPLE-STYLE THEME COLOR TRANSITIONS === */
+body {
+  transition: background-color 1200ms cubic-bezier(0.16, 1, 0.3, 1), color 1200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+body.theme-hero {
+  background-color: var(--paper);
+}
+body.theme-sadako {
+  background-color: #070403;
+}
+body.theme-cabinet {
+  background-color: #22170f;
+}
+body.theme-roles {
+  background-color: #17171a;
+}
+body.theme-contact {
+  background-color: #0e0a08;
 }

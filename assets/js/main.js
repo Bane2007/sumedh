@@ -49,6 +49,34 @@
     updateScrollProgress();
   }
 
+  // --- DYNAMIC BODY THEME OBSERVER (APPLE-STYLE THEMATIC SCROLL) ---
+  if (!reduced && 'IntersectionObserver' in window) {
+    const themeObserver = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          const section = entry.target;
+          let theme = 'theme-hero';
+          if (section.classList.contains('sadako')) {
+            theme = 'theme-sadako';
+          } else if (section.classList.contains('closet-section')) {
+            theme = 'theme-cabinet';
+          } else if (section.classList.contains('roles')) {
+            theme = 'theme-roles';
+          } else if (section.classList.contains('contact')) {
+            theme = 'theme-contact';
+          }
+          
+          document.body.classList.remove('theme-hero', 'theme-sadako', 'theme-cabinet', 'theme-roles', 'theme-contact');
+          document.body.classList.add(theme);
+        }
+      }
+    }, { rootMargin: '-30% 0px -40% 0px', threshold: 0 });
+    
+    document.querySelectorAll('.hero, .sadako, .closet-section, .roles, .contact').forEach(el => {
+      themeObserver.observe(el);
+    });
+  }
+
   // --- DEFENSIVE DATABASE CHECK ---
   if (!window.mediaDatabase) {
     window.mediaDatabase = {
