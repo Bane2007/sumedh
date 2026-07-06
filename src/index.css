@@ -23,20 +23,20 @@
 
 /* === DESIGN TOKENS === */
 :root {
-  --paper:        #1c1612;
-  --paper-deep:   #120e0b;
-  --ink:          #ece4d3;
-  --ink-soft:     #9c9182;
-  --oxblood:      #c8615a;
-  --oxblood-soft: #e08a82;
-  --glass:        rgba(236, 228, 211, 0.05);
-  --glass-border: rgba(236, 228, 211, 0.15);
-  --hairline:     rgba(236, 228, 211, 0.1);
+  --paper:        #1b0e0d; /* rich cacao */
+  --paper-deep:   #0e0505; /* deep dark chocolate */
+  --ink:          #fbf5eb; /* strawberry cream */
+  --ink-soft:     #c0a996; /* warm tan */
+  --oxblood:      #ff4c5a; /* strawberry red */
+  --oxblood-soft: #ff828c; /* strawberry pink */
+  --glass:        rgba(251, 245, 235, 0.04);
+  --glass-border: rgba(251, 245, 235, 0.12);
+  --hairline:     rgba(251, 245, 235, 0.08);
   
   --serif: 'EB Garamond', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
   --mono:  'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
 
-  --shadow-lg: 0 20px 50px rgba(0,0,0,0.5);
+  --shadow-lg: 0 16px 40px rgba(0,0,0,0.65);
 }
 
 /* === RESET === */
@@ -2104,4 +2104,134 @@ body.theme-contact {
   color: #020403;
   text-shadow: none;
   box-shadow: 0 0 12px #39ff14;
+}
+
+/* === MINI APP: CASSETTE BEATS PLAYER === */
+.window--beats .window-content {
+  padding: 0;
+  background: #110808;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cassette-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  width: 100%;
+}
+
+.cassette-deck {
+  background: var(--oxblood);
+  border: 4px solid var(--paper-deep);
+  border-radius: 12px;
+  width: 250px;
+  height: 140px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  box-shadow: var(--shadow-lg), inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+.cassette-label {
+  background: var(--ink);
+  color: var(--paper-deep);
+  font-size: 0.65rem;
+  font-weight: bold;
+  padding: 4px;
+  border-radius: 4px;
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+}
+
+.cassette-spools {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+}
+
+.cassette-spool {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 4px dashed var(--paper-deep);
+  background: var(--ink);
+  position: relative;
+}
+
+.cassette-spool::after {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  background: var(--paper-deep);
+  border-radius: 50%;
+}
+
+@keyframes spin-clockwise {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.cassette-spool.playing {
+  animation: spin-clockwise 4s linear infinite;
+}
+
+.cassette-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.cassette-btn {
+  background: var(--paper-deep);
+  border: 1px solid var(--glass-border);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  padding: 6px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  transition: all 0.2s ease;
+}
+
+.cassette-btn.play:hover {
+  background: var(--oxblood);
+  border-color: var(--oxblood-soft);
+  box-shadow: 0 0 10px rgba(255, 76, 90, 0.4);
+}
+
+.cassette-btn.stop:hover {
+  background: #771a1a;
+  border-color: #ff3333;
+}
+
+/* === STRAWBERRY SNAKE FOOD === */
+.arcade-cell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.food-strawberry {
+  font-size: 0.85rem;
+  line-height: 1;
+  display: block;
+}
+
+.arcade-cell.snake {
+  background: #5cb85c !important; /* Green leaf snake segment */
+  box-shadow: 0 0 4px #5cb85c !important;
+}
+
+.arcade-cell.head {
+  background: #8cd68c !important; /* Light green leaf snake head */
+  box-shadow: 0 0 6px #8cd68c !important;
 }

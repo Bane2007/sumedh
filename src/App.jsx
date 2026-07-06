@@ -36,7 +36,105 @@ const renderStars = (rating) => {
   return <span className="rating-stars">{starsStr} <span style={{ fontSize: '0.62rem', opacity: 0.65 }}>({score}/10)</span></span>;
 };
 
-// Playable Retro Arcade Game (Snake)
+// Lo-Fi Cassette Player using Web Audio API synthesis
+function CassettePlayer() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioCtx = useRef(null);
+  const synthInterval = useRef(null);
+
+  const startSynthesis = () => {
+    if (!audioCtx.current) {
+      audioCtx.current = new (window.AudioContext || window.webkitAudioContext)();
+    }
+    const ctx = audioCtx.current;
+    if (ctx.state === 'suspended') {
+      ctx.resume();
+    }
+
+    setIsPlaying(true);
+
+    let chordIndex = 0;
+    // Ambient lo-fi frequencies matching warm minor and major 7th chords
+    const chords = [
+      [130.81, 164.81, 196.00, 246.94], // Cmaj7
+      [146.83, 174.61, 220.00, 261.63], // Dm7
+      [110.00, 130.81, 164.81, 196.00], // Am7
+      [174.61, 220.00, 261.63, 329.63]  // Fmaj7
+    ];
+
+    const playChord = () => {
+      const now = ctx.currentTime;
+      const frequencies = chords[chordIndex];
+      chordIndex = (chordIndex + 1) % chords.length;
+
+      // Filter to create warm, low-frequency lo-fi feel
+      const filter = ctx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(420, now);
+      filter.connect(ctx.destination);
+
+      // Envelope gain node
+      const gainNode = ctx.createGain();
+      gainNode.gain.setValueAtTime(0, now);
+      gainNode.gain.linearRampToValueAtTime(0.04, now + 1.8);
+      gainNode.gain.setValueAtTime(0.04, now + 2.8);
+      gainNode.gain.exponentialRampToValueAtTime(0.001, now + 4.3);
+      gainNode.connect(filter);
+
+      frequencies.map(freq => {
+        const osc = ctx.createOscillator();
+        osc.type = 'triangle'; // triangle waves are warm and smooth
+        osc.frequency.setValueAtTime(freq, now);
+        osc.connect(gainNode);
+        osc.start(now);
+        osc.stop(now + 4.4);
+      });
+    };
+
+    playChord();
+    synthInterval.current = setInterval(playChord, 4500);
+  };
+
+  const stopSynthesis = () => {
+    setIsPlaying(false);
+    if (synthInterval.current) {
+      clearInterval(synthInterval.current);
+    }
+    if (audioCtx.current) {
+      audioCtx.current.close().then(() => {
+        audioCtx.current = null;
+      });
+    }
+  };
+
+  useEffect(() => {
+    return () => {
+      if (synthInterval.current) clearInterval(synthInterval.current);
+      if (audioCtx.current) audioCtx.current.close();
+    };
+  }, []);
+
+  return (
+    <div className="cassette-container">
+      <div className="cassette-deck">
+        <div className="cassette-label mono">Lo-Fi Beats</div>
+        <div className="cassette-spools">
+          <div className={`cassette-spool ${isPlaying ? 'playing' : ''}`}></div>
+          <div className={`cassette-spool ${isPlaying ? 'playing' : ''}`}></div>
+        </div>
+      </div>
+      <div className="cassette-controls">
+        {isPlaying ? (
+          <button className="cassette-btn stop" onClick={stopSynthesis}>PAUSE</button>
+        ) : (
+          <button className="cassette-btn play" onClick={startSynthesis}>PLAY</button>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// Playable Strawberry-Eating Snake Game
 function RetroArcade() {
   const [gridSize] = useState(16);
   const [snake, setSnake] = useState([{ x: 8, y: 8 }]);
@@ -138,7 +236,9 @@ function RetroArcade() {
             <div 
               key={idx} 
               className={`arcade-cell ${isSnake ? 'snake' : ''} ${isHead ? 'head' : ''} ${isFood ? 'food' : ''}`}
-            />
+            >
+              {isFood && <span className="food-strawberry">🍓</span>}
+            </div>
           );
         })}
       </div>
@@ -150,7 +250,7 @@ function RetroArcade() {
       )}
       {isPaused && !gameOver && (
         <div className="arcade-overlay">
-          <p>PRESS ARROWS OR WASD TO START</p>
+          <p>PRESS ARROWS OR WASD TO FEED STRAWBERRIES</p>
         </div>
       )}
     </div>
@@ -519,6 +619,20 @@ function App() {
             <span className="shortcut-label">Arcade.exe</span>
           </div>
 
+          {/* Mini-app: Cassette Player Shortcut */}
+          <div 
+            className="shortcut-item" 
+            onClick={() => openWindow('beats', 'Beats Player', 320, 240)}
+            title="Soothing ambient Lo-Fi sequencer generator"
+          >
+            <div className="shortcut-icon" style={{ backgroundColor: '#ff4c5a' }}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 12H7v-2h10v2zm0-4H7V9h10v2z"/>
+              </svg>
+            </div>
+            <span className="shortcut-label">Beats.app</span>
+          </div>
+
           {/* Contact Shortcut */}
           <div 
             className="shortcut-item" 
@@ -818,6 +932,9 @@ function App() {
 
             {/* ARCADE WINDOW CONTENT */}
             {win.id === 'arcade' && <RetroArcade />}
+
+            {/* CASSETTE BEATS PLAYER CONTENT */}
+            {win.id === 'beats' && <CassettePlayer />}
 
             {/* CONTACT WINDOW CONTENT */}
             {win.id === 'contact' && (
