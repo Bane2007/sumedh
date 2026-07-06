@@ -148,19 +148,56 @@
         ${watchRow}
       </dl>
     `;
-
-    // Asynchronously fetch OMDb metadata
+    // Asynchronously fetch OMDb metadata using search first to resolve exact movie/year
     const queryTitle = film.title.split('&amp;').join('&');
-    const fetchUrl = `https://www.omdbapi.com/?apikey=trilogy&t=${encodeURIComponent(queryTitle)}&y=${film.year}`;
+    const searchUrl = `https://www.omdbapi.com/?apikey=trilogy&s=${encodeURIComponent(queryTitle)}`;
     
     content.dataset.currentSlug = film.slug;
     
-    fetch(fetchUrl)
+    fetch(searchUrl)
       .then(response => response.json())
+      .then(searchData => {
+        if (content.dataset.currentSlug !== film.slug) return null;
+        
+        let imdbId = null;
+        if (searchData && searchData.Response === 'True' && searchData.Search) {
+          const filmYearInt = parseInt(film.year) || 0;
+          let bestMatch = null;
+          let minDiff = 999;
+          
+          for (const item of searchData.Search) {
+            if (item.Type !== 'movie') continue;
+            const cleanYearStr = item.Year.replace(/[^\d]/g, '').substring(0, 4);
+            const itemYearInt = parseInt(cleanYearStr) || 0;
+            const diff = Math.abs(itemYearInt - filmYearInt);
+            
+            if (diff <= 1 && diff < minDiff) {
+              minDiff = diff;
+              bestMatch = item;
+            }
+          }
+          
+          if (bestMatch) {
+            imdbId = bestMatch.imdbID;
+          } else {
+            const firstMovie = searchData.Search.find(item => item.Type === 'movie');
+            if (firstMovie) {
+              imdbId = firstMovie.imdbID;
+            }
+          }
+        }
+        
+        const detailUrl = imdbId 
+          ? `https://www.omdbapi.com/?apikey=trilogy&i=${imdbId}`
+          : `https://www.omdbapi.com/?apikey=trilogy&t=${encodeURIComponent(queryTitle)}&y=${film.year}`;
+          
+        return fetch(detailUrl).then(res => res.json());
+      })
       .then(data => {
         if (content.dataset.currentSlug !== film.slug) return;
+        if (!data) return;
         
-        if (data && data.Response === 'True') {
+        if (data.Response === 'True') {
           directorEl.innerHTML = data.Director && data.Director !== 'N/A' ? `Directed by ${data.Director}` : 'Letterboxd Record';
           
           let scoreDisplay = '';
