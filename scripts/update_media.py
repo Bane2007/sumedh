@@ -353,6 +353,9 @@ def fetch_mal_anime():
                 
                 anime_list.append({
                     'title': title,
+                    'title_eng': html.unescape(str(item.get('anime_title_eng'))) if item.get('anime_title_eng') else "",
+                    'title_romaji': html.unescape(str(item.get('anime_title'))) if item.get('anime_title') else "",
+                    'title_localized': html.unescape(str(item.get('title_localized'))) if item.get('title_localized') else "",
                     'id': item.get('anime_id'),
                     'url': 'https://myanimelist.net' + item.get('anime_url', ''),
                     'year': year,
@@ -393,6 +396,9 @@ def fetch_mal_anime():
                 
                 anime_list.append({
                     'title': title,
+                    'title_eng': html.unescape(str(item.get('anime_title_eng'))) if item.get('anime_title_eng') else "",
+                    'title_romaji': html.unescape(str(item.get('anime_title'))) if item.get('anime_title') else "",
+                    'title_localized': html.unescape(str(item.get('title_localized'))) if item.get('title_localized') else "",
                     'id': item.get('anime_id'),
                     'url': 'https://myanimelist.net' + item.get('anime_url', ''),
                     'year': year,
@@ -451,6 +457,9 @@ def fetch_mal_manga():
                 
                 manga_list.append({
                     'title': title,
+                    'title_eng': html.unescape(str(item.get('manga_english'))) if item.get('manga_english') else "",
+                    'title_romaji': html.unescape(str(item.get('manga_title'))) if item.get('manga_title') else "",
+                    'title_localized': html.unescape(str(item.get('title_localized'))) if item.get('title_localized') else "",
                     'id': item.get('manga_id'),
                     'url': 'https://myanimelist.net' + item.get('manga_url', ''),
                     'year': year,
@@ -492,6 +501,9 @@ def fetch_mal_manga():
                 
                 manga_list.append({
                     'title': title,
+                    'title_eng': html.unescape(str(item.get('manga_english'))) if item.get('manga_english') else "",
+                    'title_romaji': html.unescape(str(item.get('manga_title'))) if item.get('manga_title') else "",
+                    'title_localized': html.unescape(str(item.get('title_localized'))) if item.get('title_localized') else "",
                     'id': item.get('manga_id'),
                     'url': 'https://myanimelist.net' + item.get('manga_url', ''),
                     'year': year,

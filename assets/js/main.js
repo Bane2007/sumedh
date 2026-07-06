@@ -60,6 +60,8 @@
     return '★'.repeat(stars) + half;
   };
 
+  const cleanString = (str) => String(str || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+
   // --- STATE VARIABLES ---
   let currentCategory = 'films'; 
 
@@ -119,10 +121,10 @@
     placeholder.style.display = 'none';
 
     displayCabinetImage(film.image, film.title, film.year, 'films');
-    titleEl.innerHTML = film.title;
+    titleEl.innerHTML = `<a href="https://letterboxd.com/film/${film.slug}/" target="_blank" rel="noopener">${film.title}</a>`;
     directorEl.innerHTML = 'Letterboxd Record';
     
-    const ratingStars = film.rating ? `<span class="rating-stars" style="color: #ffb400; font-size: 1.15rem; font-weight: bold; letter-spacing: 0.05em; margin-left: 0.4rem;">${film.rating}</span>` : '<span style="color: var(--ink-soft); font-style: italic;">Unrated</span>';
+    const ratingStars = film.rating ? `<span class="rating-stars">${film.rating}</span>` : '<span style="color: var(--ink-soft); font-style: italic;">Unrated</span>';
     metaEl.innerHTML = `${film.year} &middot; ${ratingStars}`;
     quoteEl.style.display = 'none';
     
@@ -132,12 +134,8 @@
 
     descEl.innerHTML = `
       <dl class="display-specs mono">
-        <div><dt>Released</dt><dd>${film.year}</dd></div>
         ${watchRow}
       </dl>
-      <a class="btn btn--filled" href="https://letterboxd.com/film/${film.slug}/" target="_blank" rel="noopener" style="margin-top: 1.5rem; display: inline-flex; width: 100%; justify-content: center;">
-        View on Letterboxd
-      </a>
     `;
 
     content.style.animation = 'none';
@@ -151,13 +149,13 @@
     placeholder.style.display = 'none';
 
     displayCabinetImage(anime.image, anime.title, anime.year, 'anime');
-    titleEl.innerHTML = anime.title;
+    titleEl.innerHTML = `<a href="${anime.url}" target="_blank" rel="noopener">${anime.title}</a>`;
     
     const animeStatusStr = anime.status === 'watching' ? 'Watching' : 'Completed';
     directorEl.innerHTML = 'MyAnimeList Record';
     
     const scoreStars = anime.score ? '★'.repeat(Math.round(anime.score / 2)) + (anime.score % 2 >= 1 ? '½' : '') : '';
-    const ratingDisplay = anime.score ? `<span class="rating-stars" style="color: #ffb400; font-size: 1.15rem; font-weight: bold; margin-left: 0.4rem;">${anime.score}/10 ${scoreStars ? '(' + scoreStars + ')' : ''}</span>` : '<span style="color: var(--ink-soft); font-style: italic;">Unrated</span>';
+    const ratingDisplay = anime.score ? `<span class="rating-stars">${anime.score}/10 ${scoreStars ? '(' + scoreStars + ')' : ''}</span>` : '<span style="color: var(--ink-soft); font-style: italic;">Unrated</span>';
     metaEl.innerHTML = `${anime.year} &middot; ${animeStatusStr} &middot; ${ratingDisplay}`;
     quoteEl.style.display = 'none';
     
@@ -169,15 +167,11 @@
 
     descEl.innerHTML = `
       <dl class="display-specs mono">
-        <div><dt>Released</dt><dd>${anime.year}</dd></div>
         <div><dt>Episodes</dt><dd>${anime.episodes || 'N/A'}</dd></div>
         <div><dt>Genres</dt><dd style="max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${genreTags}</dd></div>
         <div><dt>Started</dt><dd>${anime.start_date || 'N/A'}</dd></div>
         <div><dt>Finished</dt><dd>${finishDateStr}</dd></div>
       </dl>
-      <a class="btn btn--filled" href="${anime.url}" target="_blank" rel="noopener" style="margin-top: 1.5rem; display: inline-flex; width: 100%; justify-content: center;">
-        View on MyAnimeList
-      </a>
     `;
 
     content.style.animation = 'none';
@@ -191,13 +185,13 @@
     placeholder.style.display = 'none';
 
     displayCabinetImage(manga.image, manga.title, manga.year, 'manga');
-    titleEl.innerHTML = manga.title;
+    titleEl.innerHTML = `<a href="${manga.url}" target="_blank" rel="noopener">${manga.title}</a>`;
     
     const mangaStatusStr = manga.status === 'reading' ? 'Reading' : 'Completed';
     directorEl.innerHTML = 'MyAnimeList Record';
     
     const scoreStars = manga.score ? '★'.repeat(Math.round(manga.score / 2)) + (manga.score % 2 >= 1 ? '½' : '') : '';
-    const ratingDisplay = manga.score ? `<span class="rating-stars" style="color: #ffb400; font-size: 1.15rem; font-weight: bold; margin-left: 0.4rem;">${manga.score}/10 ${scoreStars ? '(' + scoreStars + ')' : ''}</span>` : '<span style="color: var(--ink-soft); font-style: italic;">Unrated</span>';
+    const ratingDisplay = manga.score ? `<span class="rating-stars">${manga.score}/10 ${scoreStars ? '(' + scoreStars + ')' : ''}</span>` : '<span style="color: var(--ink-soft); font-style: italic;">Unrated</span>';
     metaEl.innerHTML = `${manga.year} &middot; ${mangaStatusStr} &middot; ${ratingDisplay}`;
     quoteEl.style.display = 'none';
     
@@ -209,15 +203,11 @@
 
     descEl.innerHTML = `
       <dl class="display-specs mono">
-        <div><dt>Released</dt><dd>${manga.year}</dd></div>
         <div><dt>Chapters</dt><dd>${manga.chapters || 'N/A'}</dd></div>
         <div><dt>Genres</dt><dd style="max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${genreTags}</dd></div>
         <div><dt>Started</dt><dd>${manga.start_date || 'N/A'}</dd></div>
         <div><dt>Finished</dt><dd>${finishDateStr}</dd></div>
       </dl>
-      <a class="btn btn--filled" href="${manga.url}" target="_blank" rel="noopener" style="margin-top: 1.5rem; display: inline-flex; width: 100%; justify-content: center;">
-        View on MyAnimeList
-      </a>
     `;
 
     content.style.animation = 'none';
@@ -239,14 +229,20 @@
     }
 
     const query = movieSearch ? movieSearch.value.toLowerCase() : '';
+    const cleanQuery = cleanString(query);
     const sortBy = movieSort ? movieSort.value : 'default';
 
     // 1. Filter
     let result = dataset.filter(item => {
-      const matchTitle = item.title && String(item.title).toLowerCase().includes(query);
-      const matchYear = item.year && String(item.year).toLowerCase().includes(query);
+      const matchTitle = cleanString(item.title).includes(cleanQuery);
+      const matchEng = item.title_eng && cleanString(item.title_eng).includes(cleanQuery);
+      const matchRomaji = item.title_romaji && cleanString(item.title_romaji).includes(cleanQuery);
+      const matchLocalized = item.title_localized && cleanString(item.title_localized).includes(cleanQuery);
+      
+      const matchYear = item.year && String(item.year).includes(query);
       const matchGenre = item.genres && item.genres.some(g => g && String(g).toLowerCase().includes(query));
-      return matchTitle || matchYear || matchGenre;
+      
+      return matchTitle || matchEng || matchRomaji || matchLocalized || matchYear || matchGenre;
     });
 
     // Rating value parser
@@ -263,7 +259,22 @@
     };
 
     // 2. Sort
-    if (sortBy === 'alpha') {
+    if (sortBy === 'default') {
+      // Robust sorting by status (active first) then date
+      result.sort((a, b) => {
+        const getStatusPriority = (item) => {
+          if (item.status === 'watching' || item.status === 'reading') return 1;
+          return 0;
+        };
+        const pa = getStatusPriority(a);
+        const pb = getStatusPriority(b);
+        if (pa !== pb) return pb - pa;
+
+        const da = a.sort_date || a.watched_date || '0000-00-00';
+        const db = b.sort_date || b.watched_date || '0000-00-00';
+        return db.localeCompare(da);
+      });
+    } else if (sortBy === 'alpha') {
       result.sort((a, b) => a.title.localeCompare(b.title));
     } else if (sortBy === 'year-desc') {
       result.sort((a, b) => {

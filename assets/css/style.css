@@ -383,7 +383,7 @@ section, .colophon {
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.85);
-  height: 580px;
+  height: 680px;
 }
 .closet-shelf {
   display: flex;
@@ -622,24 +622,45 @@ section, .colophon {
   display: block;
 }
 .display-title {
-  margin: 0 0 0.4rem 0;
-  font-size: clamp(1.4rem, 2vw, 1.8rem);
-  line-height: 1.15;
+  margin: 0 0 0.3rem 0;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  line-height: 1.1;
   color: var(--ink);
-  letter-spacing: 0.02em;
+  letter-spacing: -0.01em;
+}
+.display-title a {
+  color: inherit;
+  transition: color 200ms ease;
+}
+.display-title a:hover {
+  color: var(--oxblood-soft);
 }
 .display-director {
-  margin: 0 0 0.5rem 0;
-  font-size: 0.8rem;
-  color: var(--oxblood-soft);
+  margin: 0 0 0.8rem 0;
+  font-size: 0.6rem;
+  color: var(--ink-soft);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.25em;
+  opacity: 0.5;
+}
+.rating-stars {
+  color: #ffb400;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 10px rgba(255, 180, 0, 0.3);
 }
 .display-meta {
-  margin: 0 0 1.2rem 0;
-  font-size: 0.75rem;
+  margin: 0 0 1.5rem 0;
+  font-size: 0.8rem;
   color: var(--ink-soft);
   letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.display-meta .rating-stars {
+  margin-left: 0;
 }
 .display-quote {
   border-left: 2px solid var(--oxblood);
@@ -1153,18 +1174,19 @@ section, .colophon {
 /* === CABINET DISPLAY SPECS === */
 .display-specs {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.8rem 1.5rem;
+  grid-template-columns: 1fr;
+  gap: 0.6rem;
   margin-top: 1.5rem;
   border-top: 1px solid var(--hairline);
   padding-top: 1.5rem;
   font-size: 0.65rem;
+  max-width: 240px;
 }
 .display-specs div {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px dashed rgba(255,255,255,0.07);
-  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  padding-bottom: 0.3rem;
 }
 .display-specs dt {
   color: var(--ink-soft);

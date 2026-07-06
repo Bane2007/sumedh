@@ -3724,6 +3724,9 @@ window.mediaDatabase = {
   "anime": [
     {
       "title": "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo 3rd Season",
+      "title_eng": "The 100 Girlfriends Who Really, Really, Really, Really, Really Love You Season 3",
+      "title_romaji": "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo 3rd Season",
+      "title_localized": "",
       "id": 62811,
       "url": "https://myanimelist.net/anime/62811/Kimi_no_Koto_ga_Daidaidaidaidaisuki_na_100-nin_no_Kanojo_3rd_Season",
       "year": "2026",
@@ -3742,6 +3745,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Seihantai na Kimi to Boku 2nd Season",
+      "title_eng": "You and I Are Polar Opposites Season 2",
+      "title_romaji": "Seihantai na Kimi to Boku 2nd Season",
+      "title_localized": "",
       "id": 63832,
       "url": "https://myanimelist.net/anime/63832/Seihantai_na_Kimi_to_Boku_2nd_Season",
       "year": "2026",
@@ -3760,6 +3766,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Mushoku Tensei III: Isekai Ittara Honki Dasu",
+      "title_eng": "Mushoku Tensei: Jobless Reincarnation Season 3",
+      "title_romaji": "Mushoku Tensei III: Isekai Ittara Honki Dasu",
+      "title_localized": "",
       "id": 59193,
       "url": "https://myanimelist.net/anime/59193/Mushoku_Tensei_III__Isekai_Ittara_Honki_Dasu",
       "year": "2026",
@@ -3780,6 +3789,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Steel Ball Run: JoJo no Kimyou na Bouken",
+      "title_eng": "Steel Ball Run: JoJo's Bizarre Adventure",
+      "title_romaji": "Steel Ball Run: JoJo no Kimyou na Bouken",
+      "title_localized": "",
       "id": 61469,
       "url": "https://myanimelist.net/anime/61469/Steel_Ball_Run__JoJo_no_Kimyou_na_Bouken",
       "year": "2026",
@@ -3800,6 +3812,9 @@ window.mediaDatabase = {
     },
     {
       "title": "One Piece",
+      "title_eng": "One Piece",
+      "title_romaji": "One Piece",
+      "title_localized": "",
       "id": 21,
       "url": "https://myanimelist.net/anime/21/One_Piece",
       "year": "1999",
@@ -3819,6 +3834,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Re:Zero kara Hajimeru Isekai Seikatsu 3rd Season",
+      "title_eng": "Re:ZERO -Starting Life in Another World- Season 3",
+      "title_romaji": "Re:Zero kara Hajimeru Isekai Seikatsu 3rd Season",
+      "title_localized": "",
       "id": 54857,
       "url": "https://myanimelist.net/anime/54857/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_3rd_Season",
       "year": "2024",
@@ -3838,6 +3856,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Koori no Jouheki",
+      "title_eng": "The Ramparts of Ice",
+      "title_romaji": "Koori no Jouheki",
+      "title_localized": "",
       "id": 60852,
       "url": "https://myanimelist.net/anime/60852/Koori_no_Jouheki",
       "year": "2026",
@@ -3856,6 +3877,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Re:Zero kara Hajimeru Isekai Seikatsu 2nd Season Part 2",
+      "title_eng": "Re:ZERO -Starting Life in Another World- Season 2 Part 2",
+      "title_romaji": "Re:Zero kara Hajimeru Isekai Seikatsu 2nd Season Part 2",
+      "title_localized": "",
       "id": 42203,
       "url": "https://myanimelist.net/anime/42203/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_2nd_Season_Part_2",
       "year": "2021",
@@ -3875,6 +3899,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Re:Zero kara Hajimeru Isekai Seikatsu 2nd Season",
+      "title_eng": "Re:ZERO -Starting Life in Another World- Season 2",
+      "title_romaji": "Re:Zero kara Hajimeru Isekai Seikatsu 2nd Season",
+      "title_localized": "",
       "id": 39587,
       "url": "https://myanimelist.net/anime/39587/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_2nd_Season",
       "year": "2020",
@@ -3894,6 +3921,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Class de 2-banme ni Kawaii Onnanoko to Tomodachi ni Natta",
+      "title_eng": "I Made Friends with the Second Prettiest Girl in My Class",
+      "title_romaji": "Class de 2-banme ni Kawaii Onnanoko to Tomodachi ni Natta",
+      "title_localized": "",
       "id": 56734,
       "url": "https://myanimelist.net/anime/56734/Class_de_2-banme_ni_Kawaii_Onnanoko_to_Tomodachi_ni_Natta",
       "year": "2026",
@@ -3911,6 +3941,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Re:Zero kara Hajimeru Isekai Seikatsu",
+      "title_eng": "Re:ZERO -Starting Life in Another World-",
+      "title_romaji": "Re:Zero kara Hajimeru Isekai Seikatsu",
+      "title_localized": "",
       "id": 31240,
       "url": "https://myanimelist.net/anime/31240/Re_Zero_kara_Hajimeru_Isekai_Seikatsu",
       "year": "2016",
@@ -3930,6 +3963,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Re:Zero kara Hajimeru Isekai Seikatsu - Memory Snow",
+      "title_eng": "Re:ZERO -Starting Life in Another World- Memory Snow",
+      "title_romaji": "Re:Zero kara Hajimeru Isekai Seikatsu - Memory Snow",
+      "title_localized": "",
       "id": 36286,
       "url": "https://myanimelist.net/anime/36286/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_-_Memory_Snow",
       "year": "2018",
@@ -3947,6 +3983,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Re:Zero kara Hajimeru Isekai Seikatsu - Hyouketsu no Kizuna",
+      "title_eng": "Re:ZERO -Starting Life in Another World- The Frozen Bond",
+      "title_romaji": "Re:Zero kara Hajimeru Isekai Seikatsu - Hyouketsu no Kizuna",
+      "title_localized": "",
       "id": 38414,
       "url": "https://myanimelist.net/anime/38414/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_-_Hyouketsu_no_Kizuna",
       "year": "2019",
@@ -3966,6 +4005,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Yahari Ore no Seishun Love Comedy wa Machigatteiru. Kan",
+      "title_eng": "My Teen Romantic Comedy SNAFU Climax!",
+      "title_romaji": "Yahari Ore no Seishun Love Comedy wa Machigatteiru. Kan",
+      "title_localized": "",
       "id": 39547,
       "url": "https://myanimelist.net/anime/39547/Yahari_Ore_no_Seishun_Love_Comedy_wa_Machigatteiru_Kan",
       "year": "2020",
@@ -3984,6 +4026,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Fuufu Ijou, Koibito Miman.",
+      "title_eng": "More than a Married Couple, but Not Lovers.",
+      "title_romaji": "Fuufu Ijou, Koibito Miman.",
+      "title_localized": "",
       "id": 50425,
       "url": "https://myanimelist.net/anime/50425/Fuufu_Ijou_Koibito_Miman",
       "year": "2022",
@@ -4001,6 +4046,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Dorohedoro Season 2",
+      "title_eng": "",
+      "title_romaji": "Dorohedoro Season 2",
+      "title_localized": "",
       "id": 57779,
       "url": "https://myanimelist.net/anime/57779/Dorohedoro_Season_2",
       "year": "2026",
@@ -4021,6 +4069,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Yahari Ore no Seishun Love Comedy wa Machigatteiru. Zoku",
+      "title_eng": "My Teen Romantic Comedy SNAFU TOO!",
+      "title_romaji": "Yahari Ore no Seishun Love Comedy wa Machigatteiru. Zoku",
+      "title_localized": "",
       "id": 23847,
       "url": "https://myanimelist.net/anime/23847/Yahari_Ore_no_Seishun_Love_Comedy_wa_Machigatteiru_Zoku",
       "year": "2015",
@@ -4039,6 +4090,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Yahari Ore no Seishun Love Comedy wa Machigatteiru.",
+      "title_eng": "My Teen Romantic Comedy SNAFU",
+      "title_romaji": "Yahari Ore no Seishun Love Comedy wa Machigatteiru.",
+      "title_localized": "",
       "id": 14813,
       "url": "https://myanimelist.net/anime/14813/Yahari_Ore_no_Seishun_Love_Comedy_wa_Machigatteiru",
       "year": "2013",
@@ -4057,6 +4111,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Wotaku ni Koi wa Muzukashii",
+      "title_eng": "Wotakoi: Love is Hard for Otaku",
+      "title_romaji": "Wotaku ni Koi wa Muzukashii",
+      "title_localized": "",
       "id": 35968,
       "url": "https://myanimelist.net/anime/35968/Wotaku_ni_Koi_wa_Muzukashii",
       "year": "2018",
@@ -4075,6 +4132,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Jigokuraku 2nd Season",
+      "title_eng": "Hell's Paradise Season 2",
+      "title_romaji": "Jigokuraku 2nd Season",
+      "title_localized": "",
       "id": 55825,
       "url": "https://myanimelist.net/anime/55825/Jigokuraku_2nd_Season",
       "year": "2026",
@@ -4094,6 +4154,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Seihantai na Kimi to Boku",
+      "title_eng": "You and I Are Polar Opposites",
+      "title_romaji": "Seihantai na Kimi to Boku",
+      "title_localized": "",
       "id": 60371,
       "url": "https://myanimelist.net/anime/60371/Seihantai_na_Kimi_to_Boku",
       "year": "2026",
@@ -4112,6 +4175,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Sousou no Frieren 2nd Season",
+      "title_eng": "Frieren: Beyond Journey's End Season 2",
+      "title_romaji": "Sousou no Frieren 2nd Season",
+      "title_localized": "",
       "id": 59978,
       "url": "https://myanimelist.net/anime/59978/Sousou_no_Frieren_2nd_Season",
       "year": "2026",
@@ -4131,6 +4197,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Jujutsu Kaisen: Shimetsu Kaiyuu - Zenpen",
+      "title_eng": "Jujutsu Kaisen: The Culling Game Part 1",
+      "title_romaji": "Jujutsu Kaisen: Shimetsu Kaiyuu - Zenpen",
+      "title_localized": "",
       "id": 57658,
       "url": "https://myanimelist.net/anime/57658/Jujutsu_Kaisen__Shimetsu_Kaiyuu_-_Zenpen",
       "year": "2026",
@@ -4149,6 +4218,9 @@ window.mediaDatabase = {
     },
     {
       "title": "[Oshi no Ko] 3rd Season",
+      "title_eng": "[Oshi No Ko] Season 3",
+      "title_romaji": "[Oshi no Ko] 3rd Season",
+      "title_localized": "",
       "id": 60058,
       "url": "https://myanimelist.net/anime/60058/Oshi_no_Ko_3rd_Season",
       "year": "2026",
@@ -4166,6 +4238,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kaguya-sama wa Kokurasetai: Otona e no Kaidan",
+      "title_eng": "Kaguya-sama: Love Is War - Stairway to Adulthood",
+      "title_romaji": "Kaguya-sama wa Kokurasetai: Otona e no Kaidan",
+      "title_localized": "",
       "id": 61903,
       "url": "https://myanimelist.net/anime/61903/Kaguya-sama_wa_Kokurasetai__Otona_e_no_Kaidan",
       "year": "2025",
@@ -4184,6 +4259,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Sono Bisque Doll wa Koi wo Suru Season 2",
+      "title_eng": "My Dress-Up Darling Season 2",
+      "title_romaji": "Sono Bisque Doll wa Koi wo Suru Season 2",
+      "title_localized": "",
       "id": 53065,
       "url": "https://myanimelist.net/anime/53065/Sono_Bisque_Doll_wa_Koi_wo_Suru_Season_2",
       "year": "2025",
@@ -4201,6 +4279,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Cyberpunk: Edgerunners",
+      "title_eng": "",
+      "title_romaji": "Cyberpunk: Edgerunners",
+      "title_localized": "",
       "id": 42310,
       "url": "https://myanimelist.net/anime/42310/Cyberpunk__Edgerunners",
       "year": "2022",
@@ -4219,6 +4300,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kimetsu no Yaiba Movie 1: Mugenjou-hen - Akaza Sairai",
+      "title_eng": "Demon Slayer: Kimetsu no Yaiba - The Movie: Infinity Castle - Part 1: Akaza Returns",
+      "title_romaji": "Kimetsu no Yaiba Movie 1: Mugenjou-hen - Akaza Sairai",
+      "title_localized": "",
       "id": 59192,
       "url": "https://myanimelist.net/anime/59192/Kimetsu_no_Yaiba_Movie_1__Mugenjou-hen_-_Akaza_Sairai",
       "year": "2025",
@@ -4238,6 +4322,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Sono Bisque Doll wa Koi wo Suru",
+      "title_eng": "My Dress-Up Darling",
+      "title_romaji": "Sono Bisque Doll wa Koi wo Suru",
+      "title_localized": "",
       "id": 48736,
       "url": "https://myanimelist.net/anime/48736/Sono_Bisque_Doll_wa_Koi_wo_Suru",
       "year": "2022",
@@ -4255,6 +4342,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kusuriya no Hitorigoto 2nd Season",
+      "title_eng": "The Apothecary Diaries Season 2",
+      "title_romaji": "Kusuriya no Hitorigoto 2nd Season",
+      "title_localized": "",
       "id": 58514,
       "url": "https://myanimelist.net/anime/58514/Kusuriya_no_Hitorigoto_2nd_Season",
       "year": "2025",
@@ -4273,6 +4363,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Boku dake ga Inai Machi",
+      "title_eng": "Erased",
+      "title_romaji": "Boku dake ga Inai Machi",
+      "title_localized": "",
       "id": 31043,
       "url": "https://myanimelist.net/anime/31043/Boku_dake_ga_Inai_Machi",
       "year": "2016",
@@ -4291,6 +4384,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Tengoku Daimakyou",
+      "title_eng": "Heavenly Delusion",
+      "title_romaji": "Tengoku Daimakyou",
+      "title_localized": "",
       "id": 53393,
       "url": "https://myanimelist.net/anime/53393/Tengoku_Daimakyou",
       "year": "2023",
@@ -4310,6 +4406,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo 2nd Season",
+      "title_eng": "The 100 Girlfriends Who Really, Really, Really, Really, Really Love You Season 2",
+      "title_romaji": "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo 2nd Season",
+      "title_localized": "",
       "id": 57616,
       "url": "https://myanimelist.net/anime/57616/Kimi_no_Koto_ga_Daidaidaidaidaisuki_na_100-nin_no_Kanojo_2nd_Season",
       "year": "2025",
@@ -4328,6 +4427,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Seitokai Yakuindomo",
+      "title_eng": "Student Council Staff Members",
+      "title_romaji": "Seitokai Yakuindomo",
+      "title_localized": "",
       "id": 8675,
       "url": "https://myanimelist.net/anime/8675/Seitokai_Yakuindomo",
       "year": "2010",
@@ -4345,6 +4447,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Look Back",
+      "title_eng": "",
+      "title_romaji": "Look Back",
+      "title_localized": "",
       "id": 58125,
       "url": "https://myanimelist.net/anime/58125/Look_Back",
       "year": "2024",
@@ -4363,6 +4468,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kamonohashi Ron no Kindan Suiri 2nd Season",
+      "title_eng": "Ron Kamonohashi's Forbidden Deductions Season 2",
+      "title_romaji": "Kamonohashi Ron no Kindan Suiri 2nd Season",
+      "title_localized": "",
       "id": 57635,
       "url": "https://myanimelist.net/anime/57635/Kamonohashi_Ron_no_Kindan_Suiri_2nd_Season",
       "year": "2024",
@@ -4381,6 +4489,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Ginga Eiyuu Densetsu",
+      "title_eng": "Legend of the Galactic Heroes",
+      "title_romaji": "Ginga Eiyuu Densetsu",
+      "title_localized": "",
       "id": 820,
       "url": "https://myanimelist.net/anime/820/Ginga_Eiyuu_Densetsu",
       "year": "1988",
@@ -4399,6 +4510,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Dandadan",
+      "title_eng": "Dan Da Dan",
+      "title_romaji": "Dandadan",
+      "title_localized": "",
       "id": 57334,
       "url": "https://myanimelist.net/anime/57334/Dandadan",
       "year": "2024",
@@ -4418,6 +4532,9 @@ window.mediaDatabase = {
     },
     {
       "title": "[Oshi no Ko] 2nd Season",
+      "title_eng": "[Oshi No Ko] Season 2",
+      "title_romaji": "[Oshi no Ko] 2nd Season",
+      "title_localized": "",
       "id": 55791,
       "url": "https://myanimelist.net/anime/55791/Oshi_no_Ko_2nd_Season",
       "year": "2024",
@@ -4435,6 +4552,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Shy 2nd Season",
+      "title_eng": "Shy Season 2",
+      "title_romaji": "Shy 2nd Season",
+      "title_localized": "",
       "id": 57567,
       "url": "https://myanimelist.net/anime/57567/Shy_2nd_Season",
       "year": "2024",
@@ -4453,6 +4573,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Dead Dead Demons Dededede Destruction (ONA)",
+      "title_eng": "Dead Dead Demons Dededede Destruction",
+      "title_romaji": "Dead Dead Demons Dededede Destruction (ONA)",
+      "title_localized": "",
       "id": 58883,
       "url": "https://myanimelist.net/anime/58883/Dead_Dead_Demons_Dededede_Destruction_ONA",
       "year": "2024",
@@ -4471,6 +4594,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Shikanoko Nokonoko Koshitantan",
+      "title_eng": "My Deer Friend Nokotan",
+      "title_romaji": "Shikanoko Nokonoko Koshitantan",
+      "title_localized": "",
       "id": 58426,
       "url": "https://myanimelist.net/anime/58426/Shikanoko_Nokonoko_Koshitantan",
       "year": "2024",
@@ -4488,6 +4614,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Mushoku Tensei: Isekai Ittara Honki Dasu",
+      "title_eng": "Mushoku Tensei: Jobless Reincarnation",
+      "title_romaji": "Mushoku Tensei: Isekai Ittara Honki Dasu",
+      "title_localized": "",
       "id": 39535,
       "url": "https://myanimelist.net/anime/39535/Mushoku_Tensei__Isekai_Ittara_Honki_Dasu",
       "year": "2021",
@@ -4508,6 +4637,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2",
+      "title_eng": "Mushoku Tensei: Jobless Reincarnation Part 2",
+      "title_romaji": "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2",
+      "title_localized": "",
       "id": 45576,
       "url": "https://myanimelist.net/anime/45576/Mushoku_Tensei__Isekai_Ittara_Honki_Dasu_Part_2",
       "year": "2021",
@@ -4528,6 +4660,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Mushoku Tensei II: Isekai Ittara Honki Dasu",
+      "title_eng": "Mushoku Tensei: Jobless Reincarnation Season 2",
+      "title_romaji": "Mushoku Tensei II: Isekai Ittara Honki Dasu",
+      "title_localized": "",
       "id": 51179,
       "url": "https://myanimelist.net/anime/51179/Mushoku_Tensei_II__Isekai_Ittara_Honki_Dasu",
       "year": "2023",
@@ -4548,6 +4683,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kimetsu no Yaiba: Hashira Geiko-hen",
+      "title_eng": "Demon Slayer: Kimetsu no Yaiba Hashira Training Arc",
+      "title_romaji": "Kimetsu no Yaiba: Hashira Geiko-hen",
+      "title_localized": "",
       "id": 55701,
       "url": "https://myanimelist.net/anime/55701/Kimetsu_no_Yaiba__Hashira_Geiko-hen",
       "year": "2024",
@@ -4566,6 +4704,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Mushoku Tensei II: Isekai Ittara Honki Dasu Part 2",
+      "title_eng": "Mushoku Tensei: Jobless Reincarnation Season 2 Part 2",
+      "title_romaji": "Mushoku Tensei II: Isekai Ittara Honki Dasu Part 2",
+      "title_localized": "",
       "id": 55888,
       "url": "https://myanimelist.net/anime/55888/Mushoku_Tensei_II__Isekai_Ittara_Honki_Dasu_Part_2",
       "year": "2024",
@@ -4586,6 +4727,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kaijuu 8-gou",
+      "title_eng": "Kaiju No. 8",
+      "title_romaji": "Kaijuu 8-gou",
+      "title_localized": "",
       "id": 52588,
       "url": "https://myanimelist.net/anime/52588/Kaijuu_8-gou",
       "year": "2024",
@@ -4605,6 +4749,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kaii to Otome to Kamikakushi",
+      "title_eng": "Mysterious Disappearances",
+      "title_romaji": "Kaii to Otome to Kamikakushi",
+      "title_localized": "",
       "id": 54199,
       "url": "https://myanimelist.net/anime/54199/Kaii_to_Otome_to_Kamikakushi",
       "year": "2024",
@@ -4624,6 +4771,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Hotaru no Haka",
+      "title_eng": "Grave of the Fireflies",
+      "title_romaji": "Hotaru no Haka",
+      "title_localized": "",
       "id": 578,
       "url": "https://myanimelist.net/anime/578/Hotaru_no_Haka",
       "year": "1988",
@@ -4641,6 +4791,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Shuumatsu Train Doko e Iku?",
+      "title_eng": "Train to the End of the World",
+      "title_romaji": "Shuumatsu Train Doko e Iku?",
+      "title_localized": "",
       "id": 53356,
       "url": "https://myanimelist.net/anime/53356/Shuumatsu_Train_Doko_e_Iku",
       "year": "2024",
@@ -4658,6 +4811,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kono Subarashii Sekai ni Shukufuku wo! 3",
+      "title_eng": "KonoSuba: God's Blessing on This Wonderful World! 3",
+      "title_romaji": "Kono Subarashii Sekai ni Shukufuku wo! 3",
+      "title_localized": "",
       "id": 49458,
       "url": "https://myanimelist.net/anime/49458/Kono_Subarashii_Sekai_ni_Shukufuku_wo_3",
       "year": "2024",
@@ -4677,6 +4833,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Jiisan Baasan Wakagaeru",
+      "title_eng": "Grandpa and Grandma Turn Young Again",
+      "title_romaji": "Jiisan Baasan Wakagaeru",
+      "title_localized": "",
       "id": 56230,
       "url": "https://myanimelist.net/anime/56230/Jiisan_Baasan_Wakagaeru",
       "year": "2024",
@@ -4696,6 +4855,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Dungeon Meshi",
+      "title_eng": "Delicious in Dungeon",
+      "title_romaji": "Dungeon Meshi",
+      "title_localized": "",
       "id": 52701,
       "url": "https://myanimelist.net/anime/52701/Dungeon_Meshi",
       "year": "2024",
@@ -4716,6 +4878,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kimi no Suizou wo Tabetai",
+      "title_eng": "I Want To Eat Your Pancreas",
+      "title_romaji": "Kimi no Suizou wo Tabetai",
+      "title_localized": "",
       "id": 36098,
       "url": "https://myanimelist.net/anime/36098/Kimi_no_Suizou_wo_Tabetai",
       "year": "2018",
@@ -4734,6 +4899,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Ore dake Level Up na Ken",
+      "title_eng": "Solo Leveling",
+      "title_romaji": "Ore dake Level Up na Ken",
+      "title_localized": "",
       "id": 52299,
       "url": "https://myanimelist.net/anime/52299/Ore_dake_Level_Up_na_Ken",
       "year": "2024",
@@ -4753,6 +4921,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kusuriya no Hitorigoto",
+      "title_eng": "The Apothecary Diaries",
+      "title_romaji": "Kusuriya no Hitorigoto",
+      "title_localized": "",
       "id": 54492,
       "url": "https://myanimelist.net/anime/54492/Kusuriya_no_Hitorigoto",
       "year": "2023",
@@ -4771,6 +4942,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Mato Seihei no Slave",
+      "title_eng": "Chained Soldier",
+      "title_romaji": "Mato Seihei no Slave",
+      "title_localized": "",
       "id": 50392,
       "url": "https://myanimelist.net/anime/50392/Mato_Seihei_no_Slave",
       "year": "2024",
@@ -4790,6 +4964,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Sousou no Frieren",
+      "title_eng": "Frieren: Beyond Journey's End",
+      "title_romaji": "Sousou no Frieren",
+      "title_localized": "",
       "id": 52991,
       "url": "https://myanimelist.net/anime/52991/Sousou_no_Frieren",
       "year": "2023",
@@ -4810,6 +4987,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Undead Unluck",
+      "title_eng": "",
+      "title_romaji": "Undead Unluck",
+      "title_localized": "",
       "id": 52741,
       "url": "https://myanimelist.net/anime/52741/Undead_Unluck",
       "year": "2023",
@@ -4828,6 +5008,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kill la Kill",
+      "title_eng": "Kill la Kill",
+      "title_romaji": "Kill la Kill",
+      "title_localized": "",
       "id": 18679,
       "url": "https://myanimelist.net/anime/18679/Kill_la_Kill",
       "year": "2013",
@@ -4848,6 +5031,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Samurai Flamenco",
+      "title_eng": "Samurai Flamenco",
+      "title_romaji": "Samurai Flamenco",
+      "title_localized": "",
       "id": 19365,
       "url": "https://myanimelist.net/anime/19365/Samurai_Flamenco",
       "year": "2013",
@@ -4866,6 +5052,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Omoide no Marnie",
+      "title_eng": "When Marnie Was There",
+      "title_romaji": "Omoide no Marnie",
+      "title_localized": "",
       "id": 21557,
       "url": "https://myanimelist.net/anime/21557/Omoide_no_Marnie",
       "year": "2014",
@@ -4885,6 +5074,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Deca-Dence",
+      "title_eng": "",
+      "title_romaji": "Deca-Dence",
+      "title_localized": "",
       "id": 40056,
       "url": "https://myanimelist.net/anime/40056/Deca-Dence",
       "year": "2020",
@@ -4904,6 +5096,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Tenkuu Shinpan",
+      "title_eng": "High-Rise Invasion",
+      "title_romaji": "Tenkuu Shinpan",
+      "title_localized": "",
       "id": 43690,
       "url": "https://myanimelist.net/anime/43690/Tenkuu_Shinpan",
       "year": "2021",
@@ -4924,6 +5119,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Jujutsu Kaisen 2nd Season",
+      "title_eng": "Jujutsu Kaisen Season 2",
+      "title_romaji": "Jujutsu Kaisen 2nd Season",
+      "title_localized": "",
       "id": 51009,
       "url": "https://myanimelist.net/anime/51009/Jujutsu_Kaisen_2nd_Season",
       "year": "2023",
@@ -4942,6 +5140,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Lycoris Recoil",
+      "title_eng": "Lycoris Recoil",
+      "title_romaji": "Lycoris Recoil",
+      "title_localized": "",
       "id": 50709,
       "url": "https://myanimelist.net/anime/50709/Lycoris_Recoil",
       "year": "2022",
@@ -4959,6 +5160,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Migi to Dali",
+      "title_eng": "Migi & Dali",
+      "title_romaji": "Migi to Dali",
+      "title_localized": "",
       "id": 50586,
       "url": "https://myanimelist.net/anime/50586/Migi_to_Dali",
       "year": "2023",
@@ -4978,6 +5182,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kamonohashi Ron no Kindan Suiri",
+      "title_eng": "Ron Kamonohashi's Forbidden Deductions",
+      "title_romaji": "Kamonohashi Ron no Kindan Suiri",
+      "title_localized": "",
       "id": 53879,
       "url": "https://myanimelist.net/anime/53879/Kamonohashi_Ron_no_Kindan_Suiri",
       "year": "2023",
@@ -4996,6 +5203,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Zom 100: Zombie ni Naru made ni Shitai 100 no Koto",
+      "title_eng": "Zom 100: Bucket List of the Dead",
+      "title_romaji": "Zom 100: Zombie ni Naru made ni Shitai 100 no Koto",
+      "title_localized": "",
       "id": 54112,
       "url": "https://myanimelist.net/anime/54112/Zom_100__Zombie_ni_Naru_made_ni_Shitai_100_no_Koto",
       "year": "2023",
@@ -5014,6 +5224,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo",
+      "title_eng": "The 100 Girlfriends Who Really, Really, Really, Really, Really Love You",
+      "title_romaji": "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo",
+      "title_localized": "",
       "id": 54714,
       "url": "https://myanimelist.net/anime/54714/Kimi_no_Koto_ga_Daidaidaidaidaisuki_na_100-nin_no_Kanojo",
       "year": "2023",
@@ -5032,6 +5245,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Code Geass: Hangyaku no Lelouch R2",
+      "title_eng": "Code Geass: Lelouch of the Rebellion R2",
+      "title_romaji": "Code Geass: Hangyaku no Lelouch R2",
+      "title_localized": "",
       "id": 2904,
       "url": "https://myanimelist.net/anime/2904/Code_Geass__Hangyaku_no_Lelouch_R2",
       "year": "2008",
@@ -5051,6 +5267,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Hametsu no Oukoku",
+      "title_eng": "The Kingdoms of Ruin",
+      "title_romaji": "Hametsu no Oukoku",
+      "title_localized": "",
       "id": 54362,
       "url": "https://myanimelist.net/anime/54362/Hametsu_no_Oukoku",
       "year": "2023",
@@ -5071,6 +5290,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Code Geass: Hangyaku no Lelouch",
+      "title_eng": "Code Geass: Lelouch of the Rebellion",
+      "title_romaji": "Code Geass: Hangyaku no Lelouch",
+      "title_localized": "",
       "id": 1575,
       "url": "https://myanimelist.net/anime/1575/Code_Geass__Hangyaku_no_Lelouch",
       "year": "2006",
@@ -5090,6 +5312,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Shy",
+      "title_eng": "Shy",
+      "title_romaji": "Shy",
+      "title_localized": "",
       "id": 53237,
       "url": "https://myanimelist.net/anime/53237/Shy",
       "year": "2023",
@@ -5108,6 +5333,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Shingeki no Kyojin Season 3",
+      "title_eng": "Attack on Titan Season 3",
+      "title_romaji": "Shingeki no Kyojin Season 3",
+      "title_localized": "",
       "id": 35760,
       "url": "https://myanimelist.net/anime/35760/Shingeki_no_Kyojin_Season_3",
       "year": "2018",
@@ -5127,6 +5355,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Shingeki no Kyojin: The Final Season - Kanketsu-hen",
+      "title_eng": "Attack on Titan: Final Season - The Final Chapters",
+      "title_romaji": "Shingeki no Kyojin: The Final Season - Kanketsu-hen",
+      "title_localized": "",
       "id": 51535,
       "url": "https://myanimelist.net/anime/51535/Shingeki_no_Kyojin__The_Final_Season_-_Kanketsu-hen",
       "year": "2023",
@@ -5146,6 +5377,9 @@ window.mediaDatabase = {
     },
     {
       "title": "86 Part 2",
+      "title_eng": "86 Eighty-Six Part 2",
+      "title_romaji": "86 Part 2",
+      "title_localized": "",
       "id": 48569,
       "url": "https://myanimelist.net/anime/48569/86_Part_2",
       "year": "2021",
@@ -5164,6 +5398,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Shingeki no Kyojin: The Final Season Part 2",
+      "title_eng": "Attack on Titan: Final Season Part 2",
+      "title_romaji": "Shingeki no Kyojin: The Final Season Part 2",
+      "title_localized": "",
       "id": 48583,
       "url": "https://myanimelist.net/anime/48583/Shingeki_no_Kyojin__The_Final_Season_Part_2",
       "year": "2022",
@@ -5183,6 +5420,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kotonoha no Niwa",
+      "title_eng": "The Garden of Words",
+      "title_romaji": "Kotonoha no Niwa",
+      "title_localized": "",
       "id": 16782,
       "url": "https://myanimelist.net/anime/16782/Kotonoha_no_Niwa",
       "year": "2013",
@@ -5202,6 +5442,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kimi no Na wa.",
+      "title_eng": "Your Name.",
+      "title_romaji": "Kimi no Na wa.",
+      "title_localized": "",
       "id": 32281,
       "url": "https://myanimelist.net/anime/32281/Kimi_no_Na_wa",
       "year": "2016",
@@ -5220,6 +5463,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Renai Flops",
+      "title_eng": "Love Flops",
+      "title_romaji": "Renai Flops",
+      "title_localized": "",
       "id": 51403,
       "url": "https://myanimelist.net/anime/51403/Renai_Flops",
       "year": "2022",
@@ -5240,6 +5486,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Akame ga Kill!",
+      "title_eng": "Akame ga Kill!",
+      "title_romaji": "Akame ga Kill!",
+      "title_localized": "",
       "id": 22199,
       "url": "https://myanimelist.net/anime/22199/Akame_ga_Kill",
       "year": "2014",
@@ -5258,6 +5507,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Dekiru Neko wa Kyou mo Yuuutsu",
+      "title_eng": "The Masterful Cat Is Depressed Again Today",
+      "title_romaji": "Dekiru Neko wa Kyou mo Yuuutsu",
+      "title_localized": "",
       "id": 51916,
       "url": "https://myanimelist.net/anime/51916/Dekiru_Neko_wa_Kyou_mo_Yuuutsu",
       "year": "2023",
@@ -5275,6 +5527,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kimetsu no Yaiba: Yuukaku-hen",
+      "title_eng": "Demon Slayer: Kimetsu no Yaiba Entertainment District Arc",
+      "title_romaji": "Kimetsu no Yaiba: Yuukaku-hen",
+      "title_localized": "",
       "id": 47778,
       "url": "https://myanimelist.net/anime/47778/Kimetsu_no_Yaiba__Yuukaku-hen",
       "year": "2021",
@@ -5293,6 +5548,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Horimiya",
+      "title_eng": "Horimiya",
+      "title_romaji": "Horimiya",
+      "title_localized": "",
       "id": 42897,
       "url": "https://myanimelist.net/anime/42897/Horimiya",
       "year": "2021",
@@ -5310,6 +5568,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Undead Girl Murder Farce",
+      "title_eng": "Undead Murder Farce",
+      "title_romaji": "Undead Girl Murder Farce",
+      "title_localized": "",
       "id": 54790,
       "url": "https://myanimelist.net/anime/54790/Undead_Girl_Murder_Farce",
       "year": "2023",
@@ -5328,6 +5589,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Horimiya: Piece",
+      "title_eng": "Horimiya: The Missing Pieces",
+      "title_romaji": "Horimiya: Piece",
+      "title_localized": "",
       "id": 54856,
       "url": "https://myanimelist.net/anime/54856/Horimiya__Piece",
       "year": "2023",
@@ -5345,6 +5609,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Mob Psycho 100 III",
+      "title_eng": "Mob Psycho 100 III",
+      "title_romaji": "Mob Psycho 100 III",
+      "title_localized": "",
       "id": 50172,
       "url": "https://myanimelist.net/anime/50172/Mob_Psycho_100_III",
       "year": "2022",
@@ -5364,6 +5631,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Steins;Gate",
+      "title_eng": "Steins;Gate",
+      "title_romaji": "Steins;Gate",
+      "title_localized": "",
       "id": 9253,
       "url": "https://myanimelist.net/anime/9253/Steins_Gate",
       "year": "2011",
@@ -5383,6 +5653,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Satsuriku no Tenshi",
+      "title_eng": "Angels of Death",
+      "title_romaji": "Satsuriku no Tenshi",
+      "title_localized": "",
       "id": 35994,
       "url": "https://myanimelist.net/anime/35994/Satsuriku_no_Tenshi",
       "year": "2018",
@@ -5402,6 +5675,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Shinseiki Evangelion",
+      "title_eng": "Neon Genesis Evangelion",
+      "title_romaji": "Shinseiki Evangelion",
+      "title_localized": "",
       "id": 30,
       "url": "https://myanimelist.net/anime/30/Shinseiki_Evangelion",
       "year": "1995",
@@ -5423,6 +5699,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Shimoneta to Iu Gainen ga Sonzai Shinai Taikutsu na Sekai",
+      "title_eng": "SHIMONETA: A Boring World Where the Concept of Dirty Jokes Doesn't Exist",
+      "title_romaji": "Shimoneta to Iu Gainen ga Sonzai Shinai Taikutsu na Sekai",
+      "title_localized": "",
       "id": 29786,
       "url": "https://myanimelist.net/anime/29786/Shimoneta_to_Iu_Gainen_ga_Sonzai_Shinai_Taikutsu_na_Sekai",
       "year": "2015",
@@ -5441,6 +5720,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Steins;Gate: Kyoukaimenjou no Missing Link - Divide By Zero",
+      "title_eng": "Steins;Gate: Open the Missing Link - Divide By Zero",
+      "title_romaji": "Steins;Gate: Kyoukaimenjou no Missing Link - Divide By Zero",
+      "title_localized": "",
       "id": 32188,
       "url": "https://myanimelist.net/anime/32188/Steins_Gate__Kyoukaimenjou_no_Missing_Link_-_Divide_By_Zero",
       "year": "2015",
@@ -5459,6 +5741,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kimetsu no Yaiba Movie: Mugen Ressha-hen",
+      "title_eng": "Demon Slayer: Kimetsu no Yaiba - The Movie: Mugen Train",
+      "title_romaji": "Kimetsu no Yaiba Movie: Mugen Ressha-hen",
+      "title_localized": "",
       "id": 40456,
       "url": "https://myanimelist.net/anime/40456/Kimetsu_no_Yaiba_Movie__Mugen_Ressha-hen",
       "year": "2020",
@@ -5477,6 +5762,9 @@ window.mediaDatabase = {
     },
     {
       "title": "86",
+      "title_eng": "86 Eighty-Six",
+      "title_romaji": "86",
+      "title_localized": "",
       "id": 41457,
       "url": "https://myanimelist.net/anime/41457/86",
       "year": "2021",
@@ -5495,6 +5783,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kimetsu no Yaiba: Katanakaji no Sato-hen",
+      "title_eng": "Demon Slayer: Kimetsu no Yaiba Swordsmith Village Arc",
+      "title_romaji": "Kimetsu no Yaiba: Katanakaji no Sato-hen",
+      "title_localized": "",
       "id": 51019,
       "url": "https://myanimelist.net/anime/51019/Kimetsu_no_Yaiba__Katanakaji_no_Sato-hen",
       "year": "2023",
@@ -5513,6 +5804,9 @@ window.mediaDatabase = {
     },
     {
       "title": "JoJo no Kimyou na Bouken (TV)",
+      "title_eng": "JoJo's Bizarre Adventure (2012)",
+      "title_romaji": "JoJo no Kimyou na Bouken (TV)",
+      "title_localized": "",
       "id": 14719,
       "url": "https://myanimelist.net/anime/14719/JoJo_no_Kimyou_na_Bouken_TV",
       "year": "2012",
@@ -5532,6 +5826,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kono Subarashii Sekai ni Bakuen wo!",
+      "title_eng": "KonoSuba: An Explosion on This Wonderful World!",
+      "title_romaji": "Kono Subarashii Sekai ni Bakuen wo!",
+      "title_localized": "",
       "id": 51958,
       "url": "https://myanimelist.net/anime/51958/Kono_Subarashii_Sekai_ni_Bakuen_wo",
       "year": "2023",
@@ -5550,6 +5847,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Made in Abyss: Retsujitsu no Ougonkyou",
+      "title_eng": "Made in Abyss: The Golden City of the Scorching Sun",
+      "title_romaji": "Made in Abyss: Retsujitsu no Ougonkyou",
+      "title_localized": "",
       "id": 41084,
       "url": "https://myanimelist.net/anime/41084/Made_in_Abyss__Retsujitsu_no_Ougonkyou",
       "year": "2022",
@@ -5571,6 +5871,9 @@ window.mediaDatabase = {
     },
     {
       "title": "[Oshi no Ko]",
+      "title_eng": "[Oshi No Ko]",
+      "title_romaji": "[Oshi no Ko]",
+      "title_localized": "",
       "id": 52034,
       "url": "https://myanimelist.net/anime/52034/Oshi_no_Ko",
       "year": "2023",
@@ -5589,6 +5892,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Suzume no Tojimari",
+      "title_eng": "Suzume",
+      "title_romaji": "Suzume no Tojimari",
+      "title_localized": "",
       "id": 50594,
       "url": "https://myanimelist.net/anime/50594/Suzume_no_Tojimari",
       "year": "2022",
@@ -5607,6 +5913,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Death Parade",
+      "title_eng": "Death Parade",
+      "title_romaji": "Death Parade",
+      "title_localized": "",
       "id": 28223,
       "url": "https://myanimelist.net/anime/28223/Death_Parade",
       "year": "2015",
@@ -5626,6 +5935,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Cowboy Bebop",
+      "title_eng": "Cowboy Bebop",
+      "title_romaji": "Cowboy Bebop",
+      "title_localized": "",
       "id": 1,
       "url": "https://myanimelist.net/anime/1/Cowboy_Bebop",
       "year": "1998",
@@ -5645,6 +5957,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Jigokuraku",
+      "title_eng": "Hell's Paradise",
+      "title_romaji": "Jigokuraku",
+      "title_localized": "",
       "id": 46569,
       "url": "https://myanimelist.net/anime/46569/Jigokuraku",
       "year": "2023",
@@ -5664,6 +5979,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Vinland Saga Season 2",
+      "title_eng": "Vinland Saga Season 2",
+      "title_romaji": "Vinland Saga Season 2",
+      "title_localized": "",
       "id": 49387,
       "url": "https://myanimelist.net/anime/49387/Vinland_Saga_Season_2",
       "year": "2023",
@@ -5683,6 +6001,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Made in Abyss",
+      "title_eng": "Made in Abyss",
+      "title_romaji": "Made in Abyss",
+      "title_localized": "",
       "id": 34599,
       "url": "https://myanimelist.net/anime/34599/Made_in_Abyss",
       "year": "2017",
@@ -5704,6 +6025,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Made in Abyss Movie 3: Fukaki Tamashii no Reimei",
+      "title_eng": "Made in Abyss: Dawn of the Deep Soul",
+      "title_romaji": "Made in Abyss Movie 3: Fukaki Tamashii no Reimei",
+      "title_localized": "",
       "id": 36862,
       "url": "https://myanimelist.net/anime/36862/Made_in_Abyss_Movie_3__Fukaki_Tamashii_no_Reimei",
       "year": "2020",
@@ -5725,6 +6049,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Sen to Chihiro no Kamikakushi",
+      "title_eng": "Spirited Away",
+      "title_romaji": "Sen to Chihiro no Kamikakushi",
+      "title_localized": "",
       "id": 199,
       "url": "https://myanimelist.net/anime/199/Sen_to_Chihiro_no_Kamikakushi",
       "year": "2001",
@@ -5744,6 +6071,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Shigatsu wa Kimi no Uso",
+      "title_eng": "Your Lie in April",
+      "title_romaji": "Shigatsu wa Kimi no Uso",
+      "title_localized": "",
       "id": 23273,
       "url": "https://myanimelist.net/anime/23273/Shigatsu_wa_Kimi_no_Uso",
       "year": "2014",
@@ -5762,6 +6092,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Golden Boy",
+      "title_eng": "Golden Boy",
+      "title_romaji": "Golden Boy",
+      "title_localized": "",
       "id": 268,
       "url": "https://myanimelist.net/anime/268/Golden_Boy",
       "year": "1995",
@@ -5781,6 +6114,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kaguya-sama wa Kokurasetai: First Kiss wa Owaranai",
+      "title_eng": "Kaguya-sama: Love is War -The First Kiss That Never Ends-",
+      "title_romaji": "Kaguya-sama wa Kokurasetai: First Kiss wa Owaranai",
+      "title_localized": "",
       "id": 52198,
       "url": "https://myanimelist.net/anime/52198/Kaguya-sama_wa_Kokurasetai__First_Kiss_wa_Owaranai",
       "year": "2022",
@@ -5800,6 +6136,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Nakitai Watashi wa Neko wo Kaburu",
+      "title_eng": "A Whisker Away",
+      "title_romaji": "Nakitai Watashi wa Neko wo Kaburu",
+      "title_localized": "",
       "id": 41168,
       "url": "https://myanimelist.net/anime/41168/Nakitai_Watashi_wa_Neko_wo_Kaburu",
       "year": "2020",
@@ -5820,6 +6159,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kono Subarashii Sekai ni Shukufuku wo!",
+      "title_eng": "KonoSuba: God's Blessing on This Wonderful World!",
+      "title_romaji": "Kono Subarashii Sekai ni Shukufuku wo!",
+      "title_localized": "",
       "id": 30831,
       "url": "https://myanimelist.net/anime/30831/Kono_Subarashii_Sekai_ni_Shukufuku_wo",
       "year": "2016",
@@ -5839,6 +6181,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kono Subarashii Sekai ni Shukufuku wo! 2",
+      "title_eng": "KonoSuba: God's Blessing on This Wonderful World! 2",
+      "title_romaji": "Kono Subarashii Sekai ni Shukufuku wo! 2",
+      "title_localized": "",
       "id": 32937,
       "url": "https://myanimelist.net/anime/32937/Kono_Subarashii_Sekai_ni_Shukufuku_wo_2",
       "year": "2017",
@@ -5858,6 +6203,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Uchiage Hanabi, Shita kara Miru ka? Yoko kara Miru ka?",
+      "title_eng": "Fireworks",
+      "title_romaji": "Uchiage Hanabi, Shita kara Miru ka? Yoko kara Miru ka?",
+      "title_localized": "",
       "id": 34498,
       "url": "https://myanimelist.net/anime/34498/Uchiage_Hanabi_Shita_kara_Miru_ka_Yoko_kara_Miru_ka",
       "year": "2017",
@@ -5876,6 +6224,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kimi to, Nami ni Noretara",
+      "title_eng": "Ride Your Wave",
+      "title_romaji": "Kimi to, Nami ni Noretara",
+      "title_localized": "",
       "id": 38594,
       "url": "https://myanimelist.net/anime/38594/Kimi_to_Nami_ni_Noretara",
       "year": "2019",
@@ -5895,6 +6246,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Seishun Buta Yarou wa Yumemiru Shoujo no Yume wo Minai",
+      "title_eng": "Rascal Does Not Dream of a Dreaming Girl",
+      "title_romaji": "Seishun Buta Yarou wa Yumemiru Shoujo no Yume wo Minai",
+      "title_localized": "",
       "id": 38329,
       "url": "https://myanimelist.net/anime/38329/Seishun_Buta_Yarou_wa_Yumemiru_Shoujo_no_Yume_wo_Minai",
       "year": "2019",
@@ -5914,6 +6268,9 @@ window.mediaDatabase = {
     },
     {
       "title": "One Punch Man 2nd Season",
+      "title_eng": "One-Punch Man Season 2",
+      "title_romaji": "One Punch Man 2nd Season",
+      "title_localized": "",
       "id": 34134,
       "url": "https://myanimelist.net/anime/34134/One_Punch_Man_2nd_Season",
       "year": "2019",
@@ -5932,6 +6289,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Death Note",
+      "title_eng": "Death Note",
+      "title_romaji": "Death Note",
+      "title_localized": "",
       "id": 1535,
       "url": "https://myanimelist.net/anime/1535/Death_Note",
       "year": "2006",
@@ -5950,6 +6310,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kono Sekai no Katasumi ni",
+      "title_eng": "In This Corner of the World",
+      "title_romaji": "Kono Sekai no Katasumi ni",
+      "title_localized": "",
       "id": 15227,
       "url": "https://myanimelist.net/anime/15227/Kono_Sekai_no_Katasumi_ni",
       "year": "2016",
@@ -5968,6 +6331,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai",
+      "title_eng": "Rascal Does Not Dream of Bunny Girl Senpai",
+      "title_romaji": "Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai",
+      "title_localized": "",
       "id": 37450,
       "url": "https://myanimelist.net/anime/37450/Seishun_Buta_Yarou_wa_Bunny_Girl_Senpai_no_Yume_wo_Minai",
       "year": "2018",
@@ -5987,6 +6353,9 @@ window.mediaDatabase = {
     },
     {
       "title": "JoJo no Kimyou na Bouken Part 3: Stardust Crusaders",
+      "title_eng": "JoJo's Bizarre Adventure: Stardust Crusaders",
+      "title_romaji": "JoJo no Kimyou na Bouken Part 3: Stardust Crusaders",
+      "title_localized": "",
       "id": 20899,
       "url": "https://myanimelist.net/anime/20899/JoJo_no_Kimyou_na_Bouken_Part_3__Stardust_Crusaders",
       "year": "2014",
@@ -6005,6 +6374,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Perfect Blue",
+      "title_eng": "Perfect Blue",
+      "title_romaji": "Perfect Blue",
+      "title_localized": "",
       "id": 437,
       "url": "https://myanimelist.net/anime/437/Perfect_Blue",
       "year": "1998",
@@ -6026,6 +6398,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen",
+      "title_eng": "Kaguya-sama: Love is War",
+      "title_romaji": "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen",
+      "title_localized": "",
       "id": 37999,
       "url": "https://myanimelist.net/anime/37999/Kaguya-sama_wa_Kokurasetai__Tensai-tachi_no_Renai_Zunousen",
       "year": "2019",
@@ -6044,6 +6419,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Serial Experiments Lain",
+      "title_eng": "Serial Experiments Lain",
+      "title_romaji": "Serial Experiments Lain",
+      "title_localized": "",
       "id": 339,
       "url": "https://myanimelist.net/anime/339/Serial_Experiments_Lain",
       "year": "1998",
@@ -6067,6 +6445,9 @@ window.mediaDatabase = {
     },
     {
       "title": "NHK ni Youkoso!",
+      "title_eng": "Welcome to the N.H.K.",
+      "title_romaji": "NHK ni Youkoso!",
+      "title_localized": "",
       "id": 1210,
       "url": "https://myanimelist.net/anime/1210/NHK_ni_Youkoso",
       "year": "2006",
@@ -6086,6 +6467,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Koe no Katachi",
+      "title_eng": "A Silent Voice",
+      "title_romaji": "Koe no Katachi",
+      "title_localized": "",
       "id": 28851,
       "url": "https://myanimelist.net/anime/28851/Koe_no_Katachi",
       "year": "2016",
@@ -6104,6 +6488,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Shingeki no Kyojin",
+      "title_eng": "Attack on Titan",
+      "title_romaji": "Shingeki no Kyojin",
+      "title_localized": "",
       "id": 16498,
       "url": "https://myanimelist.net/anime/16498/Shingeki_no_Kyojin",
       "year": "2013",
@@ -6124,6 +6511,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Shingeki no Kyojin Season 2",
+      "title_eng": "Attack on Titan Season 2",
+      "title_romaji": "Shingeki no Kyojin Season 2",
+      "title_localized": "",
       "id": 25777,
       "url": "https://myanimelist.net/anime/25777/Shingeki_no_Kyojin_Season_2",
       "year": "2017",
@@ -6143,6 +6533,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Shingeki no Kyojin Season 3 Part 2",
+      "title_eng": "Attack on Titan Season 3 Part 2",
+      "title_romaji": "Shingeki no Kyojin Season 3 Part 2",
+      "title_localized": "",
       "id": 38524,
       "url": "https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2",
       "year": "2019",
@@ -6162,6 +6555,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Shingeki no Kyojin: The Final Season",
+      "title_eng": "Attack on Titan: Final Season",
+      "title_romaji": "Shingeki no Kyojin: The Final Season",
+      "title_localized": "",
       "id": 40028,
       "url": "https://myanimelist.net/anime/40028/Shingeki_no_Kyojin__The_Final_Season",
       "year": "2020",
@@ -6181,6 +6577,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Bocchi the Rock!",
+      "title_eng": "Bocchi the Rock!",
+      "title_romaji": "Bocchi the Rock!",
+      "title_localized": "",
       "id": 47917,
       "url": "https://myanimelist.net/anime/47917/Bocchi_the_Rock",
       "year": "2022",
@@ -6198,6 +6597,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Chainsaw Man",
+      "title_eng": "Chainsaw Man",
+      "title_romaji": "Chainsaw Man",
+      "title_localized": "",
       "id": 44511,
       "url": "https://myanimelist.net/anime/44511/Chainsaw_Man",
       "year": "2022",
@@ -6216,6 +6618,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kimetsu no Yaiba",
+      "title_eng": "Demon Slayer: Kimetsu no Yaiba",
+      "title_romaji": "Kimetsu no Yaiba",
+      "title_localized": "",
       "id": 38000,
       "url": "https://myanimelist.net/anime/38000/Kimetsu_no_Yaiba",
       "year": "2019",
@@ -6235,6 +6640,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Devilman: Crybaby",
+      "title_eng": "Devilman: Crybaby",
+      "title_romaji": "Devilman: Crybaby",
+      "title_localized": "",
       "id": 35120,
       "url": "https://myanimelist.net/anime/35120/Devilman__Crybaby",
       "year": "2018",
@@ -6255,6 +6663,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Dorohedoro",
+      "title_eng": "",
+      "title_romaji": "Dorohedoro",
+      "title_localized": "",
       "id": 38668,
       "url": "https://myanimelist.net/anime/38668/Dorohedoro",
       "year": "2020",
@@ -6275,6 +6686,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Dororo",
+      "title_eng": "Dororo",
+      "title_romaji": "Dororo",
+      "title_localized": "",
       "id": 37520,
       "url": "https://myanimelist.net/anime/37520/Dororo",
       "year": "2019",
@@ -6294,6 +6708,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Grand Blue",
+      "title_eng": "Grand Blue Dreaming",
+      "title_romaji": "Grand Blue",
+      "title_localized": "",
       "id": 37105,
       "url": "https://myanimelist.net/anime/37105/Grand_Blue",
       "year": "2018",
@@ -6311,6 +6728,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Howl no Ugoku Shiro",
+      "title_eng": "Howl's Moving Castle",
+      "title_romaji": "Howl no Ugoku Shiro",
+      "title_localized": "",
       "id": 431,
       "url": "https://myanimelist.net/anime/431/Howl_no_Ugoku_Shiro",
       "year": "2004",
@@ -6332,6 +6752,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Hunter x Hunter (2011)",
+      "title_eng": "Hunter x Hunter",
+      "title_romaji": "Hunter x Hunter (2011)",
+      "title_localized": "",
       "id": 11061,
       "url": "https://myanimelist.net/anime/11061/Hunter_x_Hunter_2011",
       "year": "2011",
@@ -6351,6 +6774,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Hotarubi no Mori e",
+      "title_eng": "Into the Forest of Fireflies' Light",
+      "title_romaji": "Hotarubi no Mori e",
+      "title_localized": "",
       "id": 10408,
       "url": "https://myanimelist.net/anime/10408/Hotarubi_no_Mori_e",
       "year": "2011",
@@ -6371,6 +6797,9 @@ window.mediaDatabase = {
     },
     {
       "title": "JoJo no Kimyou na Bouken Part 4: Diamond wa Kudakenai",
+      "title_eng": "JoJo's Bizarre Adventure: Diamond Is Unbreakable",
+      "title_romaji": "JoJo no Kimyou na Bouken Part 4: Diamond wa Kudakenai",
+      "title_localized": "",
       "id": 31933,
       "url": "https://myanimelist.net/anime/31933/JoJo_no_Kimyou_na_Bouken_Part_4__Diamond_wa_Kudakenai",
       "year": "2016",
@@ -6389,6 +6818,9 @@ window.mediaDatabase = {
     },
     {
       "title": "JoJo no Kimyou na Bouken Part 5: Ougon no Kaze",
+      "title_eng": "JoJo's Bizarre Adventure: Golden Wind",
+      "title_romaji": "JoJo no Kimyou na Bouken Part 5: Ougon no Kaze",
+      "title_localized": "",
       "id": 37991,
       "url": "https://myanimelist.net/anime/37991/JoJo_no_Kimyou_na_Bouken_Part_5__Ougon_no_Kaze",
       "year": "2018",
@@ -6407,6 +6839,9 @@ window.mediaDatabase = {
     },
     {
       "title": "JoJo no Kimyou na Bouken Part 3: Stardust Crusaders - Egypt-hen",
+      "title_eng": "JoJo's Bizarre Adventure: Stardust Crusaders - Battle in Egypt",
+      "title_romaji": "JoJo no Kimyou na Bouken Part 3: Stardust Crusaders - Egypt-hen",
+      "title_localized": "",
       "id": 26055,
       "url": "https://myanimelist.net/anime/26055/JoJo_no_Kimyou_na_Bouken_Part_3__Stardust_Crusaders_-_Egypt-hen",
       "year": "2015",
@@ -6425,6 +6860,9 @@ window.mediaDatabase = {
     },
     {
       "title": "JoJo no Kimyou na Bouken Part 6: Stone Ocean",
+      "title_eng": "JoJo's Bizarre Adventure: Stone Ocean",
+      "title_romaji": "JoJo no Kimyou na Bouken Part 6: Stone Ocean",
+      "title_localized": "",
       "id": 48661,
       "url": "https://myanimelist.net/anime/48661/JoJo_no_Kimyou_na_Bouken_Part_6__Stone_Ocean",
       "year": "2021",
@@ -6443,6 +6881,9 @@ window.mediaDatabase = {
     },
     {
       "title": "JoJo no Kimyou na Bouken Part 6: Stone Ocean Part 2",
+      "title_eng": "JoJo's Bizarre Adventure: Stone Ocean Part 2",
+      "title_romaji": "JoJo no Kimyou na Bouken Part 6: Stone Ocean Part 2",
+      "title_localized": "",
       "id": 51367,
       "url": "https://myanimelist.net/anime/51367/JoJo_no_Kimyou_na_Bouken_Part_6__Stone_Ocean_Part_2",
       "year": "2022",
@@ -6461,6 +6902,9 @@ window.mediaDatabase = {
     },
     {
       "title": "JoJo no Kimyou na Bouken Part 6: Stone Ocean Part 3",
+      "title_eng": "JoJo's Bizarre Adventure: Stone Ocean Part 3",
+      "title_romaji": "JoJo no Kimyou na Bouken Part 6: Stone Ocean Part 3",
+      "title_localized": "",
       "id": 53273,
       "url": "https://myanimelist.net/anime/53273/JoJo_no_Kimyou_na_Bouken_Part_6__Stone_Ocean_Part_3",
       "year": "2022",
@@ -6479,6 +6923,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Josee to Tora to Sakana-tachi",
+      "title_eng": "Josee, the Tiger and the Fish",
+      "title_romaji": "Josee to Tora to Sakana-tachi",
+      "title_localized": "",
       "id": 40787,
       "url": "https://myanimelist.net/anime/40787/Josee_to_Tora_to_Sakana-tachi",
       "year": "2020",
@@ -6497,6 +6944,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Jujutsu Kaisen",
+      "title_eng": "Jujutsu Kaisen",
+      "title_romaji": "Jujutsu Kaisen",
+      "title_localized": "",
       "id": 40748,
       "url": "https://myanimelist.net/anime/40748/Jujutsu_Kaisen",
       "year": "2020",
@@ -6516,6 +6966,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Jujutsu Kaisen 0 Movie",
+      "title_eng": "Jujutsu Kaisen 0",
+      "title_romaji": "Jujutsu Kaisen 0 Movie",
+      "title_localized": "",
       "id": 48561,
       "url": "https://myanimelist.net/anime/48561/Jujutsu_Kaisen_0_Movie",
       "year": "2021",
@@ -6534,6 +6987,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kaguya-sama wa Kokurasetai: Ultra Romantic",
+      "title_eng": "Kaguya-sama: Love is War -Ultra Romantic-",
+      "title_romaji": "Kaguya-sama wa Kokurasetai: Ultra Romantic",
+      "title_localized": "",
       "id": 43608,
       "url": "https://myanimelist.net/anime/43608/Kaguya-sama_wa_Kokurasetai__Ultra_Romantic",
       "year": "2022",
@@ -6552,6 +7008,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kaguya-sama wa Kokurasetai? Tensai-tachi no Renai Zunousen",
+      "title_eng": "Kaguya-sama: Love is War?",
+      "title_romaji": "Kaguya-sama wa Kokurasetai? Tensai-tachi no Renai Zunousen",
+      "title_localized": "",
       "id": 40591,
       "url": "https://myanimelist.net/anime/40591/Kaguya-sama_wa_Kokurasetai_Tensai-tachi_no_Renai_Zunousen",
       "year": "2020",
@@ -6570,6 +7029,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kono Subarashii Sekai ni Shukufuku wo! Movie: Kurenai Densetsu",
+      "title_eng": "KonoSuba: God's Blessing on This Wonderful World! - Legend of Crimson",
+      "title_romaji": "Kono Subarashii Sekai ni Shukufuku wo! Movie: Kurenai Densetsu",
+      "title_localized": "",
       "id": 38040,
       "url": "https://myanimelist.net/anime/38040/Kono_Subarashii_Sekai_ni_Shukufuku_wo_Movie__Kurenai_Densetsu",
       "year": "2019",
@@ -6589,6 +7051,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kono Subarashii Sekai ni Shukufuku wo! 2: Kono Subarashii Geijutsu ni Shukufuku wo!",
+      "title_eng": "KonoSuba: God's Blessing on This Wonderful World! 2 - God's Blessing on This Wonderful Art!",
+      "title_romaji": "Kono Subarashii Sekai ni Shukufuku wo! 2: Kono Subarashii Geijutsu ni Shukufuku wo!",
+      "title_localized": "",
       "id": 34626,
       "url": "https://myanimelist.net/anime/34626/Kono_Subarashii_Sekai_ni_Shukufuku_wo_2__Kono_Subarashii_Geijutsu_ni_Shukufuku_wo",
       "year": "2017",
@@ -6608,6 +7073,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Mob Psycho 100",
+      "title_eng": "Mob Psycho 100",
+      "title_romaji": "Mob Psycho 100",
+      "title_localized": "",
       "id": 32182,
       "url": "https://myanimelist.net/anime/32182/Mob_Psycho_100",
       "year": "2016",
@@ -6627,6 +7095,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Mob Psycho 100 II",
+      "title_eng": "Mob Psycho 100 II",
+      "title_romaji": "Mob Psycho 100 II",
+      "title_localized": "",
       "id": 37510,
       "url": "https://myanimelist.net/anime/37510/Mob_Psycho_100_II",
       "year": "2019",
@@ -6646,6 +7117,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Monster",
+      "title_eng": "Monster",
+      "title_romaji": "Monster",
+      "title_localized": "",
       "id": 19,
       "url": "https://myanimelist.net/anime/19/Monster",
       "year": "2004",
@@ -6665,6 +7139,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Shinseiki Evangelion Movie: Air/Magokoro wo, Kimi ni",
+      "title_eng": "Neon Genesis Evangelion: The End of Evangelion",
+      "title_romaji": "Shinseiki Evangelion Movie: Air/Magokoro wo, Kimi ni",
+      "title_localized": "",
       "id": 32,
       "url": "https://myanimelist.net/anime/32/Shinseiki_Evangelion_Movie__Air_Magokoro_wo_Kimi_ni",
       "year": "1997",
@@ -6685,6 +7162,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Odd Taxi",
+      "title_eng": "Odd Taxi",
+      "title_romaji": "Odd Taxi",
+      "title_localized": "",
       "id": 46102,
       "url": "https://myanimelist.net/anime/46102/Odd_Taxi",
       "year": "2021",
@@ -6705,6 +7185,9 @@ window.mediaDatabase = {
     },
     {
       "title": "One Punch Man",
+      "title_eng": "One-Punch Man",
+      "title_romaji": "One Punch Man",
+      "title_localized": "",
       "id": 30276,
       "url": "https://myanimelist.net/anime/30276/One_Punch_Man",
       "year": "2015",
@@ -6723,6 +7206,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Paprika",
+      "title_eng": "Paprika",
+      "title_romaji": "Paprika",
+      "title_localized": "",
       "id": 1943,
       "url": "https://myanimelist.net/anime/1943/Paprika",
       "year": "2006",
@@ -6744,6 +7230,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kiseijuu: Sei no Kakuritsu",
+      "title_eng": "Parasyte: The Maxim",
+      "title_romaji": "Kiseijuu: Sei no Kakuritsu",
+      "title_localized": "",
       "id": 22535,
       "url": "https://myanimelist.net/anime/22535/Kiseijuu__Sei_no_Kakuritsu",
       "year": "2014",
@@ -6764,6 +7253,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Spy x Family",
+      "title_eng": "",
+      "title_romaji": "Spy x Family",
+      "title_localized": "",
       "id": 50265,
       "url": "https://myanimelist.net/anime/50265/Spy_x_Family",
       "year": "2022",
@@ -6783,6 +7275,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Steins;Gate 0",
+      "title_eng": "Steins;Gate 0",
+      "title_romaji": "Steins;Gate 0",
+      "title_localized": "",
       "id": 30484,
       "url": "https://myanimelist.net/anime/30484/Steins_Gate_0",
       "year": "2018",
@@ -6802,6 +7297,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Steins;Gate Movie: Fuka Ryouiki no Déjà vu",
+      "title_eng": "Steins;Gate: The Movie - Load Region of Déjà Vu",
+      "title_romaji": "Steins;Gate Movie: Fuka Ryouiki no Déjà vu",
+      "title_localized": "",
       "id": 11577,
       "url": "https://myanimelist.net/anime/11577/Steins_Gate_Movie__Fuka_Ryouiki_no_Déjà_vu",
       "year": "2013",
@@ -6820,6 +7318,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Saiki Kusuo no Ψ-nan",
+      "title_eng": "The Disastrous Life of Saiki K.",
+      "title_romaji": "Saiki Kusuo no Ψ-nan",
+      "title_localized": "",
       "id": 33255,
       "url": "https://myanimelist.net/anime/33255/Saiki_Kusuo_no_Ψ-nan",
       "year": "2016",
@@ -6837,6 +7338,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Saiki Kusuo no Ψ-nan 2",
+      "title_eng": "The Disastrous Life of Saiki K. 2",
+      "title_romaji": "Saiki Kusuo no Ψ-nan 2",
+      "title_localized": "",
       "id": 34612,
       "url": "https://myanimelist.net/anime/34612/Saiki_Kusuo_no_Ψ-nan_2",
       "year": "2018",
@@ -6854,6 +7358,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Saiki Kusuo no Ψ-nan: Kanketsu-hen",
+      "title_eng": "The Disastrous Life of Saiki K. Final Arc",
+      "title_romaji": "Saiki Kusuo no Ψ-nan: Kanketsu-hen",
+      "title_localized": "",
       "id": 38249,
       "url": "https://myanimelist.net/anime/38249/Saiki_Kusuo_no_Ψ-nan__Kanketsu-hen",
       "year": "2018",
@@ -6871,6 +7378,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kaguya-hime no Monogatari",
+      "title_eng": "The Tale of the Princess Kaguya",
+      "title_romaji": "Kaguya-hime no Monogatari",
+      "title_localized": "",
       "id": 16664,
       "url": "https://myanimelist.net/anime/16664/Kaguya-hime_no_Monogatari",
       "year": "2013",
@@ -6889,6 +7399,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Vinland Saga",
+      "title_eng": "",
+      "title_romaji": "Vinland Saga",
+      "title_localized": "",
       "id": 37521,
       "url": "https://myanimelist.net/anime/37521/Vinland_Saga",
       "year": "2019",
@@ -6908,6 +7421,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Violet Evergarden",
+      "title_eng": "Violet Evergarden",
+      "title_romaji": "Violet Evergarden",
+      "title_localized": "",
       "id": 33352,
       "url": "https://myanimelist.net/anime/33352/Violet_Evergarden",
       "year": "2018",
@@ -6925,6 +7441,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Violet Evergarden Gaiden: Eien to Jidou Shuki Ningyou",
+      "title_eng": "Violet Evergarden: Eternity and the Auto Memory Doll",
+      "title_romaji": "Violet Evergarden Gaiden: Eien to Jidou Shuki Ningyou",
+      "title_localized": "",
       "id": 39741,
       "url": "https://myanimelist.net/anime/39741/Violet_Evergarden_Gaiden__Eien_to_Jidou_Shuki_Ningyou",
       "year": "2019",
@@ -6942,6 +7461,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Violet Evergarden: Kitto \"Ai\" wo Shiru Hi ga Kuru no Darou",
+      "title_eng": "Violet Evergarden: The Day You Understand \"I Love You\" Will Surely Come",
+      "title_romaji": "Violet Evergarden: Kitto \"Ai\" wo Shiru Hi ga Kuru no Darou",
+      "title_localized": "",
       "id": 37095,
       "url": "https://myanimelist.net/anime/37095/Violet_Evergarden__Kitto_Ai_wo_Shiru_Hi_ga_Kuru_no_Darou",
       "year": "2018",
@@ -6959,6 +7481,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Violet Evergarden Movie",
+      "title_eng": "Violet Evergarden: The Movie",
+      "title_romaji": "Violet Evergarden Movie",
+      "title_localized": "",
       "id": 37987,
       "url": "https://myanimelist.net/anime/37987/Violet_Evergarden_Movie",
       "year": "2020",
@@ -6977,6 +7502,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Tenki no Ko",
+      "title_eng": "Weathering with You",
+      "title_romaji": "Tenki no Ko",
+      "title_localized": "",
       "id": 38826,
       "url": "https://myanimelist.net/anime/38826/Tenki_no_Ko",
       "year": "2019",
@@ -6997,6 +7525,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Ookami Kodomo no Ame to Yuki",
+      "title_eng": "Wolf Children",
+      "title_romaji": "Ookami Kodomo no Ame to Yuki",
+      "title_localized": "",
       "id": 12355,
       "url": "https://myanimelist.net/anime/12355/Ookami_Kodomo_no_Ame_to_Yuki",
       "year": "2012",
@@ -7018,6 +7549,9 @@ window.mediaDatabase = {
   "manga": [
     {
       "title": "Sangeki",
+      "title_eng": "Haunted Peak",
+      "title_romaji": "Sangeki",
+      "title_localized": "",
       "id": 192247,
       "url": "https://myanimelist.net/manga/192247/Sangeki",
       "year": "2026",
@@ -7037,6 +7571,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Haimiya-senpai wa Kowakute Kawaii",
+      "title_eng": "Haimiya Is Scary Cute",
+      "title_romaji": "Haimiya-senpai wa Kowakute Kawaii",
+      "title_localized": "",
       "id": 188409,
       "url": "https://myanimelist.net/manga/188409/Haimiya-senpai_wa_Kowakute_Kawaii",
       "year": "2025",
@@ -7056,6 +7593,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Moriagaranai Date",
+      "title_eng": "Unexciting Date...",
+      "title_romaji": "Moriagaranai Date",
+      "title_localized": "",
       "id": 189516,
       "url": "https://myanimelist.net/manga/189516/Moriagaranai_Date",
       "year": "2024",
@@ -7075,6 +7615,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Tsumi to Batsu no Spica",
+      "title_eng": "",
+      "title_romaji": "Tsumi to Batsu no Spica",
+      "title_localized": "",
       "id": 173120,
       "url": "https://myanimelist.net/manga/173120/Tsumi_to_Batsu_no_Spica",
       "year": "2024",
@@ -7094,6 +7637,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Isshou Senkin",
+      "title_eng": "ST✰R: Strike It Rich",
+      "title_romaji": "Isshou Senkin",
+      "title_localized": "",
       "id": 158356,
       "url": "https://myanimelist.net/manga/158356/Isshou_Senkin",
       "year": "2023",
@@ -7112,6 +7658,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Yotsuba to!",
+      "title_eng": "Yotsuba&!",
+      "title_romaji": "Yotsuba to!",
+      "title_localized": "",
       "id": 104,
       "url": "https://myanimelist.net/manga/104/Yotsuba_to",
       "year": "2003",
@@ -7132,6 +7681,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Centuria",
+      "title_eng": "Centuria",
+      "title_romaji": "Centuria",
+      "title_localized": "",
       "id": 169067,
       "url": "https://myanimelist.net/manga/169067/Centuria",
       "year": "2024",
@@ -7153,6 +7705,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Ruri Dragon",
+      "title_eng": "RuriDragon",
+      "title_romaji": "Ruri Dragon",
+      "title_localized": "",
       "id": 148054,
       "url": "https://myanimelist.net/manga/148054/Ruri_Dragon",
       "year": "2022",
@@ -7172,6 +7727,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Uzaki-chan wa Asobitai!",
+      "title_eng": "Uzaki-chan Wants to Hang Out!",
+      "title_romaji": "Uzaki-chan wa Asobitai!",
+      "title_localized": "",
       "id": 114417,
       "url": "https://myanimelist.net/manga/114417/Uzaki-chan_wa_Asobitai",
       "year": "2017",
@@ -7191,6 +7749,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Grand Blue",
+      "title_eng": "Grand Blue Dreaming",
+      "title_romaji": "Grand Blue",
+      "title_localized": "",
       "id": 70345,
       "url": "https://myanimelist.net/manga/70345/Grand_Blue",
       "year": "2014",
@@ -7209,6 +7770,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo",
+      "title_eng": "The 100 Girlfriends Who Really, Really, Really, Really, Really Love You",
+      "title_romaji": "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo",
+      "title_localized": "",
       "id": 123681,
       "url": "https://myanimelist.net/manga/123681/Kimi_no_Koto_ga_Daidaidaidaidaisuki_na_100-nin_no_Kanojo",
       "year": "2019",
@@ -7228,6 +7792,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Mato Seihei no Slave",
+      "title_eng": "Chained Soldier",
+      "title_romaji": "Mato Seihei no Slave",
+      "title_localized": "",
       "id": 116880,
       "url": "https://myanimelist.net/manga/116880/Mato_Seihei_no_Slave",
       "year": "2019",
@@ -7248,6 +7815,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Dandadan",
+      "title_eng": "Dandadan",
+      "title_romaji": "Dandadan",
+      "title_localized": "",
       "id": 135496,
       "url": "https://myanimelist.net/manga/135496/Dandadan",
       "year": "2021",
@@ -7268,6 +7838,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Zom 100: Zombie ni Naru made ni Shitai 100 no Koto",
+      "title_eng": "Zom 100: Bucket List of the Dead",
+      "title_romaji": "Zom 100: Zombie ni Naru made ni Shitai 100 no Koto",
+      "title_localized": "",
       "id": 122392,
       "url": "https://myanimelist.net/manga/122392/Zom_100__Zombie_ni_Naru_made_ni_Shitai_100_no_Koto",
       "year": "2018",
@@ -7287,6 +7860,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kagurabachi",
+      "title_eng": "Kagurabachi",
+      "title_romaji": "Kagurabachi",
+      "title_localized": "",
       "id": 162479,
       "url": "https://myanimelist.net/manga/162479/Kagurabachi",
       "year": "2023",
@@ -7306,6 +7882,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Hikaru ga Shinda Natsu",
+      "title_eng": "The Summer Hikaru Died",
+      "title_romaji": "Hikaru ga Shinda Natsu",
+      "title_localized": "",
       "id": 141833,
       "url": "https://myanimelist.net/manga/141833/Hikaru_ga_Shinda_Natsu",
       "year": "2021",
@@ -7326,6 +7905,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Real",
+      "title_eng": "Real",
+      "title_romaji": "Real",
+      "title_localized": "",
       "id": 657,
       "url": "https://myanimelist.net/manga/657/Real",
       "year": "1999",
@@ -7346,6 +7928,9 @@ window.mediaDatabase = {
     },
     {
       "title": "One Punch-Man",
+      "title_eng": "One-Punch Man",
+      "title_romaji": "One Punch-Man",
+      "title_localized": "",
       "id": 44347,
       "url": "https://myanimelist.net/manga/44347/One_Punch-Man",
       "year": "2012",
@@ -7365,6 +7950,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Berserk",
+      "title_eng": "Berserk",
+      "title_romaji": "Berserk",
+      "title_localized": "",
       "id": 2,
       "url": "https://myanimelist.net/manga/2/Berserk",
       "year": "1989",
@@ -7388,6 +7976,9 @@ window.mediaDatabase = {
     },
     {
       "title": "One Piece",
+      "title_eng": "One Piece",
+      "title_romaji": "One Piece",
+      "title_localized": "",
       "id": 13,
       "url": "https://myanimelist.net/manga/13/One_Piece",
       "year": "1997",
@@ -7408,6 +7999,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Vagabond",
+      "title_eng": "Vagabond",
+      "title_romaji": "Vagabond",
+      "title_localized": "",
       "id": 656,
       "url": "https://myanimelist.net/manga/656/Vagabond",
       "year": "1998",
@@ -7428,6 +8022,9 @@ window.mediaDatabase = {
     },
     {
       "title": "JoJo no Kimyou na Bouken Part 9: The JoJoLands",
+      "title_eng": "JoJo's Bizarre Adventure Part 9: The JoJoLands",
+      "title_romaji": "JoJo no Kimyou na Bouken Part 9: The JoJoLands",
+      "title_localized": "",
       "id": 139629,
       "url": "https://myanimelist.net/manga/139629/JoJo_no_Kimyou_na_Bouken_Part_9__The_JoJoLands",
       "year": "2023",
@@ -7448,6 +8045,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Koori no Jouheki",
+      "title_eng": "The Ramparts of Ice",
+      "title_romaji": "Koori no Jouheki",
+      "title_localized": "",
       "id": 160303,
       "url": "https://myanimelist.net/manga/160303/Koori_no_Jouheki",
       "year": "2020",
@@ -7467,6 +8067,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Chainsaw Man",
+      "title_eng": "Chainsaw Man",
+      "title_romaji": "Chainsaw Man",
+      "title_localized": "",
       "id": 116778,
       "url": "https://myanimelist.net/manga/116778/Chainsaw_Man",
       "year": "2018",
@@ -7487,6 +8090,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Jujutsu Kaisen Modulo",
+      "title_eng": "Jujutsu Kaisen Modulo",
+      "title_romaji": "Jujutsu Kaisen Modulo",
+      "title_localized": "",
       "id": 186597,
       "url": "https://myanimelist.net/manga/186597/Jujutsu_Kaisen_Modulo",
       "year": "2025",
@@ -7507,6 +8113,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kamisama ga Uso wo Tsuku.",
+      "title_eng": "The Gods Lie.",
+      "title_romaji": "Kamisama ga Uso wo Tsuku.",
+      "title_localized": "",
       "id": 50217,
       "url": "https://myanimelist.net/manga/50217/Kamisama_ga_Uso_wo_Tsuku",
       "year": "2013",
@@ -7526,6 +8135,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Houseki no Kuni",
+      "title_eng": "Land of the Lustrous",
+      "title_romaji": "Houseki no Kuni",
+      "title_localized": "",
       "id": 44489,
       "url": "https://myanimelist.net/manga/44489/Houseki_no_Kuni",
       "year": "2012",
@@ -7546,6 +8158,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Ano Ko no Kodomo",
+      "title_eng": "My Girlfriend's Child",
+      "title_romaji": "Ano Ko no Kodomo",
+      "title_localized": "",
       "id": 140333,
       "url": "https://myanimelist.net/manga/140333/Ano_Ko_no_Kodomo",
       "year": "2021",
@@ -7565,6 +8180,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Genkai Dokushin Joshi (26) Gohan",
+      "title_eng": "",
+      "title_romaji": "Genkai Dokushin Joshi (26) Gohan",
+      "title_localized": "",
       "id": 158553,
       "url": "https://myanimelist.net/manga/158553/Genkai_Dokushin_Joshi_26_Gohan",
       "year": "2023",
@@ -7583,6 +8201,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Vinland Saga",
+      "title_eng": "Vinland Saga",
+      "title_romaji": "Vinland Saga",
+      "title_localized": "",
       "id": 642,
       "url": "https://myanimelist.net/manga/642/Vinland_Saga",
       "year": "2005",
@@ -7604,6 +8225,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kaijuu 8-gou",
+      "title_eng": "Kaiju No. 8",
+      "title_romaji": "Kaijuu 8-gou",
+      "title_localized": "",
       "id": 127907,
       "url": "https://myanimelist.net/manga/127907/Kaijuu_8-gou",
       "year": "2020",
@@ -7624,6 +8248,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Aku no Hana",
+      "title_eng": "The Flowers of Evil",
+      "title_romaji": "Aku no Hana",
+      "title_localized": "",
       "id": 24705,
       "url": "https://myanimelist.net/manga/24705/Aku_no_Hana",
       "year": "2009",
@@ -7643,6 +8270,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Umibe no Onnanoko",
+      "title_eng": "A Girl on the Shore",
+      "title_romaji": "Umibe no Onnanoko",
+      "title_localized": "",
       "id": 17353,
       "url": "https://myanimelist.net/manga/17353/Umibe_no_Onnanoko",
       "year": "2009",
@@ -7662,6 +8292,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Shi ni Aruki",
+      "title_eng": "",
+      "title_romaji": "Shi ni Aruki",
+      "title_localized": "",
       "id": 103648,
       "url": "https://myanimelist.net/manga/103648/Shi_ni_Aruki",
       "year": "2016",
@@ -7681,6 +8314,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Otona ni Narenai Bokura wa",
+      "title_eng": "",
+      "title_romaji": "Otona ni Narenai Bokura wa",
+      "title_localized": "",
       "id": 166632,
       "url": "https://myanimelist.net/manga/166632/Otona_ni_Narenai_Bokura_wa",
       "year": "2024",
@@ -7699,6 +8335,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Undead Unluck",
+      "title_eng": "Undead Unluck",
+      "title_romaji": "Undead Unluck",
+      "title_localized": "",
       "id": 123956,
       "url": "https://myanimelist.net/manga/123956/Undead_Unluck",
       "year": "2020",
@@ -7718,6 +8357,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Okuru Kotoba",
+      "title_eng": "",
+      "title_romaji": "Okuru Kotoba",
+      "title_localized": "",
       "id": 105875,
       "url": "https://myanimelist.net/manga/105875/Okuru_Kotoba",
       "year": "2017",
@@ -7737,6 +8379,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Saltiness",
+      "title_eng": "",
+      "title_romaji": "Saltiness",
+      "title_localized": "",
       "id": 56509,
       "url": "https://myanimelist.net/manga/56509/Saltiness",
       "year": "2012",
@@ -7753,6 +8398,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Okaeri Alice",
+      "title_eng": "Welcome Back, Alice",
+      "title_romaji": "Okaeri Alice",
+      "title_localized": "",
       "id": 125717,
       "url": "https://myanimelist.net/manga/125717/Okaeri_Alice",
       "year": "2020",
@@ -7772,6 +8420,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Saihate ni Madou",
+      "title_eng": "",
+      "title_romaji": "Saihate ni Madou",
+      "title_localized": "",
       "id": 159771,
       "url": "https://myanimelist.net/manga/159771/Saihate_ni_Madou",
       "year": "2023",
@@ -7790,6 +8441,9 @@ window.mediaDatabase = {
     },
     {
       "title": "[Oshi no Ko]",
+      "title_eng": "[Oshi no Ko]",
+      "title_romaji": "[Oshi no Ko]",
+      "title_localized": "",
       "id": 126146,
       "url": "https://myanimelist.net/manga/126146/Oshi_no_Ko",
       "year": "2020",
@@ -7808,6 +8462,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Jujutsu Kaisen",
+      "title_eng": "Jujutsu Kaisen",
+      "title_romaji": "Jujutsu Kaisen",
+      "title_localized": "",
       "id": 113138,
       "url": "https://myanimelist.net/manga/113138/Jujutsu_Kaisen",
       "year": "2018",
@@ -7827,6 +8484,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kokou no Hito",
+      "title_eng": "The Climber",
+      "title_romaji": "Kokou no Hito",
+      "title_localized": "",
       "id": 7375,
       "url": "https://myanimelist.net/manga/7375/Kokou_no_Hito",
       "year": "2007",
@@ -7847,6 +8507,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Akari",
+      "title_eng": "",
+      "title_romaji": "Akari",
+      "title_localized": "",
       "id": 171826,
       "url": "https://myanimelist.net/manga/171826/Akari",
       "year": "2022",
@@ -7865,6 +8528,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Tomodachi Game",
+      "title_eng": "Tomodachi Game",
+      "title_romaji": "Tomodachi Game",
+      "title_localized": "",
       "id": 62795,
       "url": "https://myanimelist.net/manga/62795/Tomodachi_Game",
       "year": "2013",
@@ -7883,6 +8549,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Shounen no Abyss",
+      "title_eng": "Boy's Abyss",
+      "title_romaji": "Shounen no Abyss",
+      "title_localized": "",
       "id": 126699,
       "url": "https://myanimelist.net/manga/126699/Shounen_no_Abyss",
       "year": "2020",
@@ -7901,6 +8570,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Confession",
+      "title_eng": "Confession",
+      "title_romaji": "Confession",
+      "title_localized": "",
       "id": 1541,
       "url": "https://myanimelist.net/manga/1541/Confession",
       "year": "1998",
@@ -7920,6 +8592,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Ressentiment",
+      "title_eng": "",
+      "title_romaji": "Ressentiment",
+      "title_localized": "",
       "id": 1238,
       "url": "https://myanimelist.net/manga/1238/Ressentiment",
       "year": "2003",
@@ -7940,6 +8615,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Wanitokagegisu",
+      "title_eng": "",
+      "title_romaji": "Wanitokagegisu",
+      "title_localized": "",
       "id": 19790,
       "url": "https://myanimelist.net/manga/19790/Wanitokagegisu",
       "year": "2006",
@@ -7959,6 +8637,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kushami: Urasawa Naoki Tanpenshuu",
+      "title_eng": "Sneeze: Naoki Urasawa Story Collection",
+      "title_romaji": "Kushami: Urasawa Naoki Tanpenshuu",
+      "title_localized": "",
       "id": 128620,
       "url": "https://myanimelist.net/manga/128620/Kushami__Urasawa_Naoki_Tanpenshuu",
       "year": "1995",
@@ -7981,6 +8662,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Shoujo Shuumatsu Ryokou",
+      "title_eng": "Girls' Last Tour",
+      "title_romaji": "Shoujo Shuumatsu Ryokou",
+      "title_localized": "",
       "id": 72467,
       "url": "https://myanimelist.net/manga/72467/Shoujo_Shuumatsu_Ryokou",
       "year": "2014",
@@ -8001,6 +8685,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Renai Daikou",
+      "title_eng": "Love Agency",
+      "title_romaji": "Renai Daikou",
+      "title_localized": "",
       "id": 157874,
       "url": "https://myanimelist.net/manga/157874/Renai_Daikou",
       "year": "2023",
@@ -8020,6 +8707,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Look Back",
+      "title_eng": "Look Back",
+      "title_romaji": "Look Back",
+      "title_localized": "",
       "id": 138673,
       "url": "https://myanimelist.net/manga/138673/Look_Back",
       "year": "2021",
@@ -8038,6 +8728,9 @@ window.mediaDatabase = {
     },
     {
       "title": "My Broken Mariko",
+      "title_eng": "My Broken Mariko",
+      "title_romaji": "My Broken Mariko",
+      "title_localized": "",
       "id": 123812,
       "url": "https://myanimelist.net/manga/123812/My_Broken_Mariko",
       "year": "2019",
@@ -8056,6 +8749,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Ajin",
+      "title_eng": "Ajin: Demi-Human",
+      "title_romaji": "Ajin",
+      "title_localized": "",
       "id": 49865,
       "url": "https://myanimelist.net/manga/49865/Ajin",
       "year": "2012",
@@ -8077,6 +8773,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Yuu☆Yuu☆Hakusho",
+      "title_eng": "Yu Yu Hakusho",
+      "title_romaji": "Yuu☆Yuu☆Hakusho",
+      "title_localized": "",
       "id": 53,
       "url": "https://myanimelist.net/manga/53/Yuu☆Yuu☆Hakusho",
       "year": "1990",
@@ -8099,6 +8798,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Watashi ga 15-sai dewa Nakunattemo.",
+      "title_eng": "Even If I'm Not Fifteen",
+      "title_romaji": "Watashi ga 15-sai dewa Nakunattemo.",
+      "title_localized": "",
       "id": 142423,
       "url": "https://myanimelist.net/manga/142423/Watashi_ga_15-sai_dewa_Nakunattemo",
       "year": "2021",
@@ -8117,6 +8819,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Ningen Shikkaku",
+      "title_eng": "No Longer Human",
+      "title_romaji": "Ningen Shikkaku",
+      "title_localized": "",
       "id": 106609,
       "url": "https://myanimelist.net/manga/106609/Ningen_Shikkaku",
       "year": "2017",
@@ -8135,6 +8840,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Blue Heaven",
+      "title_eng": "",
+      "title_romaji": "Blue Heaven",
+      "title_localized": "",
       "id": 1479,
       "url": "https://myanimelist.net/manga/1479/Blue_Heaven",
       "year": "2002",
@@ -8153,6 +8861,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Hyouryuu Net Cafe",
+      "title_eng": "Drifting Net Café",
+      "title_romaji": "Hyouryuu Net Cafe",
+      "title_localized": "",
       "id": 28303,
       "url": "https://myanimelist.net/manga/28303/Hyouryuu_Net_Cafe",
       "year": "2009",
@@ -8174,6 +8885,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Uchuujin no Kakushigoto",
+      "title_eng": "Secret of the Alien",
+      "title_romaji": "Uchuujin no Kakushigoto",
+      "title_localized": "",
       "id": 162905,
       "url": "https://myanimelist.net/manga/162905/Uchuujin_no_Kakushigoto",
       "year": "2023",
@@ -8194,6 +8908,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Blame!",
+      "title_eng": "Blame!",
+      "title_romaji": "Blame!",
+      "title_localized": "",
       "id": 149,
       "url": "https://myanimelist.net/manga/149/Blame",
       "year": "1997",
@@ -8215,6 +8932,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Futari Ashita mo Sorenari ni",
+      "title_eng": "It Takes Two Tomorrow, Too",
+      "title_romaji": "Futari Ashita mo Sorenari ni",
+      "title_localized": "",
       "id": 120367,
       "url": "https://myanimelist.net/manga/120367/Futari_Ashita_mo_Sorenari_ni",
       "year": "2019",
@@ -8234,6 +8954,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Onanie Master Kurosawa",
+      "title_eng": "Onani Master Kurosawa",
+      "title_romaji": "Onanie Master Kurosawa",
+      "title_localized": "",
       "id": 8967,
       "url": "https://myanimelist.net/manga/8967/Onanie_Master_Kurosawa",
       "year": "2007",
@@ -8252,6 +8975,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Dead Dead Demons Dededede Destruction",
+      "title_eng": "Dead Dead Demons Dededede Destruction",
+      "title_romaji": "Dead Dead Demons Dededede Destruction",
+      "title_localized": "",
       "id": 70801,
       "url": "https://myanimelist.net/manga/70801/Dead_Dead_Demons_Dededede_Destruction",
       "year": "2014",
@@ -8272,6 +8998,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Nee Nee, Nene-san.",
+      "title_eng": "",
+      "title_romaji": "Nee Nee, Nene-san.",
+      "title_localized": "",
       "id": 140604,
       "url": "https://myanimelist.net/manga/140604/Nee_Nee_Nene-san",
       "year": "2021",
@@ -8292,6 +9021,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Fire Punch",
+      "title_eng": "Fire Punch",
+      "title_romaji": "Fire Punch",
+      "title_localized": "",
       "id": 98270,
       "url": "https://myanimelist.net/manga/98270/Fire_Punch",
       "year": "2016",
@@ -8312,6 +9044,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kaitai Zanuff",
+      "title_eng": "",
+      "title_romaji": "Kaitai Zanuff",
+      "title_localized": "",
       "id": 108948,
       "url": "https://myanimelist.net/manga/108948/Kaitai_Zanuff",
       "year": "2012",
@@ -8330,6 +9065,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Kowareta Bokura no Senryaku Renai",
+      "title_eng": "",
+      "title_romaji": "Kowareta Bokura no Senryaku Renai",
+      "title_localized": "",
       "id": 150374,
       "url": "https://myanimelist.net/manga/150374/Kowareta_Bokura_no_Senryaku_Renai",
       "year": "2022",
@@ -8348,6 +9086,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Soshite Watashi wa, Kou Itta.",
+      "title_eng": "",
+      "title_romaji": "Soshite Watashi wa, Kou Itta.",
+      "title_localized": "",
       "id": 162295,
       "url": "https://myanimelist.net/manga/162295/Soshite_Watashi_wa_Kou_Itta",
       "year": "2023",
@@ -8367,6 +9108,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Isshou Suki tte Yutta jan",
+      "title_eng": "",
+      "title_romaji": "Isshou Suki tte Yutta jan",
+      "title_localized": "",
       "id": 132614,
       "url": "https://myanimelist.net/manga/132614/Isshou_Suki_tte_Yutta_jan",
       "year": "2018",
@@ -8386,6 +9130,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Usotsuki Mii-kun to Kowareta Maa-chan: Totteoki no Uso",
+      "title_eng": "",
+      "title_romaji": "Usotsuki Mii-kun to Kowareta Maa-chan: Totteoki no Uso",
+      "title_localized": "",
       "id": 22518,
       "url": "https://myanimelist.net/manga/22518/Usotsuki_Mii-kun_to_Kowareta_Maa-chan__Totteoki_no_Uso",
       "year": "2010",
@@ -8405,6 +9152,9 @@ window.mediaDatabase = {
     },
     {
       "title": "The Girl from Class",
+      "title_eng": "The Girl from Class",
+      "title_romaji": "The Girl from Class",
+      "title_localized": "",
       "id": 94416,
       "url": "https://myanimelist.net/manga/94416/The_Girl_from_Class",
       "year": "2013",
@@ -8424,6 +9174,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Sensei de ○○ Shicha Ikemasen!",
+      "title_eng": "Don't XXX with Teachers!",
+      "title_romaji": "Sensei de ○○ Shicha Ikemasen!",
+      "title_localized": "",
       "id": 127180,
       "url": "https://myanimelist.net/manga/127180/Sensei_de_○○_Shicha_Ikemasen",
       "year": "2019",
@@ -8443,6 +9196,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Avant-garde Yumeko",
+      "title_eng": "Avant-garde Yumeko",
+      "title_romaji": "Avant-garde Yumeko",
+      "title_localized": "",
       "id": 50857,
       "url": "https://myanimelist.net/manga/50857/Avant-garde_Yumeko",
       "year": "2003",
@@ -8462,6 +9218,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Reiraku",
+      "title_eng": "Downfall",
+      "title_romaji": "Reiraku",
+      "title_localized": "",
       "id": 104272,
       "url": "https://myanimelist.net/manga/104272/Reiraku",
       "year": "2017",
@@ -8480,6 +9239,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Master Keaton Remaster",
+      "title_eng": "",
+      "title_romaji": "Master Keaton Remaster",
+      "title_localized": "",
       "id": 37289,
       "url": "https://myanimelist.net/manga/37289/Master_Keaton_Remaster",
       "year": "2012",
@@ -8500,6 +9262,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Dokuzakura",
+      "title_eng": "",
+      "title_romaji": "Dokuzakura",
+      "title_localized": "",
       "id": 122355,
       "url": "https://myanimelist.net/manga/122355/Dokuzakura",
       "year": "2019",
@@ -8521,6 +9286,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Hirasaka Hinako ga Erokawaii Koto wo Ore dake ga Shitteiru.",
+      "title_eng": "Only I Know That Hinako Hirasaka Is Erotically Kawaii.",
+      "title_romaji": "Hirasaka Hinako ga Erokawaii Koto wo Ore dake ga Shitteiru.",
+      "title_localized": "",
       "id": 119792,
       "url": "https://myanimelist.net/manga/119792/Hirasaka_Hinako_ga_Erokawaii_Koto_wo_Ore_dake_ga_Shitteiru",
       "year": "2019",
@@ -8539,6 +9307,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Gyo: Ugomeku Bukimi",
+      "title_eng": "Gyo: The Death-Stench Creeps",
+      "title_romaji": "Gyo: Ugomeku Bukimi",
+      "title_localized": "",
       "id": 909,
       "url": "https://myanimelist.net/manga/909/Gyo__Ugomeku_Bukimi",
       "year": "2001",
@@ -8560,6 +9331,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Doutei Zetsumetsu Rettou",
+      "title_eng": "",
+      "title_romaji": "Doutei Zetsumetsu Rettou",
+      "title_localized": "",
       "id": 124083,
       "url": "https://myanimelist.net/manga/124083/Doutei_Zetsumetsu_Rettou",
       "year": "2019",
@@ -8578,6 +9352,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Jigokuraku",
+      "title_eng": "Hell's Paradise: Jigokuraku",
+      "title_romaji": "Jigokuraku",
+      "title_localized": "",
       "id": 112318,
       "url": "https://myanimelist.net/manga/112318/Jigokuraku",
       "year": "2018",
@@ -8597,6 +9374,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Sun-Ken Rock",
+      "title_eng": "Sun-Ken Rock",
+      "title_romaji": "Sun-Ken Rock",
+      "title_localized": "",
       "id": 8848,
       "url": "https://myanimelist.net/manga/8848/Sun-Ken_Rock",
       "year": "2006",
@@ -8618,6 +9398,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Hideout",
+      "title_eng": "Hideout",
+      "title_romaji": "Hideout",
+      "title_localized": "",
       "id": 28361,
       "url": "https://myanimelist.net/manga/28361/Hideout",
       "year": "2010",
@@ -8636,6 +9419,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Itou Junji Jisen Kessakushuu",
+      "title_eng": "Shiver: Junji Ito Selected Stories",
+      "title_romaji": "Itou Junji Jisen Kessakushuu",
+      "title_localized": "",
       "id": 136793,
       "url": "https://myanimelist.net/manga/136793/Itou_Junji_Jisen_Kessakushuu",
       "year": "1990",
@@ -8654,6 +9440,9 @@ window.mediaDatabase = {
     },
     {
       "title": "The Horizon",
+      "title_eng": "The Horizon",
+      "title_romaji": "The Horizon",
+      "title_localized": "",
       "id": 125036,
       "url": "https://myanimelist.net/manga/125036/The_Horizon",
       "year": "2016",
@@ -8673,6 +9462,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Gantz",
+      "title_eng": "Gantz",
+      "title_romaji": "Gantz",
+      "title_localized": "",
       "id": 564,
       "url": "https://myanimelist.net/manga/564/Gantz",
       "year": "2000",
@@ -8695,6 +9487,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Gigant",
+      "title_eng": "Gigant",
+      "title_romaji": "Gigant",
+      "title_localized": "",
       "id": 110727,
       "url": "https://myanimelist.net/manga/110727/Gigant",
       "year": "2017",
@@ -8715,6 +9510,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Billy Bat",
+      "title_eng": "Billy Bat",
+      "title_romaji": "Billy Bat",
+      "title_localized": "",
       "id": 11054,
       "url": "https://myanimelist.net/manga/11054/Billy_Bat",
       "year": "2008",
@@ -8735,6 +9533,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Dorohedoro",
+      "title_eng": "Dorohedoro",
+      "title_romaji": "Dorohedoro",
+      "title_localized": "",
       "id": 1133,
       "url": "https://myanimelist.net/manga/1133/Dorohedoro",
       "year": "2000",
@@ -8756,6 +9557,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Oyasumi Punpun",
+      "title_eng": "Goodnight Punpun",
+      "title_romaji": "Oyasumi Punpun",
+      "title_localized": "",
       "id": 4632,
       "url": "https://myanimelist.net/manga/4632/Oyasumi_Punpun",
       "year": "2007",
@@ -8775,6 +9579,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Pluto",
+      "title_eng": "Pluto: Urasawa x Tezuka",
+      "title_romaji": "Pluto",
+      "title_localized": "",
       "id": 745,
       "url": "https://myanimelist.net/manga/745/Pluto",
       "year": "2003",
@@ -8797,6 +9604,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Slam Dunk",
+      "title_eng": "Slam Dunk",
+      "title_romaji": "Slam Dunk",
+      "title_localized": "",
       "id": 51,
       "url": "https://myanimelist.net/manga/51/Slam_Dunk",
       "year": "1990",
@@ -8816,6 +9626,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Takopii no Genzai",
+      "title_eng": "Takopi's Original Sin",
+      "title_romaji": "Takopii no Genzai",
+      "title_localized": "",
       "id": 142600,
       "url": "https://myanimelist.net/manga/142600/Takopii_no_Genzai",
       "year": "2021",
@@ -8835,6 +9648,9 @@ window.mediaDatabase = {
     },
     {
       "title": "Uzumaki",
+      "title_eng": "Uzumaki: Spiral into Horror",
+      "title_romaji": "Uzumaki",
+      "title_localized": "",
       "id": 436,
       "url": "https://myanimelist.net/manga/436/Uzumaki",
       "year": "1998",
@@ -8855,6 +9671,9 @@ window.mediaDatabase = {
     },
     {
       "title": "20th Century Boys",
+      "title_eng": "20th Century Boys",
+      "title_romaji": "20th Century Boys",
+      "title_localized": "",
       "id": 3,
       "url": "https://myanimelist.net/manga/3/20th_Century_Boys",
       "year": "1999",
@@ -8876,6 +9695,9 @@ window.mediaDatabase = {
     },
     {
       "title": "21st Century Boys",
+      "title_eng": "21st Century Boys",
+      "title_romaji": "21st Century Boys",
+      "title_localized": "",
       "id": 743,
       "url": "https://myanimelist.net/manga/743/21st_Century_Boys",
       "year": "2006",
@@ -8897,6 +9719,9 @@ window.mediaDatabase = {
     },
     {
       "title": "JoJo no Kimyou na Bouken Part 8: JoJolion",
+      "title_eng": "",
+      "title_romaji": "JoJo no Kimyou na Bouken Part 8: JoJolion",
+      "title_localized": "",
       "id": 25515,
       "url": "https://myanimelist.net/manga/25515/JoJo_no_Kimyou_na_Bouken_Part_8__JoJolion",
       "year": "2011",
@@ -8919,6 +9744,9 @@ window.mediaDatabase = {
     },
     {
       "title": "JoJo no Kimyou na Bouken Part 6: Stone Ocean",
+      "title_eng": "JoJo's Bizarre Adventure Part 6: Stone Ocean",
+      "title_romaji": "JoJo no Kimyou na Bouken Part 6: Stone Ocean",
+      "title_localized": "",
       "id": 3009,
       "url": "https://myanimelist.net/manga/3009/JoJo_no_Kimyou_na_Bouken_Part_6__Stone_Ocean",
       "year": "1999",
@@ -8938,6 +9766,9 @@ window.mediaDatabase = {
     },
     {
       "title": "JoJo no Kimyou na Bouken Part 7: Steel Ball Run",
+      "title_eng": "JoJo's Bizarre Adventure Part 7: Steel Ball Run",
+      "title_romaji": "JoJo no Kimyou na Bouken Part 7: Steel Ball Run",
+      "title_localized": "",
       "id": 1706,
       "url": "https://myanimelist.net/manga/1706/JoJo_no_Kimyou_na_Bouken_Part_7__Steel_Ball_Run",
       "year": "2004",
