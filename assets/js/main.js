@@ -30,49 +30,7 @@
     };
   }
 
-  // === CURATED FEATURED FILMS DATABASE ===
-  const filmData = {
-    '2001': {
-      title: '2001: A Space Odyssey',
-      director: 'Stanley Kubrick',
-      meta: '1968 &middot; 149 min &middot; United States',
-      quote: '&ldquo;I&rsquo;m sorry, Dave. I&rsquo;m afraid I can&rsquo;t do that.&rdquo;',
-      description: 'Stanley Kubrick&rsquo;s epic sci-fi masterwork traces humanity&rsquo;s evolutionary leap from prehistoric apes to the infinite cosmos, guided by mysterious black monoliths and a legendary, malfunctioning AI, HAL 9000.',
-      cover: 'https://a.ltrbxd.com/resized/film-poster/5/1/9/8/7/51987-2001-a-space-odyssey-0-150-0-225-crop.jpg'
-    },
-    'shining': {
-      title: 'The Shining',
-      director: 'Stanley Kubrick',
-      meta: '1980 &middot; 146 min &middot; United States',
-      quote: '&ldquo;All work and no play makes Jack a dull boy.&rdquo;',
-      description: 'As winter caretaker of the isolated Overlook Hotel, Jack Torrance falls prey to the hotel&rsquo;s supernatural, blood-drenched history, descending into violent madness that threatens his psychic son and terrified wife.',
-      cover: 'https://a.ltrbxd.com/resized/film-poster/5/1/4/3/2/51432-the-shining-0-150-0-225-crop.jpg'
-    },
-    'mulholland': {
-      title: 'Mulholland Dr.',
-      director: 'David Lynch',
-      meta: '2001 &middot; 147 min &middot; United States',
-      quote: '&ldquo;No hay banda. It is all an illusion.&rdquo;',
-      description: 'David Lynch&rsquo;s dreamlike neo-noir masterpiece descends through the dark underbelly of Hollywood as an aspiring actress and a mysterious amnesiac woman unfold a surreal, shifting mystery of identity.',
-      cover: 'https://a.ltrbxd.com/resized/film-poster/5/1/1/7/1/51171-mulholland-drive-0-150-0-225-crop.jpg'
-    },
-    'whiplash': {
-      title: 'Whiplash',
-      director: 'Damien Chazelle',
-      meta: '2014 &middot; 106 min &middot; United States',
-      quote: '&ldquo;Not quite my tempo.&rdquo;',
-      description: 'Under the brutal, abusive tuition of conservatory jazz instructor Terrence Fletcher, young drummer Andrew Neiman pushes himself beyond the brink of sanity and physical endurance in a manic drive for perfection.',
-      cover: 'https://a.ltrbxd.com/resized/film-poster/1/7/1/3/8/4/171384-whiplash-2014-0-150-0-225-crop.jpg'
-    },
-    'shawshank': {
-      title: 'The Shawshank Redemption',
-      director: 'Frank Darabont',
-      meta: '1994 &middot; 142 min &middot; United States',
-      quote: '&ldquo;Hope is a good thing, maybe the best of things, and no good thing ever dies.&rdquo;',
-      description: 'Unjustly sentenced to life at Shawshank State Prison, banker Andy Dufresne uses his quiet intelligence, patience, and a small rock hammer to cultivate friendship, build a library, and plot a path to absolute freedom.',
-      cover: 'https://a.ltrbxd.com/resized/film-poster/5/1/7/7/8/51778-the-shawshank-redemption-0-150-0-225-crop.jpg'
-    }
-  };
+
 
   // --- DYNAMIC fallback SVG generator ---
   const generateGenericCover = (title, year) => {
@@ -106,12 +64,10 @@
   let currentCategory = 'films'; 
 
   // --- DOM ELEMENTS ---
-  const btnShelfView = document.getElementById('btn-shelf-view');
   const btnFilmsView = document.getElementById('btn-films-view');
   const btnAnimeView = document.getElementById('btn-anime-view');
   const btnMangaView = document.getElementById('btn-manga-view');
   
-  const panelShelfView = document.getElementById('panel-shelf-view');
   const panelListView = document.getElementById('panel-list-view');
 
   const displayBox = document.getElementById('closet-display');
@@ -252,28 +208,6 @@
     content.style.animation = null;
   };
 
-  const updateDisplayWithFeatured = (filmKey) => {
-    if (!displayBox) return;
-    const data = filmData[filmKey];
-    if (!data) return;
-
-    content.style.display = 'grid';
-    placeholder.style.display = 'none';
-
-    displayCabinetImage(data.cover, data.title, 'N/A', 'featured');
-    titleEl.innerHTML = data.title;
-    directorEl.innerHTML = data.director;
-    metaEl.innerHTML = data.meta;
-    
-    quoteEl.style.display = 'block';
-    quoteEl.innerHTML = data.quote;
-    descEl.innerHTML = data.description;
-    
-    content.style.animation = 'none';
-    content.offsetHeight; 
-    content.style.animation = null;
-  };
-
   // --- FILTERING & SORTING COMPILATION ---
   const getFilteredAndSortedFilms = () => {
     if (!window.mediaDatabase) return [];
@@ -359,10 +293,21 @@
         img.loading = 'lazy';
         img.alt = item.title;
         img.setAttribute('referrerpolicy', 'no-referrer');
+        img.style.position = 'absolute';
+        img.style.top = '0';
+        img.style.left = '0';
+        img.style.width = '100%';
+        img.style.height = '100%';
+        img.style.objectFit = 'cover';
+        img.style.opacity = '0';
+        img.style.transition = 'opacity 300ms ease';
+
         img.onload = () => {
-          fallback.replaceWith(img);
+          img.style.opacity = '1';
+          fallback.style.display = 'none';
         };
         img.src = item.image;
+        inner.appendChild(img);
       }
 
       const overlay = document.createElement('div');
@@ -396,11 +341,7 @@
       movieGrid.appendChild(card);
     });
 
-    const isListActive = btnFilmsView.classList.contains('active') || 
-                         btnAnimeView.classList.contains('active') || 
-                         btnMangaView.classList.contains('active');
-
-    if (isListActive && items.length > 0) {
+    if (items.length > 0) {
       const firstCard = movieGrid.querySelector('.grid-item-card');
       if (firstCard) firstCard.click();
     }
@@ -408,30 +349,15 @@
 
   // --- TAB TOGGLE CONTROLLER ---
   const activateTab = (activeBtn) => {
-    [btnShelfView, btnFilmsView, btnAnimeView, btnMangaView].forEach(btn => {
+    [btnFilmsView, btnAnimeView, btnMangaView].forEach(btn => {
       if (btn) btn.classList.remove('active');
     });
-    activeBtn.classList.add('active');
+    if (activeBtn) activeBtn.classList.add('active');
   };
-
-  if (btnShelfView) {
-    btnShelfView.addEventListener('click', () => {
-      activateTab(btnShelfView);
-      panelListView.style.display = 'none';
-      panelShelfView.style.display = 'flex';
-      
-      const spines = panelShelfView.querySelectorAll('.spine-item');
-      if (spines.length > 0) {
-        spines[0].click();
-      }
-    });
-  }
 
   const handleListTabClick = (category, placeholderText) => {
     currentCategory = category;
     activateTab(category === 'films' ? btnFilmsView : (category === 'anime' ? btnAnimeView : btnMangaView));
-    panelShelfView.style.display = 'none';
-    panelListView.style.display = 'flex';
     if (movieSearch) {
       movieSearch.value = '';
       movieSearch.placeholder = placeholderText;
@@ -455,20 +381,6 @@
     });
   }
 
-  // --- SHELF SPINES HANDLER ---
-  const spines = document.querySelectorAll('.spine-item');
-  spines.forEach(spine => {
-    const selectSpine = () => {
-      spines.forEach(s => s.classList.remove('selected'));
-      spine.classList.add('selected');
-      const filmKey = spine.getAttribute('data-film');
-      updateDisplayWithFeatured(filmKey);
-    };
-
-    spine.addEventListener('click', selectSpine);
-    spine.addEventListener('focus', selectSpine);
-  });
-
   // --- EVENT LISTENERS FOR SEARCH & SORT ---
   if (movieSearch) {
     movieSearch.addEventListener('input', renderList);
@@ -478,9 +390,5 @@
   }
 
   // --- INITIALIZATION ---
-  if (spines.length > 0) {
-    spines[0].classList.add('selected');
-    updateDisplayWithFeatured('2001');
-  }
   renderList();
 })();

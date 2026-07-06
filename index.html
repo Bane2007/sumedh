@@ -26,7 +26,7 @@
 
   <link rel="preload" href="assets/fonts/eb-garamond-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/jetbrains-mono-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/style.css?v=4">
+  <link rel="stylesheet" href="assets/css/style.css?v=5">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -102,68 +102,14 @@
       <h2 id="closet-h" class="section-eyebrow">the shelf</h2>
       
       <div class="closet-nav">
-        <button class="closet-toggle-btn active" id="btn-shelf-view">Featured</button>
-        <button class="closet-toggle-btn" id="btn-films-view">Films</button>
+        <button class="closet-toggle-btn active" id="btn-films-view">Films</button>
         <button class="closet-toggle-btn" id="btn-anime-view">Anime</button>
         <button class="closet-toggle-btn" id="btn-manga-view">Manga</button>
       </div>
 
       <div class="closet-container">
-        <!-- Interactive Shelf (Featured View) -->
-        <div class="closet-shelf" id="panel-shelf-view">
-          <!-- Spine 1: 2001 -->
-          <div class="spine-item" data-film="2001" tabindex="0">
-            <div class="spine-edge border-2001"></div>
-            <div class="spine-content">
-              <span class="spine-num mono">2001</span>
-              <span class="spine-title">2001: A Space Odyssey</span>
-              <span class="spine-director mono">Kubrick</span>
-            </div>
-          </div>
-          
-          <!-- Spine 2: The Shining -->
-          <div class="spine-item" data-film="shining" tabindex="0">
-            <div class="spine-edge border-shining"></div>
-            <div class="spine-content">
-              <span class="spine-num mono">237</span>
-              <span class="spine-title">The Shining</span>
-              <span class="spine-director mono">Kubrick</span>
-            </div>
-          </div>
-          
-          <!-- Spine 3: Mulholland Dr -->
-          <div class="spine-item" data-film="mulholland" tabindex="0">
-            <div class="spine-edge border-lynch"></div>
-            <div class="spine-content">
-              <span class="spine-num mono">119</span>
-              <span class="spine-title">Mulholland Dr.</span>
-              <span class="spine-director mono">Lynch</span>
-            </div>
-          </div>
-
-          <!-- Spine 4: Whiplash -->
-          <div class="spine-item" data-film="whiplash" tabindex="0">
-            <div class="spine-edge border-whiplash"></div>
-            <div class="spine-content">
-              <span class="spine-num mono">2014</span>
-              <span class="spine-title">Whiplash</span>
-              <span class="spine-director mono">Chazelle</span>
-            </div>
-          </div>
-
-          <!-- Spine 5: Shawshank -->
-          <div class="spine-item" data-film="shawshank" tabindex="0">
-            <div class="spine-edge border-shawshank"></div>
-            <div class="spine-content">
-              <span class="spine-num mono">1994</span>
-              <span class="spine-title">The Shawshank Redemption</span>
-              <span class="spine-director mono">Darabont</span>
-            </div>
-          </div>
-        </div>
-
         <!-- List View Panel (Letterboxd History) -->
-        <div class="panel-list-view" id="panel-list-view" style="display: none;">
+        <div class="panel-list-view" id="panel-list-view">
           <div class="list-view-controls">
             <input class="movie-search-input" id="movie-search" type="search" placeholder="Search Letterboxd history...">
             <select class="movie-sort-select" id="movie-sort" aria-label="Sort movies">
@@ -182,7 +128,7 @@
         <!-- Display Case for the Active Film -->
         <div class="closet-display" id="closet-display">
           <div class="display-placeholder mono">
-            [ Select a spine to inspect ]
+            [ Select a card to inspect ]
           </div>
           <div class="display-content" style="display: none;">
             <div class="display-cover">
@@ -259,7 +205,7 @@
 
   </main>
 
-  <script src="assets/data/media.js?v=4" defer></script>
-  <script src="assets/js/main.js?v=4" defer></script>
+  <script src="assets/data/media.js?v=5" defer></script>
+  <script src="assets/js/main.js?v=5" defer></script>
 </body>
 </html>
