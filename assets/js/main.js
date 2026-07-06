@@ -133,7 +133,7 @@
 
     displayCabinetImage(film.image, film.title, film.year, 'films');
     titleEl.innerHTML = `<a href="https://letterboxd.com/film/${film.slug}/" target="_blank" rel="noopener">${film.title}</a>`;
-    directorEl.innerHTML = 'Letterboxd Record';
+    directorEl.innerHTML = 'Loading details...';
     
     const ratingStars = film.rating ? `<span class="rating-stars">${film.rating}</span>` : '<span style="color: var(--ink-soft); font-style: italic;">Unrated</span>';
     metaEl.innerHTML = `${film.year} &middot; ${ratingStars}`;
@@ -148,6 +148,52 @@
         ${watchRow}
       </dl>
     `;
+
+    // Asynchronously fetch OMDb metadata
+    const queryTitle = film.title.split('&amp;').join('&');
+    const fetchUrl = `https://www.omdbapi.com/?apikey=trilogy&t=${encodeURIComponent(queryTitle)}&y=${film.year}`;
+    
+    content.dataset.currentSlug = film.slug;
+    
+    fetch(fetchUrl)
+      .then(response => response.json())
+      .then(data => {
+        if (content.dataset.currentSlug !== film.slug) return;
+        
+        if (data && data.Response === 'True') {
+          directorEl.innerHTML = data.Director && data.Director !== 'N/A' ? `Directed by ${data.Director}` : 'Letterboxd Record';
+          
+          let scoreDisplay = '';
+          if (data.imdbRating && data.imdbRating !== 'N/A') {
+            scoreDisplay = ` &middot; <span class="rating-stars" style="color: #ffb400; font-weight: bold;">${data.imdbRating}/10 (IMDb)</span>`;
+          }
+          metaEl.innerHTML = `${film.year} &middot; ${ratingStars}${scoreDisplay}`;
+          
+          const castRow = data.Actors && data.Actors !== 'N/A'
+            ? `<div><dt>Cast</dt><dd style="max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${data.Actors}">${data.Actors}</dd></div>`
+            : '';
+            
+          const plotHtml = data.Plot && data.Plot !== 'N/A'
+            ? `<p class="display-plot" style="margin-top: 1rem; font-size: 0.72rem; line-height: 1.45; text-align: left; color: var(--ink-soft); font-style: italic;">${data.Plot}</p>`
+            : '';
+            
+          descEl.innerHTML = `
+            <dl class="display-specs mono">
+              ${watchRow}
+              ${castRow}
+            </dl>
+            ${plotHtml}
+          `;
+        } else {
+          directorEl.innerHTML = 'Letterboxd Record';
+        }
+      })
+      .catch(err => {
+        console.error("OMDb fetch error:", err);
+        if (content.dataset.currentSlug === film.slug) {
+          directorEl.innerHTML = 'Letterboxd Record';
+        }
+      });
 
     content.style.animation = 'none';
     content.offsetHeight; 
