@@ -3237,6 +3237,82 @@ window.mediaDatabase = {
   ],
   "anime": [
     {
+      "title": "Re:Zero kara Hajimeru Isekai Seikatsu 3rd Season",
+      "id": 54857,
+      "url": "https://myanimelist.net/anime/54857/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_3rd_Season",
+      "year": "2024",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/images/anime/1706/144725.jpg",
+      "genres": [
+        "Drama",
+        "Fantasy",
+        "Suspense"
+      ],
+      "episodes": 16,
+      "updated_at": 1783278332,
+      "status": "completed"
+    },
+    {
+      "title": "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo 3rd Season",
+      "id": 62811,
+      "url": "https://myanimelist.net/anime/62811/Kimi_no_Koto_ga_Daidaidaidaidaisuki_na_100-nin_no_Kanojo_3rd_Season",
+      "year": "2026",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/anime/1106/157174.jpg",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "episodes": 1,
+      "updated_at": 1783265411,
+      "status": "watching"
+    },
+    {
+      "title": "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo",
+      "id": 54714,
+      "url": "https://myanimelist.net/anime/54714/Kimi_no_Koto_ga_Daidaidaidaidaisuki_na_100-nin_no_Kanojo",
+      "year": "2023",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/anime/1812/136764.jpg",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "episodes": 12,
+      "updated_at": 1783263601,
+      "status": "completed"
+    },
+    {
+      "title": "Seihantai na Kimi to Boku",
+      "id": 60371,
+      "url": "https://myanimelist.net/anime/60371/Seihantai_na_Kimi_to_Boku",
+      "year": "2026",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/anime/1140/154457.jpg",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "episodes": 12,
+      "updated_at": 1783263539,
+      "status": "completed"
+    },
+    {
+      "title": "Seihantai na Kimi to Boku 2nd Season",
+      "id": 63832,
+      "url": "https://myanimelist.net/anime/63832/Seihantai_na_Kimi_to_Boku_2nd_Season",
+      "year": "2026",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/anime/1143/158409.jpg",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "episodes": 1,
+      "updated_at": 1783263074,
+      "status": "watching"
+    },
+    {
       "title": "Mushoku Tensei III: Isekai Ittara Honki Dasu",
       "id": 59193,
       "url": "https://myanimelist.net/anime/59193/Mushoku_Tensei_III__Isekai_Ittara_Honki_Dasu",
@@ -3251,22 +3327,6 @@ window.mediaDatabase = {
       ],
       "episodes": 2,
       "updated_at": 1783196449,
-      "status": "watching"
-    },
-    {
-      "title": "Re:Zero kara Hajimeru Isekai Seikatsu 3rd Season",
-      "id": 54857,
-      "url": "https://myanimelist.net/anime/54857/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_3rd_Season",
-      "year": "2024",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/images/anime/1706/144725.jpg",
-      "genres": [
-        "Drama",
-        "Fantasy",
-        "Suspense"
-      ],
-      "episodes": 7,
-      "updated_at": 1783192852,
       "status": "watching"
     },
     {
@@ -3495,21 +3555,6 @@ window.mediaDatabase = {
       ],
       "episodes": 12,
       "updated_at": 1775199529,
-      "status": "completed"
-    },
-    {
-      "title": "Seihantai na Kimi to Boku",
-      "id": 60371,
-      "url": "https://myanimelist.net/anime/60371/Seihantai_na_Kimi_to_Boku",
-      "year": "2026",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/images/anime/1140/154457.jpg",
-      "genres": [
-        "Comedy",
-        "Romance"
-      ],
-      "episodes": 12,
-      "updated_at": 1774986684,
       "status": "completed"
     },
     {
@@ -4284,21 +4329,6 @@ window.mediaDatabase = {
       ],
       "episodes": 12,
       "updated_at": 1703600765,
-      "status": "completed"
-    },
-    {
-      "title": "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo",
-      "id": 54714,
-      "url": "https://myanimelist.net/anime/54714/Kimi_no_Koto_ga_Daidaidaidaidaisuki_na_100-nin_no_Kanojo",
-      "year": "2023",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/images/anime/1812/136764.jpg",
-      "genres": [
-        "Comedy",
-        "Romance"
-      ],
-      "episodes": 12,
-      "updated_at": 1703488680,
       "status": "completed"
     },
     {
