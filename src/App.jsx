@@ -36,255 +36,184 @@ const renderStars = (rating) => {
   return <span className="rating-stars">{starsStr} <span style={{ fontSize: '0.62rem', opacity: 0.65 }}>({score}/10)</span></span>;
 };
 
-// Lo-Fi Cassette Player using Web Audio API synthesis
-function CassettePlayer() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const audioCtx = useRef(null);
-  const synthInterval = useRef(null);
+// Spotify & YouTube Embed Music Player
+function BeatsPlayer() {
+  const [urlInput, setUrlInput] = useState('');
+  const [embedUrl, setEmbedUrl] = useState('https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0EXPn'); // default Lo-Fi beats
 
-  const startSynthesis = () => {
-    if (!audioCtx.current) {
-      audioCtx.current = new (window.AudioContext || window.webkitAudioContext)();
+  const loadMedia = () => {
+    if (!urlInput.trim()) return;
+    let target = urlInput.trim();
+    
+    // Convert standard Spotify playlist links to embed format
+    if (target.includes('open.spotify.com/playlist/')) {
+      const parts = target.split('playlist/');
+      const id = parts[1].split('?')[0];
+      setEmbedUrl(`https://open.spotify.com/embed/playlist/${id}`);
+    } 
+    // Convert Spotify album links to embed
+    else if (target.includes('open.spotify.com/album/')) {
+      const parts = target.split('album/');
+      const id = parts[1].split('?')[0];
+      setEmbedUrl(`https://open.spotify.com/embed/album/${id}`);
     }
-    const ctx = audioCtx.current;
-    if (ctx.state === 'suspended') {
-      ctx.resume();
+    // Convert standard YouTube playlist links to embed
+    else if (target.includes('youtube.com/playlist?list=')) {
+      const parts = target.split('list=');
+      const id = parts[1].split('&')[0];
+      setEmbedUrl(`https://www.youtube.com/embed/videoseries?list=${id}`);
     }
-
-    setIsPlaying(true);
-
-    let chordIndex = 0;
-    // Ambient lo-fi frequencies matching warm minor and major 7th chords
-    const chords = [
-      [130.81, 164.81, 196.00, 246.94], // Cmaj7
-      [146.83, 174.61, 220.00, 261.63], // Dm7
-      [110.00, 130.81, 164.81, 196.00], // Am7
-      [174.61, 220.00, 261.63, 329.63]  // Fmaj7
-    ];
-
-    const playChord = () => {
-      const now = ctx.currentTime;
-      const frequencies = chords[chordIndex];
-      chordIndex = (chordIndex + 1) % chords.length;
-
-      // Filter to create warm, low-frequency lo-fi feel
-      const filter = ctx.createBiquadFilter();
-      filter.type = 'lowpass';
-      filter.frequency.setValueAtTime(420, now);
-      filter.connect(ctx.destination);
-
-      // Envelope gain node
-      const gainNode = ctx.createGain();
-      gainNode.gain.setValueAtTime(0, now);
-      gainNode.gain.linearRampToValueAtTime(0.04, now + 1.8);
-      gainNode.gain.setValueAtTime(0.04, now + 2.8);
-      gainNode.gain.exponentialRampToValueAtTime(0.001, now + 4.3);
-      gainNode.connect(filter);
-
-      frequencies.map(freq => {
-        const osc = ctx.createOscillator();
-        osc.type = 'triangle'; // triangle waves are warm and smooth
-        osc.frequency.setValueAtTime(freq, now);
-        osc.connect(gainNode);
-        osc.start(now);
-        osc.stop(now + 4.4);
-      });
-    };
-
-    playChord();
-    synthInterval.current = setInterval(playChord, 4500);
-  };
-
-  const stopSynthesis = () => {
-    setIsPlaying(false);
-    if (synthInterval.current) {
-      clearInterval(synthInterval.current);
+    // Convert YouTube watch links to embed
+    else if (target.includes('youtube.com/watch?v=')) {
+      const parts = target.split('v=');
+      const id = parts[1].split('&')[0];
+      setEmbedUrl(`https://www.youtube.com/embed/${id}`);
     }
-    if (audioCtx.current) {
-      audioCtx.current.close().then(() => {
-        audioCtx.current = null;
-      });
+    else {
+      // Direct assignment fallback
+      setEmbedUrl(target);
     }
   };
-
-  useEffect(() => {
-    return () => {
-      if (synthInterval.current) clearInterval(synthInterval.current);
-      if (audioCtx.current) audioCtx.current.close();
-    };
-  }, []);
 
   return (
-    <div className="cassette-container">
-      <div className="cassette-deck">
-        <div className="cassette-label mono">Lo-Fi Beats</div>
-        <div className="cassette-spools">
-          <div className={`cassette-spool ${isPlaying ? 'playing' : ''}`}></div>
-          <div className={`cassette-spool ${isPlaying ? 'playing' : ''}`}></div>
-        </div>
+    <div className="beats-player">
+      <div className="beats-loader mono">
+        <input 
+          type="text" 
+          placeholder="Paste Spotify or YouTube playlist URL..." 
+          value={urlInput}
+          onChange={(e) => setUrlInput(e.target.value)}
+        />
+        <button onClick={loadMedia}>LOAD</button>
       </div>
-      <div className="cassette-controls">
-        {isPlaying ? (
-          <button className="cassette-btn stop" onClick={stopSynthesis}>PAUSE</button>
-        ) : (
-          <button className="cassette-btn play" onClick={startSynthesis}>PLAY</button>
-        )}
+      <div className="beats-frame-wrapper">
+        <iframe 
+          src={embedUrl} 
+          width="100%" 
+          height="100%" 
+          frameBorder="0" 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture; gyroscope"
+          loading="lazy"
+          title="Lo-Fi audio stream player"
+        ></iframe>
       </div>
     </div>
   );
 }
 
-// Playable Strawberry-Eating Snake Game
-function RetroArcade() {
-  const [gridSize] = useState(16);
-  const [snake, setSnake] = useState([{ x: 8, y: 8 }]);
-  const [food, setFood] = useState({ x: 4, y: 4 });
-  const [direction, setDirection] = useState({ x: 0, y: -1 });
+// Letterboxd-Powered Cinephile Trivia Game
+function CinephileGame({ films }) {
+  const [question, setQuestion] = useState(null);
   const [score, setScore] = useState(0);
-  const [highScore, setHighScore] = useState(0);
-  const [gameOver, setGameOver] = useState(false);
-  const [isPaused, setIsPaused] = useState(true);
-  const gameInterval = useRef(null);
+  const [streak, setStreak] = useState(0);
+  const [hasAnswered, setHasAnswered] = useState(false);
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
 
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (['ArrowUp', 'KeyW'].includes(e.code) && direction.y === 0) {
-        setDirection({ x: 0, y: -1 });
-        setIsPaused(false);
-      } else if (['ArrowDown', 'KeyS'].includes(e.code) && direction.y === 0) {
-        setDirection({ x: 0, y: 1 });
-        setIsPaused(false);
-      } else if (['ArrowLeft', 'KeyA'].includes(e.code) && direction.x === 0) {
-        setDirection({ x: -1, y: 0 });
-        setIsPaused(false);
-      } else if (['ArrowRight', 'KeyD'].includes(e.code) && direction.x === 0) {
-        setDirection({ x: 1, y: 0 });
-        setIsPaused(false);
+  const generateQuestion = () => {
+    if (!films || films.length < 5) return;
+    
+    // Filter films with valid plots and directors
+    const candidates = films.filter(f => f.plot && f.plot !== 'N/A' && f.director && f.director !== 'N/A');
+    if (candidates.length === 0) return;
+
+    // Pick target film
+    const target = candidates[Math.floor(Math.random() * candidates.length)];
+    
+    // Hide movie title inside the plot to avoid spoiling
+    let maskedPlot = target.plot;
+    const titleRegex = new RegExp(target.title.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'gi');
+    maskedPlot = maskedPlot.replace(titleRegex, '______');
+
+    // Generate incorrect answers
+    const distractors = [];
+    while (distractors.length < 3) {
+      const randomFilm = films[Math.floor(Math.random() * films.length)];
+      if (randomFilm.title !== target.title && !distractors.some(d => d.title === randomFilm.title)) {
+        distractors.push(randomFilm);
       }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [direction]);
+    }
 
-  useEffect(() => {
-    if (gameOver || isPaused) return;
+    // Combine and shuffle options
+    const options = [target, ...distractors].sort(() => Math.random() - 0.5);
 
-    gameInterval.current = setInterval(() => {
-      setSnake((prevSnake) => {
-        const head = prevSnake[0];
-        const newHead = {
-          x: (head.x + direction.x + gridSize) % gridSize,
-          y: (head.y + direction.y + gridSize) % gridSize
-        };
-
-        if (prevSnake.some(segment => segment.x === newHead.x && segment.y === newHead.y)) {
-          setGameOver(true);
-          return prevSnake;
-        }
-
-        const newSnake = [newHead, ...prevSnake];
-
-        if (newHead.x === food.x && newHead.y === food.y) {
-          setScore(s => {
-            const next = s + 10;
-            if (next > highScore) setHighScore(next);
-            return next;
-          });
-          let nextFood;
-          do {
-            nextFood = {
-              x: Math.floor(Math.random() * gridSize),
-              y: Math.floor(Math.random() * gridSize)
-            };
-          } while (newSnake.some(segment => segment.x === nextFood.x && segment.y === nextFood.y));
-          setFood(nextFood);
-        } else {
-          newSnake.pop();
-        }
-
-        return newSnake;
-      });
-    }, 110);
-
-    return () => clearInterval(gameInterval.current);
-  }, [direction, food, gameOver, isPaused]);
-
-  const resetGame = () => {
-    setSnake([{ x: 8, y: 8 }]);
-    setFood({ x: 4, y: 4 });
-    setDirection({ x: 0, y: -1 });
-    setScore(0);
-    setGameOver(false);
-    setIsPaused(true);
+    setQuestion({
+      target,
+      plot: maskedPlot,
+      options
+    });
+    setHasAnswered(false);
+    setSelectedAnswer(null);
   };
 
-  return (
-    <div className="arcade-game mono">
-      <div className="arcade-score">
-        <span>SCORE: {score}</span>
-        <span>HIGH: {highScore}</span>
-      </div>
-      <div className="arcade-grid">
-        {Array.from({ length: gridSize * gridSize }).map((_, idx) => {
-          const x = idx % gridSize;
-          const y = Math.floor(idx / gridSize);
-          const isSnake = snake.some(segment => segment.x === x && segment.y === y);
-          const isHead = snake[0].x === x && snake[0].y === y;
-          const isFood = food.x === x && food.y === y;
+  useEffect(() => {
+    generateQuestion();
+  }, [films]);
 
+  const handleAnswer = (option) => {
+    if (hasAnswered) return;
+    setSelectedAnswer(option);
+    setHasAnswered(true);
+    if (option.title === question.target.title) {
+      setScore(s => s + 1);
+      setStreak(st => st + 1);
+    } else {
+      setStreak(0);
+    }
+  };
+
+  if (!question) {
+    return <div className="cinephile-loading mono">[ Loading Cinephile Database... ]</div>;
+  }
+
+  return (
+    <div className="cinephile-game">
+      <div className="cinephile-hud mono">
+        <span>SCORE: {score}</span>
+        <span>STREAK: {streak} 🔥</span>
+      </div>
+
+      <div className="cinephile-card">
+        <div className="cinephile-specs mono">
+          <span>YEAR: {question.target.year}</span>
+          <span>DIRECTOR: {question.target.director}</span>
+        </div>
+        <p className="cinephile-plot">
+          &ldquo;{question.plot}&rdquo;
+        </p>
+      </div>
+
+      <div className="cinephile-options">
+        {question.options.map((opt, idx) => {
+          let btnClass = "cinephile-opt-btn";
+          if (hasAnswered) {
+            if (opt.title === question.target.title) {
+              btnClass += " correct";
+            } else if (selectedAnswer && selectedAnswer.title === opt.title) {
+              btnClass += " incorrect";
+            } else {
+              btnClass += " disabled";
+            }
+          }
           return (
-            <div 
+            <button 
               key={idx} 
-              className={`arcade-cell ${isSnake ? 'snake' : ''} ${isHead ? 'head' : ''} ${isFood ? 'food' : ''}`}
+              className={btnClass}
+              onClick={() => handleAnswer(opt)}
+              disabled={hasAnswered}
             >
-              {isFood && <span className="food-strawberry">🍓</span>}
-            </div>
+              {opt.title}
+            </button>
           );
         })}
       </div>
-      {gameOver && (
-        <div className="arcade-overlay">
-          <p>GAME OVER</p>
-          <button className="arcade-btn" onClick={resetGame}>PLAY AGAIN</button>
+
+      {hasAnswered && (
+        <div className="cinephile-next-container">
+          <button className="cinephile-next-btn mono" onClick={generateQuestion}>
+            NEXT QUESTION &raquo;
+          </button>
         </div>
       )}
-      {isPaused && !gameOver && (
-        <div className="arcade-overlay">
-          <p>PRESS ARROWS OR WASD TO FEED STRAWBERRIES</p>
-        </div>
-      )}
-    </div>
-  );
-}
-
-// Retro Typewriter / Screenplay Notepad
-function Scriptwriter() {
-  const [text, setText] = useState(
-    `EXT. COLD COURTYARD - NIGHT\n\nPaper cranes flutter across the desk, illuminated by terminal glow.\n\nSUMEDH (V.O.)\nCreases make the crane... but words fold the universe.`
-  );
-
-  const insertElement = (type) => {
-    let tag = "";
-    if (type === "character") tag = "\n\nSUMEDH\n";
-    else if (type === "dialogue") tag = "(softly)\nDialogue here...\n";
-    else if (type === "action") tag = "\n\nAction block here...";
-    
-    setText(prev => prev + tag);
-  };
-
-  return (
-    <div className="script-writer">
-      <div className="writer-controls mono">
-        <button onClick={() => insertElement('character')}>+ CHARACTER</button>
-        <button onClick={() => insertElement('dialogue')}>+ DIALOGUE</button>
-        <button onClick={() => insertElement('action')}>+ ACTION</button>
-      </div>
-      <textarea 
-        className="writer-textarea courier"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-        placeholder="Start typing script details..."
-      />
     </div>
   );
 }
@@ -542,7 +471,7 @@ function App() {
       {/* Top Status Bar */}
       <div className="status-bar">
         <div className="status-left">
-          <span>SumedhOS v1.4</span>
+          <span>SumedhOS v1.5</span>
           <span>{currentTime}</span>
         </div>
         <div className="status-right">
@@ -591,39 +520,25 @@ function App() {
             <span className="shortcut-label">About Me</span>
           </div>
 
-          {/* Mini-app: Scriptwriter Shortcut */}
+          {/* Mini-app: Cinephile Trivia Game Shortcut */}
           <div 
             className="shortcut-item" 
-            onClick={() => openWindow('scriptwriter', 'Screenwriter (Draft)', 560, 440)}
-            title="Interactive typewriter screenplay scratchpad"
-          >
-            <div className="shortcut-icon" style={{ backgroundColor: '#9c9182' }}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
-              </svg>
-            </div>
-            <span className="shortcut-label">Scriptwriter</span>
-          </div>
-
-          {/* Mini-app: Retro Arcade Shortcut */}
-          <div 
-            className="shortcut-item" 
-            onClick={() => openWindow('arcade', 'Arcade Game (.exe)', 380, 480)}
-            title="Play retro Snake game"
+            onClick={() => openWindow('cinephile', 'Cinephile Trivia', 580, 500)}
+            title="Interactive guess the movie game using Letterboxd logs"
           >
             <div className="shortcut-icon" style={{ backgroundColor: '#4a3222' }}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-                <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5zm4 2h-2v-2h2v2zm0-4h-2V7h2v5z"/>
               </svg>
             </div>
-            <span className="shortcut-label">Arcade.exe</span>
+            <span className="shortcut-label">Cinephile.app</span>
           </div>
 
-          {/* Mini-app: Cassette Player Shortcut */}
+          {/* Mini-app: Beats Player Shortcut */}
           <div 
             className="shortcut-item" 
-            onClick={() => openWindow('beats', 'Beats Player', 320, 240)}
-            title="Soothing ambient Lo-Fi sequencer generator"
+            onClick={() => openWindow('beats', 'Beats Player', 640, 480)}
+            title="Interactive custom Spotify & YouTube stream player"
           >
             <div className="shortcut-icon" style={{ backgroundColor: '#ff4c5a' }}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
@@ -927,18 +842,15 @@ function App() {
               </div>
             )}
 
-            {/* SCRIPTWRITER WINDOW CONTENT */}
-            {win.id === 'scriptwriter' && <Scriptwriter />}
-
-            {/* ARCADE WINDOW CONTENT */}
-            {win.id === 'arcade' && <RetroArcade />}
-
             {/* CASSETTE BEATS PLAYER CONTENT */}
-            {win.id === 'beats' && <CassettePlayer />}
+            {win.id === 'beats' && <BeatsPlayer />}
+
+            {/* CINEPHILE GAME CONTENT */}
+            {win.id === 'cinephile' && <CinephileGame films={mediaDb.films} />}
 
             {/* CONTACT WINDOW CONTENT */}
             {win.id === 'contact' && (
-              <div className="contact-window-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+              <div className="contact-window-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifycontent: 'center', height: '100%' }}>
                 <ul className="contact__list" style={{ gap: '1rem 2rem' }}>
                   <li><a href="https://www.imdb.com/name/nm18199394/" target="_blank" rel="noopener">IMDb</a></li>
                   <li><a href="https://github.com/Bane2007" target="_blank" rel="noopener">GitHub</a></li>
