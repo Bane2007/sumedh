@@ -79,7 +79,7 @@ body::before {
 }
 .bg-cranes__crane {
   position: absolute;
-  background: url('../svg/crane-bg.svg') center / contain no-repeat;
+  background: url('/assets/svg/crane-bg.svg') center / contain no-repeat;
   will-change: transform;
 }
 .bg-cranes__crane--a { top: 10%; left: 10%; width: 100px; animation: drift-r 60s linear infinite; }
