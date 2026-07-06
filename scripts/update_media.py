@@ -588,7 +588,7 @@ def fetch_mal_manga():
 # --- MAIN RUN ---
 if __name__ == "__main__":
     # Load existing media.js to preserve completed sort_dates
-    media_js_path = os.path.join("assets", "data", "media.js")
+    media_js_path = os.path.join("public", "assets", "data", "media.js")
     if os.path.exists(media_js_path):
         try:
             with open(media_js_path, "r", encoding="utf-8") as f:
@@ -610,12 +610,12 @@ if __name__ == "__main__":
     manga = fetch_mal_manga()
     
     # Save output JSON as fallback cache
-    films_json_path = os.path.join("assets", "data", "films.json")
+    films_json_path = os.path.join("public", "assets", "data", "films.json")
     with open(films_json_path, "w", encoding="utf-8") as f_out:
         json.dump(films, f_out, indent=2, ensure_ascii=False)
     
     # Save output JS
-    output_js_path = os.path.join("assets", "data", "media.js")
+    output_js_path = os.path.join("public", "assets", "data", "media.js")
     os.makedirs(os.path.dirname(output_js_path), exist_ok=True)
     
     payload = {

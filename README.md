@@ -1,39 +1,16 @@
-# sumedh
+# React + Vite
 
-Personal site of **Sumedh Jamsandekar** — writer, director, engineer.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-Featuring his short film *Sadako (2025)*, co-directed with Evan Tobias and Joel Jobi at IIT Delhi Abu Dhabi.
+Currently, two official plugins are available:
 
-Live at https://bane2007.github.io/sumedh/
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Stack
+## React Compiler
 
-Hand-crafted static HTML / CSS / vanilla JS. No build step. Self-hosted woff2 fonts (EB Garamond + JetBrains Mono). Single optimized poster JPEG (~266 KB) with the full-res PNG kept alongside for direct download.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Local preview
+## Expanding the Oxlint configuration
 
-```powershell
-python -m http.server 8000
-```
-
-Then open http://localhost:8000/.
-
-## Structure
-
-- `index.html` — single page, six sections (hero · about · Sadako · roles · contact · colophon)
-- `assets/css/style.css` — palette, typography, every section's styling
-- `assets/js/main.js` — IntersectionObserver scroll-fades, reduced-motion guard
-- `assets/img/poster.jpg` — optimized poster (1000×1400, JPEG)
-- `assets/img/poster-full.png` — full-resolution poster (direct download)
-- `assets/svg/crane.svg` — line-art origami crane, reused as section divider
-- `assets/fonts/` — self-hosted woff2 files
-- `docs/` — spec and implementation plan
-
-## Credits
-
-- *Sadako* (2025) directed by **Sumedh Jamsandekar · Evan Tobias · Joel Jobi**
-- IMDb: https://www.imdb.com/title/tt39732610/
-- YouTube: https://www.youtube.com/watch?v=bSUdWw-3dmE
-- Festival recognition: Best Audio, Best Storytelling, Audience Choice — University Film Festival 2025
-
-Site designed and built 2026-05-26.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
