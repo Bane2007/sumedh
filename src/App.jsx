@@ -45,21 +45,21 @@ function BeatsPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
 
-  // Preloaded royalty-free lo-fi / ambient tracks that play 100% natively
+  // Curated list of songs from favorite movies (Whiplash, 2001: A Space Odyssey) playing natively
   const nativeTracks = [
     {
-      title: "Night Owl",
-      artist: "Broke For Free",
-      url: "https://files.freemusicarchive.org/storage-tokyo/music/WFMU/Broke_For_Free/Directionless_EP/Broke_For_Free_-_01_-_Night_Owl.mp3"
+      title: "Caravan (Jazz Session)",
+      artist: "Whiplash Favorite",
+      url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
     },
     {
-      title: "Something Elated",
-      artist: "Broke For Free",
-      url: "https://files.freemusicarchive.org/storage-tokyo/music/WFMU/Broke_For_Free/Something_Elated/Broke_For_Free_-_05_-_Something_Elated.mp3"
+      title: "Also sprach Zarathustra",
+      artist: "2001: A Space Odyssey",
+      url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
     },
     {
-      title: "Melancholy Instrumental",
-      artist: "SoundHelix",
+      title: "Whiplash Theme (Extended Drums)",
+      artist: "Hank Levy (Cover)",
       url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3"
     }
   ];
@@ -81,7 +81,6 @@ function BeatsPlayer() {
     setIsPlaying(false);
     if (audioRef.current) {
       audioRef.current.load();
-      // Auto play on change
       setTimeout(() => {
         audioRef.current.play()
           .then(() => setIsPlaying(true))
@@ -214,7 +213,7 @@ function BeatsPlayer() {
   );
 }
 
-// Letterboxd-Powered Movie Trivia Game (Harder difficulty)
+// Letterboxd-Powered Movie Trivia Game (Decade-specific distractor filters for harder difficulty)
 function LoglineGame({ films }) {
   const [question, setQuestion] = useState(null);
   const [score, setScore] = useState(0);
@@ -226,7 +225,7 @@ function LoglineGame({ films }) {
   const generateQuestion = () => {
     if (!films || films.length < 5) return;
     
-    // Filter films with valid plots
+    // Filter films with valid plots and directors
     const candidates = films.filter(f => f.plot && f.plot !== 'N/A' && f.director && f.director !== 'N/A');
     if (candidates.length === 0) return;
 
@@ -238,12 +237,26 @@ function LoglineGame({ films }) {
     const titleRegex = new RegExp(target.title.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'gi');
     maskedPlot = maskedPlot.replace(titleRegex, '______');
 
-    // Generate incorrect answers
+    // Filter distractors from the same decade (within 10 years) for harder difficulty
+    const targetYear = parseInt(target.year) || 2020;
+    let similarFilms = candidates.filter(f => 
+      f.title !== target.title && 
+      Math.abs((parseInt(f.year) || 2020) - targetYear) <= 10
+    );
+
+    // Fallback if not enough similar era films
+    if (similarFilms.length < 3) {
+      similarFilms = candidates.filter(f => f.title !== target.title);
+    }
+
+    // Pick 3 distractors
     const distractors = [];
-    while (distractors.length < 3) {
-      const randomFilm = films[Math.floor(Math.random() * films.length)];
-      if (randomFilm.title !== target.title && !distractors.some(d => d.title === randomFilm.title)) {
-        distractors.push(randomFilm);
+    const tempSimilar = [...similarFilms];
+    while (distractors.length < 3 && tempSimilar.length > 0) {
+      const randIdx = Math.floor(Math.random() * tempSimilar.length);
+      const chosen = tempSimilar.splice(randIdx, 1)[0];
+      if (!distractors.some(d => d.title === chosen.title)) {
+        distractors.push(chosen);
       }
     }
 
