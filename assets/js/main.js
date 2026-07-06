@@ -259,22 +259,7 @@
     };
 
     // 2. Sort
-    if (sortBy === 'default') {
-      // Robust sorting by status (active first) then date
-      result.sort((a, b) => {
-        const getStatusPriority = (item) => {
-          if (item.status === 'watching' || item.status === 'reading') return 1;
-          return 0;
-        };
-        const pa = getStatusPriority(a);
-        const pb = getStatusPriority(b);
-        if (pa !== pb) return pb - pa;
-
-        const da = a.sort_date || a.watched_date || '0000-00-00';
-        const db = b.sort_date || b.watched_date || '0000-00-00';
-        return db.localeCompare(da);
-      });
-    } else if (sortBy === 'alpha') {
+    if (sortBy === 'alpha') {
       result.sort((a, b) => a.title.localeCompare(b.title));
     } else if (sortBy === 'year-desc') {
       result.sort((a, b) => {
