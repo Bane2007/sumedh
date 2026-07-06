@@ -9,14 +9,14 @@ const generateGenericCover = (title, year) => {
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width="100%" height="100%">
       <defs>
         <linearGradient id="grad-${hash}" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:hsl(${hue}, 25%, 20%);stop-opacity:1" />
-          <stop offset="100%" style="stop-color:hsl(${(hue + 40) % 360}, 30%, 8%);stop-opacity:1" />
+          <stop offset="0%" style="stop-color:hsl(${hue}, 20%, 15%);stop-opacity:1" />
+          <stop offset="100%" style="stop-color:hsl(${(hue + 40) % 360}, 25%, 6%);stop-opacity:1" />
         </linearGradient>
       </defs>
       <rect width="100%" height="100%" fill="url(#grad-${hash})" />
-      <rect x="10" y="10" width="180" height="280" fill="none" stroke="rgba(236,228,211,0.1)" stroke-width="1.5" />
-      <text x="50%" y="42%" dominant-baseline="middle" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="64" fill="rgba(236,228,211,0.2)" font-weight="500">${initial}</text>
-      <text x="50%" y="82%" dominant-baseline="middle" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="rgba(236,228,211,0.4)" letter-spacing="0.1em">${year || 'N/A'}</text>
+      <rect x="8" y="8" width="184" height="284" fill="none" stroke="rgba(236,228,211,0.06)" stroke-width="1" />
+      <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="72" fill="rgba(236,228,211,0.18)" font-weight="500">${initial}</text>
+      <text x="50%" y="85%" dominant-baseline="middle" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="rgba(236,228,211,0.35)" letter-spacing="0.1em">${year || 'N/A'}</text>
     </svg>
   `;
 };
@@ -35,6 +35,159 @@ const renderStars = (rating) => {
   const starsStr = '★'.repeat(starsCount) + '☆'.repeat(5 - starsCount);
   return <span className="rating-stars">{starsStr} <span style={{ fontSize: '0.62rem', opacity: 0.65 }}>({score}/10)</span></span>;
 };
+
+// Playable Retro Arcade Game (Snake)
+function RetroArcade() {
+  const [gridSize] = useState(16);
+  const [snake, setSnake] = useState([{ x: 8, y: 8 }]);
+  const [food, setFood] = useState({ x: 4, y: 4 });
+  const [direction, setDirection] = useState({ x: 0, y: -1 });
+  const [score, setScore] = useState(0);
+  const [highScore, setHighScore] = useState(0);
+  const [gameOver, setGameOver] = useState(false);
+  const [isPaused, setIsPaused] = useState(true);
+  const gameInterval = useRef(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (['ArrowUp', 'KeyW'].includes(e.code) && direction.y === 0) {
+        setDirection({ x: 0, y: -1 });
+        setIsPaused(false);
+      } else if (['ArrowDown', 'KeyS'].includes(e.code) && direction.y === 0) {
+        setDirection({ x: 0, y: 1 });
+        setIsPaused(false);
+      } else if (['ArrowLeft', 'KeyA'].includes(e.code) && direction.x === 0) {
+        setDirection({ x: -1, y: 0 });
+        setIsPaused(false);
+      } else if (['ArrowRight', 'KeyD'].includes(e.code) && direction.x === 0) {
+        setDirection({ x: 1, y: 0 });
+        setIsPaused(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [direction]);
+
+  useEffect(() => {
+    if (gameOver || isPaused) return;
+
+    gameInterval.current = setInterval(() => {
+      setSnake((prevSnake) => {
+        const head = prevSnake[0];
+        const newHead = {
+          x: (head.x + direction.x + gridSize) % gridSize,
+          y: (head.y + direction.y + gridSize) % gridSize
+        };
+
+        if (prevSnake.some(segment => segment.x === newHead.x && segment.y === newHead.y)) {
+          setGameOver(true);
+          return prevSnake;
+        }
+
+        const newSnake = [newHead, ...prevSnake];
+
+        if (newHead.x === food.x && newHead.y === food.y) {
+          setScore(s => {
+            const next = s + 10;
+            if (next > highScore) setHighScore(next);
+            return next;
+          });
+          let nextFood;
+          do {
+            nextFood = {
+              x: Math.floor(Math.random() * gridSize),
+              y: Math.floor(Math.random() * gridSize)
+            };
+          } while (newSnake.some(segment => segment.x === nextFood.x && segment.y === nextFood.y));
+          setFood(nextFood);
+        } else {
+          newSnake.pop();
+        }
+
+        return newSnake;
+      });
+    }, 110);
+
+    return () => clearInterval(gameInterval.current);
+  }, [direction, food, gameOver, isPaused]);
+
+  const resetGame = () => {
+    setSnake([{ x: 8, y: 8 }]);
+    setFood({ x: 4, y: 4 });
+    setDirection({ x: 0, y: -1 });
+    setScore(0);
+    setGameOver(false);
+    setIsPaused(true);
+  };
+
+  return (
+    <div className="arcade-game mono">
+      <div className="arcade-score">
+        <span>SCORE: {score}</span>
+        <span>HIGH: {highScore}</span>
+      </div>
+      <div className="arcade-grid">
+        {Array.from({ length: gridSize * gridSize }).map((_, idx) => {
+          const x = idx % gridSize;
+          const y = Math.floor(idx / gridSize);
+          const isSnake = snake.some(segment => segment.x === x && segment.y === y);
+          const isHead = snake[0].x === x && snake[0].y === y;
+          const isFood = food.x === x && food.y === y;
+
+          return (
+            <div 
+              key={idx} 
+              className={`arcade-cell ${isSnake ? 'snake' : ''} ${isHead ? 'head' : ''} ${isFood ? 'food' : ''}`}
+            />
+          );
+        })}
+      </div>
+      {gameOver && (
+        <div className="arcade-overlay">
+          <p>GAME OVER</p>
+          <button className="arcade-btn" onClick={resetGame}>PLAY AGAIN</button>
+        </div>
+      )}
+      {isPaused && !gameOver && (
+        <div className="arcade-overlay">
+          <p>PRESS ARROWS OR WASD TO START</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// Retro Typewriter / Screenplay Notepad
+function Scriptwriter() {
+  const [text, setText] = useState(
+    `EXT. COLD COURTYARD - NIGHT\n\nPaper cranes flutter across the desk, illuminated by terminal glow.\n\nSUMEDH (V.O.)\nCreases make the crane... but words fold the universe.`
+  );
+
+  const insertElement = (type) => {
+    let tag = "";
+    if (type === "character") tag = "\n\nSUMEDH\n";
+    else if (type === "dialogue") tag = "(softly)\nDialogue here...\n";
+    else if (type === "action") tag = "\n\nAction block here...";
+    
+    setText(prev => prev + tag);
+  };
+
+  return (
+    <div className="script-writer">
+      <div className="writer-controls mono">
+        <button onClick={() => insertElement('character')}>+ CHARACTER</button>
+        <button onClick={() => insertElement('dialogue')}>+ DIALOGUE</button>
+        <button onClick={() => insertElement('action')}>+ ACTION</button>
+      </div>
+      <textarea 
+        className="writer-textarea courier"
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        placeholder="Start typing script details..."
+      />
+    </div>
+  );
+}
 
 // Draggable Window Component
 function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children, defaultPos }) {
@@ -57,7 +210,6 @@ function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children
 
   const handleMouseDown = (e) => {
     if (isMaximized) return; // Disable drag if maximized
-    // Only drag on header bar click, not on close button or content
     if (e.target.classList.contains('window-header') || e.target.classList.contains('window-title')) {
       setIsDragging(true);
       dragStart.current = {
@@ -278,7 +430,6 @@ function App() {
     }
   };
 
-  // Dynamic wallpaper setup using user portrait with dark editorial styling
   const wallpaperStyle = {
     backgroundImage: `linear-gradient(rgba(18, 14, 11, 0.45), rgba(18, 14, 11, 0.78)), url(${import.meta.env.BASE_URL}assets/img/portrait.jpg)`,
     backgroundSize: 'cover',
@@ -291,7 +442,7 @@ function App() {
       {/* Top Status Bar */}
       <div className="status-bar">
         <div className="status-left">
-          <span>SumedhOS v1.3</span>
+          <span>SumedhOS v1.4</span>
           <span>{currentTime}</span>
         </div>
         <div className="status-right">
@@ -307,11 +458,12 @@ function App() {
         <div className="bg-cranes__crane bg-cranes__crane--c"></div>
       </div>
 
-      {/* Main Desktop Space with Custom Portrait Wallpaper */}
+      {/* Main Desktop Space with Portrait Wallpaper */}
       <div className="desktop" style={wallpaperStyle}>
         
         {/* Desktop Shortcuts (App Icons on screen) */}
         <div className="desktop-shortcuts">
+          {/* Media Cabinet Shortcut */}
           <div 
             className="shortcut-item" 
             onClick={() => openWindow('cabinet', 'Media Cabinet', 1080, 680)}
@@ -325,9 +477,10 @@ function App() {
             <span className="shortcut-label">Media Cabinet</span>
           </div>
 
+          {/* About Me Shortcut */}
           <div 
             className="shortcut-item" 
-            onClick={() => openWindow('about', 'About Me', 580, 480)}
+            onClick={() => openWindow('about', 'About Me', 680, 480)}
             title="Biographical details and technical profile"
           >
             <div className="shortcut-icon" style={{ backgroundColor: '#e08a82' }}>
@@ -338,25 +491,41 @@ function App() {
             <span className="shortcut-label">About Me</span>
           </div>
 
+          {/* Mini-app: Scriptwriter Shortcut */}
           <div 
             className="shortcut-item" 
-            onClick={() => openWindow('sadako', 'Sadako (2025)', 850, 620)}
-            title="Details on the award-winning stop-motion film"
+            onClick={() => openWindow('scriptwriter', 'Screenwriter (Draft)', 560, 440)}
+            title="Interactive typewriter screenplay scratchpad"
           >
             <div className="shortcut-icon" style={{ backgroundColor: '#9c9182' }}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-                <path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/>
+                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
               </svg>
             </div>
-            <span className="shortcut-label">Sadako (2025)</span>
+            <span className="shortcut-label">Scriptwriter</span>
           </div>
 
+          {/* Mini-app: Retro Arcade Shortcut */}
+          <div 
+            className="shortcut-item" 
+            onClick={() => openWindow('arcade', 'Arcade Game (.exe)', 380, 480)}
+            title="Play retro Snake game"
+          >
+            <div className="shortcut-icon" style={{ backgroundColor: '#4a3222' }}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+              </svg>
+            </div>
+            <span className="shortcut-label">Arcade.exe</span>
+          </div>
+
+          {/* Contact Shortcut */}
           <div 
             className="shortcut-item" 
             onClick={() => openWindow('contact', 'Contact Links', 420, 220)}
             title="External portfolios, social networks and profiles"
           >
-            <div className="shortcut-icon" style={{ backgroundColor: '#4a3222' }}>
+            <div className="shortcut-icon" style={{ backgroundColor: '#120e0b' }}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
                 <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
               </svg>
@@ -369,28 +538,6 @@ function App() {
         <div className="desktop-brand">
           <div className="brand-title">SUMEDH JAMSANDEKAR</div>
           <div className="brand-subtitle mono">WRITER / DIRECTOR / ENGINEER</div>
-        </div>
-
-        {/* NEW STUFF: Interactive Desktop Widgets */}
-        <div className="desktop-widgets">
-          {/* Welcome Scratchpad Sticky Note */}
-          <div className="widget-sticky">
-            <div className="widget-sticky__pin"></div>
-            <p className="widget-sticky__body">
-              Creasing cranes, creasing screenplays. Welcome to my Virtual Desk. 
-              Open the <strong>Media Cabinet</strong> folder to search what I'm watching/reading, 
-              or view <strong>Sadako (2025)</strong> to watch my debut stop-motion short film.
-            </p>
-          </div>
-
-          {/* Monospaced System Status Monitor */}
-          <div className="widget-monitor mono">
-            <div className="widget-monitor__header">SYSTEM STATUS</div>
-            <div className="widget-monitor__row"><span>USER:</span><span>GUEST</span></div>
-            <div className="widget-monitor__row"><span>WISHES:</span><span>1,000 FOLDED</span></div>
-            <div className="widget-monitor__row"><span>CURRENT:</span><span>SCREENWRITING</span></div>
-            <div className="widget-monitor__row"><span>LOC:</span><span>IIT Delhi AD</span></div>
-          </div>
         </div>
 
         {/* Windows Rendering */}
@@ -642,7 +789,7 @@ function App() {
             {win.id === 'about' && (
               <div className="about-window-content" style={{ padding: '0.5rem 1rem' }}>
                 <p className="about__body" style={{ fontSize: '1.15rem', lineHeight: 1.6, marginBottom: '2rem' }}>
-                  I&rsquo;m a second-year Energy Engineering student at IIT Delhi Abu Dhabi. Most of my spare time goes to writing. <em>Sadako</em> (2025) was the first short film I finished. When I&rsquo;m not at a script, I&rsquo;ve got a movie on, a show running, or a game I&rsquo;m halfway through. I read in between.
+                  I&rsquo;m a second-year Energy Engineering student at IIT Delhi Abu Dhabi. Most of my spare time goes to writing. When I&rsquo;m not at a script, I&rsquo;ve got a movie on, a show running, or a game I&rsquo;m halfway through. I read in between.
                 </p>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
                   <div>
@@ -656,7 +803,7 @@ function App() {
                   <div>
                     <h3 className="roles__subhead" style={{ margin: 0, fontSize: '0.95rem' }}>competitions</h3>
                     <ul className="roles__list" style={{ marginTop: '0.75rem', gap: '0.75rem' }}>
-                      <li style={{ fontSize: '0.88rem' }}><span className="mono" style={{ fontSize: '0.8rem' }}>2025:</span> Best Audio, Best Storytelling, Audience Choice &middot; University Film Festival (<em>Sadako</em>)</li>
+                      <li style={{ fontSize: '0.88rem' }}><span className="mono" style={{ fontSize: '0.8rem' }}>2025:</span> Best Audio, Best Storytelling, Audience Choice &middot; University Film Festival</li>
                       <li style={{ fontSize: '0.88rem' }}><span className="mono" style={{ fontSize: '0.8rem' }}>2026:</span> 2nd Place, Hyperloop &middot; TRYST</li>
                       <li style={{ fontSize: '0.88rem' }}><span className="mono" style={{ fontSize: '0.8rem' }}>2026:</span> 2nd Place, Titan &middot; TRYST</li>
                       <li style={{ fontSize: '0.88rem' }}><span className="mono" style={{ fontSize: '0.8rem' }}>2026:</span> 3rd Place, Casecation &middot; TRYST</li>
@@ -666,36 +813,11 @@ function App() {
               </div>
             )}
 
-            {/* SADAKO WINDOW CONTENT */}
-            {win.id === 'sadako' && (
-              <div className="sadako-window-content">
-                <div className="sadako__grid" style={{ gap: '1.5rem' }}>
-                  <figure className="sadako__poster" style={{ position: 'static' }}>
-                    <img src="assets/img/poster.jpg" alt="Sadako poster" />
-                  </figure>
-                  <div className="sadako__info">
-                    <p className="sadako__title" style={{ fontSize: '1.8rem', margin: 0 }}><span className="smallcaps">Sadako</span> <span className="sadako__year">(2025)</span></p>
-                    <blockquote className="sadako__logline" style={{ margin: '1rem 0', fontSize: '0.85rem' }}>
-                      A young girl who loves origami sits down with a single sheet of paper and begins to fold. With every careful crease, a quiet stop-motion story takes shape, one about perseverance, hope, and wishes made on paper.
-                    </blockquote>
-                    <p className="sadako__credit" style={{ fontSize: '0.78rem' }}><span className="mono">a film by</span> Sumedh Jamsandekar &middot; Evan Tobias &middot; Joel Jobi</p>
-                    
-                    <p className="sadako__awards mono" style={{ fontSize: '0.7rem', borderTop: '1px solid var(--glass-border)', borderBottom: '1px solid var(--glass-border)', padding: '0.5rem 0', margin: '1rem 0' }}>
-                      <span>Best Audio</span> &middot; <span>Best Storytelling</span> &middot; <span>Audience Choice</span><br />
-                      <span className="dim">University Film Festival 2025</span>
-                    </p>
+            {/* SCRIPTWRITER WINDOW CONTENT */}
+            {win.id === 'scriptwriter' && <Scriptwriter />}
 
-                    <div className="sadako__buttons" style={{ display: 'flex', gap: '0.75rem', marginTop: '1rem' }}>
-                      <a className="btn btn--filled" href="https://www.youtube.com/watch?v=bSUdWw-3dmE" target="_blank" rel="noopener" style={{ fontSize: '0.75rem', padding: '0.4rem 0.8rem' }}>
-                        <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" aria-hidden="true" style={{ marginRight: '4px' }}><path d="M8 5v14l11-7z"/></svg>
-                        Watch on YouTube
-                      </a>
-                      <a className="btn btn--ghost" href="https://www.imdb.com/title/tt39732610/" target="_blank" rel="noopener" style={{ fontSize: '0.75rem', padding: '0.4rem 0.8rem' }}>View on IMDb</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
+            {/* ARCADE WINDOW CONTENT */}
+            {win.id === 'arcade' && <RetroArcade />}
 
             {/* CONTACT WINDOW CONTENT */}
             {win.id === 'contact' && (
