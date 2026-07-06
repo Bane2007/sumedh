@@ -69,6 +69,38 @@ def is_poster_loadable(url):
     except Exception:
         return False
 
+# --- Helper to resolve poster from IMDb page ---
+def resolve_poster_from_imdb(imdb_id):
+    url = f"https://www.imdb.com/title/{imdb_id}/"
+    req = urllib.request.Request(url, headers={
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept-Language': 'en-US,en;q=0.9'
+    })
+    try:
+        time.sleep(1.5)
+        with urllib.request.urlopen(req) as response:
+            content = response.read().decode('utf-8')
+        scripts = re.findall(r'<script type="application/ld\+json">(.*?)</script>', content, re.DOTALL)
+        for s in scripts:
+            try:
+                data = json.loads(s.strip())
+                if isinstance(data, list):
+                    for item in data:
+                        if item.get("@type") == "Movie" or "image" in item:
+                            img = item.get("image")
+                            if img:
+                                return img
+                else:
+                    if data.get("@type") == "Movie" or "image" in data:
+                        img = data.get("image")
+                        if img:
+                            return img
+            except Exception:
+                continue
+    except Exception as e:
+        print(f"Error fetching poster from IMDb {imdb_id}: {e}")
+    return None
+
 # --- Helper to resolve poster from film page ---
 def resolve_poster_from_page(slug):
     url = f"https://letterboxd.com/film/{slug}/"
@@ -77,16 +109,33 @@ def resolve_poster_from_page(slug):
         time.sleep(1.5)  # Respectful delay
         with urllib.request.urlopen(req) as response:
             content = response.read().decode('utf-8')
+            
+        # 1. Try to get image from Letterboxd JSON-LD
+        img_url = None
         scripts = re.findall(r'<script type="application/ld\+json">(.*?)</script>', content, re.DOTALL)
         if scripts:
             s_clean = scripts[0].strip()
             if s_clean.startswith("/*"):
                 s_clean = re.sub(r'/\*\s*<!\[CDATA\[\s*\*/', '', s_clean)
                 s_clean = re.sub(r'/\*\s*\]\]>\s*\*/', '', s_clean)
-            data = json.loads(s_clean.strip())
-            img_url = data.get("image")
-            if img_url:
-                return img_url
+            try:
+                data = json.loads(s_clean.strip())
+                img_url = data.get("image")
+            except Exception:
+                pass
+                
+        if img_url and "empty-poster" not in img_url:
+            return img_url
+            
+        # 2. If missing/empty, try IMDb fallback
+        imdb_match = re.search(r'href="https?://(?:www\.)?imdb\.com/title/(tt\d+)', content)
+        if imdb_match:
+            imdb_id = imdb_match.group(1)
+            print(f"Letterboxd poster empty for {slug}. Attempting IMDb fallback ({imdb_id})...")
+            imdb_img = resolve_poster_from_imdb(imdb_id)
+            if imdb_img:
+                print(f"Successfully resolved IMDb poster for {slug}: {imdb_img}")
+                return imdb_img
     except Exception as e:
         print(f"Error resolving poster for {slug}: {e}")
     return ""
