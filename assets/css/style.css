@@ -769,8 +769,8 @@ section, .colophon {
   content: '';
   position: absolute;
   bottom: -14px;
-  left: -8px;
-  right: -8px;
+  left: -12px;
+  right: -12px;
   height: 9px;
   background: linear-gradient(to bottom, #301f14, #120b07);
   border-top: 1px solid #4a3222;
