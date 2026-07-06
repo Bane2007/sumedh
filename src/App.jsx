@@ -291,18 +291,13 @@ function App() {
       {/* Top Status Bar */}
       <div className="status-bar">
         <div className="status-left">
-          <span>SumedhOS v1.2</span>
+          <span>SumedhOS v1.3</span>
           <span>{currentTime}</span>
         </div>
         <div className="status-right">
           <span>System: Active</span>
           <span>CPU: 2%</span>
         </div>
-      </div>
-
-      <div className="rec-light" aria-hidden="true">
-        <span className="rec-light__dot"></span>
-        <span className="rec-light__label">REC</span>
       </div>
 
       {/* Parallax Floating Origami Cranes */}
@@ -332,7 +327,7 @@ function App() {
 
           <div 
             className="shortcut-item" 
-            onClick={() => openWindow('about', 'About Me', 520, 420)}
+            onClick={() => openWindow('about', 'About Me', 580, 480)}
             title="Biographical details and technical profile"
           >
             <div className="shortcut-icon" style={{ backgroundColor: '#e08a82' }}>
@@ -374,6 +369,28 @@ function App() {
         <div className="desktop-brand">
           <div className="brand-title">SUMEDH JAMSANDEKAR</div>
           <div className="brand-subtitle mono">WRITER / DIRECTOR / ENGINEER</div>
+        </div>
+
+        {/* NEW STUFF: Interactive Desktop Widgets */}
+        <div className="desktop-widgets">
+          {/* Welcome Scratchpad Sticky Note */}
+          <div className="widget-sticky">
+            <div className="widget-sticky__pin"></div>
+            <p className="widget-sticky__body">
+              Creasing cranes, creasing screenplays. Welcome to my Virtual Desk. 
+              Open the <strong>Media Cabinet</strong> folder to search what I'm watching/reading, 
+              or view <strong>Sadako (2025)</strong> to watch my debut stop-motion short film.
+            </p>
+          </div>
+
+          {/* Monospaced System Status Monitor */}
+          <div className="widget-monitor mono">
+            <div className="widget-monitor__header">SYSTEM STATUS</div>
+            <div className="widget-monitor__row"><span>USER:</span><span>GUEST</span></div>
+            <div className="widget-monitor__row"><span>WISHES:</span><span>1,000 FOLDED</span></div>
+            <div className="widget-monitor__row"><span>CURRENT:</span><span>SCREENWRITING</span></div>
+            <div className="widget-monitor__row"><span>LOC:</span><span>IIT Delhi AD</span></div>
+          </div>
         </div>
 
         {/* Windows Rendering */}
@@ -623,17 +640,28 @@ function App() {
 
             {/* ABOUT WINDOW CONTENT */}
             {win.id === 'about' && (
-              <div className="about-window-content">
-                <p className="about__body" style={{ fontSize: '1.1rem', lineHeight: 1.6 }}>
+              <div className="about-window-content" style={{ padding: '0.5rem 1rem' }}>
+                <p className="about__body" style={{ fontSize: '1.15rem', lineHeight: 1.6, marginBottom: '2rem' }}>
                   I&rsquo;m a second-year Energy Engineering student at IIT Delhi Abu Dhabi. Most of my spare time goes to writing. <em>Sadako</em> (2025) was the first short film I finished. When I&rsquo;m not at a script, I&rsquo;ve got a movie on, a show running, or a game I&rsquo;m halfway through. I read in between.
                 </p>
-                <div style={{ marginTop: '2rem', borderTop: '1px dashed var(--glass-border)', paddingTop: '1rem' }}>
-                  <h4 style={{ fontFamily: 'var(--mono)', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--oxblood-soft)' }}>Technical Roles</h4>
-                  <ul className="mono" style={{ fontSize: '0.75rem', listStyle: 'square', paddingLeft: '1.2rem', marginTop: '0.5rem', color: 'var(--ink-soft)' }}>
-                    <li>2026—: Hyperloop Team &middot; IIT Delhi Abu Dhabi</li>
-                    <li>2025—: Webmaster &middot; IIT Delhi Abu Dhabi</li>
-                    <li>2025: Technical Lead &middot; Intercollegiate Programming</li>
-                  </ul>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+                  <div>
+                    <h3 className="roles__subhead" style={{ margin: 0, fontSize: '0.95rem' }}>positions</h3>
+                    <ul className="roles__list" style={{ marginTop: '0.75rem', gap: '0.75rem' }}>
+                      <li style={{ fontSize: '0.88rem' }}><span className="mono" style={{ fontSize: '0.8rem' }}>2025:</span> Marketing &amp; Creatives Head, IITDAD Coding Club</li>
+                      <li style={{ fontSize: '0.88rem' }}><span className="mono" style={{ fontSize: '0.8rem' }}>2025:</span> Core Member, Digital Arts &amp; Design Club</li>
+                      <li style={{ fontSize: '0.88rem' }}><span className="mono" style={{ fontSize: '0.8rem' }}>2025:</span> Millennium Fellow, UN Academic Impact &amp; MCN</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="roles__subhead" style={{ margin: 0, fontSize: '0.95rem' }}>competitions</h3>
+                    <ul className="roles__list" style={{ marginTop: '0.75rem', gap: '0.75rem' }}>
+                      <li style={{ fontSize: '0.88rem' }}><span className="mono" style={{ fontSize: '0.8rem' }}>2025:</span> Best Audio, Best Storytelling, Audience Choice &middot; University Film Festival (<em>Sadako</em>)</li>
+                      <li style={{ fontSize: '0.88rem' }}><span className="mono" style={{ fontSize: '0.8rem' }}>2026:</span> 2nd Place, Hyperloop &middot; TRYST</li>
+                      <li style={{ fontSize: '0.88rem' }}><span className="mono" style={{ fontSize: '0.8rem' }}>2026:</span> 2nd Place, Titan &middot; TRYST</li>
+                      <li style={{ fontSize: '0.88rem' }}><span className="mono" style={{ fontSize: '0.8rem' }}>2026:</span> 3rd Place, Casecation &middot; TRYST</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             )}

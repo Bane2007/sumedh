@@ -1958,3 +1958,85 @@ body.theme-contact {
     margin-top: 4px;
   }
 }
+
+/* === DESKTOP WIDGETS === */
+.desktop-widgets {
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 5;
+}
+
+.widget-sticky {
+  background: rgba(236, 228, 211, 0.04);
+  border: 1px dashed var(--glass-border);
+  padding: 16px;
+  border-radius: 8px;
+  width: 220px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  position: relative;
+  backdrop-filter: blur(8px);
+}
+
+.widget-sticky__pin {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--oxblood-soft);
+  margin: 0 auto 12px auto;
+  box-shadow: 0 0 6px var(--oxblood-soft);
+}
+
+.widget-sticky__body {
+  font-family: var(--serif);
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  line-height: 1.45;
+  margin: 0;
+  text-align: center;
+}
+
+.widget-monitor {
+  background: rgba(18, 14, 11, 0.65);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  padding: 14px 18px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.widget-monitor__header {
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  color: var(--oxblood-soft);
+  border-bottom: 1px solid var(--hairline);
+  padding-bottom: 6px;
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+
+.widget-monitor__row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.55rem;
+  color: var(--ink-soft);
+}
+
+.widget-monitor__row span:last-child {
+  color: var(--ink);
+}
+
+/* Hide widgets on mobile for layout breathing space */
+@media (max-width: 768px) {
+  .desktop-widgets {
+    display: none;
+  }
+}
