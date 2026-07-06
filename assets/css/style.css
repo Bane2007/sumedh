@@ -824,6 +824,51 @@ section, .colophon {
 .movie-grid::-webkit-scrollbar-thumb:hover {
   background: var(--oxblood-soft);
 }
+
+/* Custom Scrollbar for Cabinet Details Panel */
+.display-content::-webkit-scrollbar {
+  width: 4px;
+}
+.display-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+.display-content::-webkit-scrollbar-thumb {
+  background: var(--hairline);
+  border-radius: 2px;
+}
+.display-content::-webkit-scrollbar-thumb:hover {
+  background: var(--oxblood-soft);
+}
+
+/* Search Wrapper & Counts */
+.search-wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.search-count {
+  position: absolute;
+  right: 0.75rem;
+  font-size: 0.62rem;
+  color: var(--ink-soft);
+  pointer-events: none;
+  background: rgba(12, 8, 6, 0.65);
+  padding: 0.12rem 0.35rem;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Grid Empty State */
+.grid-empty-state {
+  grid-column: 1 / -1;
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+  padding: 5rem 1rem;
+  text-transform: uppercase;
+}
 .grid-item-card {
   width: 100%;
   aspect-ratio: 2 / 3;

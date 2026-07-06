@@ -26,7 +26,7 @@
 
   <link rel="preload" href="assets/fonts/eb-garamond-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/jetbrains-mono-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/style.css?v=15">
+  <link rel="stylesheet" href="assets/css/style.css?v=16">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -111,7 +111,10 @@
         <!-- List View Panel (Letterboxd History) -->
         <div class="panel-list-view" id="panel-list-view">
           <div class="list-view-controls">
-            <input class="movie-search-input" id="movie-search" type="search" placeholder="Search Letterboxd history...">
+            <div class="search-wrapper">
+              <input class="movie-search-input" id="movie-search" type="search" placeholder="Search Letterboxd history...">
+              <span id="search-count" class="search-count mono"></span>
+            </div>
             <select class="movie-sort-select" id="movie-sort" aria-label="Sort movies">
               <option value="default">Recent Logged</option>
               <option value="alpha">Alphabetical (A-Z)</option>
@@ -206,7 +209,7 @@
 
   </main>
 
-  <script src="assets/data/media.js?v=15" defer></script>
-  <script src="assets/js/main.js?v=15" defer></script>
+  <script src="assets/data/media.js?v=16" defer></script>
+  <script src="assets/js/main.js?v=16" defer></script>
 </body>
 </html>

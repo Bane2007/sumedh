@@ -85,6 +85,7 @@
 
   const movieGrid = document.getElementById('movie-grid');
   const movieSearch = document.getElementById('movie-search');
+  const searchCountEl = document.getElementById('search-count');
   const movieSort = document.getElementById('movie-sort');
 
   // --- SAFE IMAGE DISPLAY FUNCTION ---
@@ -417,6 +418,26 @@
     if (!movieGrid) return;
     movieGrid.innerHTML = '';
     const items = getFilteredAndSortedFilms();
+
+    let totalCount = 0;
+    if (window.mediaDatabase) {
+      if (currentCategory === 'films') totalCount = (window.mediaDatabase.films || []).length;
+      else if (currentCategory === 'anime') totalCount = (window.mediaDatabase.anime || []).length;
+      else if (currentCategory === 'manga') totalCount = (window.mediaDatabase.manga || []).length;
+    }
+
+    if (searchCountEl) {
+      searchCountEl.textContent = `${items.length} / ${totalCount}`;
+    }
+
+    if (items.length === 0) {
+      movieGrid.innerHTML = `
+        <div class="grid-empty-state mono">
+          [ No matching titles found on the shelf ]
+        </div>
+      `;
+      return;
+    }
 
     items.forEach(item => {
       const card = document.createElement('div');
