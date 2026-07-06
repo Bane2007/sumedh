@@ -48,9 +48,8 @@
 
     updateScrollProgress();
   }
-
   // --- DYNAMIC BODY THEME OBSERVER (APPLE-STYLE THEMATIC SCROLL) ---
-  if (!reduced && 'IntersectionObserver' in window) {
+  if ('IntersectionObserver' in window) {
     const themeObserver = new IntersectionObserver((entries) => {
       for (const entry of entries) {
         if (entry.isIntersecting) {

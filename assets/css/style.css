@@ -1353,17 +1353,17 @@ body {
   transition: background-color 1200ms cubic-bezier(0.16, 1, 0.3, 1), color 1200ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 body.theme-hero {
-  background-color: var(--paper);
+  background-color: var(--paper) !important;
 }
 body.theme-sadako {
-  background-color: #070403;
+  background-color: #1a0806 !important; /* Deep velvet wine-red matching stop-motion theme */
 }
 body.theme-cabinet {
-  background-color: #22170f;
+  background-color: #2b170c !important; /* Rich warm walnut display wood */
 }
 body.theme-roles {
-  background-color: #17171a;
+  background-color: #0d1117 !important; /* Premium deep navy/steel charcoal */
 }
 body.theme-contact {
-  background-color: #0e0a08;
+  background-color: #050807 !important; /* Deep forest obsidian */
 }
