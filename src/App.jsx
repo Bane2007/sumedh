@@ -36,43 +36,97 @@ const renderStars = (rating) => {
   return <span className="rating-stars">{starsStr} <span style={{ fontSize: '0.62rem', opacity: 0.65 }}>({score}/10)</span></span>;
 };
 
-// Spotify & YouTube Embed Music Player
+// Spotify, SoundCloud & YouTube Embed Music Player + Native Radio Player
 function BeatsPlayer() {
   const [urlInput, setUrlInput] = useState('');
-  const [embedUrl, setEmbedUrl] = useState('https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0EXPn'); // default Lo-Fi beats
+  const [embedUrl, setEmbedUrl] = useState('');
+  const [playerMode, setPlayerMode] = useState('native'); // 'native' | 'embed'
+  const [currentTrackIdx, setCurrentTrackIdx] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null);
+
+  // Preloaded royalty-free lo-fi / ambient tracks that play 100% natively
+  const nativeTracks = [
+    {
+      title: "Night Owl",
+      artist: "Broke For Free",
+      url: "https://files.freemusicarchive.org/storage-tokyo/music/WFMU/Broke_For_Free/Directionless_EP/Broke_For_Free_-_01_-_Night_Owl.mp3"
+    },
+    {
+      title: "Something Elated",
+      artist: "Broke For Free",
+      url: "https://files.freemusicarchive.org/storage-tokyo/music/WFMU/Broke_For_Free/Something_Elated/Broke_For_Free_-_05_-_Something_Elated.mp3"
+    },
+    {
+      title: "Melancholy Instrumental",
+      artist: "SoundHelix",
+      url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3"
+    }
+  ];
+
+  const handleNativePlayPause = () => {
+    if (!audioRef.current) return;
+    if (isPlaying) {
+      audioRef.current.pause();
+      setIsPlaying(false);
+    } else {
+      audioRef.current.play()
+        .then(() => setIsPlaying(true))
+        .catch(err => console.log("Audio play blocked: ", err));
+    }
+  };
+
+  const handleTrackChange = (idx) => {
+    setCurrentTrackIdx(idx);
+    setIsPlaying(false);
+    if (audioRef.current) {
+      audioRef.current.load();
+      // Auto play on change
+      setTimeout(() => {
+        audioRef.current.play()
+          .then(() => setIsPlaying(true))
+          .catch(err => console.log("Play failed: ", err));
+      }, 100);
+    }
+  };
 
   const loadMedia = () => {
     if (!urlInput.trim()) return;
     let target = urlInput.trim();
+    setPlayerMode('embed');
     
-    // Convert standard Spotify playlist links to embed format
-    if (target.includes('open.spotify.com/playlist/')) {
-      const parts = target.split('playlist/');
-      const id = parts[1].split('?')[0];
+    // SoundCloud parser
+    if (target.includes('soundcloud.com')) {
+      const escaped = encodeURIComponent(target);
+      setEmbedUrl(`https://w.soundcloud.com/player/?url=${escaped}&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false`);
+    }
+    // Spotify playlist parser
+    else if (target.includes('open.spotify.com/playlist/')) {
+      const id = target.split('playlist/')[1].split('?')[0];
       setEmbedUrl(`https://open.spotify.com/embed/playlist/${id}`);
     } 
-    // Convert Spotify album links to embed
+    // Spotify album parser
     else if (target.includes('open.spotify.com/album/')) {
-      const parts = target.split('album/');
-      const id = parts[1].split('?')[0];
+      const id = target.split('album/')[1].split('?')[0];
       setEmbedUrl(`https://open.spotify.com/embed/album/${id}`);
     }
-    // Convert standard YouTube playlist links to embed
+    // YouTube playlist parser
     else if (target.includes('youtube.com/playlist?list=')) {
-      const parts = target.split('list=');
-      const id = parts[1].split('&')[0];
+      const id = target.split('list=')[1].split('&')[0];
       setEmbedUrl(`https://www.youtube.com/embed/videoseries?list=${id}`);
     }
-    // Convert YouTube watch links to embed
+    // YouTube watch parser
     else if (target.includes('youtube.com/watch?v=')) {
-      const parts = target.split('v=');
-      const id = parts[1].split('&')[0];
+      const id = target.split('v=')[1].split('&')[0];
       setEmbedUrl(`https://www.youtube.com/embed/${id}`);
     }
     else {
-      // Direct assignment fallback
       setEmbedUrl(target);
     }
+  };
+
+  const switchToNative = () => {
+    setPlayerMode('native');
   };
 
   return (
@@ -80,46 +134,106 @@ function BeatsPlayer() {
       <div className="beats-loader mono">
         <input 
           type="text" 
-          placeholder="Paste Spotify or YouTube playlist URL..." 
+          placeholder="Paste SoundCloud, Spotify, or YouTube URL..." 
           value={urlInput}
           onChange={(e) => setUrlInput(e.target.value)}
         />
-        <button onClick={loadMedia}>LOAD</button>
+        <button className="load-btn" onClick={loadMedia}>LOAD</button>
+        {playerMode === 'embed' && (
+          <button className="switch-btn" onClick={switchToNative}>RADIO</button>
+        )}
       </div>
-      <div className="beats-frame-wrapper">
-        <iframe 
-          src={embedUrl} 
-          width="100%" 
-          height="100%" 
-          frameBorder="0" 
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture; gyroscope"
-          loading="lazy"
-          title="Lo-Fi audio stream player"
-        ></iframe>
-      </div>
+
+      {playerMode === 'native' ? (
+        <div className="native-player-panel">
+          <audio 
+            ref={audioRef} 
+            src={nativeTracks[currentTrackIdx].url} 
+            preload="auto"
+            onEnded={() => handleTrackChange((currentTrackIdx + 1) % nativeTracks.length)}
+          />
+          <div className="cassette-deck">
+            <div className="cassette-label mono">
+              {nativeTracks[currentTrackIdx].title}
+            </div>
+            <div className="cassette-sublabel mono">
+              {nativeTracks[currentTrackIdx].artist}
+            </div>
+            <div className="cassette-spools">
+              <div className={`cassette-spool ${isPlaying ? 'playing' : ''}`}></div>
+              <div className={`cassette-spool ${isPlaying ? 'playing' : ''}`}></div>
+            </div>
+          </div>
+          <div className="native-controls">
+            <button 
+              className="control-btn prev"
+              onClick={() => handleTrackChange((currentTrackIdx - 1 + nativeTracks.length) % nativeTracks.length)}
+            >
+              &laquo; PREV
+            </button>
+            <button 
+              className={`control-btn play-pause-btn ${isPlaying ? 'active' : ''}`}
+              onClick={handleNativePlayPause}
+            >
+              {isPlaying ? "PAUSE" : "PLAY"}
+            </button>
+            <button 
+              className="control-btn next"
+              onClick={() => handleTrackChange((currentTrackIdx + 1) % nativeTracks.length)}
+            >
+              NEXT &raquo;
+            </button>
+          </div>
+          <div className="native-playlist mono">
+            {nativeTracks.map((track, idx) => (
+              <div 
+                key={idx} 
+                className={`playlist-item ${idx === currentTrackIdx ? 'current' : ''}`}
+                onClick={() => handleTrackChange(idx)}
+              >
+                <span>{idx + 1}. {track.title}</span>
+                <span>{track.artist}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div className="beats-frame-wrapper">
+          <iframe 
+            src={embedUrl} 
+            width="100%" 
+            height="100%" 
+            frameBorder="0" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture; gyroscope"
+            loading="lazy"
+            title="External audio stream player"
+          ></iframe>
+        </div>
+      )}
     </div>
   );
 }
 
-// Letterboxd-Powered Cinephile Trivia Game
-function CinephileGame({ films }) {
+// Letterboxd-Powered Movie Trivia Game (Harder difficulty)
+function LoglineGame({ films }) {
   const [question, setQuestion] = useState(null);
   const [score, setScore] = useState(0);
   const [streak, setStreak] = useState(0);
   const [hasAnswered, setHasAnswered] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [showHint, setShowHint] = useState(false);
 
   const generateQuestion = () => {
     if (!films || films.length < 5) return;
     
-    // Filter films with valid plots and directors
+    // Filter films with valid plots
     const candidates = films.filter(f => f.plot && f.plot !== 'N/A' && f.director && f.director !== 'N/A');
     if (candidates.length === 0) return;
 
     // Pick target film
     const target = candidates[Math.floor(Math.random() * candidates.length)];
     
-    // Hide movie title inside the plot to avoid spoiling
+    // Mask film title in plot
     let maskedPlot = target.plot;
     const titleRegex = new RegExp(target.title.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'gi');
     maskedPlot = maskedPlot.replace(titleRegex, '______');
@@ -133,7 +247,7 @@ function CinephileGame({ films }) {
       }
     }
 
-    // Combine and shuffle options
+    // Shuffle options
     const options = [target, ...distractors].sort(() => Math.random() - 0.5);
 
     setQuestion({
@@ -143,6 +257,7 @@ function CinephileGame({ films }) {
     });
     setHasAnswered(false);
     setSelectedAnswer(null);
+    setShowHint(false);
   };
 
   useEffect(() => {
@@ -162,7 +277,7 @@ function CinephileGame({ films }) {
   };
 
   if (!question) {
-    return <div className="cinephile-loading mono">[ Loading Cinephile Database... ]</div>;
+    return <div className="cinephile-loading mono">[ Loading Loglines... ]</div>;
   }
 
   return (
@@ -173,13 +288,25 @@ function CinephileGame({ films }) {
       </div>
 
       <div className="cinephile-card">
-        <div className="cinephile-specs mono">
-          <span>YEAR: {question.target.year}</span>
-          <span>DIRECTOR: {question.target.director}</span>
-        </div>
         <p className="cinephile-plot">
           &ldquo;{question.plot}&rdquo;
         </p>
+
+        {showHint ? (
+          <div className="cinephile-specs mono hint-reveal">
+            <span>YEAR: {question.target.year}</span>
+            <span>DIRECTOR: {question.target.director}</span>
+          </div>
+        ) : (
+          <div style={{ marginTop: '15px' }}>
+            <button 
+              className="hint-btn mono" 
+              onClick={() => setShowHint(true)}
+            >
+              [ REVEAL HINT (DIRECTOR &amp; YEAR) ]
+            </button>
+          </div>
+        )}
       </div>
 
       <div className="cinephile-options">
@@ -210,7 +337,7 @@ function CinephileGame({ films }) {
       {hasAnswered && (
         <div className="cinephile-next-container">
           <button className="cinephile-next-btn mono" onClick={generateQuestion}>
-            NEXT QUESTION &raquo;
+            NEXT LOGLINE &raquo;
           </button>
         </div>
       )}
@@ -226,7 +353,6 @@ function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children
   const dragStart = useRef({ x: 0, y: 0 });
   const windowRef = useRef(null);
 
-  // Re-check mobile size on resize
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 768) {
@@ -238,7 +364,7 @@ function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children
   }, []);
 
   const handleMouseDown = (e) => {
-    if (isMaximized) return; // Disable drag if maximized
+    if (isMaximized) return;
     if (e.target.classList.contains('window-header') || e.target.classList.contains('window-title')) {
       setIsDragging(true);
       dragStart.current = {
@@ -523,22 +649,22 @@ function App() {
           {/* Mini-app: Cinephile Trivia Game Shortcut */}
           <div 
             className="shortcut-item" 
-            onClick={() => openWindow('cinephile', 'Cinephile Trivia', 580, 500)}
-            title="Interactive guess the movie game using Letterboxd logs"
+            onClick={() => openWindow('cinephile', 'Logline Trivia', 580, 500)}
+            title="Guess the movie using screenplay loglines"
           >
             <div className="shortcut-icon" style={{ backgroundColor: '#4a3222' }}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5zm4 2h-2v-2h2v2zm0-4h-2V7h2v5z"/>
               </svg>
             </div>
-            <span className="shortcut-label">Cinephile.app</span>
+            <span className="shortcut-label">Logline.app</span>
           </div>
 
           {/* Mini-app: Beats Player Shortcut */}
           <div 
             className="shortcut-item" 
             onClick={() => openWindow('beats', 'Beats Player', 640, 480)}
-            title="Interactive custom Spotify & YouTube stream player"
+            title="Interactive custom Spotify, SoundCloud & YouTube stream player"
           >
             <div className="shortcut-icon" style={{ backgroundColor: '#ff4c5a' }}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
@@ -616,7 +742,7 @@ function App() {
                     }}
                   ></div>
 
-                  <div className="movie-grid-container">
+                  <div className="panel-list-view">
                     <div className="search-bar-row">
                       <div className="search-wrapper">
                         <input 
@@ -699,7 +825,7 @@ function App() {
                     </div>
                   </div>
 
-                  <div className="display-box">
+                  <div className="closet-display">
                     <div 
                       className="display-content" 
                       ref={displayContentRef}
@@ -845,8 +971,8 @@ function App() {
             {/* CASSETTE BEATS PLAYER CONTENT */}
             {win.id === 'beats' && <BeatsPlayer />}
 
-            {/* CINEPHILE GAME CONTENT */}
-            {win.id === 'cinephile' && <CinephileGame films={mediaDb.films} />}
+            {/* LOGLINE TRIVIA GAME CONTENT */}
+            {win.id === 'cinephile' && <LoglineGame films={mediaDb.films} />}
 
             {/* CONTACT WINDOW CONTENT */}
             {win.id === 'contact' && (

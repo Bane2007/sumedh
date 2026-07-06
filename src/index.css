@@ -1776,23 +1776,38 @@ body.theme-contact {
   margin: 0;
   border-radius: 0;
   border: none;
-  box-shadow: none;
   overflow: hidden;
 }
-.window--cabinet .movie-grid-container {
+
+.window--cabinet .panel-list-view {
+  flex: 1.15;
   height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  box-shadow: none;
+  background: transparent;
+  padding: 1.5rem;
 }
+
 .window--cabinet .movie-grid {
   flex: 1;
   overflow-y: auto;
   padding-bottom: 2rem;
 }
-.window--cabinet .display-box {
+
+.window--cabinet .closet-display {
+  flex: 0.85;
   height: 100%;
   overflow-y: auto;
+  border-left: 1px solid var(--hairline);
+  background: var(--paper-deep);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-shadow: none;
 }
 
 /* About Window */
@@ -2127,4 +2142,148 @@ body.theme-contact {
 
 .cinephile-next-btn:hover {
   opacity: 0.9;
+}
+
+/* === BEATS PLAYER RADIO MODULE === */
+.native-player-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  background: var(--paper-deep);
+  height: 100%;
+  overflow-y: auto;
+}
+
+.native-player-panel .cassette-deck {
+  background: #ff4c5a;
+  border: 4px solid var(--paper);
+  border-radius: 12px;
+  width: 280px;
+  height: 150px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-lg), inset 0 0 10px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.cassette-sublabel {
+  color: var(--paper-deep);
+  font-size: 0.55rem;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 2px;
+  opacity: 0.8;
+}
+
+.native-controls {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  max-width: 280px;
+  justify-content: center;
+}
+
+.control-btn {
+  background: var(--paper);
+  border: 1px solid var(--glass-border);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  transition: all 0.2s ease;
+  flex: 1;
+  text-align: center;
+}
+
+.control-btn:hover {
+  background: rgba(251, 245, 235, 0.08);
+  border-color: var(--oxblood-soft);
+}
+
+.play-pause-btn.active {
+  background: var(--oxblood) !important;
+  border-color: var(--oxblood-soft) !important;
+  box-shadow: 0 0 10px rgba(255, 76, 90, 0.4);
+}
+
+.native-playlist {
+  width: 100%;
+  max-width: 320px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px solid var(--hairline);
+}
+
+.playlist-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.65rem;
+  color: var(--ink-soft);
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.playlist-item:hover {
+  background: rgba(251, 245, 235, 0.04);
+  color: var(--ink);
+}
+
+.playlist-item.current {
+  background: rgba(255, 76, 90, 0.08);
+  border: 1px solid rgba(255, 76, 90, 0.2);
+  color: var(--oxblood-soft);
+  font-weight: bold;
+}
+
+/* === HINT ELEMENTS IN LOGLINE GAME === */
+.hint-btn {
+  background: transparent;
+  border: none;
+  color: var(--oxblood-soft);
+  cursor: pointer;
+  font-size: 0.65rem;
+  padding: 0;
+  transition: opacity 0.2s ease;
+}
+
+.hint-btn:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.hint-reveal {
+  margin-top: 15px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--hairline);
+  animation: curio-reveal 300ms ease forwards;
+}
+
+.beats-loader .switch-btn {
+  background: var(--paper);
+  border: 1px solid var(--glass-border);
+  color: var(--ink);
+  font-size: 0.65rem;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.beats-loader .switch-btn:hover {
+  border-color: var(--oxblood-soft);
+  color: var(--oxblood-soft);
 }
