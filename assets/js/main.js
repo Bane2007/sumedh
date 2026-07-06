@@ -2,14 +2,11 @@
   'use strict';
 
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const revealables = document.querySelectorAll(
-    '.about__body, .closet-section, .sadako__grid, .sadako__pullquote, .currently, .roles__grid, .contact__list, .colophon, .crane-divider'
-  );
+  const revealables = document.querySelectorAll('.reveal');
 
   if (reduced || !('IntersectionObserver' in window)) {
-    revealables.forEach(el => el.classList.add('reveal', 'is-visible'));
+    revealables.forEach(el => el.classList.add('is-visible'));
   } else {
-    revealables.forEach(el => el.classList.add('reveal'));
     const io = new IntersectionObserver((entries) => {
       for (const entry of entries) {
         if (entry.isIntersecting) {
@@ -19,6 +16,37 @@
       }
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
     revealables.forEach(el => io.observe(el));
+  }
+
+  // --- SCROLL-LINKED APPLE-STYLE PARALLAX & ZOOM CONTROLLER ---
+  if (!reduced) {
+    const updateScrollProgress = () => {
+      const scrollY = window.scrollY;
+      document.documentElement.style.setProperty('--scroll-y', `${scrollY}px`);
+
+      const heroEl = document.querySelector('.hero');
+      if (heroEl) {
+        const heroHeight = heroEl.offsetHeight || 1;
+        const progress = Math.min(1, Math.max(0, scrollY / heroHeight));
+        document.documentElement.style.setProperty('--hero-progress', progress);
+      }
+
+      const sadakoEl = document.querySelector('.sadako');
+      if (sadakoEl) {
+        const rect = sadakoEl.getBoundingClientRect();
+        const viewHeight = window.innerHeight;
+        const totalRange = rect.height + viewHeight;
+        const currentScroll = viewHeight - rect.top;
+        const progress = Math.min(1, Math.max(0, currentScroll / totalRange));
+        document.documentElement.style.setProperty('--sadako-progress', progress);
+      }
+    };
+
+    window.addEventListener('scroll', () => {
+      requestAnimationFrame(updateScrollProgress);
+    }, { passive: true });
+
+    updateScrollProgress();
   }
 
   // --- DEFENSIVE DATABASE CHECK ---

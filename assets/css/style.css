@@ -311,15 +311,18 @@ a:focus-visible {
   margin: 0;
   width: 100%;
   max-width: 640px;
+  overflow: hidden;
+  border-radius: 2px;
 }
 .hero__portrait img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 2px;
   filter: saturate(0.92) contrast(1.02);
   box-shadow: 0 22px 50px -24px rgba(0, 0, 0, 0.7),
               0 8px 18px -10px rgba(0, 0, 0, 0.4);
+  transform: scale(calc(1.1 - var(--hero-progress, 0) * 0.1)) translateY(calc(var(--hero-progress, 0) * 20px));
+  transition: transform 120ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 .hero__tagline {
   margin: 0;
@@ -1003,11 +1006,17 @@ section, .colophon {
   .sadako__grid { grid-template-columns: 1fr; }
 }
 
-.sadako__poster img {
-  width: 100%;
+.sadako__poster {
+  overflow: hidden;
   border-radius: 2px;
   box-shadow: 0 24px 60px -28px rgba(0, 0, 0, 0.6),
               0 8px 18px -10px rgba(0, 0, 0, 0.35);
+}
+.sadako__poster img {
+  width: 100%;
+  display: block;
+  transform: scale(calc(1.05 - abs(var(--sadako-progress, 0.5) - 0.5) * 0.1)) translateY(calc((var(--sadako-progress, 0.5) - 0.5) * -15px));
+  transition: transform 120ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .sadako__title {
@@ -1139,9 +1148,21 @@ section, .colophon {
   margin: 0;
   color: var(--oxblood-soft);
 }
-.crane-divider img { display: inline-block; width: 56px; height: auto; opacity: 0.6; }
+.crane-divider img {
+  display: inline-block;
+  width: 56px;
+  height: auto;
+  opacity: 0.6;
+  transform: rotate(calc(var(--scroll-y, 0px) * 0.025deg)) translateY(calc(var(--scroll-y, 0px) * -0.04px));
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
 .crane-divider--end { margin-top: 0.75rem; color: var(--ink-soft); }
-.crane-divider--end img { width: 44px; opacity: 0.45; }
+.crane-divider--end img {
+  width: 44px;
+  opacity: 0.45;
+  transform: rotate(calc(var(--scroll-y, 0px) * -0.025deg)) translateY(calc(var(--scroll-y, 0px) * -0.04px));
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
 
 /* === IV. ROLES & RECOGNITION === */
 .roles__grid {
