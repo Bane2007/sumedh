@@ -38,7 +38,7 @@
       meta: '1968 &middot; 149 min &middot; United States',
       quote: '&ldquo;I&rsquo;m sorry, Dave. I&rsquo;m afraid I can&rsquo;t do that.&rdquo;',
       description: 'Stanley Kubrick&rsquo;s epic sci-fi masterwork traces humanity&rsquo;s evolutionary leap from prehistoric apes to the infinite cosmos, guided by mysterious black monoliths and a legendary, malfunctioning AI, HAL 9000.',
-      cover: 'https://a.ltrbxd.com/resized/film-poster/5/1/5/2/2/51522-2001-a-space-odyssey-0-230-0-345-crop.jpg'
+      cover: 'https://a.ltrbxd.com/resized/film-poster/5/1/9/8/7/51987-2001-a-space-odyssey-0-150-0-225-crop.jpg'
     },
     'shining': {
       title: 'The Shining',
@@ -46,7 +46,7 @@
       meta: '1980 &middot; 146 min &middot; United States',
       quote: '&ldquo;All work and no play makes Jack a dull boy.&rdquo;',
       description: 'As winter caretaker of the isolated Overlook Hotel, Jack Torrance falls prey to the hotel&rsquo;s supernatural, blood-drenched history, descending into violent madness that threatens his psychic son and terrified wife.',
-      cover: 'https://a.ltrbxd.com/resized/film-poster/5/1/7/4/0/51740-the-shining-0-230-0-345-crop.jpg'
+      cover: 'https://a.ltrbxd.com/resized/film-poster/5/1/4/3/2/51432-the-shining-0-150-0-225-crop.jpg'
     },
     'mulholland': {
       title: 'Mulholland Dr.',
@@ -54,7 +54,7 @@
       meta: '2001 &middot; 147 min &middot; United States',
       quote: '&ldquo;No hay banda. It is all an illusion.&rdquo;',
       description: 'David Lynch&rsquo;s dreamlike neo-noir masterpiece descends through the dark underbelly of Hollywood as an aspiring actress and a mysterious amnesiac woman unfold a surreal, shifting mystery of identity.',
-      cover: 'https://a.ltrbxd.com/resized/film-poster/5/1/5/4/0/51540-mulholland-dr-0-230-0-345-crop.jpg'
+      cover: 'https://a.ltrbxd.com/resized/film-poster/5/1/1/7/1/51171-mulholland-drive-0-150-0-225-crop.jpg'
     },
     'whiplash': {
       title: 'Whiplash',
@@ -62,7 +62,7 @@
       meta: '2014 &middot; 106 min &middot; United States',
       quote: '&ldquo;Not quite my tempo.&rdquo;',
       description: 'Under the brutal, abusive tuition of conservatory jazz instructor Terrence Fletcher, young drummer Andrew Neiman pushes himself beyond the brink of sanity and physical endurance in a manic drive for perfection.',
-      cover: 'https://a.ltrbxd.com/resized/film-poster/1/7/5/6/5/4/175654-whiplash-0-230-0-345-crop.jpg'
+      cover: 'https://a.ltrbxd.com/resized/film-poster/1/7/1/3/8/4/171384-whiplash-2014-0-150-0-225-crop.jpg'
     },
     'shawshank': {
       title: 'The Shawshank Redemption',
@@ -70,7 +70,7 @@
       meta: '1994 &middot; 142 min &middot; United States',
       quote: '&ldquo;Hope is a good thing, maybe the best of things, and no good thing ever dies.&rdquo;',
       description: 'Unjustly sentenced to life at Shawshank State Prison, banker Andy Dufresne uses his quiet intelligence, patience, and a small rock hammer to cultivate friendship, build a library, and plot a path to absolute freedom.',
-      cover: 'https://a.ltrbxd.com/resized/film-poster/5/1/8/1/8/51818-the-shawshank-redemption-0-230-0-345-crop.jpg'
+      cover: 'https://a.ltrbxd.com/resized/film-poster/5/1/7/7/8/51778-the-shawshank-redemption-0-150-0-225-crop.jpg'
     }
   };
 
