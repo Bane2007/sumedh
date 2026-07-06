@@ -40,10 +40,23 @@ const renderStars = (rating) => {
 function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children, defaultPos }) {
   const [position, setPosition] = useState(defaultPos || { x: 100, y: 80 });
   const [isDragging, setIsDragging] = useState(false);
+  const [isMaximized, setIsMaximized] = useState(window.innerWidth <= 768);
   const dragStart = useRef({ x: 0, y: 0 });
   const windowRef = useRef(null);
 
+  // Re-check mobile size on resize
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setIsMaximized(true);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const handleMouseDown = (e) => {
+    if (isMaximized) return; // Disable drag if maximized
     // Only drag on header bar click, not on close button or content
     if (e.target.classList.contains('window-header') || e.target.classList.contains('window-title')) {
       setIsDragging(true);
@@ -58,7 +71,7 @@ function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children
 
   useEffect(() => {
     const handleMouseMove = (e) => {
-      if (isDragging) {
+      if (isDragging && !isMaximized) {
         // Keep window boundaries safe
         const newX = Math.max(10, Math.min(window.innerWidth - 100, e.clientX - dragStart.current.x));
         const newY = Math.max(30, Math.min(window.innerHeight - 100, e.clientY - dragStart.current.y));
@@ -79,25 +92,37 @@ function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseup', handleMouseUp);
     };
-  }, [isDragging]);
+  }, [isDragging, isMaximized]);
 
   return (
     <div 
-      className={`window window--${id}`} 
+      className={`window window--${id} ${isMaximized ? 'maximized' : ''}`} 
       ref={windowRef} 
       style={{ 
         zIndex, 
-        left: `${position.x}px`, 
-        top: `${position.y}px`,
-        width: typeof width === 'number' ? `${width}px` : width,
-        height: typeof height === 'number' ? `${height}px` : height,
+        left: isMaximized ? '0' : `${position.x}px`, 
+        top: isMaximized ? '24px' : `${position.y}px`,
+        width: isMaximized ? '100vw' : (typeof width === 'number' ? `${width}px` : width),
+        height: isMaximized ? 'calc(100vh - 24px - 72px)' : (typeof height === 'number' ? `${height}px` : height),
         position: 'absolute'
       }}
       onMouseDown={onFocus}
     >
       <div className="window-header" onMouseDown={handleMouseDown}>
         <span className="window-title">{title}</span>
-        <div className="window-close" onClick={(e) => { e.stopPropagation(); onClose(); }}></div>
+        <div className="window-controls">
+          <div 
+            className="window-maximize" 
+            title={isMaximized ? 'Restore' : 'Maximize'}
+            onClick={(e) => { 
+              e.stopPropagation(); 
+              if (window.innerWidth > 768) {
+                setIsMaximized(!isMaximized);
+              }
+            }}
+          ></div>
+          <div className="window-close" title="Close" onClick={(e) => { e.stopPropagation(); onClose(); }}></div>
+        </div>
       </div>
       <div className="window-content">
         {children}
@@ -619,7 +644,7 @@ function App() {
         {/* The Desktop Dock */}
         <div className="dock-container">
           <div 
-            className="dock-item" 
+            className={`dock-item ${windows.some(w => w.id === 'cabinet') ? 'open' : ''}`} 
             data-label="Media Cabinet"
             onClick={() => toggleWindow('cabinet', 'Media Cabinet', 1080, 680)}
             style={{ backgroundColor: '#c8615a' }}
@@ -627,9 +652,10 @@ function App() {
             <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
               <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/>
             </svg>
+            {windows.some(w => w.id === 'cabinet') && <span className="dock-indicator"></span>}
           </div>
           <div 
-            className="dock-item" 
+            className={`dock-item ${windows.some(w => w.id === 'about') ? 'open' : ''}`} 
             data-label="About Me"
             onClick={() => toggleWindow('about', 'About Me', 520, 420)}
             style={{ backgroundColor: '#e08a82' }}
@@ -637,9 +663,10 @@ function App() {
             <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
             </svg>
+            {windows.some(w => w.id === 'about') && <span className="dock-indicator"></span>}
           </div>
           <div 
-            className="dock-item" 
+            className={`dock-item ${windows.some(w => w.id === 'sadako') ? 'open' : ''}`} 
             data-label="Sadako (2025)"
             onClick={() => toggleWindow('sadako', 'Sadako (2025)', 850, 620)}
             style={{ backgroundColor: '#9c9182' }}
@@ -647,9 +674,10 @@ function App() {
             <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
               <path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/>
             </svg>
+            {windows.some(w => w.id === 'sadako') && <span className="dock-indicator"></span>}
           </div>
           <div 
-            className="dock-item" 
+            className={`dock-item ${windows.some(w => w.id === 'contact') ? 'open' : ''}`} 
             data-label="Contact Links"
             onClick={() => toggleWindow('contact', 'Contact Links', 420, 220)}
             style={{ backgroundColor: '#4a3222' }}
@@ -657,6 +685,7 @@ function App() {
             <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
               <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
             </svg>
+            {windows.some(w => w.id === 'contact') && <span className="dock-indicator"></span>}
           </div>
         </div>
       </div>
