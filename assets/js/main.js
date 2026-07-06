@@ -134,110 +134,41 @@
 
     displayCabinetImage(film.image, film.title, film.year, 'films');
     titleEl.innerHTML = `<a href="https://letterboxd.com/film/${film.slug}/" target="_blank" rel="noopener">${film.title}</a>`;
-    directorEl.innerHTML = 'Loading details...';
+    directorEl.innerHTML = film.director && film.director !== 'N/A' ? `Directed by ${film.director}` : 'Letterboxd Record';
     
     const ratingStars = film.rating ? `<span class="rating-stars">${film.rating}</span>` : '<span style="color: var(--ink-soft); font-style: italic;">Unrated</span>';
-    metaEl.innerHTML = `${film.year} &middot; ${ratingStars}`;
+    
+    let scoreDisplay = '';
+    if (film.imdb_rating && film.imdb_rating !== 'N/A') {
+      scoreDisplay = ` &middot; <span class="rating-stars" style="color: #ffb400; font-weight: bold;">${film.imdb_rating}/10 (IMDb)</span>`;
+    }
+    metaEl.innerHTML = `${film.year} &middot; ${ratingStars}${scoreDisplay}`;
     quoteEl.style.display = 'none';
     
     const watchRow = film.watched_date && film.watched_date !== 'N/A' 
       ? `<div><dt>Watched</dt><dd>${film.watched_date}</dd></div>` 
       : '';
+      
+    const castRow = film.cast && film.cast !== 'N/A'
+      ? `<div><dt>Cast</dt><dd style="max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${film.cast}">${film.cast}</dd></div>`
+      : '';
+      
+    const plotHtml = film.plot && film.plot !== 'N/A'
+      ? `<p class="display-plot" style="margin-top: 1rem; font-size: 0.72rem; line-height: 1.45; text-align: left; color: var(--ink-soft); font-style: italic;">${film.plot}</p>`
+      : '';
 
     descEl.innerHTML = `
       <dl class="display-specs mono">
         ${watchRow}
+        ${castRow}
       </dl>
+      ${plotHtml}
     `;
-    // Asynchronously fetch OMDb metadata using search first to resolve exact movie/year
-    const queryTitle = film.title.split('&amp;').join('&');
-    const searchUrl = `https://www.omdbapi.com/?apikey=trilogy&s=${encodeURIComponent(queryTitle)}`;
-    
-    content.dataset.currentSlug = film.slug;
-    
-    fetch(searchUrl)
-      .then(response => response.json())
-      .then(searchData => {
-        if (content.dataset.currentSlug !== film.slug) return null;
-        
-        let imdbId = null;
-        if (searchData && searchData.Response === 'True' && searchData.Search) {
-          const filmYearInt = parseInt(film.year) || 0;
-          let bestMatch = null;
-          let minDiff = 999;
-          
-          for (const item of searchData.Search) {
-            if (item.Type !== 'movie') continue;
-            const cleanYearStr = item.Year.replace(/[^\d]/g, '').substring(0, 4);
-            const itemYearInt = parseInt(cleanYearStr) || 0;
-            const diff = Math.abs(itemYearInt - filmYearInt);
-            
-            if (diff <= 1 && diff < minDiff) {
-              minDiff = diff;
-              bestMatch = item;
-            }
-          }
-          
-          if (bestMatch) {
-            imdbId = bestMatch.imdbID;
-          } else {
-            const firstMovie = searchData.Search.find(item => item.Type === 'movie');
-            if (firstMovie) {
-              imdbId = firstMovie.imdbID;
-            }
-          }
-        }
-        
-        const detailUrl = imdbId 
-          ? `https://www.omdbapi.com/?apikey=trilogy&i=${imdbId}`
-          : `https://www.omdbapi.com/?apikey=trilogy&t=${encodeURIComponent(queryTitle)}&y=${film.year}`;
-          
-        return fetch(detailUrl).then(res => res.json());
-      })
-      .then(data => {
-        if (content.dataset.currentSlug !== film.slug) return;
-        if (!data) return;
-        
-        if (data.Response === 'True') {
-          directorEl.innerHTML = data.Director && data.Director !== 'N/A' ? `Directed by ${data.Director}` : 'Letterboxd Record';
-          
-          let scoreDisplay = '';
-          if (data.imdbRating && data.imdbRating !== 'N/A') {
-            scoreDisplay = ` &middot; <span class="rating-stars" style="color: #ffb400; font-weight: bold;">${data.imdbRating}/10 (IMDb)</span>`;
-          }
-          metaEl.innerHTML = `${film.year} &middot; ${ratingStars}${scoreDisplay}`;
-          
-          const castRow = data.Actors && data.Actors !== 'N/A'
-            ? `<div><dt>Cast</dt><dd style="max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${data.Actors}">${data.Actors}</dd></div>`
-            : '';
-            
-          const plotHtml = data.Plot && data.Plot !== 'N/A'
-            ? `<p class="display-plot" style="margin-top: 1rem; font-size: 0.72rem; line-height: 1.45; text-align: left; color: var(--ink-soft); font-style: italic;">${data.Plot}</p>`
-            : '';
-            
-          descEl.innerHTML = `
-            <dl class="display-specs mono">
-              ${watchRow}
-              ${castRow}
-            </dl>
-            ${plotHtml}
-          `;
-        } else {
-          directorEl.innerHTML = 'Letterboxd Record';
-        }
-      })
-      .catch(err => {
-        console.error("OMDb fetch error:", err);
-        if (content.dataset.currentSlug === film.slug) {
-          directorEl.innerHTML = 'Letterboxd Record';
-        }
-      });
 
     content.style.animation = 'none';
     content.offsetHeight; 
     content.style.animation = null;
   };
-
   const updateDisplayWithAnime = (anime) => {
     if (!displayBox) return;
     content.style.display = '';
@@ -439,9 +370,10 @@
       return;
     }
 
-    items.forEach(item => {
+    items.forEach((item, index) => {
       const card = document.createElement('div');
       card.className = 'grid-item-card';
+      card.style.animationDelay = `${index * 15}ms`;
       card.setAttribute('tabindex', '0');
 
       const inner = document.createElement('div');

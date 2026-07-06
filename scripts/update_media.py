@@ -1,4 +1,5 @@
 import urllib.request
+import urllib.parse
 import re
 import json
 import time
@@ -291,6 +292,55 @@ def fetch_letterboxd_films():
             if cached_item and watch_date == "N/A":
                 watch_date = cached_item.get("watched_date", "N/A")
             
+            director = cached_item.get("director", "") if cached_item else ""
+            cast = cached_item.get("cast", "") if cached_item else ""
+            imdb_rating = cached_item.get("imdb_rating", "") if cached_item else ""
+            plot = cached_item.get("plot", "") if cached_item else ""
+            
+            if not director and not cast and not imdb_rating:
+                try:
+                    time.sleep(0.3)
+                    query_title = name.replace("&amp;", "&")
+                    search_url = f"https://www.omdbapi.com/?apikey=trilogy&s={urllib.parse.quote(query_title)}"
+                    search_req = urllib.request.Request(search_url, headers=headers)
+                    with urllib.request.urlopen(search_req) as res:
+                        search_data = json.loads(res.read().decode('utf-8'))
+                    
+                    imdb_id = None
+                    if search_data and search_data.get("Response") == "True" and search_data.get("Search"):
+                        film_year_int = int(year) if year.isdigit() else 0
+                        best_match = None
+                        min_diff = 999
+                        for item in search_data["Search"]:
+                            if item.get("Type") != "movie":
+                                continue
+                            clean_yr = re.sub(r'[^\d]', '', item.get("Year", ""))[:4]
+                            item_year_int = int(clean_yr) if clean_yr.isdigit() else 0
+                            diff = abs(item_year_int - film_year_int)
+                            if diff <= 1 and diff < min_diff:
+                                min_diff = diff
+                                best_match = item
+                        if best_match:
+                            imdb_id = best_match.get("imdbID")
+                        else:
+                            first_movie = next((x for x in search_data["Search"] if x.get("Type") == "movie"), None)
+                            if first_movie:
+                                imdb_id = first_movie.get("imdbID")
+                                
+                    detail_url = f"https://www.omdbapi.com/?apikey=trilogy&i={imdb_id}" if imdb_id else f"https://www.omdbapi.com/?apikey=trilogy&t={urllib.parse.quote(query_title)}&y={year}"
+                    detail_req = urllib.request.Request(detail_url, headers=headers)
+                    with urllib.request.urlopen(detail_req) as res:
+                        data = json.loads(res.read().decode('utf-8'))
+                    
+                    if data and data.get("Response") == "True":
+                        director = data.get("Director", "")
+                        cast = data.get("Actors", "")
+                        imdb_rating = data.get("imdbRating", "")
+                        plot = data.get("Plot", "")
+                        print(f"Enriched {name} from OMDb: Director={director}, Rating={imdb_rating}")
+                except Exception as e:
+                    print(f"Error enriching {name} from OMDb: {e}")
+                    
             if not any(f['slug'] == slug for f in films):
                 films.append({
                     'title': name,
@@ -298,7 +348,11 @@ def fetch_letterboxd_films():
                     'year': year,
                     'rating': rating,
                     'image': image_url,
-                    'watched_date': watch_date
+                    'watched_date': watch_date,
+                    'director': director,
+                    'cast': cast,
+                    'imdb_rating': imdb_rating,
+                    'plot': plot
                 })
                 page_films_count += 1
                 
