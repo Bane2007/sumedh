@@ -72,7 +72,6 @@ function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children
   useEffect(() => {
     const handleMouseMove = (e) => {
       if (isDragging && !isMaximized) {
-        // Keep window boundaries safe
         const newX = Math.max(10, Math.min(window.innerWidth - 100, e.clientX - dragStart.current.x));
         const newY = Math.max(30, Math.min(window.innerHeight - 100, e.clientY - dragStart.current.y));
         setPosition({ x: newX, y: newY });
@@ -103,7 +102,7 @@ function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children
         left: isMaximized ? '0' : `${position.x}px`, 
         top: isMaximized ? '24px' : `${position.y}px`,
         width: isMaximized ? '100vw' : (typeof width === 'number' ? `${width}px` : width),
-        height: isMaximized ? 'calc(100vh - 24px - 72px)' : (typeof height === 'number' ? `${height}px` : height),
+        height: isMaximized ? 'calc(100vh - 24px - 10px)' : (typeof height === 'number' ? `${height}px` : height),
         position: 'absolute'
       }}
       onMouseDown={onFocus}
@@ -164,54 +163,28 @@ function App() {
         const db = JSON.parse(jsonStr);
         setMediaDb(db);
         
-        // Open Media Cabinet by default
         const initialItem = db.films && db.films.length > 0 ? db.films[0] : null;
         setSelectedItem(initialItem);
         if (initialItem && initialItem.image) {
           setDisplayBg(initialItem.image);
         }
-
-        // Initialize default window stack
-        const w = window.innerWidth;
-        const h = window.innerHeight;
-        
-        // Setup Media Cabinet window default coordinates (centered)
-        const cabW = Math.min(1080, w - 40);
-        const cabH = Math.min(680, h - 100);
-        const cabX = (w - cabW) / 2;
-        const cabY = (h - cabH) / 2;
-
-        setWindows([
-          {
-            id: 'cabinet',
-            title: 'Media Cabinet',
-            width: cabW,
-            height: cabH,
-            x: cabX,
-            y: cabY,
-            zIndex: 25
-          }
-        ]);
       })
       .catch(err => console.error("Failed to load media database:", err));
   }, []);
 
-  // Handle open window
-  const toggleWindow = (id, title, width, height) => {
+  // Handle open/focus window
+  const openWindow = (id, title, width, height) => {
     const existing = windows.find(w => w.id === id);
     if (existing) {
-      // If already open, close it or focus it
-      // Let's bring it to focus:
       focusWindow(id);
       return;
     }
 
-    // Centered coordinates
     const w = window.innerWidth;
     const h = window.innerHeight;
     const winW = Math.min(width, w - 40);
     const winH = Math.min(height, h - 100);
-    const x = (w - winW) / 2 + (windows.length * 20); // slightly staggered
+    const x = (w - winW) / 2 + (windows.length * 20);
     const y = (h - winH) / 2 + (windows.length * 15);
 
     const newWindow = { id, title, width: winW, height: winH, x, y, zIndex: maxZ + 1 };
@@ -305,17 +278,25 @@ function App() {
     }
   };
 
+  // Dynamic wallpaper setup using user portrait with dark editorial styling
+  const wallpaperStyle = {
+    backgroundImage: `linear-gradient(rgba(18, 14, 11, 0.45), rgba(18, 14, 11, 0.78)), url(${import.meta.env.BASE_URL}assets/img/portrait.jpg)`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center 20%',
+    backgroundRepeat: 'no-repeat'
+  };
+
   return (
     <>
       {/* Top Status Bar */}
       <div className="status-bar">
         <div className="status-left">
-          <span>SumedhOS v1.1</span>
+          <span>SumedhOS v1.2</span>
           <span>{currentTime}</span>
         </div>
         <div className="status-right">
-          <span>System: Stable</span>
-          <span>CPU: 1%</span>
+          <span>System: Active</span>
+          <span>CPU: 2%</span>
         </div>
       </div>
 
@@ -331,8 +312,71 @@ function App() {
         <div className="bg-cranes__crane bg-cranes__crane--c"></div>
       </div>
 
-      {/* Main Desktop Space */}
-      <div className="desktop">
+      {/* Main Desktop Space with Custom Portrait Wallpaper */}
+      <div className="desktop" style={wallpaperStyle}>
+        
+        {/* Desktop Shortcuts (App Icons on screen) */}
+        <div className="desktop-shortcuts">
+          <div 
+            className="shortcut-item" 
+            onClick={() => openWindow('cabinet', 'Media Cabinet', 1080, 680)}
+            title="Open film, anime, and manga lists"
+          >
+            <div className="shortcut-icon" style={{ backgroundColor: '#c8615a' }}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/>
+              </svg>
+            </div>
+            <span className="shortcut-label">Media Cabinet</span>
+          </div>
+
+          <div 
+            className="shortcut-item" 
+            onClick={() => openWindow('about', 'About Me', 520, 420)}
+            title="Biographical details and technical profile"
+          >
+            <div className="shortcut-icon" style={{ backgroundColor: '#e08a82' }}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+              </svg>
+            </div>
+            <span className="shortcut-label">About Me</span>
+          </div>
+
+          <div 
+            className="shortcut-item" 
+            onClick={() => openWindow('sadako', 'Sadako (2025)', 850, 620)}
+            title="Details on the award-winning stop-motion film"
+          >
+            <div className="shortcut-icon" style={{ backgroundColor: '#9c9182' }}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/>
+              </svg>
+            </div>
+            <span className="shortcut-label">Sadako (2025)</span>
+          </div>
+
+          <div 
+            className="shortcut-item" 
+            onClick={() => openWindow('contact', 'Contact Links', 420, 220)}
+            title="External portfolios, social networks and profiles"
+          >
+            <div className="shortcut-icon" style={{ backgroundColor: '#4a3222' }}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+            </div>
+            <span className="shortcut-label">Contact</span>
+          </div>
+        </div>
+
+        {/* Brand Overlay / Watermark */}
+        <div className="desktop-brand">
+          <div className="brand-title">SUMEDH JAMSANDEKAR</div>
+          <div className="brand-subtitle mono">WRITER / DIRECTOR / ENGINEER</div>
+        </div>
+
+        {/* Windows Rendering */}
         {windows.map((win) => (
           <OSWindow
             key={win.id}
@@ -370,7 +414,6 @@ function App() {
                 </div>
 
                 <div className="closet-container" style={{ position: 'relative', height: 'calc(100% - 40px)', minHeight: 'auto' }}>
-                  {/* Ambient background glow inside window */}
                   <div 
                     className="closet-display-bg" 
                     style={{ 
@@ -640,54 +683,6 @@ function App() {
             )}
           </OSWindow>
         ))}
-
-        {/* The Desktop Dock */}
-        <div className="dock-container">
-          <div 
-            className={`dock-item ${windows.some(w => w.id === 'cabinet') ? 'open' : ''}`} 
-            data-label="Media Cabinet"
-            onClick={() => toggleWindow('cabinet', 'Media Cabinet', 1080, 680)}
-            style={{ backgroundColor: '#c8615a' }}
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-              <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/>
-            </svg>
-            {windows.some(w => w.id === 'cabinet') && <span className="dock-indicator"></span>}
-          </div>
-          <div 
-            className={`dock-item ${windows.some(w => w.id === 'about') ? 'open' : ''}`} 
-            data-label="About Me"
-            onClick={() => toggleWindow('about', 'About Me', 520, 420)}
-            style={{ backgroundColor: '#e08a82' }}
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
-            </svg>
-            {windows.some(w => w.id === 'about') && <span className="dock-indicator"></span>}
-          </div>
-          <div 
-            className={`dock-item ${windows.some(w => w.id === 'sadako') ? 'open' : ''}`} 
-            data-label="Sadako (2025)"
-            onClick={() => toggleWindow('sadako', 'Sadako (2025)', 850, 620)}
-            style={{ backgroundColor: '#9c9182' }}
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-              <path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/>
-            </svg>
-            {windows.some(w => w.id === 'sadako') && <span className="dock-indicator"></span>}
-          </div>
-          <div 
-            className={`dock-item ${windows.some(w => w.id === 'contact') ? 'open' : ''}`} 
-            data-label="Contact Links"
-            onClick={() => toggleWindow('contact', 'Contact Links', 420, 220)}
-            style={{ backgroundColor: '#4a3222' }}
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-            </svg>
-            {windows.some(w => w.id === 'contact') && <span className="dock-indicator"></span>}
-          </div>
-        </div>
       </div>
     </>
   );
