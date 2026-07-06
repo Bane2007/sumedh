@@ -148,11 +148,11 @@
       img.style.borderRadius = '2px';
       img.style.boxShadow = '0 4px 10px rgba(0,0,0,0.5)';
       img.alt = title;
+      img.setAttribute('referrerpolicy', 'no-referrer');
       img.onload = () => {
         fallback.replaceWith(img);
       };
-      // Use proxy for all external images to bypass hotlinking/CORS protection.
-      img.src = 'https://images.weserv.nl/?url=' + encodeURIComponent(imageUrl);
+      img.src = imageUrl;
     }
   };
 
@@ -353,17 +353,16 @@
       fallback.innerHTML = generateGenericCover(item.title, item.year);
       inner.appendChild(fallback);
 
-      // Asynchronously load image
       if (item.image) {
         const img = document.createElement('img');
         img.className = 'card-poster-img';
         img.loading = 'lazy';
         img.alt = item.title;
+        img.setAttribute('referrerpolicy', 'no-referrer');
         img.onload = () => {
           fallback.replaceWith(img);
         };
-        // Use proxy for all external images to bypass hotlinking/CORS protection.
-        img.src = 'https://images.weserv.nl/?url=' + encodeURIComponent(item.image);
+        img.src = item.image;
       }
 
       const overlay = document.createElement('div');
