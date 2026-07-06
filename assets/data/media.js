@@ -9,7 +9,7 @@ window.mediaDatabase = {
       "watched_date": "2026-07-05"
     },
     {
-      "title": "Minions &amp; Monsters",
+      "title": "Minions & Monsters",
       "slug": "minions-monsters-2026",
       "year": "2026",
       "rating": "★★★½",
@@ -609,7 +609,7 @@ window.mediaDatabase = {
       "watched_date": "N/A"
     },
     {
-      "title": "JoJo&#039;s Bizarre Adventure: Phantom Blood",
+      "title": "JoJo's Bizarre Adventure: Phantom Blood",
       "slug": "jojos-bizarre-adventure-phantom-blood-2012",
       "year": "2012",
       "rating": "",
@@ -617,7 +617,7 @@ window.mediaDatabase = {
       "watched_date": "N/A"
     },
     {
-      "title": "JoJo&#039;s Bizarre Adventure: Stone Ocean",
+      "title": "JoJo's Bizarre Adventure: Stone Ocean",
       "slug": "jojos-bizarre-adventure-stone-ocean",
       "year": "2021",
       "rating": "",
@@ -625,7 +625,7 @@ window.mediaDatabase = {
       "watched_date": "N/A"
     },
     {
-      "title": "JoJo&#039;s Bizarre Adventure: Golden Wind",
+      "title": "JoJo's Bizarre Adventure: Golden Wind",
       "slug": "jojos-bizarre-adventure-golden-wind",
       "year": "2018",
       "rating": "",
@@ -641,7 +641,7 @@ window.mediaDatabase = {
       "watched_date": "N/A"
     },
     {
-      "title": "JoJo&#039;s Bizarre Adventure: Stardust Crusaders",
+      "title": "JoJo's Bizarre Adventure: Stardust Crusaders",
       "slug": "jojos-bizarre-adventure-stardust-crusaders",
       "year": "2014",
       "rating": "",
@@ -681,7 +681,7 @@ window.mediaDatabase = {
       "watched_date": "N/A"
     },
     {
-      "title": "JoJo&#039;s Bizarre Adventure: Diamond is Unbreakable",
+      "title": "JoJo's Bizarre Adventure: Diamond is Unbreakable",
       "slug": "jojos-bizarre-adventure-diamond-is-unbreakable",
       "year": "2016",
       "rating": "",
@@ -745,7 +745,7 @@ window.mediaDatabase = {
       "watched_date": "N/A"
     },
     {
-      "title": "Frieren: Beyond Journey&#039;s End",
+      "title": "Frieren: Beyond Journey's End",
       "slug": "frieren-beyond-journeys-end",
       "year": "2023",
       "rating": "",
@@ -817,7 +817,7 @@ window.mediaDatabase = {
       "watched_date": "N/A"
     },
     {
-      "title": "Baby&#039;s Day Out",
+      "title": "Baby's Day Out",
       "slug": "babys-day-out",
       "year": "1994",
       "rating": "",
@@ -889,7 +889,7 @@ window.mediaDatabase = {
       "watched_date": "N/A"
     },
     {
-      "title": "Tom &amp; Jerry",
+      "title": "Tom & Jerry",
       "slug": "tom-jerry-2021",
       "year": "2021",
       "rating": "",
@@ -1153,7 +1153,7 @@ window.mediaDatabase = {
       "watched_date": "N/A"
     },
     {
-      "title": "Mr. Bean&#039;s Holiday",
+      "title": "Mr. Bean's Holiday",
       "slug": "mr-beans-holiday",
       "year": "2007",
       "rating": "",
@@ -1201,7 +1201,7 @@ window.mediaDatabase = {
       "watched_date": "N/A"
     },
     {
-      "title": "You Don&#039;t Mess with the Zohan",
+      "title": "You Don't Mess with the Zohan",
       "slug": "you-dont-mess-with-the-zohan",
       "year": "2008",
       "rating": "",
@@ -1217,7 +1217,7 @@ window.mediaDatabase = {
       "watched_date": "N/A"
     },
     {
-      "title": "Gnomeo &amp; Juliet",
+      "title": "Gnomeo & Juliet",
       "slug": "gnomeo-juliet",
       "year": "2011",
       "rating": "",
@@ -1505,7 +1505,7 @@ window.mediaDatabase = {
       "watched_date": "N/A"
     },
     {
-      "title": "Fast &amp; Furious Presents: Hobbs &amp; Shaw",
+      "title": "Fast & Furious Presents: Hobbs & Shaw",
       "slug": "fast-furious-presents-hobbs-shaw",
       "year": "2019",
       "rating": "",
@@ -1529,7 +1529,7 @@ window.mediaDatabase = {
       "watched_date": "N/A"
     },
     {
-      "title": "Madagascar 3: Europe&#039;s Most Wanted",
+      "title": "Madagascar 3: Europe's Most Wanted",
       "slug": "madagascar-3-europes-most-wanted",
       "year": "2012",
       "rating": "",
@@ -2129,7 +2129,7 @@ window.mediaDatabase = {
       "watched_date": "N/A"
     },
     {
-      "title": "Zack Snyder&#039;s Justice League",
+      "title": "Zack Snyder's Justice League",
       "slug": "zack-snyders-justice-league",
       "year": "2021",
       "rating": "",
@@ -2169,7 +2169,7 @@ window.mediaDatabase = {
       "watched_date": "N/A"
     },
     {
-      "title": "A Bug&#039;s Life",
+      "title": "A Bug's Life",
       "slug": "a-bugs-life",
       "year": "1998",
       "rating": "",
@@ -2385,7 +2385,7 @@ window.mediaDatabase = {
       "watched_date": "N/A"
     },
     {
-      "title": "The Emperor&#039;s New Groove",
+      "title": "The Emperor's New Groove",
       "slug": "the-emperors-new-groove",
       "year": "2000",
       "rating": "★★★★",
@@ -2513,7 +2513,7 @@ window.mediaDatabase = {
       "watched_date": "N/A"
     },
     {
-      "title": "Guillermo del Toro&#039;s Pinocchio",
+      "title": "Guillermo del Toro's Pinocchio",
       "slug": "guillermo-del-toros-pinocchio",
       "year": "2022",
       "rating": "★★★★",
@@ -3361,7 +3361,7 @@ window.mediaDatabase = {
       "watched_date": "N/A"
     },
     {
-      "title": "Don&#039;t Look Up",
+      "title": "Don't Look Up",
       "slug": "dont-look-up-2021",
       "year": "2021",
       "rating": "",
@@ -3385,7 +3385,7 @@ window.mediaDatabase = {
       "watched_date": "N/A"
     },
     {
-      "title": "Howl&#039;s Moving Castle",
+      "title": "Howl's Moving Castle",
       "slug": "howls-moving-castle",
       "year": "2004",
       "rating": "",
@@ -3473,7 +3473,7 @@ window.mediaDatabase = {
       "watched_date": "N/A"
     },
     {
-      "title": "Deadpool &amp; Wolverine",
+      "title": "Deadpool & Wolverine",
       "slug": "deadpool-wolverine",
       "year": "2024",
       "rating": "★★★★½",
@@ -3723,25 +3723,6 @@ window.mediaDatabase = {
   ],
   "anime": [
     {
-      "title": "Re:Zero kara Hajimeru Isekai Seikatsu 3rd Season",
-      "id": 54857,
-      "url": "https://myanimelist.net/anime/54857/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_3rd_Season",
-      "year": "2024",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/images/anime/1706/144725.jpg",
-      "genres": [
-        "Drama",
-        "Fantasy",
-        "Suspense"
-      ],
-      "episodes": 16,
-      "updated_at": 1783278332,
-      "status": "completed",
-      "start_date": "2026-07-03",
-      "finish_date": "2026-07-05",
-      "sort_date": "2026-07-05"
-    },
-    {
       "title": "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo 3rd Season",
       "id": 62811,
       "url": "https://myanimelist.net/anime/62811/Kimi_no_Koto_ga_Daidaidaidaidaisuki_na_100-nin_no_Kanojo_3rd_Season",
@@ -3796,6 +3777,64 @@ window.mediaDatabase = {
       "start_date": "2026-07-04",
       "finish_date": "N/A",
       "sort_date": "2026-07-04"
+    },
+    {
+      "title": "Steel Ball Run: JoJo no Kimyou na Bouken",
+      "id": 61469,
+      "url": "https://myanimelist.net/anime/61469/Steel_Ball_Run__JoJo_no_Kimyou_na_Bouken",
+      "year": "2026",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/images/anime/1448/154111.jpg",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Mystery",
+        "Supernatural"
+      ],
+      "episodes": 0,
+      "updated_at": 1773938594,
+      "status": "watching",
+      "start_date": "2026-03-19",
+      "finish_date": "N/A",
+      "sort_date": "2026-03-19"
+    },
+    {
+      "title": "One Piece",
+      "id": 21,
+      "url": "https://myanimelist.net/anime/21/One_Piece",
+      "year": "1999",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/images/anime/1244/138851.jpg",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "episodes": 1045,
+      "updated_at": 1767945059,
+      "status": "watching",
+      "start_date": "2022-09-01",
+      "finish_date": "N/A",
+      "sort_date": "2022-09-01"
+    },
+    {
+      "title": "Re:Zero kara Hajimeru Isekai Seikatsu 3rd Season",
+      "id": 54857,
+      "url": "https://myanimelist.net/anime/54857/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_3rd_Season",
+      "year": "2024",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/images/anime/1706/144725.jpg",
+      "genres": [
+        "Drama",
+        "Fantasy",
+        "Suspense"
+      ],
+      "episodes": 16,
+      "updated_at": 1783278332,
+      "status": "completed",
+      "start_date": "2026-07-03",
+      "finish_date": "2026-07-05",
+      "sort_date": "2026-07-05"
     },
     {
       "title": "Koori no Jouheki",
@@ -4126,26 +4165,6 @@ window.mediaDatabase = {
       "sort_date": "2026-03-26"
     },
     {
-      "title": "Steel Ball Run: JoJo no Kimyou na Bouken",
-      "id": 61469,
-      "url": "https://myanimelist.net/anime/61469/Steel_Ball_Run__JoJo_no_Kimyou_na_Bouken",
-      "year": "2026",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/images/anime/1448/154111.jpg",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Mystery",
-        "Supernatural"
-      ],
-      "episodes": 0,
-      "updated_at": 1773938594,
-      "status": "watching",
-      "start_date": "2026-03-19",
-      "finish_date": "N/A",
-      "sort_date": "2026-03-19"
-    },
-    {
       "title": "Kaguya-sama wa Kokurasetai: Otona e no Kaidan",
       "id": 61903,
       "url": "https://myanimelist.net/anime/61903/Kaguya-sama_wa_Kokurasetai__Otona_e_no_Kaidan",
@@ -4181,6 +4200,24 @@ window.mediaDatabase = {
       "sort_date": "2026-01-08"
     },
     {
+      "title": "Cyberpunk: Edgerunners",
+      "id": 42310,
+      "url": "https://myanimelist.net/anime/42310/Cyberpunk__Edgerunners",
+      "year": "2022",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/images/anime/1818/126435.jpg",
+      "genres": [
+        "Action",
+        "Sci-Fi"
+      ],
+      "episodes": 10,
+      "updated_at": 1759427906,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2025-10-02"
+    },
+    {
       "title": "Kimetsu no Yaiba Movie 1: Mugenjou-hen - Akaza Sairai",
       "id": 59192,
       "url": "https://myanimelist.net/anime/59192/Kimetsu_no_Yaiba_Movie_1__Mugenjou-hen_-_Akaza_Sairai",
@@ -4194,6 +4231,23 @@ window.mediaDatabase = {
       ],
       "episodes": 1,
       "updated_at": 1759428604,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2025-10-02"
+    },
+    {
+      "title": "Sono Bisque Doll wa Koi wo Suru",
+      "id": 48736,
+      "url": "https://myanimelist.net/anime/48736/Sono_Bisque_Doll_wa_Koi_wo_Suru",
+      "year": "2022",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/anime/1179/119897.jpg",
+      "genres": [
+        "Romance"
+      ],
+      "episodes": 12,
+      "updated_at": 1759429146,
       "status": "completed",
       "start_date": "N/A",
       "finish_date": "N/A",
@@ -4431,6 +4485,66 @@ window.mediaDatabase = {
       "start_date": "2024-07-04",
       "finish_date": "2024-09-19",
       "sort_date": "2024-09-19"
+    },
+    {
+      "title": "Mushoku Tensei: Isekai Ittara Honki Dasu",
+      "id": 39535,
+      "url": "https://myanimelist.net/anime/39535/Mushoku_Tensei__Isekai_Ittara_Honki_Dasu",
+      "year": "2021",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/images/anime/1530/117776.jpg",
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Fantasy",
+        "Ecchi"
+      ],
+      "episodes": 11,
+      "updated_at": 1719989878,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2024-07-03"
+    },
+    {
+      "title": "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2",
+      "id": 45576,
+      "url": "https://myanimelist.net/anime/45576/Mushoku_Tensei__Isekai_Ittara_Honki_Dasu_Part_2",
+      "year": "2021",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/images/anime/1028/117777.jpg",
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Fantasy",
+        "Ecchi"
+      ],
+      "episodes": 12,
+      "updated_at": 1719989883,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2024-07-03"
+    },
+    {
+      "title": "Mushoku Tensei II: Isekai Ittara Honki Dasu",
+      "id": 51179,
+      "url": "https://myanimelist.net/anime/51179/Mushoku_Tensei_II__Isekai_Ittara_Honki_Dasu",
+      "year": "2023",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/images/anime/1898/138005.jpg",
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Fantasy",
+        "Ecchi"
+      ],
+      "episodes": 12,
+      "updated_at": 1719989876,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2024-07-03"
     },
     {
       "title": "Kimetsu no Yaiba: Hashira Geiko-hen",
@@ -4713,6 +4827,63 @@ window.mediaDatabase = {
       "sort_date": "2024-03-23"
     },
     {
+      "title": "Kill la Kill",
+      "id": 18679,
+      "url": "https://myanimelist.net/anime/18679/Kill_la_Kill",
+      "year": "2013",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/anime/1464/111943.jpg",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Fantasy",
+        "Ecchi"
+      ],
+      "episodes": 24,
+      "updated_at": 1710622401,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2024-03-17"
+    },
+    {
+      "title": "Samurai Flamenco",
+      "id": 19365,
+      "url": "https://myanimelist.net/anime/19365/Samurai_Flamenco",
+      "year": "2013",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/anime/11/54319.jpg",
+      "genres": [
+        "Action",
+        "Comedy"
+      ],
+      "episodes": 22,
+      "updated_at": 1710622403,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2024-03-17"
+    },
+    {
+      "title": "Omoide no Marnie",
+      "id": 21557,
+      "url": "https://myanimelist.net/anime/21557/Omoide_no_Marnie",
+      "year": "2014",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/anime/7/64293.jpg",
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Suspense"
+      ],
+      "episodes": 1,
+      "updated_at": 1710622408,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2024-03-17"
+    },
+    {
       "title": "Deca-Dence",
       "id": 40056,
       "url": "https://myanimelist.net/anime/40056/Deca-Dence",
@@ -4899,6 +5070,25 @@ window.mediaDatabase = {
       "sort_date": "2023-12-23"
     },
     {
+      "title": "Code Geass: Hangyaku no Lelouch",
+      "id": 1575,
+      "url": "https://myanimelist.net/anime/1575/Code_Geass__Hangyaku_no_Lelouch",
+      "year": "2006",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/images/anime/1032/135088.jpg",
+      "genres": [
+        "Award Winning",
+        "Drama",
+        "Sci-Fi"
+      ],
+      "episodes": 25,
+      "updated_at": 1702977437,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-12-19"
+    },
+    {
       "title": "Shy",
       "id": 53237,
       "url": "https://myanimelist.net/anime/53237/Shy",
@@ -4917,23 +5107,136 @@ window.mediaDatabase = {
       "sort_date": "2023-12-19"
     },
     {
-      "title": "Code Geass: Hangyaku no Lelouch",
-      "id": 1575,
-      "url": "https://myanimelist.net/anime/1575/Code_Geass__Hangyaku_no_Lelouch",
-      "year": "2006",
+      "title": "Shingeki no Kyojin Season 3",
+      "id": 35760,
+      "url": "https://myanimelist.net/anime/35760/Shingeki_no_Kyojin_Season_3",
+      "year": "2018",
       "score": 8,
-      "image": "https://cdn.myanimelist.net/images/anime/1032/135088.jpg",
+      "image": "https://cdn.myanimelist.net/images/anime/1173/92110.jpg",
       "genres": [
-        "Award Winning",
+        "Action",
         "Drama",
-        "Sci-Fi"
+        "Suspense"
       ],
-      "episodes": 25,
-      "updated_at": 1702977437,
+      "episodes": 12,
+      "updated_at": 1701358202,
       "status": "completed",
       "start_date": "N/A",
       "finish_date": "N/A",
-      "sort_date": "2023-12-09"
+      "sort_date": "2023-11-30"
+    },
+    {
+      "title": "Shingeki no Kyojin: The Final Season - Kanketsu-hen",
+      "id": 51535,
+      "url": "https://myanimelist.net/anime/51535/Shingeki_no_Kyojin__The_Final_Season_-_Kanketsu-hen",
+      "year": "2023",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/images/anime/1279/131078.jpg",
+      "genres": [
+        "Action",
+        "Drama",
+        "Suspense"
+      ],
+      "episodes": 2,
+      "updated_at": 1699198136,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-11-05"
+    },
+    {
+      "title": "86 Part 2",
+      "id": 48569,
+      "url": "https://myanimelist.net/anime/48569/86_Part_2",
+      "year": "2021",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/anime/1321/117508.jpg",
+      "genres": [
+        "Drama",
+        "Sci-Fi"
+      ],
+      "episodes": 12,
+      "updated_at": 1697809399,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-10-20"
+    },
+    {
+      "title": "Shingeki no Kyojin: The Final Season Part 2",
+      "id": 48583,
+      "url": "https://myanimelist.net/anime/48583/Shingeki_no_Kyojin__The_Final_Season_Part_2",
+      "year": "2022",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/images/anime/1948/120625.jpg",
+      "genres": [
+        "Action",
+        "Drama",
+        "Suspense"
+      ],
+      "episodes": 12,
+      "updated_at": 1697809499,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-10-20"
+    },
+    {
+      "title": "Kotonoha no Niwa",
+      "id": 16782,
+      "url": "https://myanimelist.net/anime/16782/Kotonoha_no_Niwa",
+      "year": "2013",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/anime/1597/112995.jpg",
+      "genres": [
+        "Award Winning",
+        "Drama",
+        "Romance"
+      ],
+      "episodes": 1,
+      "updated_at": 1697809459,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-10-20"
+    },
+    {
+      "title": "Kimi no Na wa.",
+      "id": 32281,
+      "url": "https://myanimelist.net/anime/32281/Kimi_no_Na_wa",
+      "year": "2016",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/anime/5/87048.jpg",
+      "genres": [
+        "Award Winning",
+        "Drama"
+      ],
+      "episodes": 1,
+      "updated_at": 1697809444,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-10-20"
+    },
+    {
+      "title": "Renai Flops",
+      "id": 51403,
+      "url": "https://myanimelist.net/anime/51403/Renai_Flops",
+      "year": "2022",
+      "score": 5,
+      "image": "https://cdn.myanimelist.net/images/anime/1620/130589.jpg",
+      "genres": [
+        "Comedy",
+        "Romance",
+        "Sci-Fi",
+        "Ecchi"
+      ],
+      "episodes": 12,
+      "updated_at": 1696760743,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-10-08"
     },
     {
       "title": "Akame ga Kill!",
@@ -4954,6 +5257,131 @@ window.mediaDatabase = {
       "sort_date": "2023-10-06"
     },
     {
+      "title": "Dekiru Neko wa Kyou mo Yuuutsu",
+      "id": 51916,
+      "url": "https://myanimelist.net/anime/51916/Dekiru_Neko_wa_Kyou_mo_Yuuutsu",
+      "year": "2023",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/anime/1074/136720.jpg",
+      "genres": [
+        "Comedy"
+      ],
+      "episodes": 13,
+      "updated_at": 1696093726,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-09-30"
+    },
+    {
+      "title": "Kimetsu no Yaiba: Yuukaku-hen",
+      "id": 47778,
+      "url": "https://myanimelist.net/anime/47778/Kimetsu_no_Yaiba__Yuukaku-hen",
+      "year": "2021",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/anime/1908/120036.jpg",
+      "genres": [
+        "Action",
+        "Supernatural"
+      ],
+      "episodes": 11,
+      "updated_at": 1695997064,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-09-29"
+    },
+    {
+      "title": "Horimiya",
+      "id": 42897,
+      "url": "https://myanimelist.net/anime/42897/Horimiya",
+      "year": "2021",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/images/anime/1695/111486.jpg",
+      "genres": [
+        "Romance"
+      ],
+      "episodes": 13,
+      "updated_at": 1696007273,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-09-29"
+    },
+    {
+      "title": "Undead Girl Murder Farce",
+      "id": 54790,
+      "url": "https://myanimelist.net/anime/54790/Undead_Girl_Murder_Farce",
+      "year": "2023",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/images/anime/1946/136661.jpg",
+      "genres": [
+        "Fantasy",
+        "Mystery"
+      ],
+      "episodes": 13,
+      "updated_at": 1695922209,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-09-28"
+    },
+    {
+      "title": "Horimiya: Piece",
+      "id": 54856,
+      "url": "https://myanimelist.net/anime/54856/Horimiya__Piece",
+      "year": "2023",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/images/anime/1007/136277.jpg",
+      "genres": [
+        "Romance"
+      ],
+      "episodes": 13,
+      "updated_at": 1695649798,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-09-25"
+    },
+    {
+      "title": "Mob Psycho 100 III",
+      "id": 50172,
+      "url": "https://myanimelist.net/anime/50172/Mob_Psycho_100_III",
+      "year": "2022",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/images/anime/1228/125011.jpg",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Supernatural"
+      ],
+      "episodes": 12,
+      "updated_at": 1695655691,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-09-25"
+    },
+    {
+      "title": "Steins;Gate",
+      "id": 9253,
+      "url": "https://myanimelist.net/anime/9253/Steins_Gate",
+      "year": "2011",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/images/anime/1935/127974.jpg",
+      "genres": [
+        "Drama",
+        "Sci-Fi",
+        "Suspense"
+      ],
+      "episodes": 24,
+      "updated_at": 1695655772,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-09-25"
+    },
+    {
       "title": "Satsuriku no Tenshi",
       "id": 35994,
       "url": "https://myanimelist.net/anime/35994/Satsuriku_no_Tenshi",
@@ -4970,27 +5398,46 @@ window.mediaDatabase = {
       "status": "completed",
       "start_date": "N/A",
       "finish_date": "N/A",
-      "sort_date": "2023-09-04"
+      "sort_date": "2023-09-13"
     },
     {
-      "title": "Renai Flops",
-      "id": 51403,
-      "url": "https://myanimelist.net/anime/51403/Renai_Flops",
-      "year": "2022",
-      "score": 5,
-      "image": "https://cdn.myanimelist.net/images/anime/1620/130589.jpg",
+      "title": "Shinseiki Evangelion",
+      "id": 30,
+      "url": "https://myanimelist.net/anime/30/Shinseiki_Evangelion",
+      "year": "1995",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/anime/1314/108941.jpg",
       "genres": [
-        "Comedy",
-        "Romance",
+        "Avant Garde",
+        "Award Winning",
+        "Drama",
         "Sci-Fi",
-        "Ecchi"
+        "Suspense"
       ],
-      "episodes": 12,
-      "updated_at": 1696760743,
+      "episodes": 26,
+      "updated_at": 1693323577,
       "status": "completed",
       "start_date": "N/A",
       "finish_date": "N/A",
-      "sort_date": "2023-08-18"
+      "sort_date": "2023-08-29"
+    },
+    {
+      "title": "Shimoneta to Iu Gainen ga Sonzai Shinai Taikutsu na Sekai",
+      "id": 29786,
+      "url": "https://myanimelist.net/anime/29786/Shimoneta_to_Iu_Gainen_ga_Sonzai_Shinai_Taikutsu_na_Sekai",
+      "year": "2015",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/images/anime/6/75106.jpg",
+      "genres": [
+        "Comedy",
+        "Ecchi"
+      ],
+      "episodes": 12,
+      "updated_at": 1693323516,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-08-29"
     },
     {
       "title": "Steins;Gate: Kyoukaimenjou no Missing Link - Divide By Zero",
@@ -5011,59 +5458,40 @@ window.mediaDatabase = {
       "sort_date": "2023-08-18"
     },
     {
-      "title": "Samurai Flamenco",
-      "id": 19365,
-      "url": "https://myanimelist.net/anime/19365/Samurai_Flamenco",
-      "year": "2013",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/anime/11/54319.jpg",
+      "title": "Kimetsu no Yaiba Movie: Mugen Ressha-hen",
+      "id": 40456,
+      "url": "https://myanimelist.net/anime/40456/Kimetsu_no_Yaiba_Movie__Mugen_Ressha-hen",
+      "year": "2020",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/images/anime/1704/106947.jpg",
       "genres": [
         "Action",
-        "Comedy"
-      ],
-      "episodes": 22,
-      "updated_at": 1710622403,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-08-15"
-    },
-    {
-      "title": "Omoide no Marnie",
-      "id": 21557,
-      "url": "https://myanimelist.net/anime/21557/Omoide_no_Marnie",
-      "year": "2014",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/anime/7/64293.jpg",
-      "genres": [
-        "Drama",
-        "Mystery",
-        "Suspense"
+        "Supernatural"
       ],
       "episodes": 1,
-      "updated_at": 1710622408,
+      "updated_at": 1691186099,
       "status": "completed",
       "start_date": "N/A",
       "finish_date": "N/A",
-      "sort_date": "2023-08-12"
+      "sort_date": "2023-08-05"
     },
     {
-      "title": "86 Part 2",
-      "id": 48569,
-      "url": "https://myanimelist.net/anime/48569/86_Part_2",
+      "title": "86",
+      "id": 41457,
+      "url": "https://myanimelist.net/anime/41457/86",
       "year": "2021",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/images/anime/1321/117508.jpg",
+      "image": "https://cdn.myanimelist.net/images/anime/1987/117507.jpg",
       "genres": [
         "Drama",
         "Sci-Fi"
       ],
-      "episodes": 12,
-      "updated_at": 1697809399,
+      "episodes": 11,
+      "updated_at": 1690995735,
       "status": "completed",
       "start_date": "N/A",
       "finish_date": "N/A",
-      "sort_date": "2023-08-03"
+      "sort_date": "2023-08-02"
     },
     {
       "title": "Kimetsu no Yaiba: Katanakaji no Sato-hen",
@@ -5081,6 +5509,25 @@ window.mediaDatabase = {
       "status": "completed",
       "start_date": "N/A",
       "finish_date": "2023-07-31",
+      "sort_date": "2023-07-31"
+    },
+    {
+      "title": "JoJo no Kimyou na Bouken (TV)",
+      "id": 14719,
+      "url": "https://myanimelist.net/anime/14719/JoJo_no_Kimyou_na_Bouken_TV",
+      "year": "2012",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/images/anime/3/40409.jpg",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Supernatural"
+      ],
+      "episodes": 26,
+      "updated_at": 1690798973,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
       "sort_date": "2023-07-31"
     },
     {
@@ -5141,24 +5588,6 @@ window.mediaDatabase = {
       "sort_date": "2023-07-31"
     },
     {
-      "title": 86,
-      "id": 41457,
-      "url": "https://myanimelist.net/anime/41457/86",
-      "year": "2021",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/anime/1987/117507.jpg",
-      "genres": [
-        "Drama",
-        "Sci-Fi"
-      ],
-      "episodes": 11,
-      "updated_at": 1690995735,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-07-29"
-    },
-    {
       "title": "Suzume no Tojimari",
       "id": 50594,
       "url": "https://myanimelist.net/anime/50594/Suzume_no_Tojimari",
@@ -5175,43 +5604,6 @@ window.mediaDatabase = {
       "start_date": "N/A",
       "finish_date": "N/A",
       "sort_date": "2023-07-26"
-    },
-    {
-      "title": "Shimoneta to Iu Gainen ga Sonzai Shinai Taikutsu na Sekai",
-      "id": 29786,
-      "url": "https://myanimelist.net/anime/29786/Shimoneta_to_Iu_Gainen_ga_Sonzai_Shinai_Taikutsu_na_Sekai",
-      "year": "2015",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/images/anime/6/75106.jpg",
-      "genres": [
-        "Comedy",
-        "Ecchi"
-      ],
-      "episodes": 12,
-      "updated_at": 1693323516,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-07-23"
-    },
-    {
-      "title": "Kotonoha no Niwa",
-      "id": 16782,
-      "url": "https://myanimelist.net/anime/16782/Kotonoha_no_Niwa",
-      "year": "2013",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/anime/1597/112995.jpg",
-      "genres": [
-        "Award Winning",
-        "Drama",
-        "Romance"
-      ],
-      "episodes": 1,
-      "updated_at": 1697809459,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-07-23"
     },
     {
       "title": "Death Parade",
@@ -5231,6 +5623,63 @@ window.mediaDatabase = {
       "start_date": "N/A",
       "finish_date": "N/A",
       "sort_date": "2023-07-20"
+    },
+    {
+      "title": "Cowboy Bebop",
+      "id": 1,
+      "url": "https://myanimelist.net/anime/1/Cowboy_Bebop",
+      "year": "1998",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/images/anime/4/19644.jpg",
+      "genres": [
+        "Action",
+        "Award Winning",
+        "Sci-Fi"
+      ],
+      "episodes": 26,
+      "updated_at": 1689076478,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-07-11"
+    },
+    {
+      "title": "Jigokuraku",
+      "id": 46569,
+      "url": "https://myanimelist.net/anime/46569/Jigokuraku",
+      "year": "2023",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/anime/1075/131925.jpg",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Supernatural"
+      ],
+      "episodes": 13,
+      "updated_at": 1689090170,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-07-11"
+    },
+    {
+      "title": "Vinland Saga Season 2",
+      "id": 49387,
+      "url": "https://myanimelist.net/anime/49387/Vinland_Saga_Season_2",
+      "year": "2023",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/images/anime/1170/124312.jpg",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama"
+      ],
+      "episodes": 24,
+      "updated_at": 1689090054,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-07-11"
     },
     {
       "title": "Made in Abyss",
@@ -5275,61 +5724,6 @@ window.mediaDatabase = {
       "sort_date": "2023-07-10"
     },
     {
-      "title": "Mushoku Tensei II: Isekai Ittara Honki Dasu",
-      "id": 51179,
-      "url": "https://myanimelist.net/anime/51179/Mushoku_Tensei_II__Isekai_Ittara_Honki_Dasu",
-      "year": "2023",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/images/anime/1898/138005.jpg",
-      "genres": [
-        "Adventure",
-        "Drama",
-        "Fantasy",
-        "Ecchi"
-      ],
-      "episodes": 12,
-      "updated_at": 1719989876,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-07-10"
-    },
-    {
-      "title": "Dekiru Neko wa Kyou mo Yuuutsu",
-      "id": 51916,
-      "url": "https://myanimelist.net/anime/51916/Dekiru_Neko_wa_Kyou_mo_Yuuutsu",
-      "year": "2023",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/anime/1074/136720.jpg",
-      "genres": [
-        "Comedy"
-      ],
-      "episodes": 13,
-      "updated_at": 1696093726,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-07-10"
-    },
-    {
-      "title": "Undead Girl Murder Farce",
-      "id": 54790,
-      "url": "https://myanimelist.net/anime/54790/Undead_Girl_Murder_Farce",
-      "year": "2023",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/images/anime/1946/136661.jpg",
-      "genres": [
-        "Fantasy",
-        "Mystery"
-      ],
-      "episodes": 13,
-      "updated_at": 1695922209,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-07-10"
-    },
-    {
       "title": "Sen to Chihiro no Kamikakushi",
       "id": 199,
       "url": "https://myanimelist.net/anime/199/Sen_to_Chihiro_no_Kamikakushi",
@@ -5347,23 +5741,6 @@ window.mediaDatabase = {
       "start_date": "N/A",
       "finish_date": "N/A",
       "sort_date": "2023-07-04"
-    },
-    {
-      "title": "Horimiya: Piece",
-      "id": 54856,
-      "url": "https://myanimelist.net/anime/54856/Horimiya__Piece",
-      "year": "2023",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/images/anime/1007/136277.jpg",
-      "genres": [
-        "Romance"
-      ],
-      "episodes": 13,
-      "updated_at": 1695649798,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-07-03"
     },
     {
       "title": "Shigatsu wa Kimi no Uso",
@@ -5397,6 +5774,25 @@ window.mediaDatabase = {
       ],
       "episodes": 6,
       "updated_at": 1687727069,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-06-26"
+    },
+    {
+      "title": "Kaguya-sama wa Kokurasetai: First Kiss wa Owaranai",
+      "id": 52198,
+      "url": "https://myanimelist.net/anime/52198/Kaguya-sama_wa_Kokurasetai__First_Kiss_wa_Owaranai",
+      "year": "2022",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/images/anime/1670/130060.jpg",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "episodes": 1,
+      "updated_at": 1687727246,
       "status": "completed",
       "start_date": "N/A",
       "finish_date": "N/A",
@@ -5461,26 +5857,6 @@ window.mediaDatabase = {
       "sort_date": "2023-06-23"
     },
     {
-      "title": "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2",
-      "id": 45576,
-      "url": "https://myanimelist.net/anime/45576/Mushoku_Tensei__Isekai_Ittara_Honki_Dasu_Part_2",
-      "year": "2021",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/images/anime/1028/117777.jpg",
-      "genres": [
-        "Adventure",
-        "Drama",
-        "Fantasy",
-        "Ecchi"
-      ],
-      "episodes": 12,
-      "updated_at": 1719989883,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-06-23"
-    },
-    {
       "title": "Uchiage Hanabi, Shita kara Miru ka? Yoko kara Miru ka?",
       "id": 34498,
       "url": "https://myanimelist.net/anime/34498/Uchiage_Hanabi_Shita_kara_Miru_ka_Yoko_kara_Miru_ka",
@@ -5493,46 +5869,6 @@ window.mediaDatabase = {
       ],
       "episodes": 1,
       "updated_at": 1686375475,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-06-10"
-    },
-    {
-      "title": "Kill la Kill",
-      "id": 18679,
-      "url": "https://myanimelist.net/anime/18679/Kill_la_Kill",
-      "year": "2013",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/anime/1464/111943.jpg",
-      "genres": [
-        "Action",
-        "Comedy",
-        "Fantasy",
-        "Ecchi"
-      ],
-      "episodes": 24,
-      "updated_at": 1710622401,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-06-10"
-    },
-    {
-      "title": "Mushoku Tensei: Isekai Ittara Honki Dasu",
-      "id": 39535,
-      "url": "https://myanimelist.net/anime/39535/Mushoku_Tensei__Isekai_Ittara_Honki_Dasu",
-      "year": "2021",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/images/anime/1530/117776.jpg",
-      "genres": [
-        "Adventure",
-        "Drama",
-        "Fantasy",
-        "Ecchi"
-      ],
-      "episodes": 11,
-      "updated_at": 1719989878,
       "status": "completed",
       "start_date": "N/A",
       "finish_date": "N/A",
@@ -5650,19 +5986,39 @@ window.mediaDatabase = {
       "sort_date": "2023-05-26"
     },
     {
-      "title": "Jigokuraku",
-      "id": 46569,
-      "url": "https://myanimelist.net/anime/46569/Jigokuraku",
-      "year": "2023",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/anime/1075/131925.jpg",
+      "title": "JoJo no Kimyou na Bouken Part 3: Stardust Crusaders",
+      "id": 20899,
+      "url": "https://myanimelist.net/anime/20899/JoJo_no_Kimyou_na_Bouken_Part_3__Stardust_Crusaders",
+      "year": "2014",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/images/anime/11/55267.jpg",
       "genres": [
         "Action",
-        "Adventure",
-        "Supernatural"
+        "Adventure"
       ],
-      "episodes": 13,
-      "updated_at": 1689090170,
+      "episodes": 24,
+      "updated_at": 1684593917,
+      "status": "completed",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-05-20"
+    },
+    {
+      "title": "Perfect Blue",
+      "id": 437,
+      "url": "https://myanimelist.net/anime/437/Perfect_Blue",
+      "year": "1998",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/images/anime/1254/134212.jpg",
+      "genres": [
+        "Avant Garde",
+        "Award Winning",
+        "Drama",
+        "Horror",
+        "Suspense"
+      ],
+      "episodes": 1,
+      "updated_at": 1684593961,
       "status": "completed",
       "start_date": "N/A",
       "finish_date": "N/A",
@@ -5729,25 +6085,6 @@ window.mediaDatabase = {
       "sort_date": "2023-05-13"
     },
     {
-      "title": "Vinland Saga Season 2",
-      "id": 49387,
-      "url": "https://myanimelist.net/anime/49387/Vinland_Saga_Season_2",
-      "year": "2023",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/images/anime/1170/124312.jpg",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Drama"
-      ],
-      "episodes": 24,
-      "updated_at": 1689090054,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-04-29"
-    },
-    {
       "title": "Koe no Katachi",
       "id": 28851,
       "url": "https://myanimelist.net/anime/28851/Koe_no_Katachi",
@@ -5805,25 +6142,6 @@ window.mediaDatabase = {
       "sort_date": "2023-04-28"
     },
     {
-      "title": "Shingeki no Kyojin Season 3",
-      "id": 35760,
-      "url": "https://myanimelist.net/anime/35760/Shingeki_no_Kyojin_Season_3",
-      "year": "2018",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/images/anime/1173/92110.jpg",
-      "genres": [
-        "Action",
-        "Drama",
-        "Suspense"
-      ],
-      "episodes": 12,
-      "updated_at": 1701358202,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-04-28"
-    },
-    {
       "title": "Shingeki no Kyojin Season 3 Part 2",
       "id": 38524,
       "url": "https://myanimelist.net/anime/38524/Shingeki_no_Kyojin_Season_3_Part_2",
@@ -5856,44 +6174,6 @@ window.mediaDatabase = {
       ],
       "episodes": 16,
       "updated_at": 1682691083,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-04-28"
-    },
-    {
-      "title": "Shingeki no Kyojin: The Final Season - Kanketsu-hen",
-      "id": 51535,
-      "url": "https://myanimelist.net/anime/51535/Shingeki_no_Kyojin__The_Final_Season_-_Kanketsu-hen",
-      "year": "2023",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/images/anime/1279/131078.jpg",
-      "genres": [
-        "Action",
-        "Drama",
-        "Suspense"
-      ],
-      "episodes": 2,
-      "updated_at": 1699198136,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-04-28"
-    },
-    {
-      "title": "Shingeki no Kyojin: The Final Season Part 2",
-      "id": 48583,
-      "url": "https://myanimelist.net/anime/48583/Shingeki_no_Kyojin__The_Final_Season_Part_2",
-      "year": "2022",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/images/anime/1948/120625.jpg",
-      "genres": [
-        "Action",
-        "Drama",
-        "Suspense"
-      ],
-      "episodes": 12,
-      "updated_at": 1697809499,
       "status": "completed",
       "start_date": "N/A",
       "finish_date": "N/A",
@@ -5935,43 +6215,6 @@ window.mediaDatabase = {
       "sort_date": "2023-04-28"
     },
     {
-      "title": "Cowboy Bebop",
-      "id": 1,
-      "url": "https://myanimelist.net/anime/1/Cowboy_Bebop",
-      "year": "1998",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/images/anime/4/19644.jpg",
-      "genres": [
-        "Action",
-        "Award Winning",
-        "Sci-Fi"
-      ],
-      "episodes": 26,
-      "updated_at": 1689076478,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-04-28"
-    },
-    {
-      "title": "Cyberpunk: Edgerunners",
-      "id": 42310,
-      "url": "https://myanimelist.net/anime/42310/Cyberpunk__Edgerunners",
-      "year": "2022",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/images/anime/1818/126435.jpg",
-      "genres": [
-        "Action",
-        "Sci-Fi"
-      ],
-      "episodes": 10,
-      "updated_at": 1759427906,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-04-28"
-    },
-    {
       "title": "Kimetsu no Yaiba",
       "id": 38000,
       "url": "https://myanimelist.net/anime/38000/Kimetsu_no_Yaiba",
@@ -5985,42 +6228,6 @@ window.mediaDatabase = {
       ],
       "episodes": 26,
       "updated_at": 1682691625,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-04-28"
-    },
-    {
-      "title": "Kimetsu no Yaiba Movie: Mugen Ressha-hen",
-      "id": 40456,
-      "url": "https://myanimelist.net/anime/40456/Kimetsu_no_Yaiba_Movie__Mugen_Ressha-hen",
-      "year": "2020",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/images/anime/1704/106947.jpg",
-      "genres": [
-        "Action",
-        "Supernatural"
-      ],
-      "episodes": 1,
-      "updated_at": 1691186099,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-04-28"
-    },
-    {
-      "title": "Kimetsu no Yaiba: Yuukaku-hen",
-      "id": 47778,
-      "url": "https://myanimelist.net/anime/47778/Kimetsu_no_Yaiba__Yuukaku-hen",
-      "year": "2021",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/anime/1908/120036.jpg",
-      "genres": [
-        "Action",
-        "Supernatural"
-      ],
-      "episodes": 11,
-      "updated_at": 1695997064,
       "status": "completed",
       "start_date": "N/A",
       "finish_date": "N/A",
@@ -6103,23 +6310,6 @@ window.mediaDatabase = {
       "sort_date": "2023-04-28"
     },
     {
-      "title": "Horimiya",
-      "id": 42897,
-      "url": "https://myanimelist.net/anime/42897/Horimiya",
-      "year": "2021",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/images/anime/1695/111486.jpg",
-      "genres": [
-        "Romance"
-      ],
-      "episodes": 13,
-      "updated_at": 1696007273,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-04-28"
-    },
-    {
       "title": "Howl no Ugoku Shiro",
       "id": 431,
       "url": "https://myanimelist.net/anime/431/Howl_no_Ugoku_Shiro",
@@ -6180,25 +6370,6 @@ window.mediaDatabase = {
       "sort_date": "2023-04-28"
     },
     {
-      "title": "JoJo no Kimyou na Bouken (TV)",
-      "id": 14719,
-      "url": "https://myanimelist.net/anime/14719/JoJo_no_Kimyou_na_Bouken_TV",
-      "year": "2012",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/images/anime/3/40409.jpg",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Supernatural"
-      ],
-      "episodes": 26,
-      "updated_at": 1690798973,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-04-28"
-    },
-    {
       "title": "JoJo no Kimyou na Bouken Part 4: Diamond wa Kudakenai",
       "id": 31933,
       "url": "https://myanimelist.net/anime/31933/JoJo_no_Kimyou_na_Bouken_Part_4__Diamond_wa_Kudakenai",
@@ -6229,24 +6400,6 @@ window.mediaDatabase = {
       ],
       "episodes": 39,
       "updated_at": 1682690698,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-04-28"
-    },
-    {
-      "title": "JoJo no Kimyou na Bouken Part 3: Stardust Crusaders",
-      "id": 20899,
-      "url": "https://myanimelist.net/anime/20899/JoJo_no_Kimyou_na_Bouken_Part_3__Stardust_Crusaders",
-      "year": "2014",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/images/anime/11/55267.jpg",
-      "genres": [
-        "Action",
-        "Adventure"
-      ],
-      "episodes": 24,
-      "updated_at": 1684593917,
       "status": "completed",
       "start_date": "N/A",
       "finish_date": "N/A",
@@ -6380,25 +6533,6 @@ window.mediaDatabase = {
       "sort_date": "2023-04-28"
     },
     {
-      "title": "Kaguya-sama wa Kokurasetai: First Kiss wa Owaranai",
-      "id": 52198,
-      "url": "https://myanimelist.net/anime/52198/Kaguya-sama_wa_Kokurasetai__First_Kiss_wa_Owaranai",
-      "year": "2022",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/images/anime/1670/130060.jpg",
-      "genres": [
-        "Comedy",
-        "Drama",
-        "Romance"
-      ],
-      "episodes": 1,
-      "updated_at": 1687727246,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-04-28"
-    },
-    {
       "title": "Kaguya-sama wa Kokurasetai: Ultra Romantic",
       "id": 43608,
       "url": "https://myanimelist.net/anime/43608/Kaguya-sama_wa_Kokurasetai__Ultra_Romantic",
@@ -6511,25 +6645,6 @@ window.mediaDatabase = {
       "sort_date": "2023-04-28"
     },
     {
-      "title": "Mob Psycho 100 III",
-      "id": 50172,
-      "url": "https://myanimelist.net/anime/50172/Mob_Psycho_100_III",
-      "year": "2022",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/images/anime/1228/125011.jpg",
-      "genres": [
-        "Action",
-        "Comedy",
-        "Supernatural"
-      ],
-      "episodes": 12,
-      "updated_at": 1695655691,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-04-28"
-    },
-    {
       "title": "Monster",
       "id": 19,
       "url": "https://myanimelist.net/anime/19/Monster",
@@ -6543,44 +6658,6 @@ window.mediaDatabase = {
       ],
       "episodes": 74,
       "updated_at": 1682690843,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-04-28"
-    },
-    {
-      "title": "Sono Bisque Doll wa Koi wo Suru",
-      "id": 48736,
-      "url": "https://myanimelist.net/anime/48736/Sono_Bisque_Doll_wa_Koi_wo_Suru",
-      "year": "2022",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/anime/1179/119897.jpg",
-      "genres": [
-        "Romance"
-      ],
-      "episodes": 12,
-      "updated_at": 1759429146,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-04-28"
-    },
-    {
-      "title": "Shinseiki Evangelion",
-      "id": 30,
-      "url": "https://myanimelist.net/anime/30/Shinseiki_Evangelion",
-      "year": "1995",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/anime/1314/108941.jpg",
-      "genres": [
-        "Avant Garde",
-        "Award Winning",
-        "Drama",
-        "Sci-Fi",
-        "Suspense"
-      ],
-      "episodes": 26,
-      "updated_at": 1693323577,
       "status": "completed",
       "start_date": "N/A",
       "finish_date": "N/A",
@@ -6686,27 +6763,6 @@ window.mediaDatabase = {
       "sort_date": "2023-04-28"
     },
     {
-      "title": "Perfect Blue",
-      "id": 437,
-      "url": "https://myanimelist.net/anime/437/Perfect_Blue",
-      "year": "1998",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/images/anime/1254/134212.jpg",
-      "genres": [
-        "Avant Garde",
-        "Award Winning",
-        "Drama",
-        "Horror",
-        "Suspense"
-      ],
-      "episodes": 1,
-      "updated_at": 1684593961,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-04-28"
-    },
-    {
       "title": "Spy x Family",
       "id": 50265,
       "url": "https://myanimelist.net/anime/50265/Spy_x_Family",
@@ -6720,25 +6776,6 @@ window.mediaDatabase = {
       ],
       "episodes": 12,
       "updated_at": 1682691480,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-04-28"
-    },
-    {
-      "title": "Steins;Gate",
-      "id": 9253,
-      "url": "https://myanimelist.net/anime/9253/Steins_Gate",
-      "year": "2011",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/images/anime/1935/127974.jpg",
-      "genres": [
-        "Drama",
-        "Sci-Fi",
-        "Suspense"
-      ],
-      "episodes": 24,
-      "updated_at": 1695655772,
       "status": "completed",
       "start_date": "N/A",
       "finish_date": "N/A",
@@ -6976,65 +7013,9 @@ window.mediaDatabase = {
       "start_date": "N/A",
       "finish_date": "N/A",
       "sort_date": "2023-04-28"
-    },
-    {
-      "title": "Kimi no Na wa.",
-      "id": 32281,
-      "url": "https://myanimelist.net/anime/32281/Kimi_no_Na_wa",
-      "year": "2016",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/anime/5/87048.jpg",
-      "genres": [
-        "Award Winning",
-        "Drama"
-      ],
-      "episodes": 1,
-      "updated_at": 1697809444,
-      "status": "completed",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-04-28"
-    },
-    {
-      "title": "One Piece",
-      "id": 21,
-      "url": "https://myanimelist.net/anime/21/One_Piece",
-      "year": "1999",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/images/anime/1244/138851.jpg",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Fantasy"
-      ],
-      "episodes": 1045,
-      "updated_at": 1767945059,
-      "status": "watching",
-      "start_date": "2022-09-01",
-      "finish_date": "N/A",
-      "sort_date": "2022-09-01"
     }
   ],
   "manga": [
-    {
-      "title": "Koori no Jouheki",
-      "id": 160303,
-      "url": "https://myanimelist.net/manga/160303/Koori_no_Jouheki",
-      "year": "2020",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/manga/3/296537.jpg",
-      "genres": [
-        "Drama",
-        "Romance"
-      ],
-      "chapters": 117,
-      "volumes": 14,
-      "updated_at": 1782414448,
-      "status": "completed",
-      "start_date": "2026-06-25",
-      "finish_date": "2026-06-30",
-      "sort_date": "2026-06-30"
-    },
     {
       "title": "Sangeki",
       "id": 192247,
@@ -7072,6 +7053,417 @@ window.mediaDatabase = {
       "start_date": "2026-06-05",
       "finish_date": "N/A",
       "sort_date": "2026-06-05"
+    },
+    {
+      "title": "Moriagaranai Date",
+      "id": 189516,
+      "url": "https://myanimelist.net/manga/189516/Moriagaranai_Date",
+      "year": "2024",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/images/manga/1/338790.jpg",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1767511961,
+      "status": "reading",
+      "start_date": "2026-01-04",
+      "finish_date": "N/A",
+      "sort_date": "2026-01-04"
+    },
+    {
+      "title": "Tsumi to Batsu no Spica",
+      "id": 173120,
+      "url": "https://myanimelist.net/manga/173120/Tsumi_to_Batsu_no_Spica",
+      "year": "2024",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/manga/2/314702.jpg",
+      "genres": [
+        "Drama",
+        "Suspense"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1725047129,
+      "status": "reading",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2024-08-30"
+    },
+    {
+      "title": "Isshou Senkin",
+      "id": 158356,
+      "url": "https://myanimelist.net/manga/158356/Isshou_Senkin",
+      "year": "2023",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/manga/1/289698.jpg",
+      "genres": [
+        "Action"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1719426895,
+      "status": "reading",
+      "start_date": "2024-06-26",
+      "finish_date": "N/A",
+      "sort_date": "2024-06-26"
+    },
+    {
+      "title": "Yotsuba to!",
+      "id": 104,
+      "url": "https://myanimelist.net/manga/104/Yotsuba_to",
+      "year": "2003",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/images/manga/5/259524.jpg",
+      "genres": [
+        "Award Winning",
+        "Comedy",
+        "Slice of Life"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1713887630,
+      "status": "reading",
+      "start_date": "2024-04-23",
+      "finish_date": "N/A",
+      "sort_date": "2024-04-23"
+    },
+    {
+      "title": "Centuria",
+      "id": 169067,
+      "url": "https://myanimelist.net/manga/169067/Centuria",
+      "year": "2024",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/manga/1/305548.jpg",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama",
+        "Fantasy"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1712567420,
+      "status": "reading",
+      "start_date": "2024-04-08",
+      "finish_date": "N/A",
+      "sort_date": "2024-04-08"
+    },
+    {
+      "title": "Ruri Dragon",
+      "id": 148054,
+      "url": "https://myanimelist.net/manga/148054/Ruri_Dragon",
+      "year": "2022",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/manga/2/269401.jpg",
+      "genres": [
+        "Slice of Life",
+        "Supernatural"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1710340455,
+      "status": "reading",
+      "start_date": "2024-03-13",
+      "finish_date": "N/A",
+      "sort_date": "2024-03-13"
+    },
+    {
+      "title": "Uzaki-chan wa Asobitai!",
+      "id": 114417,
+      "url": "https://myanimelist.net/manga/114417/Uzaki-chan_wa_Asobitai",
+      "year": "2017",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/manga/1/271526.jpg",
+      "genres": [
+        "Comedy",
+        "Ecchi"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1707633791,
+      "status": "reading",
+      "start_date": "2024-02-11",
+      "finish_date": "N/A",
+      "sort_date": "2024-02-11"
+    },
+    {
+      "title": "Grand Blue",
+      "id": 70345,
+      "url": "https://myanimelist.net/manga/70345/Grand_Blue",
+      "year": "2014",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/images/manga/2/166124.jpg",
+      "genres": [
+        "Comedy"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1709050710,
+      "status": "reading",
+      "start_date": "2024-01-13",
+      "finish_date": "N/A",
+      "sort_date": "2024-01-13"
+    },
+    {
+      "title": "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo",
+      "id": 123681,
+      "url": "https://myanimelist.net/manga/123681/Kimi_no_Koto_ga_Daidaidaidaidaisuki_na_100-nin_no_Kanojo",
+      "year": "2019",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/images/manga/1/293055.jpg",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1704986967,
+      "status": "reading",
+      "start_date": "2024-01-11",
+      "finish_date": "N/A",
+      "sort_date": "2024-01-11"
+    },
+    {
+      "title": "Mato Seihei no Slave",
+      "id": 116880,
+      "url": "https://myanimelist.net/manga/116880/Mato_Seihei_no_Slave",
+      "year": "2019",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/manga/3/260475.jpg",
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Ecchi"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1702736067,
+      "status": "reading",
+      "start_date": "2023-12-15",
+      "finish_date": "N/A",
+      "sort_date": "2023-12-15"
+    },
+    {
+      "title": "Dandadan",
+      "id": 135496,
+      "url": "https://myanimelist.net/manga/135496/Dandadan",
+      "year": "2021",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/images/manga/2/248746.jpg",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Supernatural"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1701358062,
+      "status": "reading",
+      "start_date": "2023-11-30",
+      "finish_date": "N/A",
+      "sort_date": "2023-11-30"
+    },
+    {
+      "title": "Zom 100: Zombie ni Naru made ni Shitai 100 no Koto",
+      "id": 122392,
+      "url": "https://myanimelist.net/manga/122392/Zom_100__Zombie_ni_Naru_made_ni_Shitai_100_no_Koto",
+      "year": "2018",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/images/manga/3/223116.jpg",
+      "genres": [
+        "Comedy",
+        "Suspense"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1696694089,
+      "status": "reading",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-10-07"
+    },
+    {
+      "title": "Kagurabachi",
+      "id": 162479,
+      "url": "https://myanimelist.net/manga/162479/Kagurabachi",
+      "year": "2023",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/manga/3/296327.jpg",
+      "genres": [
+        "Action",
+        "Fantasy"
+      ],
+      "chapters": 1,
+      "volumes": 0,
+      "updated_at": 1695050071,
+      "status": "reading",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-09-18"
+    },
+    {
+      "title": "Hikaru ga Shinda Natsu",
+      "id": 141833,
+      "url": "https://myanimelist.net/manga/141833/Hikaru_ga_Shinda_Natsu",
+      "year": "2021",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/images/manga/2/256448.jpg",
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Supernatural"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1692808101,
+      "status": "reading",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-08-23"
+    },
+    {
+      "title": "Real",
+      "id": 657,
+      "url": "https://myanimelist.net/manga/657/Real",
+      "year": "1999",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/images/manga/2/115969.jpg",
+      "genres": [
+        "Award Winning",
+        "Drama",
+        "Sports"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1684582943,
+      "status": "reading",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-05-20"
+    },
+    {
+      "title": "One Punch-Man",
+      "id": 44347,
+      "url": "https://myanimelist.net/manga/44347/One_Punch-Man",
+      "year": "2012",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/manga/3/80661.jpg",
+      "genres": [
+        "Action",
+        "Comedy"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1683963241,
+      "status": "reading",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-05-13"
+    },
+    {
+      "title": "Berserk",
+      "id": 2,
+      "url": "https://myanimelist.net/manga/2/Berserk",
+      "year": "1989",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/images/manga/1/157897.jpg",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Award Winning",
+        "Drama",
+        "Fantasy",
+        "Horror"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1682693397,
+      "status": "reading",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-04-28"
+    },
+    {
+      "title": "One Piece",
+      "id": 13,
+      "url": "https://myanimelist.net/manga/13/One_Piece",
+      "year": "1997",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/images/manga/2/253146.jpg",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1682690929,
+      "status": "reading",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-04-28"
+    },
+    {
+      "title": "Vagabond",
+      "id": 656,
+      "url": "https://myanimelist.net/manga/656/Vagabond",
+      "year": "1998",
+      "score": 10,
+      "image": "https://cdn.myanimelist.net/images/manga/1/259070.jpg",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Award Winning"
+      ],
+      "chapters": 327,
+      "volumes": 37,
+      "updated_at": 1682691146,
+      "status": "reading",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2023-04-28"
+    },
+    {
+      "title": "JoJo no Kimyou na Bouken Part 9: The JoJoLands",
+      "id": 139629,
+      "url": "https://myanimelist.net/manga/139629/JoJo_no_Kimyou_na_Bouken_Part_9__The_JoJoLands",
+      "year": "2023",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/images/manga/1/286969.jpg",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Supernatural"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1682690969,
+      "status": "reading",
+      "start_date": "2023-02-17",
+      "finish_date": "N/A",
+      "sort_date": "2023-02-17"
+    },
+    {
+      "title": "Koori no Jouheki",
+      "id": 160303,
+      "url": "https://myanimelist.net/manga/160303/Koori_no_Jouheki",
+      "year": "2020",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/manga/3/296537.jpg",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "chapters": 117,
+      "volumes": 14,
+      "updated_at": 1782414448,
+      "status": "completed",
+      "start_date": "2026-06-25",
+      "finish_date": "2026-06-30",
+      "sort_date": "2026-06-30"
     },
     {
       "title": "Chainsaw Man",
@@ -7169,25 +7561,6 @@ window.mediaDatabase = {
       "status": "completed",
       "start_date": "N/A",
       "finish_date": "2026-01-04",
-      "sort_date": "2026-01-04"
-    },
-    {
-      "title": "Moriagaranai Date",
-      "id": 189516,
-      "url": "https://myanimelist.net/manga/189516/Moriagaranai_Date",
-      "year": "2024",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/images/manga/1/338790.jpg",
-      "genres": [
-        "Comedy",
-        "Romance"
-      ],
-      "chapters": 0,
-      "volumes": 0,
-      "updated_at": 1767511961,
-      "status": "reading",
-      "start_date": "2026-01-04",
-      "finish_date": "N/A",
       "sort_date": "2026-01-04"
     },
     {
@@ -7491,25 +7864,6 @@ window.mediaDatabase = {
       "sort_date": "2024-09-19"
     },
     {
-      "title": "Tsumi to Batsu no Spica",
-      "id": 173120,
-      "url": "https://myanimelist.net/manga/173120/Tsumi_to_Batsu_no_Spica",
-      "year": "2024",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/manga/2/314702.jpg",
-      "genres": [
-        "Drama",
-        "Suspense"
-      ],
-      "chapters": 0,
-      "volumes": 0,
-      "updated_at": 1725047129,
-      "status": "reading",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2024-08-30"
-    },
-    {
       "title": "Tomodachi Game",
       "id": 62795,
       "url": "https://myanimelist.net/manga/62795/Tomodachi_Game",
@@ -7626,24 +7980,6 @@ window.mediaDatabase = {
       "sort_date": "2024-07-01"
     },
     {
-      "title": "Isshou Senkin",
-      "id": 158356,
-      "url": "https://myanimelist.net/manga/158356/Isshou_Senkin",
-      "year": "2023",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/manga/1/289698.jpg",
-      "genres": [
-        "Action"
-      ],
-      "chapters": 0,
-      "volumes": 0,
-      "updated_at": 1719426895,
-      "status": "reading",
-      "start_date": "2024-06-26",
-      "finish_date": "N/A",
-      "sort_date": "2024-06-26"
-    },
-    {
       "title": "Shoujo Shuumatsu Ryokou",
       "id": 72467,
       "url": "https://myanimelist.net/manga/72467/Shoujo_Shuumatsu_Ryokou",
@@ -7740,26 +8076,6 @@ window.mediaDatabase = {
       "sort_date": "2024-06-03"
     },
     {
-      "title": "Yotsuba to!",
-      "id": 104,
-      "url": "https://myanimelist.net/manga/104/Yotsuba_to",
-      "year": "2003",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/images/manga/5/259524.jpg",
-      "genres": [
-        "Award Winning",
-        "Comedy",
-        "Slice of Life"
-      ],
-      "chapters": 0,
-      "volumes": 0,
-      "updated_at": 1713887630,
-      "status": "reading",
-      "start_date": "2024-04-23",
-      "finish_date": "N/A",
-      "sort_date": "2024-04-23"
-    },
-    {
       "title": "Yuu☆Yuu☆Hakusho",
       "id": 53,
       "url": "https://myanimelist.net/manga/53/Yuu☆Yuu☆Hakusho",
@@ -7780,27 +8096,6 @@ window.mediaDatabase = {
       "start_date": "2024-04-06",
       "finish_date": "2024-04-22",
       "sort_date": "2024-04-22"
-    },
-    {
-      "title": "Centuria",
-      "id": 169067,
-      "url": "https://myanimelist.net/manga/169067/Centuria",
-      "year": "2024",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/manga/1/305548.jpg",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Drama",
-        "Fantasy"
-      ],
-      "chapters": 0,
-      "volumes": 0,
-      "updated_at": 1712567420,
-      "status": "reading",
-      "start_date": "2024-04-08",
-      "finish_date": "N/A",
-      "sort_date": "2024-04-08"
     },
     {
       "title": "Watashi ga 15-sai dewa Nakunattemo.",
@@ -7857,25 +8152,6 @@ window.mediaDatabase = {
       "sort_date": "2024-03-16"
     },
     {
-      "title": "Ruri Dragon",
-      "id": 148054,
-      "url": "https://myanimelist.net/manga/148054/Ruri_Dragon",
-      "year": "2022",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/manga/2/269401.jpg",
-      "genres": [
-        "Slice of Life",
-        "Supernatural"
-      ],
-      "chapters": 0,
-      "volumes": 0,
-      "updated_at": 1710340455,
-      "status": "reading",
-      "start_date": "2024-03-13",
-      "finish_date": "N/A",
-      "sort_date": "2024-03-13"
-    },
-    {
       "title": "Hyouryuu Net Cafe",
       "id": 28303,
       "url": "https://myanimelist.net/manga/28303/Hyouryuu_Net_Cafe",
@@ -7917,43 +8193,6 @@ window.mediaDatabase = {
       "sort_date": "2024-02-25"
     },
     {
-      "title": "Uzaki-chan wa Asobitai!",
-      "id": 114417,
-      "url": "https://myanimelist.net/manga/114417/Uzaki-chan_wa_Asobitai",
-      "year": "2017",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/manga/1/271526.jpg",
-      "genres": [
-        "Comedy",
-        "Ecchi"
-      ],
-      "chapters": 0,
-      "volumes": 0,
-      "updated_at": 1707633791,
-      "status": "reading",
-      "start_date": "2024-02-11",
-      "finish_date": "N/A",
-      "sort_date": "2024-02-11"
-    },
-    {
-      "title": "Grand Blue",
-      "id": 70345,
-      "url": "https://myanimelist.net/manga/70345/Grand_Blue",
-      "year": "2014",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/images/manga/2/166124.jpg",
-      "genres": [
-        "Comedy"
-      ],
-      "chapters": 0,
-      "volumes": 0,
-      "updated_at": 1709050710,
-      "status": "reading",
-      "start_date": "2024-01-13",
-      "finish_date": "N/A",
-      "sort_date": "2024-01-13"
-    },
-    {
       "title": "Blame!",
       "id": 149,
       "url": "https://myanimelist.net/manga/149/Blame",
@@ -7972,25 +8211,6 @@ window.mediaDatabase = {
       "status": "completed",
       "start_date": "2023-12-29",
       "finish_date": "2024-01-11",
-      "sort_date": "2024-01-11"
-    },
-    {
-      "title": "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo",
-      "id": 123681,
-      "url": "https://myanimelist.net/manga/123681/Kimi_no_Koto_ga_Daidaidaidaidaisuki_na_100-nin_no_Kanojo",
-      "year": "2019",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/images/manga/1/293055.jpg",
-      "genres": [
-        "Comedy",
-        "Romance"
-      ],
-      "chapters": 0,
-      "volumes": 0,
-      "updated_at": 1704986967,
-      "status": "reading",
-      "start_date": "2024-01-11",
-      "finish_date": "N/A",
       "sort_date": "2024-01-11"
     },
     {
@@ -8069,46 +8289,6 @@ window.mediaDatabase = {
       "start_date": "N/A",
       "finish_date": "N/A",
       "sort_date": "2023-12-23"
-    },
-    {
-      "title": "Mato Seihei no Slave",
-      "id": 116880,
-      "url": "https://myanimelist.net/manga/116880/Mato_Seihei_no_Slave",
-      "year": "2019",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/manga/3/260475.jpg",
-      "genres": [
-        "Action",
-        "Fantasy",
-        "Ecchi"
-      ],
-      "chapters": 0,
-      "volumes": 0,
-      "updated_at": 1702736067,
-      "status": "reading",
-      "start_date": "2023-12-15",
-      "finish_date": "N/A",
-      "sort_date": "2023-12-15"
-    },
-    {
-      "title": "Dandadan",
-      "id": 135496,
-      "url": "https://myanimelist.net/manga/135496/Dandadan",
-      "year": "2021",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/images/manga/2/248746.jpg",
-      "genres": [
-        "Action",
-        "Comedy",
-        "Supernatural"
-      ],
-      "chapters": 0,
-      "volumes": 0,
-      "updated_at": 1701358062,
-      "status": "reading",
-      "start_date": "2023-11-30",
-      "finish_date": "N/A",
-      "sort_date": "2023-11-30"
     },
     {
       "title": "Fire Punch",
@@ -8262,25 +8442,6 @@ window.mediaDatabase = {
       "sort_date": "2023-11-06"
     },
     {
-      "title": "Zom 100: Zombie ni Naru made ni Shitai 100 no Koto",
-      "id": 122392,
-      "url": "https://myanimelist.net/manga/122392/Zom_100__Zombie_ni_Naru_made_ni_Shitai_100_no_Koto",
-      "year": "2018",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/images/manga/3/223116.jpg",
-      "genres": [
-        "Comedy",
-        "Suspense"
-      ],
-      "chapters": 0,
-      "volumes": 0,
-      "updated_at": 1696694089,
-      "status": "reading",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-10-07"
-    },
-    {
       "title": "Avant-garde Yumeko",
       "id": 50857,
       "url": "https://myanimelist.net/manga/50857/Avant-garde_Yumeko",
@@ -8336,25 +8497,6 @@ window.mediaDatabase = {
       "start_date": "N/A",
       "finish_date": "N/A",
       "sort_date": "2023-09-25"
-    },
-    {
-      "title": "Kagurabachi",
-      "id": 162479,
-      "url": "https://myanimelist.net/manga/162479/Kagurabachi",
-      "year": "2023",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/manga/3/296327.jpg",
-      "genres": [
-        "Action",
-        "Fantasy"
-      ],
-      "chapters": 1,
-      "volumes": 0,
-      "updated_at": 1695050071,
-      "status": "reading",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-09-18"
     },
     {
       "title": "Dokuzakura",
@@ -8452,26 +8594,6 @@ window.mediaDatabase = {
       "start_date": "N/A",
       "finish_date": "2023-08-26",
       "sort_date": "2023-08-26"
-    },
-    {
-      "title": "Hikaru ga Shinda Natsu",
-      "id": 141833,
-      "url": "https://myanimelist.net/manga/141833/Hikaru_ga_Shinda_Natsu",
-      "year": "2021",
-      "score": 6,
-      "image": "https://cdn.myanimelist.net/images/manga/2/256448.jpg",
-      "genres": [
-        "Horror",
-        "Mystery",
-        "Supernatural"
-      ],
-      "chapters": 0,
-      "volumes": 0,
-      "updated_at": 1692808101,
-      "status": "reading",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-08-23"
     },
     {
       "title": "Sun-Ken Rock",
@@ -8590,26 +8712,6 @@ window.mediaDatabase = {
       "start_date": "N/A",
       "finish_date": "N/A",
       "sort_date": "2023-05-30"
-    },
-    {
-      "title": "Real",
-      "id": 657,
-      "url": "https://myanimelist.net/manga/657/Real",
-      "year": "1999",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/images/manga/2/115969.jpg",
-      "genres": [
-        "Award Winning",
-        "Drama",
-        "Sports"
-      ],
-      "chapters": 0,
-      "volumes": 0,
-      "updated_at": 1684582943,
-      "status": "reading",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-05-20"
     },
     {
       "title": "Billy Bat",
@@ -8752,25 +8854,6 @@ window.mediaDatabase = {
       "sort_date": "2023-05-13"
     },
     {
-      "title": "One Punch-Man",
-      "id": 44347,
-      "url": "https://myanimelist.net/manga/44347/One_Punch-Man",
-      "year": "2012",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/manga/3/80661.jpg",
-      "genres": [
-        "Action",
-        "Comedy"
-      ],
-      "chapters": 0,
-      "volumes": 0,
-      "updated_at": 1683963241,
-      "status": "reading",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-05-13"
-    },
-    {
       "title": "20th Century Boys",
       "id": 3,
       "url": "https://myanimelist.net/manga/3/20th_Century_Boys",
@@ -8873,89 +8956,6 @@ window.mediaDatabase = {
       "start_date": "N/A",
       "finish_date": "N/A",
       "sort_date": "2023-04-28"
-    },
-    {
-      "title": "Berserk",
-      "id": 2,
-      "url": "https://myanimelist.net/manga/2/Berserk",
-      "year": "1989",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/images/manga/1/157897.jpg",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Award Winning",
-        "Drama",
-        "Fantasy",
-        "Horror"
-      ],
-      "chapters": 0,
-      "volumes": 0,
-      "updated_at": 1682693397,
-      "status": "reading",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-04-28"
-    },
-    {
-      "title": "One Piece",
-      "id": 13,
-      "url": "https://myanimelist.net/manga/13/One_Piece",
-      "year": "1997",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/images/manga/2/253146.jpg",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Fantasy"
-      ],
-      "chapters": 0,
-      "volumes": 0,
-      "updated_at": 1682690929,
-      "status": "reading",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-04-28"
-    },
-    {
-      "title": "Vagabond",
-      "id": 656,
-      "url": "https://myanimelist.net/manga/656/Vagabond",
-      "year": "1998",
-      "score": 10,
-      "image": "https://cdn.myanimelist.net/images/manga/1/259070.jpg",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Award Winning"
-      ],
-      "chapters": 327,
-      "volumes": 37,
-      "updated_at": 1682691146,
-      "status": "reading",
-      "start_date": "N/A",
-      "finish_date": "N/A",
-      "sort_date": "2023-04-28"
-    },
-    {
-      "title": "JoJo no Kimyou na Bouken Part 9: The JoJoLands",
-      "id": 139629,
-      "url": "https://myanimelist.net/manga/139629/JoJo_no_Kimyou_na_Bouken_Part_9__The_JoJoLands",
-      "year": "2023",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/images/manga/1/286969.jpg",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Supernatural"
-      ],
-      "chapters": 0,
-      "volumes": 0,
-      "updated_at": 1682690969,
-      "status": "reading",
-      "start_date": "2023-02-17",
-      "finish_date": "N/A",
-      "sort_date": "2023-02-17"
     }
   ]
 }

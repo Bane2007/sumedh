@@ -367,7 +367,7 @@ section, .colophon {
 
 /* === THE FILM CLOSET === */
 .closet-section {
-  max-width: 54rem;
+  max-width: 64rem;
   margin: 0 auto;
 }
 .closet-intro {
@@ -547,7 +547,7 @@ section, .colophon {
 .closet-display {
   background: var(--paper-deep);
   padding: 2rem 1.5rem;
-  flex: 0.75;
+  flex: 0.85;
   height: 100%;
   display: flex;
   align-items: flex-start;
@@ -691,7 +691,7 @@ section, .colophon {
 .panel-list-view {
   background: #0c0806 linear-gradient(90deg, rgba(0, 0, 0, 0.25) 1px, transparent 1px);
   background-size: 80px 100%; /* Vertical wood planks backdrop */
-  flex: 1.25;
+  flex: 1.15;
   height: 100%;
   padding: 1.5rem;
   display: flex;

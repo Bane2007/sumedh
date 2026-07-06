@@ -115,13 +115,15 @@
   // --- DISPLAY CASE SYNC UPDATERS ---
   const updateDisplayWithLetterboxd = (film) => {
     if (!displayBox) return;
-    content.style.display = 'grid';
+    content.style.display = '';
     placeholder.style.display = 'none';
 
     displayCabinetImage(film.image, film.title, film.year, 'films');
     titleEl.innerHTML = film.title;
     directorEl.innerHTML = 'Letterboxd Record';
-    metaEl.innerHTML = film.year;
+    
+    const ratingStars = film.rating ? `<span class="rating-stars" style="color: #ffb400; font-size: 1.15rem; font-weight: bold; letter-spacing: 0.05em; margin-left: 0.4rem;">${film.rating}</span>` : '<span style="color: var(--ink-soft); font-style: italic;">Unrated</span>';
+    metaEl.innerHTML = `${film.year} &middot; ${ratingStars}`;
     quoteEl.style.display = 'none';
     
     const watchRow = film.watched_date && film.watched_date !== 'N/A' 
@@ -131,8 +133,6 @@
     descEl.innerHTML = `
       <dl class="display-specs mono">
         <div><dt>Released</dt><dd>${film.year}</dd></div>
-        <div><dt>Rating</dt><dd>${film.rating || 'Unrated'}</dd></div>
-        <div><dt>Database</dt><dd>Letterboxd</dd></div>
         ${watchRow}
       </dl>
       <a class="btn btn--filled" href="https://letterboxd.com/film/${film.slug}/" target="_blank" rel="noopener" style="margin-top: 1.5rem; display: inline-flex; width: 100%; justify-content: center;">
@@ -147,7 +147,7 @@
 
   const updateDisplayWithAnime = (anime) => {
     if (!displayBox) return;
-    content.style.display = 'grid';
+    content.style.display = '';
     placeholder.style.display = 'none';
 
     displayCabinetImage(anime.image, anime.title, anime.year, 'anime');
@@ -155,7 +155,10 @@
     
     const animeStatusStr = anime.status === 'watching' ? 'Watching' : 'Completed';
     directorEl.innerHTML = 'MyAnimeList Record';
-    metaEl.innerHTML = `${anime.year} &middot; ${animeStatusStr}`;
+    
+    const scoreStars = anime.score ? '★'.repeat(Math.round(anime.score / 2)) + (anime.score % 2 >= 1 ? '½' : '') : '';
+    const ratingDisplay = anime.score ? `<span class="rating-stars" style="color: #ffb400; font-size: 1.15rem; font-weight: bold; margin-left: 0.4rem;">${anime.score}/10 ${scoreStars ? '(' + scoreStars + ')' : ''}</span>` : '<span style="color: var(--ink-soft); font-style: italic;">Unrated</span>';
+    metaEl.innerHTML = `${anime.year} &middot; ${animeStatusStr} &middot; ${ratingDisplay}`;
     quoteEl.style.display = 'none';
     
     const genreTags = anime.genres && anime.genres.length > 0 
@@ -168,7 +171,6 @@
       <dl class="display-specs mono">
         <div><dt>Released</dt><dd>${anime.year}</dd></div>
         <div><dt>Episodes</dt><dd>${anime.episodes || 'N/A'}</dd></div>
-        <div><dt>Score</dt><dd>${anime.score ? anime.score + '/10' : 'Unrated'}</dd></div>
         <div><dt>Genres</dt><dd style="max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${genreTags}</dd></div>
         <div><dt>Started</dt><dd>${anime.start_date || 'N/A'}</dd></div>
         <div><dt>Finished</dt><dd>${finishDateStr}</dd></div>
@@ -185,7 +187,7 @@
 
   const updateDisplayWithManga = (manga) => {
     if (!displayBox) return;
-    content.style.display = 'grid';
+    content.style.display = '';
     placeholder.style.display = 'none';
 
     displayCabinetImage(manga.image, manga.title, manga.year, 'manga');
@@ -193,7 +195,10 @@
     
     const mangaStatusStr = manga.status === 'reading' ? 'Reading' : 'Completed';
     directorEl.innerHTML = 'MyAnimeList Record';
-    metaEl.innerHTML = `${manga.year} &middot; ${mangaStatusStr}`;
+    
+    const scoreStars = manga.score ? '★'.repeat(Math.round(manga.score / 2)) + (manga.score % 2 >= 1 ? '½' : '') : '';
+    const ratingDisplay = manga.score ? `<span class="rating-stars" style="color: #ffb400; font-size: 1.15rem; font-weight: bold; margin-left: 0.4rem;">${manga.score}/10 ${scoreStars ? '(' + scoreStars + ')' : ''}</span>` : '<span style="color: var(--ink-soft); font-style: italic;">Unrated</span>';
+    metaEl.innerHTML = `${manga.year} &middot; ${mangaStatusStr} &middot; ${ratingDisplay}`;
     quoteEl.style.display = 'none';
     
     const genreTags = manga.genres && manga.genres.length > 0 
@@ -206,7 +211,6 @@
       <dl class="display-specs mono">
         <div><dt>Released</dt><dd>${manga.year}</dd></div>
         <div><dt>Chapters</dt><dd>${manga.chapters || 'N/A'}</dd></div>
-        <div><dt>Score</dt><dd>${manga.score ? manga.score + '/10' : 'Unrated'}</dd></div>
         <div><dt>Genres</dt><dd style="max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${genreTags}</dd></div>
         <div><dt>Started</dt><dd>${manga.start_date || 'N/A'}</dd></div>
         <div><dt>Finished</dt><dd>${finishDateStr}</dd></div>
@@ -359,8 +363,14 @@
     });
 
     if (items.length > 0) {
+      placeholder.style.display = 'none';
+      content.style.display = '';
       const firstCard = movieGrid.querySelector('.grid-item-card');
       if (firstCard) firstCard.click();
+    } else {
+      content.style.display = 'none';
+      placeholder.style.display = 'block';
+      placeholder.innerHTML = 'No matches found';
     }
   };
 
@@ -401,6 +411,7 @@
   // --- EVENT LISTENERS FOR SEARCH & SORT ---
   if (movieSearch) {
     movieSearch.addEventListener('input', renderList);
+    movieSearch.addEventListener('search', renderList);
   }
   if (movieSort) {
     movieSort.addEventListener('change', renderList);

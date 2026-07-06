@@ -3,10 +3,15 @@ import re
 import json
 import time
 import os
+import html
 
 # Config
 letterboxd_user = "Bane_snj"
 mal_user = "Bane_snj"
+
+# Caching for completed dates to prevent score edits from altering sorting
+cached_anime_dates = {}
+cached_manga_dates = {}
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0',
@@ -244,6 +249,7 @@ def fetch_letterboxd_films():
             else:
                 year = "N/A"
                 name = name_with_year.strip()
+            name = html.unescape(name)
                 
             rating_pattern = rf'data-item-slug="{re.escape(slug)}".*?rated-(\d+)">([^<]+)</span>'
             rating_match = re.search(rating_pattern, content, re.DOTALL)
@@ -328,6 +334,7 @@ def fetch_mal_anime():
             data = json.loads(response.read().decode('utf-8'))
             for item in data:
                 title = item.get('anime_title') or item.get('anime_title_eng')
+                title = html.unescape(str(title)) if title else ""
                 date_str = item.get('anime_start_date_string') or item.get('start_date_string')
                 year = extract_year_from_mal_date(date_str)
                 
@@ -338,7 +345,11 @@ def fetch_mal_anime():
                 
                 start_date = parse_mal_date_to_iso(start_str)
                 finish_date = parse_mal_date_to_iso(finish_str)
-                sort_date = finish_date if finish_date != "N/A" else (start_date if start_date != "N/A" else parse_mal_date_to_iso(None, created_val))
+                
+                # Check cached completed date to avoid score updates altering timeline
+                sort_date = cached_anime_dates.get(item.get('anime_id'))
+                if not sort_date:
+                    sort_date = finish_date if finish_date != "N/A" else (start_date if start_date != "N/A" else parse_mal_date_to_iso(None, updated_val))
                 
                 anime_list.append({
                     'title': title,
@@ -368,6 +379,7 @@ def fetch_mal_anime():
             data = json.loads(response.read().decode('utf-8'))
             for item in data:
                 title = item.get('anime_title') or item.get('anime_title_eng')
+                title = html.unescape(str(title)) if title else ""
                 date_str = item.get('anime_start_date_string') or item.get('start_date_string')
                 year = extract_year_from_mal_date(date_str)
                 
@@ -398,9 +410,14 @@ def fetch_mal_anime():
     except Exception as e:
         print(f"Failed to fetch MAL watching list: {e}")
 
-    # Sort merged list by sort_date descending
-    anime_list.sort(key=lambda x: x.get('sort_date', ''), reverse=True)
-    return anime_list
+    # Separate Watching and Completed anime, sorting Watching at the top
+    watching_anime = [a for a in anime_list if a['status'] == 'watching']
+    completed_anime = [a for a in anime_list if a['status'] == 'completed']
+    
+    watching_anime.sort(key=lambda x: x.get('sort_date', ''), reverse=True)
+    completed_anime.sort(key=lambda x: x.get('sort_date', ''), reverse=True)
+    
+    return watching_anime + completed_anime
 
 # --- 3. FETCH MYANIMELIST MANGA ---
 def fetch_mal_manga():
@@ -415,6 +432,7 @@ def fetch_mal_manga():
             data = json.loads(response.read().decode('utf-8'))
             for item in data:
                 title = item.get('manga_title') or item.get('manga_english')
+                title = html.unescape(str(title)) if title else ""
                 date_str = item.get('manga_start_date_string') or item.get('start_date_string')
                 year = extract_year_from_mal_date(date_str)
                 
@@ -425,7 +443,11 @@ def fetch_mal_manga():
                 
                 start_date = parse_mal_date_to_iso(start_str)
                 finish_date = parse_mal_date_to_iso(finish_str)
-                sort_date = finish_date if finish_date != "N/A" else (start_date if start_date != "N/A" else parse_mal_date_to_iso(None, created_val))
+                
+                # Check cached completed date to avoid score updates altering timeline
+                sort_date = cached_manga_dates.get(item.get('manga_id'))
+                if not sort_date:
+                    sort_date = finish_date if finish_date != "N/A" else (start_date if start_date != "N/A" else parse_mal_date_to_iso(None, updated_val))
                 
                 manga_list.append({
                     'title': title,
@@ -456,6 +478,7 @@ def fetch_mal_manga():
             data = json.loads(response.read().decode('utf-8'))
             for item in data:
                 title = item.get('manga_title') or item.get('manga_english')
+                title = html.unescape(str(title)) if title else ""
                 date_str = item.get('manga_start_date_string') or item.get('start_date_string')
                 year = extract_year_from_mal_date(date_str)
                 
@@ -487,12 +510,35 @@ def fetch_mal_manga():
     except Exception as e:
         print(f"Failed to fetch MAL reading list: {e}")
 
-    # Sort merged list by sort_date descending
-    manga_list.sort(key=lambda x: x.get('sort_date', ''), reverse=True)
-    return manga_list
+    # Separate Reading and Completed manga, sorting Reading at the top
+    reading_manga = [m for m in manga_list if m['status'] == 'reading']
+    completed_manga = [m for m in manga_list if m['status'] == 'completed']
+    
+    reading_manga.sort(key=lambda x: x.get('sort_date', ''), reverse=True)
+    completed_manga.sort(key=lambda x: x.get('sort_date', ''), reverse=True)
+    
+    return reading_manga + completed_manga
 
 # --- MAIN RUN ---
 if __name__ == "__main__":
+    # Load existing media.js to preserve completed sort_dates
+    media_js_path = os.path.join("assets", "data", "media.js")
+    if os.path.exists(media_js_path):
+        try:
+            with open(media_js_path, "r", encoding="utf-8") as f:
+                content = f.read()
+            json_str = content.replace("window.mediaDatabase = ", "")
+            existing_data = json.loads(json_str)
+            for a in existing_data.get("anime", []):
+                if a.get("status") == "completed" and a.get("sort_date"):
+                    cached_anime_dates[a["id"]] = a["sort_date"]
+            for m in existing_data.get("manga", []):
+                if m.get("status") == "completed" and m.get("sort_date"):
+                    cached_manga_dates[m["id"]] = m["sort_date"]
+            print(f"Loaded completed sort_date cache: {len(cached_anime_dates)} anime, {len(cached_manga_dates)} manga.")
+        except Exception as e:
+            print(f"Failed to parse existing media.js: {e}")
+
     films = fetch_letterboxd_films()
     anime = fetch_mal_anime()
     manga = fetch_mal_manga()
