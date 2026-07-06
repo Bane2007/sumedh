@@ -124,11 +124,16 @@
     metaEl.innerHTML = film.year;
     quoteEl.style.display = 'none';
     
+    const watchRow = film.watched_date && film.watched_date !== 'N/A' 
+      ? `<div><dt>Watched</dt><dd>${film.watched_date}</dd></div>` 
+      : '';
+
     descEl.innerHTML = `
       <dl class="display-specs mono">
         <div><dt>Released</dt><dd>${film.year}</dd></div>
         <div><dt>Rating</dt><dd>${film.rating || 'Unrated'}</dd></div>
         <div><dt>Database</dt><dd>Letterboxd</dd></div>
+        ${watchRow}
       </dl>
       <a class="btn btn--filled" href="https://letterboxd.com/film/${film.slug}/" target="_blank" rel="noopener" style="margin-top: 1.5rem; display: inline-flex; width: 100%; justify-content: center;">
         View on Letterboxd
@@ -157,12 +162,16 @@
       ? anime.genres.join(', ') 
       : 'N/A';
 
+    const finishDateStr = anime.status === 'watching' ? 'Watching' : (anime.finish_date || 'N/A');
+
     descEl.innerHTML = `
       <dl class="display-specs mono">
         <div><dt>Released</dt><dd>${anime.year}</dd></div>
         <div><dt>Episodes</dt><dd>${anime.episodes || 'N/A'}</dd></div>
         <div><dt>Score</dt><dd>${anime.score ? anime.score + '/10' : 'Unrated'}</dd></div>
         <div><dt>Genres</dt><dd style="max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${genreTags}</dd></div>
+        <div><dt>Started</dt><dd>${anime.start_date || 'N/A'}</dd></div>
+        <div><dt>Finished</dt><dd>${finishDateStr}</dd></div>
       </dl>
       <a class="btn btn--filled" href="${anime.url}" target="_blank" rel="noopener" style="margin-top: 1.5rem; display: inline-flex; width: 100%; justify-content: center;">
         View on MyAnimeList
@@ -191,12 +200,16 @@
       ? manga.genres.join(', ') 
       : 'N/A';
 
+    const finishDateStr = manga.status === 'reading' ? 'Reading' : (manga.finish_date || 'N/A');
+
     descEl.innerHTML = `
       <dl class="display-specs mono">
         <div><dt>Released</dt><dd>${manga.year}</dd></div>
         <div><dt>Chapters</dt><dd>${manga.chapters || 'N/A'}</dd></div>
         <div><dt>Score</dt><dd>${manga.score ? manga.score + '/10' : 'Unrated'}</dd></div>
         <div><dt>Genres</dt><dd style="max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${genreTags}</dd></div>
+        <div><dt>Started</dt><dd>${manga.start_date || 'N/A'}</dd></div>
+        <div><dt>Finished</dt><dd>${finishDateStr}</dd></div>
       </dl>
       <a class="btn btn--filled" href="${manga.url}" target="_blank" rel="noopener" style="margin-top: 1.5rem; display: inline-flex; width: 100%; justify-content: center;">
         View on MyAnimeList
