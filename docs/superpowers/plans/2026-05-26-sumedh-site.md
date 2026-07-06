@@ -17,18 +17,18 @@
 ## Task 1: Scaffold project structure
 
 **Files:**
-- Create: `C:\Users\sumed\sadako-site\.nojekyll`
-- Create: `C:\Users\sumed\sadako-site\.gitignore`
-- Create: `C:\Users\sumed\sadako-site\assets\css\` (directory)
-- Create: `C:\Users\sumed\sadako-site\assets\js\` (directory)
-- Create: `C:\Users\sumed\sadako-site\assets\fonts\` (directory)
-- Create: `C:\Users\sumed\sadako-site\assets\img\` (directory)
-- Create: `C:\Users\sumed\sadako-site\assets\svg\` (directory)
+- Create: `C:\Users\sumed\sumedh-site\.nojekyll`
+- Create: `C:\Users\sumed\sumedh-site\.gitignore`
+- Create: `C:\Users\sumed\sumedh-site\assets\css\` (directory)
+- Create: `C:\Users\sumed\sumedh-site\assets\js\` (directory)
+- Create: `C:\Users\sumed\sumedh-site\assets\fonts\` (directory)
+- Create: `C:\Users\sumed\sumedh-site\assets\img\` (directory)
+- Create: `C:\Users\sumed\sumedh-site\assets\svg\` (directory)
 
 - [ ] **Step 1: Create asset directories**
 
 ```powershell
-$root = 'C:\Users\sumed\sadako-site'
+$root = 'C:\Users\sumed\sumedh-site'
 @('assets\css','assets\js','assets\fonts','assets\img','assets\svg') |
   ForEach-Object { New-Item -ItemType Directory -Force -Path "$root\$_" | Out-Null }
 Get-ChildItem $root\assets | Format-Table Name,Mode
@@ -57,7 +57,7 @@ desktop.ini
 - [ ] **Step 3: Verify and commit**
 
 ```powershell
-Set-Location 'C:\Users\sumed\sadako-site'
+Set-Location 'C:\Users\sumed\sumedh-site'
 git status --short
 git add .nojekyll .gitignore
 git commit -m "chore: scaffold project directories and ignore files"
@@ -71,8 +71,8 @@ Expected: commit succeeds. `git status` shows clean working tree apart from the 
 
 **Files:**
 - Source: `C:\Users\sumed\Downloads\sadako.png` (6 MB)
-- Create: `C:\Users\sumed\sadako-site\assets\img\poster.jpg` (target < 400 KB)
-- Create: `C:\Users\sumed\sadako-site\assets\img\poster-full.png` (verbatim copy of the source for direct-download link)
+- Create: `C:\Users\sumed\sumedh-site\assets\img\poster.jpg` (target < 400 KB)
+- Create: `C:\Users\sumed\sumedh-site\assets\img\poster-full.png` (verbatim copy of the source for direct-download link)
 
 - [ ] **Step 1: Verify Python + Pillow available**
 
@@ -85,19 +85,19 @@ Expected: prints a version number. If `ModuleNotFoundError`, run `python -m pip 
 - [ ] **Step 2: Copy full-res poster (for direct-download link)**
 
 ```powershell
-Copy-Item 'C:\Users\sumed\Downloads\sadako.png' 'C:\Users\sumed\sadako-site\assets\img\poster-full.png'
+Copy-Item 'C:\Users\sumed\Downloads\sadako.png' 'C:\Users\sumed\sumedh-site\assets\img\poster-full.png'
 ```
 
 - [ ] **Step 3: Generate optimized JPEG**
 
-Write `C:\Users\sumed\sadako-site\optimize_poster.py` (one-shot script, will be deleted after):
+Write `C:\Users\sumed\sumedh-site\optimize_poster.py` (one-shot script, will be deleted after):
 
 ```python
 from PIL import Image
 from pathlib import Path
 
 src = Path(r'C:\Users\sumed\Downloads\sadako.png')
-dst = Path(r'C:\Users\sumed\sadako-site\assets\img\poster.jpg')
+dst = Path(r'C:\Users\sumed\sumedh-site\assets\img\poster.jpg')
 
 img = Image.open(src).convert('RGB')
 
@@ -116,7 +116,7 @@ print(f'wrote {dst} — {dst.stat().st_size // 1024} KB, {new_size[0]}x{new_size
 Run:
 
 ```powershell
-python C:\Users\sumed\sadako-site\optimize_poster.py
+python C:\Users\sumed\sumedh-site\optimize_poster.py
 ```
 
 Expected: prints file path with KB size and new dimensions. Target < 400 KB. If quality 82 overshoots, drop to 78 and re-run.
@@ -124,8 +124,8 @@ Expected: prints file path with KB size and new dimensions. Target < 400 KB. If 
 - [ ] **Step 4: Delete the one-shot script and commit**
 
 ```powershell
-Remove-Item C:\Users\sumed\sadako-site\optimize_poster.py
-Set-Location 'C:\Users\sumed\sadako-site'
+Remove-Item C:\Users\sumed\sumedh-site\optimize_poster.py
+Set-Location 'C:\Users\sumed\sumedh-site'
 git add assets/img/poster.jpg assets/img/poster-full.png
 git commit -m "feat: add Sadako poster (optimized + full-res)"
 ```
@@ -137,9 +137,9 @@ Expected: both files committed.
 ## Task 3: Self-host fonts (EB Garamond + JetBrains Mono)
 
 **Files:**
-- Create: `C:\Users\sumed\sadako-site\assets\fonts\eb-garamond-regular.woff2`
-- Create: `C:\Users\sumed\sadako-site\assets\fonts\eb-garamond-medium.woff2`
-- Create: `C:\Users\sumed\sadako-site\assets\fonts\jetbrains-mono-regular.woff2`
+- Create: `C:\Users\sumed\sumedh-site\assets\fonts\eb-garamond-regular.woff2`
+- Create: `C:\Users\sumed\sumedh-site\assets\fonts\eb-garamond-medium.woff2`
+- Create: `C:\Users\sumed\sumedh-site\assets\fonts\jetbrains-mono-regular.woff2`
 
 - [ ] **Step 1: Fetch the woff2 files from jsDelivr's Fontsource mirror**
 
@@ -151,7 +151,7 @@ $fonts = @{
   'eb-garamond-medium.woff2'       = 'https://cdn.jsdelivr.net/fontsource/fonts/eb-garamond@latest/latin-500-normal.woff2'
   'jetbrains-mono-regular.woff2'   = 'https://cdn.jsdelivr.net/fontsource/fonts/jetbrains-mono@latest/latin-400-normal.woff2'
 }
-$dst = 'C:\Users\sumed\sadako-site\assets\fonts'
+$dst = 'C:\Users\sumed\sumedh-site\assets\fonts'
 foreach ($f in $fonts.GetEnumerator()) {
   Invoke-WebRequest -Uri $f.Value -OutFile "$dst\$($f.Key)" -UseBasicParsing
   $size = (Get-Item "$dst\$($f.Key)").Length
@@ -164,7 +164,7 @@ Expected: three lines, each font ~20-60 KB. If any URL 404s, log the failure and
 - [ ] **Step 2: Commit fonts**
 
 ```powershell
-Set-Location 'C:\Users\sumed\sadako-site'
+Set-Location 'C:\Users\sumed\sumedh-site'
 git add assets/fonts/eb-garamond-regular.woff2 assets/fonts/eb-garamond-medium.woff2 assets/fonts/jetbrains-mono-regular.woff2
 git commit -m "feat: self-host EB Garamond and JetBrains Mono (woff2)"
 ```
@@ -174,7 +174,7 @@ git commit -m "feat: self-host EB Garamond and JetBrains Mono (woff2)"
 ## Task 4: Hand-code the line-art origami crane SVG
 
 **Files:**
-- Create: `C:\Users\sumed\sadako-site\assets\svg\crane.svg`
+- Create: `C:\Users\sumed\sumedh-site\assets\svg\crane.svg`
 
 The crane appears twice (between Sadako and Roles sections, and as the closing flourish before the colophon). One file, reused via `<img src="assets/svg/crane.svg">`.
 
@@ -204,7 +204,7 @@ The `currentColor` stroke means the crane inherits the surrounding text color (o
 - [ ] **Step 2: Verify the SVG renders**
 
 ```powershell
-Start-Process 'C:\Users\sumed\sadako-site\assets\svg\crane.svg'
+Start-Process 'C:\Users\sumed\sumedh-site\assets\svg\crane.svg'
 ```
 
 Expected: opens in default browser/viewer. Should show a stylized crane silhouette. If it looks distorted, retry the path coordinates (geometry is decorative; tweak freely).
@@ -212,7 +212,7 @@ Expected: opens in default browser/viewer. Should show a stylized crane silhouet
 - [ ] **Step 3: Commit**
 
 ```powershell
-Set-Location 'C:\Users\sumed\sadako-site'
+Set-Location 'C:\Users\sumed\sumedh-site'
 git add assets/svg/crane.svg
 git commit -m "feat: hand-coded line-art origami crane SVG"
 ```
@@ -222,13 +222,13 @@ git commit -m "feat: hand-coded line-art origami crane SVG"
 ## Task 5: Write the HTML skeleton with all six sections
 
 **Files:**
-- Create: `C:\Users\sumed\sadako-site\index.html`
+- Create: `C:\Users\sumed\sumedh-site\index.html`
 
 This task writes the full semantic structure. Content goes in; CSS comes in the next task. The page will render unstyled (browser default) but legible.
 
 - [ ] **Step 1: Write index.html**
 
-Full file at `C:\Users\sumed\sadako-site\index.html`:
+Full file at `C:\Users\sumed\sumedh-site\index.html`:
 
 ```html
 <!DOCTYPE html>
@@ -375,8 +375,8 @@ Full file at `C:\Users\sumed\sadako-site\index.html`:
 - [ ] **Step 2: Start a local server and verify the structure renders**
 
 ```powershell
-Set-Location 'C:\Users\sumed\sadako-site'
-Start-Process powershell -ArgumentList '-NoExit','-Command','Set-Location C:\Users\sumed\sadako-site; python -m http.server 8000'
+Set-Location 'C:\Users\sumed\sumedh-site'
+Start-Process powershell -ArgumentList '-NoExit','-Command','Set-Location C:\Users\sumed\sumedh-site; python -m http.server 8000'
 Start-Sleep -Seconds 2
 Start-Process 'http://localhost:8000/'
 ```
@@ -386,7 +386,7 @@ Expected: browser opens, page shows unstyled but legible content. You should see
 - [ ] **Step 3: Commit the skeleton**
 
 ```powershell
-Set-Location 'C:\Users\sumed\sadako-site'
+Set-Location 'C:\Users\sumed\sumedh-site'
 git add index.html
 git commit -m "feat: write semantic HTML skeleton for all six sections"
 ```
@@ -396,13 +396,13 @@ git commit -m "feat: write semantic HTML skeleton for all six sections"
 ## Task 6: Write the base CSS layer (palette, type, baseline)
 
 **Files:**
-- Create: `C:\Users\sumed\sadako-site\assets\css\style.css`
+- Create: `C:\Users\sumed\sumedh-site\assets\css\style.css`
 
 This task delivers the typographic + chromatic foundation. The page will look like a tasteful book at this point — no layout flourishes yet.
 
 - [ ] **Step 1: Write the base CSS**
 
-Full file at `C:\Users\sumed\sadako-site\assets\css\style.css`:
+Full file at `C:\Users\sumed\sumedh-site\assets\css\style.css`:
 
 ```css
 /* === FONT FACES === */
@@ -512,7 +512,7 @@ Refresh `http://localhost:8000/`. The page should now render in EB Garamond on c
 - [ ] **Step 3: Commit**
 
 ```powershell
-Set-Location 'C:\Users\sumed\sadako-site'
+Set-Location 'C:\Users\sumed\sumedh-site'
 git add assets/css/style.css
 git commit -m "feat: base CSS — palette, typography, paper background"
 ```
@@ -522,7 +522,7 @@ git commit -m "feat: base CSS — palette, typography, paper background"
 ## Task 7: Style the Hero section
 
 **Files:**
-- Modify: `C:\Users\sumed\sadako-site\assets\css\style.css` (append)
+- Modify: `C:\Users\sumed\sumedh-site\assets\css\style.css` (append)
 
 - [ ] **Step 1: Append hero styles**
 
@@ -576,7 +576,7 @@ Refresh browser. Hero should now fill viewport, name centered in small-caps, tag
 - [ ] **Step 3: Commit**
 
 ```powershell
-Set-Location 'C:\Users\sumed\sadako-site'
+Set-Location 'C:\Users\sumed\sumedh-site'
 git add assets/css/style.css
 git commit -m "feat: style Hero — centered name, mono tagline, pulsing chevron"
 ```
@@ -586,7 +586,7 @@ git commit -m "feat: style Hero — centered name, mono tagline, pulsing chevron
 ## Task 8: Style About + section-spacing rhythm
 
 **Files:**
-- Modify: `C:\Users\sumed\sadako-site\assets\css\style.css` (append)
+- Modify: `C:\Users\sumed\sumedh-site\assets\css\style.css` (append)
 
 - [ ] **Step 1: Append**
 
@@ -617,7 +617,7 @@ Refresh. About paragraph should appear in larger serif, "Sadako" italicized in o
 - [ ] **Step 3: Commit**
 
 ```powershell
-Set-Location 'C:\Users\sumed\sadako-site'
+Set-Location 'C:\Users\sumed\sumedh-site'
 git add assets/css/style.css
 git commit -m "feat: style About + section spacing rhythm"
 ```
@@ -627,7 +627,7 @@ git commit -m "feat: style About + section spacing rhythm"
 ## Task 9: Style the Sadako centerpiece
 
 **Files:**
-- Modify: `C:\Users\sumed\sadako-site\assets\css\style.css` (append)
+- Modify: `C:\Users\sumed\sumedh-site\assets\css\style.css` (append)
 
 This is the biggest CSS chunk. Includes the two-column grid (poster left, info right), title, logline, awards band, buttons, specs.
 
@@ -741,7 +741,7 @@ The Sadako section should now show: poster on the left (with subtle drop shadow)
 - [ ] **Step 3: Commit**
 
 ```powershell
-Set-Location 'C:\Users\sumed\sadako-site'
+Set-Location 'C:\Users\sumed\sumedh-site'
 git add assets/css/style.css
 git commit -m "feat: style Sadako centerpiece — poster grid, awards band, buttons, specs"
 ```
@@ -751,7 +751,7 @@ git commit -m "feat: style Sadako centerpiece — poster grid, awards band, butt
 ## Task 10: Style the crane divider, Roles, Contact, Colophon
 
 **Files:**
-- Modify: `C:\Users\sumed\sadako-site\assets\css\style.css` (append)
+- Modify: `C:\Users\sumed\sumedh-site\assets\css\style.css` (append)
 
 - [ ] **Step 1: Append**
 
@@ -854,7 +854,7 @@ Cranes show centered between sections. Roles section is two-column on desktop, s
 - [ ] **Step 3: Commit**
 
 ```powershell
-Set-Location 'C:\Users\sumed\sadako-site'
+Set-Location 'C:\Users\sumed\sumedh-site'
 git add assets/css/style.css
 git commit -m "feat: style cranes, Roles two-col, Contact links, Colophon"
 ```
@@ -864,8 +864,8 @@ git commit -m "feat: style cranes, Roles two-col, Contact links, Colophon"
 ## Task 11: Add scroll-fade JS + reduced-motion guard
 
 **Files:**
-- Create: `C:\Users\sumed\sadako-site\assets\js\main.js`
-- Modify: `C:\Users\sumed\sadako-site\assets\css\style.css` (append a small reveal class)
+- Create: `C:\Users\sumed\sumedh-site\assets\js\main.js`
+- Modify: `C:\Users\sumed\sumedh-site\assets\css\style.css` (append a small reveal class)
 
 - [ ] **Step 1: Append the reveal class to style.css**
 
@@ -923,7 +923,7 @@ Also test reduced-motion: in DevTools, open the rendering panel and set "Emulate
 - [ ] **Step 4: Commit**
 
 ```powershell
-Set-Location 'C:\Users\sumed\sadako-site'
+Set-Location 'C:\Users\sumed\sumedh-site'
 git add assets/js/main.js assets/css/style.css
 git commit -m "feat: scroll-fade reveals with prefers-reduced-motion guard"
 ```
@@ -933,7 +933,7 @@ git commit -m "feat: scroll-fade reveals with prefers-reduced-motion guard"
 ## Task 12: Write README + final walk-through
 
 **Files:**
-- Create: `C:\Users\sumed\sadako-site\README.md`
+- Create: `C:\Users\sumed\sumedh-site\README.md`
 
 - [ ] **Step 1: Write README**
 
@@ -979,7 +979,7 @@ Any issue: fix it before continuing.
 - [ ] **Step 3: Commit**
 
 ```powershell
-Set-Location 'C:\Users\sumed\sadako-site'
+Set-Location 'C:\Users\sumed\sumedh-site'
 git add README.md
 git commit -m "docs: README with stack and local-preview instructions"
 ```
@@ -989,7 +989,7 @@ git commit -m "docs: README with stack and local-preview instructions"
 ## Task 13: Update Contact section with confirmed social handles
 
 **Files:**
-- Modify: `C:\Users\sumed\sadako-site\index.html`
+- Modify: `C:\Users\sumed\sumedh-site\index.html`
 
 **Status:** Blocked until BANE provides LinkedIn / Letterboxd / Instagram handles (per spec §10 item 3 and the AskUserQuestion answer).
 
@@ -1010,7 +1010,7 @@ Replace each placeholder URL with the real handle. Uncomment the lines that appl
 - [ ] **Step 2: Refresh, verify, commit**
 
 ```powershell
-Set-Location 'C:\Users\sumed\sadako-site'
+Set-Location 'C:\Users\sumed\sumedh-site'
 git add index.html
 git commit -m "feat: add social links to contact section"
 ```
@@ -1043,7 +1043,7 @@ Expected: `Bane2007`. If it's something else, stop and ask BANE which account to
 - [ ] **Step 3: Create the repo and push**
 
 ```powershell
-Set-Location 'C:\Users\sumed\sadako-site'
+Set-Location 'C:\Users\sumed\sumedh-site'
 gh repo create sumedh --public --source=. --remote=origin --description "Personal site of Sumedh Jamsandekar — writer, director, engineer. Featuring Sadako (2025)." --push
 ```
 

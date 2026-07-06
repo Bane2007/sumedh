@@ -151,13 +151,8 @@
       img.onload = () => {
         fallback.replaceWith(img);
       };
-      
-      // Use proxy ONLY for Letterboxd/Featured movies. Load MAL images directly.
-      if (category === 'films' || category === 'featured') {
-        img.src = 'https://images.weserv.nl/?url=' + encodeURIComponent(imageUrl);
-      } else {
-        img.src = imageUrl;
-      }
+      // Use proxy for all external images to bypass hotlinking/CORS protection.
+      img.src = 'https://images.weserv.nl/?url=' + encodeURIComponent(imageUrl);
     }
   };
 
@@ -349,11 +344,14 @@
       card.className = 'grid-item-card';
       card.setAttribute('tabindex', '0');
 
+      const inner = document.createElement('div');
+      inner.className = 'card-inner';
+
       // Create fallback immediately inside the DOM
       const fallback = document.createElement('div');
       fallback.className = 'card-fallback-svg-container';
       fallback.innerHTML = generateGenericCover(item.title, item.year);
-      card.appendChild(fallback);
+      inner.appendChild(fallback);
 
       // Asynchronously load image
       if (item.image) {
@@ -364,13 +362,8 @@
         img.onload = () => {
           fallback.replaceWith(img);
         };
-        
-        // Use proxy ONLY for Letterboxd films. Load MAL images directly.
-        if (currentCategory === 'films') {
-          img.src = 'https://images.weserv.nl/?url=' + encodeURIComponent(item.image);
-        } else {
-          img.src = item.image;
-        }
+        // Use proxy for all external images to bypass hotlinking/CORS protection.
+        img.src = 'https://images.weserv.nl/?url=' + encodeURIComponent(item.image);
       }
 
       const overlay = document.createElement('div');
@@ -379,7 +372,9 @@
         <span class="card-hover-title">${item.title}</span>
         <span class="card-hover-year">${item.year}</span>
       `;
-      card.appendChild(overlay);
+      inner.appendChild(overlay);
+
+      card.appendChild(inner);
 
       card.addEventListener('click', () => {
         const allCards = movieGrid.querySelectorAll('.grid-item-card');

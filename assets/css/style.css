@@ -389,19 +389,38 @@ section, .colophon {
   justify-content: center;
   align-items: flex-end;
   height: 270px;
-  background: #120e0b; /* Wood backdrop dark */
-  border-bottom: 8px solid #0f0a08; /* Shelf board */
+  background: #120e0b linear-gradient(90deg, rgba(0, 0, 0, 0.25) 1px, transparent 1px);
+  background-size: 80px 100%; /* Vertical wood planks backdrop */
   padding: 0 2rem;
   overflow: hidden;
   position: relative;
 }
-/* Subtle shelf shadow */
+/* 3D Wood Shelf Board */
+.closet-shelf::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 12px;
+  background: linear-gradient(to bottom, #2b1d14, #120b07);
+  border-top: 2px solid #4a3222;
+  border-bottom: 2px solid #000;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  pointer-events: none;
+}
+/* Subtle shelf shadow below the board */
 .closet-shelf::after {
   content: "";
   position: absolute;
-  left: 0; right: 0; bottom: 0;
-  height: 6px;
-  background: rgba(0,0,0,0.85);
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  filter: blur(4px);
+  z-index: 1;
   pointer-events: none;
 }
 .spine-item {
@@ -450,6 +469,9 @@ section, .colophon {
   font-weight: 500;
   letter-spacing: 0.05em;
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .spine-director {
   font-size: 0.58rem;
@@ -457,6 +479,8 @@ section, .colophon {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   opacity: 0.75;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 /* Individual Spines Identity */
@@ -637,20 +661,36 @@ section, .colophon {
 
 /* === LETTERBOXD LIST VIEW PANEL === */
 .panel-list-view {
-  background: #0c0806; /* Deep dark wood shadow */
+  background: #0c0806 linear-gradient(90deg, rgba(0, 0, 0, 0.25) 1px, transparent 1px);
+  background-size: 80px 100%; /* Vertical wood planks backdrop */
   border: 1px solid var(--hairline);
-  border-bottom: 8px solid #080504; /* Solid shelf base board */
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   height: 580px; /* Taller to fit a beautiful grid wall */
   box-shadow: inset 0 20px 40px rgba(0, 0, 0, 0.85);
+  position: relative;
+}
+/* 3D Wood Base Board for list view panel */
+.panel-list-view::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 12px;
+  background: linear-gradient(to bottom, #2b1d14, #120b07);
+  border-top: 2px solid #4a3222;
+  border-bottom: 2px solid #000;
+  z-index: 2;
+  pointer-events: none;
 }
 .list-view-controls {
   display: flex;
   width: 100%;
   gap: 0.75rem;
+  z-index: 3; /* Sit above scrolling cards */
 }
 .movie-search-input {
   flex: 1;
@@ -720,15 +760,11 @@ section, .colophon {
   width: 100%;
   aspect-ratio: 2 / 3;
   position: relative;
-  background: var(--paper-deep);
-  border: 1px solid var(--hairline);
-  border-radius: 3px;
   cursor: pointer;
-  transform-style: preserve-3d;
-  transform: perspective(600px) rotateX(4deg);
-  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), border-color 200ms ease, box-shadow 300ms ease;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.65);
+  user-select: none;
+  outline: none;
 }
+/* Fixed 3D wood shelf under each card */
 .grid-item-card::after {
   content: '';
   position: absolute;
@@ -741,20 +777,39 @@ section, .colophon {
   border-bottom: 2px solid #000;
   border-radius: 2px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.7);
-  z-index: -1;
-  transform: translateZ(-10px);
+  z-index: 1;
 }
-.grid-item-card:hover {
-  transform: perspective(600px) rotateX(0deg) translateY(-10px) scale(1.05);
+/* Outer container layering */
+.grid-item-card:hover,
+.grid-item-card:focus-within,
+.grid-item-card.selected {
+  z-index: 5;
+}
+/* Inner card wrapper that slides up on hover/selected */
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: var(--paper-deep);
+  border: 1px solid var(--hairline);
+  border-radius: 3px;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transform: perspective(600px) rotateX(4deg);
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), border-color 200ms ease, box-shadow 300ms ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.65);
+  z-index: 2; /* Sit on top of shelf */
+}
+.grid-item-card:hover .card-inner,
+.grid-item-card:focus-visible .card-inner,
+.grid-item-card.selected .card-inner {
+  transform: perspective(600px) rotateX(0deg) translateY(-12px) scale(1.05);
   border-color: var(--oxblood-soft);
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.9), 0 0 10px rgba(156, 145, 130, 0.2);
-  z-index: 5;
 }
-.grid-item-card.selected {
-  transform: perspective(600px) rotateX(0deg) translateY(-10px) scale(1.05);
+.grid-item-card.selected .card-inner {
   border-color: #ffb300; /* Gold seal border */
   box-shadow: 0 0 15px rgba(255, 179, 0, 0.6), 0 16px 32px rgba(0, 0, 0, 0.9);
-  z-index: 5;
 }
 .card-poster-img {
   width: 100%;

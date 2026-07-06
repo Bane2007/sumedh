@@ -59,7 +59,7 @@ Same visual world as the poster (warm kraft paper, hand-drawn marker title, line
 ## 5. File layout
 
 ```
-sadako-site/
+sumedh-site/
   index.html
   assets/
     css/style.css           ← one stylesheet, target < 450 lines
@@ -85,12 +85,13 @@ sadako-site/
 
 ## 7. Deploy
 
-1. Already have `git init` done in `sadako-site/`
+1. Already have `git init` done in `sumedh-site/`
 2. Stage and commit explicit files (no `git add -A`)
 3. `gh auth login` (BANE runs once, interactive)
-4. `gh repo create sadako-site --public --source=. --push` (or alt name — see §10)
-5. Enable Pages: `gh api -X POST /repos/Bane2007/sadako-site/pages -f source[branch]=main -f source[path]=/`
-6. Live within ~60 s at `https://bane2007.github.io/sadako-site/`
+4. `gh repo create sumedh-site --public --source=. --push` (or alt name — see §10)
+5. Enable Pages: `gh api -X POST /repos/Bane2007/sumedh-site/pages -f source[branch]=main -f source[path]=/`
+6. Live within ~60 s at `https://bane2007.github.io/sumedh-site/`
+
 
 Custom domain (e.g. `sumedhjamsandekar.com`) deferred — trivial later.
 
@@ -114,7 +115,7 @@ Custom domain (e.g. `sumedhjamsandekar.com`) deferred — trivial later.
 
 ## 10. What needs confirming before build
 
-1. **Repo name** — `sadako-site` (default) or `sumedh-site` / `sumedhjamsandekar` / something else? Affects the live URL.
+1. **Repo name** — `sumedh-site` (default) or `sumedhjamsandekar` / something else? Affects the live URL.
 2. **Hero tagline** — `filmmaker · engineer · abu dhabi` (default) or BANE's own line?
 3. **Contact links to show** — minimum IMDb + GitHub; optional: LinkedIn, Letterboxd, Instagram, email. BANE provides handles/URLs for any optional ones.
 4. **About paragraph voice** — should I draft from memory (energy engineering at IITDA, co-directs short films, languages, …) or does BANE want to write his own one-paragraph bio?
