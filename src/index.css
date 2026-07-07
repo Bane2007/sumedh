@@ -3087,4 +3087,184 @@ body.theme-contact {
   text-overflow: ellipsis;
 }
 
+/* ==================== WINDOWS XP LUNA THEME OVERRIDES ==================== */
+
+/* Taskbar styled at the bottom */
+.status-bar {
+  top: auto !important;
+  bottom: 0 !important;
+  height: 30px !important;
+  background: linear-gradient(to bottom, #245edb 0%, #3f8cf3 9%, #245edb 18%, #193ebd 100%) !important;
+  border-top: 1px solid #1a3c9f !important;
+  border-bottom: none !important;
+  font-family: Tahoma, 'Trebuchet MS', sans-serif !important;
+  font-size: 0.75rem !important;
+  color: #ffffff !important;
+  padding: 0 !important;
+  z-index: 99999 !important;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.3) !important;
+}
+
+.status-left {
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+/* Green Start Button */
+.xp-start-btn {
+  background: linear-gradient(to bottom, #7fc242 0%, #458816 100%) !important;
+  color: white !important;
+  font-family: Tahoma, 'Trebuchet MS', sans-serif !important;
+  font-weight: bold !important;
+  font-style: italic !important;
+  font-size: 0.95rem !important;
+  padding: 0 18px 0 14px !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 0 10px 10px 0 !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4), inset 1px 1px 1px #a4e668 !important;
+  text-shadow: 1px 1px 1px #224400 !important;
+  cursor: pointer !important;
+  border: none !important;
+  outline: none !important;
+}
+.xp-start-btn:hover {
+  background: linear-gradient(to bottom, #8cd14c 0%, #5ba724 100%) !important;
+  filter: brightness(1.05);
+}
+
+/* System Tray look */
+.status-right {
+  background: #0f60e3 !important;
+  border-left: 1px solid #0c4cb5 !important;
+  padding: 0 15px !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 15px !important;
+  box-shadow: inset 1px 0 2px rgba(0,0,0,0.2) !important;
+  font-size: 0.7rem !important;
+}
+
+/* Window Luna blue border */
+.window {
+  border: 4px solid #0054e3 !important;
+  border-radius: 8px 8px 0 0 !important;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.4) !important;
+  background: var(--paper-deep) !important;
+}
+
+/* XP Blue Title Bar */
+.window-header {
+  height: 30px !important;
+  padding: 0 8px !important;
+  background: linear-gradient(to bottom, #0058e6 0%, #3a8bf3 9%, #0058e6 18%, #0044b4 100%) !important;
+  border-bottom: 1px solid #002e7a !important;
+  border-radius: 4px 4px 0 0 !important;
+}
+
+.window-title {
+  font-family: 'Trebuchet MS', Tahoma, Arial, sans-serif !important;
+  font-size: 0.8rem !important;
+  font-weight: bold !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  color: #ffffff !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Red XP Close Button */
+.window-close {
+  width: 21px !important;
+  height: 21px !important;
+  border-radius: 3px !important;
+  background: linear-gradient(to bottom, #f37d65 0%, #e64522 50%, #c41c00 100%) !important;
+  border: 1px solid #ae1e04 !important;
+  cursor: pointer !important;
+  box-shadow: inset -1px -1px 1px rgba(0,0,0,0.5), inset 1px 1px 1px rgba(255,255,255,0.5) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.window-close::before {
+  content: "×" !important;
+  color: white !important;
+  font-family: "Courier New", Courier, monospace !important;
+  font-size: 15px !important;
+  font-weight: bold !important;
+  line-height: 1 !important;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.3) !important;
+  background: none !important;
+}
+.window-close:hover {
+  background: linear-gradient(to bottom, #f59582 0%, #ff5c3b 50%, #e62200 100%) !important;
+  opacity: 1 !important;
+}
+
+/* Blue XP Maximize Button */
+.window-maximize {
+  width: 21px !important;
+  height: 21px !important;
+  border-radius: 3px !important;
+  background: linear-gradient(to bottom, #ffffff 0%, #dddddd 50%, #b5b5b5 100%) !important;
+  border: 1px solid #707070 !important;
+  cursor: pointer !important;
+  box-shadow: inset -1px -1px 1px rgba(0,0,0,0.3), inset 1px 1px 1px rgba(255,255,255,0.8) !important;
+  position: relative !important;
+}
+.window-maximize::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 4px !important; left: 4px !important; right: 4px !important; bottom: 4px !important;
+  border: 2px solid #0054e3 !important;
+  border-top-width: 3px !important;
+  background: none !important;
+  border-radius: 0 !important;
+}
+.window-maximize:hover {
+  background: linear-gradient(to bottom, #ffffff 0%, #eeeeee 100%) !important;
+  opacity: 1 !important;
+}
+
+/* Offset Desktop Space to avoid overlapping bottom taskbar */
+.desktop {
+  height: calc(100vh - 30px) !important;
+}
+
+/* === REALISTIC CRT SCANLINE GLARE ENHANCEMENTS === */
+.crt-effect::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  /* Darker retro scanlines & color phosphor mask */
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.35) 50%), 
+              linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.03), rgba(0, 0, 255, 0.06));
+  background-size: 100% 4px, 6px 100%;
+  z-index: 999999;
+  pointer-events: none;
+  opacity: 0.55;
+}
+.crt-effect::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  /* Spherical glass screen curvature and diagonal glass light glare */
+  background: radial-gradient(circle at center, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0.52) 100%),
+              linear-gradient(135deg, rgba(255,255,255,0.09) 0%, rgba(255,255,255,0) 45%);
+  z-index: 1000000;
+  pointer-events: none;
+  opacity: 0.92;
+}
+
+/* === PHOTOS POLAROID FIXES === */
+.polaroid-img-wrapper {
+  aspect-ratio: 1/1 !important; /* Perfect square polaroid photo crop */
+}
+
 

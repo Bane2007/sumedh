@@ -717,6 +717,26 @@ function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children
 
 const PHOTO_GALLERY = [
   {
+    id: "portrait",
+    title: "sumedh_portrait.raw",
+    date: "2025-10-15",
+    camera: "Fujifilm X-T4",
+    lens: "XF 56mm f/1.2 R WR",
+    specs: "ISO 160 · f/1.2 · 1/160s",
+    src: `${import.meta.env.BASE_URL}assets/img/portrait.jpg`,
+    desc: "Official portrait headshot. Captured outdoors in natural morning ambient light."
+  },
+  {
+    id: "poster",
+    title: "film_poster.raw",
+    date: "2026-01-20",
+    camera: "Sony A7R V",
+    lens: "FE 24-70mm f/2.8 GM II",
+    specs: "ISO 100 · f/4.0 · 1/125s",
+    src: `${import.meta.env.BASE_URL}assets/img/poster.jpg`,
+    desc: "Official key art layout poster graphic design file."
+  },
+  {
     id: "film_still",
     title: "film_still_night.raw",
     date: "2026-03-12",
@@ -724,7 +744,7 @@ const PHOTO_GALLERY = [
     lens: "Cooke S4/i 35mm",
     specs: "ISO 800 · f/2.0 · 1/48s",
     src: `${import.meta.env.BASE_URL}assets/img/film_still.jpg`,
-    desc: "Late night setup during the final scenes. The ambient neon casting soft highlights on the camera rig."
+    desc: "Late night setup during the final scenes. Neon highlighting on the camera rig."
   },
   {
     id: "writing_desk",
@@ -734,27 +754,7 @@ const PHOTO_GALLERY = [
     lens: "Summilux 50mm f/1.4",
     specs: "ISO 200 · f/1.4 · 1/250s",
     src: `${import.meta.env.BASE_URL}assets/img/writing_desk.jpg`,
-    desc: "Golden hour sun hitting the screenwriting desk. Black coffee, drafts, and outlining the third act."
-  },
-  {
-    id: "set_polaroids",
-    title: "production_candids.raw",
-    date: "2026-05-18",
-    camera: "Polaroid SX-70",
-    lens: "116mm f/8",
-    specs: "SX-70 Film · Manual Focus",
-    src: `${import.meta.env.BASE_URL}assets/img/set_polaroids.jpg`,
-    desc: "Scattered candids from the crew. Clapperboards, smiles, and long hours in the sun."
-  },
-  {
-    id: "abu_dhabi_sunset",
-    title: "sunset_from_campus.raw",
-    date: "2026-06-22",
-    camera: "Sony A7S III",
-    lens: "Zeiss Batis 85mm",
-    specs: "ISO 400 · f/2.8 · 1/125s",
-    src: `${import.meta.env.BASE_URL}assets/img/abu_dhabi_sunset.jpg`,
-    desc: "Looking out of the university campus in Abu Dhabi during sunset. Warm tones over the skyline."
+    desc: "Golden hour sun hitting the screenwriting desk. Outlining drafts."
   }
 ];
 
@@ -1088,24 +1088,27 @@ function App() {
   };
 
   const wallpaperStyle = {
-    backgroundImage: `linear-gradient(rgba(18, 14, 11, 0.45), rgba(18, 14, 11, 0.78)), url(${import.meta.env.BASE_URL}assets/img/portrait.jpg)`,
+    backgroundImage: `url(${import.meta.env.BASE_URL}assets/img/xp_bliss.jpg)`,
     backgroundSize: 'cover',
-    backgroundPosition: 'center 20%',
+    backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat'
   };
 
   return (
     <>
-      {/* Top Status Bar */}
+      {/* Top Status Bar (XP Bottom Taskbar layout) */}
       <div className="status-bar">
         <div className="status-left">
+          <button className="xp-start-btn" onClick={() => openWindow('about', 'About Me', 580, 390)}>
+            start
+          </button>
           <span>SumedhOS v2.0</span>
           <span>{currentTime}</span>
         </div>
         <div className="status-right">
           <span 
             onClick={() => setCrtEnabled(!crtEnabled)} 
-            style={{ cursor: 'pointer', color: crtEnabled ? 'var(--oxblood-soft)' : 'var(--ink-soft)', fontWeight: 'bold' }}
+            style={{ cursor: 'pointer', color: crtEnabled ? '#00e676' : '#ff5252', fontWeight: 'bold' }}
             className="crt-toggle-status mono"
             title="Toggle CRT Screen Emulation"
           >
@@ -1126,7 +1129,7 @@ function App() {
           {/* Media Cabinet Shortcut */}
           <div 
             className="shortcut-item" 
-            onClick={() => openWindow('cabinet', 'Media Cabinet', 1080, 680)}
+            onClick={() => openWindow('cabinet', 'Media Cabinet', 800, 500)}
             title="Open film, anime, and manga lists"
           >
             <div className="shortcut-icon" style={{ backgroundColor: '#c8615a' }}>
@@ -1140,7 +1143,7 @@ function App() {
           {/* About Me Shortcut */}
           <div 
             className="shortcut-item" 
-            onClick={() => openWindow('about', 'About Me', 680, 480)}
+            onClick={() => openWindow('about', 'About Me', 580, 390)}
             title="Biographical details and technical profile"
           >
             <div className="shortcut-icon" style={{ backgroundColor: '#e08a82' }}>
@@ -1154,7 +1157,7 @@ function App() {
           {/* Mini-app: Cinephile Trivia Game Shortcut */}
           <div 
             className="shortcut-item" 
-            onClick={() => openWindow('cinephile', 'Logline Trivia', 580, 500)}
+            onClick={() => openWindow('cinephile', 'Logline Trivia', 520, 410)}
             title="Guess the movie using screenplay loglines"
           >
             <div className="shortcut-icon" style={{ backgroundColor: '#4a3222' }}>
@@ -1168,7 +1171,7 @@ function App() {
           {/* Mini-app: Beats Player Shortcut */}
           <div 
             className="shortcut-item" 
-            onClick={() => openWindow('beats', 'Beats Player', 640, 480)}
+            onClick={() => openWindow('beats', 'Beats Player', 540, 410)}
             title="Interactive open-source stream & internet radio cassette player"
           >
             <div className="shortcut-icon" style={{ backgroundColor: '#ff4c5a' }}>
@@ -1182,7 +1185,7 @@ function App() {
           {/* Mini-app: Cinephile Hangman Shortcut */}
           <div 
             className="shortcut-item" 
-            onClick={() => openWindow('cineplay', 'Cineplay Hangman', 580, 500)}
+            onClick={() => openWindow('cineplay', 'Cineplay Hangman', 520, 410)}
             title="Guess the movie title letter-by-letter using dynamic titles"
           >
             <div className="shortcut-icon" style={{ backgroundColor: '#2d3748' }}>
@@ -1196,7 +1199,7 @@ function App() {
           {/* Contact Shortcut */}
           <div 
             className="shortcut-item" 
-            onClick={() => openWindow('contact', 'Contact Links', 420, 220)}
+            onClick={() => openWindow('contact', 'Contact Links', 360, 180)}
             title="External portfolios, social networks and profiles"
           >
             <div className="shortcut-icon" style={{ backgroundColor: '#120e0b' }}>
@@ -1210,7 +1213,7 @@ function App() {
           {/* Photos Shortcut */}
           <div 
             className="shortcut-item" 
-            onClick={() => openWindow('photos', 'Photos Gallery', 720, 500)}
+            onClick={() => openWindow('photos', 'Photos Gallery', 600, 420)}
             title="View personal cinematic photography"
           >
             <div className="shortcut-icon" style={{ backgroundColor: '#2b8a3e' }}>
