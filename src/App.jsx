@@ -41,7 +41,8 @@ function BeatsPlayer() {
   const [urlInput, setUrlInput] = useState('');
   const [currentTrackIdx, setCurrentTrackIdx] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [elapsedTime, setElapsedTime] = useState(0);
+  const [elapsedTime, setElapsedTime] = useState(0); // deciseconds
+  const [trackDuration, setTrackDuration] = useState(180); // seconds
   const [bitrate, setBitrate] = useState(320);
   const [volume, setVolume] = useState(0.8);
   const [isMuted, setIsMuted] = useState(false);
@@ -50,7 +51,6 @@ function BeatsPlayer() {
   const [equalizerPreset, setEqualizerPreset] = useState('electronic');
   const [barHeights, setBarHeights] = useState(new Array(16).fill(4));
 
-  // Curated list of movie scores and public domain tracks relevant to favorite movies
   const initialStreams = [
     {
       title: "Mima's Theme - Perfect Blue",
@@ -105,7 +105,6 @@ function BeatsPlayer() {
   useEffect(() => {
     if (isPlaying) {
       timerRef.current = setInterval(() => {
-        setElapsedTime(prev => prev + 1);
         setBarHeights(prev => prev.map(() => {
           const maxVal = equalizerPreset === 'rock' ? 24 : (equalizerPreset === 'pop' ? 18 : 22);
           return Math.floor(Math.random() * maxVal) + 4;
@@ -133,7 +132,6 @@ function BeatsPlayer() {
   const handleTrackChange = (idx) => {
     setCurrentTrackIdx(idx);
     setIsPlaying(false);
-    halComment('Initializing audio buffer: now playing "' + tracks[idx].title + '".');
     setElapsedTime(0);
     setBitrate([192, 256, 320][Math.floor(Math.random() * 3)]);
     if (audioRef.current) {
@@ -143,6 +141,23 @@ function BeatsPlayer() {
           .then(() => setIsPlaying(true))
           .catch(err => console.log("Play failed: ", err));
       }, 100);
+    }
+  };
+
+  const handleTimeUpdate = () => {
+    if (audioRef.current) {
+      setElapsedTime(Math.floor(audioRef.current.currentTime * 10));
+      if (audioRef.current.duration) {
+        setTrackDuration(audioRef.current.duration);
+      }
+    }
+  };
+
+  const handleSeek = (e) => {
+    if (audioRef.current) {
+      const seekVal = parseFloat(e.target.value);
+      audioRef.current.currentTime = seekVal;
+      setElapsedTime(Math.floor(seekVal * 10));
     }
   };
 
@@ -210,6 +225,7 @@ function BeatsPlayer() {
         src={tracks[currentTrackIdx].url} 
         preload="auto"
         crossOrigin="anonymous"
+        onTimeUpdate={handleTimeUpdate}
         onEnded={() => handleTrackChange((currentTrackIdx + 1) % tracks.length)}
       />
       
@@ -220,9 +236,20 @@ function BeatsPlayer() {
             <span className="lcd-text-scroll">${tracks[currentTrackIdx].title.toUpperCase()} - ${tracks[currentTrackIdx].artist.toUpperCase()}</span>
           </div>
           <div className="lcd-meta-row">
-            <span>${formatTime(elapsedTime)}</span>
+            <span>${formatTime(elapsedTime)} / ${formatTime(Math.floor(trackDuration * 10))}</span>
             <span>${isPlaying ? '[PLAYING]' : '[PAUSED]'}</span>
             <span>${bitrate}KBPS</span>
+          </div>
+          {/* Timeline Seeker Slider */}
+          <div className="beats-timeline-wrapper">
+            <input 
+              type="range"
+              min="0"
+              max={trackDuration || 100}
+              value={audioRef.current ? audioRef.current.currentTime : 0}
+              onChange={handleSeek}
+              className="beats-timeline-slider"
+            />
           </div>
           {/* Visualizer frequency bars */}
           <div className="lcd-visualizer">
@@ -319,7 +346,6 @@ function BeatsPlayer() {
   );
 }
 
-// Logphile Suite - Game hub with Cinephile Plot Trivia & Movie Higher or Lower
 function LoglineGame({ films }) {
   const [activeGame, setActiveGame] = useState('menu'); // 'menu', 'trivia', 'higherlower'
   
@@ -876,16 +902,74 @@ const PHOTO_GALLERY = [
 
 function PhotosApp() {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
+  const [slideshowPlaying, setSlideshowPlaying] = useState(false);
+  const [activeFilter, setActiveFilter] = useState('none'); // 'none', 'sepia', 'mono', 'warm'
+
+  useEffect(() => {
+    let interval = null;
+    if (slideshowPlaying) {
+      interval = setInterval(() => {
+        setSelectedPhoto(current => {
+          const idx = PHOTO_GALLERY.findIndex(p => p.id === (current ? current.id : ''));
+          const nextIdx = (idx + 1) % PHOTO_GALLERY.length;
+          return PHOTO_GALLERY[nextIdx];
+        });
+      }, 3000);
+    }
+    return () => clearInterval(interval);
+  }, [slideshowPlaying]);
+
+  const handleSlideshowToggle = () => {
+    const nextState = !slideshowPlaying;
+    setSlideshowPlaying(nextState);
+    if (nextState) {
+      setSelectedPhoto(PHOTO_GALLERY[0]);
+      if (halComment) halComment("Starting photo slideshow. Cycling through RAW captures...");
+    } else {
+      if (halComment) halComment("Slideshow playback paused.");
+    }
+  };
+
+  const selectPhotoDirect = (photo) => {
+    setSelectedPhoto(photo);
+    setSlideshowPlaying(false);
+    if (halComment) halComment("Displaying image " + photo.title + " with EXIF metrics.");
+  };
 
   if (selectedPhoto) {
     return (
       <div className="photos-details-view">
-        <button className="logphile-back-btn" onClick={() => setSelectedPhoto(null)} style={{ marginBottom: '10px' }}>
-          &larr; BACK TO ALBUM
-        </button>
+        <div className="photos-header-row mono">
+          <button className="logphile-back-btn" onClick={() => { setSelectedPhoto(null); setSlideshowPlaying(false); }} style={{ margin: 0 }}>
+            &larr; BACK TO ALBUM
+          </button>
+          
+          <div className="photos-controls-panel">
+            <button className={"control-action-btn " + (slideshowPlaying ? "active" : "")} onClick={handleSlideshowToggle}>
+              {slideshowPlaying ? "⏸ PAUSE SLIDESHOW" : "▶ PLAY SLIDESHOW"}
+            </button>
+            <div className="filter-select-group">
+              <span style={{ color: "var(--ink-soft)" }}>FILTER:</span>
+              {['none', 'mono', 'sepia', 'warm'].map(f => (
+                <button 
+                  key={f} 
+                  className={"filter-btn " + (activeFilter === f ? "active" : "")}
+                  onClick={() => { setActiveFilter(f); if (halComment) halComment("Applied " + f + " color filter."); }}
+                >
+                  {f.toUpperCase()}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
         <div className="photos-detail-content">
           <div className="photo-large-container">
-            <img src={selectedPhoto.src} alt={selectedPhoto.title} className="photo-large-img" />
+            <img 
+              src={selectedPhoto.src} 
+              alt={selectedPhoto.title} 
+              className={"photo-large-img filter-" + activeFilter} 
+            />
           </div>
           <div className="photo-meta-panel mono">
             <div style={{ borderBottom: '1px solid var(--hairline)', paddingBottom: '8px', marginBottom: '8px' }}>
@@ -911,6 +995,9 @@ function PhotosApp() {
     <div className="photos-grid-view">
       <div className="photos-album-header mono">
         <span>ALBUM: /home/sumedh/photos</span>
+        <button className="control-action-btn" onClick={handleSlideshowToggle} style={{ fontSize: '0.55rem', padding: '2px 8px' }}>
+          ▶ PLAY SLIDESHOW
+        </button>
         <span>4 RAW IMAGES</span>
       </div>
       <div className="photos-grid">
@@ -918,7 +1005,7 @@ function PhotosApp() {
           <div 
             key={photo.id} 
             className="photo-polaroid-card" 
-            onClick={() => setSelectedPhoto(photo)}
+            onClick={() => selectPhotoDirect(photo)}
           >
             <div className="polaroid-img-wrapper">
               <img src={photo.src} alt={photo.title} />
@@ -1161,6 +1248,73 @@ function App() {
       .catch(err => console.error("Failed to load media database:", err));
   }, []);
 
+  // Media Cabinet Filter states
+  const [selectedGenre, setSelectedGenre] = useState('');
+  const [selectedDecade, setSelectedDecade] = useState('');
+
+  const getAvailableGenres = () => {
+    const items = mediaDb[category] || [];
+    const genresSet = new Set();
+    items.forEach(item => {
+      if (item.genres && Array.isArray(item.genres)) {
+        item.genres.forEach(g => genresSet.add(g));
+      } else if (item.genre) {
+        genresSet.add(item.genre);
+      }
+    });
+    return Array.from(genresSet).sort();
+  };
+
+  const getAvailableDecades = () => {
+    const items = mediaDb[category] || [];
+    const decadesSet = new Set();
+    items.forEach(item => {
+      const yr = parseInt(item.year || 0);
+      if (yr) {
+        const dec = Math.floor(yr / 10) * 10;
+        decadesSet.add(dec.toString() + 's');
+      }
+    });
+    return Array.from(decadesSet).sort((a, b) => b.localeCompare(a));
+  };
+
+  const getAverageRating = () => {
+    const items = getProcessedItems();
+    if (items.length === 0) return '0.0';
+    let total = 0;
+    items.forEach(item => {
+      if (category === 'films') {
+        const starsCount = (item.rating || '').split('★').length - 1 + ((item.rating || '').includes('½') ? 0.5 : 0);
+        const score = starsCount > 0 ? starsCount * 2 : parseFloat(item.imdb_rating) || 0;
+        total += score;
+      } else {
+        total += parseFloat(item.score || item.rating) || 0;
+      }
+    });
+    return (total / items.length).toFixed(1);
+  };
+
+  const getTopGenre = () => {
+    const items = getProcessedItems();
+    if (items.length === 0) return 'N/A';
+    const genreMap = {};
+    items.forEach(item => {
+      const list = item.genres && Array.isArray(item.genres) ? item.genres : (item.genre ? [item.genre] : []);
+      list.forEach(g => {
+        genreMap[g] = (genreMap[g] || 0) + 1;
+      });
+    });
+    let top = 'N/A';
+    let max = 0;
+    Object.entries(genreMap).forEach(([g, count]) => {
+      if (count > max) {
+        max = count;
+        top = g;
+      }
+    });
+    return top;
+  };
+
   // Handle open/focus window
   const openWindow = (id, title, width, height) => {
     const existing = windows.find(w => w.id === id);
@@ -1243,6 +1397,26 @@ function App() {
     else if (category === 'anime') items = [...mediaDb.anime];
     else if (category === 'manga') items = [...mediaDb.manga];
 
+    if (selectedGenre) {
+      items = items.filter(item => {
+        if (item.genres && Array.isArray(item.genres)) {
+          return item.genres.includes(selectedGenre);
+        } else if (item.genre) {
+          return item.genre === selectedGenre;
+        }
+        return false;
+      });
+    }
+
+    if (selectedDecade) {
+      items = items.filter(item => {
+        const yr = parseInt(item.year || 0);
+        if (!yr) return false;
+        const dec = Math.floor(yr / 10) * 10;
+        return dec.toString() + 's' === selectedDecade;
+      });
+    }
+
     if (search.trim()) {
       const q = search.toLowerCase();
       items = items.filter(item => 
@@ -1290,6 +1464,8 @@ function App() {
   const handleCategoryChange = (cat) => {
     setCategory(cat);
     setSearch('');
+    setSelectedGenre('');
+    setSelectedDecade('');
     const dbItems = mediaDb[cat] || [];
     if (dbItems.length > 0) {
       setSelectedItem(dbItems[0]);
@@ -1764,7 +1940,29 @@ function App() {
                         </div>
                       </div>
 
-                      <div className="sort-wrapper" style={{ display: 'flex', gap: '8px' }}>
+                      <div className="sort-wrapper" style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
+                        <select 
+                          className="sort-select mono"
+                          value={selectedGenre}
+                          onChange={(e) => { setSelectedGenre(e.target.value); halComment("Filtering category by " + (e.target.value || "all") + " genre."); }}
+                        >
+                          <option value="">All Genres</option>
+                          {getAvailableGenres().map(g => (
+                            <option key={g} value={g}>{g}</option>
+                          ))}
+                        </select>
+
+                        <select 
+                          className="sort-select mono"
+                          value={selectedDecade}
+                          onChange={(e) => { setSelectedDecade(e.target.value); halComment("Filtering category by " + (e.target.value || "all") + " decade."); }}
+                        >
+                          <option value="">All Decades</option>
+                          {getAvailableDecades().map(d => (
+                            <option key={d} value={d}>{d}</option>
+                          ))}
+                        </select>
+
                         <select 
                           id="media-sort" 
                           className="sort-select mono"
@@ -1780,6 +1978,13 @@ function App() {
                           + LOG
                         </button>
                       </div>
+                    </div>
+
+                    {/* Stats Dashboard HUD */}
+                    <div className="cabinet-stats-hud mono">
+                      <span className="stat-badge">TOTAL WATCHED: {processedItems.length}</span>
+                      <span className="stat-badge">AVERAGE SCORE: {getAverageRating()}/10</span>
+                      <span className="stat-badge">TOP GENRE: {getTopGenre()}</span>
                     </div>
 
                     {showAddForm ? (
