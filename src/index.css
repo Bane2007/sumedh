@@ -3817,4 +3817,259 @@ body.crt-effect {
   border-color: rgba(255, 255, 255, 0.25) !important;
 }
 
+/* === RETRO SYSTEM MONITOR DESKTOP WIDGET === */
+.desktop-sysinfo-widget {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 260px;
+  background: rgba(12, 8, 6, 0.72) !important;
+  border: 2px solid #0054e3 !important;
+  border-radius: 4px !important;
+  padding: 10px 12px !important;
+  color: #3bf53b !important;
+  text-shadow: 0 0 4px rgba(59, 245, 59, 0.4) !important;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.6) !important;
+  z-index: 5 !important;
+  font-size: 0.65rem !important;
+  line-height: 1.5 !important;
+  user-select: none !important;
+}
+
+.widget-header {
+  font-weight: bold !important;
+  color: #ff9800 !important;
+  margin-bottom: 6px !important;
+  text-align: center !important;
+  border-bottom: 1px dashed rgba(59, 245, 59, 0.3) !important;
+  padding-bottom: 4px !important;
+  font-size: 0.68rem !important;
+}
+
+.widget-row {
+  margin-bottom: 3px !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.widget-divider {
+  height: 1px !important;
+  background: rgba(59, 245, 59, 0.2) !important;
+  margin: 6px 0 !important;
+}
+
+.widget-stats {
+  display: flex !important;
+  justify-content: space-between !important;
+  font-size: 0.6rem !important;
+}
+
+.stat-col {
+  flex: 1 !important;
+}
+
+/* === HAL 9000 DESKTOP ASSISTANT === */
+.hal-assistant-container {
+  position: absolute;
+  bottom: 50px;
+  right: 20px;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  cursor: pointer !important;
+  z-index: 99 !important;
+  transition: transform 0.2s ease !important;
+  user-select: none !important;
+}
+
+.hal-assistant-container:hover {
+  transform: scale(1.08) !important;
+}
+
+.hal-lens-glowing {
+  width: 42px;
+  height: 42px;
+  border-radius: 50% !important;
+  background: radial-gradient(circle, #444 0%, #111 75%) !important;
+  border: 3px solid #777 !important;
+  box-shadow: 0 0 10px rgba(0,0,0,0.8), inset 0 2px 4px rgba(255,255,255,0.4) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+}
+
+.hal-lens-inner-red {
+  width: 20px;
+  height: 20px;
+  border-radius: 50% !important;
+  background: radial-gradient(circle, #ffeb3b 0%, #ff1744 40%, #880e4f 100%) !important;
+  box-shadow: 0 0 12px 3px #ff1744 !important;
+  position: relative !important;
+}
+
+.hal-lens-glare {
+  position: absolute !important;
+  top: 3px !important;
+  left: 3px !important;
+  width: 5px !important;
+  height: 5px !important;
+  background: rgba(255,255,255,0.85) !important;
+  border-radius: 50% !important;
+}
+
+.hal-label {
+  font-size: 0.52rem !important;
+  color: #ff9800 !important;
+  margin-top: 4px !important;
+  font-weight: bold !important;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.8) !important;
+  background: rgba(0,0,0,0.5) !important;
+  padding: 1px 4px !important;
+  border-radius: 2px !important;
+}
+
+.hal-speech-bubble {
+  position: absolute;
+  bottom: 58px;
+  right: 0;
+  width: 210px;
+  background: #ffffcc !important;
+  border: 2px solid #ff9800 !important;
+  color: #222222 !important;
+  padding: 8px 10px !important;
+  border-radius: 6px !important;
+  font-size: 0.65rem !important;
+  line-height: 1.35 !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4) !important;
+  z-index: 1000 !important;
+}
+
+.hal-bubble-arrow {
+  position: absolute !important;
+  bottom: -8px !important;
+  right: 14px !important;
+  width: 0 !important; height: 0 !important;
+  border-left: 8px solid transparent !important;
+  border-right: 8px solid transparent !important;
+  border-top: 8px solid #ff9800 !important;
+}
+
+.hal-bubble-arrow::after {
+  content: "" !important;
+  position: absolute !important;
+  bottom: 2px !important;
+  right: -8px !important;
+  width: 0 !important; height: 0 !important;
+  border-left: 8px solid transparent !important;
+  border-right: 8px solid transparent !important;
+  border-top: 8px solid #ffffcc !important;
+}
+
+.hal-bubble-close {
+  background: none !important;
+  border: none !important;
+  color: #ff5252 !important;
+  cursor: pointer !important;
+  font-weight: bold !important;
+  float: right !important;
+  font-size: 0.6rem !important;
+  margin-left: 8px !important;
+  padding: 0 !important;
+}
+
+/* === WINDOW RESIZE HANDLE === */
+.window-resize-handle {
+  position: absolute !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 14px !important;
+  height: 14px !important;
+  cursor: se-resize !important;
+  background-image: linear-gradient(135deg, transparent 30%, #444 30%, #444 45%, transparent 45%, transparent 60%, #444 60%, #444 75%, transparent 75%) !important;
+  background-size: 4px 4px !important;
+  z-index: 1000 !important;
+}
+
+/* === RUN DIALOG BOX === */
+.run-dialog-content {
+  background: #f1f1f1 !important;
+  color: #000000 !important;
+  padding: 15px !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+
+.run-input {
+  flex: 1 !important;
+  background: #ffffff !important;
+  border: 1px solid #7f9db9 !important;
+  color: #000000 !important;
+  padding: 3px 6px !important;
+  font-size: 0.72rem !important;
+  font-family: Tahoma, 'Trebuchet MS', Arial, sans-serif !important;
+  outline: none !important;
+}
+
+.run-input:focus {
+  border-color: #2979ff !important;
+}
+
+/* === ADVANCED TAPE PLAYER SPECIFICS === */
+.spool-circle {
+  position: relative !important;
+}
+
+.tape-roll-fill {
+  width: 16px !important;
+  height: 16px !important;
+  border-radius: 50% !important;
+  background: #111111 !important;
+  border: 2px solid #504030 !important;
+  box-shadow: 0 0 3px rgba(0,0,0,0.8) !important;
+  position: absolute !important;
+  top: 0; left: 0; right: 0; bottom: 0;
+  margin: auto !important;
+  transition: transform 0.5s ease !important;
+  z-index: -1 !important;
+}
+
+.beats-volume-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  padding: 4px 10px !important;
+  background: rgba(0,0,0,0.2) !important;
+  border-radius: 4px !important;
+  margin: 2px 0 !important;
+}
+
+.mute-btn {
+  background: none !important;
+  border: none !important;
+  font-size: 0.75rem !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  transition: transform 0.1s ease !important;
+}
+
+.mute-btn:hover {
+  transform: scale(1.1) !important;
+}
+
+.volume-slider {
+  flex: 1 !important;
+  height: 5px !important;
+  background: #231b17 !important;
+  outline: none !important;
+  border: none !important;
+  border-radius: 2px !important;
+  cursor: pointer !important;
+  accent-color: #ffca28 !important;
+}
+
 

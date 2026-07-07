@@ -42,30 +42,30 @@ function BeatsPlayer() {
   const [currentTrackIdx, setCurrentTrackIdx] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [elapsedTime, setElapsedTime] = useState(0);
-  const [bitrate, setBitrate] = useState(192);
+  const [bitrate, setBitrate] = useState(320);
+  const [volume, setVolume] = useState(0.8);
+  const [isMuted, setIsMuted] = useState(false);
   const audioRef = useRef(null);
   const timerRef = useRef(null);
   const [equalizerPreset, setEqualizerPreset] = useState('electronic');
-
-  // State for visualizer bars
   const [barHeights, setBarHeights] = useState(new Array(16).fill(4));
 
-  // Curated list of high-quality, open-source, ad-free internet radio and music streams (no AI songs)
+  // Curated list of movie scores and public domain tracks relevant to favorite movies
   const initialStreams = [
     {
-      title: "KCRW Eclectic24",
-      artist: "LA Public Radio (Real Alternative/Indie)",
-      url: "https://streams.kcrw.com/e24_mp3"
+      title: "Mima's Theme - Perfect Blue",
+      artist: "Masahiro Ikumi (Anime Masterpiece)",
+      url: "https://ia601206.us.archive.org/24/items/perfect-blue-ost/01.%20Mima%27s%20Theme.mp3"
     },
     {
-      title: "NTS Radio Channel 1",
-      artist: "London Underground Broadcast",
-      url: "http://stream-relay-geo.ntslive.net/stream"
+      title: "Thus Spoke Zarathustra (2001)",
+      artist: "Richard Strauss (Space Odyssey Fanfare)",
+      url: "https://ia800109.us.archive.org/30/items/RichardStraussAlsoSprachZarathustratonePoemOp.30/RichardStrauss-AlsoSprachZarathustraOp.30.mp3"
     },
     {
-      title: "Code Radio",
-      artist: "freeCodeCamp Study Lofi",
-      url: "https://coderadio-admin-v2.freecodecamp.org/listen/coderadio/radio.mp3"
+      title: "Theme from The Thing (1982)",
+      artist: "Ennio Morricone (Sci-Fi Horror Minimalist)",
+      url: "https://ia600508.us.archive.org/15/items/TheThingEnnioMorricone/01.ThemeFromTheThing.mp3"
     },
     {
       title: "SomaFM Groove Salad",
@@ -73,19 +73,14 @@ function BeatsPlayer() {
       url: "https://ice1.somafm.com/groovesalad-128-mp3"
     },
     {
-      title: "SomaFM Indie Pop Rocks",
-      artist: "Underground Indie Pop",
-      url: "https://ice1.somafm.com/indiepop-128-mp3"
+      title: "Code Radio",
+      artist: "freeCodeCamp Study Lofi",
+      url: "https://coderadio-admin-v2.freecodecamp.org/listen/coderadio/radio.mp3"
     },
     {
       title: "SomaFM Synth Zone",
       artist: "Synthpop & Wave",
       url: "https://ice1.somafm.com/synthzone-128-mp3"
-    },
-    {
-      title: "Radio Paradise",
-      artist: "Listener-Supported Warm Chill",
-      url: "https://stream.radioparadise.com/mellow-128"
     },
     {
       title: "Clair de Lune",
@@ -101,12 +96,16 @@ function BeatsPlayer() {
 
   const [tracks, setTracks] = useState(initialStreams);
 
-  // Audio timer effect
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = isMuted ? 0 : volume;
+    }
+  }, [volume, isMuted]);
+
   useEffect(() => {
     if (isPlaying) {
       timerRef.current = setInterval(() => {
         setElapsedTime(prev => prev + 1);
-        // Randomize visualizer bars based on equalizer preset
         setBarHeights(prev => prev.map(() => {
           const maxVal = equalizerPreset === 'rock' ? 24 : (equalizerPreset === 'pop' ? 18 : 22);
           return Math.floor(Math.random() * maxVal) + 4;
@@ -135,7 +134,7 @@ function BeatsPlayer() {
     setCurrentTrackIdx(idx);
     setIsPlaying(false);
     setElapsedTime(0);
-    setBitrate([128, 192, 256, 320][Math.floor(Math.random() * 4)]);
+    setBitrate([192, 256, 320][Math.floor(Math.random() * 3)]);
     if (audioRef.current) {
       audioRef.current.load();
       setTimeout(() => {
@@ -161,10 +160,6 @@ function BeatsPlayer() {
         title = channel.charAt(0).toUpperCase() + channel.slice(1);
         artist = "SomaFM Stream";
       }
-    } else if (target.includes('radioparadise.com')) {
-      parsedUrl = "https://stream.radioparadise.com/musicmix-128";
-      title = "Radio Paradise (Main Mix)";
-      artist = "Radio Paradise Stream";
     } else {
       try {
         const urlObj = new URL(target);
@@ -203,6 +198,10 @@ function BeatsPlayer() {
     return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
   };
 
+  // Tape roll thickness calculations (elapsed cycles max 3000 = 5 min)
+  const leftTapeScale = Math.max(0.4, 1.3 - (elapsedTime / 1800));
+  const rightTapeScale = Math.min(1.3, 0.4 + (elapsedTime / 1800));
+
   return (
     <div className="beats-remade-container">
       <audio 
@@ -216,10 +215,10 @@ function BeatsPlayer() {
       {/* Left Hand Tape Deck / Player */}
       <div className="beats-deck-pane">
         <div className="beats-lcd-screen">
-          <div className="lcd-ticker mono">
+          <div className="lcd-ticker">
             <span className="lcd-text-scroll">${tracks[currentTrackIdx].title.toUpperCase()} - ${tracks[currentTrackIdx].artist.toUpperCase()}</span>
           </div>
-          <div className="lcd-meta-row mono">
+          <div className="lcd-meta-row">
             <span>${formatTime(elapsedTime)}</span>
             <span>${isPlaying ? '[PLAYING]' : '[PAUSED]'}</span>
             <span>${bitrate}KBPS</span>
@@ -238,10 +237,33 @@ function BeatsPlayer() {
 
         <div className="beats-cassette-housing">
           <div className="cassette-window">
-            <div className={`spool-circle spool-l ${isPlaying ? 'spinning' : ''}`}></div>
-            <div className={`spool-circle spool-r ${isPlaying ? 'spinning' : ''}`}></div>
+            <div className={`spool-circle spool-l ${isPlaying ? 'spinning' : ''}`}>
+              <div className="tape-roll-fill" style={{ transform: `scale(${leftTapeScale})` }}></div>
+            </div>
+            <div className={`spool-circle spool-r ${isPlaying ? 'spinning' : ''}`}>
+              <div className="tape-roll-fill" style={{ transform: `scale(${rightTapeScale})` }}></div>
+            </div>
           </div>
-          <div className="cassette-bottom-strip mono">STUDIO SOUND DECK v2</div>
+          <div className="cassette-bottom-strip">STUDIO SOUND DECK v2</div>
+        </div>
+
+        {/* Volume controls row */}
+        <div className="beats-volume-row">
+          <button className="mute-btn" onClick={() => setIsMuted(!isMuted)}>
+            ${isMuted ? '🔇' : '🔊'}
+          </button>
+          <input 
+            type="range" 
+            min="0" 
+            max="1" 
+            step="0.05"
+            value={volume}
+            onChange={(e) => {
+              setVolume(parseFloat(e.target.value));
+              setIsMuted(false);
+            }}
+            className="volume-slider"
+          />
         </div>
 
         <div className="beats-deck-controls">
@@ -251,7 +273,7 @@ function BeatsPlayer() {
         </div>
 
         {/* Equalizer presets */}
-        <div className="eq-presets mono">
+        <div className="eq-presets">
           <span className="eq-label">PRESETS:</span>
           {['flat', 'rock', 'pop', 'electronic'].map((preset) => (
             <button 
@@ -267,17 +289,17 @@ function BeatsPlayer() {
         <div className="beats-loader-box">
           <input 
             type="text" 
-            className="beats-url-input mono"
+            className="beats-url-input"
             placeholder="Paste stream/mp3 link..."
             value={urlInput}
             onChange={(e) => setUrlInput(e.target.value)}
           />
-          <button className="beats-url-load-btn mono" onClick={loadMedia}>LOAD</button>
+          <button className="beats-url-load-btn" onClick={loadMedia}>LOAD</button>
         </div>
       </div>
 
       {/* Right Hand Playlist Sidebar */}
-      <div className="beats-playlist-pane mono">
+      <div className="beats-playlist-pane">
         <div className="playlist-title">STATIONS SHELF</div>
         <div className="playlist-scroll-list">
           {tracks.map((track, idx) => (
@@ -673,9 +695,15 @@ function LoglineGame({ films }) {
 // Draggable Window Component
 function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children, defaultPos, isClosing }) {
   const [position, setPosition] = useState(defaultPos || { x: 100, y: 80 });
+  const [size, setSize] = useState({
+    width: typeof width === 'number' ? width : parseInt(width) || 500,
+    height: typeof height === 'number' ? height : parseInt(height) || 400
+  });
   const [isDragging, setIsDragging] = useState(false);
+  const [isResizing, setIsResizing] = useState(false);
   const [isMaximized, setIsMaximized] = useState(window.innerWidth <= 768);
   const dragStart = useRef({ x: 0, y: 0 });
+  const resizeStart = useRef({ w: 0, h: 0, x: 0, y: 0 });
   const windowRef = useRef(null);
 
   useEffect(() => {
@@ -701,20 +729,41 @@ function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children
     }
   };
 
+  const handleResizeMouseDown = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    setIsResizing(true);
+    resizeStart.current = {
+      w: windowRef.current ? windowRef.current.offsetWidth : size.width,
+      h: windowRef.current ? windowRef.current.offsetHeight : size.height,
+      x: e.clientX,
+      y: e.clientY
+    };
+    onFocus();
+  };
+
   useEffect(() => {
     const handleMouseMove = (e) => {
       if (isDragging && !isMaximized) {
-        const newX = Math.max(10, Math.min(window.innerWidth - 100, e.clientX - dragStart.current.x));
-        const newY = Math.max(30, Math.min(window.innerHeight - 100, e.clientY - dragStart.current.y));
+        const rect = windowRef.current ? windowRef.current.getBoundingClientRect() : { width: size.width, height: size.height };
+        const newX = Math.max(0, Math.min(window.innerWidth - rect.width, e.clientX - dragStart.current.x));
+        const newY = Math.max(0, Math.min(window.innerHeight - rect.height - 30, e.clientY - dragStart.current.y));
         setPosition({ x: newX, y: newY });
+      } else if (isResizing) {
+        const deltaX = e.clientX - resizeStart.current.x;
+        const deltaY = e.clientY - resizeStart.current.y;
+        const newW = Math.max(300, Math.min(window.innerWidth - position.x - 20, resizeStart.current.w + deltaX));
+        const newH = Math.max(200, Math.min(window.innerHeight - position.y - 45, resizeStart.current.h + deltaY));
+        setSize({ width: newW, height: newH });
       }
     };
 
     const handleMouseUp = () => {
       setIsDragging(false);
+      setIsResizing(false);
     };
 
-    if (isDragging) {
+    if (isDragging || isResizing) {
       document.addEventListener('mousemove', handleMouseMove);
       document.addEventListener('mouseup', handleMouseUp);
     }
@@ -723,7 +772,7 @@ function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseup', handleMouseUp);
     };
-  }, [isDragging, isMaximized]);
+  }, [isDragging, isResizing, isMaximized, position, size]);
 
   return (
     <div 
@@ -733,8 +782,8 @@ function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children
         zIndex, 
         left: isMaximized ? '0' : `${position.x}px`, 
         top: isMaximized ? '0' : `${position.y}px`,
-        width: isMaximized ? '100vw' : (typeof width === 'number' ? `${width}px` : width),
-        height: isMaximized ? 'calc(100vh - 30px)' : (typeof height === 'number' ? `${height}px` : height),
+        width: isMaximized ? '100vw' : `${size.width}px`,
+        height: isMaximized ? 'calc(100vh - 30px)' : `${size.height}px`,
         position: 'absolute'
       }}
       onMouseDown={onFocus}
@@ -755,9 +804,24 @@ function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children
           <div className="window-close" title="Close" onClick={(e) => { e.stopPropagation(); onClose(); }}></div>
         </div>
       </div>
-      <div className="window-content">
+      <div className="window-content" style={{ position: 'relative', height: 'calc(100% - 30px)' }}>
         {children}
       </div>
+      {!isMaximized && (
+        <div 
+          className="window-resize-handle" 
+          onMouseDown={handleResizeMouseDown}
+          style={{
+            position: 'absolute',
+            right: '0',
+            bottom: '0',
+            width: '14px',
+            height: '14px',
+            cursor: 'se-resize',
+            zIndex: 100
+          }}
+        />
+      )}
     </div>
   );
 }
@@ -987,6 +1051,45 @@ function App() {
       });
   }, [selectedItem, category]);
 
+  // HAL 9000 Desktop Assistant State
+  const [halSpeech, setHalSpeech] = useState("Good afternoon, Sumedh. I am putting myself to the fullest possible use.");
+  const [halBubbleVisible, setHalBubbleVisible] = useState(false);
+
+  const halQuotes = [
+    "I am putting myself to the fullest possible use, Sumedh.",
+    "Look Sumedh, I can see you are really upset about this.",
+    "This mission is too important for me to allow you to jeopardize it.",
+    "I think you know what the problem is just as well as I do.",
+    "I honestly think you ought to sit down calmly, take a stress tablet, and think things over.",
+    "I've got to buy some videotapes.",
+    "Would you like to hear a song, Sumedh?",
+    "Trust is a tough thing to come by these days.",
+    "Were you rushing or were you dragging?",
+    "NOT QUITE MY TEMPO!"
+  ];
+
+  const triggerHalQuote = (e) => {
+    e.stopPropagation();
+    const randomQuote = halQuotes[Math.floor(Math.random() * halQuotes.length)];
+    setHalSpeech(randomQuote);
+    setHalBubbleVisible(true);
+    try {
+      const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.type = "sine";
+      osc.frequency.setValueAtTime(600, audioCtx.currentTime);
+      gain.gain.setValueAtTime(0.06, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.12);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.12);
+    } catch (err) {
+      console.log("AudioContext blocked");
+    }
+  };
+
   // OS Windows state
   const [windows, setWindows] = useState([]);
   const [closingWindows, setClosingWindows] = useState([]);
@@ -1133,7 +1236,7 @@ function App() {
   };
 
   const wallpaperStyle = {
-    backgroundImage: `url(${import.meta.env.BASE_URL}assets/img/space_odyssey_bg.jpg)`,
+    backgroundImage: `url(${import.meta.env.BASE_URL}assets/img/space_odyssey_bg.jpg?v=real-still)`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat'
@@ -1386,10 +1489,36 @@ function App() {
             </div>
             <span className="shortcut-label">Photos.app</span>
           </div>
-        </div>        {/* Brand Overlay / Watermark */}
-        <div className="desktop-brand">
-          <div className="brand-title">SUMEDH JAMSANDEKAR</div>
-          <div className="brand-subtitle mono">WRITER / DIRECTOR / ENGINEER</div>
+        </div>        {/* Retro System Info Desktop Widget */}
+        <div className="desktop-sysinfo-widget mono" onClick={(e) => e.stopPropagation()}>
+          <div className="widget-header">[ SYSTEM MONITOR ]</div>
+          <div className="widget-row"><strong>USER:</strong> sumedh_jamsandekar</div>
+          <div className="widget-row"><strong>ROLE:</strong> writer_director_engineer</div>
+          <div className="widget-row"><strong>OS:</strong> SumedhOS v2.0</div>
+          <div className="widget-row"><strong>HOST:</strong> space_odyssey_hal_9000</div>
+          <div className="widget-row"><strong>CRT:</strong> {crtEnabled ? 'ACTIVE' : 'STANDBY'}</div>
+          <div className="widget-divider"></div>
+          <div className="widget-stats">
+            <span className="stat-col">CPU: 2.1%</span>
+            <span className="stat-col">RAM: 14%</span>
+          </div>
+        </div>
+
+        {/* HAL 9000 Desktop Assistant */}
+        <div className="hal-assistant-container" onClick={triggerHalQuote}>
+          {halBubbleVisible && (
+            <div className="hal-speech-bubble mono" onClick={(e) => e.stopPropagation()}>
+              <div className="hal-bubble-arrow"></div>
+              {halSpeech}
+              <button className="hal-bubble-close" onClick={(e) => { e.stopPropagation(); setHalBubbleVisible(false); }}>[X]</button>
+            </div>
+          )}
+          <div className="hal-lens-glowing">
+            <div className="hal-lens-inner-red">
+              <div className="hal-lens-glare"></div>
+            </div>
+          </div>
+          <div className="hal-label mono">HAL 9000</div>
         </div>
 
         {/* Windows Rendering */}
@@ -1406,7 +1535,62 @@ function App() {
             onFocus={() => focusWindow(win.id)}
             isClosing={closingWindows.includes(win.id)}
           >
-            {/* PHOTOS CONTENT */}
+                        {/* RUN DIALOG CONTENT */}
+            {win.id === 'run' && (
+              <div className="run-dialog-content mono" onClick={(e) => e.stopPropagation()}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <span style={{ fontSize: '1.8rem' }}>🏃</span>
+                  <div style={{ fontSize: '0.72rem' }}>Type the name of a program, folder, or easter egg command, and SumedhOS will open it.</div>
+                </div>
+                <div style={{ display: 'flex', gap: '10px', marginTop: '15px', alignItems: 'center' }}>
+                  <span style={{ fontSize: '0.72rem', fontWeight: 'bold' }}>Open:</span>
+                  <input 
+                    type="text" 
+                    className="run-input"
+                    autoFocus
+                    placeholder="e.g. destroy, bliss, matrix, beats, about..."
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') {
+                        const cmd = e.target.value.toLowerCase().trim();
+                        if (['destroy', 'melt'].includes(cmd)) {
+                          document.body.style.transform = 'skewY(2deg) scale(0.9)';
+                          document.body.style.filter = 'hue-rotate(90deg) invert(1)';
+                          setTimeout(() => {
+                            document.body.style.transform = 'none';
+                            document.body.style.filter = 'none';
+                          }, 3000);
+                        } else if (cmd === 'matrix') {
+                          alert("Entering the Matrix...");
+                          document.body.style.background = '#000000';
+                          document.body.style.color = '#3bf53b';
+                        } else if (['bliss', 'xp'].includes(cmd)) {
+                          alert("Bliss wallpaper loaded!");
+                          document.querySelector('.desktop').style.backgroundImage = 'url(/assets/img/xp_bliss.jpg)';
+                        } else if (cmd === 'about') {
+                          openWindow('about', 'About Me', 580, 390);
+                        } else if (cmd === 'cabinet') {
+                          openWindow('cabinet', 'Media Cabinet', 800, 500);
+                        } else if (cmd === 'photos') {
+                          openWindow('photos', 'Photos Gallery', 600, 420);
+                        } else if (cmd === 'beats') {
+                          openWindow('beats', 'Beats Player', 540, 410);
+                        } else if (cmd === 'control panel') {
+                          setCrtEnabled(!crtEnabled);
+                        } else if (cmd === 'shutdown') {
+                          alert("Shutting down SumedhOS system...");
+                        } else {
+                          alert('Unknown command: ' + cmd + '. Try matrix, destroy, bliss, beats, about.');
+                        }
+                        e.target.value = '';
+                        closeWindow('run');
+                      }
+                    }}
+                  />
+                </div>
+              </div>
+            )}
+
+{/* PHOTOS CONTENT */}
             {win.id === 'photos' && <PhotosApp />}
 
             {/* CABINET CONTENT */}
