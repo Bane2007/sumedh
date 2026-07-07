@@ -1109,6 +1109,25 @@ function App() {
       console.log("AudioContext blocked");
     }
   };
+  const halComment = (text) => {
+    setHalSpeech(text);
+    setHalBubbleVisible(true);
+    try {
+      const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.type = "sine";
+      osc.frequency.setValueAtTime(600, audioCtx.currentTime);
+      gain.gain.setValueAtTime(0.06, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.12);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.12);
+    } catch (err) {
+      console.log("AudioContext blocked");
+    }
+  };
 
   // OS Windows state
   const [windows, setWindows] = useState([]);
