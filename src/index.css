@@ -4072,4 +4072,222 @@ body.crt-effect {
   accent-color: #ffca28 !important;
 }
 
+/* === HAL 9000 MAIN SYSTEM ENGINE OVERRIDES === */
+
+/* HAL 9000 Bios Boot Screen */
+.hal-boot-screen {
+  position: fixed;
+  inset: 0;
+  background: #000000;
+  color: #ff1744;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000000;
+  padding: 2rem;
+  user-select: none;
+}
+
+.boot-terminal {
+  width: 100%;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.76rem;
+  text-shadow: 0 0 5px rgba(255, 23, 68, 0.7);
+  font-family: var(--mono);
+}
+
+.boot-line {
+  white-space: pre-wrap;
+  opacity: 0;
+  animation: boot-line-fade 0.2s forwards;
+}
+
+.boot-line.progress-1 { animation-delay: 0.3s; }
+.boot-line.progress-2 { animation-delay: 0.7s; }
+.boot-line.progress-3 { animation-delay: 1.1s; }
+.boot-line.progress-4 { animation-delay: 1.4s; }
+.boot-line.progress-5 { animation-delay: 1.8s; }
+.boot-line.progress-6 { animation-delay: 2.1s; }
+
+.boot-line.boot-quote {
+  animation-delay: 2.4s;
+  color: #ffffff;
+  font-style: italic;
+  font-size: 0.95rem;
+  margin-top: 15px;
+  text-shadow: 0 0 8px rgba(255,255,255,0.8);
+}
+
+@keyframes boot-line-fade {
+  to { opacity: 1; }
+}
+
+.boot-lens-spinner {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.spinner-red-eye {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffffff 0%, #ff1744 40%, #000000 100%);
+  box-shadow: 0 0 10px #ff1744;
+  animation: eye-pulse 1s ease-in-out infinite;
+}
+
+@keyframes eye-pulse {
+  0%, 100% { opacity: 0.7; transform: scale(0.95); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+/* HAL 9000 Start Menu Header Avatar */
+.hal-menu-eye {
+  width: 32px;
+  height: 32px;
+  border-radius: 50% !important;
+  background: radial-gradient(circle, #333333 0%, #000000 80%) !important;
+  border: 2px solid #777777 !important;
+  box-shadow: 0 0 8px rgba(255,255,255,0.2) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  flex-shrink: 0;
+}
+
+.hal-menu-eye-pupil {
+  width: 14px;
+  height: 14px;
+  border-radius: 50% !important;
+  background: radial-gradient(circle, #ffffff 0%, #ff1744 30%, #ff0000 70%, #000000 100%) !important;
+  box-shadow: 0 0 8px 1px #ff0000 !important;
+}
+
+/* Mainframe Windows overrides */
+.window {
+  border: 3px solid #333333 !important;
+  box-shadow: 0 0 15px rgba(255, 23, 68, 0.4), 0 12px 36px rgba(0,0,0,0.7) !important;
+  background: #0d0908 !important;
+}
+
+.window-header {
+  background: linear-gradient(to bottom, #420420 0%, #bd082a 45%, #420420 90%, #1a000c 100%) !important;
+  border-bottom: 2px solid #ff1744 !important;
+}
+
+.window-maximize {
+  background: linear-gradient(to bottom, #3a3a3a 0%, #1a1a1a 100%) !important;
+  border: 1px solid #ff1744 !important;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.2) !important;
+}
+.window-maximize::before {
+  border-color: #ff1744 !important;
+}
+.window-maximize:hover {
+  background: linear-gradient(to bottom, #5a5a5a 0%, #2a2a2a 100%) !important;
+}
+
+/* Status/Taskbar overrides */
+.status-bar {
+  background: linear-gradient(to bottom, #090909 0%, #1a1a1a 50%, #090909 100%) !important;
+  border-top: 2px solid #ff1744 !important;
+  color: #ff1744 !important;
+  text-shadow: 0 0 4px rgba(255, 23, 68, 0.6) !important;
+  font-family: var(--mono) !important;
+  font-weight: bold !important;
+}
+
+.status-right {
+  background: #250308 !important;
+  border-left: 1.5px solid #ff1744 !important;
+  box-shadow: inset 1px 0 3px rgba(0,0,0,0.5) !important;
+}
+
+.xp-start-btn {
+  background: linear-gradient(to bottom, #420420 0%, #bd082a 100%) !important;
+  border: 1px solid #ff1744 !important;
+  border-radius: 0 8px 8px 0 !important;
+  color: #ffffff !important;
+  text-shadow: 0 0 5px #ff1744, 0 0 10px #ff1744 !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.6), inset 1px 1px 1px rgba(255,255,255,0.3) !important;
+}
+.xp-start-btn:hover {
+  background: linear-gradient(to bottom, #57062a 0%, #e6143c 100%) !important;
+  filter: none;
+}
+
+.xp-start-menu {
+  border: 2px solid #ff1744 !important;
+}
+.xp-start-left-panel {
+  background: #111111 !important;
+}
+.xp-start-right-panel {
+  background: #191414 !important;
+  border-left: 1px solid #ff1744 !important;
+}
+.xp-start-item:hover {
+  background: #bd082a !important;
+}
+.xp-start-right-item {
+  color: #ff1744 !important;
+}
+.xp-start-right-item:hover {
+  background: #bd082a !important;
+  color: #ffffff !important;
+}
+.xp-start-right-divider {
+  background: #bd082a !important;
+}
+.xp-start-footer {
+  background: linear-gradient(to bottom, #300208 0%, #0c0002 100%) !important;
+  border-top: 1px solid #ff1744 !important;
+}
+.xp-footer-btn {
+  color: #ffffff !important;
+}
+.xp-footer-btn:hover {
+  color: #ff1744 !important;
+}
+.xp-start-item-title {
+  color: #ffffff !important;
+}
+.xp-start-item-desc {
+  color: #999999 !important;
+}
+
+/* === CABINET DISPLAY READABILITY UPGRADES === */
+.display-description {
+  font-size: 1.05rem !important;
+  line-height: 1.65 !important;
+  color: #e2d9c8 !important; /* High contrast bright paper color */
+}
+
+.display-specs dt {
+  font-size: 0.72rem !important;
+  letter-spacing: 0.08em !important;
+}
+
+.display-specs dd {
+  font-size: 0.8rem !important;
+  max-width: 170px !important;
+}
+
+.display-meta {
+  font-size: 0.88rem !important;
+}
+
+.display-director {
+  font-size: 0.76rem !important;
+}
+
+.display-title {
+  font-size: clamp(1.75rem, 2.5vw, 2.45rem) !important;
+}
+
 

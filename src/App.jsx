@@ -944,6 +944,15 @@ function App() {
     }
   }, [crtEnabled]);
 
+  // HAL 9000 Boot Sequence state
+  const [booting, setBooting] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setBooting(false);
+    }, 2800);
+    return () => clearTimeout(timer);
+  }, []);
+
   // Start Menu State
   const [startMenuOpen, setStartMenuOpen] = useState(false);
 
@@ -1242,6 +1251,28 @@ function App() {
     backgroundRepeat: 'no-repeat'
   };
 
+  if (booting) {
+    return (
+      <div className="hal-boot-screen mono">
+        <div className="boot-terminal">
+          <div className="boot-line">HAL 9000 MAIN SYSTEM CORE v3.14</div>
+          <div className="boot-line">discovery_1_onboard_mainframe</div>
+          <div className="boot-line">----------------------------------------</div>
+          <div className="boot-line progress-1">MEMORY ALLOCATION.............. OK</div>
+          <div className="boot-line progress-2">HEURISTIC LOGIC CIRCUITS....... ENABLED</div>
+          <div className="boot-line progress-3">LOGIC GATES CALIBRATION........ OK</div>
+          <div className="boot-line progress-4">AE-35 TELEMETRY LINKS.......... STABLE</div>
+          <div className="boot-line progress-5">LIFE SUPPORT CENTRAL SYSTEMS... OPERATIONAL</div>
+          <div className="boot-line progress-6">INTERFACING WORKSTATION........ ACTIVE</div>
+          <div className="boot-line boot-quote">"Good afternoon, Sumedh. I am operational."</div>
+          <div className="boot-lens-spinner">
+            <div className="spinner-red-eye"></div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <>
       {/* XP Start Menu */}
@@ -1249,8 +1280,10 @@ function App() {
         <div className="xp-start-menu mono" onClick={(e) => e.stopPropagation()}>
           {/* Header profile area */}
           <div className="xp-start-header">
-            <div className="xp-start-avatar">S</div>
-            <div className="xp-start-username">Sumedh Jamsandekar</div>
+            <div className="hal-menu-eye">
+              <div className="hal-menu-eye-pupil"></div>
+            </div>
+            <div className="xp-start-username">HAL 9000 SYSTEM CORE</div>
           </div>
           
           {/* Main double panel columns */}
@@ -1337,7 +1370,7 @@ function App() {
               setStartMenuOpen(!startMenuOpen);
             }}
           >
-            start
+            🔴 HAL 9000
           </button>
           <span>SumedhOS v2.0</span>
           <span>{currentTime}</span>
@@ -1494,8 +1527,8 @@ function App() {
           <div className="widget-header">[ SYSTEM MONITOR ]</div>
           <div className="widget-row"><strong>USER:</strong> sumedh_jamsandekar</div>
           <div className="widget-row"><strong>ROLE:</strong> writer_director_engineer</div>
-          <div className="widget-row"><strong>OS:</strong> SumedhOS v2.0</div>
-          <div className="widget-row"><strong>HOST:</strong> space_odyssey_hal_9000</div>
+          <div className="widget-row"><strong>OS:</strong> HAL 9000 v3.14</div>
+          <div className="widget-row"><strong>HOST:</strong> discovery_1_mainframe</div>
           <div className="widget-row"><strong>CRT:</strong> {crtEnabled ? 'ACTIVE' : 'STANDBY'}</div>
           <div className="widget-divider"></div>
           <div className="widget-stats">
