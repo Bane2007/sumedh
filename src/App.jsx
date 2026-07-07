@@ -41,7 +41,14 @@ function BeatsPlayer() {
   const [urlInput, setUrlInput] = useState('');
   const [currentTrackIdx, setCurrentTrackIdx] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [elapsedTime, setElapsedTime] = useState(0);
+  const [bitrate, setBitrate] = useState(192);
   const audioRef = useRef(null);
+  const timerRef = useRef(null);
+  const [equalizerPreset, setEqualizerPreset] = useState('electronic');
+
+  // State for visualizer bars
+  const [barHeights, setBarHeights] = useState(new Array(16).fill(4));
 
   // Curated list of high-quality, open-source, ad-free internet radio and music streams (no AI songs)
   const initialStreams = [
@@ -61,22 +68,22 @@ function BeatsPlayer() {
       url: "https://coderadio-admin-v2.freecodecamp.org/listen/coderadio/radio.mp3"
     },
     {
-      title: "Groove Salad",
-      artist: "SomaFM (Ambient Chill Beats)",
+      title: "SomaFM Groove Salad",
+      artist: "Ambient/Chill Radio",
       url: "https://ice1.somafm.com/groovesalad-128-mp3"
     },
     {
-      title: "Indie Pop Rocks!",
-      artist: "SomaFM (Classic Indie Pop)",
+      title: "SomaFM Indie Pop Rocks",
+      artist: "Underground Indie Pop",
       url: "https://ice1.somafm.com/indiepop-128-mp3"
     },
     {
-      title: "Synth Zone",
-      artist: "SomaFM (Synthwave/80s Retro)",
+      title: "SomaFM Synth Zone",
+      artist: "Synthpop & Wave",
       url: "https://ice1.somafm.com/synthzone-128-mp3"
     },
     {
-      title: "Radio Paradise (Mellow)",
+      title: "Radio Paradise",
       artist: "Listener-Supported Warm Chill",
       url: "https://stream.radioparadise.com/mellow-128"
     },
@@ -94,6 +101,24 @@ function BeatsPlayer() {
 
   const [tracks, setTracks] = useState(initialStreams);
 
+  // Audio timer effect
+  useEffect(() => {
+    if (isPlaying) {
+      timerRef.current = setInterval(() => {
+        setElapsedTime(prev => prev + 1);
+        // Randomize visualizer bars based on equalizer preset
+        setBarHeights(prev => prev.map(() => {
+          const maxVal = equalizerPreset === 'rock' ? 24 : (equalizerPreset === 'pop' ? 18 : 22);
+          return Math.floor(Math.random() * maxVal) + 4;
+        }));
+      }, 100);
+    } else {
+      clearInterval(timerRef.current);
+      setBarHeights(new Array(16).fill(4));
+    }
+    return () => clearInterval(timerRef.current);
+  }, [isPlaying, equalizerPreset]);
+
   const handleNativePlayPause = () => {
     if (!audioRef.current) return;
     if (isPlaying) {
@@ -109,6 +134,8 @@ function BeatsPlayer() {
   const handleTrackChange = (idx) => {
     setCurrentTrackIdx(idx);
     setIsPlaying(false);
+    setElapsedTime(0);
+    setBitrate([128, 192, 256, 320][Math.floor(Math.random() * 4)]);
     if (audioRef.current) {
       audioRef.current.load();
       setTimeout(() => {
@@ -126,7 +153,6 @@ function BeatsPlayer() {
     let title = "Custom Stream";
     let artist = "Web Audio Link";
 
-    // SomaFM URL parser (e.g., https://somafm.com/groovesalad/ or somafm.com/groovesalad)
     if (target.includes('somafm.com')) {
       const match = target.match(/somafm\.com\/([a-zA-Z0-9_-]+)/);
       if (match && match[1]) {
@@ -135,15 +161,11 @@ function BeatsPlayer() {
         title = channel.charAt(0).toUpperCase() + channel.slice(1);
         artist = "SomaFM Stream";
       }
-    }
-    // Radio Paradise URL parser
-    else if (target.includes('radioparadise.com')) {
+    } else if (target.includes('radioparadise.com')) {
       parsedUrl = "https://stream.radioparadise.com/musicmix-128";
       title = "Radio Paradise (Main Mix)";
       artist = "Radio Paradise Stream";
-    }
-    // Direct audio links
-    else {
+    } else {
       try {
         const urlObj = new URL(target);
         const pathname = urlObj.pathname;
@@ -151,21 +173,17 @@ function BeatsPlayer() {
         if (filename) {
           title = decodeURIComponent(filename);
         }
-      } catch (e) {
+      } catch {
         title = "External Stream";
       }
     }
 
-    const newTrack = {
-      title: title,
-      artist: artist,
-      url: parsedUrl
-    };
-
+    const newTrack = { title, artist, url: parsedUrl };
     setTracks(prev => {
       const updated = [...prev, newTrack];
       setCurrentTrackIdx(updated.length - 1);
       setIsPlaying(false);
+      setElapsedTime(0);
       setTimeout(() => {
         if (audioRef.current) {
           audioRef.current.load();
@@ -176,71 +194,100 @@ function BeatsPlayer() {
       }, 100);
       return updated;
     });
-
     setUrlInput('');
   };
 
+  const formatTime = (secondsCount) => {
+    const mins = Math.floor(secondsCount / 600);
+    const secs = Math.floor((secondsCount % 600) / 10);
+    return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+  };
+
   return (
-    <div className="beats-player">
-      <div className="beats-loader mono">
-        <input 
-          type="text" 
-          placeholder="Paste SomaFM, Radio Paradise, or direct audio stream URL..." 
-          value={urlInput}
-          onChange={(e) => setUrlInput(e.target.value)}
-        />
-        <button className="load-btn" onClick={loadMedia}>LOAD</button>
+    <div className="beats-remade-container">
+      <audio 
+        ref={audioRef} 
+        src={tracks[currentTrackIdx].url} 
+        preload="auto"
+        crossOrigin="anonymous"
+        onEnded={() => handleTrackChange((currentTrackIdx + 1) % tracks.length)}
+      />
+      
+      {/* Left Hand Tape Deck / Player */}
+      <div className="beats-deck-pane">
+        <div className="beats-lcd-screen">
+          <div className="lcd-ticker mono">
+            <span className="lcd-text-scroll">${tracks[currentTrackIdx].title.toUpperCase()} - ${tracks[currentTrackIdx].artist.toUpperCase()}</span>
+          </div>
+          <div className="lcd-meta-row mono">
+            <span>${formatTime(elapsedTime)}</span>
+            <span>${isPlaying ? '[PLAYING]' : '[PAUSED]'}</span>
+            <span>${bitrate}KBPS</span>
+          </div>
+          {/* Visualizer frequency bars */}
+          <div className="lcd-visualizer">
+            {barHeights.map((h, i) => (
+              <div 
+                key={i} 
+                className="vis-bar" 
+                style={{ height: `${h}px` }}
+              ></div>
+            ))}
+          </div>
+        </div>
+
+        <div className="beats-cassette-housing">
+          <div className="cassette-window">
+            <div className={`spool-circle spool-l ${isPlaying ? 'spinning' : ''}`}></div>
+            <div className={`spool-circle spool-r ${isPlaying ? 'spinning' : ''}`}></div>
+          </div>
+          <div className="cassette-bottom-strip mono">STUDIO SOUND DECK v2</div>
+        </div>
+
+        <div className="beats-deck-controls">
+          <button className="deck-btn btn-prev" onClick={() => handleTrackChange((currentTrackIdx - 1 + tracks.length) % tracks.length)}>PREV</button>
+          <button className={`deck-btn btn-play-pause ${isPlaying ? 'active' : ''}`} onClick={handleNativePlayPause}>${isPlaying ? 'PAUSE' : 'PLAY'}</button>
+          <button className="deck-btn btn-next" onClick={() => handleTrackChange((currentTrackIdx + 1) % tracks.length)}>NEXT</button>
+        </div>
+
+        {/* Equalizer presets */}
+        <div className="eq-presets mono">
+          <span className="eq-label">PRESETS:</span>
+          {['flat', 'rock', 'pop', 'electronic'].map((preset) => (
+            <button 
+              key={preset}
+              className={`eq-preset-btn ${equalizerPreset === preset ? 'active' : ''}`}
+              onClick={() => setEqualizerPreset(preset)}
+            >
+              ${preset.toUpperCase()}
+            </button>
+          ))}
+        </div>
+
+        <div className="beats-loader-box">
+          <input 
+            type="text" 
+            className="beats-url-input mono"
+            placeholder="Paste stream/mp3 link..."
+            value={urlInput}
+            onChange={(e) => setUrlInput(e.target.value)}
+          />
+          <button className="beats-url-load-btn mono" onClick={loadMedia}>LOAD</button>
+        </div>
       </div>
 
-      <div className="native-player-panel">
-        <audio 
-          ref={audioRef} 
-          src={tracks[currentTrackIdx].url} 
-          preload="auto"
-          crossOrigin="anonymous"
-          onEnded={() => handleTrackChange((currentTrackIdx + 1) % tracks.length)}
-        />
-        <div className="cassette-deck">
-          <div className="cassette-label mono">
-            {tracks[currentTrackIdx].title}
-          </div>
-          <div className="cassette-sublabel mono">
-            {tracks[currentTrackIdx].artist}
-          </div>
-          <div className="cassette-spools">
-            <div className={`cassette-spool ${isPlaying ? 'playing' : ''}`}></div>
-            <div className={`cassette-spool ${isPlaying ? 'playing' : ''}`}></div>
-          </div>
-        </div>
-        <div className="native-controls">
-          <button 
-            className="control-btn prev"
-            onClick={() => handleTrackChange((currentTrackIdx - 1 + tracks.length) % tracks.length)}
-          >
-            &laquo; PREV
-          </button>
-          <button 
-            className={`control-btn play-pause-btn ${isPlaying ? 'active' : ''}`}
-            onClick={handleNativePlayPause}
-          >
-            {isPlaying ? "PAUSE" : "PLAY"}
-          </button>
-          <button 
-            className="control-btn next"
-            onClick={() => handleTrackChange((currentTrackIdx + 1) % tracks.length)}
-          >
-            NEXT &raquo;
-          </button>
-        </div>
-        <div className="native-playlist mono">
+      {/* Right Hand Playlist Sidebar */}
+      <div className="beats-playlist-pane mono">
+        <div className="playlist-title">STATIONS SHELF</div>
+        <div className="playlist-scroll-list">
           {tracks.map((track, idx) => (
             <div 
               key={idx} 
-              className={`playlist-item ${idx === currentTrackIdx ? 'current' : ''}`}
+              className={`playlist-row-item ${idx === currentTrackIdx ? 'active' : ''}`}
               onClick={() => handleTrackChange(idx)}
             >
-              <span>{idx + 1}. {track.title}</span>
-              <span>{track.artist}</span>
+              <div className="playlist-row-title">${idx + 1}. ${track.title}</div>
+              <div className="playlist-row-artist">${track.artist}</div>
             </div>
           ))}
         </div>
@@ -1062,6 +1109,9 @@ function App() {
   };
 
   const processedItems = getProcessedItems();
+  const itemsPerPage = 6;
+  const totalPages = Math.ceil(processedItems.length / itemsPerPage) || 1;
+  const paginatedItems = processedItems.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
   const handleCategoryChange = (cat) => {
     setCategory(cat);
@@ -1088,7 +1138,7 @@ function App() {
   };
 
   const wallpaperStyle = {
-    backgroundImage: `url(${import.meta.env.BASE_URL}assets/img/xp_bliss.jpg)`,
+    backgroundImage: `url(${import.meta.env.BASE_URL}assets/img/space_odyssey_bg.jpg)`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat'

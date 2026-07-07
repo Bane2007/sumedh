@@ -229,7 +229,7 @@ body::before {
 }
 
 .window-content {
-  padding: 1.5rem;
+  padding: 0.85rem !important;
   flex: 1;
   overflow-y: auto;
 }
@@ -3265,6 +3265,320 @@ body.theme-contact {
 /* === PHOTOS POLAROID FIXES === */
 .polaroid-img-wrapper {
   aspect-ratio: 1/1 !important; /* Perfect square polaroid photo crop */
+}
+
+/* === REMADE BEATS AUDIO PLAYER STYLING === */
+.window--beats .window-content {
+  background: #14100e !important;
+  padding: 15px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+
+.beats-remade-container {
+  display: flex;
+  height: 100%;
+  gap: 15px;
+  box-sizing: border-box;
+}
+
+.beats-deck-pane {
+  background: #1c1512;
+  border: 1px solid var(--glass-border);
+  padding: 12px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1.2;
+  min-width: 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.beats-lcd-screen {
+  background: #0c2b0c;
+  border: 2px inset #051405;
+  border-radius: 4px;
+  padding: 8px 10px;
+  color: #3bf53b;
+  text-shadow: 0 0 5px rgba(59, 245, 59, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 98px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 8px rgba(0,0,0,0.8);
+}
+
+.lcd-ticker {
+  font-size: 0.7rem;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 1px dashed rgba(59, 245, 59, 0.25);
+  padding-bottom: 2px;
+  position: relative;
+  height: 18px;
+}
+
+.lcd-text-scroll {
+  display: inline-block;
+  white-space: nowrap;
+  animation: lcd-scroll 14s linear infinite;
+}
+
+@keyframes lcd-scroll {
+  0% { transform: translate3d(100%, 0, 0); }
+  100% { transform: translate3d(-100%, 0, 0); }
+}
+
+.lcd-meta-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.6rem;
+  font-family: var(--mono);
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+}
+
+.lcd-visualizer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 26px;
+  border-top: 1px solid rgba(59, 245, 59, 0.15);
+  padding-top: 4px;
+  gap: 2px;
+}
+
+.vis-bar {
+  flex: 1;
+  background: #3bf53b;
+  min-height: 2px;
+  transition: height 0.08s ease;
+  box-shadow: 0 0 2px rgba(59, 245, 59, 0.3);
+}
+
+.beats-cassette-housing {
+  background: #0b0807;
+  border: 2px solid #231b17;
+  border-radius: 4px;
+  height: 105px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 6px 12px rgba(0,0,0,0.9);
+  position: relative;
+}
+
+.cassette-window {
+  width: 130px;
+  height: 44px;
+  background: rgba(255,255,255,0.01);
+  border: 3px solid #231b17;
+  border-radius: 3px;
+  box-shadow: inset 0 4px 8px rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.spool-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: repeating-conic-gradient(from 0deg, #090605 0deg 30deg, #504030 30deg 60deg);
+  border: 4px solid #17110e;
+  box-shadow: 0 0 4px rgba(0,0,0,0.6);
+}
+
+.spool-circle.spinning {
+  animation: spin-spool 2.5s linear infinite;
+}
+
+@keyframes spin-spool {
+  100% { transform: rotate(360deg); }
+}
+
+.cassette-bottom-strip {
+  font-size: 0.52rem;
+  color: var(--ink-soft);
+  margin-top: 6px;
+  letter-spacing: 0.12em;
+  font-family: var(--mono);
+}
+
+.beats-deck-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.deck-btn {
+  flex: 1;
+  background: var(--paper-deep);
+  border: 1px solid var(--hairline);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: bold;
+  padding: 6px 0;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.15s ease;
+  outline: none;
+}
+
+.deck-btn:hover {
+  background: var(--oxblood);
+  border-color: var(--oxblood-soft);
+}
+
+.deck-btn.active {
+  background: #3e7f14 !important;
+  border-color: #6fb234 !important;
+}
+
+.eq-presets {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.55rem;
+  border-bottom: 1px dashed var(--hairline);
+  padding-bottom: 6px;
+}
+
+.eq-label {
+  color: var(--ink-soft);
+  font-weight: bold;
+}
+
+.eq-preset-btn {
+  background: none;
+  border: 1px solid var(--hairline);
+  color: var(--ink-soft);
+  font-size: 0.52rem;
+  padding: 1px 5px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.15s ease;
+}
+
+.eq-preset-btn:hover, .eq-preset-btn.active {
+  border-color: var(--oxblood-soft);
+  color: var(--ink);
+  background: rgba(200, 97, 90, 0.12);
+}
+
+.beats-loader-box {
+  display: flex;
+  gap: 5px;
+}
+
+.beats-url-input {
+  flex: 1;
+  background: #050403;
+  border: 1px solid var(--hairline);
+  color: var(--ink);
+  font-size: 0.62rem;
+  padding: 5px 8px;
+  border-radius: 2px;
+  outline: none;
+  font-family: var(--mono);
+}
+
+.beats-url-load-btn {
+  background: var(--oxblood);
+  border: none;
+  color: var(--ink);
+  font-size: 0.62rem;
+  font-weight: bold;
+  padding: 0 10px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.beats-playlist-pane {
+  flex: 0.8;
+  background: #0d0908;
+  border: 1px solid var(--glass-border);
+  border-radius: 6px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+  box-shadow: inset 0 4px 8px rgba(0,0,0,0.7);
+  min-width: 0;
+}
+
+.playlist-title {
+  font-size: 0.68rem;
+  font-weight: bold;
+  color: var(--oxblood-soft);
+  border-bottom: 1px solid var(--hairline);
+  padding-bottom: 4px;
+  letter-spacing: 0.06em;
+}
+
+.playlist-scroll-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.playlist-scroll-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.playlist-scroll-list::-webkit-scrollbar-thumb {
+  background: var(--hairline);
+  border-radius: 2px;
+}
+
+.playlist-row-item {
+  padding: 6px 8px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.playlist-row-item:hover {
+  background: rgba(255,255,255,0.02);
+  border-color: var(--hairline);
+}
+
+.playlist-row-item.active {
+  background: rgba(200, 97, 90, 0.06);
+  border-color: var(--oxblood-soft);
+}
+
+.playlist-row-title {
+  font-size: 0.65rem;
+  font-weight: bold;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.playlist-row-item.active .playlist-row-title {
+  color: var(--oxblood-soft);
+}
+
+.playlist-row-artist {
+  font-size: 0.52rem;
+  color: var(--ink-soft);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 
