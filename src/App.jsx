@@ -624,7 +624,7 @@ function LoglineGame({ films }) {
 }
 
 // Draggable Window Component
-function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children, defaultPos }) {
+function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children, defaultPos, isClosing }) {
   const [position, setPosition] = useState(defaultPos || { x: 100, y: 80 });
   const [isDragging, setIsDragging] = useState(false);
   const [isMaximized, setIsMaximized] = useState(window.innerWidth <= 768);
@@ -680,7 +680,7 @@ function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children
 
   return (
     <div 
-      className={`window window--${id} ${isMaximized ? 'maximized' : ''}`} 
+      className={`window window--${id} ${isMaximized ? 'maximized' : ''} ${isClosing ? 'closing' : ''}`} 
       ref={windowRef} 
       style={{ 
         zIndex, 
@@ -710,6 +710,108 @@ function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children
       </div>
       <div className="window-content">
         {children}
+      </div>
+    </div>
+  );
+}
+
+const PHOTO_GALLERY = [
+  {
+    id: "film_still",
+    title: "film_still_night.raw",
+    date: "2026-03-12",
+    camera: "Arri Alexa Mini",
+    lens: "Cooke S4/i 35mm",
+    specs: "ISO 800 · f/2.0 · 1/48s",
+    src: `${import.meta.env.BASE_URL}assets/img/film_still.jpg`,
+    desc: "Late night setup during the final scenes. The ambient neon casting soft highlights on the camera rig."
+  },
+  {
+    id: "writing_desk",
+    title: "golden_hour_script.raw",
+    date: "2026-04-05",
+    camera: "Leica M10-R",
+    lens: "Summilux 50mm f/1.4",
+    specs: "ISO 200 · f/1.4 · 1/250s",
+    src: `${import.meta.env.BASE_URL}assets/img/writing_desk.jpg`,
+    desc: "Golden hour sun hitting the screenwriting desk. Black coffee, drafts, and outlining the third act."
+  },
+  {
+    id: "set_polaroids",
+    title: "production_candids.raw",
+    date: "2026-05-18",
+    camera: "Polaroid SX-70",
+    lens: "116mm f/8",
+    specs: "SX-70 Film · Manual Focus",
+    src: `${import.meta.env.BASE_URL}assets/img/set_polaroids.jpg`,
+    desc: "Scattered candids from the crew. Clapperboards, smiles, and long hours in the sun."
+  },
+  {
+    id: "abu_dhabi_sunset",
+    title: "sunset_from_campus.raw",
+    date: "2026-06-22",
+    camera: "Sony A7S III",
+    lens: "Zeiss Batis 85mm",
+    specs: "ISO 400 · f/2.8 · 1/125s",
+    src: `${import.meta.env.BASE_URL}assets/img/abu_dhabi_sunset.jpg`,
+    desc: "Looking out of the university campus in Abu Dhabi during sunset. Warm tones over the skyline."
+  }
+];
+
+function PhotosApp() {
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
+
+  if (selectedPhoto) {
+    return (
+      <div className="photos-details-view">
+        <button className="logphile-back-btn" onClick={() => setSelectedPhoto(null)} style={{ marginBottom: '10px' }}>
+          &larr; BACK TO ALBUM
+        </button>
+        <div className="photos-detail-content">
+          <div className="photo-large-container">
+            <img src={selectedPhoto.src} alt={selectedPhoto.title} className="photo-large-img" />
+          </div>
+          <div className="photo-meta-panel mono">
+            <div style={{ borderBottom: '1px solid var(--hairline)', paddingBottom: '8px', marginBottom: '8px' }}>
+              <div style={{ fontSize: '0.85rem', fontWeight: 'bold', color: 'var(--oxblood-soft)', textTransform: 'uppercase' }}>{selectedPhoto.title}</div>
+              <div style={{ fontSize: '0.55rem', color: 'var(--ink-soft)' }}>EXIF METADATA RAW FILE</div>
+            </div>
+            <dl className="photo-exif-list">
+              <div><dt>DATE</dt><dd>{selectedPhoto.date}</dd></div>
+              <div><dt>CAMERA</dt><dd>{selectedPhoto.camera}</dd></div>
+              <div><dt>LENS</dt><dd>{selectedPhoto.lens}</dd></div>
+              <div><dt>EXPOSURE</dt><dd>{selectedPhoto.specs}</dd></div>
+            </dl>
+            <p className="photo-description">
+              {selectedPhoto.desc}
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="photos-grid-view">
+      <div className="photos-album-header mono">
+        <span>ALBUM: /home/sumedh/photos</span>
+        <span>4 RAW IMAGES</span>
+      </div>
+      <div className="photos-grid">
+        {PHOTO_GALLERY.map(photo => (
+          <div 
+            key={photo.id} 
+            className="photo-polaroid-card" 
+            onClick={() => setSelectedPhoto(photo)}
+          >
+            <div className="polaroid-img-wrapper">
+              <img src={photo.src} alt={photo.title} />
+            </div>
+            <div className="polaroid-caption mono">
+              {photo.title}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -832,18 +934,17 @@ function App() {
         const syn = json.data?.synopsis || 'No description available.';
         localStorage.setItem(cacheKey, syn);
         setDescription(syn);
+        setIsLoadingDesc(false);
       })
-      .catch(err => {
-        console.error(err);
+      .catch(() => {
         setDescription('Failed to load description.');
-      })
-      .finally(() => {
         setIsLoadingDesc(false);
       });
   }, [selectedItem, category]);
 
   // OS Windows state
   const [windows, setWindows] = useState([]);
+  const [closingWindows, setClosingWindows] = useState([]);
   const [maxZ, setMaxZ] = useState(20);
   const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
 
@@ -885,8 +986,12 @@ function App() {
     const h = window.innerHeight;
     const winW = Math.min(width, w - 40);
     const winH = Math.min(height, h - 100);
-    const x = (w - winW) / 2 + (windows.length * 20);
-    const y = (h - winH) / 2 + (windows.length * 15);
+    
+    // Constrain positions so windows don't spawn off-screen
+    const maxX = Math.max(10, w - winW - 20);
+    const maxY = Math.max(30, h - winH - 60);
+    const x = Math.min(Math.max(10, (w - winW) / 2 + (windows.length * 20)), maxX);
+    const y = Math.min(Math.max(30, (h - winH) / 2 + (windows.length * 15)), maxY);
 
     const newWindow = { id, title, width: winW, height: winH, x, y, zIndex: maxZ + 1 };
     setWindows([...windows, newWindow]);
@@ -894,7 +999,11 @@ function App() {
   };
 
   const closeWindow = (id) => {
-    setWindows(windows.filter(w => w.id !== id));
+    setClosingWindows(prev => [...prev, id]);
+    setTimeout(() => {
+      setWindows(prev => prev.filter(w => w.id !== id));
+      setClosingWindows(prev => prev.filter(item => item !== id));
+    }, 250); // Matches the CSS transition duration
   };
 
   const focusWindow = (id) => {
@@ -904,7 +1013,6 @@ function App() {
     ));
   };
 
-  // Filter & Sort Logic for Cabinet
   const getProcessedItems = () => {
     let items = [];
     if (category === 'films') items = [...mediaDb.films];
@@ -1098,6 +1206,20 @@ function App() {
             </div>
             <span className="shortcut-label">Contact</span>
           </div>
+
+          {/* Photos Shortcut */}
+          <div 
+            className="shortcut-item" 
+            onClick={() => openWindow('photos', 'Photos Gallery', 720, 500)}
+            title="View personal cinematic photography"
+          >
+            <div className="shortcut-icon" style={{ backgroundColor: '#2b8a3e' }}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+              </svg>
+            </div>
+            <span className="shortcut-label">Photos.app</span>
+          </div>
         </div>
 
         {/* Brand Overlay / Watermark */}
@@ -1118,7 +1240,11 @@ function App() {
             defaultPos={{ x: win.x, y: win.y }}
             onClose={() => closeWindow(win.id)}
             onFocus={() => focusWindow(win.id)}
+            isClosing={closingWindows.includes(win.id)}
           >
+            {/* PHOTOS CONTENT */}
+            {win.id === 'photos' && <PhotosApp />}
+
             {/* CABINET CONTENT */}
             {win.id === 'cabinet' && (
               <section className="closet-section" aria-labelledby="closet-h" style={{ height: '100%', padding: 0 }}>
