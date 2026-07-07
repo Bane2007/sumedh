@@ -732,9 +732,9 @@ function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children
       style={{ 
         zIndex, 
         left: isMaximized ? '0' : `${position.x}px`, 
-        top: isMaximized ? '24px' : `${position.y}px`,
+        top: isMaximized ? '0' : `${position.y}px`,
         width: isMaximized ? '100vw' : (typeof width === 'number' ? `${width}px` : width),
-        height: isMaximized ? 'calc(100vh - 24px - 10px)' : (typeof height === 'number' ? `${height}px` : height),
+        height: isMaximized ? 'calc(100vh - 30px)' : (typeof height === 'number' ? `${height}px` : height),
         position: 'absolute'
       }}
       onMouseDown={onFocus}
@@ -880,6 +880,9 @@ function App() {
     }
   }, [crtEnabled]);
 
+  // Start Menu State
+  const [startMenuOpen, setStartMenuOpen] = useState(false);
+
   // Cabinet state
   const [category, setCategory] = useState('films');
   const [search, setSearch] = useState('');
@@ -888,11 +891,6 @@ function App() {
   const [displayBg, setDisplayBg] = useState('');
   const displayContentRef = useRef(null);
 
-  // Pagination state for Cabinet list
-  const [currentPage, setCurrentPage] = useState(1);
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [category, search, sortBy]);
 
   // Add item form state
   const [showAddForm, setShowAddForm] = useState(false);
@@ -1109,9 +1107,6 @@ function App() {
   };
 
   const processedItems = getProcessedItems();
-  const itemsPerPage = 6;
-  const totalPages = Math.ceil(processedItems.length / itemsPerPage) || 1;
-  const paginatedItems = processedItems.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
   const handleCategoryChange = (cat) => {
     setCategory(cat);
@@ -1146,10 +1141,99 @@ function App() {
 
   return (
     <>
+      {/* XP Start Menu */}
+      {startMenuOpen && (
+        <div className="xp-start-menu mono" onClick={(e) => e.stopPropagation()}>
+          {/* Header profile area */}
+          <div className="xp-start-header">
+            <div className="xp-start-avatar">S</div>
+            <div className="xp-start-username">Sumedh Jamsandekar</div>
+          </div>
+          
+          {/* Main double panel columns */}
+          <div className="xp-start-panels">
+            {/* Left programs panel */}
+            <div className="xp-start-left-panel">
+              <div className="xp-start-item" onClick={() => { openWindow("about", "About Me", 580, 390); setStartMenuOpen(false); }}>
+                <span className="xp-start-icon">👤</span>
+                <div className="xp-start-item-text">
+                  <div className="xp-start-item-title">About Me</div>
+                  <div className="xp-start-item-desc">Learn about Sumedh's film &amp; engineering work</div>
+                </div>
+              </div>
+              <div className="xp-start-item" onClick={() => { openWindow("cabinet", "Media Cabinet", 800, 500); setStartMenuOpen(false); }}>
+                <span className="xp-start-icon">🎬</span>
+                <div className="xp-start-item-text">
+                  <div className="xp-start-item-title">Media Cabinet</div>
+                  <div className="xp-start-item-desc">Browse films, anime, and manga shelf</div>
+                </div>
+              </div>
+              <div className="xp-start-item" onClick={() => { openWindow("photos", "Photos Gallery", 600, 420); setStartMenuOpen(false); }}>
+                <span className="xp-start-icon">📷</span>
+                <div className="xp-start-item-text">
+                  <div className="xp-start-item-title">Photos.app</div>
+                  <div className="xp-start-item-desc">View production stills and portraits</div>
+                </div>
+              </div>
+              <div className="xp-start-item" onClick={() => { openWindow("beats", "Beats Player", 540, 410); setStartMenuOpen(false); }}>
+                <span className="xp-start-icon">📻</span>
+                <div className="xp-start-item-text">
+                  <div className="xp-start-item-title">Beats Player</div>
+                  <div className="xp-start-item-desc">Stream retro cassettes &amp; online radio</div>
+                </div>
+              </div>
+              <div className="xp-start-item" onClick={() => { openWindow("cinephile", "Logline Trivia", 520, 410); setStartMenuOpen(false); }}>
+                <span className="xp-start-icon">🎮</span>
+                <div className="xp-start-item-text">
+                  <div className="xp-start-item-title">Logline Trivia</div>
+                  <div className="xp-start-item-desc">Test your movie knowledge</div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Right system panel */}
+            <div className="xp-start-right-panel">
+              <div className="xp-start-right-item" onClick={() => { openWindow("photos", "Photos Gallery", 600, 420); setStartMenuOpen(false); }}>
+                <span>📁 My Documents</span>
+              </div>
+              <div className="xp-start-right-item" onClick={() => { openWindow("photos", "Photos Gallery", 600, 420); setStartMenuOpen(false); }}>
+                <span>🖼️ My Pictures</span>
+              </div>
+              <div className="xp-start-right-item" onClick={() => { openWindow("beats", "Beats Player", 540, 410); setStartMenuOpen(false); }}>
+                <span>🎵 My Music</span>
+              </div>
+              <div className="xp-start-right-divider"></div>
+              <div className="xp-start-right-item" onClick={() => { setCrtEnabled(!crtEnabled); setStartMenuOpen(false); }}>
+                <span>⚙️ Control Panel (CRT)</span>
+              </div>
+              <div className="xp-start-right-item" onClick={() => { openWindow("contact", "Contact Links", 360, 180); setStartMenuOpen(false); }}>
+                <span>🔗 Connect Links</span>
+              </div>
+            </div>
+          </div>
+          
+          {/* Footer bar */}
+          <div className="xp-start-footer">
+            <button className="xp-footer-btn" onClick={() => { setStartMenuOpen(false); alert("Logging off..."); }}>
+              🔑 Log Off
+            </button>
+            <button className="xp-footer-btn shutdown" onClick={() => { setStartMenuOpen(false); alert("Shutting down SumedhOS..."); }}>
+              🔴 Turn Off Computer
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Top Status Bar (XP Bottom Taskbar layout) */}
-      <div className="status-bar">
+      <div className="status-bar" onClick={(e) => e.stopPropagation()}>
         <div className="status-left">
-          <button className="xp-start-btn" onClick={() => openWindow('about', 'About Me', 580, 390)}>
+          <button 
+            className={"xp-start-btn " + (startMenuOpen ? "pressed" : "")} 
+            onClick={(e) => {
+              e.stopPropagation();
+              setStartMenuOpen(!startMenuOpen);
+            }}
+          >
             start
           </button>
           <span>SumedhOS v2.0</span>
@@ -1172,19 +1256,23 @@ function App() {
 
 
       {/* Main Desktop Space with Portrait Wallpaper */}
-      <div className="desktop" style={wallpaperStyle}>
+      <div className="desktop" style={wallpaperStyle} onClick={() => setStartMenuOpen(false)}>
         
         {/* Desktop Shortcuts (App Icons on screen) */}
         <div className="desktop-shortcuts">
           {/* Media Cabinet Shortcut */}
           <div 
             className="shortcut-item" 
-            onClick={() => openWindow('cabinet', 'Media Cabinet', 800, 500)}
+            onClick={(e) => { e.stopPropagation(); openWindow("cabinet", "Media Cabinet", 800, 500); }}
             title="Open film, anime, and manga lists"
           >
-            <div className="shortcut-icon" style={{ backgroundColor: '#c8615a' }}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-                <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/>
+            <div className="shortcut-icon">
+              <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 14H42V38C42 39.1 41.1 40 40 40H8C6.9 40 6 39.1 6 38V14Z" fill="#2d2d2d" stroke="#febb02" strokeWidth="2.5"/>
+                <path d="M6 14L10 8H42L38 14H6Z" fill="#ffb300" stroke="#febb02" strokeWidth="2.5"/>
+                <circle cx="16" cy="27" r="5" fill="#febb02"/>
+                <circle cx="32" cy="27" r="5" fill="#febb02"/>
+                <path d="M21 27H27" stroke="#1c1512" strokeWidth="3" strokeLinecap="round"/>
               </svg>
             </div>
             <span className="shortcut-label">Media Cabinet</span>
@@ -1193,12 +1281,16 @@ function App() {
           {/* About Me Shortcut */}
           <div 
             className="shortcut-item" 
-            onClick={() => openWindow('about', 'About Me', 580, 390)}
+            onClick={(e) => { e.stopPropagation(); openWindow("about", "About Me", 580, 390); }}
             title="Biographical details and technical profile"
           >
-            <div className="shortcut-icon" style={{ backgroundColor: '#e08a82' }}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+            <div className="shortcut-icon">
+              <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="8" width="36" height="26" rx="4" fill="#0054e3" stroke="#ffffff" strokeWidth="2.5"/>
+                <rect x="10" y="12" width="28" height="18" rx="2" fill="#1b1c1d" stroke="#3bf53b" strokeWidth="1.5"/>
+                <path d="M14 17H26" stroke="#3bf53b" strokeWidth="2" strokeLinecap="round"/>
+                <path d="M14 21H22" stroke="#3bf53b" strokeWidth="2" strokeLinecap="round"/>
+                <path d="M16 34L12 40H36L32 34H16Z" fill="#0044b4" stroke="#ffffff" strokeWidth="1.5"/>
               </svg>
             </div>
             <span className="shortcut-label">About Me</span>
@@ -1207,12 +1299,15 @@ function App() {
           {/* Mini-app: Cinephile Trivia Game Shortcut */}
           <div 
             className="shortcut-item" 
-            onClick={() => openWindow('cinephile', 'Logline Trivia', 520, 410)}
+            onClick={(e) => { e.stopPropagation(); openWindow("cinephile", "Logline Trivia", 520, 410); }}
             title="Guess the movie using screenplay loglines"
           >
-            <div className="shortcut-icon" style={{ backgroundColor: '#4a3222' }}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5zm4 2h-2v-2h2v2zm0-4h-2V7h2v5z"/>
+            <div className="shortcut-icon">
+              <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 8H38C39.1 8 40 8.9 40 10V18C38 18 36 20 36 22C36 24 38 26 40 26V38C40 39.1 39.1 40 38 40H10C8.9 40 8 39.1 8 38V26C10 26 12 24 12 22C12 20 10 18 8 18V10C8 8.9 8.9 8 10 8Z" fill="#ff5252" stroke="#ffffff" strokeWidth="2.5"/>
+                <line x1="20" y1="15" x2="28" y2="15" stroke="#ffffff" strokeWidth="3" strokeLinecap="round"/>
+                <line x1="20" y1="22" x2="28" y2="22" stroke="#ffffff" strokeWidth="3" strokeDasharray="2 2"/>
+                <line x1="20" y1="29" x2="28" y2="29" stroke="#ffffff" strokeWidth="3" strokeLinecap="round"/>
               </svg>
             </div>
             <span className="shortcut-label">Logline.app</span>
@@ -1221,12 +1316,18 @@ function App() {
           {/* Mini-app: Beats Player Shortcut */}
           <div 
             className="shortcut-item" 
-            onClick={() => openWindow('beats', 'Beats Player', 540, 410)}
-            title="Interactive open-source stream & internet radio cassette player"
+            onClick={(e) => { e.stopPropagation(); openWindow("beats", "Beats Player", 540, 410); }}
+            title="Interactive open-source stream &amp; internet radio cassette player"
           >
-            <div className="shortcut-icon" style={{ backgroundColor: '#ff4c5a' }}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 12H7v-2h10v2zm0-4H7V9h10v2z"/>
+            <div className="shortcut-icon">
+              <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="6" width="32" height="36" rx="4" fill="#ffca28" stroke="#37474f" strokeWidth="2.5"/>
+                <rect x="14" y="14" width="20" height="14" rx="2" fill="#37474f"/>
+                <circle cx="20" cy="21" r="3" fill="#ffffff"/>
+                <circle cx="28" cy="21" r="3" fill="#ffffff"/>
+                <rect x="14" y="34" width="6" height="4" fill="#ff5252" rx="1"/>
+                <rect x="21" y="34" width="6" height="4" fill="#1e88e5" rx="1"/>
+                <rect x="28" y="34" width="6" height="4" fill="#4caf50" rx="1"/>
               </svg>
             </div>
             <span className="shortcut-label">Beats.app</span>
@@ -1235,12 +1336,16 @@ function App() {
           {/* Mini-app: Cinephile Hangman Shortcut */}
           <div 
             className="shortcut-item" 
-            onClick={() => openWindow('cineplay', 'Cineplay Hangman', 520, 410)}
+            onClick={(e) => { e.stopPropagation(); openWindow("cineplay", "Cineplay Hangman", 520, 410); }}
             title="Guess the movie title letter-by-letter using dynamic titles"
           >
-            <div className="shortcut-icon" style={{ backgroundColor: '#2d3748' }}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+            <div className="shortcut-icon">
+              <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="14" width="36" height="20" rx="10" fill="#9e9e9e" stroke="#37474f" strokeWidth="2.5"/>
+                <path d="M12 24H18" stroke="#37474f" strokeWidth="3.5" strokeLinecap="round"/>
+                <path d="M15 21V27" stroke="#37474f" strokeWidth="3.5" strokeLinecap="round"/>
+                <circle cx="29" cy="24" r="3.5" fill="#ff5252"/>
+                <circle cx="35" cy="24" r="3.5" fill="#ffca28"/>
               </svg>
             </div>
             <span className="shortcut-label">Cineplay.app</span>
@@ -1249,12 +1354,17 @@ function App() {
           {/* Contact Shortcut */}
           <div 
             className="shortcut-item" 
-            onClick={() => openWindow('contact', 'Contact Links', 360, 180)}
+            onClick={(e) => { e.stopPropagation(); openWindow("contact", "Contact Links", 360, 180); }}
             title="External portfolios, social networks and profiles"
           >
-            <div className="shortcut-icon" style={{ backgroundColor: '#120e0b' }}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            <div className="shortcut-icon">
+              <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 16H42V38C42 39.1 41.1 40 40 40H8C6.9 40 6 39.1 6 38V16Z" fill="#eceff1" stroke="#37474f" strokeWidth="2.5"/>
+                <path d="M6 16H20L24 10H38C39.1 10 40 10.9 40 12V16" fill="#29b6f6" stroke="#37474f" strokeWidth="2.5"/>
+                <circle cx="16" cy="26" r="3.5" fill="#ff7043"/>
+                <path d="M11 34C11 31 13.5 30 16 30C18.5 30 21 31 21 34" stroke="#ff7043" strokeWidth="2" strokeLinecap="round"/>
+                <line x1="26" y1="23" x2="36" y2="23" stroke="#78909c" strokeWidth="2.5" strokeLinecap="round"/>
+                <line x1="26" y1="29" x2="34" y2="29" stroke="#78909c" strokeWidth="2.5" strokeLinecap="round"/>
               </svg>
             </div>
             <span className="shortcut-label">Contact</span>
@@ -1263,19 +1373,20 @@ function App() {
           {/* Photos Shortcut */}
           <div 
             className="shortcut-item" 
-            onClick={() => openWindow('photos', 'Photos Gallery', 600, 420)}
+            onClick={(e) => { e.stopPropagation(); openWindow("photos", "Photos Gallery", 600, 420); }}
             title="View personal cinematic photography"
           >
-            <div className="shortcut-icon" style={{ backgroundColor: '#2b8a3e' }}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
-                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+            <div className="shortcut-icon">
+              <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="6" width="32" height="36" rx="2" fill="#ffffff" stroke="#37474f" strokeWidth="2.5"/>
+                <rect x="11" y="9" width="26" height="23" fill="#00bcd4"/>
+                <path d="M11 26L18 19L26 27L31 22L37 28V32H11V26Z" fill="#4caf50"/>
+                <circle cx="18" cy="14" r="2.5" fill="#ffeb3b"/>
               </svg>
             </div>
             <span className="shortcut-label">Photos.app</span>
           </div>
-        </div>
-
-        {/* Brand Overlay / Watermark */}
+        </div>        {/* Brand Overlay / Watermark */}
         <div className="desktop-brand">
           <div className="brand-title">SUMEDH JAMSANDEKAR</div>
           <div className="brand-subtitle mono">WRITER / DIRECTOR / ENGINEER</div>
@@ -1415,7 +1526,7 @@ function App() {
                           {processedItems.length === 0 ? (
                             <div className="grid-empty-state mono">[ No matching titles found on the shelf ]</div>
                           ) : (
-                            paginatedItems.map((item, index) => {
+                            processedItems.map((item, index) => {
                               const isSelected = selectedItem && (
                                 (category === 'films' && selectedItem.slug === item.slug) ||
                                 (category !== 'films' && selectedItem.id === item.id)
@@ -1462,27 +1573,6 @@ function App() {
                             })
                           )}
                         </div>
-                        {processedItems.length > itemsPerPage && (
-                          <div className="pagination-bar mono">
-                            <button 
-                              type="button"
-                              disabled={currentPage === 1} 
-                              onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
-                              className="page-btn"
-                            >
-                              &laquo; PREV
-                            </button>
-                            <span className="page-info">PAGE {currentPage} OF {totalPages}</span>
-                            <button 
-                              type="button"
-                              disabled={currentPage === totalPages} 
-                              onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
-                              className="page-btn"
-                            >
-                              NEXT &raquo;
-                            </button>
-                          </div>
-                        )}
                       </>
                     )}
                   </div>

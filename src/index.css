@@ -3236,30 +3236,33 @@ body.theme-contact {
 }
 
 /* === REALISTIC CRT SCANLINE GLARE ENHANCEMENTS === */
+body.crt-effect {
+  filter: contrast(1.06) brightness(1.1) saturate(1.04) !important;
+}
 .crt-effect::after {
   content: " ";
   display: block;
   position: fixed;
   top: 0; left: 0; bottom: 0; right: 0;
-  /* Darker retro scanlines & color phosphor mask */
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.35) 50%), 
-              linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.03), rgba(0, 0, 255, 0.06));
+  /* Softened retro scanlines & color phosphor mask to maintain color vibrancy */
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.28) 50%), 
+              linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.04));
   background-size: 100% 4px, 6px 100%;
   z-index: 999999;
   pointer-events: none;
-  opacity: 0.55;
+  opacity: 0.28;
 }
 .crt-effect::before {
   content: " ";
   display: block;
   position: fixed;
   top: 0; left: 0; bottom: 0; right: 0;
-  /* Spherical glass screen curvature and diagonal glass light glare */
-  background: radial-gradient(circle at center, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0.52) 100%),
-              linear-gradient(135deg, rgba(255,255,255,0.09) 0%, rgba(255,255,255,0) 45%);
+  /* Spherical glass screen curvature with a lighter vignette to keep corners readable */
+  background: radial-gradient(circle at center, rgba(255,255,255,0.06) 0%, rgba(0,0,0,0.26) 100%),
+              linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0) 45%);
   z-index: 1000000;
   pointer-events: none;
-  opacity: 0.92;
+  opacity: 0.88;
 }
 
 /* === PHOTOS POLAROID FIXES === */
@@ -3579,6 +3582,239 @@ body.theme-contact {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* === WINDOWS XP START MENU STYLES === */
+.xp-start-menu {
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  width: 380px;
+  background: #0054e3;
+  border: 2px solid #0054e3;
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  z-index: 999999;
+  box-shadow: 0 -5px 25px rgba(0,0,0,0.5), 0 5px 15px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  user-select: none;
+}
+
+.xp-start-header {
+  background: linear-gradient(to bottom, #1e70f2 0%, #0054e3 100%);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 2px solid #e28000;
+}
+
+.xp-start-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+.xp-start-username {
+  color: white;
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  font-family: Tahoma, 'Trebuchet MS', Arial, sans-serif;
+}
+
+.xp-start-panels {
+  display: flex;
+  background: #ffffff;
+  height: 310px;
+}
+
+.xp-start-left-panel {
+  flex: 1.1;
+  background: #ffffff;
+  padding: 8px 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow-y: auto;
+}
+
+.xp-start-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.xp-start-item:hover {
+  background: #316ac5;
+}
+
+.xp-start-item:hover .xp-start-item-title {
+  color: #ffffff !important;
+}
+
+.xp-start-item:hover .xp-start-item-desc {
+  color: #dbe5f9 !important;
+}
+
+.xp-start-icon {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.xp-start-item-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.xp-start-item-title {
+  color: #222222;
+  font-size: 0.72rem;
+  font-weight: bold;
+  font-family: Tahoma, 'Trebuchet MS', Arial, sans-serif;
+}
+
+.xp-start-item-desc {
+  color: #777777;
+  font-size: 0.55rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 1px;
+}
+
+.xp-start-right-panel {
+  flex: 0.9;
+  background: #d3e5fa;
+  border-left: 1px solid #95b8e7;
+  padding: 8px 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.xp-start-right-item {
+  padding: 6px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #003399;
+  font-size: 0.7rem;
+  font-weight: bold;
+  font-family: Tahoma, 'Trebuchet MS', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.1s ease;
+}
+
+.xp-start-right-item:hover {
+  background: #316ac5;
+  color: #ffffff !important;
+}
+
+.xp-start-right-divider {
+  height: 1px;
+  background: #a5c6ee;
+  margin: 3px 6px;
+}
+
+.xp-start-footer {
+  background: linear-gradient(to bottom, #0054e3 0%, #002e7a 100%);
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #00205b;
+}
+
+.xp-footer-btn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 0.68rem;
+  font-weight: bold;
+  font-family: Tahoma, 'Trebuchet MS', Arial, sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  transition: opacity 0.15s ease;
+}
+
+.xp-footer-btn:hover {
+  opacity: 0.9;
+  filter: brightness(1.2);
+}
+
+.xp-footer-btn.shutdown {
+  color: #ffaa99;
+}
+
+
+/* === UPGRADED DESKTOP SHORTCUTS & ICONS === */
+.shortcut-icon {
+  background: transparent !important;
+  border: none !important;
+  width: 52px !important;
+  height: 52px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.65)) !important;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+.shortcut-item:hover .shortcut-icon {
+  transform: scale(1.12) translateY(-3px) !important;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.8)) !important;
+}
+
+.shortcut-label {
+  color: #ffffff !important;
+  font-family: Tahoma, 'Trebuchet MS', Arial, sans-serif !important;
+  font-size: 0.72rem !important;
+  font-weight: bold !important;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.95), -1px -1px 3px rgba(0,0,0,0.95), 0 0 5px rgba(0,0,0,0.85) !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  margin-top: 4px !important;
+  text-align: center !important;
+}
+
+.shortcut-item {
+  width: 95px !important;
+  padding: 6px 4px !important;
+  border-radius: 4px !important;
+  border: 1px solid transparent !important;
+  transition: background-color 0.15s ease, border-color 0.15s ease !important;
+}
+
+.shortcut-item:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
 }
 
 
