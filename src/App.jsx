@@ -133,6 +133,7 @@ function BeatsPlayer() {
   const handleTrackChange = (idx) => {
     setCurrentTrackIdx(idx);
     setIsPlaying(false);
+    halComment('Initializing audio buffer: now playing "' + tracks[idx].title + '".');
     setElapsedTime(0);
     setBitrate([192, 256, 320][Math.floor(Math.random() * 3)]);
     if (audioRef.current) {
@@ -431,6 +432,7 @@ function LoglineGame({ films }) {
     setTriviaSelected(opt);
     setTriviaHasAnswered(true);
     if (opt.title === triviaQuestion.target.title) {
+      if (halComment) halComment('Correct guess, Sumedh. Your memory retrieval systems are operating at peak efficiency.');
       const points = (triviaHardMode || !showHint) ? 1 : 0.5;
       setTriviaScore(s => s + points);
       setTriviaStreak(s => s + 1);
@@ -693,7 +695,7 @@ function LoglineGame({ films }) {
 }
 
 // Draggable Window Component
-function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children, defaultPos, isClosing }) {
+function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children, defaultPos, isClosing, isMinimized, onMinimize }) {
   const [position, setPosition] = useState(defaultPos || { x: 100, y: 80 });
   const [size, setSize] = useState({
     width: typeof width === 'number' ? width : parseInt(width) || 500,
@@ -776,7 +778,7 @@ function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children
 
   return (
     <div 
-      className={`window window--${id} ${isMaximized ? 'maximized' : ''} ${isClosing ? 'closing' : ''}`} 
+      className={`window window--${id} ${isMaximized ? 'maximized' : ''} ${isClosing ? 'closing' : ''} ${isMinimized ? 'minimized' : ''}`} 
       ref={windowRef} 
       style={{ 
         zIndex, 
@@ -784,13 +786,16 @@ function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children
         top: isMaximized ? '0' : `${position.y}px`,
         width: isMaximized ? '100vw' : `${size.width}px`,
         height: isMaximized ? 'calc(100vh - 30px)' : `${size.height}px`,
-        position: 'absolute'
+        position: 'absolute',
+        display: isMinimized ? 'none' : 'flex',
+        flexDirection: 'column'
       }}
       onMouseDown={onFocus}
     >
       <div className="window-header" onMouseDown={handleMouseDown}>
         <span className="window-title">{title}</span>
         <div className="window-controls">
+          <div className="window-minimize" title="Minimize" onClick={(e) => { e.stopPropagation(); onMinimize(); }}></div>
           <div 
             className="window-maximize" 
             title={isMaximized ? 'Restore' : 'Maximize'}
@@ -938,9 +943,11 @@ function App() {
     if (crtEnabled) {
       document.body.classList.add('crt-effect');
       document.body.classList.add('crt-flicker');
+      halComment('CRT mode active. Phosphor scanlines and lens reflection enabled.');
     } else {
       document.body.classList.remove('crt-effect');
       document.body.classList.remove('crt-flicker');
+      halComment('CRT scanline bypass active. Calibrating screen to default pixel resolution.');
     }
   }, [crtEnabled]);
 
@@ -1005,8 +1012,12 @@ function App() {
     });
 
     setSelectedItem(item);
-    if (item.image) setDisplayBg(item.image);
-    else setDisplayBg('');
+    if (item.image) {
+      setDisplayBg(item.image);
+    } else {
+      setDisplayBg('');
+    }
+    halComment('Indexed Log entry: added "' + item.title + '" (' + item.year + ') to shelf.');
 
     // Reset fields
     setNewTitle('');
@@ -1135,7 +1146,11 @@ function App() {
   const openWindow = (id, title, width, height) => {
     const existing = windows.find(w => w.id === id);
     if (existing) {
-      focusWindow(id);
+      if (existing.isMinimized) {
+        restoreWindow(id);
+      } else {
+        focusWindow(id);
+      }
       return;
     }
 
@@ -1144,15 +1159,16 @@ function App() {
     const winW = Math.min(width, w - 40);
     const winH = Math.min(height, h - 100);
     
-    // Constrain positions so windows don't spawn off-screen
     const maxX = Math.max(10, w - winW - 20);
     const maxY = Math.max(30, h - winH - 60);
     const x = Math.min(Math.max(10, (w - winW) / 2 + (windows.length * 20)), maxX);
     const y = Math.min(Math.max(30, (h - winH) / 2 + (windows.length * 15)), maxY);
 
-    const newWindow = { id, title, width: winW, height: winH, x, y, zIndex: maxZ + 1 };
+    const newWindow = { id, title, width: winW, height: winH, x, y, zIndex: maxZ + 1, isMinimized: false };
     setWindows([...windows, newWindow]);
     setMaxZ(prev => prev + 1);
+    
+    halComment("Process initialized: opening program " + title + "...");
   };
 
   const closeWindow = (id) => {
@@ -1160,7 +1176,9 @@ function App() {
     setTimeout(() => {
       setWindows(prev => prev.filter(w => w.id !== id));
       setClosingWindows(prev => prev.filter(item => item !== id));
-    }, 250); // Matches the CSS transition duration
+    }, 250);
+    
+    halComment("Process terminated: closed " + id + ".");
   };
 
   const focusWindow = (id) => {
@@ -1168,6 +1186,36 @@ function App() {
     setWindows(prev => prev.map(w => 
       w.id === id ? { ...w, zIndex: maxZ + 1 } : w
     ));
+  };
+
+  const minimizeWindow = (id) => {
+    setWindows(prev => prev.map(w => 
+      w.id === id ? { ...w, isMinimized: true } : w
+    ));
+    halComment("Minimizing " + id + ". Telemetry remains active in background, Sumedh.");
+  };
+
+  const restoreWindow = (id) => {
+    setMaxZ(prev => prev + 1);
+    setWindows(prev => prev.map(w => 
+      w.id === id ? { ...w, isMinimized: false, zIndex: maxZ + 1 } : w
+    ));
+    halComment("Restoring " + id + ". Interfacing session resume, Sumedh.");
+  };
+
+  const toggleMinimizeWindow = (id) => {
+    const win = windows.find(w => w.id === id);
+    if (!win) return;
+    if (win.isMinimized) {
+      restoreWindow(id);
+    } else {
+      const activeWin = windows.reduce((max, w) => !w.isMinimized && w.zIndex > max.zIndex ? w : max, { zIndex: 0 });
+      if (activeWin.id === id) {
+        minimizeWindow(id);
+      } else {
+        focusWindow(id);
+      }
+    }
   };
 
   const getProcessedItems = () => {
@@ -1235,8 +1283,12 @@ function App() {
 
   const handleItemSelect = (item) => {
     setSelectedItem(item);
-    if (item.image) setDisplayBg(item.image);
-    else setDisplayBg('');
+    if (item.image) {
+      setDisplayBg(item.image);
+    } else {
+      setDisplayBg('');
+    }
+    halComment('Loaded media metadata catalog for "' + item.title + '" (' + item.year + ').');
     if (displayContentRef.current) {
       displayContentRef.current.style.animation = 'none';
       void displayContentRef.current.offsetHeight;
@@ -1374,6 +1426,22 @@ function App() {
           </button>
           <span>SumedhOS v2.0</span>
           <span>{currentTime}</span>
+        </div>
+
+        {/* Taskbar open windows middle shell */}
+        <div className="status-middle">
+          {windows.map(win => {
+            const isWindowActive = windows.filter(w => !w.isMinimized).sort((a,b) => b.zIndex - a.zIndex)[0]?.id === win.id;
+            return (
+              <button 
+                key={win.id} 
+                className={"taskbar-window-btn " + (isWindowActive ? "active" : "") + (win.isMinimized ? " minimized" : "")}
+                onClick={() => toggleMinimizeWindow(win.id)}
+              >
+                {win.title}
+              </button>
+            );
+          })}
         </div>
         <div className="status-right">
           <span 
@@ -1567,6 +1635,8 @@ function App() {
             onClose={() => closeWindow(win.id)}
             onFocus={() => focusWindow(win.id)}
             isClosing={closingWindows.includes(win.id)}
+            isMinimized={win.isMinimized}
+            onMinimize={() => minimizeWindow(win.id)}
           >
                         {/* RUN DIALOG CONTENT */}
             {win.id === 'run' && (
@@ -1952,10 +2022,10 @@ function App() {
             {win.id === 'beats' && <BeatsPlayer />}
 
             {/* LOGLINE TRIVIA GAME CONTENT */}
-            {win.id === 'cinephile' && <LoglineGame films={mediaDb.films} />}
+            {win.id === 'cinephile' && <LoglineGame films={mediaDb.films} halComment={halComment} />}
 
             {/* CINEPLAY HANGMAN GAME CONTENT */}
-            {win.id === 'cineplay' && <CineplayGame films={mediaDb.films} />}
+            {win.id === 'cineplay' && <CineplayGame films={mediaDb.films} halComment={halComment} />}
 
             {/* CONTACT WINDOW CONTENT */}
             {win.id === 'contact' && (
@@ -2009,7 +2079,10 @@ function CineplayGame({ films }) {
     });
 
     if (!word.includes(letter)) {
+      if (halComment) halComment('Discrepancy: Letter \'' + letter.toUpperCase() + '\' is not on the board. Core lives compromised.');
       setWrongCount(prev => prev + 1);
+    } else {
+      if (halComment) halComment('Match: Letter \'' + letter.toUpperCase() + '\' is correct. Processing remaining variables.');
     }
   };
 
