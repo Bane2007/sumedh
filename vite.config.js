@@ -98,4 +98,8 @@ const localDbPlugin = () => ({
 export default defineConfig({
   plugins: [react(), localDbPlugin()],
   base: '/sumedh/',
+  server: {
+    host: true, // Enables local network access for phone sync
+    port: 5173
+  }
 });

@@ -1700,16 +1700,18 @@ function App() {
       }
     });
 
-    // Fetch static debts database
-    fetch(`${import.meta.env.BASE_URL}assets/data/debts.json`)
-      .then(res => res.json())
-      .then(data => {
-        setDebts(prev => {
-          const merged = [...prev, ...data.filter(item => !prev.some(c => c.id === item.id))];
-          return merged;
-        });
-      })
-      .catch(err => console.log("Static debts file fetch fallback."));
+    // Poll debts database every 3 seconds for cross-device real-time sync
+    const fetchDebts = () => {
+      fetch(`${import.meta.env.BASE_URL}assets/data/debts.json?t=${Date.now()}`)
+        .then(res => res.json())
+        .then(data => {
+          setDebts(data);
+        })
+        .catch(err => console.log("Polling debts error:", err));
+    };
+
+    fetchDebts();
+    const debtsInterval = setInterval(fetchDebts, 3000);
 
     console.log("=== LOCALSTORAGE SYSTEM DIAGNOSTIC DUMP ===");
     for (let i = 0; i < localStorage.length; i++) {
@@ -1745,6 +1747,10 @@ function App() {
         });
       })
       .catch(err => console.error("Failed to load media database:", err));
+
+    return () => {
+      clearInterval(debtsInterval);
+    };
   }, []);
 
   // Log Item Form states
