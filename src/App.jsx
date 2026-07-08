@@ -1942,6 +1942,20 @@ function App() {
     setShowAddForm(true);
   };
 
+  const getMyRatingValue = (item) => {
+    if (!item) return 'N/A';
+    const personal = parseFloat(item.my_rating);
+    if (!isNaN(personal)) return personal.toFixed(1) + '/10';
+    return 'N/A';
+  };
+
+  const getMalScoreValue = (item) => {
+    if (!item) return 'N/A';
+    const scoreVal = parseFloat(item.score);
+    if (!isNaN(scoreVal)) return scoreVal.toFixed(1) + '/10';
+    return 'N/A';
+  };
+
   const handleCategoryChange = (cat) => {
     setCategory(cat);
     setSearch('');
@@ -2639,7 +2653,7 @@ function App() {
                               {category !== 'films' && (
                                 <div>
                                   <dt>My Rating</dt>
-                                  <dd>{selectedItem.my_rating ? `${selectedItem.my_rating}/10` : (selectedItem.isCustom && selectedItem.score ? `${selectedItem.score}/10` : 'N/A')}</dd>
+                                  <dd>{getMyRatingValue(selectedItem)}</dd>
                                 </div>
                               )}
                             </dl>
@@ -2676,7 +2690,7 @@ function App() {
                                 {selectedItem.year} &middot; {category === 'films' ? (
                                   renderStars(selectedItem.rating)
                                 ) : (
-                                  <span>MAL Score: {selectedItem.score ? `${parseFloat(selectedItem.score).toFixed(1)}/10` : 'N/A'}</span>
+                                  <span>MAL Score: {getMalScoreValue(selectedItem)}</span>
                                 )}
                                 {category === 'films' && selectedItem.imdb_rating && selectedItem.imdb_rating !== 'N/A' && (
                                   <> &middot; <span style={{ color: '#ffb400', fontWeight: 'bold' }}>{selectedItem.imdb_rating}/10 (IMDb)</span></>
