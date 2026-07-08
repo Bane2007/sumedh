@@ -4517,3 +4517,30 @@ body.crt-effect {
 }
 
 
+
+
+/* === BEATS PLAYER 3D CASSETTE CONSOLE PERSPECTIVE === */
+.beats-compact-console-layout {
+  perspective: 1200px !important;
+  perspective-origin: 50% 50% !important;
+}
+
+.beats-deck-pane {
+  transform-style: preserve-3d !important;
+  transform: rotateX(8deg) rotateY(-6deg) rotateZ(0.8deg) !important;
+  box-shadow: -10px 15px 25px rgba(0, 0, 0, 0.8), 0 5px 15px rgba(255, 23, 68, 0.04) !important;
+  border: 1.5px solid rgba(255, 23, 68, 0.2) !important;
+  transition: transform 0.4s ease, box-shadow 0.4s ease !important;
+}
+
+.beats-deck-pane:hover {
+  transform: rotateX(3deg) rotateY(-2deg) rotateZ(0.2deg) !important;
+  box-shadow: -5px 8px 15px rgba(0, 0, 0, 0.7), 0 5px 15px rgba(255, 23, 68, 0.08) !important;
+}
+
+/* Sticker label fonts override */
+.cassette-label-sticker {
+  font-family: 'Courier New', Courier, monospace !important;
+  color: #1a1510 !important;
+  border-left: 4px solid #ff1744 !important; /* Left red tape indicator */
+}

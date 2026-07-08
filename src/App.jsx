@@ -516,6 +516,30 @@ function BeatsPlayer() {
             </div>
 
             <div className="beats-cassette-housing">
+              {/* Handwritten paper label strip */}
+              <div className="cassette-label-sticker mono" style={{
+                width: '180px',
+                height: '18px',
+                background: 'rgba(250, 245, 230, 0.85)',
+                color: '#111',
+                border: '1px solid #c0b090',
+                borderRadius: '2px',
+                fontSize: '0.48rem',
+                fontWeight: 'bold',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '0 5px',
+                marginBottom: '6px',
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.3)',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em'
+              }}>
+                ✍️ NOW: {currentTrack.title.length > 25 ? currentTrack.title.slice(0, 25) + '...' : currentTrack.title}
+              </div>
               <div className="cassette-window">
                 <div className={`spool-circle spool-l ${isPlaying ? 'spinning' : ''}`}>
                   <div className="tape-roll-fill" style={{ transform: `scale(${leftTapeScale})` }}></div>
@@ -1338,7 +1362,16 @@ function PhotosApp() {
 }
 
 function App() {
-  const [mediaDb, setMediaDb] = useState({ films: [], anime: [], manga: [] });
+  const [mediaDb, setMediaDb] = useState(() => {
+    const customFilms = JSON.parse(localStorage.getItem('sumedh_custom_films') || '[]');
+    const customAnime = JSON.parse(localStorage.getItem('sumedh_custom_anime') || '[]');
+    const customManga = JSON.parse(localStorage.getItem('sumedh_custom_manga') || '[]');
+    return {
+      films: customFilms,
+      anime: customAnime,
+      manga: customManga
+    };
+  });
   
   // CRT Monitor Simulation state
   const [crtEnabled, setCrtEnabled] = useState(true);
@@ -1502,24 +1535,25 @@ function App() {
         const jsonStr = text.replace("window.mediaDatabase = ", "");
         const db = JSON.parse(jsonStr);
         
-        // Retrieve custom logged entries from local storage
-        const customFilms = JSON.parse(localStorage.getItem('sumedh_custom_films') || '[]');
-        const customAnime = JSON.parse(localStorage.getItem('sumedh_custom_anime') || '[]');
-        const customManga = JSON.parse(localStorage.getItem('sumedh_custom_manga') || '[]');
-        
-        const mergedDb = {
-          films: [...customFilms, ...db.films],
-          anime: [...customAnime, ...db.anime],
-          manga: [...customManga, ...db.manga]
-        };
-        
-        setMediaDb(mergedDb);
-        
-        const initialItem = db.films && db.films.length > 0 ? db.films[0] : null;
-        setSelectedItem(initialItem);
-        if (initialItem && initialItem.image) {
-          setDisplayBg(initialItem.image);
-        }
+        setMediaDb(prev => {
+          const merged = {
+            films: [...prev.films, ...db.films.filter(item => !prev.films.some(c => c.slug === item.slug))],
+            anime: [...prev.anime, ...db.anime.filter(item => !prev.anime.some(c => c.id === item.id))],
+            manga: [...prev.manga, ...db.manga.filter(item => !prev.manga.some(c => c.id === item.id))]
+          };
+          return merged;
+        });
+
+        setSelectedItem(prev => {
+          if (prev) return prev;
+          const customFilms = JSON.parse(localStorage.getItem('sumedh_custom_films') || '[]');
+          const allFilms = [...customFilms, ...db.films];
+          if (allFilms.length > 0) {
+            if (allFilms[0].image) setDisplayBg(allFilms[0].image);
+            return allFilms[0];
+          }
+          return null;
+        });
       })
       .catch(err => console.error("Failed to load media database:", err));
   }, []);
@@ -1531,6 +1565,7 @@ function App() {
   const [newRating, setNewRating] = useState('★★★★★');
   const [newDirector, setNewDirector] = useState('');
   const [newGenres, setNewGenres] = useState('');
+  const [newPersonalRating, setNewPersonalRating] = useState('8.5');
 
   const handleAddNewItem = (e) => {
     e.preventDefault();
@@ -1542,6 +1577,7 @@ function App() {
       image: "",
       rating: category === 'films' ? newRating : undefined,
       score: category !== 'films' ? parseFloat(newRating) || 8.0 : undefined,
+      my_rating: category !== 'films' ? parseFloat(newPersonalRating) || 8.5 : undefined,
       director: category === 'films' ? newDirector.trim() || 'N/A' : undefined,
       genres: category !== 'films' ? newGenres.split(',').map(g => g.trim()).filter(Boolean) : undefined,
       slug: category === 'films' ? newTitle.trim().toLowerCase().replace(/\s+/g, '-') : undefined,
@@ -1577,6 +1613,7 @@ function App() {
     setNewYear('');
     setNewDirector('');
     setNewGenres('');
+    setNewPersonalRating('8.5');
     setShowAddForm(false);
   };
 
@@ -1820,7 +1857,7 @@ function App() {
         dated.sort((a, b) => b.watched_date.localeCompare(a.watched_date));
         items = [...dated, ...undated];
       } else {
-        items.sort((a, b) => b.sort_date.localeCompare(a.sort_date));
+        items.sort((a, b) => (b.sort_date || '').localeCompare(a.sort_date || ''));
       }
     }
 
@@ -2371,7 +2408,7 @@ function App() {
                           <input type="text" value={newYear} onChange={(e) => setNewYear(e.target.value)} placeholder="e.g. 2026" style={{ flex: 1, background: '#222', border: '1px solid #444', color: '#fff', padding: '4px 8px' }} />
                         </div>
                         <div className="form-field-row" style={{ display: 'flex', marginBottom: '10px', alignItems: 'center', fontSize: '0.72rem' }}>
-                          <label style={{ width: '80px', color: 'var(--ink-soft)' }}>{category === 'films' ? 'Rating:' : 'Score (1-10):'}</label>
+                          <label style={{ width: '80px', color: 'var(--ink-soft)' }}>{category === 'films' ? 'Rating:' : 'Scores (1-10):'}</label>
                           {category === 'films' ? (
                             <select value={newRating} onChange={(e) => setNewRating(e.target.value)} style={{ flex: 1, background: '#222', border: '1px solid #444', color: '#fff', padding: '4px 8px' }}>
                               <option value="★★★★★">★★★★★ (10/10)</option>
@@ -2384,7 +2421,16 @@ function App() {
                               <option value="★">★ (2/10)</option>
                             </select>
                           ) : (
-                            <input type="number" min="1" max="10" step="0.5" value={newRating} onChange={(e) => setNewRating(e.target.value)} style={{ flex: 1, background: '#222', border: '1px solid #444', color: '#fff', padding: '4px 8px' }} />
+                            <div style={{ display: 'flex', gap: '10px', flex: 1 }}>
+                              <div style={{ display: 'flex', flex: 1, alignItems: 'center', gap: '5px' }}>
+                                <span style={{ color: 'var(--ink-soft)' }}>General:</span>
+                                <input type="number" min="1" max="10" step="0.1" value={newRating} onChange={(e) => setNewRating(e.target.value)} style={{ flex: 1, background: '#222', border: '1px solid #444', color: '#fff', padding: '4px 8px' }} />
+                              </div>
+                              <div style={{ display: 'flex', flex: 1, alignItems: 'center', gap: '5px' }}>
+                                <span style={{ color: 'var(--ink-soft)' }}>Mine:</span>
+                                <input type="number" min="1" max="10" step="0.1" value={newPersonalRating} onChange={(e) => setNewPersonalRating(e.target.value)} style={{ flex: 1, background: '#222', border: '1px solid #444', color: '#fff', padding: '4px 8px' }} />
+                              </div>
+                            </div>
                           )}
                         </div>
                         {category === 'films' ? (
@@ -2507,6 +2553,12 @@ function App() {
                               )}
                               {selectedItem.start_date && selectedItem.start_date !== 'N/A' && <div><dt>Started</dt><dd>{selectedItem.start_date}</dd></div>}
                               {selectedItem.finish_date && selectedItem.finish_date !== 'N/A' && <div><dt>Finished</dt><dd>{selectedItem.finish_date}</dd></div>}
+                              {category !== 'films' && (
+                                <div>
+                                  <dt>My Rating</dt>
+                                  <dd>{selectedItem.my_rating ? `${selectedItem.my_rating}/10` : (selectedItem.isCustom && selectedItem.score ? `${selectedItem.score}/10` : 'N/A')}</dd>
+                                </div>
+                              )}
                             </dl>
                           </div>
 
@@ -2538,7 +2590,11 @@ function App() {
                               </p>
 
                               <div className="display-meta mono" style={{ margin: 0, justifyContent: 'flex-start' }}>
-                                {selectedItem.year} &middot; {renderStars(category === 'films' ? selectedItem.rating : selectedItem.score)}
+                                {selectedItem.year} &middot; {category === 'films' ? (
+                                  renderStars(selectedItem.rating)
+                                ) : (
+                                  <span>MAL Score: {selectedItem.score ? `${parseFloat(selectedItem.score).toFixed(1)}/10` : 'N/A'}</span>
+                                )}
                                 {category === 'films' && selectedItem.imdb_rating && selectedItem.imdb_rating !== 'N/A' && (
                                   <> &middot; <span style={{ color: '#ffb400', fontWeight: 'bold' }}>{selectedItem.imdb_rating}/10 (IMDb)</span></>
                                 )}
