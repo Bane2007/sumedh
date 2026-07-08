@@ -516,39 +516,53 @@ function BeatsPlayer() {
             </div>
 
             <div className="beats-cassette-housing">
-              {/* Handwritten paper label strip */}
-              <div className="cassette-label-sticker mono" style={{
-                width: '180px',
-                height: '18px',
-                background: 'rgba(250, 245, 230, 0.85)',
-                color: '#111',
-                border: '1px solid #c0b090',
-                borderRadius: '2px',
-                fontSize: '0.48rem',
-                fontWeight: 'bold',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                padding: '0 5px',
-                marginBottom: '6px',
-                whiteSpace: 'nowrap',
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-                boxShadow: '0 2px 4px rgba(0,0,0,0.3)',
-                textTransform: 'uppercase',
-                letterSpacing: '0.05em'
-              }}>
-                ✍️ NOW: {currentTrack.title.length > 25 ? currentTrack.title.slice(0, 25) + '...' : currentTrack.title}
-              </div>
-              <div className="cassette-window">
-                <div className={`spool-circle spool-l ${isPlaying ? 'spinning' : ''}`}>
-                  <div className="tape-roll-fill" style={{ transform: `scale(${leftTapeScale})` }}></div>
+              {/* Spindle hubs protruding behind spool gears */}
+              <div className="spindle-hub hub-l"></div>
+              <div className="spindle-hub hub-r"></div>
+
+              {/* Tape head mechanical mock blocks */}
+              <div className="cassette-tape-head"></div>
+              <div className="cassette-pinch-roller roller-l"></div>
+              <div className="cassette-pinch-roller roller-r"></div>
+
+              {/* Holographic tape shell overlay */}
+              <div className="cassette-shell-casing">
+                {/* Handwritten paper label strip */}
+                <div className="cassette-label-sticker mono" style={{
+                  width: '170px',
+                  height: '18px',
+                  background: 'rgba(250, 245, 230, 0.95)',
+                  color: '#111',
+                  border: '1px solid #c0b090',
+                  borderRadius: '2px',
+                  fontSize: '0.48rem',
+                  fontWeight: 'bold',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '0 5px',
+                  marginBottom: '6px',
+                  whiteSpace: 'nowrap',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  boxShadow: '0 2px 4px rgba(0,0,0,0.3)',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.05em'
+                }}>
+                  ✍️ NOW: {currentTrack.title.length > 22 ? currentTrack.title.slice(0, 22) + '...' : currentTrack.title}
                 </div>
-                <div className={`spool-circle spool-r ${isPlaying ? 'spinning' : ''}`}>
-                  <div className="tape-roll-fill" style={{ transform: `scale(${rightTapeScale})` }}></div>
+                
+                <div className="cassette-window">
+                  <div className="window-glass-reflection"></div>
+                  <div className={`spool-circle spool-l ${isPlaying ? 'spinning' : ''}`}>
+                    <div className="tape-roll-fill" style={{ transform: `scale(${leftTapeScale})` }}></div>
+                  </div>
+                  <div className={`spool-circle spool-r ${isPlaying ? 'spinning' : ''}`}>
+                    <div className="tape-roll-fill" style={{ transform: `scale(${rightTapeScale})` }}></div>
+                  </div>
                 </div>
+                <div className="cassette-bottom-strip">STUDIO SOUND DECK v2</div>
               </div>
-              <div className="cassette-bottom-strip">STUDIO SOUND DECK v2</div>
             </div>
 
             <div className="beats-volume-row">
@@ -1062,7 +1076,7 @@ function LoglineGame({ films }) {
 }
 
 // Draggable Window Component
-function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children, defaultPos, isClosing, isMinimized, onMinimize }) {
+function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children, defaultPos, isClosing, isMinimized, onMinimize, defaultMaximized }) {
   const [position, setPosition] = useState(defaultPos || { x: 100, y: 80 });
   const [size, setSize] = useState({
     width: typeof width === 'number' ? width : parseInt(width) || 500,
@@ -1070,7 +1084,7 @@ function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children
   });
   const [isDragging, setIsDragging] = useState(false);
   const [isResizing, setIsResizing] = useState(false);
-  const [isMaximized, setIsMaximized] = useState(window.innerWidth <= 768);
+  const [isMaximized, setIsMaximized] = useState(defaultMaximized || window.innerWidth <= 768);
   const dragStart = useRef({ x: 0, y: 0 });
   const resizeStart = useRef({ w: 0, h: 0, x: 0, y: 0 });
   const windowRef = useRef(null);
@@ -1363,14 +1377,19 @@ function PhotosApp() {
 
 function App() {
   const [mediaDb, setMediaDb] = useState(() => {
-    const customFilms = JSON.parse(localStorage.getItem('sumedh_custom_films') || '[]');
-    const customAnime = JSON.parse(localStorage.getItem('sumedh_custom_anime') || '[]');
-    const customManga = JSON.parse(localStorage.getItem('sumedh_custom_manga') || '[]');
-    return {
-      films: customFilms,
-      anime: customAnime,
-      manga: customManga
-    };
+    try {
+      const customFilms = JSON.parse(localStorage.getItem('sumedh_custom_films') || '[]');
+      const customAnime = JSON.parse(localStorage.getItem('sumedh_custom_anime') || '[]');
+      const customManga = JSON.parse(localStorage.getItem('sumedh_custom_manga') || '[]');
+      return {
+        films: Array.isArray(customFilms) ? customFilms : [],
+        anime: Array.isArray(customAnime) ? customAnime : [],
+        manga: Array.isArray(customManga) ? customManga : []
+      };
+    } catch (e) {
+      console.error("Local storage corruption detected. Resetting session states:", e);
+      return { films: [], anime: [], manga: [] };
+    }
   });
   
   // CRT Monitor Simulation state
@@ -1529,11 +1548,18 @@ function App() {
 
   // Load database
   useEffect(() => {
+    console.log("=== LOCALSTORAGE SYSTEM DIAGNOSTIC DUMP ===");
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      console.log(`Key: ${k} | Length: ${localStorage.getItem(k).length} chars`);
+    }
+
     fetch(`${import.meta.env.BASE_URL}assets/data/media.js`)
       .then(res => res.text())
       .then(text => {
         const jsonStr = text.replace("window.mediaDatabase = ", "");
         const db = JSON.parse(jsonStr);
+        console.log("Static database loaded. Anime:", db.anime.length, "Manga:", db.manga.length);
         
         setMediaDb(prev => {
           const merged = {
@@ -1605,6 +1631,20 @@ function App() {
       return updated;
     });
 
+    // Dev API server sync call
+    fetch('/api/log-item', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ category, item })
+    })
+    .then(r => r.json())
+    .then(data => {
+      if (data.success) {
+        console.log("Local database disk file synced successfully!");
+      }
+    })
+    .catch(e => console.warn("Production environment fallback: Local API write ignored. Saved in session memory."));
+
     setSelectedItem(item);
     setDisplayBg('');
     if (halComment) halComment('Indexed entry: added "' + item.title + '" to shelf.');
@@ -1651,6 +1691,20 @@ function App() {
 
       return updated;
     });
+
+    // Dev API server sync call
+    fetch('/api/delete-item', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ category, itemToRemove })
+    })
+    .then(r => r.json())
+    .then(data => {
+      if (data.success) {
+        console.log("Local database disk file synced successfully!");
+      }
+    })
+    .catch(e => console.warn("Production environment fallback: Local API write ignored."));
 
     setSelectedItem(null);
     if (halComment) halComment('Deleted entry "' + itemToRemove.title + '" from shelf.');
