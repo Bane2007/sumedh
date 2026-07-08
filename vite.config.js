@@ -37,6 +37,23 @@ const localDbPlugin = () => ({
             res.end(JSON.stringify({ success: false, error: err.message }));
           }
         });
+      } else if (req.url === '/api/sync-debts' && req.method === 'POST') {
+        let body = '';
+        req.on('data', chunk => {
+          body += chunk.toString();
+        });
+        req.on('end', () => {
+          try {
+            const list = JSON.parse(body);
+            const debtsPath = path.resolve(__dirname, 'public/assets/data/debts.json');
+            fs.writeFileSync(debtsPath, JSON.stringify(list, null, 2), 'utf8');
+            res.writeHead(200, { 'Content-Type': 'application/json' });
+            res.end(JSON.stringify({ success: true }));
+          } catch (err) {
+            res.writeHead(500, { 'Content-Type': 'application/json' });
+            res.end(JSON.stringify({ success: false, error: err.message }));
+          }
+        });
       } else if (req.url === '/api/delete-item' && req.method === 'POST') {
         let body = '';
         req.on('data', chunk => {

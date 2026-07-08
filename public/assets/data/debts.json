@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "direction": "them_owes_me",
+    "person": "John",
+    "amount": 50.0,
+    "description": "Pizza dinner share",
+    "date": "2026-07-07"
+  },
+  {
+    "id": 2,
+    "direction": "i_owe_them",
+    "person": "Sarah",
+    "amount": 20.0,
+    "description": "Uber ride home",
+    "date": "2026-07-06"
+  }
+]
