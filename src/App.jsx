@@ -1753,7 +1753,9 @@ function App() {
         const score = starsCount > 0 ? starsCount * 2 : parseFloat(item.imdb_rating) || 0;
         total += score;
       } else {
-        total += parseFloat(item.score || item.rating) || 0;
+        const personal = parseFloat(item.my_rating);
+        const score = !isNaN(personal) ? personal : parseFloat(item.score || item.rating) || 8.0;
+        total += score;
       }
     });
     return (total / items.length).toFixed(1);
@@ -1926,11 +1928,31 @@ function App() {
 
   const processedItems = getProcessedItems();
 
+  const handleOpenAddForm = () => {
+    if (category === 'films') {
+      setNewRating('★★★★★');
+    } else {
+      setNewRating('8.0');
+    }
+    setNewPersonalRating('8.5');
+    setNewTitle('');
+    setNewYear('');
+    setNewDirector('');
+    setNewGenres('');
+    setShowAddForm(true);
+  };
+
   const handleCategoryChange = (cat) => {
     setCategory(cat);
     setSearch('');
     setSelectedGenre('');
     setSelectedDecade('');
+    if (cat === 'films') {
+      setNewRating('★★★★★');
+    } else {
+      setNewRating('8.0');
+    }
+    setNewPersonalRating('8.5');
     const dbItems = mediaDb[cat] || [];
     if (dbItems.length > 0) {
       setSelectedItem(dbItems[0]);
@@ -2440,7 +2462,7 @@ function App() {
                           <option value="chronological">Sort: Release Year</option>
                           <option value="rating">Sort: Personal Rating</option>
                         </select>
-                        <button className="add-entry-btn-trigger mono" onClick={() => setShowAddForm(true)}>
+                        <button className="add-entry-btn-trigger mono" onClick={handleOpenAddForm}>
                           + LOG
                         </button>
                         
@@ -2643,7 +2665,7 @@ function App() {
                                   selectedItem.director && selectedItem.director !== 'N/A' ? `Directed by ${selectedItem.director}` : 'Letterboxd Record'
                                 ) : (
                                   selectedItem.status === 'watching' || selectedItem.status === 'reading' ? (
-                                    <span className="status-watching-highlight">Currently ${selectedItem.status}</span>
+                                    <span className="status-watching-highlight">Currently {selectedItem.status}</span>
                                   ) : (
                                     'Completed Title'
                                   )
