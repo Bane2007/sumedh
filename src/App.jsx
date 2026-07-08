@@ -1609,6 +1609,9 @@ function App() {
     setDisplayBg('');
     if (halComment) halComment('Indexed entry: added "' + item.title + '" to shelf.');
 
+    setSelectedGenre('');
+    setSelectedDecade('');
+    setSearch('');
     setNewTitle('');
     setNewYear('');
     setNewDirector('');
@@ -2237,6 +2240,7 @@ function App() {
             isClosing={closingWindows.includes(win.id)}
             isMinimized={win.isMinimized}
             onMinimize={() => minimizeWindow(win.id)}
+            defaultMaximized={win.id === 'cabinet'}
           >
                         {/* RUN DIALOG CONTENT */}
             {win.id === 'run' && (

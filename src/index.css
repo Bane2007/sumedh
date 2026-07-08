@@ -4526,17 +4526,58 @@ body.crt-effect {
 }
 
 .beats-deck-pane {
-  transform-style: preserve-3d !important;
-  transform: rotateX(8deg) rotateY(-6deg) rotateZ(0.8deg) !important;
-  box-shadow: -10px 15px 25px rgba(0, 0, 0, 0.8), 0 5px 15px rgba(255, 23, 68, 0.04) !important;
-  border: 1.5px solid rgba(255, 23, 68, 0.2) !important;
-  transition: transform 0.4s ease, box-shadow 0.4s ease !important;
+  transform: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  transition: none !important;
 }
 
 .beats-deck-pane:hover {
-  transform: rotateX(3deg) rotateY(-2deg) rotateZ(0.2deg) !important;
-  box-shadow: -5px 8px 15px rgba(0, 0, 0, 0.7), 0 5px 15px rgba(255, 23, 68, 0.08) !important;
+  transform: none !important;
+  box-shadow: none !important;
 }
+
+.beats-cassette-housing {
+  background: #1e1e1e !important;
+  border: 5px solid #2d2d2d !important;
+  border-radius: 6px !important;
+  height: 110px !important;
+  width: 200px !important;
+  margin: 12px auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  box-shadow: 
+    3px 6px 15px rgba(0, 0, 0, 0.7), 
+    inset 0 1px 2px rgba(255,255,255,0.2), 
+    0 0 0 1px #111 !important;
+  position: relative !important;
+  perspective: 600px !important;
+  transform-style: preserve-3d !important;
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+.beats-cassette-housing:hover {
+  transform: rotateX(15deg) rotateY(-10deg) translateZ(5px) !important;
+  box-shadow: 
+    8px 14px 25px rgba(0,0,0,0.8), 
+    0 0 0 1px #111,
+    0 0 10px rgba(255,23,68,0.2) !important;
+}
+
+/* Corner screws for realism */
+.beats-cassette-housing::before,
+.beats-cassette-housing::after {
+  content: "⚙️" !important;
+  position: absolute !important;
+  font-size: 0.35rem !important;
+  opacity: 0.45 !important;
+  color: #888 !important;
+  pointer-events: none !important;
+}
+.beats-cassette-housing::before { top: 3px; left: 3px; }
+.beats-cassette-housing::after { top: 3px; right: 3px; }
 
 /* Sticker label fonts override */
 .cassette-label-sticker {
