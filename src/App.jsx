@@ -159,7 +159,7 @@ function BeatsPlayer() {
     setIsSearching(true);
     setSearchResults([]);
     try {
-      const targetUrl = `https://yewtu.be/api/v1/search?q=${encodeURIComponent(query)}&type=video`;
+      const targetUrl = "https://yewtu.be/api/v1/search?q=" + encodeURIComponent(query) + "&type=video";
       const resVal = await fetch(targetUrl);
       if (resVal.ok) {
         const data = await resVal.json();
@@ -177,7 +177,7 @@ function BeatsPlayer() {
       }
     } catch(err) {
       try {
-        const res2 = await fetch(`https://invidious.projectsegfaut.im/api/v1/search?q=${encodeURIComponent(query)}&type=video`);
+        const res2 = await fetch("https://invidious.projectsegfaut.im/api/v1/search?q=" + encodeURIComponent(query) + "&type=video");
         if (res2.ok) {
           const data = await res2.json();
           if (data && Array.isArray(data)) {
@@ -403,7 +403,7 @@ function BeatsPlayer() {
       const match = target.match(/somafm\.com\/([a-zA-Z0-9_-]+)/);
       if (match && match[1]) {
         const channel = match[1].toLowerCase();
-        parsedUrl = `https://ice1.somafm.com/${channel}-128-mp3`;
+        parsedUrl = "https://ice1.somafm.com/" + channel + "-128-mp3";
         title = channel.charAt(0).toUpperCase() + channel.slice(1);
         artist = "SomaFM Stream";
       }
@@ -435,7 +435,7 @@ function BeatsPlayer() {
   const formatTime = (secondsCount) => {
     const mins = Math.floor(secondsCount / 600);
     const secs = Math.floor((secondsCount % 600) / 10);
-    return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    return mins.toString().padStart(2, '0') + ':' + secs.toString().padStart(2, '0');
   };
 
   const leftTapeScale = Math.max(0.4, 1.3 - (elapsedTime / 1800));
@@ -459,21 +459,21 @@ function BeatsPlayer() {
       {/* Tabs Header */}
       <div className="beats-tabs-header mono" style={{ display: 'flex', borderBottom: '1px solid rgba(255,23,68,0.2)', paddingBottom: '6px', marginBottom: '8px', gap: '6px', fontSize: '0.62rem' }}>
         <button 
-          className={`control-action-btn ${activeTab === 'deck' ? 'active' : ''}`} 
+          className={"control-action-btn " + (activeTab === 'deck' ? 'active' : '')} 
           onClick={() => setActiveTab('deck')}
           style={{ flex: 1, padding: '3px 8px' }}
         >
           📼 PLAYER DECK
         </button>
         <button 
-          className={`control-action-btn ${activeTab === 'playlist' ? 'active' : ''}`} 
+          className={"control-action-btn " + (activeTab === 'playlist' ? 'active' : '')} 
           onClick={() => setActiveTab('playlist')}
           style={{ flex: 1, padding: '3px 8px' }}
         >
-          📁 STATIONS SHELF (${tracks.length})
+          📁 STATIONS SHELF ({tracks.length})
         </button>
         <button 
-          className={`control-action-btn ${activeTab === 'search' ? 'active' : ''}`} 
+          className={"control-action-btn " + (activeTab === 'search' ? 'active' : '')} 
           onClick={() => setActiveTab('search')}
           style={{ flex: 1, padding: '3px 8px' }}
         >
@@ -485,16 +485,19 @@ function BeatsPlayer() {
       <div className="beats-tab-body" style={{ flex: 1, display: 'flex', minHeight: 0 }}>
         {activeTab === 'deck' && (
           <div className="beats-deck-pane" style={{ width: '100%', padding: 0 }}>
-            <div className="beats-lcd-screen">
-              <div className="lcd-ticker">
-                <span className="lcd-text-scroll">${currentTrack.title.toUpperCase()} - ${currentTrack.artist.toUpperCase()}</span>
+            {/* Green LCD Display Screen */}
+            <div className="beats-lcd-screen" style={{ background: '#0a210a', color: '#3bf53b', padding: '10px', borderRadius: '4px', border: '1.5px solid #143e14', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+              <div style={{ fontWeight: 'bold', fontSize: '0.85rem', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', color: '#3bf53b', textTransform: 'uppercase' }}>
+                {currentTrack.title}
               </div>
-              <div className="lcd-meta-row">
-                <span>${formatTime(elapsedTime)} / ${formatTime(Math.floor(trackDuration * 10))}</span>
-                <span>${isPlaying ? '[PLAYING]' : '[PAUSED]'}</span>
-                <span>${bitrate}KBPS</span>
+              <div style={{ fontSize: '0.65rem', opacity: 0.8, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', color: '#3bf53b', textTransform: 'uppercase' }}>
+                {currentTrack.artist}
               </div>
-              <div className="beats-timeline-wrapper">
+              <div className="lcd-meta-row" style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.62rem', marginTop: '4px', borderTop: '1px solid rgba(59,245,59,0.2)', paddingTop: '4px', color: '#3bf53b' }}>
+                <span>{formatTime(elapsedTime)} / {formatTime(Math.floor(trackDuration * 10))}</span>
+                <span>{bitrate}KBPS</span>
+              </div>
+              <div className="beats-timeline-wrapper" style={{ marginTop: '2px' }}>
                 <input 
                   type="range"
                   min="0"
@@ -504,12 +507,12 @@ function BeatsPlayer() {
                   className="beats-timeline-slider"
                 />
               </div>
-              <div className="lcd-visualizer">
+              <div className="lcd-visualizer" style={{ display: 'flex', gap: '2px', height: '14px', alignItems: 'flex-end', marginTop: '2px' }}>
                 {barHeights.map((h, i) => (
                   <div 
                     key={i} 
                     className="vis-bar" 
-                    style={{ height: `${h}px` }}
+                    style={{ height: h + 'px', background: '#3bf53b', flex: 1 }}
                   ></div>
                 ))}
               </div>
@@ -554,11 +557,11 @@ function BeatsPlayer() {
                 
                 <div className="cassette-window">
                   <div className="window-glass-reflection"></div>
-                  <div className={`spool-circle spool-l ${isPlaying ? 'spinning' : ''}`}>
-                    <div className="tape-roll-fill" style={{ transform: `scale(${leftTapeScale})` }}></div>
+                  <div className={"spool-circle spool-l " + (isPlaying ? 'spinning' : '')}>
+                    <div className="tape-roll-fill" style={{ transform: "scale(" + leftTapeScale + ")" }}></div>
                   </div>
-                  <div className={`spool-circle spool-r ${isPlaying ? 'spinning' : ''}`}>
-                    <div className="tape-roll-fill" style={{ transform: `scale(${rightTapeScale})` }}></div>
+                  <div className={"spool-circle spool-r " + (isPlaying ? 'spinning' : '')}>
+                    <div className="tape-roll-fill" style={{ transform: "scale(" + rightTapeScale + ")" }}></div>
                   </div>
                 </div>
                 <div className="cassette-bottom-strip">STUDIO SOUND DECK v2</div>
@@ -567,7 +570,7 @@ function BeatsPlayer() {
 
             <div className="beats-volume-row">
               <button className="mute-btn" onClick={() => setIsMuted(!isMuted)}>
-                ${isMuted ? '🔇' : '🔊'}
+                {isMuted ? '🔇' : '🔊'}
               </button>
               <input 
                 type="range" 
@@ -585,7 +588,7 @@ function BeatsPlayer() {
 
             <div className="beats-deck-controls" style={{ marginTop: '5px' }}>
               <button className="deck-btn btn-prev" onClick={() => handleTrackChange((currentTrackIdx - 1 + tracks.length) % tracks.length)}>PREV</button>
-              <button className={`deck-btn btn-play-pause ${isPlaying ? 'active' : ''}`} onClick={handleNativePlayPause}>${isPlaying ? 'PAUSE' : 'PLAY'}</button>
+              <button className={"deck-btn btn-play-pause " + (isPlaying ? 'active' : '')} onClick={handleNativePlayPause}>{isPlaying ? 'PAUSE' : 'PLAY'}</button>
               <button className="deck-btn btn-next" onClick={() => handleTrackChange((currentTrackIdx + 1) % tracks.length)}>NEXT</button>
             </div>
 
@@ -594,10 +597,10 @@ function BeatsPlayer() {
               {['flat', 'rock', 'pop', 'electronic'].map((preset) => (
                 <button 
                   key={preset}
-                  className={`eq-preset-btn ${equalizerPreset === preset ? 'active' : ''}`}
+                  className={"eq-preset-btn " + (equalizerPreset === preset ? 'active' : '')}
                   onClick={() => setEqualizerPreset(preset)}
                 >
-                  ${preset.toUpperCase()}
+                  {preset.toUpperCase()}
                 </button>
               ))}
             </div>
@@ -611,11 +614,11 @@ function BeatsPlayer() {
               {tracks.map((track, idx) => (
                 <div 
                   key={idx} 
-                  className={`playlist-row-item ${idx === currentTrackIdx ? 'active' : ''}`}
+                  className={"playlist-row-item " + (idx === currentTrackIdx ? 'active' : '')}
                   onClick={() => { handleTrackChange(idx); setActiveTab('deck'); }}
                 >
-                  <div className="playlist-row-title">${idx + 1}. ${track.title}</div>
-                  <div className="playlist-row-artist">${track.artist}</div>
+                  <div className="playlist-row-title">{idx + 1}. {track.title}</div>
+                  <div className="playlist-row-artist">{track.artist}</div>
                 </div>
               ))}
             </div>
@@ -667,7 +670,7 @@ function BeatsPlayer() {
                     <div className="mono" style={{ fontSize: '0.55rem', color: '#ff1744', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '2px' }}>TOP SEARCH RESULTS:</div>
                     {searchResults.map((item, idx) => (
                       <div key={idx} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.55rem', gap: '10px', padding: '3px 0', borderBottom: '1px solid rgba(255,255,255,0.02)' }}>
-                        <span className="mono" style={{ textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap', flex: 1 }} title={`${item.title} - ${item.artist}`}>
+                        <span className="mono" style={{ textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap', flex: 1 }} title={item.title + ' - ' + item.artist}>
                           {item.title}
                         </span>
                         <button 
