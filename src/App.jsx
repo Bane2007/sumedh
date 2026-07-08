@@ -55,6 +55,7 @@ function BeatsPlayer() {
 
   const [searchResults, setSearchResults] = useState([]);
   const [isSearching, setIsSearching] = useState(false);
+  const [activeTab, setActiveTab] = useState('deck'); // 'deck', 'playlist', 'search'
 
   const initialStreams = [
     {
@@ -158,9 +159,10 @@ function BeatsPlayer() {
     setIsSearching(true);
     setSearchResults([]);
     try {
-      const res = await fetch(`https://yewtu.be/api/v1/search?q=${encodeURIComponent(query)}&type=video`);
-      if (res.ok) {
-        const data = await res.json();
+      const targetUrl = `https://yewtu.be/api/v1/search?q=${encodeURIComponent(query)}&type=video`;
+      const resVal = await fetch(targetUrl);
+      if (resVal.ok) {
+        const data = await resVal.json();
         if (data && Array.isArray(data)) {
           const formatted = data.slice(0, 5).map(item => ({
             title: item.title,
@@ -440,7 +442,7 @@ function BeatsPlayer() {
   const rightTapeScale = Math.min(1.3, 0.4 + (elapsedTime / 1800));
 
   return (
-    <div className="beats-remade-container">
+    <div className="beats-compact-console-layout" style={{ display: 'flex', flexDirection: 'column', height: '100%', padding: '8px' }}>
       <audio 
         ref={audioRef} 
         src={currentTrack.isYt ? "" : currentTrack.url} 
@@ -453,165 +455,210 @@ function BeatsPlayer() {
       <div style={{ position: 'absolute', width: '1px', height: '1px', opacity: 0, pointerEvents: 'none', overflow: 'hidden' }}>
         <div id="beats-yt-player-iframe"></div>
       </div>
-      
-      <div className="beats-deck-pane">
-        <div className="beats-lcd-screen">
-          <div className="lcd-ticker">
-            <span className="lcd-text-scroll">${currentTrack.title.toUpperCase()} - ${currentTrack.artist.toUpperCase()}</span>
-          </div>
-          <div className="lcd-meta-row">
-            <span>${formatTime(elapsedTime)} / ${formatTime(Math.floor(trackDuration * 10))}</span>
-            <span>${isPlaying ? '[PLAYING]' : '[PAUSED]'}</span>
-            <span>${bitrate}KBPS</span>
-          </div>
-          <div className="beats-timeline-wrapper">
-            <input 
-              type="range"
-              min="0"
-              max={trackDuration || 100}
-              value={elapsedTime / 10}
-              onChange={handleSeek}
-              className="beats-timeline-slider"
-            />
-          </div>
-          <div className="lcd-visualizer">
-            {barHeights.map((h, i) => (
-              <div 
-                key={i} 
-                className="vis-bar" 
-                style={{ height: `${h}px` }}
-              ></div>
-            ))}
-          </div>
-        </div>
 
-        <div className="beats-cassette-housing">
-          <div className="cassette-window">
-            <div className={`spool-circle spool-l ${isPlaying ? 'spinning' : ''}`}>
-              <div className="tape-roll-fill" style={{ transform: `scale(dots)` }}><div className="tape-roll-fill" style={{ transform: `scale(${leftTapeScale})` }}></div></div>
+      {/* Tabs Header */}
+      <div className="beats-tabs-header mono" style={{ display: 'flex', borderBottom: '1px solid rgba(255,23,68,0.2)', paddingBottom: '6px', marginBottom: '8px', gap: '6px', fontSize: '0.62rem' }}>
+        <button 
+          className={`control-action-btn ${activeTab === 'deck' ? 'active' : ''}`} 
+          onClick={() => setActiveTab('deck')}
+          style={{ flex: 1, padding: '3px 8px' }}
+        >
+          📼 PLAYER DECK
+        </button>
+        <button 
+          className={`control-action-btn ${activeTab === 'playlist' ? 'active' : ''}`} 
+          onClick={() => setActiveTab('playlist')}
+          style={{ flex: 1, padding: '3px 8px' }}
+        >
+          📁 STATIONS SHELF (${tracks.length})
+        </button>
+        <button 
+          className={`control-action-btn ${activeTab === 'search' ? 'active' : ''}`} 
+          onClick={() => setActiveTab('search')}
+          style={{ flex: 1, padding: '3px 8px' }}
+        >
+          🔍 SEARCH &amp; ADD SONGS
+        </button>
+      </div>
+
+      {/* Tab Contents */}
+      <div className="beats-tab-body" style={{ flex: 1, display: 'flex', minHeight: 0 }}>
+        {activeTab === 'deck' && (
+          <div className="beats-deck-pane" style={{ width: '100%', padding: 0 }}>
+            <div className="beats-lcd-screen">
+              <div className="lcd-ticker">
+                <span className="lcd-text-scroll">${currentTrack.title.toUpperCase()} - ${currentTrack.artist.toUpperCase()}</span>
+              </div>
+              <div className="lcd-meta-row">
+                <span>${formatTime(elapsedTime)} / ${formatTime(Math.floor(trackDuration * 10))}</span>
+                <span>${isPlaying ? '[PLAYING]' : '[PAUSED]'}</span>
+                <span>${bitrate}KBPS</span>
+              </div>
+              <div className="beats-timeline-wrapper">
+                <input 
+                  type="range"
+                  min="0"
+                  max={trackDuration || 100}
+                  value={elapsedTime / 10}
+                  onChange={handleSeek}
+                  className="beats-timeline-slider"
+                />
+              </div>
+              <div className="lcd-visualizer">
+                {barHeights.map((h, i) => (
+                  <div 
+                    key={i} 
+                    className="vis-bar" 
+                    style={{ height: `${h}px` }}
+                  ></div>
+                ))}
+              </div>
             </div>
-            <div className={`spool-circle spool-r ${isPlaying ? 'spinning' : ''}`}>
-              <div className="tape-roll-fill" style={{ transform: `scale(dots)` }}><div className="tape-roll-fill" style={{ transform: `scale(${rightTapeScale})` }}></div></div>
+
+            <div className="beats-cassette-housing">
+              <div className="cassette-window">
+                <div className={`spool-circle spool-l ${isPlaying ? 'spinning' : ''}`}>
+                  <div className="tape-roll-fill" style={{ transform: `scale(${leftTapeScale})` }}></div>
+                </div>
+                <div className={`spool-circle spool-r ${isPlaying ? 'spinning' : ''}`}>
+                  <div className="tape-roll-fill" style={{ transform: `scale(${rightTapeScale})` }}></div>
+                </div>
+              </div>
+              <div className="cassette-bottom-strip">STUDIO SOUND DECK v2</div>
+            </div>
+
+            <div className="beats-volume-row">
+              <button className="mute-btn" onClick={() => setIsMuted(!isMuted)}>
+                ${isMuted ? '🔇' : '🔊'}
+              </button>
+              <input 
+                type="range" 
+                min="0" 
+                max="1" 
+                step="0.05"
+                value={volume}
+                onChange={(e) => {
+                  setVolume(parseFloat(e.target.value));
+                  setIsMuted(false);
+                }}
+                className="volume-slider"
+              />
+            </div>
+
+            <div className="beats-deck-controls" style={{ marginTop: '5px' }}>
+              <button className="deck-btn btn-prev" onClick={() => handleTrackChange((currentTrackIdx - 1 + tracks.length) % tracks.length)}>PREV</button>
+              <button className={`deck-btn btn-play-pause ${isPlaying ? 'active' : ''}`} onClick={handleNativePlayPause}>${isPlaying ? 'PAUSE' : 'PLAY'}</button>
+              <button className="deck-btn btn-next" onClick={() => handleTrackChange((currentTrackIdx + 1) % tracks.length)}>NEXT</button>
+            </div>
+
+            <div className="eq-presets" style={{ marginTop: '6px' }}>
+              <span className="eq-label">PRESETS:</span>
+              {['flat', 'rock', 'pop', 'electronic'].map((preset) => (
+                <button 
+                  key={preset}
+                  className={`eq-preset-btn ${equalizerPreset === preset ? 'active' : ''}`}
+                  onClick={() => setEqualizerPreset(preset)}
+                >
+                  ${preset.toUpperCase()}
+                </button>
+              ))}
             </div>
           </div>
-          <div className="cassette-bottom-strip">STUDIO SOUND DECK v2</div>
-        </div>
+        )}
 
-        <div className="beats-volume-row">
-          <button className="mute-btn" onClick={() => setIsMuted(!isMuted)}>
-            ${isMuted ? '🔇' : '🔊'}
-          </button>
-          <input 
-            type="range" 
-            min="0" 
-            max="1" 
-            step="0.05"
-            value={volume}
-            onChange={(e) => {
-              setVolume(parseFloat(e.target.value));
-              setIsMuted(false);
-            }}
-            className="volume-slider"
-          />
-        </div>
-
-        <div className="beats-deck-controls">
-          <button className="deck-btn btn-prev" onClick={() => handleTrackChange((currentTrackIdx - 1 + tracks.length) % tracks.length)}>PREV</button>
-          <button className={`deck-btn btn-play-pause ${isPlaying ? 'active' : ''}`} onClick={handleNativePlayPause}>&nbsp;${isPlaying ? 'PAUSE' : 'PLAY'}</button>
-          <button className="deck-btn btn-next" onClick={() => handleTrackChange((currentTrackIdx + 1) % tracks.length)}>NEXT</button>
-        </div>
-
-        <div className="eq-presets">
-          <span className="eq-label">PRESETS:</span>
-          {['flat', 'rock', 'pop', 'electronic'].map((preset) => (
-            <button 
-              key={preset}
-              className={`eq-preset-btn ${equalizerPreset === preset ? 'active' : ''}`}
-              onClick={() => setEqualizerPreset(preset)}
-            >
-              ${preset.toUpperCase()}
-            </button>
-          ))}
-        </div>
-
-        <div className="beats-loader-box" style={{ marginBottom: '10px' }}>
-          <input 
-            type="text" 
-            className="beats-url-input"
-            placeholder="Paste YouTube or MP3 link..."
-            value={urlInput}
-            onChange={(e) => setUrlInput(e.target.value)}
-          />
-          <button className="beats-url-load-btn" onClick={loadMedia}>LOAD</button>
-        </div>
-
-        {/* Draggable search songs utility block */}
-        <div className="beats-search-row" style={{ display: 'flex', flexDirection: 'column', gap: '8px', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '10px' }}>
-          <div style={{ display: 'flex', gap: '6px' }}>
-            <input 
-              type="text" 
-              className="beats-url-input"
-              placeholder="Search YouTube rock track..."
-              onKeyDown={(e) => {
-                if (e.key === 'Enter') {
-                  searchSongs(e.target.value);
-                }
-              }}
-              id="beats-search-input"
-            />
-            <button className="beats-url-load-btn" onClick={() => {
-              const val = document.getElementById('beats-search-input').value;
-              searchSongs(val);
-            }}>SEARCH</button>
-          </div>
-          {isSearching && <div className="mono" style={{ fontSize: '0.55rem', opacity: 0.7 }}>[ Querying mainframe database... ]</div>}
-          {searchResults.length > 0 && (
-            <div className="beats-search-results" style={{ display: 'flex', flexDirection: 'column', gap: '4px', background: 'rgba(0,0,0,0.3)', padding: '6px', borderRadius: '4px' }}>
-              <div className="mono" style={{ fontSize: '0.55rem', color: '#00e5ff', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '2px' }}>TOP SEARCH RESULTS:</div>
-              {searchResults.map((item, idx) => (
-                <div key={idx} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.55rem', gap: '10px' }}>
-                  <span className="mono" style={{ textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap', flex: 1 }} title={`${item.title} - ${item.artist}`}>
-                    {item.title.length > 28 ? item.title.slice(0, 28) + '...' : item.title}
-                  </span>
-                  <button 
-                    className="control-action-btn" 
-                    style={{ fontSize: '0.5rem', padding: '1px 6px' }}
-                    onClick={() => {
-                      setTracks(prev => {
-                        const updated = [...prev, item];
-                        setTimeout(() => {
-                          handleTrackChange(updated.length - 1);
-                        }, 100);
-                        return updated;
-                      });
-                      setSearchResults([]);
-                      document.getElementById('beats-search-input').value = '';
-                      if (halComment) halComment("Added '" + item.title + "' to stations shelf.");
-                    }}
-                  >
-                    + ADD
-                  </button>
+        {activeTab === 'playlist' && (
+          <div className="beats-playlist-pane" style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column' }}>
+            <div className="playlist-title">STATIONS SHELF</div>
+            <div className="playlist-scroll-list" style={{ flex: 1, overflowY: 'auto' }}>
+              {tracks.map((track, idx) => (
+                <div 
+                  key={idx} 
+                  className={`playlist-row-item ${idx === currentTrackIdx ? 'active' : ''}`}
+                  onClick={() => { handleTrackChange(idx); setActiveTab('deck'); }}
+                >
+                  <div className="playlist-row-title">${idx + 1}. ${track.title}</div>
+                  <div className="playlist-row-artist">${track.artist}</div>
                 </div>
               ))}
             </div>
-          )}
-        </div>
-      </div>
+          </div>
+        )}
 
-      <div className="beats-playlist-pane">
-        <div className="playlist-title">STATIONS SHELF</div>
-        <div className="playlist-scroll-list">
-          {tracks.map((track, idx) => (
-            <div 
-              key={idx} 
-              className={`playlist-row-item ${idx === currentTrackIdx ? 'active' : ''}`}
-              onClick={() => handleTrackChange(idx)}
-            >
-              <div className="playlist-row-title">${idx + 1}. ${track.title}</div>
-              <div className="playlist-row-artist">${track.artist}</div>
+        {activeTab === 'search' && (
+          <div className="beats-search-pane" style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '8px', padding: '5px 0' }}>
+            <div className="playlist-title">LOAD OR SEARCH SONGS</div>
+            
+            {/* Custom URL Loader */}
+            <div className="beats-loader-box" style={{ display: 'flex', gap: '6px' }}>
+              <input 
+                type="text" 
+                className="beats-url-input"
+                placeholder="Paste YouTube or MP3 link..."
+                value={urlInput}
+                onChange={(e) => setUrlInput(e.target.value)}
+                style={{ flex: 1 }}
+              />
+              <button className="beats-url-load-btn" onClick={() => { loadMedia(); setActiveTab('deck'); }}>LOAD</button>
             </div>
-          ))}
-        </div>
+
+            {/* YouTube Search utility */}
+            <div className="beats-search-row" style={{ display: 'flex', flexDirection: 'column', gap: '8px', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '10px' }}>
+              <div style={{ display: 'flex', gap: '6px' }}>
+                <input 
+                  type="text" 
+                  className="beats-url-input"
+                  placeholder="Type song query &amp; press Enter..."
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      searchSongs(e.target.value);
+                    }
+                  }}
+                  id="beats-search-input-field"
+                  style={{ flex: 1 }}
+                />
+                <button className="beats-url-load-btn" onClick={() => {
+                  const val = document.getElementById('beats-search-input-field').value;
+                  searchSongs(val);
+                }}>SEARCH</button>
+              </div>
+              {isSearching && <div className="mono" style={{ fontSize: '0.55rem', opacity: 0.7 }}>[ Querying mainframe database... ]</div>}
+              
+              <div className="beats-search-results-scroller" style={{ flex: 1, overflowY: 'auto', maxHeight: '140px' }}>
+                {searchResults.length > 0 && (
+                  <div className="beats-search-results" style={{ display: 'flex', flexDirection: 'column', gap: '4px', background: 'rgba(0,0,0,0.3)', padding: '6px', borderRadius: '4px' }}>
+                    <div className="mono" style={{ fontSize: '0.55rem', color: '#ff1744', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '2px' }}>TOP SEARCH RESULTS:</div>
+                    {searchResults.map((item, idx) => (
+                      <div key={idx} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.55rem', gap: '10px', padding: '3px 0', borderBottom: '1px solid rgba(255,255,255,0.02)' }}>
+                        <span className="mono" style={{ textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap', flex: 1 }} title={`${item.title} - ${item.artist}`}>
+                          {item.title}
+                        </span>
+                        <button 
+                          className="control-action-btn" 
+                          style={{ fontSize: '0.5rem', padding: '1px 6px' }}
+                          onClick={() => {
+                            setTracks(prev => {
+                              const updated = [...prev, item];
+                              setTimeout(() => {
+                                handleTrackChange(updated.length - 1);
+                                setActiveTab('deck');
+                              }, 100);
+                              return updated;
+                            });
+                            setSearchResults([]);
+                            document.getElementById('beats-search-input-field').value = '';
+                            if (halComment) halComment("Added '" + item.title + "' to stations shelf.");
+                          }}
+                        >
+                          + ADD
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -1454,7 +1501,19 @@ function App() {
       .then(text => {
         const jsonStr = text.replace("window.mediaDatabase = ", "");
         const db = JSON.parse(jsonStr);
-        setMediaDb(db);
+        
+        // Retrieve custom logged entries from local storage
+        const customFilms = JSON.parse(localStorage.getItem('sumedh_custom_films') || '[]');
+        const customAnime = JSON.parse(localStorage.getItem('sumedh_custom_anime') || '[]');
+        const customManga = JSON.parse(localStorage.getItem('sumedh_custom_manga') || '[]');
+        
+        const mergedDb = {
+          films: [...customFilms, ...db.films],
+          anime: [...customAnime, ...db.anime],
+          manga: [...customManga, ...db.manga]
+        };
+        
+        setMediaDb(mergedDb);
         
         const initialItem = db.films && db.films.length > 0 ? db.films[0] : null;
         setSelectedItem(initialItem);
@@ -1464,6 +1523,98 @@ function App() {
       })
       .catch(err => console.error("Failed to load media database:", err));
   }, []);
+
+  // Log Item Form states
+  const [showAddForm, setShowAddForm] = useState(false);
+  const [newTitle, setNewTitle] = useState('');
+  const [newYear, setNewYear] = useState('');
+  const [newRating, setNewRating] = useState('★★★★★');
+  const [newDirector, setNewDirector] = useState('');
+  const [newGenres, setNewGenres] = useState('');
+
+  const handleAddNewItem = (e) => {
+    e.preventDefault();
+    if (!newTitle.trim()) return;
+
+    const item = {
+      title: newTitle.trim(),
+      year: newYear.trim() || new Date().getFullYear().toString(),
+      image: "",
+      rating: category === 'films' ? newRating : undefined,
+      score: category !== 'films' ? parseFloat(newRating) || 8.0 : undefined,
+      director: category === 'films' ? newDirector.trim() || 'N/A' : undefined,
+      genres: category !== 'films' ? newGenres.split(',').map(g => g.trim()).filter(Boolean) : undefined,
+      slug: category === 'films' ? newTitle.trim().toLowerCase().replace(/\s+/g, '-') : undefined,
+      id: category !== 'films' ? Math.floor(Math.random() * 100000) : undefined,
+      status: category !== 'films' ? 'completed' : undefined,
+      episodes_watched: category === 'anime' ? 12 : undefined,
+      chapters: category === 'manga' ? 50 : undefined,
+      volumes: category === 'manga' ? 5 : undefined,
+      start_date: 'N/A',
+      finish_date: 'N/A',
+      sort_date: new Date().toISOString().split('T')[0],
+      isCustom: true
+    };
+
+    setMediaDb(prev => {
+      const updated = {
+        ...prev,
+        [category]: [item, ...prev[category]]
+      };
+      
+      const customKey = `sumedh_custom_${category}`;
+      const existingCustom = JSON.parse(localStorage.getItem(customKey) || '[]');
+      localStorage.setItem(customKey, JSON.stringify([item, ...existingCustom]));
+      
+      return updated;
+    });
+
+    setSelectedItem(item);
+    setDisplayBg('');
+    if (halComment) halComment('Indexed entry: added "' + item.title + '" to shelf.');
+
+    setNewTitle('');
+    setNewYear('');
+    setNewDirector('');
+    setNewGenres('');
+    setShowAddForm(false);
+  };
+
+  const handleRemoveItem = (itemToRemove, e) => {
+    e.stopPropagation();
+    if (!window.confirm(`Are you sure you want to delete "${itemToRemove.title}" from your shelf?`)) return;
+
+    setMediaDb(prev => {
+      const updatedList = prev[category].filter(item => {
+        if (category === 'films') {
+          return item.slug !== itemToRemove.slug;
+        } else {
+          return item.id !== itemToRemove.id;
+        }
+      });
+
+      const updated = {
+        ...prev,
+        [category]: updatedList
+      };
+
+      const customKey = `sumedh_custom_${category}`;
+      const existingCustom = JSON.parse(localStorage.getItem(customKey) || '[]');
+      const filteredCustom = existingCustom.filter(item => {
+        if (category === 'films') {
+          return item.slug !== itemToRemove.slug;
+        } else {
+          return item.id !== itemToRemove.id;
+        }
+      });
+      localStorage.setItem(customKey, JSON.stringify(filteredCustom));
+
+      return updated;
+    });
+
+    setSelectedItem(null);
+    if (halComment) halComment('Deleted entry "' + itemToRemove.title + '" from shelf.');
+  };
 
   // Media Cabinet Filter states
   const [selectedGenre, setSelectedGenre] = useState('');
@@ -2191,6 +2342,9 @@ function App() {
                           <option value="chronological">Sort: Release Year</option>
                           <option value="rating">Sort: Personal Rating</option>
                         </select>
+                        <button className="add-entry-btn-trigger mono" onClick={() => setShowAddForm(true)}>
+                          + LOG
+                        </button>
                         
                       </div>
                     </div>
@@ -2202,57 +2356,127 @@ function App() {
                       <span className="stat-badge">TOP GENRE: {getTopGenre()}</span>
                     </div>
 
-                    <div className="movie-grid">
-                      {processedItems.length === 0 ? (
-                        <div className="grid-empty-state mono">[ No matching titles found on the shelf ]</div>
-                      ) : (
-                        processedItems.map((item, index) => {
-                          const isSelected = selectedItem && (
-                            (category === 'films' && selectedItem.slug === item.slug) ||
-                            (category !== 'films' && selectedItem.id === item.id)
-                          );
-                          
-                          return (
-                            <div 
-                              key={category === 'films' ? item.slug : item.id}
-                              className={`grid-item-card ${isSelected ? 'selected' : ''}`}
-                              style={{ animationDelay: `${index * 12}ms` }}
-                              tabIndex="0"
-                              onClick={() => handleItemSelect(item)}
-                              onFocus={() => handleItemSelect(item)}
-                            >
-                              <div className="card-inner">
-                                {item.image ? (
-                                  <img 
-                                    className="card-poster-img"
-                                    src={item.image} 
-                                    alt={item.title} 
-                                    loading="lazy" 
-                                    referrerPolicy="no-referrer"
-                                  />
-                                ) : (
-                                  <div 
-                                    className="card-fallback-svg-container"
-                                    dangerouslySetInnerHTML={{ __html: generateGenericCover(item.title, item.year) }}
-                                  />
+                    {showAddForm ? (
+                      <form onSubmit={handleAddNewItem} className="add-entry-form mono" style={{ background: '#111', border: '1.5px solid var(--hairline)', padding: '15px', borderRadius: '4px', marginBottom: '15px', textAlign: 'left' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
+                          <span style={{ fontSize: '0.9rem', fontWeight: 'bold', color: '#ff1744' }}>[ Log New {category.slice(0, -1)} ]</span>
+                          <button type="button" className="close-form-btn" onClick={() => setShowAddForm(false)} style={{ background: 'none', border: 'none', color: '#ff9800', cursor: 'pointer', fontSize: '0.62rem' }}>[ CANCEL ]</button>
+                        </div>
+                        <div className="form-field-row" style={{ display: 'flex', marginBottom: '10px', alignItems: 'center', fontSize: '0.72rem' }}>
+                          <label style={{ width: '80px', color: 'var(--ink-soft)' }}>Title:</label>
+                          <input type="text" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} placeholder="Enter title..." required style={{ flex: 1, background: '#222', border: '1px solid #444', color: '#fff', padding: '4px 8px' }} />
+                        </div>
+                        <div className="form-field-row" style={{ display: 'flex', marginBottom: '10px', alignItems: 'center', fontSize: '0.72rem' }}>
+                          <label style={{ width: '80px', color: 'var(--ink-soft)' }}>Year:</label>
+                          <input type="text" value={newYear} onChange={(e) => setNewYear(e.target.value)} placeholder="e.g. 2026" style={{ flex: 1, background: '#222', border: '1px solid #444', color: '#fff', padding: '4px 8px' }} />
+                        </div>
+                        <div className="form-field-row" style={{ display: 'flex', marginBottom: '10px', alignItems: 'center', fontSize: '0.72rem' }}>
+                          <label style={{ width: '80px', color: 'var(--ink-soft)' }}>{category === 'films' ? 'Rating:' : 'Score (1-10):'}</label>
+                          {category === 'films' ? (
+                            <select value={newRating} onChange={(e) => setNewRating(e.target.value)} style={{ flex: 1, background: '#222', border: '1px solid #444', color: '#fff', padding: '4px 8px' }}>
+                              <option value="★★★★★">★★★★★ (10/10)</option>
+                              <option value="★★★★½">★★★★½ (9/10)</option>
+                              <option value="★★★★">★★★★ (8/10)</option>
+                              <option value="★★★½">★★★½ (7/10)</option>
+                              <option value="★★★">★★★ (6/10)</option>
+                              <option value="★★½">★★½ (5/10)</option>
+                              <option value="★★">★★ (4/10)</option>
+                              <option value="★">★ (2/10)</option>
+                            </select>
+                          ) : (
+                            <input type="number" min="1" max="10" step="0.5" value={newRating} onChange={(e) => setNewRating(e.target.value)} style={{ flex: 1, background: '#222', border: '1px solid #444', color: '#fff', padding: '4px 8px' }} />
+                          )}
+                        </div>
+                        {category === 'films' ? (
+                          <div className="form-field-row" style={{ display: 'flex', marginBottom: '10px', alignItems: 'center', fontSize: '0.72rem' }}>
+                            <label style={{ width: '80px', color: 'var(--ink-soft)' }}>Director:</label>
+                            <input type="text" value={newDirector} onChange={(e) => setNewDirector(e.target.value)} placeholder="Director name..." style={{ flex: 1, background: '#222', border: '1px solid #444', color: '#fff', padding: '4px 8px' }} />
+                          </div>
+                        ) : (
+                          <div className="form-field-row" style={{ display: 'flex', marginBottom: '15px', alignItems: 'center', fontSize: '0.72rem' }}>
+                            <label style={{ width: '80px', color: 'var(--ink-soft)' }}>Genres:</label>
+                            <input type="text" value={newGenres} onChange={(e) => setNewGenres(e.target.value)} placeholder="Action, Sci-Fi..." style={{ flex: 1, background: '#222', border: '1px solid #444', color: '#fff', padding: '4px 8px' }} />
+                          </div>
+                        )}
+                        <button type="submit" className="submit-entry-btn" style={{ background: '#ff1744', border: 'none', color: '#fff', padding: '6px 12px', fontSize: '0.72rem', cursor: 'pointer' }}>[ SAVE TO SHELF ]</button>
+                      </form>
+                    ) : (
+                      <div className="movie-grid">
+                        {processedItems.length === 0 ? (
+                          <div className="grid-empty-state mono">[ No matching titles found on the shelf ]</div>
+                        ) : (
+                          processedItems.map((item, index) => {
+                            const isSelected = selectedItem && (
+                              (category === 'films' && selectedItem.slug === item.slug) ||
+                              (category !== 'films' && selectedItem.id === item.id)
+                            );
+                            
+                            return (
+                              <div 
+                                key={category === 'films' ? item.slug : item.id}
+                                className={`grid-item-card ${isSelected ? 'selected' : ''}`}
+                                style={{ animationDelay: `${index * 12}ms`, position: 'relative' }}
+                                tabIndex="0"
+                                onClick={() => handleItemSelect(item)}
+                                onFocus={() => handleItemSelect(item)}
+                              >
+                                {item.isCustom && (
+                                  <button 
+                                    className="custom-item-delete-btn"
+                                    onClick={(e) => handleRemoveItem(item, e)}
+                                    title="Delete custom entry"
+                                    style={{
+                                      position: 'absolute',
+                                      top: '4px',
+                                      right: '4px',
+                                      background: 'rgba(255, 23, 68, 0.95)',
+                                      color: '#ffffff',
+                                      border: 'none',
+                                      borderRadius: '3px',
+                                      fontSize: '0.52rem',
+                                      padding: '2px 5px',
+                                      cursor: 'pointer',
+                                      zIndex: 10,
+                                      fontWeight: 'bold',
+                                      fontFamily: 'monospace'
+                                    }}
+                                  >
+                                    DELETE
+                                  </button>
                                 )}
+                                <div className="card-inner">
+                                  {item.image ? (
+                                    <img 
+                                      className="card-poster-img"
+                                      src={item.image} 
+                                      alt={item.title} 
+                                      loading="lazy" 
+                                      referrerPolicy="no-referrer"
+                                    />
+                                  ) : (
+                                    <div 
+                                      className="card-fallback-svg-container"
+                                      dangerouslySetInnerHTML={{ __html: generateGenericCover(item.title, item.year) }}
+                                    />
+                                  )}
 
-                                <div className="card-hover-overlay">
-                                  <span className="card-hover-title">{item.title}</span>
-                                  <span className="card-hover-year">{item.year}</span>
-                                </div>
-
-                                {(item.status === 'watching' || item.status === 'reading') && (
-                                  <div className="card-status-badge mono">
-                                    {item.status}
+                                  <div className="card-hover-overlay">
+                                    <span className="card-hover-title">{item.title}</span>
+                                    <span className="card-hover-year">{item.year}</span>
                                   </div>
-                                )}
+
+                                  {(item.status === 'watching' || item.status === 'reading') && (
+                                    <div className="card-status-badge mono">
+                                      {item.status}
+                                    </div>
+                                  )}
+                                </div>
                               </div>
-                            </div>
-                          );
-                        })
-                      )}
-                    </div>
+                            );
+                          })
+                        )}
+                      </div>
+                    )}
                   </div>
 
                   <div className="closet-display">

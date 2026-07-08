@@ -4376,11 +4376,10 @@ body.crt-effect {
   text-shadow: none !important;
 }
 
-/* === DESCRIPTION READABILITY SANS-SERIF FONT OVERRIDE === */
 .display-description {
   font-family: Tahoma, Geneva, Arial, sans-serif !important;
-  font-size: 1.15rem !important;
-  line-height: 1.65 !important;
+  font-size: 0.85rem !important;
+  line-height: 1.55 !important;
   color: #ffffff !important; /* Crisp white */
   font-weight: 500 !important;
   letter-spacing: 0.015em !important;
