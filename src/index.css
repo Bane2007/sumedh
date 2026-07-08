@@ -208,7 +208,7 @@ body::before {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #ff5f56;
+  background: #00e5ff;
   cursor: pointer;
   border: 1px solid rgba(0,0,0,0.2);
   transition: opacity 0.2s ease;
@@ -337,7 +337,7 @@ body::before {
 .rec-light__dot {
   width: 8px; height: 8px;
   border-radius: 50%;
-  background: radial-gradient(circle, #ffeb3b 0%, #ff5722 50%, #d84315 100%);
+  background: radial-gradient(circle, #ffffff 0%, #29b6f6 50%, #d84315 100%);
   box-shadow: 0 0 10px 2px rgba(255, 87, 34, 0.6);
   animation: rec-pulse 2s ease-in-out infinite;
 }
@@ -483,7 +483,7 @@ main { position: relative; z-index: 1; }
 .rec-light__dot {
   width: 12px; height: 12px;
   border-radius: 50%;
-  background: radial-gradient(circle, #ffeb3b 0%, #ff5722 35%, #d84315 65%, #111111 100%);
+  background: radial-gradient(circle, #ffffff 0%, #29b6f6 35%, #d84315 65%, #111111 100%);
   box-shadow: 0 0 16px 3px rgba(255, 87, 34, 0.85);
   animation: rec-pulse 2s ease-in-out infinite;
   border: 1px solid rgba(255,255,255,0.15);
@@ -3615,7 +3615,7 @@ body.crt-effect {
   width: 36px;
   height: 36px;
   border-radius: 4px;
-  background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);
+  background: linear-gradient(135deg, #00e5ff 0%, #29b6f6 100%);
   color: white;
   display: flex;
   align-items: center;
@@ -3838,7 +3838,7 @@ body.crt-effect {
 
 .widget-header {
   font-weight: bold !important;
-  color: #ff9800 !important;
+  color: #00e5ff !important;
   margin-bottom: 6px !important;
   text-align: center !important;
   border-bottom: 1px dashed rgba(59, 245, 59, 0.3) !important;
@@ -3904,8 +3904,8 @@ body.crt-effect {
   width: 20px;
   height: 20px;
   border-radius: 50% !important;
-  background: radial-gradient(circle, #ffeb3b 0%, #ff1744 40%, #880e4f 100%) !important;
-  box-shadow: 0 0 12px 3px #ff1744 !important;
+  background: radial-gradient(circle, #ffffff 0%, #00f0ff 40%, #01579b 100%) !important;
+  box-shadow: 0 0 12px 3px #00f0ff !important;
   position: relative !important;
 }
 
@@ -3921,7 +3921,7 @@ body.crt-effect {
 
 .hal-label {
   font-size: 0.52rem !important;
-  color: #ff9800 !important;
+  color: #00e5ff !important;
   margin-top: 4px !important;
   font-weight: bold !important;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.8) !important;
@@ -3936,7 +3936,7 @@ body.crt-effect {
   right: 0;
   width: 210px;
   background: #ffffcc !important;
-  border: 2px solid #ff9800 !important;
+  border: 2px solid #00e5ff !important;
   color: #222222 !important;
   padding: 8px 10px !important;
   border-radius: 6px !important;
@@ -3953,7 +3953,7 @@ body.crt-effect {
   width: 0 !important; height: 0 !important;
   border-left: 8px solid transparent !important;
   border-right: 8px solid transparent !important;
-  border-top: 8px solid #ff9800 !important;
+  border-top: 8px solid #00e5ff !important;
 }
 
 .hal-bubble-arrow::after {
@@ -4079,7 +4079,7 @@ body.crt-effect {
   position: fixed;
   inset: 0;
   background: #000000;
-  color: #ff1744;
+  color: #00f0ff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4095,7 +4095,7 @@ body.crt-effect {
   flex-direction: column;
   gap: 8px;
   font-size: 0.76rem;
-  text-shadow: 0 0 5px rgba(255, 23, 68, 0.7);
+  text-shadow: 0 0 5px rgba(0, 240, 255, 0.7);
   font-family: var(--mono);
 }
 
@@ -4135,8 +4135,8 @@ body.crt-effect {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: radial-gradient(circle, #ffffff 0%, #ff1744 40%, #000000 100%);
-  box-shadow: 0 0 10px #ff1744;
+  background: radial-gradient(circle, #ffffff 0%, #00f0ff 40%, #000000 100%);
+  box-shadow: 0 0 10px #00f0ff;
   animation: eye-pulse 1s ease-in-out infinite;
 }
 
@@ -4164,29 +4164,29 @@ body.crt-effect {
   width: 14px;
   height: 14px;
   border-radius: 50% !important;
-  background: radial-gradient(circle, #ffffff 0%, #ff1744 30%, #ff0000 70%, #000000 100%) !important;
-  box-shadow: 0 0 8px 1px #ff0000 !important;
+  background: radial-gradient(circle, #ffffff 0%, #00f0ff 30%, #00e5ff 70%, #000000 100%) !important;
+  box-shadow: 0 0 8px 1px #00e5ff !important;
 }
 
 /* Mainframe Windows overrides */
 .window {
   border: 3px solid #333333 !important;
-  box-shadow: 0 0 15px rgba(255, 23, 68, 0.4), 0 12px 36px rgba(0,0,0,0.7) !important;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.4), 0 12px 36px rgba(0,0,0,0.7) !important;
   background: #0d0908 !important;
 }
 
 .window-header {
-  background: linear-gradient(to bottom, #420420 0%, #bd082a 45%, #420420 90%, #1a000c 100%) !important;
-  border-bottom: 2px solid #ff1744 !important;
+  background: linear-gradient(to bottom, #420420 0%, #0288d1 45%, #420420 90%, #1a000c 100%) !important;
+  border-bottom: 2px solid #00f0ff !important;
 }
 
 .window-maximize {
   background: linear-gradient(to bottom, #3a3a3a 0%, #1a1a1a 100%) !important;
-  border: 1px solid #ff1744 !important;
+  border: 1px solid #00f0ff !important;
   box-shadow: inset 0 1px 1px rgba(255,255,255,0.2) !important;
 }
 .window-maximize::before {
-  border-color: #ff1744 !important;
+  border-color: #00f0ff !important;
 }
 .window-maximize:hover {
   background: linear-gradient(to bottom, #5a5a5a 0%, #2a2a2a 100%) !important;
@@ -4195,25 +4195,25 @@ body.crt-effect {
 /* Status/Taskbar overrides */
 .status-bar {
   background: linear-gradient(to bottom, #090909 0%, #1a1a1a 50%, #090909 100%) !important;
-  border-top: 2px solid #ff1744 !important;
-  color: #ff1744 !important;
-  text-shadow: 0 0 4px rgba(255, 23, 68, 0.6) !important;
+  border-top: 2px solid #00f0ff !important;
+  color: #00f0ff !important;
+  text-shadow: 0 0 4px rgba(0, 240, 255, 0.6) !important;
   font-family: var(--mono) !important;
   font-weight: bold !important;
 }
 
 .status-right {
   background: #250308 !important;
-  border-left: 1.5px solid #ff1744 !important;
+  border-left: 1.5px solid #00f0ff !important;
   box-shadow: inset 1px 0 3px rgba(0,0,0,0.5) !important;
 }
 
 .xp-start-btn {
-  background: linear-gradient(to bottom, #420420 0%, #bd082a 100%) !important;
-  border: 1px solid #ff1744 !important;
+  background: linear-gradient(to bottom, #420420 0%, #0288d1 100%) !important;
+  border: 1px solid #00f0ff !important;
   border-radius: 0 8px 8px 0 !important;
   color: #ffffff !important;
-  text-shadow: 0 0 5px #ff1744, 0 0 10px #ff1744 !important;
+  text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff !important;
   box-shadow: 0 2px 4px rgba(0,0,0,0.6), inset 1px 1px 1px rgba(255,255,255,0.3) !important;
 }
 .xp-start-btn:hover {
@@ -4222,37 +4222,37 @@ body.crt-effect {
 }
 
 .xp-start-menu {
-  border: 2px solid #ff1744 !important;
+  border: 2px solid #00f0ff !important;
 }
 .xp-start-left-panel {
   background: #111111 !important;
 }
 .xp-start-right-panel {
   background: #191414 !important;
-  border-left: 1px solid #ff1744 !important;
+  border-left: 1px solid #00f0ff !important;
 }
 .xp-start-item:hover {
-  background: #bd082a !important;
+  background: #0288d1 !important;
 }
 .xp-start-right-item {
-  color: #ff1744 !important;
+  color: #00f0ff !important;
 }
 .xp-start-right-item:hover {
-  background: #bd082a !important;
+  background: #0288d1 !important;
   color: #ffffff !important;
 }
 .xp-start-right-divider {
-  background: #bd082a !important;
+  background: #0288d1 !important;
 }
 .xp-start-footer {
   background: linear-gradient(to bottom, #300208 0%, #0c0002 100%) !important;
-  border-top: 1px solid #ff1744 !important;
+  border-top: 1px solid #00f0ff !important;
 }
 .xp-footer-btn {
   color: #ffffff !important;
 }
 .xp-footer-btn:hover {
-  color: #ff1744 !important;
+  color: #00f0ff !important;
 }
 .xp-start-item-title {
   color: #ffffff !important;
@@ -4296,7 +4296,7 @@ body.crt-effect {
   width: 14px;
   height: 14px;
   border-radius: 2px;
-  border: 1px solid #ff1744 !important;
+  border: 1px solid #00f0ff !important;
   background: linear-gradient(to bottom, #3a3a3a 0%, #151515 100%) !important;
   position: relative;
   cursor: pointer;
@@ -4311,7 +4311,7 @@ body.crt-effect {
   left: 2px;
   width: 8px;
   height: 2px;
-  background: #ff1744;
+  background: #00f0ff;
 }
 
 .window-minimize:hover {
@@ -4334,8 +4334,8 @@ body.crt-effect {
 
 .taskbar-window-btn {
   background: linear-gradient(to bottom, #2a2a2a 0%, #111111 100%) !important;
-  border: 1.5px solid #ff1744 !important;
-  color: #ff9800 !important;
+  border: 1.5px solid #00f0ff !important;
+  color: #00e5ff !important;
   font-family: var(--mono) !important;
   font-size: 0.62rem !important;
   padding: 2px 10px !important;
@@ -4355,14 +4355,14 @@ body.crt-effect {
 }
 
 .taskbar-window-btn:hover {
-  background: linear-gradient(to bottom, #ff1744 0%, #bd082a 100%) !important;
+  background: linear-gradient(to bottom, #00f0ff 0%, #0288d1 100%) !important;
   color: #ffffff !important;
   text-shadow: 0 0 4px #ffffff !important;
   border-color: #ffffff !important;
 }
 
 .taskbar-window-btn.active {
-  background: linear-gradient(to bottom, #bd082a 0%, #420420 100%) !important;
+  background: linear-gradient(to bottom, #0288d1 0%, #420420 100%) !important;
   color: #ffffff !important;
   border-color: #ffca28 !important;
   box-shadow: inset 0 1px 3px rgba(0,0,0,0.8) !important;
@@ -4394,7 +4394,7 @@ body.crt-effect {
   justify-content: space-between !important;
   align-items: center !important;
   background: #111111 !important;
-  border-bottom: 2px solid #ff1744 !important;
+  border-bottom: 2px solid #00f0ff !important;
   padding: 8px 12px !important;
   margin-bottom: 10px !important;
   gap: 15px !important;
@@ -4410,8 +4410,8 @@ body.crt-effect {
 
 .control-action-btn {
   background: linear-gradient(to bottom, #3a3a3a 0%, #151515 100%) !important;
-  border: 1px solid #ff1744 !important;
-  color: #ff9800 !important;
+  border: 1px solid #00f0ff !important;
+  color: #00e5ff !important;
   padding: 4px 10px !important;
   font-family: var(--mono) !important;
   font-size: 0.62rem !important;
@@ -4424,7 +4424,7 @@ body.crt-effect {
 
 .control-action-btn:hover,
 .control-action-btn.active {
-  background: linear-gradient(to bottom, #ff1744 0%, #bd082a 100%) !important;
+  background: linear-gradient(to bottom, #00f0ff 0%, #0288d1 100%) !important;
   color: #ffffff !important;
   border-color: #ffffff !important;
   text-shadow: 0 0 4px #ffffff !important;
@@ -4452,8 +4452,8 @@ body.crt-effect {
 
 .filter-btn:hover,
 .filter-btn.active {
-  background: #ff1744 !important;
-  border-color: #ff1744 !important;
+  background: #00f0ff !important;
+  border-color: #00f0ff !important;
   color: #ffffff !important;
 }
 
@@ -4488,7 +4488,7 @@ body.crt-effect {
   border: none !important;
   border-radius: 2px !important;
   cursor: pointer !important;
-  accent-color: #ff1744 !important;
+  accent-color: #00f0ff !important;
 }
 
 /* === CABINET DASHBOARD STATS HUD === */
@@ -4499,8 +4499,8 @@ body.crt-effect {
   margin-bottom: 12px !important;
   width: 100% !important;
   align-items: center !important;
-  background: rgba(255, 23, 68, 0.05) !important;
-  border: 1px solid rgba(255, 23, 68, 0.2) !important;
+  background: rgba(0, 240, 255, 0.05) !important;
+  border: 1px solid rgba(0, 240, 255, 0.2) !important;
   border-radius: 4px !important;
   padding: 6px 10px !important;
   user-select: none !important;
@@ -4508,8 +4508,8 @@ body.crt-effect {
 
 .stat-badge {
   background: rgba(0, 0, 0, 0.35) !important;
-  border: 1.5px solid #ff1744 !important;
-  color: #ff9800 !important;
+  border: 1.5px solid #00f0ff !important;
+  color: #00e5ff !important;
   font-size: 0.6rem !important;
   padding: 2px 8px !important;
   border-radius: 3px !important;

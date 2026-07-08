@@ -48,57 +48,89 @@ function BeatsPlayer() {
   const [isMuted, setIsMuted] = useState(false);
   const audioRef = useRef(null);
   const timerRef = useRef(null);
+  const tickRef = useRef(null);
   const [equalizerPreset, setEqualizerPreset] = useState('electronic');
   const [barHeights, setBarHeights] = useState(new Array(16).fill(4));
+  const ytPlayerRef = useRef(null);
 
   const initialStreams = [
     {
+      title: "FE!N",
+      artist: "Travis Scott feat. Playboi Carti",
+      url: "U8X851H8B3E",
+      isYt: true
+    },
+    {
+      title: "redrum",
+      artist: "21 Savage",
+      url: "A2Wp9R35n48",
+      isYt: true
+    },
+    {
+      title: "Flashing Lights",
+      artist: "Kanye West",
+      url: "HAfFfqiYLp0",
+      isYt: true
+    },
+    {
+      title: "All The Stars",
+      artist: "Kendrick Lamar & SZA",
+      url: "JQbjS0_ZfJ0",
+      isYt: true
+    },
+    {
+      title: "Lovers Rock",
+      artist: "TV Girl",
+      url: "kYJt2x45U8o",
+      isYt: true
+    },
+    {
+      title: "Borderline",
+      artist: "Tame Impala",
+      url: "v1RuurNx55g",
+      isYt: true
+    },
+    {
+      title: "Tere Bina",
+      artist: "A.R. Rahman (Guru OST)",
+      url: "RMd2hXlVEQg",
+      isYt: true
+    },
+    {
       title: "Mima's Theme - Perfect Blue",
       artist: "Masahiro Ikumi (Anime Masterpiece)",
-      url: "https://ia601206.us.archive.org/24/items/perfect-blue-ost/01.%20Mima%27s%20Theme.mp3"
-    },
-    {
-      title: "Thus Spoke Zarathustra (2001)",
-      artist: "Richard Strauss (Space Odyssey Fanfare)",
-      url: "https://ia800109.us.archive.org/30/items/RichardStraussAlsoSprachZarathustratonePoemOp.30/RichardStrauss-AlsoSprachZarathustraOp.30.mp3"
-    },
-    {
-      title: "Theme from The Thing (1982)",
-      artist: "Ennio Morricone (Sci-Fi Horror Minimalist)",
-      url: "https://ia600508.us.archive.org/15/items/TheThingEnnioMorricone/01.ThemeFromTheThing.mp3"
-    },
-    {
-      title: "SomaFM Groove Salad",
-      artist: "Ambient/Chill Radio",
-      url: "https://ice1.somafm.com/groovesalad-128-mp3"
-    },
-    {
-      title: "Code Radio",
-      artist: "freeCodeCamp Study Lofi",
-      url: "https://coderadio-admin-v2.freecodecamp.org/listen/coderadio/radio.mp3"
-    },
-    {
-      title: "SomaFM Synth Zone",
-      artist: "Synthpop & Wave",
-      url: "https://ice1.somafm.com/synthzone-128-mp3"
-    },
-    {
-      title: "Clair de Lune",
-      artist: "Claude Debussy (Classical Masterpiece)",
-      url: "https://archive.org/download/debussy-claire-de-lune/Debussy%20-%20Suite%20bergamasque%20-%20III.%20Clair%20de%20lune.mp3"
-    },
-    {
-      title: "Gymnopédie No. 1",
-      artist: "Erik Satie (Classical Ambient)",
-      url: "https://archive.org/download/satie-gymnopedie-1/Satie%20-%20Gymnopedie%20No.%201.mp3"
+      url: "https://ia601206.us.archive.org/24/items/perfect-blue-ost/01.%20Mima%27s%20Theme.mp3",
+      isYt: false
     }
   ];
 
   const [tracks, setTracks] = useState(initialStreams);
 
+  const currentTrack = tracks[currentTrackIdx];
+
+  useEffect(() => {
+    if (!window.YT) {
+      const tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      const firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    }
+    
+    const checkYt = setInterval(() => {
+      if (window.YT && window.YT.Player) {
+        setYtReady(true);
+        clearInterval(checkYt);
+      }
+    }, 100);
+    return () => clearInterval(checkYt);
+  }, []);
+
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.volume = isMuted ? 0 : volume;
+    }
+    if (ytPlayerRef.current && typeof ytPlayerRef.current.setVolume === 'function') {
+      ytPlayerRef.current.setVolume(isMuted ? 0 : volume * 100);
     }
   }, [volume, isMuted]);
 
@@ -117,15 +149,96 @@ function BeatsPlayer() {
     return () => clearInterval(timerRef.current);
   }, [isPlaying, equalizerPreset]);
 
-  const handleNativePlayPause = () => {
-    if (!audioRef.current) return;
+  useEffect(() => {
     if (isPlaying) {
-      audioRef.current.pause();
-      setIsPlaying(false);
+      tickRef.current = setInterval(() => {
+        if (currentTrack.isYt && ytPlayerRef.current && typeof ytPlayerRef.current.getCurrentTime === 'function') {
+          try {
+            const curr = ytPlayerRef.current.getCurrentTime() || 0;
+            const dur = ytPlayerRef.current.getDuration() || 180;
+            setElapsedTime(Math.floor(curr * 10));
+            setTrackDuration(dur);
+          } catch(e) {}
+        }
+      }, 200);
     } else {
-      audioRef.current.play()
-        .then(() => setIsPlaying(true))
-        .catch(err => console.log("Audio play blocked: ", err));
+      clearInterval(tickRef.current);
+    }
+    return () => clearInterval(tickRef.current);
+  }, [isPlaying, currentTrackIdx, tracks]);
+
+  const loadYtVideo = (videoId) => {
+    if (!window.YT || !window.YT.Player) return;
+
+    if (!ytPlayerRef.current) {
+      ytPlayerRef.current = new window.YT.Player('beats-yt-player-iframe', {
+        height: '0',
+        width: '0',
+        videoId: videoId,
+        playerVars: {
+          autoplay: 1,
+          controls: 0,
+          disablekb: 1,
+          fs: 0,
+          modestbranding: 1,
+          rel: 0,
+          showinfo: 0
+        },
+        events: {
+          onReady: (event) => {
+            event.target.setVolume(isMuted ? 0 : volume * 100);
+            event.target.playVideo();
+            setIsPlaying(true);
+          },
+          onStateChange: (event) => {
+            if (event.data === window.YT.PlayerState.ENDED) {
+              handleTrackChange((currentTrackIdx + 1) % tracks.length);
+            } else if (event.data === window.YT.PlayerState.PLAYING) {
+              setIsPlaying(true);
+            } else if (event.data === window.YT.PlayerState.PAUSED) {
+              setIsPlaying(false);
+            }
+          }
+        }
+      });
+    } else {
+      try {
+        ytPlayerRef.current.loadVideoById(videoId);
+        ytPlayerRef.current.setVolume(isMuted ? 0 : volume * 100);
+        ytPlayerRef.current.playVideo();
+        setIsPlaying(true);
+      } catch(e) {
+        console.log("Error loading video ID: ", e);
+      }
+    }
+  };
+
+  const handleNativePlayPause = () => {
+    if (currentTrack.isYt) {
+      if (!ytPlayerRef.current) {
+        loadYtVideo(currentTrack.url);
+      } else {
+        if (isPlaying) {
+          ytPlayerRef.current.pauseVideo();
+          setIsPlaying(false);
+        } else {
+          ytPlayerRef.current.playVideo();
+          setIsPlaying(true);
+        }
+      }
+    } else {
+      if (ytPlayerRef.current && typeof ytPlayerRef.current.pauseVideo === 'function') {
+        ytPlayerRef.current.pauseVideo();
+      }
+      if (!audioRef.current) return;
+      if (isPlaying) {
+        audioRef.current.pause();
+        setIsPlaying(false);
+      } else {
+        audioRef.current.play()
+          .then(() => setIsPlaying(true))
+          .catch(err => console.log("Audio play blocked: ", err));
+      }
     }
   };
 
@@ -134,18 +247,34 @@ function BeatsPlayer() {
     setIsPlaying(false);
     setElapsedTime(0);
     setBitrate([192, 256, 320][Math.floor(Math.random() * 3)]);
+
+    const nextTrack = tracks[idx];
+    
     if (audioRef.current) {
-      audioRef.current.load();
+      audioRef.current.pause();
+    }
+    if (ytPlayerRef.current && typeof ytPlayerRef.current.pauseVideo === 'function') {
+      ytPlayerRef.current.pauseVideo();
+    }
+
+    if (nextTrack.isYt) {
       setTimeout(() => {
-        audioRef.current.play()
-          .then(() => setIsPlaying(true))
-          .catch(err => console.log("Play failed: ", err));
-      }, 100);
+        loadYtVideo(nextTrack.url);
+      }, 200);
+    } else {
+      if (audioRef.current) {
+        audioRef.current.load();
+        setTimeout(() => {
+          audioRef.current.play()
+            .then(() => setIsPlaying(true))
+            .catch(err => console.log("Play failed: ", err));
+        }, 100);
+      }
     }
   };
 
   const handleTimeUpdate = () => {
-    if (audioRef.current) {
+    if (!currentTrack.isYt && audioRef.current) {
       setElapsedTime(Math.floor(audioRef.current.currentTime * 10));
       if (audioRef.current.duration) {
         setTrackDuration(audioRef.current.duration);
@@ -154,10 +283,16 @@ function BeatsPlayer() {
   };
 
   const handleSeek = (e) => {
-    if (audioRef.current) {
-      const seekVal = parseFloat(e.target.value);
-      audioRef.current.currentTime = seekVal;
-      setElapsedTime(Math.floor(seekVal * 10));
+    const seekVal = parseFloat(e.target.value);
+    setElapsedTime(Math.floor(seekVal * 10));
+    if (currentTrack.isYt) {
+      if (ytPlayerRef.current && typeof ytPlayerRef.current.seekTo === 'function') {
+        ytPlayerRef.current.seekTo(seekVal, true);
+      }
+    } else {
+      if (audioRef.current) {
+        audioRef.current.currentTime = seekVal;
+      }
     }
   };
 
@@ -167,8 +302,15 @@ function BeatsPlayer() {
     let parsedUrl = target;
     let title = "Custom Stream";
     let artist = "Web Audio Link";
+    let isYt = false;
 
-    if (target.includes('somafm.com')) {
+    const ytMatch = target.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/|music\.youtube\.com\/watch\?v=)([a-zA-Z0-9_-]{11})/i);
+    if (ytMatch && ytMatch[1]) {
+      isYt = true;
+      parsedUrl = ytMatch[1];
+      title = "Custom YouTube Song";
+      artist = "YouTube Music Stream";
+    } else if (target.includes('somafm.com')) {
       const match = target.match(/somafm\.com\/([a-zA-Z0-9_-]+)/);
       if (match && match[1]) {
         const channel = match[1].toLowerCase();
@@ -189,19 +331,12 @@ function BeatsPlayer() {
       }
     }
 
-    const newTrack = { title, artist, url: parsedUrl };
+    const newTrack = { title, artist, url: parsedUrl, isYt };
     setTracks(prev => {
       const updated = [...prev, newTrack];
-      setCurrentTrackIdx(updated.length - 1);
-      setIsPlaying(false);
-      setElapsedTime(0);
+      const newIdx = updated.length - 1;
       setTimeout(() => {
-        if (audioRef.current) {
-          audioRef.current.load();
-          audioRef.current.play()
-            .then(() => setIsPlaying(true))
-            .catch(err => console.log("Audio play blocked: ", err));
-        }
+        handleTrackChange(newIdx);
       }, 100);
       return updated;
     });
@@ -214,7 +349,6 @@ function BeatsPlayer() {
     return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
   };
 
-  // Tape roll thickness calculations (elapsed cycles max 3000 = 5 min)
   const leftTapeScale = Math.max(0.4, 1.3 - (elapsedTime / 1800));
   const rightTapeScale = Math.min(1.3, 0.4 + (elapsedTime / 1800));
 
@@ -222,36 +356,37 @@ function BeatsPlayer() {
     <div className="beats-remade-container">
       <audio 
         ref={audioRef} 
-        src={tracks[currentTrackIdx].url} 
+        src={currentTrack.isYt ? "" : currentTrack.url} 
         preload="auto"
         crossOrigin="anonymous"
         onTimeUpdate={handleTimeUpdate}
         onEnded={() => handleTrackChange((currentTrackIdx + 1) % tracks.length)}
       />
+
+      <div style={{ position: 'absolute', width: '1px', height: '1px', opacity: 0, pointerEvents: 'none', overflow: 'hidden' }}>
+        <div id="beats-yt-player-iframe"></div>
+      </div>
       
-      {/* Left Hand Tape Deck / Player */}
       <div className="beats-deck-pane">
         <div className="beats-lcd-screen">
           <div className="lcd-ticker">
-            <span className="lcd-text-scroll">${tracks[currentTrackIdx].title.toUpperCase()} - ${tracks[currentTrackIdx].artist.toUpperCase()}</span>
+            <span className="lcd-text-scroll">${currentTrack.title.toUpperCase()} - ${currentTrack.artist.toUpperCase()}</span>
           </div>
           <div className="lcd-meta-row">
             <span>${formatTime(elapsedTime)} / ${formatTime(Math.floor(trackDuration * 10))}</span>
             <span>${isPlaying ? '[PLAYING]' : '[PAUSED]'}</span>
             <span>${bitrate}KBPS</span>
           </div>
-          {/* Timeline Seeker Slider */}
           <div className="beats-timeline-wrapper">
             <input 
               type="range"
               min="0"
               max={trackDuration || 100}
-              value={audioRef.current ? audioRef.current.currentTime : 0}
+              value={elapsedTime / 10}
               onChange={handleSeek}
               className="beats-timeline-slider"
             />
           </div>
-          {/* Visualizer frequency bars */}
           <div className="lcd-visualizer">
             {barHeights.map((h, i) => (
               <div 
@@ -275,7 +410,6 @@ function BeatsPlayer() {
           <div className="cassette-bottom-strip">STUDIO SOUND DECK v2</div>
         </div>
 
-        {/* Volume controls row */}
         <div className="beats-volume-row">
           <button className="mute-btn" onClick={() => setIsMuted(!isMuted)}>
             ${isMuted ? '🔇' : '🔊'}
@@ -300,7 +434,6 @@ function BeatsPlayer() {
           <button className="deck-btn btn-next" onClick={() => handleTrackChange((currentTrackIdx + 1) % tracks.length)}>NEXT</button>
         </div>
 
-        {/* Equalizer presets */}
         <div className="eq-presets">
           <span className="eq-label">PRESETS:</span>
           {['flat', 'rock', 'pop', 'electronic'].map((preset) => (
@@ -318,7 +451,7 @@ function BeatsPlayer() {
           <input 
             type="text" 
             className="beats-url-input"
-            placeholder="Paste stream/mp3 link..."
+            placeholder="Paste YouTube or MP3 link..."
             value={urlInput}
             onChange={(e) => setUrlInput(e.target.value)}
           />
@@ -326,7 +459,6 @@ function BeatsPlayer() {
         </div>
       </div>
 
-      {/* Right Hand Playlist Sidebar */}
       <div className="beats-playlist-pane">
         <div className="playlist-title">STATIONS SHELF</div>
         <div className="playlist-scroll-list">
@@ -345,7 +477,6 @@ function BeatsPlayer() {
     </div>
   );
 }
-
 function LoglineGame({ films }) {
   const [activeGame, setActiveGame] = useState('menu'); // 'menu', 'trivia', 'higherlower'
   
@@ -1059,60 +1190,7 @@ function App() {
   const displayContentRef = useRef(null);
 
 
-  // Add item form state
-  const [showAddForm, setShowAddForm] = useState(false);
-  const [newTitle, setNewTitle] = useState('');
-  const [newYear, setNewYear] = useState('');
-  const [newRating, setNewRating] = useState('★★★★');
-  const [newDirector, setNewDirector] = useState('');
-  const [newGenres, setNewGenres] = useState('');
 
-  const handleAddNewItem = (e) => {
-    e.preventDefault();
-    if (!newTitle.trim()) return;
-
-    const item = {
-      title: newTitle.trim(),
-      year: newYear.trim() || new Date().getFullYear().toString(),
-      image: "",
-      rating: category === 'films' ? newRating : undefined,
-      score: category !== 'films' ? parseFloat(newRating) || 8.0 : undefined,
-      director: category === 'films' ? newDirector.trim() || 'N/A' : undefined,
-      genres: category !== 'films' ? newGenres.split(',').map(g => g.trim()).filter(Boolean) : undefined,
-      slug: category === 'films' ? newTitle.trim().toLowerCase().replace(/\s+/g, '-') : undefined,
-      id: category !== 'films' ? Math.floor(Math.random() * 100000) : undefined,
-      status: category !== 'films' ? 'completed' : undefined,
-      episodes_watched: category === 'anime' ? 12 : undefined,
-      chapters: category === 'manga' ? 50 : undefined,
-      volumes: category === 'manga' ? 5 : undefined,
-      start_date: 'N/A',
-      finish_date: 'N/A',
-      sort_date: new Date().toISOString().split('T')[0]
-    };
-
-    setMediaDb(prev => {
-      const updated = {
-        ...prev,
-        [category]: [item, ...prev[category]]
-      };
-      return updated;
-    });
-
-    setSelectedItem(item);
-    if (item.image) {
-      setDisplayBg(item.image);
-    } else {
-      setDisplayBg('');
-    }
-    halComment('Indexed Log entry: added "' + item.title + '" (' + item.year + ') to shelf.');
-
-    // Reset fields
-    setNewTitle('');
-    setNewYear('');
-    setNewDirector('');
-    setNewGenres('');
-    setShowAddForm(false);
-  };
 
   const [description, setDescription] = useState('');
   const [isLoadingDesc, setIsLoadingDesc] = useState(false);
@@ -1617,7 +1695,7 @@ function App() {
               setStartMenuOpen(!startMenuOpen);
             }}
           >
-            🔴 HAL 9000
+            🔵 HAL 9000
           </button>
           <span>SumedhOS v2.0</span>
           <span>{currentTime}</span>
@@ -1974,9 +2052,7 @@ function App() {
                           <option value="chronological">Sort: Release Year</option>
                           <option value="rating">Sort: Personal Rating</option>
                         </select>
-                        <button className="add-entry-btn-trigger mono" onClick={() => setShowAddForm(true)}>
-                          + LOG
-                        </button>
+                        
                       </div>
                     </div>
 
@@ -1987,105 +2063,57 @@ function App() {
                       <span className="stat-badge">TOP GENRE: {getTopGenre()}</span>
                     </div>
 
-                    {showAddForm ? (
-                      <form onSubmit={handleAddNewItem} className="add-entry-form mono">
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
-                          <span style={{ fontSize: '0.9rem', fontWeight: 'bold', color: 'var(--oxblood-soft)' }}>[ Log New {category.slice(0, -1)} ]</span>
-                          <button type="button" className="close-form-btn" onClick={() => setShowAddForm(false)}>[ CANCEL ]</button>
-                        </div>
-                        <div className="form-field-row">
-                          <label>Title:</label>
-                          <input type="text" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} placeholder="Enter title..." required />
-                        </div>
-                        <div className="form-field-row">
-                          <label>Year:</label>
-                          <input type="text" value={newYear} onChange={(e) => setNewYear(e.target.value)} placeholder="e.g. 2026" />
-                        </div>
-                        <div className="form-field-row">
-                          <label>{category === 'films' ? 'Rating:' : 'Score (1-10):'}</label>
-                          {category === 'films' ? (
-                            <select value={newRating} onChange={(e) => setNewRating(e.target.value)}>
-                              <option value="★★★★★">★★★★★ (10/10)</option>
-                              <option value="★★★★½">★★★★½ (9/10)</option>
-                              <option value="★★★★">★★★★ (8/10)</option>
-                              <option value="★★★½">★★★½ (7/10)</option>
-                              <option value="★★★">★★★ (6/10)</option>
-                              <option value="★★½">★★½ (5/10)</option>
-                              <option value="★★">★★ (4/10)</option>
-                              <option value="★">★ (2/10)</option>
-                            </select>
-                          ) : (
-                            <input type="number" min="1" max="10" step="0.5" value={newRating} onChange={(e) => setNewRating(e.target.value)} />
-                          )}
-                        </div>
-                        {category === 'films' ? (
-                          <div className="form-field-row">
-                            <label>Director:</label>
-                            <input type="text" value={newDirector} onChange={(e) => setNewDirector(e.target.value)} placeholder="Director name..." />
-                          </div>
-                        ) : (
-                          <div className="form-field-row">
-                            <label>Genres:</label>
-                            <input type="text" value={newGenres} onChange={(e) => setNewGenres(e.target.value)} placeholder="Action, Sci-Fi..." />
-                          </div>
-                        )}
-                        <button type="submit" className="submit-entry-btn">[ SAVE TO SHELF ]</button>
-                      </form>
-                    ) : (
-                      <>
-                        <div className="movie-grid">
-                          {processedItems.length === 0 ? (
-                            <div className="grid-empty-state mono">[ No matching titles found on the shelf ]</div>
-                          ) : (
-                            processedItems.map((item, index) => {
-                              const isSelected = selectedItem && (
-                                (category === 'films' && selectedItem.slug === item.slug) ||
-                                (category !== 'films' && selectedItem.id === item.id)
-                              );
-                              
-                              return (
-                                <div 
-                                  key={category === 'films' ? item.slug : item.id}
-                                  className={`grid-item-card ${isSelected ? 'selected' : ''}`}
-                                  style={{ animationDelay: `${index * 12}ms` }}
-                                  tabIndex="0"
-                                  onClick={() => handleItemSelect(item)}
-                                  onFocus={() => handleItemSelect(item)}
-                                >
-                                  <div className="card-inner">
-                                    {item.image ? (
-                                      <img 
-                                        className="card-poster-img"
-                                        src={item.image} 
-                                        alt={item.title} 
-                                        loading="lazy" 
-                                        referrerPolicy="no-referrer"
-                                      />
-                                    ) : (
-                                      <div 
-                                        className="card-fallback-svg-container"
-                                        dangerouslySetInnerHTML={{ __html: generateGenericCover(item.title, item.year) }}
-                                      />
-                                    )}
+                    <div className="movie-grid">
+                      {processedItems.length === 0 ? (
+                        <div className="grid-empty-state mono">[ No matching titles found on the shelf ]</div>
+                      ) : (
+                        processedItems.map((item, index) => {
+                          const isSelected = selectedItem && (
+                            (category === 'films' && selectedItem.slug === item.slug) ||
+                            (category !== 'films' && selectedItem.id === item.id)
+                          );
+                          
+                          return (
+                            <div 
+                              key={category === 'films' ? item.slug : item.id}
+                              className={`grid-item-card ${isSelected ? 'selected' : ''}`}
+                              style={{ animationDelay: `${index * 12}ms` }}
+                              tabIndex="0"
+                              onClick={() => handleItemSelect(item)}
+                              onFocus={() => handleItemSelect(item)}
+                            >
+                              <div className="card-inner">
+                                {item.image ? (
+                                  <img 
+                                    className="card-poster-img"
+                                    src={item.image} 
+                                    alt={item.title} 
+                                    loading="lazy" 
+                                    referrerPolicy="no-referrer"
+                                  />
+                                ) : (
+                                  <div 
+                                    className="card-fallback-svg-container"
+                                    dangerouslySetInnerHTML={{ __html: generateGenericCover(item.title, item.year) }}
+                                  />
+                                )}
 
-                                    <div className="card-hover-overlay">
-                                      <span className="card-hover-title">{item.title}</span>
-                                      <span className="card-hover-year">{item.year}</span>
-                                    </div>
-
-                                    {(item.status === 'watching' || item.status === 'reading') && (
-                                      <div className="card-status-badge mono">
-                                        {item.status}
-                                      </div>
-                                    )}
-                                  </div>
+                                <div className="card-hover-overlay">
+                                  <span className="card-hover-title">{item.title}</span>
+                                  <span className="card-hover-year">{item.year}</span>
                                 </div>
-                              );
-                            })
-                          )}
-                        </div>
-                      </>
-                    )}
+
+                                {(item.status === 'watching' || item.status === 'reading') && (
+                                  <div className="card-status-badge mono">
+                                    {item.status}
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+                          );
+                        })
+                      )}
+                    </div>
                   </div>
 
                   <div className="closet-display">
