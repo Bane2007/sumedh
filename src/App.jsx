@@ -53,6 +53,9 @@ function BeatsPlayer() {
   const [barHeights, setBarHeights] = useState(new Array(16).fill(4));
   const ytPlayerRef = useRef(null);
 
+  const [searchResults, setSearchResults] = useState([]);
+  const [isSearching, setIsSearching] = useState(false);
+
   const initialStreams = [
     {
       title: "Back In Black",
@@ -113,12 +116,92 @@ function BeatsPlayer() {
       artist: "The Beatles",
       url: "A_MjCqQoU_M",
       isYt: true
+    },
+    {
+      title: "Immigrant Song",
+      artist: "Led Zeppelin",
+      url: "RlNhD0oS5pk",
+      isYt: true
+    },
+    {
+      title: "T.N.T.",
+      artist: "AC/DC",
+      url: "fGDd8Qo8aLM",
+      isYt: true
+    },
+    {
+      title: "The Chain",
+      artist: "Fleetwood Mac",
+      url: "kBYHwJH15v8",
+      isYt: true
+    },
+    {
+      title: "Wish You Were Here",
+      artist: "Pink Floyd",
+      url: "IXdNemOvyYk",
+      isYt: true
+    },
+    {
+      title: "Yesterday",
+      artist: "The Beatles",
+      url: "wM0IDlaUJIY",
+      isYt: true
     }
   ];
 
   const [tracks, setTracks] = useState(initialStreams);
 
   const currentTrack = tracks[currentTrackIdx];
+
+  const searchSongs = async (query) => {
+    if (!query.trim()) return;
+    setIsSearching(true);
+    setSearchResults([]);
+    try {
+      const res = await fetch(`https://yewtu.be/api/v1/search?q=${encodeURIComponent(query)}&type=video`);
+      if (res.ok) {
+        const data = await res.json();
+        if (data && Array.isArray(data)) {
+          const formatted = data.slice(0, 5).map(item => ({
+            title: item.title,
+            artist: item.author || "YouTube Artist",
+            url: item.videoId,
+            isYt: true
+          }));
+          setSearchResults(formatted);
+        }
+      } else {
+        throw new Error("Instance failed");
+      }
+    } catch(err) {
+      try {
+        const res2 = await fetch(`https://invidious.projectsegfaut.im/api/v1/search?q=${encodeURIComponent(query)}&type=video`);
+        if (res2.ok) {
+          const data = await res2.json();
+          if (data && Array.isArray(data)) {
+            const formatted = data.slice(0, 5).map(item => ({
+              title: item.title,
+              artist: item.author || "YouTube Artist",
+              url: item.videoId,
+              isYt: true
+            }));
+            setSearchResults(formatted);
+          }
+        }
+      } catch(err2) {
+        console.log("Search fallback:", err2);
+        const mockItem = {
+          title: query,
+          artist: "YouTube Web Query",
+          url: "pAgnJDJN4VA",
+          isYt: true
+        };
+        setSearchResults([mockItem]);
+      }
+    } finally {
+      setIsSearching(false);
+    }
+  };
 
   useEffect(() => {
     if (!window.YT) {
@@ -127,14 +210,6 @@ function BeatsPlayer() {
       const firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
     }
-    
-    const checkYt = setInterval(() => {
-      if (window.YT && window.YT.Player) {
-        setYtReady(true);
-        clearInterval(checkYt);
-      }
-    }, 100);
-    return () => clearInterval(checkYt);
   }, []);
 
   useEffect(() => {
@@ -413,10 +488,10 @@ function BeatsPlayer() {
         <div className="beats-cassette-housing">
           <div className="cassette-window">
             <div className={`spool-circle spool-l ${isPlaying ? 'spinning' : ''}`}>
-              <div className="tape-roll-fill" style={{ transform: `scale(${leftTapeScale})` }}></div>
+              <div className="tape-roll-fill" style={{ transform: `scale(dots)` }}><div className="tape-roll-fill" style={{ transform: `scale(${leftTapeScale})` }}></div></div>
             </div>
             <div className={`spool-circle spool-r ${isPlaying ? 'spinning' : ''}`}>
-              <div className="tape-roll-fill" style={{ transform: `scale(${rightTapeScale})` }}></div>
+              <div className="tape-roll-fill" style={{ transform: `scale(dots)` }}><div className="tape-roll-fill" style={{ transform: `scale(${rightTapeScale})` }}></div></div>
             </div>
           </div>
           <div className="cassette-bottom-strip">STUDIO SOUND DECK v2</div>
@@ -442,7 +517,7 @@ function BeatsPlayer() {
 
         <div className="beats-deck-controls">
           <button className="deck-btn btn-prev" onClick={() => handleTrackChange((currentTrackIdx - 1 + tracks.length) % tracks.length)}>PREV</button>
-          <button className={`deck-btn btn-play-pause ${isPlaying ? 'active' : ''}`} onClick={handleNativePlayPause}>${isPlaying ? 'PAUSE' : 'PLAY'}</button>
+          <button className={`deck-btn btn-play-pause ${isPlaying ? 'active' : ''}`} onClick={handleNativePlayPause}>&nbsp;${isPlaying ? 'PAUSE' : 'PLAY'}</button>
           <button className="deck-btn btn-next" onClick={() => handleTrackChange((currentTrackIdx + 1) % tracks.length)}>NEXT</button>
         </div>
 
@@ -459,7 +534,7 @@ function BeatsPlayer() {
           ))}
         </div>
 
-        <div className="beats-loader-box">
+        <div className="beats-loader-box" style={{ marginBottom: '10px' }}>
           <input 
             type="text" 
             className="beats-url-input"
@@ -468,6 +543,58 @@ function BeatsPlayer() {
             onChange={(e) => setUrlInput(e.target.value)}
           />
           <button className="beats-url-load-btn" onClick={loadMedia}>LOAD</button>
+        </div>
+
+        {/* Draggable search songs utility block */}
+        <div className="beats-search-row" style={{ display: 'flex', flexDirection: 'column', gap: '8px', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '10px' }}>
+          <div style={{ display: 'flex', gap: '6px' }}>
+            <input 
+              type="text" 
+              className="beats-url-input"
+              placeholder="Search YouTube rock track..."
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  searchSongs(e.target.value);
+                }
+              }}
+              id="beats-search-input"
+            />
+            <button className="beats-url-load-btn" onClick={() => {
+              const val = document.getElementById('beats-search-input').value;
+              searchSongs(val);
+            }}>SEARCH</button>
+          </div>
+          {isSearching && <div className="mono" style={{ fontSize: '0.55rem', opacity: 0.7 }}>[ Querying mainframe database... ]</div>}
+          {searchResults.length > 0 && (
+            <div className="beats-search-results" style={{ display: 'flex', flexDirection: 'column', gap: '4px', background: 'rgba(0,0,0,0.3)', padding: '6px', borderRadius: '4px' }}>
+              <div className="mono" style={{ fontSize: '0.55rem', color: '#00e5ff', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '2px' }}>TOP SEARCH RESULTS:</div>
+              {searchResults.map((item, idx) => (
+                <div key={idx} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.55rem', gap: '10px' }}>
+                  <span className="mono" style={{ textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap', flex: 1 }} title={`${item.title} - ${item.artist}`}>
+                    {item.title.length > 28 ? item.title.slice(0, 28) + '...' : item.title}
+                  </span>
+                  <button 
+                    className="control-action-btn" 
+                    style={{ fontSize: '0.5rem', padding: '1px 6px' }}
+                    onClick={() => {
+                      setTracks(prev => {
+                        const updated = [...prev, item];
+                        setTimeout(() => {
+                          handleTrackChange(updated.length - 1);
+                        }, 100);
+                        return updated;
+                      });
+                      setSearchResults([]);
+                      document.getElementById('beats-search-input').value = '';
+                      if (halComment) halComment("Added '" + item.title + "' to stations shelf.");
+                    }}
+                  >
+                    + ADD
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
@@ -1707,7 +1834,7 @@ function App() {
               setStartMenuOpen(!startMenuOpen);
             }}
           >
-            🔵 HAL 9000
+            🔴 HAL 9000
           </button>
           <span>SumedhOS v2.0</span>
           <span>{currentTime}</span>
@@ -2135,25 +2262,34 @@ function App() {
                       style={{ display: selectedItem ? 'block' : 'none' }}
                     >
                       {selectedItem && (
-                        <>
-                          <div className="display-header-row">
+                        <div className="display-split-layout" style={{ display: 'flex', gap: '24px', width: '100%', alignItems: 'flex-start' }}>
+                          
+                          {/* Left Panel: Cover & Compact Specs Grid */}
+                          <div className="display-left-panel" style={{ display: 'flex', flexDirection: 'column', gap: '12px', width: '160px', flexShrink: 0, alignItems: 'center' }}>
                             {selectedItem.image ? (
-                              <img 
-                                className="cover-art" 
-                                src={selectedItem.image} 
-                                alt={selectedItem.title} 
-                                referrerPolicy="no-referrer"
-                              />
+                              <img className="cover-art" src={selectedItem.image} alt={selectedItem.title} referrerPolicy="no-referrer" style={{ width: '140px', height: '200px', margin: 0 }} />
                             ) : (
-                              <div 
-                                className="cover-art"
-                                style={{ width: '140px', height: '200px' }}
-                                dangerouslySetInnerHTML={{ __html: generateGenericCover(selectedItem.title, selectedItem.year) }}
-                              />
+                              <div className="cover-art" style={{ width: '140px', height: '200px', margin: 0 }} dangerouslySetInnerHTML={{ __html: generateGenericCover(selectedItem.title, selectedItem.year) }} />
                             )}
                             
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
-                              <h3 className="display-title">
+                            <dl className="display-specs mono" style={{ marginTop: '12px', paddingTop: '10px', width: '100%', maxWidth: '160px', borderTop: '1px solid var(--hairline)' }}>
+                              <div><dt>Status</dt><dd>{selectedItem.status || (category === 'films' ? 'watched' : 'completed')}</dd></div>
+                              {category === 'anime' && <div><dt>Progress</dt><dd>{selectedItem.episodes_watched} eps</dd></div>}
+                              {category === 'manga' && (
+                                <>
+                                  <div><dt>Chapters</dt><dd>{selectedItem.chapters || 0} chs</dd></div>
+                                  <div><dt>Volumes</dt><dd>{selectedItem.volumes || 0} vols</dd></div>
+                                </>
+                              )}
+                              {selectedItem.start_date && selectedItem.start_date !== 'N/A' && <div><dt>Started</dt><dd>{selectedItem.start_date}</dd></div>}
+                              {selectedItem.finish_date && selectedItem.finish_date !== 'N/A' && <div><dt>Finished</dt><dd>{selectedItem.finish_date}</dd></div>}
+                            </dl>
+                          </div>
+
+                          {/* Right Panel: Title, Info, Description */}
+                          <div className="display-right-panel" style={{ display: 'flex', flexDirection: 'column', gap: '15px', flex: 1, minWidth: 0, textAlign: 'left' }}>
+                            <div>
+                              <h3 className="display-title" style={{ margin: '0 0 4px 0', fontSize: '1.6rem', textAlign: 'left' }}>
                                 {category === 'films' ? (
                                   <a href={`https://letterboxd.com/film/${selectedItem.slug}/`} target="_blank" rel="noopener">
                                     {selectedItem.title}
@@ -2164,86 +2300,64 @@ function App() {
                                   </a>
                                 )}
                               </h3>
-                              
-                              <p className="display-director mono">
+
+                              <p className="display-director mono" style={{ margin: '0 0 10px 0', textAlign: 'left' }}>
                                 {category === 'films' ? (
                                   selectedItem.director && selectedItem.director !== 'N/A' ? `Directed by ${selectedItem.director}` : 'Letterboxd Record'
                                 ) : (
                                   selectedItem.status === 'watching' || selectedItem.status === 'reading' ? (
-                                    <span className="status-watching-highlight">Currently {selectedItem.status}</span>
+                                    <span className="status-watching-highlight">Currently ${selectedItem.status}</span>
                                   ) : (
                                     'Completed Title'
                                   )
                                 )}
                               </p>
 
-                              <div className="display-meta mono">
+                              <div className="display-meta mono" style={{ margin: 0, justifyContent: 'flex-start' }}>
                                 {selectedItem.year} &middot; {renderStars(category === 'films' ? selectedItem.rating : selectedItem.score)}
                                 {category === 'films' && selectedItem.imdb_rating && selectedItem.imdb_rating !== 'N/A' && (
                                   <> &middot; <span style={{ color: '#ffb400', fontWeight: 'bold' }}>{selectedItem.imdb_rating}/10 (IMDb)</span></>
                                 )}
                               </div>
                             </div>
+
+                            {/* Genres Row */}
+                            {selectedItem.genres && selectedItem.genres.length > 0 && (
+                              <div className="mono" style={{ fontSize: '0.62rem', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '8px' }}>
+                                <span style={{ color: 'var(--ink-soft)', textTransform: 'uppercase', marginRight: '6px' }}>Genres:</span>
+                                <span style={{ color: 'var(--ink)' }}>{selectedItem.genres.join(', ')}</span>
+                              </div>
+                            )}
+
+                            {/* Cast / Cast Details */}
+                            {category === 'films' && selectedItem.cast && selectedItem.cast !== 'N/A' && (
+                              <div className="mono" style={{ fontSize: '0.62rem', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '8px' }}>
+                                <span style={{ color: 'var(--ink-soft)', textTransform: 'uppercase', marginRight: '6px' }}>Cast:</span>
+                                <span style={{ color: 'var(--ink)' }}>{selectedItem.cast}</span>
+                              </div>
+                            )}
+
+                            {/* Description block (Plot) */}
+                            <div className="display-description-box" style={{ flex: 1, overflowY: 'auto' }}>
+                              {category === 'films' ? (
+                                selectedItem.plot && selectedItem.plot !== 'N/A' && (
+                                  <p className="display-description">
+                                    {selectedItem.plot}
+                                  </p>
+                                )
+                              ) : (
+                                isLoadingDesc ? (
+                                  <p className="display-description" style={{ opacity: 0.6 }}>[ Loading description from MyAnimeList... ]</p>
+                                ) : description && (
+                                  <p className="display-description">
+                                    {description}
+                                  </p>
+                                )
+                              )}
+                            </div>
                           </div>
 
-                          {category === 'films' ? (
-                            <>
-                              <dl className="display-specs mono">
-                                {selectedItem.watched_date && selectedItem.watched_date !== 'N/A' && (
-                                  <div><dt>Watched</dt><dd>{selectedItem.watched_date}</dd></div>
-                                )}
-                                {selectedItem.cast && selectedItem.cast !== 'N/A' && (
-                                  <div>
-                                    <dt>Cast</dt>
-                                    <dd title={selectedItem.cast}>{selectedItem.cast}</dd>
-                                  </div>
-                                )}
-                              </dl>
-                              {selectedItem.plot && selectedItem.plot !== 'N/A' && (
-                                <p className="display-plot" style={{ marginTop: '1.25rem', fontSize: '0.72rem', fontStyle: 'italic', color: 'var(--ink-soft)', lineHeight: 1.45 }}>
-                                  {selectedItem.plot.length > 180 ? selectedItem.plot.slice(0, 180) + '...' : selectedItem.plot}
-                                </p>
-                              )}
-                            </>
-                          ) : (
-                            <>
-                              <dl className="display-specs mono">
-                                <div><dt>Status</dt><dd>{selectedItem.status}</dd></div>
-                                {category === 'anime' ? (
-                                  <div><dt>Progress</dt><dd>{selectedItem.episodes_watched} eps</dd></div>
-                                ) : (
-                                  <>
-                                    <div><dt>Chapters</dt><dd>{selectedItem.chapters || 0} chs</dd></div>
-                                    <div><dt>Volumes</dt><dd>{selectedItem.volumes || 0} vols</dd></div>
-                                  </>
-                                )}
-                                {selectedItem.start_date && selectedItem.start_date !== 'N/A' && (
-                                  <div><dt>Started</dt><dd>{selectedItem.start_date}</dd></div>
-                                )}
-                                {selectedItem.finish_date && selectedItem.finish_date !== 'N/A' && (
-                                  <div><dt>Finished</dt><dd>{selectedItem.finish_date}</dd></div>
-                                )}
-                                {selectedItem.genres && selectedItem.genres.length > 0 && (
-                                  <div style={{ gridColumn: 'span 2' }}>
-                                    <dt>Genres</dt>
-                                    <dd style={{ whiteSpace: 'normal', maxHeight: '40px', overflow: 'hidden', textOverflow: 'ellipsis' }} title={selectedItem.genres.join(', ')}>
-                                      {selectedItem.genres.join(', ')}
-                                    </dd>
-                                  </div>
-                                )}
-                              </dl>
-                              {isLoadingDesc ? (
-                                <p className="display-plot mono" style={{ marginTop: '1.25rem', fontSize: '0.72rem', opacity: 0.6 }}>
-                                  [ Loading description... ]
-                                </p>
-                              ) : description && (
-                                <p className="display-plot" style={{ marginTop: '1.25rem', fontSize: '0.72rem', fontStyle: 'italic', color: 'var(--ink-soft)', lineHeight: 1.45 }}>
-                                  {description.length > 180 ? description.slice(0, 180) + '...' : description}
-                                </p>
-                              )}
-                            </>
-                          )}
-                        </>
+                        </div>
                       )}
                     </div>
                     <div className="display-placeholder mono" style={{ display: selectedItem ? 'none' : 'block' }}>
