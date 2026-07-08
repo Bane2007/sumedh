@@ -55,52 +55,64 @@ function BeatsPlayer() {
 
   const initialStreams = [
     {
-      title: "FE!N",
-      artist: "Travis Scott feat. Playboi Carti",
-      url: "U8X851H8B3E",
+      title: "Back In Black",
+      artist: "AC/DC",
+      url: "pAgnJDJN4VA",
       isYt: true
     },
     {
-      title: "redrum",
-      artist: "21 Savage",
-      url: "A2Wp9R35n48",
+      title: "Come As You Are",
+      artist: "Nirvana",
+      url: "hTWKbfoikeg",
       isYt: true
     },
     {
-      title: "Flashing Lights",
-      artist: "Kanye West",
-      url: "HAfFfqiYLp0",
+      title: "November Rain",
+      artist: "Guns N' Roses",
+      url: "8SbUC-UaAxE",
       isYt: true
     },
     {
-      title: "All The Stars",
-      artist: "Kendrick Lamar & SZA",
-      url: "JQbjS0_ZfJ0",
+      title: "Smells Like Teen Spirit",
+      artist: "Nirvana",
+      url: "hTWKbfoikeg",
       isYt: true
     },
     {
-      title: "Lovers Rock",
-      artist: "TV Girl",
-      url: "kYJt2x45U8o",
+      title: "Sweet Child O' Mine",
+      artist: "Guns N' Roses",
+      url: "1w7OgIMMRc4",
       isYt: true
     },
     {
-      title: "Borderline",
-      artist: "Tame Impala",
-      url: "v1RuurNx55g",
+      title: "Thunderstruck",
+      artist: "AC/DC",
+      url: "v2AC41dglnM",
       isYt: true
     },
     {
-      title: "Tere Bina",
-      artist: "A.R. Rahman (Guru OST)",
-      url: "RMd2hXlVEQg",
+      title: "Paranoid",
+      artist: "Black Sabbath",
+      url: "uk_wUT1CvWM",
       isYt: true
     },
     {
-      title: "Mima's Theme - Perfect Blue",
-      artist: "Masahiro Ikumi (Anime Masterpiece)",
-      url: "https://ia601206.us.archive.org/24/items/perfect-blue-ost/01.%20Mima%27s%20Theme.mp3",
-      isYt: false
+      title: "Dream On",
+      artist: "Aerosmith",
+      url: "qDRORiXn14E",
+      isYt: true
+    },
+    {
+      title: "Comfortably Numb",
+      artist: "Pink Floyd",
+      url: "_FrdVdKlxUk",
+      isYt: true
+    },
+    {
+      title: "Hey Jude",
+      artist: "The Beatles",
+      url: "A_MjCqQoU_M",
+      isYt: true
     }
   ];
 
