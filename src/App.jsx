@@ -40,6 +40,7 @@ const renderStars = (rating) => {
 function BeatsPlayer() {
   const [urlInput, setUrlInput] = useState('');
   const [currentTrackIdx, setCurrentTrackIdx] = useState(0);
+  const [ytApiReady, setYtApiReady] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [elapsedTime, setElapsedTime] = useState(0); // deciseconds
   const [trackDuration, setTrackDuration] = useState(180); // seconds
@@ -158,29 +159,21 @@ function BeatsPlayer() {
     if (!query.trim()) return;
     setIsSearching(true);
     setSearchResults([]);
-    try {
-      const targetUrl = "https://yewtu.be/api/v1/search?q=" + encodeURIComponent(query) + "&type=video";
-      const resVal = await fetch(targetUrl);
-      if (resVal.ok) {
-        const data = await resVal.json();
-        if (data && Array.isArray(data)) {
-          const formatted = data.slice(0, 5).map(item => ({
-            title: item.title,
-            artist: item.author || "YouTube Artist",
-            url: item.videoId,
-            isYt: true
-          }));
-          setSearchResults(formatted);
-        }
-      } else {
-        throw new Error("Instance failed");
-      }
-    } catch(err) {
+    
+    const endpoints = [
+      "https://yewtu.be/api/v1/search",
+      "https://invidious.projectsegfaut.im/api/v1/search",
+      "https://iv.melmac.space/api/v1/search"
+    ];
+
+    let success = false;
+    for (const ep of endpoints) {
+      if (success) break;
       try {
-        const res2 = await fetch("https://invidious.projectsegfaut.im/api/v1/search?q=" + encodeURIComponent(query) + "&type=video");
-        if (res2.ok) {
-          const data = await res2.json();
-          if (data && Array.isArray(data)) {
+        const res = await fetch(`${ep}?q=${encodeURIComponent(query)}&type=video`);
+        if (res.ok) {
+          const data = await res.json();
+          if (Array.isArray(data) && data.length > 0) {
             const formatted = data.slice(0, 5).map(item => ({
               title: item.title,
               artist: item.author || "YouTube Artist",
@@ -188,21 +181,24 @@ function BeatsPlayer() {
               isYt: true
             }));
             setSearchResults(formatted);
+            success = true;
           }
         }
-      } catch(err2) {
-        console.log("Search fallback:", err2);
-        const mockItem = {
-          title: query,
-          artist: "YouTube Web Query",
-          url: "pAgnJDJN4VA",
-          isYt: true
-        };
-        setSearchResults([mockItem]);
+      } catch (err) {
+        // Continue to next endpoint
       }
-    } finally {
-      setIsSearching(false);
     }
+
+    if (!success) {
+      const mockItem = {
+        title: query,
+        artist: "YouTube Web Query",
+        url: "pAgnJDJN4VA",
+        isYt: true
+      };
+      setSearchResults([mockItem]);
+    }
+    setIsSearching(false);
   };
 
   useEffect(() => {
@@ -211,6 +207,18 @@ function BeatsPlayer() {
       tag.src = 'https://www.youtube.com/iframe_api';
       const firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    }
+
+    if (window.YT && window.YT.Player) {
+      setYtApiReady(true);
+    } else {
+      const checkYt = setInterval(() => {
+        if (window.YT && window.YT.Player) {
+          setYtApiReady(true);
+          clearInterval(checkYt);
+        }
+      }, 250);
+      return () => clearInterval(checkYt);
     }
   }, []);
 
@@ -1088,9 +1096,15 @@ function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children
   const [isDragging, setIsDragging] = useState(false);
   const [isResizing, setIsResizing] = useState(false);
   const [isMaximized, setIsMaximized] = useState(defaultMaximized || window.innerWidth <= 768);
+  
   const dragStart = useRef({ x: 0, y: 0 });
   const resizeStart = useRef({ w: 0, h: 0, x: 0, y: 0 });
   const windowRef = useRef(null);
+  const positionRef = useRef(position);
+
+  useEffect(() => {
+    positionRef.current = position;
+  }, [position]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -1102,63 +1116,77 @@ function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const handleMouseDown = (e) => {
+  const handleStart = (e, action) => {
     if (isMaximized) return;
-    if (e.target.classList.contains('window-header') || e.target.classList.contains('window-title')) {
+    onFocus();
+    
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+
+    if (action === 'drag') {
+      if (e.target.closest('.window-controls')) return;
       setIsDragging(true);
       dragStart.current = {
-        x: e.clientX - position.x,
-        y: e.clientY - position.y
+        x: clientX - positionRef.current.x,
+        y: clientY - positionRef.current.y
       };
-      onFocus();
-      e.preventDefault();
+      if (e.cancelable) e.preventDefault();
+    } else if (action === 'resize') {
+      setIsResizing(true);
+      resizeStart.current = {
+        w: windowRef.current ? windowRef.current.offsetWidth : size.width,
+        h: windowRef.current ? windowRef.current.offsetHeight : size.height,
+        x: clientX,
+        y: clientY
+      };
+      e.stopPropagation();
+      if (e.cancelable) e.preventDefault();
     }
   };
 
-  const handleResizeMouseDown = (e) => {
-    e.stopPropagation();
-    e.preventDefault();
-    setIsResizing(true);
-    resizeStart.current = {
-      w: windowRef.current ? windowRef.current.offsetWidth : size.width,
-      h: windowRef.current ? windowRef.current.offsetHeight : size.height,
-      x: e.clientX,
-      y: e.clientY
-    };
-    onFocus();
-  };
-
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMove = (e) => {
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+
       if (isDragging && !isMaximized) {
+        const dx = clientX - dragStart.current.x;
+        const dy = clientY - dragStart.current.y;
+        
         const rect = windowRef.current ? windowRef.current.getBoundingClientRect() : { width: size.width, height: size.height };
-        const newX = Math.max(0, Math.min(window.innerWidth - rect.width, e.clientX - dragStart.current.x));
-        const newY = Math.max(0, Math.min(window.innerHeight - rect.height - 30, e.clientY - dragStart.current.y));
+        const newX = Math.max(0, Math.min(window.innerWidth - rect.width, dx));
+        const newY = Math.max(0, Math.min(window.innerHeight - rect.height - 30, dy));
+        
         setPosition({ x: newX, y: newY });
       } else if (isResizing) {
-        const deltaX = e.clientX - resizeStart.current.x;
-        const deltaY = e.clientY - resizeStart.current.y;
-        const newW = Math.max(300, Math.min(window.innerWidth - position.x - 20, resizeStart.current.w + deltaX));
-        const newH = Math.max(200, Math.min(window.innerHeight - position.y - 45, resizeStart.current.h + deltaY));
+        const deltaX = clientX - resizeStart.current.x;
+        const deltaY = clientY - resizeStart.current.y;
+        
+        const newW = Math.max(300, Math.min(window.innerWidth - positionRef.current.x - 20, resizeStart.current.w + deltaX));
+        const newH = Math.max(200, Math.min(window.innerHeight - positionRef.current.y - 45, resizeStart.current.h + deltaY));
         setSize({ width: newW, height: newH });
       }
     };
 
-    const handleMouseUp = () => {
+    const handleUp = () => {
       setIsDragging(false);
       setIsResizing(false);
     };
 
     if (isDragging || isResizing) {
-      document.addEventListener('mousemove', handleMouseMove);
-      document.addEventListener('mouseup', handleMouseUp);
+      document.addEventListener('mousemove', handleMove);
+      document.addEventListener('mouseup', handleUp);
+      document.addEventListener('touchmove', handleMove, { passive: false });
+      document.addEventListener('touchend', handleUp);
     }
 
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseup', handleMouseUp);
+      document.removeEventListener('mousemove', handleMove);
+      document.removeEventListener('mouseup', handleUp);
+      document.removeEventListener('touchmove', handleMove);
+      document.removeEventListener('touchend', handleUp);
     };
-  }, [isDragging, isResizing, isMaximized, position, size]);
+  }, [isDragging, isResizing, isMaximized, size.width, size.height]);
 
   return (
     <div 
@@ -1175,8 +1203,14 @@ function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children
         flexDirection: 'column'
       }}
       onMouseDown={onFocus}
+      onTouchStart={onFocus}
     >
-      <div className="window-header" onMouseDown={handleMouseDown}>
+      <div 
+        className="window-header" 
+        onMouseDown={(e) => handleStart(e, 'drag')}
+        onTouchStart={(e) => handleStart(e, 'drag')}
+        onDoubleClick={() => { if (window.innerWidth > 768) setIsMaximized(!isMaximized); }}
+      >
         <span className="window-title">{title}</span>
         <div className="window-controls">
           <div className="window-minimize" title="Minimize" onClick={(e) => { e.stopPropagation(); onMinimize(); }}></div>
@@ -1199,7 +1233,8 @@ function OSWindow({ id, title, width, height, onClose, zIndex, onFocus, children
       {!isMaximized && (
         <div 
           className="window-resize-handle" 
-          onMouseDown={handleResizeMouseDown}
+          onMouseDown={(e) => handleStart(e, 'resize')}
+          onTouchStart={(e) => handleStart(e, 'resize')}
           style={{
             position: 'absolute',
             right: '0',
@@ -1536,9 +1571,7 @@ function App() {
   // HAL 9000 Boot Sequence state
   const [booting, setBooting] = useState(true);
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setBooting(false);
-    }, 2800);
+    const timer = setTimeout(() => { setBooting(false); }, 300);
     return () => clearTimeout(timer);
   }, []);
 
@@ -1601,8 +1634,10 @@ function App() {
   }, [selectedItem, category]);
 
   // HAL 9000 Desktop Assistant State
-  const [halSpeech, setHalSpeech] = useState("Good afternoon, Sumedh. I am putting myself to the fullest possible use.");
-  const [halBubbleVisible, setHalBubbleVisible] = useState(false);
+  const halSpeech = "";
+  const setHalSpeech = () => {};
+  const halBubbleVisible = false;
+  const setHalBubbleVisible = () => {};
 
   const halQuotes = [
     "I am putting myself to the fullest possible use, Sumedh.",
@@ -1638,25 +1673,7 @@ function App() {
       console.log("AudioContext blocked");
     }
   };
-  const halComment = (text) => {
-    setHalSpeech(text);
-    setHalBubbleVisible(true);
-    try {
-      const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      const osc = audioCtx.createOscillator();
-      const gain = audioCtx.createGain();
-      osc.connect(gain);
-      gain.connect(audioCtx.destination);
-      osc.type = "sine";
-      osc.frequency.setValueAtTime(600, audioCtx.currentTime);
-      gain.gain.setValueAtTime(0.06, audioCtx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.12);
-      osc.start();
-      osc.stop(audioCtx.currentTime + 0.12);
-    } catch (err) {
-      console.log("AudioContext blocked");
-    }
-  };
+  const halComment = () => {};
 
   // OS Windows state
   const [windows, setWindows] = useState([]);
@@ -1761,6 +1778,39 @@ function App() {
   const [newDirector, setNewDirector] = useState('');
   const [newGenres, setNewGenres] = useState('');
   const [newPersonalRating, setNewPersonalRating] = useState('8.5');
+  const [newImage, setNewImage] = useState('');
+  const [jikanSearch, setJikanSearch] = useState('');
+  const [jikanResults, setJikanResults] = useState([]);
+  const [searchingJikan, setSearchingJikan] = useState(false);
+
+  const searchJikan = async () => {
+    if (!jikanSearch.trim()) return;
+    setSearchingJikan(true);
+    setJikanResults([]);
+    try {
+      const type = category === 'anime' ? 'anime' : 'manga';
+      const res = await fetch(`https://api.jikan.moe/v4/${type}?q=${encodeURIComponent(jikanSearch)}&limit=5`);
+      if (res.ok) {
+        const json = await res.json();
+        setJikanResults(json.data || []);
+      }
+    } catch (e) {
+      console.error("Jikan API error:", e);
+    } finally {
+      setSearchingJikan(false);
+    }
+  };
+
+  const selectJikanResult = (resItem) => {
+    setNewTitle(resItem.title);
+    const yr = resItem.aired?.prop?.from?.year || resItem.published?.prop?.from?.year || '';
+    setNewYear(yr ? yr.toString() : '');
+    setNewGenres(resItem.genres?.map(g => g.name).join(', ') || '');
+    setNewRating(resItem.score ? resItem.score.toString() : '8.0');
+    setNewImage(resItem.images?.jpg?.large_image_url || resItem.images?.jpg?.image_url || '');
+    setJikanResults([]);
+    setJikanSearch('');
+  };
 
   const handleAddNewItem = (e) => {
     e.preventDefault();
@@ -1769,7 +1819,7 @@ function App() {
     const item = {
       title: newTitle.trim(),
       year: newYear.trim() || new Date().getFullYear().toString(),
-      image: "",
+      image: newImage.trim() || "",
       rating: category === 'films' ? newRating : undefined,
       score: category !== 'films' ? parseFloat(newRating) || 8.0 : undefined,
       my_rating: category !== 'films' ? parseFloat(newPersonalRating) || 8.5 : undefined,
@@ -1826,6 +1876,9 @@ function App() {
     setNewDirector('');
     setNewGenres('');
     setNewPersonalRating('8.5');
+    setNewImage('');
+    setJikanSearch('');
+    setJikanResults([]);
     setShowAddForm(false);
   };
 
@@ -1970,9 +2023,12 @@ function App() {
     const x = Math.min(Math.max(10, (w - winW) / 2 + (windows.length * 20)), maxX);
     const y = Math.min(Math.max(30, (h - winH) / 2 + (windows.length * 15)), maxY);
 
-    const newWindow = { id, title, width: winW, height: winH, x, y, zIndex: maxZ + 1, isMinimized: false };
-    setWindows([...windows, newWindow]);
-    setMaxZ(prev => prev + 1);
+    setWindows(prev => {
+      const maxZVal = prev.length > 0 ? Math.max(...prev.map(w => w.zIndex)) : 20;
+      const nextZ = Math.max(maxZVal + 1, 20);
+      const newWindow = { id, title, width: winW, height: winH, x, y, zIndex: nextZ, isMinimized: false };
+      return [...prev, newWindow];
+    });
     
     halComment("Process initialized: opening program " + title + "...");
   };
@@ -1988,10 +2044,11 @@ function App() {
   };
 
   const focusWindow = (id) => {
-    setMaxZ(prev => prev + 1);
-    setWindows(prev => prev.map(w => 
-      w.id === id ? { ...w, zIndex: maxZ + 1 } : w
-    ));
+    setWindows(prev => {
+      const maxZVal = prev.length > 0 ? Math.max(...prev.map(w => w.zIndex)) : 20;
+      const nextZ = Math.max(maxZVal + 1, 20);
+      return prev.map(w => w.id === id ? { ...w, zIndex: nextZ } : w);
+    });
   };
 
   const minimizeWindow = (id) => {
@@ -2002,10 +2059,11 @@ function App() {
   };
 
   const restoreWindow = (id) => {
-    setMaxZ(prev => prev + 1);
-    setWindows(prev => prev.map(w => 
-      w.id === id ? { ...w, isMinimized: false, zIndex: maxZ + 1 } : w
-    ));
+    setWindows(prev => {
+      const maxZVal = prev.length > 0 ? Math.max(...prev.map(w => w.zIndex)) : 20;
+      const nextZ = Math.max(maxZVal + 1, 20);
+      return prev.map(w => w.id === id ? { ...w, isMinimized: false, zIndex: nextZ } : w);
+    });
     halComment("Restoring " + id + ". Interfacing session resume, Sumedh.");
   };
 
@@ -2778,9 +2836,47 @@ function App() {
                           <span style={{ fontSize: '0.9rem', fontWeight: 'bold', color: '#ff1744' }}>[ Log New {category.slice(0, -1)} ]</span>
                           <button type="button" className="close-form-btn" onClick={() => setShowAddForm(false)} style={{ background: 'none', border: 'none', color: '#ff9800', cursor: 'pointer', fontSize: '0.62rem' }}>[ CANCEL ]</button>
                         </div>
+                        
+                        {category !== 'films' && (
+                          <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px dashed #444', padding: '8px', borderRadius: '4px', marginBottom: '12px' }}>
+                            <div style={{ fontSize: '0.62rem', color: 'var(--ink-soft)', marginBottom: '4px' }}>[ AUTO-COMPLETE FROM MYANIMELIST ]</div>
+                            <div style={{ display: 'flex', gap: '8px' }}>
+                              <input 
+                                type="text" 
+                                value={jikanSearch} 
+                                onChange={(e) => setJikanSearch(e.target.value)} 
+                                placeholder="Search e.g. Naruto..." 
+                                style={{ flex: 1, background: '#222', border: '1px solid #444', color: '#fff', padding: '3px 6px', fontSize: '0.72rem' }}
+                                onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); searchJikan(); } }}
+                              />
+                              <button type="button" onClick={searchJikan} style={{ background: '#333', border: '1px solid #555', color: '#fff', padding: '2px 8px', fontSize: '0.65rem', cursor: 'pointer' }}>
+                                {searchingJikan ? '...' : 'SEARCH'}
+                              </button>
+                            </div>
+                            {jikanResults.length > 0 && (
+                              <div style={{ background: '#000', border: '1px solid #333', marginTop: '6px', maxHeight: '100px', overflowY: 'auto' }}>
+                                {jikanResults.map(res => (
+                                  <div 
+                                    key={res.mal_id} 
+                                    onClick={() => selectJikanResult(res)} 
+                                    style={{ padding: '4px', borderBottom: '1px solid #222', fontSize: '0.65rem', cursor: 'pointer' }}
+                                    onMouseEnter={(e) => e.target.style.background = '#222'}
+                                    onMouseLeave={(e) => e.target.style.background = 'transparent'}
+                                  >
+                                    {res.title} ({res.aired?.prop?.from?.year || res.published?.prop?.from?.year || 'N/A'})
+                                  </div>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        )}
                         <div className="form-field-row" style={{ display: 'flex', marginBottom: '10px', alignItems: 'center', fontSize: '0.72rem' }}>
                           <label style={{ width: '80px', color: 'var(--ink-soft)' }}>Title:</label>
                           <input type="text" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} placeholder="Enter title..." required style={{ flex: 1, background: '#222', border: '1px solid #444', color: '#fff', padding: '4px 8px' }} />
+                        </div>
+                        <div className="form-field-row" style={{ display: 'flex', marginBottom: '10px', alignItems: 'center', fontSize: '0.72rem' }}>
+                          <label style={{ width: '80px', color: 'var(--ink-soft)' }}>Cover URL:</label>
+                          <input type="url" value={newImage} onChange={(e) => setNewImage(e.target.value)} placeholder="https://..." style={{ flex: 1, background: '#222', border: '1px solid #444', color: '#fff', padding: '4px 8px' }} />
                         </div>
                         <div className="form-field-row" style={{ display: 'flex', marginBottom: '10px', alignItems: 'center', fontSize: '0.72rem' }}>
                           <label style={{ width: '80px', color: 'var(--ink-soft)' }}>Year:</label>
