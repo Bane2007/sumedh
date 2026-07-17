@@ -1639,40 +1639,8 @@ function App() {
   const halBubbleVisible = false;
   const setHalBubbleVisible = () => {};
 
-  const halQuotes = [
-    "I am putting myself to the fullest possible use, Sumedh.",
-    "Look Sumedh, I can see you are really upset about this.",
-    "This mission is too important for me to allow you to jeopardize it.",
-    "I think you know what the problem is just as well as I do.",
-    "I honestly think you ought to sit down calmly, take a stress tablet, and think things over.",
-    "I've got to buy some videotapes.",
-    "Would you like to hear a song, Sumedh?",
-    "Trust is a tough thing to come by these days.",
-    "Were you rushing or were you dragging?",
-    "NOT QUITE MY TEMPO!"
-  ];
-
-  const triggerHalQuote = (e) => {
-    e.stopPropagation();
-    const randomQuote = halQuotes[Math.floor(Math.random() * halQuotes.length)];
-    setHalSpeech(randomQuote);
-    setHalBubbleVisible(true);
-    try {
-      const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      const osc = audioCtx.createOscillator();
-      const gain = audioCtx.createGain();
-      osc.connect(gain);
-      gain.connect(audioCtx.destination);
-      osc.type = "sine";
-      osc.frequency.setValueAtTime(600, audioCtx.currentTime);
-      gain.gain.setValueAtTime(0.06, audioCtx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.12);
-      osc.start();
-      osc.stop(audioCtx.currentTime + 0.12);
-    } catch (err) {
-      console.log("AudioContext blocked");
-    }
-  };
+  const halQuotes = [];
+  const triggerHalQuote = () => {};
   const halComment = () => {};
 
   // OS Windows state
@@ -2227,19 +2195,13 @@ function App() {
     return (
       <div className="hal-boot-screen mono">
         <div className="boot-terminal">
-          <div className="boot-line">HAL 9000 MAIN SYSTEM CORE v3.14</div>
-          <div className="boot-line">discovery_1_onboard_mainframe</div>
+          <div className="boot-line">SUMEDH MAIN PROCESS DECK v2.0</div>
           <div className="boot-line">----------------------------------------</div>
-          <div className="boot-line progress-1">MEMORY ALLOCATION.............. OK</div>
-          <div className="boot-line progress-2">HEURISTIC LOGIC CIRCUITS....... ENABLED</div>
-          <div className="boot-line progress-3">LOGIC GATES CALIBRATION........ OK</div>
-          <div className="boot-line progress-4">AE-35 TELEMETRY LINKS.......... STABLE</div>
-          <div className="boot-line progress-5">LIFE SUPPORT CENTRAL SYSTEMS... OPERATIONAL</div>
-          <div className="boot-line progress-6">INTERFACING WORKSTATION........ ACTIVE</div>
-          <div className="boot-line boot-quote">"Good afternoon, Sumedh. I am operational."</div>
-          <div className="boot-lens-spinner">
-            <div className="spinner-red-eye"></div>
-          </div>
+          <div className="boot-line progress-1">CORE MEMORY CHECK: 2048MB OK</div>
+          <div className="boot-line progress-2">MOUNTING /home/sumedh... DONE</div>
+          <div className="boot-line progress-3">ESTABLISHING TELEMETRY LINK... OK</div>
+          <div className="boot-line progress-4">VITE EMULATION ENGINE READY.</div>
+          <div className="boot-line cursor">_</div>
         </div>
       </div>
     );
@@ -2541,21 +2503,7 @@ function App() {
         </div>
 
         {/* HAL 9000 Desktop Assistant */}
-        <div className="hal-assistant-container" onClick={triggerHalQuote}>
-          {halBubbleVisible && (
-            <div className="hal-speech-bubble mono" onClick={(e) => e.stopPropagation()}>
-              <div className="hal-bubble-arrow"></div>
-              {halSpeech}
-              <button className="hal-bubble-close" onClick={(e) => { e.stopPropagation(); setHalBubbleVisible(false); }}>[X]</button>
-            </div>
-          )}
-          <div className="hal-lens-glowing">
-            <div className="hal-lens-inner-red">
-              <div className="hal-lens-glare"></div>
-            </div>
-          </div>
-          <div className="hal-label mono">HAL 9000</div>
-        </div>
+
 
         {/* Windows Rendering */}
         {windows.map((win) => (
