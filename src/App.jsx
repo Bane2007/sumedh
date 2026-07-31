@@ -453,7 +453,7 @@ function BeatsPlayer() {
     <div className="beats-compact-console-layout" style={{ display: 'flex', flexDirection: 'column', height: '100%', padding: '8px' }}>
       <audio 
         ref={audioRef} 
-        src={currentTrack.isYt ? "" : currentTrack.url} 
+        src={currentTrack.isYt ? undefined : currentTrack.url}
         preload="auto"
         crossOrigin="anonymous"
         onTimeUpdate={handleTimeUpdate}
@@ -695,7 +695,6 @@ function BeatsPlayer() {
                             });
                             setSearchResults([]);
                             document.getElementById('beats-search-input-field').value = '';
-                            if (halComment) halComment("Added '" + item.title + "' to stations shelf.");
                           }}
                         >
                           + ADD
@@ -824,7 +823,6 @@ function LoglineGame({ films }) {
     setTriviaSelected(opt);
     setTriviaHasAnswered(true);
     if (opt.title === triviaQuestion.target.title) {
-      if (halComment) halComment('Correct guess, Sumedh. Your memory retrieval systems are operating at peak efficiency.');
       const points = (triviaHardMode || !showHint) ? 1 : 0.5;
       setTriviaScore(s => s + points);
       setTriviaStreak(s => s + 1);
@@ -1317,16 +1315,12 @@ function PhotosApp() {
     setSlideshowPlaying(nextState);
     if (nextState) {
       setSelectedPhoto(PHOTO_GALLERY[0]);
-      if (halComment) halComment("Starting photo slideshow. Cycling through RAW captures...");
-    } else {
-      if (halComment) halComment("Slideshow playback paused.");
     }
   };
 
   const selectPhotoDirect = (photo) => {
     setSelectedPhoto(photo);
     setSlideshowPlaying(false);
-    if (halComment) halComment("Displaying image " + photo.title + " with EXIF metrics.");
   };
 
   if (selectedPhoto) {
@@ -1347,7 +1341,7 @@ function PhotosApp() {
                 <button 
                   key={f} 
                   className={"filter-btn " + (activeFilter === f ? "active" : "")}
-                  onClick={() => { setActiveFilter(f); if (halComment) halComment("Applied " + f + " color filter."); }}
+                  onClick={() => setActiveFilter(f)}
                 >
                   {f.toUpperCase()}
                 </button>
@@ -1459,7 +1453,6 @@ function App() {
     setNewDebtPerson('');
     setNewDebtAmount('');
     setNewDebtDesc('');
-    if (halComment) halComment("Logged debt: " + item.person + " balance modified.");
   };
 
   const handleRemoveDebt = (id) => {
@@ -1533,7 +1526,6 @@ function App() {
         return updated;
       });
       setRawNotesInput('');
-      if (halComment) halComment("Mainframe logic: successfully parsed " + parsed.length + " debt records.");
     }
   };
 
@@ -1560,11 +1552,9 @@ function App() {
     if (crtEnabled) {
       document.body.classList.add('crt-effect');
       document.body.classList.add('crt-flicker');
-      halComment('CRT mode active. Phosphor scanlines and lens reflection enabled.');
     } else {
       document.body.classList.remove('crt-effect');
       document.body.classList.remove('crt-flicker');
-      halComment('CRT scanline bypass active. Calibrating screen to default pixel resolution.');
     }
   }, [crtEnabled]);
 
@@ -1632,16 +1622,6 @@ function App() {
         setIsLoadingDesc(false);
       });
   }, [selectedItem, category]);
-
-  // HAL 9000 Desktop Assistant State
-  const halSpeech = "";
-  const setHalSpeech = () => {};
-  const halBubbleVisible = false;
-  const setHalBubbleVisible = () => {};
-
-  const halQuotes = [];
-  const triggerHalQuote = () => {};
-  const halComment = () => {};
 
   // OS Windows state
   const [windows, setWindows] = useState([]);
@@ -1834,7 +1814,6 @@ function App() {
 
     setSelectedItem(item);
     setDisplayBg('');
-    if (halComment) halComment('Indexed entry: added "' + item.title + '" to shelf.');
 
     setSelectedGenre('');
     setSelectedDecade('');
@@ -1897,7 +1876,6 @@ function App() {
     .catch(e => console.warn("Production environment fallback: Local API write ignored."));
 
     setSelectedItem(null);
-    if (halComment) halComment('Deleted entry "' + itemToRemove.title + '" from shelf.');
   };
 
   // Media Cabinet Filter states
@@ -1998,7 +1976,6 @@ function App() {
       return [...prev, newWindow];
     });
     
-    halComment("Process initialized: opening program " + title + "...");
   };
 
   const closeWindow = (id) => {
@@ -2008,7 +1985,6 @@ function App() {
       setClosingWindows(prev => prev.filter(item => item !== id));
     }, 250);
     
-    halComment("Process terminated: closed " + id + ".");
   };
 
   const focusWindow = (id) => {
@@ -2023,7 +1999,6 @@ function App() {
     setWindows(prev => prev.map(w => 
       w.id === id ? { ...w, isMinimized: true } : w
     ));
-    halComment("Minimizing " + id + ". Telemetry remains active in background, Sumedh.");
   };
 
   const restoreWindow = (id) => {
@@ -2032,7 +2007,6 @@ function App() {
       const nextZ = Math.max(maxZVal + 1, 20);
       return prev.map(w => w.id === id ? { ...w, isMinimized: false, zIndex: nextZ } : w);
     });
-    halComment("Restoring " + id + ". Interfacing session resume, Sumedh.");
   };
 
   const toggleMinimizeWindow = (id) => {
@@ -2176,7 +2150,6 @@ function App() {
     } else {
       setDisplayBg('');
     }
-    halComment('Loaded media metadata catalog for "' + item.title + '" (' + item.year + ').');
     if (displayContentRef.current) {
       displayContentRef.current.style.animation = 'none';
       void displayContentRef.current.offsetHeight;
@@ -2734,7 +2707,7 @@ function App() {
                         <select 
                           className="sort-select mono"
                           value={selectedGenre}
-                          onChange={(e) => { setSelectedGenre(e.target.value); halComment("Filtering category by " + (e.target.value || "all") + " genre."); }}
+                          onChange={(e) => setSelectedGenre(e.target.value)}
                         >
                           <option value="">All Genres</option>
                           {getAvailableGenres().map(g => (
@@ -2745,7 +2718,7 @@ function App() {
                         <select 
                           className="sort-select mono"
                           value={selectedDecade}
-                          onChange={(e) => { setSelectedDecade(e.target.value); halComment("Filtering category by " + (e.target.value || "all") + " decade."); }}
+                          onChange={(e) => setSelectedDecade(e.target.value)}
                         >
                           <option value="">All Decades</option>
                           {getAvailableDecades().map(d => (
@@ -3103,10 +3076,10 @@ function App() {
             {win.id === 'beats' && <BeatsPlayer />}
 
             {/* LOGLINE TRIVIA GAME CONTENT */}
-            {win.id === 'cinephile' && <LoglineGame films={mediaDb.films} halComment={halComment} />}
+            {win.id === 'cinephile' && <LoglineGame films={mediaDb.films} />}
 
             {/* CINEPLAY HANGMAN GAME CONTENT */}
-            {win.id === 'cineplay' && <CineplayGame films={mediaDb.films} halComment={halComment} />}
+            {win.id === 'cineplay' && <CineplayGame films={mediaDb.films} />}
 
             {/* CONTACT WINDOW CONTENT */}
             {win.id === 'contact' && (
@@ -3160,10 +3133,7 @@ function CineplayGame({ films }) {
     });
 
     if (!word.includes(letter)) {
-      if (halComment) halComment('Discrepancy: Letter \'' + letter.toUpperCase() + '\' is not on the board. Core lives compromised.');
       setWrongCount(prev => prev + 1);
-    } else {
-      if (halComment) halComment('Match: Letter \'' + letter.toUpperCase() + '\' is correct. Processing remaining variables.');
     }
   };
 

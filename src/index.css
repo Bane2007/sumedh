@@ -1187,6 +1187,9 @@ section, .colophon {
   display: flex;
   align-items: center;
 }
+.search-wrapper .search-input {
+  padding-right: 6.5rem;
+}
 .search-count {
   position: absolute;
   right: 0.75rem;
@@ -1775,9 +1778,13 @@ body.theme-contact {
   position: absolute;
   top: 60px; /* below status bar (24px) + margin */
   left: 30px;
+  bottom: 44px; /* clears the bottom taskbar so icons wrap into a new column instead of hiding behind it */
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
   gap: 28px;
+  column-gap: 40px;
   z-index: 5;
 }
 
