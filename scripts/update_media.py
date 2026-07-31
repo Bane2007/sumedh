@@ -191,7 +191,7 @@ def fetch_letterboxd_films():
         
     # 2. Load existing films.json cache
     cached_films_dict = {}
-    fallback_path = os.path.join("assets", "data", "films.json")
+    fallback_path = os.path.join("public", "assets", "data", "films.json")
     if os.path.exists(fallback_path):
         try:
             with open(fallback_path, "r", encoding="utf-8") as f:
