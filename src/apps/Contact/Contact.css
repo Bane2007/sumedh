@@ -1,4 +1,4 @@
-.ct-wrap { height: 100%; display: flex; align-items: center; justify-content: center; padding: 20px; box-sizing: border-box; }
+.ct-wrap { height: 100%; overflow-y: auto; display: flex; align-items: center; justify-content: center; padding: 20px; box-sizing: border-box; }
 
 .ct-card {
   position: relative;

@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import MediaCabinet from './apps/MediaCabinet/MediaCabinet.jsx';
 import DebtDesk from './apps/DebtDesk/DebtDesk.jsx';
 import AboutMe from './apps/AboutMe/AboutMe.jsx';
+import Contact from './apps/Contact/Contact.jsx';
 import { fetchMediaDatabase } from './apps/MediaCabinet/useMediaDb.js';
 
 // Open-source ad-free stream & internet radio cassette player
@@ -1628,7 +1629,7 @@ function App() {
               <div className="xp-start-right-item" onClick={() => { setCrtEnabled(!crtEnabled); setStartMenuOpen(false); }}>
                 <span>⚙️ Control Panel (CRT)</span>
               </div>
-              <div className="xp-start-right-item" onClick={() => { openWindow("contact", "Contact Links", 360, 180); setStartMenuOpen(false); }}>
+              <div className="xp-start-right-item" onClick={() => { openWindow("contact", "Contact Links", 360, 440); setStartMenuOpen(false); }}>
                 <span>🔗 Connect Links</span>
               </div>
             </div>
@@ -1804,7 +1805,7 @@ function App() {
           {/* Contact Shortcut */}
           <div 
             className="shortcut-item" 
-            onClick={(e) => { e.stopPropagation(); openWindow("contact", "Contact Links", 360, 180); }}
+            onClick={(e) => { e.stopPropagation(); openWindow("contact", "Contact Links", 360, 440); }}
             title="External portfolios, social networks and profiles"
           >
             <div className="shortcut-icon">
@@ -1946,17 +1947,7 @@ function App() {
             {win.id === 'cineplay' && <CineplayGame films={filmsForGames} />}
 
             {/* CONTACT WINDOW CONTENT */}
-            {win.id === 'contact' && (
-              <div className="contact-window-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifycontent: 'center', height: '100%' }}>
-                <ul className="contact__list" style={{ gap: '1rem 2rem' }}>
-                  <li><a href="https://www.imdb.com/name/nm18199394/" target="_blank" rel="noopener">IMDb</a></li>
-                  <li><a href="https://github.com/Bane2007" target="_blank" rel="noopener">GitHub</a></li>
-                  <li><a href="https://letterboxd.com/Bane_snj/" target="_blank" rel="noopener">Letterboxd</a></li>
-                  <li><a href="https://app.thestorygraph.com/profile/sumed_nj" target="_blank" rel="noopener">StoryGraph</a></li>
-                  <li><a href="https://www.instagram.com/sumed_nj/" target="_blank" rel="noopener">Instagram</a></li>
-                </ul>
-              </div>
-            )}
+            {win.id === 'contact' && <Contact />}
           </OSWindow>
         ))}
       </div>
