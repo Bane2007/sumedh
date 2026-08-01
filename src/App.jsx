@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import MediaCabinet from './apps/MediaCabinet/MediaCabinet.jsx';
+import DebtDesk from './apps/DebtDesk/DebtDesk.jsx';
 import { fetchMediaDatabase } from './apps/MediaCabinet/useMediaDb.js';
 
 // Open-source ad-free stream & internet radio cassette player
@@ -1374,127 +1375,6 @@ function PhotosApp() {
 }
 
 function App() {
-  const [debts, setDebts] = useState(() => {
-    try {
-      const stored = localStorage.getItem('sumedh_debts');
-      return stored ? JSON.parse(stored) : [];
-    } catch {
-      return [];
-    }
-  });
-
-  const [newDebtPerson, setNewDebtPerson] = useState('');
-  const [newDebtAmount, setNewDebtAmount] = useState('');
-  const [newDebtDesc, setNewDebtDesc] = useState('');
-  const [newDebtDirection, setNewDebtDirection] = useState('them_owes_me');
-  const [rawNotesInput, setRawNotesInput] = useState('');
-
-  const handleAddDebt = (e) => {
-    e.preventDefault();
-    if (!newDebtPerson.trim() || !newDebtAmount) return;
-
-    const item = {
-      id: Math.floor(Math.random() * 1000000),
-      direction: newDebtDirection,
-      person: newDebtPerson.trim(),
-      amount: parseFloat(newDebtAmount) || 0,
-      description: newDebtDesc.trim() || 'No description',
-      date: new Date().toISOString().split('T')[0]
-    };
-
-    setDebts(prev => {
-      const updated = [item, ...prev];
-      localStorage.setItem('sumedh_debts', JSON.stringify(updated));
-
-      // Local disk sync POST
-      fetch('/api/sync-debts', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(updated)
-      }).catch(() => {});
-
-      return updated;
-    });
-
-    setNewDebtPerson('');
-    setNewDebtAmount('');
-    setNewDebtDesc('');
-  };
-
-  const handleRemoveDebt = (id) => {
-    setDebts(prev => {
-      const updated = prev.filter(d => d.id !== id);
-      localStorage.setItem('sumedh_debts', JSON.stringify(updated));
-
-      // Local disk sync POST
-      fetch('/api/sync-debts', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(updated)
-      }).catch(() => {});
-
-      return updated;
-    });
-  };
-
-  const handleImportNotes = () => {
-    if (!rawNotesInput.trim()) return;
-    const lines = rawNotesInput.split('\n');
-    const parsed = [];
-    lines.forEach(line => {
-      const t = line.trim();
-      if (!t) return;
-      const owesMe = t.match(/^([a-zA-Z0-9_\s]+)\s+owes\s+me\s+([0-9.]+)(?:\s+for\s+(.+))?/i);
-      const oweThem = t.match(/^owe\s+([a-zA-Z0-9_\s]+)\s+([0-9.]+)(?:\s+for\s+(.+))?/i);
-      const colon = t.match(/^([a-zA-Z0-9_\s]+)\s*[:\-]\s*([0-9.]+)(?:\s*\((.+)\))?/i);
-
-      if (owesMe) {
-        parsed.push({
-          id: Math.floor(Math.random() * 1000000),
-          direction: 'them_owes_me',
-          person: owesMe[1].trim(),
-          amount: parseFloat(owesMe[2]),
-          description: owesMe[3] ? owesMe[3].trim() : 'Notes Import',
-          date: new Date().toISOString().split('T')[0]
-        });
-      } else if (oweThem) {
-        parsed.push({
-          id: Math.floor(Math.random() * 1000000),
-          direction: 'i_owe_them',
-          person: oweThem[1].trim(),
-          amount: parseFloat(oweThem[2]),
-          description: oweThem[3] ? oweThem[3].trim() : 'Notes Import',
-          date: new Date().toISOString().split('T')[0]
-        });
-      } else if (colon) {
-        parsed.push({
-          id: Math.floor(Math.random() * 1000000),
-          direction: 'them_owes_me',
-          person: colon[1].trim(),
-          amount: parseFloat(colon[2]),
-          description: colon[3] ? colon[3].trim() : 'Notes Import',
-          date: new Date().toISOString().split('T')[0]
-        });
-      }
-    });
-
-    if (parsed.length > 0) {
-      setDebts(prev => {
-        const updated = [...parsed, ...prev];
-        localStorage.setItem('sumedh_debts', JSON.stringify(updated));
-
-        fetch('/api/sync-debts', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(updated)
-        }).catch(() => {});
-
-        return updated;
-      });
-      setRawNotesInput('');
-    }
-  };
-
   // Films data for LoglineGame / CineplayGame (Media Cabinet fetches its own copy independently)
   const [filmsForGames, setFilmsForGames] = useState([]);
   useEffect(() => {
@@ -1568,28 +1448,11 @@ function App() {
       }
     });
 
-    // Poll debts database every 3 seconds for cross-device real-time sync
-    const fetchDebts = () => {
-      fetch(`${import.meta.env.BASE_URL}assets/data/debts.json?t=${Date.now()}`)
-        .then(res => res.json())
-        .then(data => {
-          setDebts(data);
-        })
-        .catch(err => console.log("Polling debts error:", err));
-    };
-
-    fetchDebts();
-    const debtsInterval = setInterval(fetchDebts, 3000);
-
     console.log("=== LOCALSTORAGE SYSTEM DIAGNOSTIC DUMP ===");
     for (let i = 0; i < localStorage.length; i++) {
       const k = localStorage.key(i);
       console.log(`Key: ${k} | Length: ${localStorage.getItem(k).length} chars`);
     }
-
-    return () => {
-      clearInterval(debtsInterval);
-    };
   }, []);
 
   // Handle open/focus window
@@ -2008,107 +1871,7 @@ function App() {
             defaultMaximized={win.id === 'cabinet'}
           >
                         {/* RUN DIALOG CONTENT */}
-            {win.id === 'debts' && (
-              <div className="debt-list-dialog mono" onClick={(e) => e.stopPropagation()} style={{ padding: '15px', display: 'flex', flexDirection: 'column', height: '100%', overflowY: 'auto' }}>
-                <div className="closet-header" style={{ marginBottom: '15px' }}>
-                  <h2 style={{ fontSize: '1.2rem', margin: 0, color: '#ff1744' }}>💸 SUMEDH DEBT DESK</h2>
-                  <p style={{ fontSize: '0.62rem', color: 'var(--ink-soft)', margin: '4px 0 0 0' }}>Sync and track debts in real time.</p>
-                </div>
-
-                {/* Net balance HUD */}
-                <div style={{ display: 'flex', gap: '8px', marginBottom: '15px' }}>
-                  <div style={{ flex: 1, background: '#111', border: '1px solid #333', padding: '10px', borderRadius: '4px', textAlign: 'center' }}>
-                    <div style={{ fontSize: '0.55rem', color: 'var(--ink-soft)' }}>TOTAL THEY OWE ME</div>
-                    <div style={{ fontSize: '1.1rem', fontWeight: 'bold', color: '#4caf50', marginTop: '4px' }}>
-                      ${debts.filter(d => d.direction === 'them_owes_me').reduce((acc, c) => acc + c.amount, 0).toFixed(2)}
-                    </div>
-                  </div>
-                  <div style={{ flex: 1, background: '#111', border: '1px solid #333', padding: '10px', borderRadius: '4px', textAlign: 'center' }}>
-                    <div style={{ fontSize: '0.55rem', color: 'var(--ink-soft)' }}>TOTAL I OWE THEM</div>
-                    <div style={{ fontSize: '1.1rem', fontWeight: 'bold', color: '#ff5722', marginTop: '4px' }}>
-                      ${debts.filter(d => d.direction === 'i_owe_them').reduce((acc, c) => acc + c.amount, 0).toFixed(2)}
-                    </div>
-                  </div>
-                </div>
-
-                <div style={{ display: 'flex', gap: '15px', flex: 1, minHeight: 0 }}>
-                  {/* Left Column: Form & Import */}
-                  <div style={{ width: '220px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                    <form onSubmit={handleAddDebt} style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid #333', padding: '10px', borderRadius: '4px' }}>
-                      <div style={{ fontSize: '0.65rem', fontWeight: 'bold', marginBottom: '8px', color: '#ff1744' }}>[ LOG NEW DEBT ]</div>
-                      
-                      <div style={{ marginBottom: '6px', fontSize: '0.6rem' }}>
-                        <label style={{ display: 'block', color: 'var(--ink-soft)' }}>Person:</label>
-                        <input type="text" value={newDebtPerson} onChange={(e) => setNewDebtPerson(e.target.value)} required placeholder="Name..." style={{ width: '100%', background: '#222', border: '1px solid #444', color: '#fff', padding: '3px' }} />
-                      </div>
-
-                      <div style={{ marginBottom: '6px', fontSize: '0.6rem' }}>
-                        <label style={{ display: 'block', color: 'var(--ink-soft)' }}>Amount ($):</label>
-                        <input type="number" step="0.01" min="0.01" value={newDebtAmount} onChange={(e) => setNewDebtAmount(e.target.value)} required placeholder="0.00" style={{ width: '100%', background: '#222', border: '1px solid #444', color: '#fff', padding: '3px' }} />
-                      </div>
-
-                      <div style={{ marginBottom: '6px', fontSize: '0.6rem' }}>
-                        <label style={{ display: 'block', color: 'var(--ink-soft)' }}>Description:</label>
-                        <input type="text" value={newDebtDesc} onChange={(e) => setNewDebtDesc(e.target.value)} placeholder="Pizza, Uber..." style={{ width: '100%', background: '#222', border: '1px solid #444', color: '#fff', padding: '3px' }} />
-                      </div>
-
-                      <div style={{ marginBottom: '8px', fontSize: '0.6rem' }}>
-                        <label style={{ display: 'block', color: 'var(--ink-soft)' }}>Type:</label>
-                        <select value={newDebtDirection} onChange={(e) => setNewDebtDirection(e.target.value)} style={{ width: '100%', background: '#222', border: '1px solid #444', color: '#fff', padding: '3px' }}>
-                          <option value="them_owes_me">They Owe Me</option>
-                          <option value="i_owe_them">I Owe Them</option>
-                        </select>
-                      </div>
-
-                      <button type="submit" style={{ width: '100%', background: '#ff1744', border: 'none', color: '#fff', padding: '4px', fontSize: '0.6rem', cursor: 'pointer', fontWeight: 'bold' }}>[ ADD DEBT ]</button>
-                    </form>
-
-                    {/* Samsung notes importer box */}
-                    <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid #333', padding: '10px', borderRadius: '4px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                      <div style={{ fontSize: '0.65rem', fontWeight: 'bold', color: '#ff9800' }}>[ IMPORT FROM SAMSUNG NOTES ]</div>
-                      <textarea 
-                        value={rawNotesInput} 
-                        onChange={(e) => setRawNotesInput(e.target.value)} 
-                        placeholder="Paste list here (e.g.\nJohn owes me 50 for pizza\nSarah: 20\nowe Mike 15)..."
-                        style={{ width: '100%', height: '70px', background: '#222', border: '1px solid #444', color: '#fff', fontSize: '0.52rem', padding: '3px', resize: 'none' }}
-                      />
-                      <button onClick={handleImportNotes} style={{ width: '100%', background: '#ff9800', border: 'none', color: '#fff', padding: '4px', fontSize: '0.6rem', cursor: 'pointer', fontWeight: 'bold' }}>[ PARSE &amp; MERGE ]</button>
-                    </div>
-                  </div>
-
-                  {/* Right Column: Debts Grid list */}
-                  <div style={{ flex: 1, display: 'flex', flexDirection: 'column', border: '1px solid #333', borderRadius: '4px', background: '#0b0807', overflow: 'hidden' }}>
-                    <div style={{ fontSize: '0.65rem', background: '#181210', padding: '6px 10px', borderBottom: '1px solid #333', display: 'flex', justifyContent: 'space-between', color: 'var(--ink-soft)' }}>
-                      <span>RECORDED BALANCES ({debts.length})</span>
-                    </div>
-                    <div style={{ flex: 1, overflowY: 'auto', padding: '6px' }}>
-                      {debts.length === 0 ? (
-                        <div style={{ color: 'var(--ink-soft)', fontSize: '0.6rem', textAlign: 'center', marginTop: '40px' }}>[ No active debts logged ]</div>
-                      ) : (
-                        debts.map(d => (
-                          <div key={d.id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '6px 8px', borderBottom: '1px solid #222', background: 'rgba(255,255,255,0.01)', fontSize: '0.62rem', gap: '10px' }}>
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', minWidth: 0 }}>
-                              <span style={{ fontWeight: 'bold', color: d.direction === 'them_owes_me' ? '#4caf50' : '#ff5722' }}>
-                                {d.person} {d.direction === 'them_owes_me' ? 'owes me' : 'is owed by me'}
-                              </span>
-                              <span style={{ fontSize: '0.52rem', color: 'var(--ink-soft)', textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap' }}>
-                                {d.description} &middot; {d.date}
-                              </span>
-                            </div>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
-                              <span style={{ fontWeight: 'bold', fontSize: '0.72rem', color: d.direction === 'them_owes_me' ? '#4caf50' : '#ff5722' }}>
-                                ${d.amount.toFixed(2)}
-                              </span>
-                              <button onClick={() => handleRemoveDebt(d.id)} style={{ background: '#222', border: '1px solid #444', color: '#ff1744', padding: '2px 4px', fontSize: '0.5rem', cursor: 'pointer', borderRadius: '2px' }}>SETTLE</button>
-                            </div>
-                          </div>
-                        ))
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
+            {win.id === 'debts' && <DebtDesk />}
             {win.id === 'run' && (
               <div className="run-dialog-content mono" onClick={(e) => e.stopPropagation()}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
