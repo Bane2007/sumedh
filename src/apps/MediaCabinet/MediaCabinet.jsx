@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useMediaDb } from './useMediaDb';
 import Toolbar from './Toolbar';
-import PosterGrid from './PosterGrid';
+import ShelfBrowser from './ShelfBrowser';
 import DetailDrawer from './DetailDrawer';
 import './MediaCabinet.css';
 
@@ -51,7 +51,7 @@ function MediaCabinet() {
         onOpenAddForm={handleOpenAddForm}
       />
 
-      <PosterGrid
+      <ShelfBrowser
         items={processedItems}
         category={category}
         selectedItem={drawer.mode === 'view' ? drawer.item : null}
