@@ -45,7 +45,7 @@ function PosterGrid({ items, category, selectedItem, onSelectItem, onRemoveItem 
               {item.image ? (
                 <img src={item.image} alt={item.title} loading="lazy" referrerPolicy="no-referrer" />
               ) : (
-                <div dangerouslySetInnerHTML={{ __html: generateGenericCover(item.title, item.year) }} />
+                <div className="mc-card-fallback-cover" dangerouslySetInnerHTML={{ __html: generateGenericCover(item.title, item.year) }} />
               )}
 
               {(item.status === 'watching' || item.status === 'reading') && (
