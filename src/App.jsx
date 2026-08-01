@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import MediaCabinet from './apps/MediaCabinet/MediaCabinet.jsx';
 import DebtDesk from './apps/DebtDesk/DebtDesk.jsx';
+import AboutMe from './apps/AboutMe/AboutMe.jsx';
 import { fetchMediaDatabase } from './apps/MediaCabinet/useMediaDb.js';
 
 // Open-source ad-free stream & internet radio cassette player
@@ -1933,32 +1934,7 @@ function App() {
             {win.id === 'cabinet' && <MediaCabinet />}
 
             {/* ABOUT WINDOW CONTENT */}
-            {win.id === 'about' && (
-              <div className="about-window-content" style={{ padding: '0.5rem 1rem' }}>
-                <p className="about__body" style={{ fontSize: '1.15rem', lineHeight: 1.6, marginBottom: '2rem' }}>
-                  I&rsquo;m a second-year Energy Engineering student at IIT Delhi Abu Dhabi. Most of my spare time goes to writing. When I&rsquo;m not at a script, I&rsquo;ve got a movie on, a show running, or a game I&rsquo;m halfway through. I read in between.
-                </p>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
-                  <div>
-                    <h3 className="roles__subhead" style={{ margin: 0, fontSize: '0.95rem' }}>positions</h3>
-                    <ul className="roles__list" style={{ marginTop: '0.75rem', gap: '0.75rem' }}>
-                      <li style={{ fontSize: '0.88rem' }}><span className="mono" style={{ fontSize: '0.8rem' }}>2025:</span> Marketing &amp; Creatives Head, IITDAD Coding Club</li>
-                      <li style={{ fontSize: '0.88rem' }}><span className="mono" style={{ fontSize: '0.8rem' }}>2025:</span> Core Member, Digital Arts &amp; Design Club</li>
-                      <li style={{ fontSize: '0.88rem' }}><span className="mono" style={{ fontSize: '0.8rem' }}>2025:</span> Millennium Fellow, UN Academic Impact &amp; MCN</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="roles__subhead" style={{ margin: 0, fontSize: '0.95rem' }}>competitions</h3>
-                    <ul className="roles__list" style={{ marginTop: '0.75rem', gap: '0.75rem' }}>
-                      <li style={{ fontSize: '0.88rem' }}><span className="mono" style={{ fontSize: '0.8rem' }}>2025:</span> Best Audio, Best Storytelling, Audience Choice &middot; University Film Festival</li>
-                      <li style={{ fontSize: '0.88rem' }}><span className="mono" style={{ fontSize: '0.8rem' }}>2026:</span> 2nd Place, Hyperloop &middot; TRYST</li>
-                      <li style={{ fontSize: '0.88rem' }}><span className="mono" style={{ fontSize: '0.8rem' }}>2026:</span> 2nd Place, Titan &middot; TRYST</li>
-                      <li style={{ fontSize: '0.88rem' }}><span className="mono" style={{ fontSize: '0.8rem' }}>2026:</span> 3rd Place, Casecation &middot; TRYST</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            )}
+            {win.id === 'about' && <AboutMe />}
 
             {/* CASSETTE BEATS PLAYER CONTENT */}
             {win.id === 'beats' && <BeatsPlayer />}
