@@ -1,6 +1,18 @@
 window.mediaDatabase = {
   "films": [
     {
+      "title": "Spider-Man: Brand New Day",
+      "slug": "spider-man-brand-new-day",
+      "year": "2026",
+      "rating": "★★★★",
+      "image": "https://a.ltrbxd.com/resized/film-poster/8/7/2/8/7/1/872871-spider-man-brand-new-day-0-150-0-225-crop.jpg",
+      "watched_date": "2026-08-01",
+      "director": "Destin Daniel Cretton",
+      "cast": "Tom Holland, Zendaya, Sadie Sink",
+      "imdb_rating": "N/A",
+      "plot": "A forgotten Peter Parker lives alone as a full-time Spider-Man until mounting pressure triggers a dangerous change and a powerful new enemy emerges."
+    },
+    {
       "title": "Nirvanna the Band the Show the Movie",
       "slug": "nirvanna-the-band-the-show-the-movie",
       "year": "2025",
@@ -3448,7 +3460,7 @@ window.mediaDatabase = {
       "title": "Airplane!",
       "slug": "airplane",
       "year": "1980",
-      "rating": "",
+      "rating": "★★★",
       "image": "https://a.ltrbxd.com/resized/film-poster/5/1/3/3/9/51339-airplane--0-600-0-900-crop.jpg?v=a8e9ea3a39",
       "watched_date": "N/A",
       "director": "Jim Abrahams, David Zucker, Jerry Zucker",
@@ -4312,7 +4324,7 @@ window.mediaDatabase = {
       "title": "Eternals",
       "slug": "eternals",
       "year": "2021",
-      "rating": "",
+      "rating": "★★★★",
       "image": "https://a.ltrbxd.com/resized/film-poster/4/5/4/0/1/6/454016-eternals-0-150-0-225-crop.jpg",
       "watched_date": "N/A",
       "director": "Chloé Zhao",
@@ -5176,7 +5188,7 @@ window.mediaDatabase = {
       "title": "A Quiet Place",
       "slug": "a-quiet-place-2018",
       "year": "2018",
-      "rating": "",
+      "rating": "★★★★★",
       "image": "https://a.ltrbxd.com/resized/film-poster/3/7/9/6/8/7/379687-a-quiet-place-0-600-0-900-crop.jpg?v=895e756ae7",
       "watched_date": "N/A",
       "director": "John Krasinski",
@@ -5930,6 +5942,48 @@ window.mediaDatabase = {
     }
   ],
   "anime": [
+    {
+      "title": "Golden Time",
+      "title_eng": "Golden Time",
+      "title_romaji": "Golden Time",
+      "title_localized": "",
+      "id": 17895,
+      "url": "https://myanimelist.net/anime/17895/Golden_Time",
+      "year": "2013",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/anime/12/52091.jpg",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "episodes": 0,
+      "updated_at": 1785613999,
+      "status": "watching",
+      "start_date": "2026-08-01",
+      "finish_date": "N/A",
+      "sort_date": "2026-08-01"
+    },
+    {
+      "title": "Toumei na Yoru ni Kakeru Kimi to, Me ni Mienai Koi wo Shita.",
+      "title_eng": "Love Unseen Beneath the Clear Night Sky",
+      "title_romaji": "Toumei na Yoru ni Kakeru Kimi to, Me ni Mienai Koi wo Shita.",
+      "title_localized": "",
+      "id": 62936,
+      "url": "https://myanimelist.net/anime/62936/Toumei_na_Yoru_ni_Kakeru_Kimi_to_Me_ni_Mienai_Koi_wo_Shita",
+      "year": "2026",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/anime/1145/158339.jpg",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "episodes": 4,
+      "updated_at": 1785571437,
+      "status": "watching",
+      "start_date": "2026-08-01",
+      "finish_date": "N/A",
+      "sort_date": "2026-08-01"
+    },
     {
       "title": "Liar Game",
       "title_eng": "Liar Game",
