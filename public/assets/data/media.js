@@ -5956,8 +5956,8 @@ window.mediaDatabase = {
         "Drama",
         "Romance"
       ],
-      "episodes": 0,
-      "updated_at": 1785613999,
+      "episodes": 6,
+      "updated_at": 1785666743,
       "status": "watching",
       "start_date": "2026-08-01",
       "finish_date": "N/A",
@@ -6531,13 +6531,13 @@ window.mediaDatabase = {
       "id": 50425,
       "url": "https://myanimelist.net/anime/50425/Fuufu_Ijou_Koibito_Miman",
       "year": "2022",
-      "score": 6,
+      "score": 7,
       "image": "https://cdn.myanimelist.net/images/anime/1713/126442.jpg",
       "genres": [
         "Romance"
       ],
       "episodes": 12,
-      "updated_at": 1781267451,
+      "updated_at": 1785697073,
       "status": "completed",
       "start_date": "2026-06-11",
       "finish_date": "2026-06-12",
