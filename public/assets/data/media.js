@@ -6057,8 +6057,8 @@ window.mediaDatabase = {
         "Sci-Fi",
         "Suspense"
       ],
-      "episodes": 4,
-      "updated_at": 1785413357,
+      "episodes": 5,
+      "updated_at": 1786015790,
       "status": "watching",
       "start_date": "2026-07-08",
       "finish_date": "N/A",
