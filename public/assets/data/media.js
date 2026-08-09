@@ -6164,8 +6164,8 @@ window.mediaDatabase = {
       "genres": [
         "Comedy"
       ],
-      "episodes": 5,
-      "updated_at": 1785499432,
+      "episodes": 6,
+      "updated_at": 1786181115,
       "status": "watching",
       "start_date": "2026-07-03",
       "finish_date": "N/A",
