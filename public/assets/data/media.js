@@ -6100,8 +6100,8 @@ window.mediaDatabase = {
         "Comedy",
         "Romance"
       ],
-      "episodes": 5,
-      "updated_at": 1785789893,
+      "episodes": 6,
+      "updated_at": 1786355361,
       "status": "watching",
       "start_date": "2026-07-05",
       "finish_date": "N/A",
@@ -6121,8 +6121,8 @@ window.mediaDatabase = {
         "Comedy",
         "Romance"
       ],
-      "episodes": 5,
-      "updated_at": 1785791667,
+      "episodes": 6,
+      "updated_at": 1786351940,
       "status": "watching",
       "start_date": "2026-07-05",
       "finish_date": "N/A",
@@ -6144,8 +6144,8 @@ window.mediaDatabase = {
         "Fantasy",
         "Ecchi"
       ],
-      "episodes": 6,
-      "updated_at": 1785792959,
+      "episodes": 7,
+      "updated_at": 1786398415,
       "status": "watching",
       "start_date": "2026-07-04",
       "finish_date": "N/A",
@@ -6209,8 +6209,8 @@ window.mediaDatabase = {
         "Adventure",
         "Fantasy"
       ],
-      "episodes": 1172,
-      "updated_at": 1785828727,
+      "episodes": 1173,
+      "updated_at": 1786392922,
       "status": "watching",
       "start_date": "2022-09-01",
       "finish_date": "N/A",
@@ -10126,6 +10126,28 @@ window.mediaDatabase = {
     }
   ],
   "manga": [
+    {
+      "title": "Inuyashiki",
+      "title_eng": "Inuyashiki",
+      "title_romaji": "Inuyashiki",
+      "title_localized": "",
+      "id": 64465,
+      "url": "https://myanimelist.net/manga/64465/Inuyashiki",
+      "year": "2014",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/manga/2/156353.jpg",
+      "genres": [
+        "Drama",
+        "Sci-Fi"
+      ],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1786356255,
+      "status": "reading",
+      "start_date": "2026-08-09",
+      "finish_date": "N/A",
+      "sort_date": "2026-08-09"
+    },
     {
       "title": "Sangeki",
       "title_eng": "Haunted Peak",
