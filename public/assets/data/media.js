@@ -5992,8 +5992,8 @@ window.mediaDatabase = {
         "Drama",
         "Romance"
       ],
-      "episodes": 13,
-      "updated_at": 1786272091,
+      "episodes": 16,
+      "updated_at": 1786477066,
       "status": "watching",
       "start_date": "2026-08-01",
       "finish_date": "N/A",
@@ -6013,8 +6013,8 @@ window.mediaDatabase = {
         "Drama",
         "Romance"
       ],
-      "episodes": 5,
-      "updated_at": 1785832132,
+      "episodes": 6,
+      "updated_at": 1786448943,
       "status": "watching",
       "start_date": "2026-08-01",
       "finish_date": "N/A",
@@ -6034,8 +6034,8 @@ window.mediaDatabase = {
         "Drama",
         "Suspense"
       ],
-      "episodes": 18,
-      "updated_at": 1785830326,
+      "episodes": 19,
+      "updated_at": 1786451798,
       "status": "watching",
       "start_date": "2026-07-28",
       "finish_date": "N/A",
