@@ -5992,8 +5992,8 @@ window.mediaDatabase = {
         "Drama",
         "Romance"
       ],
-      "episodes": 18,
-      "updated_at": 1786552570,
+      "episodes": 20,
+      "updated_at": 1786639095,
       "status": "watching",
       "start_date": "2026-08-01",
       "finish_date": "N/A",
@@ -6079,8 +6079,8 @@ window.mediaDatabase = {
         "Fantasy",
         "Suspense"
       ],
-      "episodes": 11,
-      "updated_at": 1783881208,
+      "episodes": 12,
+      "updated_at": 1786618253,
       "status": "watching",
       "start_date": "2026-07-06",
       "finish_date": "2026-07-10",
@@ -10127,28 +10127,6 @@ window.mediaDatabase = {
   ],
   "manga": [
     {
-      "title": "Inuyashiki",
-      "title_eng": "Inuyashiki",
-      "title_romaji": "Inuyashiki",
-      "title_localized": "",
-      "id": 64465,
-      "url": "https://myanimelist.net/manga/64465/Inuyashiki",
-      "year": "2014",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/manga/2/156353.jpg",
-      "genres": [
-        "Drama",
-        "Sci-Fi"
-      ],
-      "chapters": 0,
-      "volumes": 0,
-      "updated_at": 1786356255,
-      "status": "reading",
-      "start_date": "2026-08-09",
-      "finish_date": "N/A",
-      "sort_date": "2026-08-09"
-    },
-    {
       "title": "Sangeki",
       "title_eng": "Haunted Peak",
       "title_romaji": "Sangeki",
@@ -10643,6 +10621,28 @@ window.mediaDatabase = {
       "start_date": "2023-02-17",
       "finish_date": "N/A",
       "sort_date": "2023-02-17"
+    },
+    {
+      "title": "Inuyashiki",
+      "title_eng": "Inuyashiki",
+      "title_romaji": "Inuyashiki",
+      "title_localized": "",
+      "id": 64465,
+      "url": "https://myanimelist.net/manga/64465/Inuyashiki",
+      "year": "2014",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/images/manga/2/156353.jpg",
+      "genres": [
+        "Drama",
+        "Sci-Fi"
+      ],
+      "chapters": 85,
+      "volumes": 10,
+      "updated_at": 1786356255,
+      "status": "completed",
+      "start_date": "2026-08-09",
+      "finish_date": "2026-08-13",
+      "sort_date": "2026-08-13"
     },
     {
       "title": "School Ningyo",
