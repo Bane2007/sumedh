@@ -5979,27 +5979,6 @@ window.mediaDatabase = {
   ],
   "anime": [
     {
-      "title": "Golden Time",
-      "title_eng": "Golden Time",
-      "title_romaji": "Golden Time",
-      "title_localized": "",
-      "id": 17895,
-      "url": "https://myanimelist.net/anime/17895/Golden_Time",
-      "year": "2013",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/anime/12/52091.jpg",
-      "genres": [
-        "Drama",
-        "Romance"
-      ],
-      "episodes": 20,
-      "updated_at": 1786639095,
-      "status": "watching",
-      "start_date": "2026-08-01",
-      "finish_date": "N/A",
-      "sort_date": "2026-08-01"
-    },
-    {
       "title": "Toumei na Yoru ni Kakeru Kimi to, Me ni Mienai Koi wo Shita.",
       "title_eng": "Love Unseen Beneath the Clear Night Sky",
       "title_romaji": "Toumei na Yoru ni Kakeru Kimi to, Me ni Mienai Koi wo Shita.",
@@ -6164,8 +6143,8 @@ window.mediaDatabase = {
       "genres": [
         "Comedy"
       ],
-      "episodes": 6,
-      "updated_at": 1786181115,
+      "episodes": 7,
+      "updated_at": 1786695842,
       "status": "watching",
       "start_date": "2026-07-03",
       "finish_date": "N/A",
@@ -6215,6 +6194,27 @@ window.mediaDatabase = {
       "start_date": "2022-09-01",
       "finish_date": "N/A",
       "sort_date": "2022-09-01"
+    },
+    {
+      "title": "Golden Time",
+      "title_eng": "Golden Time",
+      "title_romaji": "Golden Time",
+      "title_localized": "",
+      "id": 17895,
+      "url": "https://myanimelist.net/anime/17895/Golden_Time",
+      "year": "2013",
+      "score": 6,
+      "image": "https://cdn.myanimelist.net/images/anime/12/52091.jpg",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "episodes": 24,
+      "updated_at": 1786707463,
+      "status": "completed",
+      "start_date": "2026-08-01",
+      "finish_date": "2026-08-14",
+      "sort_date": "2026-08-14"
     },
     {
       "title": "Yamada-kun to 7-nin no Majo",
@@ -10126,6 +10126,25 @@ window.mediaDatabase = {
     }
   ],
   "manga": [
+    {
+      "title": "Saigo no Manga Kyoushitsu",
+      "title_eng": "",
+      "title_romaji": "Saigo no Manga Kyoushitsu",
+      "title_localized": "",
+      "id": 195664,
+      "url": "https://myanimelist.net/manga/195664/Saigo_no_Manga_Kyoushitsu",
+      "year": "2026",
+      "score": 0,
+      "image": "https://cdn.myanimelist.net/images/manga/2/348888.jpg",
+      "genres": [],
+      "chapters": 0,
+      "volumes": 0,
+      "updated_at": 1786727105,
+      "status": "reading",
+      "start_date": "2026-08-14",
+      "finish_date": "N/A",
+      "sort_date": "2026-08-14"
+    },
     {
       "title": "Sangeki",
       "title_eng": "Haunted Peak",
