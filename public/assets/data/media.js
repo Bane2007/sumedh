@@ -6123,8 +6123,8 @@ window.mediaDatabase = {
         "Fantasy",
         "Ecchi"
       ],
-      "episodes": 7,
-      "updated_at": 1786398415,
+      "episodes": 8,
+      "updated_at": 1786914752,
       "status": "watching",
       "start_date": "2026-07-04",
       "finish_date": "N/A",
