@@ -5992,8 +5992,8 @@ window.mediaDatabase = {
         "Drama",
         "Romance"
       ],
-      "episodes": 6,
-      "updated_at": 1786448943,
+      "episodes": 7,
+      "updated_at": 1786980015,
       "status": "watching",
       "start_date": "2026-08-01",
       "finish_date": "N/A",
@@ -6100,8 +6100,8 @@ window.mediaDatabase = {
         "Comedy",
         "Romance"
       ],
-      "episodes": 6,
-      "updated_at": 1786351940,
+      "episodes": 7,
+      "updated_at": 1786981594,
       "status": "watching",
       "start_date": "2026-07-05",
       "finish_date": "N/A",
@@ -6120,8 +6120,7 @@ window.mediaDatabase = {
       "genres": [
         "Adventure",
         "Drama",
-        "Fantasy",
-        "Ecchi"
+        "Fantasy"
       ],
       "episodes": 8,
       "updated_at": 1786914752,
@@ -7184,8 +7183,7 @@ window.mediaDatabase = {
       "genres": [
         "Adventure",
         "Drama",
-        "Fantasy",
-        "Ecchi"
+        "Fantasy"
       ],
       "episodes": 12,
       "updated_at": 1719989871,
@@ -8140,8 +8138,7 @@ window.mediaDatabase = {
       "genres": [
         "Adventure",
         "Drama",
-        "Fantasy",
-        "Ecchi"
+        "Fantasy"
       ],
       "episodes": 12,
       "updated_at": 1719989876,
