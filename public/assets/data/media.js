@@ -6079,8 +6079,8 @@ window.mediaDatabase = {
         "Comedy",
         "Romance"
       ],
-      "episodes": 6,
-      "updated_at": 1786355361,
+      "episodes": 7,
+      "updated_at": 1787038798,
       "status": "watching",
       "start_date": "2026-07-05",
       "finish_date": "N/A",
