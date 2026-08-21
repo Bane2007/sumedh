@@ -6140,7 +6140,8 @@ window.mediaDatabase = {
       "score": 7,
       "image": "https://cdn.myanimelist.net/images/anime/1281/156496.jpg",
       "genres": [
-        "Comedy"
+        "Comedy",
+        "Fantasy"
       ],
       "episodes": 7,
       "updated_at": 1786695842,
