@@ -6143,8 +6143,8 @@ window.mediaDatabase = {
         "Comedy",
         "Fantasy"
       ],
-      "episodes": 7,
-      "updated_at": 1786695842,
+      "episodes": 8,
+      "updated_at": 1787420532,
       "status": "watching",
       "start_date": "2026-07-03",
       "finish_date": "N/A",
