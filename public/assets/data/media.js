@@ -6074,7 +6074,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/62811/Kimi_no_Koto_ga_Daidaidaidaidaisuki_na_100-nin_no_Kanojo_3rd_Season",
       "year": "2026",
       "score": 7,
-      "image": "https://cdn.myanimelist.net/images/anime/1106/157174.jpg",
+      "image": "https://cdn.myanimelist.net/images/anime/1755/159708.jpg",
       "genres": [
         "Comedy",
         "Romance"
