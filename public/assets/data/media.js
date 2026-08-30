@@ -6013,8 +6013,8 @@ window.mediaDatabase = {
         "Drama",
         "Suspense"
       ],
-      "episodes": 20,
-      "updated_at": 1787128026,
+      "episodes": 21,
+      "updated_at": 1788005670,
       "status": "watching",
       "start_date": "2026-07-28",
       "finish_date": "N/A",
@@ -6058,8 +6058,8 @@ window.mediaDatabase = {
         "Fantasy",
         "Suspense"
       ],
-      "episodes": 12,
-      "updated_at": 1786618253,
+      "episodes": 14,
+      "updated_at": 1788030177,
       "status": "watching",
       "start_date": "2026-07-06",
       "finish_date": "2026-07-10",
@@ -6079,8 +6079,8 @@ window.mediaDatabase = {
         "Comedy",
         "Romance"
       ],
-      "episodes": 7,
-      "updated_at": 1787038798,
+      "episodes": 8,
+      "updated_at": 1788004026,
       "status": "watching",
       "start_date": "2026-07-05",
       "finish_date": "N/A",
@@ -6100,8 +6100,8 @@ window.mediaDatabase = {
         "Comedy",
         "Romance"
       ],
-      "episodes": 7,
-      "updated_at": 1786981594,
+      "episodes": 8,
+      "updated_at": 1787997009,
       "status": "watching",
       "start_date": "2026-07-05",
       "finish_date": "N/A",
