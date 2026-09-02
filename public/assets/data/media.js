@@ -6159,7 +6159,7 @@ window.mediaDatabase = {
       "url": "https://myanimelist.net/anime/61469/Steel_Ball_Run__JoJo_no_Kimyou_na_Bouken",
       "year": "2026",
       "score": 9,
-      "image": "https://cdn.myanimelist.net/images/anime/1448/154111.jpg",
+      "image": "https://cdn.myanimelist.net/images/anime/1065/158884.jpg",
       "genres": [
         "Action",
         "Adventure",
