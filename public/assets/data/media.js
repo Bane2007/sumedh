@@ -6122,8 +6122,8 @@ window.mediaDatabase = {
         "Drama",
         "Fantasy"
       ],
-      "episodes": 11,
-      "updated_at": 1789285002,
+      "episodes": 12,
+      "updated_at": 1789847965,
       "status": "watching",
       "start_date": "2026-07-04",
       "finish_date": "N/A",
