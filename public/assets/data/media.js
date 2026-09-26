@@ -5979,27 +5979,6 @@ window.mediaDatabase = {
   ],
   "anime": [
     {
-      "title": "Toumei na Yoru ni Kakeru Kimi to, Me ni Mienai Koi wo Shita.",
-      "title_eng": "Love Unseen Beneath the Clear Night Sky",
-      "title_romaji": "Toumei na Yoru ni Kakeru Kimi to, Me ni Mienai Koi wo Shita.",
-      "title_localized": "",
-      "id": 62936,
-      "url": "https://myanimelist.net/anime/62936/Toumei_na_Yoru_ni_Kakeru_Kimi_to_Me_ni_Mienai_Koi_wo_Shita",
-      "year": "2026",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/anime/1145/158339.jpg",
-      "genres": [
-        "Drama",
-        "Romance"
-      ],
-      "episodes": 10,
-      "updated_at": 1789287555,
-      "status": "watching",
-      "start_date": "2026-08-01",
-      "finish_date": "N/A",
-      "sort_date": "2026-08-01"
-    },
-    {
       "title": "Liar Game",
       "title_eng": "Liar Game",
       "title_romaji": "Liar Game",
@@ -6122,8 +6101,8 @@ window.mediaDatabase = {
         "Drama",
         "Fantasy"
       ],
-      "episodes": 12,
-      "updated_at": 1789847965,
+      "episodes": 13,
+      "updated_at": 1790375616,
       "status": "watching",
       "start_date": "2026-07-04",
       "finish_date": "N/A",
@@ -6143,8 +6122,8 @@ window.mediaDatabase = {
         "Comedy",
         "Fantasy"
       ],
-      "episodes": 9,
-      "updated_at": 1788547985,
+      "episodes": 10,
+      "updated_at": 1790374307,
       "status": "watching",
       "start_date": "2026-07-03",
       "finish_date": "N/A",
@@ -6194,6 +6173,27 @@ window.mediaDatabase = {
       "start_date": "2022-09-01",
       "finish_date": "N/A",
       "sort_date": "2022-09-01"
+    },
+    {
+      "title": "Toumei na Yoru ni Kakeru Kimi to, Me ni Mienai Koi wo Shita.",
+      "title_eng": "Love Unseen Beneath the Clear Night Sky",
+      "title_romaji": "Toumei na Yoru ni Kakeru Kimi to, Me ni Mienai Koi wo Shita.",
+      "title_localized": "",
+      "id": 62936,
+      "url": "https://myanimelist.net/anime/62936/Toumei_na_Yoru_ni_Kakeru_Kimi_to_Me_ni_Mienai_Koi_wo_Shita",
+      "year": "2026",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/anime/1145/158339.jpg",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "episodes": 12,
+      "updated_at": 1790374658,
+      "status": "completed",
+      "start_date": "2026-08-01",
+      "finish_date": "2026-09-21",
+      "sort_date": "2026-09-21"
     },
     {
       "title": "Golden Time",
