@@ -6000,29 +6000,6 @@ window.mediaDatabase = {
       "sort_date": "2026-07-28"
     },
     {
-      "title": "Koukaku Kidoutai (TV)",
-      "title_eng": "The Ghost in the Shell",
-      "title_romaji": "Koukaku Kidoutai (TV)",
-      "title_localized": "",
-      "id": 58929,
-      "url": "https://myanimelist.net/anime/58929/Koukaku_Kidoutai_TV",
-      "year": "2026",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/anime/1474/158937.jpg",
-      "genres": [
-        "Action",
-        "Mystery",
-        "Sci-Fi",
-        "Suspense"
-      ],
-      "episodes": 7,
-      "updated_at": 1787131352,
-      "status": "watching",
-      "start_date": "2026-07-08",
-      "finish_date": "N/A",
-      "sort_date": "2026-07-08"
-    },
-    {
       "title": "Re:Zero kara Hajimeru Isekai Seikatsu 4th Season",
       "title_eng": "Re:ZERO -Starting Life in Another World- Season 4",
       "title_romaji": "Re:Zero kara Hajimeru Isekai Seikatsu 4th Season",
@@ -6173,6 +6150,29 @@ window.mediaDatabase = {
       "start_date": "2022-09-01",
       "finish_date": "N/A",
       "sort_date": "2022-09-01"
+    },
+    {
+      "title": "Koukaku Kidoutai (TV)",
+      "title_eng": "The Ghost in the Shell",
+      "title_romaji": "Koukaku Kidoutai (TV)",
+      "title_localized": "",
+      "id": 58929,
+      "url": "https://myanimelist.net/anime/58929/Koukaku_Kidoutai_TV",
+      "year": "2026",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/anime/1474/158937.jpg",
+      "genres": [
+        "Action",
+        "Mystery",
+        "Sci-Fi",
+        "Suspense"
+      ],
+      "episodes": 9,
+      "updated_at": 1790976933,
+      "status": "completed",
+      "start_date": "2026-07-08",
+      "finish_date": "2026-10-03",
+      "sort_date": "2026-10-03"
     },
     {
       "title": "Toumei na Yoru ni Kakeru Kimi to, Me ni Mienai Koi wo Shita.",
