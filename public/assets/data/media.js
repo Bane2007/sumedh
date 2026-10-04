@@ -5992,8 +5992,8 @@ window.mediaDatabase = {
         "Drama",
         "Suspense"
       ],
-      "episodes": 22,
-      "updated_at": 1788546039,
+      "episodes": 25,
+      "updated_at": 1791039699,
       "status": "watching",
       "start_date": "2026-07-28",
       "finish_date": "N/A",
@@ -6014,8 +6014,8 @@ window.mediaDatabase = {
         "Fantasy",
         "Suspense"
       ],
-      "episodes": 14,
-      "updated_at": 1788030177,
+      "episodes": 16,
+      "updated_at": 1791047857,
       "status": "watching",
       "start_date": "2026-07-06",
       "finish_date": "2026-07-10",
