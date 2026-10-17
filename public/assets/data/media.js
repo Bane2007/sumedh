@@ -5979,49 +5979,6 @@ window.mediaDatabase = {
   ],
   "anime": [
     {
-      "title": "Liar Game",
-      "title_eng": "Liar Game",
-      "title_romaji": "Liar Game",
-      "title_localized": "",
-      "id": 62331,
-      "url": "https://myanimelist.net/anime/62331/Liar_Game",
-      "year": "2026",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/anime/1984/158634.jpg",
-      "genres": [
-        "Drama",
-        "Suspense"
-      ],
-      "episodes": 25,
-      "updated_at": 1791039699,
-      "status": "watching",
-      "start_date": "2026-07-28",
-      "finish_date": "N/A",
-      "sort_date": "2026-07-28"
-    },
-    {
-      "title": "Re:Zero kara Hajimeru Isekai Seikatsu 4th Season",
-      "title_eng": "Re:ZERO -Starting Life in Another World- Season 4",
-      "title_romaji": "Re:Zero kara Hajimeru Isekai Seikatsu 4th Season",
-      "title_localized": "",
-      "id": 61316,
-      "url": "https://myanimelist.net/anime/61316/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_4th_Season",
-      "year": "2026",
-      "score": 9,
-      "image": "https://cdn.myanimelist.net/images/anime/1540/155824.jpg",
-      "genres": [
-        "Drama",
-        "Fantasy",
-        "Suspense"
-      ],
-      "episodes": 16,
-      "updated_at": 1791047857,
-      "status": "watching",
-      "start_date": "2026-07-06",
-      "finish_date": "2026-07-10",
-      "sort_date": "2026-07-06"
-    },
-    {
       "title": "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo 3rd Season",
       "title_eng": "The 100 Girlfriends Who Really, Really, Really, Really, Really Love You Season 3",
       "title_romaji": "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo 3rd Season",
@@ -6240,6 +6197,27 @@ window.mediaDatabase = {
       "sort_date": "2026-07-31"
     },
     {
+      "title": "Liar Game",
+      "title_eng": "Liar Game",
+      "title_romaji": "Liar Game",
+      "title_localized": "",
+      "id": 62331,
+      "url": "https://myanimelist.net/anime/62331/Liar_Game",
+      "year": "2026",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/anime/1984/158634.jpg",
+      "genres": [
+        "Drama",
+        "Suspense"
+      ],
+      "episodes": 26,
+      "updated_at": 1792179733,
+      "status": "completed",
+      "start_date": "2026-07-28",
+      "finish_date": "N/A",
+      "sort_date": "2026-07-28"
+    },
+    {
       "title": "Yamada-kun to Lv999 no Koi wo Suru",
       "title_eng": "My Love Story with Yamada-kun at Lv999",
       "title_romaji": "Yamada-kun to Lv999 no Koi wo Suru",
@@ -6366,6 +6344,28 @@ window.mediaDatabase = {
       "start_date": "N/A",
       "finish_date": "N/A",
       "sort_date": "2026-07-12"
+    },
+    {
+      "title": "Re:Zero kara Hajimeru Isekai Seikatsu 4th Season",
+      "title_eng": "Re:ZERO -Starting Life in Another World- Season 4",
+      "title_romaji": "Re:Zero kara Hajimeru Isekai Seikatsu 4th Season",
+      "title_localized": "",
+      "id": 61316,
+      "url": "https://myanimelist.net/anime/61316/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_4th_Season",
+      "year": "2026",
+      "score": 9,
+      "image": "https://cdn.myanimelist.net/images/anime/1540/155824.jpg",
+      "genres": [
+        "Drama",
+        "Fantasy",
+        "Suspense"
+      ],
+      "episodes": 19,
+      "updated_at": 1792182010,
+      "status": "completed",
+      "start_date": "2026-07-06",
+      "finish_date": "2026-07-10",
+      "sort_date": "2026-07-10"
     },
     {
       "title": "Re:Zero kara Hajimeru Isekai Seikatsu 3rd Season",
