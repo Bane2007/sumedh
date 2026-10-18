@@ -6043,27 +6043,6 @@ window.mediaDatabase = {
       "sort_date": "2026-07-04"
     },
     {
-      "title": "Yani Neko",
-      "title_eng": "Chainsmoker Cat",
-      "title_romaji": "Yani Neko",
-      "title_localized": "",
-      "id": 63403,
-      "url": "https://myanimelist.net/anime/63403/Yani_Neko",
-      "year": "2026",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/anime/1281/156496.jpg",
-      "genres": [
-        "Comedy",
-        "Fantasy"
-      ],
-      "episodes": 10,
-      "updated_at": 1790374307,
-      "status": "watching",
-      "start_date": "2026-07-03",
-      "finish_date": "N/A",
-      "sort_date": "2026-07-03"
-    },
-    {
       "title": "Steel Ball Run: JoJo no Kimyou na Bouken",
       "title_eng": "Steel Ball Run: JoJo's Bizarre Adventure",
       "title_romaji": "Steel Ball Run: JoJo no Kimyou na Bouken",
@@ -6388,6 +6367,27 @@ window.mediaDatabase = {
       "start_date": "2026-07-03",
       "finish_date": "2026-07-05",
       "sort_date": "2026-07-05"
+    },
+    {
+      "title": "Yani Neko",
+      "title_eng": "Chainsmoker Cat",
+      "title_romaji": "Yani Neko",
+      "title_localized": "",
+      "id": 63403,
+      "url": "https://myanimelist.net/anime/63403/Yani_Neko",
+      "year": "2026",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/anime/1281/156496.jpg",
+      "genres": [
+        "Comedy",
+        "Fantasy"
+      ],
+      "episodes": 12,
+      "updated_at": 1792233231,
+      "status": "completed",
+      "start_date": "2026-07-03",
+      "finish_date": "N/A",
+      "sort_date": "2026-07-03"
     },
     {
       "title": "Koori no Jouheki",
