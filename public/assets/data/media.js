@@ -5992,8 +5992,8 @@ window.mediaDatabase = {
         "Comedy",
         "Romance"
       ],
-      "episodes": 8,
-      "updated_at": 1788004026,
+      "episodes": 9,
+      "updated_at": 1792313851,
       "status": "watching",
       "start_date": "2026-07-05",
       "finish_date": "N/A",
@@ -6019,28 +6019,6 @@ window.mediaDatabase = {
       "start_date": "2026-07-05",
       "finish_date": "N/A",
       "sort_date": "2026-07-05"
-    },
-    {
-      "title": "Mushoku Tensei III: Isekai Ittara Honki Dasu",
-      "title_eng": "Mushoku Tensei: Jobless Reincarnation Season 3",
-      "title_romaji": "Mushoku Tensei III: Isekai Ittara Honki Dasu",
-      "title_localized": "",
-      "id": 59193,
-      "url": "https://myanimelist.net/anime/59193/Mushoku_Tensei_III__Isekai_Ittara_Honki_Dasu",
-      "year": "2026",
-      "score": 8,
-      "image": "https://cdn.myanimelist.net/images/anime/1527/158340.jpg",
-      "genres": [
-        "Adventure",
-        "Drama",
-        "Fantasy"
-      ],
-      "episodes": 13,
-      "updated_at": 1790375616,
-      "status": "watching",
-      "start_date": "2026-07-04",
-      "finish_date": "N/A",
-      "sort_date": "2026-07-04"
     },
     {
       "title": "Steel Ball Run: JoJo no Kimyou na Bouken",
@@ -6086,6 +6064,28 @@ window.mediaDatabase = {
       "start_date": "2022-09-01",
       "finish_date": "N/A",
       "sort_date": "2022-09-01"
+    },
+    {
+      "title": "Mushoku Tensei III: Isekai Ittara Honki Dasu",
+      "title_eng": "Mushoku Tensei: Jobless Reincarnation Season 3",
+      "title_romaji": "Mushoku Tensei III: Isekai Ittara Honki Dasu",
+      "title_localized": "",
+      "id": 59193,
+      "url": "https://myanimelist.net/anime/59193/Mushoku_Tensei_III__Isekai_Ittara_Honki_Dasu",
+      "year": "2026",
+      "score": 8,
+      "image": "https://cdn.myanimelist.net/images/anime/1527/158340.jpg",
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Fantasy"
+      ],
+      "episodes": 14,
+      "updated_at": 1792313069,
+      "status": "completed",
+      "start_date": "2026-07-04",
+      "finish_date": "2026-10-17",
+      "sort_date": "2026-10-17"
     },
     {
       "title": "Koukaku Kidoutai (TV)",
