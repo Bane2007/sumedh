@@ -5992,29 +5992,8 @@ window.mediaDatabase = {
         "Comedy",
         "Romance"
       ],
-      "episodes": 9,
-      "updated_at": 1792313851,
-      "status": "watching",
-      "start_date": "2026-07-05",
-      "finish_date": "N/A",
-      "sort_date": "2026-07-05"
-    },
-    {
-      "title": "Seihantai na Kimi to Boku 2nd Season",
-      "title_eng": "You and I Are Polar Opposites Season 2",
-      "title_romaji": "Seihantai na Kimi to Boku 2nd Season",
-      "title_localized": "",
-      "id": 63832,
-      "url": "https://myanimelist.net/anime/63832/Seihantai_na_Kimi_to_Boku_2nd_Season",
-      "year": "2026",
-      "score": 7,
-      "image": "https://cdn.myanimelist.net/images/anime/1143/158409.jpg",
-      "genres": [
-        "Comedy",
-        "Romance"
-      ],
-      "episodes": 8,
-      "updated_at": 1787997009,
+      "episodes": 11,
+      "updated_at": 1792401777,
       "status": "watching",
       "start_date": "2026-07-05",
       "finish_date": "N/A",
@@ -6064,6 +6043,27 @@ window.mediaDatabase = {
       "start_date": "2022-09-01",
       "finish_date": "N/A",
       "sort_date": "2022-09-01"
+    },
+    {
+      "title": "Seihantai na Kimi to Boku 2nd Season",
+      "title_eng": "You and I Are Polar Opposites Season 2",
+      "title_romaji": "Seihantai na Kimi to Boku 2nd Season",
+      "title_localized": "",
+      "id": 63832,
+      "url": "https://myanimelist.net/anime/63832/Seihantai_na_Kimi_to_Boku_2nd_Season",
+      "year": "2026",
+      "score": 7,
+      "image": "https://cdn.myanimelist.net/images/anime/1143/158409.jpg",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "episodes": 13,
+      "updated_at": 1792409026,
+      "status": "completed",
+      "start_date": "2026-07-05",
+      "finish_date": "2026-10-19",
+      "sort_date": "2026-10-19"
     },
     {
       "title": "Mushoku Tensei III: Isekai Ittara Honki Dasu",
