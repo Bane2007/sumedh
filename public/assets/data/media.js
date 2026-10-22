@@ -5979,6 +5979,27 @@ window.mediaDatabase = {
   ],
   "anime": [
     {
+      "title": "Seitokai ni mo Ana wa Aru!",
+      "title_eng": "Even the Student Council Has Its Holes!",
+      "title_romaji": "Seitokai ni mo Ana wa Aru!",
+      "title_localized": "",
+      "id": 61578,
+      "url": "https://myanimelist.net/anime/61578/Seitokai_ni_mo_Ana_wa_Aru",
+      "year": "2026",
+      "score": 0,
+      "image": "https://cdn.myanimelist.net/images/anime/1877/160134.jpg",
+      "genres": [
+        "Comedy",
+        "Ecchi"
+      ],
+      "episodes": 3,
+      "updated_at": 1792584095,
+      "status": "watching",
+      "start_date": "N/A",
+      "finish_date": "N/A",
+      "sort_date": "2026-10-21"
+    },
+    {
       "title": "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo 3rd Season",
       "title_eng": "The 100 Girlfriends Who Really, Really, Really, Really, Really Love You Season 3",
       "title_romaji": "Kimi no Koto ga Daidaidaidaidaisuki na 100-nin no Kanojo 3rd Season",
